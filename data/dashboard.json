@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T18:15:28Z",
+  "generated_at": "2026-09-10T18:16:40Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -228,46 +228,46 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:15:15Z"
+      "checked_at": "2026-09-10T18:16:22Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:15:15Z"
+      "checked_at": "2026-09-10T18:16:22Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:15:23Z"
+      "checked_at": "2026-09-10T18:16:31Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:15:24Z"
+      "checked_at": "2026-09-10T18:16:35Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:15:25Z"
+      "checked_at": "2026-09-10T18:16:35Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T18:15:25Z",
+      "checked_at": "2026-09-10T18:16:35Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:15:27Z"
+      "checked_at": "2026-09-10T18:16:35Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:15:28Z"
+      "checked_at": "2026-09-10T18:16:37Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:15:28Z"
+      "checked_at": "2026-09-10T18:16:40Z"
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T18:15:25Z",
+      "checked_at": "2026-09-10T18:16:35Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -3391,7 +3391,7 @@
   "history": [
     {
       "snapshot_date": "2026-09-10",
-      "generated_at": "2026-09-10T18:15:28Z",
+      "generated_at": "2026-09-10T18:16:40Z",
       "total_public_debt_trillions": 40.08409078544635,
       "debt_held_by_public_trillions": 32.38792109474681,
       "fed_treasuries_billions": 4552.347,
