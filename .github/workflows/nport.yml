@@ -1,6 +1,12 @@
 name: Ingest quarterly SEC N-PORT
 
 on:
+  push:
+    branches:
+      - phase4-security-intelligence
+    paths:
+      - scripts/ingest_nport.py
+      - .github/workflows/nport.yml
   schedule:
     # SEC publishes N-PORT bulk data quarterly. Run shortly after quarter-end;
     # a manual run can override the archive URL and quarter label.
