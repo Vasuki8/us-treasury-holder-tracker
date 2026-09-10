@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>US Treasury Ownership Tracker</title>
+  <meta name="description" content="Live tracker of U.S. Treasury ownership using official Treasury and Federal Reserve sources." />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="shell hero">
+    <div>
+      <div class="eyebrow">OFFICIAL-DATA DASHBOARD</div>
+      <h1>US Treasury Ownership Tracker</h1>
+      <p class="lede">Who holds U.S. Treasury securities — with source-specific observation dates and automatic daily checks.</p>
+    </div>
+    <div class="status" id="updateStatus">Loading data…</div>
+  </header>
+
+  <main class="shell">
+    <section class="cards" id="overviewCards"></section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><h2>Foreign Treasury Holders</h2><p id="foreignMeta"></p></div>
+        <input id="countrySearch" type="search" placeholder="Search country…" />
+      </div>
+      <div class="grid-2">
+        <div class="chart-wrap"><canvas id="foreignChart"></canvas></div>
+        <div class="table-wrap">
+          <table><thead><tr><th>Holder</th><th>Holdings</th><th>MoM</th></tr></thead><tbody id="foreignTable"></tbody></table>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>Domestic & Sector Holders</h2><p id="sectorMeta"></p></div></div>
+      <div class="chart-wrap tall"><canvas id="sectorChart"></canvas></div>
+      <div class="table-wrap">
+        <table><thead><tr><th>Sector</th><th>Holdings</th><th>Series</th></tr></thead><tbody id="sectorTable"></tbody></table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>Source Health</h2><p>Updater checks these sources every day and keeps the last valid observation if one feed fails.</p></div></div>
+      <div id="sourceHealth" class="source-grid"></div>
+    </section>
+
+    <section class="note">
+      <strong>Important:</strong> “Daily updated” means the website checks official sources every day. Holder data is not universally published daily. Each card/table shows the latest available observation date from its source.
+    </section>
+  </main>
+
+  <footer class="shell footer">Data: U.S. Treasury Fiscal Data, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts.</footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-09-10T16:59:00Z",
+  "overview": {
+    "as_of": null,
+    "total_public_debt": null,
+    "debt_held_by_public": null,
+    "intragovernmental_holdings": null,
+    "daily_change": null,
+    "frequency": "Business daily",
+    "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny"
+  },
+  "fed": {
+    "as_of": "Sep 2, 2026",
+    "treasury_holdings_millions": 4552347,
+    "treasury_holdings_billions": 4552.347,
+    "frequency": "Weekly (Wednesday level; published Thursday)",
+    "source_url": "https://www.federalreserve.gov/releases/h41/current/"
+  },
+  "foreign_holders": {
+    "as_of": "2026-06",
+    "previous_period": "2026-05",
+    "grand_total_billions": 9299.0,
+    "foreign_official_billions": 3778.1,
+    "countries": [
+      {"name":"Japan","holdings_billions":1116.7,"previous_billions":1143.1,"change_billions":-26.4},
+      {"name":"United Kingdom","holdings_billions":939.9,"previous_billions":948.6,"change_billions":-8.7},
+      {"name":"China, Mainland","holdings_billions":633.4,"previous_billions":659.3,"change_billions":-25.9},
+      {"name":"Belgium","holdings_billions":482.5,"previous_billions":472.0,"change_billions":10.5},
+      {"name":"Canada","holdings_billions":459.6,"previous_billions":435.8,"change_billions":23.8},
+      {"name":"Cayman Islands","holdings_billions":453.1,"previous_billions":471.3,"change_billions":-18.2},
+      {"name":"Luxembourg","holdings_billions":434.2,"previous_billions":436.0,"change_billions":-1.8},
+      {"name":"France","holdings_billions":389.9,"previous_billions":393.1,"change_billions":-3.2},
+      {"name":"Ireland","holdings_billions":353.5,"previous_billions":357.2,"change_billions":-3.7},
+      {"name":"Taiwan","holdings_billions":302.5,"previous_billions":306.0,"change_billions":-3.5}
+    ],
+    "frequency": "Monthly",
+    "source_url": "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.txt",
+    "all_country_source_url": "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table3.txt"
+  },
+  "domestic_sectors": {
+    "as_of": "2026:Q1",
+    "holders": [
+      {"name":"Household sector","series":"LM153061105","holdings_billions":3039.0},
+      {"name":"Nonfinancial corporate business","series":"LM103061103","holdings_billions":132.4},
+      {"name":"Nonfinancial noncorporate business","series":"LM113061003","holdings_billions":92.2},
+      {"name":"State and local governments","series":"LM213061103","holdings_billions":1560.5},
+      {"name":"Central bank","series":"LM713061103","holdings_billions":4000.4},
+      {"name":"Defined contribution plans","series":"LM343061113","holdings_billions":16.1},
+      {"name":"State and local govt. pension funds","series":"LM223061143","holdings_billions":573.9},
+      {"name":"Money market funds","series":"FL633061105","holdings_billions":3426.4},
+      {"name":"Mutual funds","series":"LM653061105","holdings_billions":1694.4},
+      {"name":"Other financial business","series":"FL503061123","holdings_billions":101.8},
+      {"name":"Rest of the world","series":"LM263061105","holdings_billions":9317.2}
+    ],
+    "frequency": "Quarterly",
+    "source_url": "https://www.federalreserve.gov/releases/z1/current/html/F3_2_s.htm"
+  },
+  "sources": {
+    "overview": {"status":"seed","checked_at":"2026-09-10T16:59:00Z"},
+    "fed": {"status":"seed","checked_at":"2026-09-10T16:59:00Z"},
+    "foreign_holders": {"status":"seed","checked_at":"2026-09-10T16:59:00Z"},
+    "domestic_sectors": {"status":"seed","checked_at":"2026-09-10T16:59:00Z"}
+  },
+  "errors": []
+}
