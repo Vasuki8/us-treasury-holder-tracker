@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T17:39:03Z",
+  "generated_at": "2026-09-10T18:09:14Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -10,11 +10,13 @@
     "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny"
   },
   "fed": {
-    "as_of": "Sep 2, 2026",
-    "treasury_holdings_millions": 4552347,
+    "as_of": "2026-09-02",
+    "treasury_holdings_millions": 4552347.0,
     "treasury_holdings_billions": 4552.347,
     "frequency": "Weekly (Wednesday level; published Thursday)",
-    "source_url": "https://www.federalreserve.gov/releases/h41/current/"
+    "source_url": "https://www.federalreserve.gov/releases/h41/current/",
+    "retrieval_url": "https://fred.stlouisfed.org/series/TREAST",
+    "series": "TREAST"
   },
   "foreign_holders": {
     "as_of": "2026-06",
@@ -22,12 +24,6 @@
     "grand_total_billions": 9299.0,
     "foreign_official_billions": 3778.1,
     "countries": [
-      {
-        "name": "All Other",
-        "holdings_billions": 1847.8,
-        "previous_billions": 1851.4,
-        "change_billions": -3.6000000000001364
-      },
       {
         "name": "Japan",
         "holdings_billions": 1116.7,
@@ -155,94 +151,1434 @@
   },
   "domestic_sectors": {
     "as_of": "2026:Q1",
+    "observation_date": "2026-01-01",
     "holders": [
       {
-        "name": "Household sector",
+        "name": "Households and nonprofit organizations",
         "series": "LM153061105",
-        "holdings_billions": 3039.0
+        "fred_series": "BOGZ1LM153061105Q",
+        "holdings_billions": 3039.04
       },
       {
         "name": "Nonfinancial corporate business",
         "series": "LM103061103",
-        "holdings_billions": 132.4
+        "fred_series": "BOGZ1LM103061103Q",
+        "holdings_billions": 132.405
       },
       {
         "name": "Nonfinancial noncorporate business",
         "series": "LM113061003",
-        "holdings_billions": 92.2
+        "fred_series": "BOGZ1LM113061003Q",
+        "holdings_billions": 92.201
       },
       {
         "name": "State and local governments",
         "series": "LM213061103",
-        "holdings_billions": 1560.5
+        "fred_series": "BOGZ1LM213061103Q",
+        "holdings_billions": 1560.472
       },
       {
         "name": "Central bank",
         "series": "LM713061103",
-        "holdings_billions": 4000.4
+        "fred_series": "BOGZ1LM713061103Q",
+        "holdings_billions": 4000.42
       },
       {
         "name": "Defined contribution plans",
         "series": "LM343061113",
-        "holdings_billions": 16.1
+        "fred_series": "BOGZ1LM343061113Q",
+        "holdings_billions": 16.127
       },
       {
         "name": "State and local govt. pension funds",
         "series": "LM223061143",
-        "holdings_billions": 573.9
+        "fred_series": "BOGZ1LM223061143Q",
+        "holdings_billions": 573.867
       },
       {
         "name": "Money market funds",
         "series": "FL633061105",
-        "holdings_billions": 3426.4
+        "fred_series": "BOGZ1FL633061105Q",
+        "holdings_billions": 3426.437
       },
       {
         "name": "Mutual funds",
         "series": "LM653061105",
-        "holdings_billions": 1694.4
+        "fred_series": "BOGZ1LM653061105Q",
+        "holdings_billions": 1694.361
       },
       {
         "name": "Other financial business",
         "series": "FL503061123",
-        "holdings_billions": 101.8
+        "fred_series": "BOGZ1FL503061123Q",
+        "holdings_billions": 101.845
       },
       {
         "name": "Rest of the world",
         "series": "LM263061105",
-        "holdings_billions": 9317.2
+        "fred_series": "BOGZ1LM263061105Q",
+        "holdings_billions": 9317.224
       }
     ],
     "frequency": "Quarterly",
-    "source_url": "https://www.federalreserve.gov/releases/z1/current/html/F3_2_s.htm"
+    "source_url": "https://www.federalreserve.gov/releases/z1/current/html/F3_2_s.htm",
+    "retrieval_url": "https://fred.stlouisfed.org/",
+    "partial_failures": []
   },
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T17:38:52Z"
+      "checked_at": "2026-09-10T18:08:58Z"
     },
     "fed": {
-      "status": "error",
-      "checked_at": "2026-09-10T17:38:53Z"
+      "status": "ok",
+      "checked_at": "2026-09-10T18:08:59Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T17:39:03Z"
+      "checked_at": "2026-09-10T18:09:08Z"
     },
     "domestic_sectors": {
+      "status": "ok",
+      "checked_at": "2026-09-10T18:09:13Z"
+    },
+    "soma": {
+      "status": "ok",
+      "checked_at": "2026-09-10T18:09:13Z"
+    },
+    "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T17:39:03Z"
+      "checked_at": "2026-09-10T18:09:14Z",
+      "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
+    },
+    "auctions": {
+      "status": "ok",
+      "checked_at": "2026-09-10T18:09:14Z"
     }
   },
   "errors": [
     {
-      "source": "fed",
-      "checked_at": "2026-09-10T17:38:53Z",
-      "message": "HTTPError: HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "domestic_sectors",
-      "checked_at": "2026-09-10T17:39:03Z",
-      "message": "HTTPError: HTTP Error 403: Forbidden"
+      "source": "money_market_funds",
+      "checked_at": "2026-09-10T18:09:14Z",
+      "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
-  ]
+  ],
+  "soma": {
+    "as_of": "2026-09-02",
+    "treasury_total_billions": 4446.2865402,
+    "by_type": [
+      {
+        "name": "Notes & Bonds",
+        "holdings_billions": 3600.7763032
+      },
+      {
+        "name": "Bills",
+        "holdings_billions": 548.3599267
+      },
+      {
+        "name": "TIPS",
+        "holdings_billions": 277.1047565
+      },
+      {
+        "name": "FRNs",
+        "holdings_billions": 20.0455538
+      }
+    ],
+    "top_holdings": [
+      {
+        "cusip": "912828YS3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 54.4976408,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6154274172826583
+      },
+      {
+        "cusip": "912828YB0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 47.1369167,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.5089353658393064
+      },
+      {
+        "cusip": "91282CCB5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2031-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 44.2117842,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.299380202152112
+      },
+      {
+        "cusip": "91282CDY4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2032-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 36.2077642,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2576832050470573
+      },
+      {
+        "cusip": "9128286T2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 35.2550869,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.4188405097869147
+      },
+      {
+        "cusip": "91282CBL4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2031-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 34.8616178,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2489002356172635
+      },
+      {
+        "cusip": "91282CDJ7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2031-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 33.650325,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2327578008336521
+      },
+      {
+        "cusip": "912810QU5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2042-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 33.0529988,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999929659736738
+      },
+      {
+        "cusip": "912810QE1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 31.4312244,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999884458524119
+      },
+      {
+        "cusip": "91282CEP2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2032-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 31.3405802,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2360967767903121
+      },
+      {
+        "cusip": "912810QT8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 31.2356696,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999990782665313
+      },
+      {
+        "cusip": "912810QD3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2039-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 31.1939753,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999775813568011
+      },
+      {
+        "cusip": "912810ST6",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 30.8149561,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.3701230828859665
+      },
+      {
+        "cusip": "912810QW1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2042-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 30.7428278,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999942593910415
+      },
+      {
+        "cusip": "912810QH4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 30.430176,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999780305241287
+      },
+      {
+        "cusip": "912810QK7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 30.2490101,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999927878713536
+      },
+      {
+        "cusip": "912797SA6",
+        "security_type": "Bills",
+        "maturity_date": "2026-10-01",
+        "coupon_rate": null,
+        "par_value_billions": 30.2317343,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0904774879882881
+      },
+      {
+        "cusip": "912810QL5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 30.032015,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999949400031424
+      },
+      {
+        "cusip": "912828ZQ6",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2030-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 29.9556587,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2732688816400615
+      },
+      {
+        "cusip": "912810QS0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 29.7419284,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999939329947399
+      },
+      {
+        "cusip": "912828Z94",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2030-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 29.4950704,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.3374660401080069
+      },
+      {
+        "cusip": "912810QQ4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 29.396,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999796380599979
+      },
+      {
+        "cusip": "912810QN1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 29.3590452,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6826899820876646
+      },
+      {
+        "cusip": "912810RP5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2045-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 29.2235215,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6992666650980925
+      },
+      {
+        "cusip": "912810SY5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 29.0350163,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.3847489250510655
+      },
+      {
+        "cusip": "912810QC5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2039-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 29.0009553,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.699989827793258
+      },
+      {
+        "cusip": "91282CAE1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2030-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 28.2625411,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2135428909239414
+      },
+      {
+        "cusip": "912810RU4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2046-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 28.0447443,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.699985077914266
+      },
+      {
+        "cusip": "91282CCS8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2031-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 27.9983538,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.1980859692317669
+      },
+      {
+        "cusip": "912810SQ2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 27.2778125,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.3613493761230597
+      },
+      {
+        "cusip": "912810QB7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2039-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 27.1447422,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999897134445177
+      },
+      {
+        "cusip": "912810QX9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2042-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 26.598,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6363853305568035
+      },
+      {
+        "cusip": "912810RM2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2045-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 26.3718791,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6387652328536902
+      },
+      {
+        "cusip": "9128282R0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 26.3234032,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.3790520064750071
+      },
+      {
+        "cusip": "91282CAV3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2030-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 24.9287915,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.1864799405738538
+      },
+      {
+        "cusip": "912810SW9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 23.3680846,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2832526422189119
+      },
+      {
+        "cusip": "912828ZB9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-02-28",
+        "coupon_rate": null,
+        "par_value_billions": 23.1573208,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6303486030456344
+      },
+      {
+        "cusip": "912810QZ4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2043-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 22.878,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.5447174178394383
+      },
+      {
+        "cusip": "912797SK4",
+        "security_type": "Bills",
+        "maturity_date": "2026-10-29",
+        "coupon_rate": null,
+        "par_value_billions": 22.3095663,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0955005849961176
+      },
+      {
+        "cusip": "91282CFF3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2032-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 22.1759283,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.185690401993823
+      },
+      {
+        "cusip": "912828Z78",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-01-31",
+        "coupon_rate": null,
+        "par_value_billions": 22.0807474,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2312196640356707
+      },
+      {
+        "cusip": "912810TD0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2052-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 22.0384024,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2592162164811797
+      },
+      {
+        "cusip": "912797UG0",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-17",
+        "coupon_rate": null,
+        "par_value_billions": 21.9630492,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0778391929000429
+      },
+      {
+        "cusip": "912810SP4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2050-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 21.7035012,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2438088602942214
+      },
+      {
+        "cusip": "9128283F5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 21.5800875,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.3291247422340701
+      },
+      {
+        "cusip": "912810RX8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2047-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 21.5375541,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.5293718378330748
+      },
+      {
+        "cusip": "9128286B1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 21.4805294,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2661628044789338
+      },
+      {
+        "cusip": "912810TB4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2051-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 21.2532858,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2355318160477966
+      },
+      {
+        "cusip": "912797VD6",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-22",
+        "coupon_rate": null,
+        "par_value_billions": 20.9874509,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0712145815142581
+      },
+      {
+        "cusip": "9128285M8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2028-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 20.7541308,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2578573977142004
+      },
+      {
+        "cusip": "912810SX7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2051-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 20.609948,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2222609953546709
+      },
+      {
+        "cusip": "912810RN0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2045-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 20.5586402,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.5101274717689167
+      },
+      {
+        "cusip": "912797UJ4",
+        "security_type": "Bills",
+        "maturity_date": "2026-10-08",
+        "coupon_rate": null,
+        "par_value_billions": 20.4897929,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0734992906457598
+      },
+      {
+        "cusip": "91282CND9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2028-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 20.4735924,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2615649948332794
+      },
+      {
+        "cusip": "912797VE4",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-29",
+        "coupon_rate": null,
+        "par_value_billions": 20.4161103,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0714608047466816
+      },
+      {
+        "cusip": "912810RC4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2043-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 20.248,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.4832000589232976
+      },
+      {
+        "cusip": "912810RG5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2044-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 20.145,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.4797786287831524
+      },
+      {
+        "cusip": "91282CNC1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2035-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 20.1416889,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.1437358640022267
+      },
+      {
+        "cusip": "912810SR0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 20.0506417,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.3619795699456022
+      },
+      {
+        "cusip": "912828V98",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 19.9479791,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.3270006742830473
+      },
+      {
+        "cusip": "912810RD2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2043-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 19.868,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.4731063416826149
+      },
+      {
+        "cusip": "912810SJ8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2049-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 19.8254968,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.3135142156070572
+      },
+      {
+        "cusip": "91282CNU1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2028-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 19.6836884,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2542509950013933
+      },
+      {
+        "cusip": "912810QY7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2042-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 19.669,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.4689346661955847
+      },
+      {
+        "cusip": "912810SK5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2049-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 19.6456023,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.3377230430288015
+      },
+      {
+        "cusip": "912797VC8",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-15",
+        "coupon_rate": null,
+        "par_value_billions": 19.3742087,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0654720110892482
+      },
+      {
+        "cusip": "912810SS8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2050-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 19.1933014,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2245927087239712
+      },
+      {
+        "cusip": "91282CLW9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2034-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 19.056256,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.1370402385761986
+      },
+      {
+        "cusip": "912797SU2",
+        "security_type": "Bills",
+        "maturity_date": "2026-11-27",
+        "coupon_rate": null,
+        "par_value_billions": 19.0326038,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0833290610228807
+      },
+      {
+        "cusip": "912810TG3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2052-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 18.9492771,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2420050325787215
+      },
+      {
+        "cusip": "912797UF2",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-10",
+        "coupon_rate": null,
+        "par_value_billions": 18.8983008,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0680329736873396
+      },
+      {
+        "cusip": "91282CPZ8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2036-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 18.8267423,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.1356143473596293
+      },
+      {
+        "cusip": "91282CMM0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2035-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 18.7064926,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.1350705153679523
+      },
+      {
+        "cusip": "912797RS8",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-03",
+        "coupon_rate": null,
+        "par_value_billions": 18.5679375,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0569573876446716
+      },
+      {
+        "cusip": "912810RE0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2044-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 18.446,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.4408185734687972
+      },
+      {
+        "cusip": "912810QA9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2039-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 18.0715271,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6975115796918976
+      },
+      {
+        "cusip": "912810FT0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2036-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 18.030823,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6830599765959405
+      },
+      {
+        "cusip": "91282CPJ4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2035-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 17.8934989,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.1298112426020491
+      },
+      {
+        "cusip": "912810PX0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2038-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 17.8492566,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999674762350556
+      },
+      {
+        "cusip": "912828U24",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2026-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 17.8483981,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2776337127005237
+      },
+      {
+        "cusip": "912797VL8",
+        "security_type": "Bills",
+        "maturity_date": "2026-10-13",
+        "coupon_rate": null,
+        "par_value_billions": 17.5865667,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0971364743249225
+      },
+      {
+        "cusip": "912828YG9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2026-09-30",
+        "coupon_rate": null,
+        "par_value_billions": 17.4722193,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.4946244828164652
+      },
+      {
+        "cusip": "912810RJ9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2044-11-15",
+        "coupon_rate": null,
+        "par_value_billions": 17.3993516,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.4195153012033799
+      },
+      {
+        "cusip": "912810SZ2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2051-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 17.3052221,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.1922019497421931
+      },
+      {
+        "cusip": "91282CBS9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2028-03-31",
+        "coupon_rate": null,
+        "par_value_billions": 16.9114095,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2334156283734443
+      },
+      {
+        "cusip": "91282CPT2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-01-15",
+        "coupon_rate": null,
+        "par_value_billions": 16.8823591,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2254529569325865
+      },
+      {
+        "cusip": "912797UH8",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-24",
+        "coupon_rate": null,
+        "par_value_billions": 16.6162972,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0600563595287814
+      },
+      {
+        "cusip": "91282CQA2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 16.4345283,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2207921862488518
+      },
+      {
+        "cusip": "912810RS9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2046-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 16.3798409,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.4046649832159862
+      },
+      {
+        "cusip": "91282CMN8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2028-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 15.9333661,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2178740132790538
+      },
+      {
+        "cusip": "912810PW2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2038-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 15.7670002,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999731904100593
+      },
+      {
+        "cusip": "912828X88",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 15.7521707,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2355879743549176
+      },
+      {
+        "cusip": "91282CGM7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2033-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 15.7235741,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.1373047875642756
+      },
+      {
+        "cusip": "912810SU3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2051-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 15.6448298,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.1773961365758108
+      },
+      {
+        "cusip": "91282CGQ8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2030-02-28",
+        "coupon_rate": null,
+        "par_value_billions": 15.0374679,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.12572629760263
+      },
+      {
+        "cusip": "912810QP6",
+        "security_type": "TIPS",
+        "maturity_date": "2041-02-15",
+        "coupon_rate": null,
+        "par_value_billions": 15.0009021,
+        "inflation_compensation_billions": 7.874723557399999,
+        "percent_outstanding": 0.6259593883360843
+      },
+      {
+        "cusip": "912810PU6",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2037-05-15",
+        "coupon_rate": null,
+        "par_value_billions": 14.989046,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.6999960071068827
+      },
+      {
+        "cusip": "91282CNT4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2035-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 14.9776742,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.1109993709441814
+      },
+      {
+        "cusip": "912797VB0",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-08",
+        "coupon_rate": null,
+        "par_value_billions": 14.7774138,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0517374453483875
+      },
+      {
+        "cusip": "912797TC1",
+        "security_type": "Bills",
+        "maturity_date": "2026-12-24",
+        "coupon_rate": null,
+        "par_value_billions": 14.7450983,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.1095697506432474
+      }
+    ],
+    "security_count": 433,
+    "frequency": "Weekly (Wednesday holdings; published Thursday)",
+    "source_url": "https://www.newyorkfed.org/markets/soma-holdings",
+    "api_url": "https://markets.newyorkfed.org/api/soma/tsy/get/all/asof/2026-09-02.json"
+  },
+  "auctions": {
+    "as_of": "2026-09-17",
+    "window_days": 90,
+    "auction_count": 113,
+    "competitive_accepted_billions": 7710.4577715,
+    "total_accepted_billions": 8536.5398864,
+    "categories": [
+      {
+        "name": "Primary dealers",
+        "accepted_billions": 2363.0289552,
+        "share_pct": 30.647064353745808
+      },
+      {
+        "name": "Indirect bidders",
+        "accepted_billions": 4736.3988202,
+        "share_pct": 61.428244088269956
+      },
+      {
+        "name": "Direct bidders",
+        "accepted_billions": 611.0299961,
+        "share_pct": 7.924691557984237
+      }
+    ],
+    "recent_auctions": [
+      {
+        "auction_date": "2026-09-17",
+        "cusip": "91282CRE3",
+        "security_type": "Note",
+        "security_term": "9-Year 10-Month",
+        "offering_billions": 19.0,
+        "accepted_billions": 0.0,
+        "bid_to_cover": null,
+        "dealer_share_pct": 0.0,
+        "indirect_share_pct": 0.0,
+        "direct_share_pct": 0.0
+      },
+      {
+        "auction_date": "2026-09-15",
+        "cusip": "912810UX4",
+        "security_type": "Bond",
+        "security_term": "19-Year 11-Month",
+        "offering_billions": 13.0,
+        "accepted_billions": 0.0,
+        "bid_to_cover": null,
+        "dealer_share_pct": 0.0,
+        "indirect_share_pct": 0.0,
+        "direct_share_pct": 0.0
+      },
+      {
+        "auction_date": "2026-09-15",
+        "cusip": "912797SK4",
+        "security_type": "Bill",
+        "security_term": "6-Week",
+        "offering_billions": 75.0,
+        "accepted_billions": 0.0,
+        "bid_to_cover": null,
+        "dealer_share_pct": 0.0,
+        "indirect_share_pct": 0.0,
+        "direct_share_pct": 0.0
+      },
+      {
+        "auction_date": "2026-09-14",
+        "cusip": "912797UD7",
+        "security_type": "Bill",
+        "security_term": "26-Week",
+        "offering_billions": 79.0,
+        "accepted_billions": 0.0,
+        "bid_to_cover": null,
+        "dealer_share_pct": 0.0,
+        "indirect_share_pct": 0.0,
+        "direct_share_pct": 0.0
+      },
+      {
+        "auction_date": "2026-09-14",
+        "cusip": "912797VH7",
+        "security_type": "Bill",
+        "security_term": "13-Week",
+        "offering_billions": 92.0,
+        "accepted_billions": 0.0,
+        "bid_to_cover": null,
+        "dealer_share_pct": 0.0,
+        "indirect_share_pct": 0.0,
+        "direct_share_pct": 0.0
+      },
+      {
+        "auction_date": "2026-09-10",
+        "cusip": "912810UW6",
+        "security_type": "Bond",
+        "security_term": "29-Year 11-Month",
+        "offering_billions": 22.0,
+        "accepted_billions": 22.000024,
+        "bid_to_cover": 2.61,
+        "dealer_share_pct": 2.207904594475033,
+        "indirect_share_pct": 79.48443105047095,
+        "direct_share_pct": 18.307664355054012
+      },
+      {
+        "auction_date": "2026-09-10",
+        "cusip": "912797VW4",
+        "security_type": "Bill",
+        "security_term": "8-Week",
+        "offering_billions": 85.0,
+        "accepted_billions": 91.6678121,
+        "bid_to_cover": 2.82,
+        "dealer_share_pct": 27.714113532322,
+        "indirect_share_pct": 66.29567352344563,
+        "direct_share_pct": 5.990212944232369
+      },
+      {
+        "auction_date": "2026-09-10",
+        "cusip": "912797VL8",
+        "security_type": "Bill",
+        "security_term": "4-Week",
+        "offering_billions": 90.0,
+        "accepted_billions": 97.0597224,
+        "bid_to_cover": 2.81,
+        "dealer_share_pct": 24.302284687390515,
+        "indirect_share_pct": 71.78061904574798,
+        "direct_share_pct": 3.9170962668615057
+      },
+      {
+        "auction_date": "2026-09-09",
+        "cusip": "91282CRF0",
+        "security_type": "Note",
+        "security_term": "9-Year 11-Month",
+        "offering_billions": 39.0,
+        "accepted_billions": 39.00004,
+        "bid_to_cover": 2.71,
+        "dealer_share_pct": 4.310844537373377,
+        "indirect_share_pct": 79.18404478548472,
+        "direct_share_pct": 16.505110677141907
+      },
+      {
+        "auction_date": "2026-09-09",
+        "cusip": "912797WP8",
+        "security_type": "Bill",
+        "security_term": "17-Week",
+        "offering_billions": 72.0,
+        "accepted_billions": 77.6476105,
+        "bid_to_cover": 2.73,
+        "dealer_share_pct": 48.08297064975957,
+        "indirect_share_pct": 43.702921898083744,
+        "direct_share_pct": 8.214107452156687
+      },
+      {
+        "auction_date": "2026-09-08",
+        "cusip": "912797UL9",
+        "security_type": "Bill",
+        "security_term": "6-Week",
+        "offering_billions": 75.0,
+        "accepted_billions": 80.7619348,
+        "bid_to_cover": 2.93,
+        "dealer_share_pct": 33.199906981575595,
+        "indirect_share_pct": 62.97039772966193,
+        "direct_share_pct": 3.8296952887624713
+      },
+      {
+        "auction_date": "2026-09-08",
+        "cusip": "912797WK9",
+        "security_type": "Bill",
+        "security_term": "26-Week",
+        "offering_billions": 79.0,
+        "accepted_billions": 85.0690402,
+        "bid_to_cover": 2.88,
+        "dealer_share_pct": 27.054539249844495,
+        "indirect_share_pct": 64.43774605102439,
+        "direct_share_pct": 8.507714699131116
+      },
+      {
+        "auction_date": "2026-09-08",
+        "cusip": "91282CRL7",
+        "security_type": "Note",
+        "security_term": "3-Year",
+        "offering_billions": 58.0,
+        "accepted_billions": 58.0000888,
+        "bid_to_cover": 2.72,
+        "dealer_share_pct": 10.907829264450084,
+        "indirect_share_pct": 62.147726035114246,
+        "direct_share_pct": 26.944444700435668
+      },
+      {
+        "auction_date": "2026-09-08",
+        "cusip": "912797VG9",
+        "security_type": "Bill",
+        "security_term": "13-Week",
+        "offering_billions": 92.0,
+        "accepted_billions": 99.0678044,
+        "bid_to_cover": 2.61,
+        "dealer_share_pct": 40.018237481736996,
+        "indirect_share_pct": 51.91746975571212,
+        "direct_share_pct": 8.064292762550886
+      },
+      {
+        "auction_date": "2026-09-03",
+        "cusip": "912797VK0",
+        "security_type": "Bill",
+        "security_term": "4-Week",
+        "offering_billions": 90.0,
+        "accepted_billions": 95.3853351,
+        "bid_to_cover": 2.97,
+        "dealer_share_pct": 29.037964581476235,
+        "indirect_share_pct": 67.58664908974643,
+        "direct_share_pct": 3.3753863287773425
+      },
+      {
+        "auction_date": "2026-09-03",
+        "cusip": "912797VP9",
+        "security_type": "Bill",
+        "security_term": "8-Week",
+        "offering_billions": 85.0,
+        "accepted_billions": 90.0865107,
+        "bid_to_cover": 3.02,
+        "dealer_share_pct": 25.224862316109935,
+        "indirect_share_pct": 70.16218108940599,
+        "direct_share_pct": 4.612956594484072
+      },
+      {
+        "auction_date": "2026-09-02",
+        "cusip": "912797WN3",
+        "security_type": "Bill",
+        "security_term": "17-Week",
+        "offering_billions": 72.0,
+        "accepted_billions": 76.3078199,
+        "bid_to_cover": 2.78,
+        "dealer_share_pct": 42.10718358398823,
+        "indirect_share_pct": 51.230144258866886,
+        "direct_share_pct": 6.662672157144884
+      },
+      {
+        "auction_date": "2026-09-01",
+        "cusip": "912797UK1",
+        "security_type": "Bill",
+        "security_term": "6-Week",
+        "offering_billions": 85.0,
+        "accepted_billions": 90.1242685,
+        "bid_to_cover": 2.85,
+        "dealer_share_pct": 28.876499838567177,
+        "indirect_share_pct": 67.69955668858736,
+        "direct_share_pct": 3.4239434728454565
+      },
+      {
+        "auction_date": "2026-09-01",
+        "cusip": "912797WA1",
+        "security_type": "Bill",
+        "security_term": "52-Week",
+        "offering_billions": 52.0,
+        "accepted_billions": 55.1350449,
+        "bid_to_cover": 3.61,
+        "dealer_share_pct": 21.440588650268825,
+        "indirect_share_pct": 75.24607330174405,
+        "direct_share_pct": 3.3133380479871217
+      },
+      {
+        "auction_date": "2026-08-31",
+        "cusip": "912797VA2",
+        "security_type": "Bill",
+        "security_term": "13-Week",
+        "offering_billions": 92.0,
+        "accepted_billions": 97.5469879,
+        "bid_to_cover": 2.77,
+        "dealer_share_pct": 40.50444630035883,
+        "indirect_share_pct": 51.98473466455897,
+        "direct_share_pct": 7.5108190350822
+      },
+      {
+        "auction_date": "2026-08-31",
+        "cusip": "912797WD5",
+        "security_type": "Bill",
+        "security_term": "26-Week",
+        "offering_billions": 79.0,
+        "accepted_billions": 83.7629074,
+        "bid_to_cover": 2.63,
+        "dealer_share_pct": 43.423066839604246,
+        "indirect_share_pct": 47.29473332259312,
+        "direct_share_pct": 9.282199837802633
+      },
+      {
+        "auction_date": "2026-08-27",
+        "cusip": "91282CRJ2",
+        "security_type": "Note",
+        "security_term": "7-Year",
+        "offering_billions": 44.0,
+        "accepted_billions": 49.6565676,
+        "bid_to_cover": 2.5,
+        "dealer_share_pct": 12.264115792094003,
+        "indirect_share_pct": 60.77734403019506,
+        "direct_share_pct": 26.958540177710944
+      },
+      {
+        "auction_date": "2026-08-27",
+        "cusip": "912797VE4",
+        "security_type": "Bill",
+        "security_term": "4-Week",
+        "offering_billions": 100.0,
+        "accepted_billions": 108.5225611,
+        "bid_to_cover": 2.73,
+        "dealer_share_pct": 31.48964402874881,
+        "indirect_share_pct": 65.96540528980171,
+        "direct_share_pct": 2.5449506814494773
+      },
+      {
+        "auction_date": "2026-08-27",
+        "cusip": "912797VN4",
+        "security_type": "Bill",
+        "security_term": "8-Week",
+        "offering_billions": 90.0,
+        "accepted_billions": 97.6710543,
+        "bid_to_cover": 2.77,
+        "dealer_share_pct": 39.30125175924833,
+        "indirect_share_pct": 57.32910459105669,
+        "direct_share_pct": 3.369643649694977
+      },
+      {
+        "auction_date": "2026-08-26",
+        "cusip": "91282CRD5",
+        "security_type": "Note",
+        "security_term": "1-Year 11-Month",
+        "offering_billions": 28.0,
+        "accepted_billions": 28.0000107,
+        "bid_to_cover": 3.14,
+        "dealer_share_pct": 33.083531950055786,
+        "indirect_share_pct": 66.55915054366108,
+        "direct_share_pct": 0.35731750628312464
+      },
+      {
+        "auction_date": "2026-08-26",
+        "cusip": "91282CRK9",
+        "security_type": "Note",
+        "security_term": "5-Year",
+        "offering_billions": 70.0,
+        "accepted_billions": 78.9989478,
+        "bid_to_cover": 2.37,
+        "dealer_share_pct": 10.048506151484798,
+        "indirect_share_pct": 61.51388661425441,
+        "direct_share_pct": 28.4376072342608
+      },
+      {
+        "auction_date": "2026-08-26",
+        "cusip": "912797WH6",
+        "security_type": "Bill",
+        "security_term": "17-Week",
+        "offering_billions": 72.0,
+        "accepted_billions": 78.1364542,
+        "bid_to_cover": 3.09,
+        "dealer_share_pct": 32.56970665742783,
+        "indirect_share_pct": 60.28433104037253,
+        "direct_share_pct": 7.145962302199635
+      },
+      {
+        "auction_date": "2026-08-25",
+        "cusip": "91282CRH6",
+        "security_type": "Note",
+        "security_term": "2-Year",
+        "offering_billions": 69.0,
+        "accepted_billions": 77.8705389,
+        "bid_to_cover": 2.6,
+        "dealer_share_pct": 10.896873524541997,
+        "indirect_share_pct": 66.0111585960599,
+        "direct_share_pct": 23.091967879398105
+      },
+      {
+        "auction_date": "2026-08-25",
+        "cusip": "912797UJ4",
+        "security_type": "Bill",
+        "security_term": "6-Week",
+        "offering_billions": 95.0,
+        "accepted_billions": 99.2792722,
+        "bid_to_cover": 2.71,
+        "dealer_share_pct": 33.070943764238756,
+        "indirect_share_pct": 65.19939961622198,
+        "direct_share_pct": 1.7296566195392664
+      },
+      {
+        "auction_date": "2026-08-24",
+        "cusip": "912797WC7",
+        "security_type": "Bill",
+        "security_term": "26-Week",
+        "offering_billions": 79.0,
+        "accepted_billions": 82.5586545,
+        "bid_to_cover": 3.05,
+        "dealer_share_pct": 28.634975536907614,
+        "indirect_share_pct": 60.16224503177489,
+        "direct_share_pct": 11.202779431317506
+      }
+    ],
+    "frequency": "Released as auctions occur",
+    "source_url": "https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/",
+    "api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
+    "note": "Auction takedown is an award-at-auction measure, not a current-holdings measure."
+  }
 }
