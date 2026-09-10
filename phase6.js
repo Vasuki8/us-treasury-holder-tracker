@@ -1,5 +1,6 @@
 const p6fmtB=v=>v==null?'—':`$${Number(v).toLocaleString(undefined,{maximumFractionDigits:1})}B`;
 const p6fmtPct=v=>v==null?'—':`${Number(v)>=0?'+':''}${Number(v).toFixed(1)}%`;
+const p6plainPct=v=>v==null?'—':`${Number(v).toFixed(1)}%`;
 const p6signedB=v=>v==null?'—':`${Number(v)>=0?'+':''}${Number(v).toFixed(1)}B`;
 const p6esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let p6data;
@@ -44,10 +45,12 @@ async function loadPhase6(){
   p6data=await r.json();
   renderUnusualAlerts();
   renderProvenance();
+  renderSecurityAuditTable();
   wirePhase6Downloads();
   decorateMajorSourceLinks();
   setTimeout(decorateMajorSourceLinks,500);
   setTimeout(decorateMajorSourceLinks,1500);
+  setTimeout(renderSecurityAuditTable,700);
 }
 
 function p6SourceUrl(key){
@@ -81,6 +84,30 @@ function decorateMajorSourceLinks(){
     span.innerHTML=` · <a href="${p6esc(url)}" target="_blank" rel="noopener noreferrer">source</a>`;
     meta.appendChild(span);
   });
+}
+
+function renderSecurityAuditTable(){
+  const block=p6data.security_intelligence||{}, rows=block.rows||[];
+  const table=document.getElementById('securityTable');
+  const search=document.getElementById('cusipSearch');
+  if(!table) return;
+  const head=table.closest('table')?.querySelector('thead tr');
+  if(head&&!head.querySelector('[data-p6-security-col]')){
+    head.insertAdjacentHTML('beforeend','<th data-p6-security-col="maturity">Years to maturity</th><th data-p6-security-col="sources">Matched sources</th>');
+  }
+  const draw=()=>{
+    const q=(search?.value||'').trim().toLowerCase();
+    const filtered=!q?rows:rows.filter(r=>`${r.cusip||''} ${r.security_type||''} ${r.maturity_date||''} ${r.auction_security_term||''} ${(r.source_keys||[]).join(' ')}`.toLowerCase().includes(q));
+    table.innerHTML=filtered.map(r=>{
+      const sources=(r.source_keys||[]).map(key=>{
+        const url=p6SourceUrl(key);
+        return url?`<a class="audit-link" href="${p6esc(url)}" target="_blank" rel="noopener noreferrer">${p6esc(key.toUpperCase())}</a>`:p6esc(key.toUpperCase());
+      }).join(' ');
+      return `<tr><td>${p6esc(r.cusip)}</td><td>${p6esc(r.security_type||'—')}</td><td>${p6esc(r.maturity_date||'—')}</td><td>${p6fmtB(r.soma_par_billions)}</td><td>${p6plainPct(r.soma_pct_outstanding)}</td><td>${p6esc(r.latest_auction_date||'—')}</td><td>${p6fmtB(r.auction_offering_billions)}</td><td>${p6fmtB(r.nport_fund_value_billions)}</td><td>${r.nport_fund_count??'—'}</td><td>${r.years_to_maturity==null?'—':Number(r.years_to_maturity).toFixed(1)}</td><td class="links-cell">${sources||'—'}</td></tr>`;
+    }).join('');
+  };
+  if(search) search.oninput=draw;
+  draw();
 }
 
 function renderUnusualAlerts(){
