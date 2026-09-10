@@ -31,6 +31,7 @@ on:
       - ux-v2.js
       - ux-v2.css
       - ux-v3.js
+      - ux-v3-runtime.js
       - ux-v3.css
       - index.html
       - styles.css
@@ -69,6 +70,7 @@ jobs:
           node --check ui-refresh.js
           node --check ux-v2.js
           node --check ux-v3.js
+          node --check ux-v3-runtime.js
 
       - name: Install uv
         uses: astral-sh/setup-uv@v10.0.0
