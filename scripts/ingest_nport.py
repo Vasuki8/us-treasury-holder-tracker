@@ -7,20 +7,45 @@ import re
 import zipfile
 from collections import defaultdict
 from pathlib import Path
+from urllib.parse import urljoin
 
 import pandas as pd
 import requests
+from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "nport_latest.json"
 
+DATASET_PAGE = "https://www.sec.gov/data-research/sec-markets-data/form-n-port-data-sets"
 DEFAULT_QUARTER = "2026 Q2"
 DEFAULT_URL = "https://www.sec.gov/files/dera/data/form-n-port-data-sets/2026q2_nport.zip"
 HEADERS = {
     "User-Agent": "us-treasury-holder-tracker/4.0 Vasuki8 (contact via GitHub issues)",
-    "Accept": "application/zip,application/octet-stream,*/*",
+    "Accept": "application/zip,application/octet-stream,text/html,*/*",
     "Accept-Encoding": "gzip, deflate",
 }
+
+
+def discover_latest() -> tuple[str, str]:
+    try:
+        r = requests.get(DATASET_PAGE, headers=HEADERS, timeout=60)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, "html.parser")
+        candidates = []
+        for a in soup.find_all("a", href=True):
+            href = str(a["href"])
+            m = re.search(r"(20\d{2})q([1-4])_nport\.zip", href, re.I)
+            if not m:
+                continue
+            year, quarter = int(m.group(1)), int(m.group(2))
+            candidates.append(((year, quarter), f"{year} Q{quarter}", urljoin(DATASET_PAGE, href)))
+        if candidates:
+            _, label, url = max(candidates, key=lambda x: x[0])
+            return label, url
+    except Exception as exc:
+        print(f"Could not auto-discover N-PORT archive: {type(exc).__name__}: {exc}")
+
+    return DEFAULT_QUARTER, DEFAULT_URL
 
 
 def download(url: str) -> bytes:
@@ -79,8 +104,6 @@ def is_treasury(issuer: str, title: str, cusip: str) -> bool:
             "TREASURY INFLATION",
         )
     )
-    # Marketable U.S. Treasury CUSIPs are overwhelmingly in the 9127/9128
-    # families. Use this only as a fallback when issuer text is sparse.
     cusip_hint = cusip.startswith(("9127", "9128"))
     return treasury_name or cusip_hint
 
@@ -126,15 +149,12 @@ def build_summary(raw: bytes, quarter: str, source_url: str) -> dict:
         fund_meta = {}
         for _, row in latest.iterrows():
             acc = str(row[info_acc])
+            net_assets = pd.to_numeric(row[info_net], errors="coerce") if info_net else None
             fund_meta[acc] = {
                 "name": str(row[info_name]).strip(),
                 "series_id": str(row[info_id]).strip() if info_id else None,
                 "report_date": row["_report"].date().isoformat() if pd.notna(row["_report"]) else None,
-                "net_assets_billions": (
-                    float(pd.to_numeric(row[info_net], errors="coerce")) / 1e9
-                    if info_net and pd.notna(pd.to_numeric(row[info_net], errors="coerce"))
-                    else None
-                ),
+                "net_assets_billions": float(net_assets) / 1e9 if net_assets is not None and pd.notna(net_assets) else None,
             }
 
         totals = defaultdict(float)
@@ -213,7 +233,7 @@ def build_summary(raw: bytes, quarter: str, source_url: str) -> dict:
         "quarter": quarter,
         "as_of": max(report_dates) if report_dates else None,
         "source_archive": source_url,
-        "dataset_page": "https://www.sec.gov/data-research/sec-markets-data/form-n-port-data-sets",
+        "dataset_page": DATASET_PAGE,
         "fund_count": len(funds),
         "direct_treasury_total_billions": sum(f["direct_treasury_billions"] for f in funds),
         "funds": funds[:500],
@@ -224,12 +244,21 @@ def build_summary(raw: bytes, quarter: str, source_url: str) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--url", default=DEFAULT_URL)
-    parser.add_argument("--quarter", default=DEFAULT_QUARTER)
+    parser.add_argument("--url", default=None)
+    parser.add_argument("--quarter", default=None)
     args = parser.parse_args()
 
-    raw = download(args.url)
-    summary = build_summary(raw, args.quarter, args.url)
+    if args.url:
+        source_url = args.url
+        quarter = args.quarter or DEFAULT_QUARTER
+    else:
+        discovered_quarter, discovered_url = discover_latest()
+        source_url = discovered_url
+        quarter = args.quarter or discovered_quarter
+
+    print(f"N-PORT source: {quarter} — {source_url}")
+    raw = download(source_url)
+    summary = build_summary(raw, quarter, source_url)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Wrote {OUT} with {summary['fund_count']} funds and {len(summary['by_cusip'])} Treasury CUSIPs")
