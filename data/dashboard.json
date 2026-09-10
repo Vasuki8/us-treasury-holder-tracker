@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T18:58:27Z",
+  "generated_at": "2026-09-10T18:59:58Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -1532,59 +1532,59 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:57:57Z"
+      "checked_at": "2026-09-10T18:59:35Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:57:58Z"
+      "checked_at": "2026-09-10T18:59:35Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:58:24Z"
+      "checked_at": "2026-09-10T18:59:56Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:58:12Z"
+      "checked_at": "2026-09-10T18:59:44Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:58:12Z"
+      "checked_at": "2026-09-10T18:59:44Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T18:58:12Z",
+      "checked_at": "2026-09-10T18:59:44Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:58:12Z"
+      "checked_at": "2026-09-10T18:59:45Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:58:14Z"
+      "checked_at": "2026-09-10T18:59:45Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:58:14Z"
+      "checked_at": "2026-09-10T18:59:45Z"
     },
     "extended_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:58:15Z"
+      "checked_at": "2026-09-10T18:59:45Z"
     },
     "nport": {
       "status": "pending",
-      "checked_at": "2026-09-10T18:58:15Z",
+      "checked_at": "2026-09-10T18:59:45Z",
       "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
     },
     "government_accounts": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:58:16Z"
+      "checked_at": "2026-09-10T18:59:47Z"
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T18:58:12Z",
+      "checked_at": "2026-09-10T18:59:44Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -4708,7 +4708,7 @@
   "history": [
     {
       "snapshot_date": "2026-09-10",
-      "generated_at": "2026-09-10T18:58:14Z",
+      "generated_at": "2026-09-10T18:59:45Z",
       "total_public_debt_trillions": 40.08409078544635,
       "debt_held_by_public_trillions": 32.38792109474681,
       "fed_treasuries_billions": 4552.347,
@@ -8238,7 +8238,7 @@
     "method": "A change is flagged when it clears a source-specific absolute dollar floor and is either at least 2.5× the median absolute change in the available history or at least 10% versus the previous observation. High severity begins at 4× the historical median or 20%. This is a statistical screening rule, not a prediction."
   },
   "provenance": {
-    "generated_at": "2026-09-10T18:58:27Z",
+    "generated_at": "2026-09-10T18:59:58Z",
     "source_count": 12,
     "series_count": 22,
     "sources": [
@@ -8248,7 +8248,7 @@
         "as_of": "2026-09-08",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-10T18:57:57Z",
+        "checked_at": "2026-09-10T18:59:35Z",
         "message": null,
         "urls": [
           {
@@ -8263,7 +8263,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T18:57:58Z",
+        "checked_at": "2026-09-10T18:59:35Z",
         "message": null,
         "urls": [
           {
@@ -8282,7 +8282,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T18:58:24Z",
+        "checked_at": "2026-09-10T18:59:56Z",
         "message": null,
         "urls": [
           {
@@ -8297,7 +8297,7 @@
         "as_of": "2026:Q1",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T18:58:12Z",
+        "checked_at": "2026-09-10T18:59:44Z",
         "message": null,
         "urls": [
           {
@@ -8316,7 +8316,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T18:58:12Z",
+        "checked_at": "2026-09-10T18:59:44Z",
         "message": null,
         "urls": [
           {
@@ -8335,7 +8335,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-10T18:58:12Z",
+        "checked_at": "2026-09-10T18:59:44Z",
         "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip",
         "urls": []
       },
@@ -8345,7 +8345,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-10T18:58:12Z",
+        "checked_at": "2026-09-10T18:59:45Z",
         "message": null,
         "urls": [
           {
@@ -8364,7 +8364,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T18:58:14Z",
+        "checked_at": "2026-09-10T18:59:45Z",
         "message": null,
         "urls": [
           {
@@ -8379,7 +8379,7 @@
         "as_of": "2026-08-26",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-10T18:58:14Z",
+        "checked_at": "2026-09-10T18:59:45Z",
         "message": null,
         "urls": [
           {
@@ -8398,7 +8398,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T18:58:15Z",
+        "checked_at": "2026-09-10T18:59:45Z",
         "message": null,
         "urls": [
           {
@@ -8413,7 +8413,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-10T18:58:15Z",
+        "checked_at": "2026-09-10T18:59:45Z",
         "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data.",
         "urls": [
           {
@@ -8432,7 +8432,7 @@
         "as_of": "2026-07-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T18:58:16Z",
+        "checked_at": "2026-09-10T18:59:47Z",
         "message": null,
         "urls": [
           {
