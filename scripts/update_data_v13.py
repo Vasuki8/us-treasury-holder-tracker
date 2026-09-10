@@ -82,15 +82,15 @@ def fetch_tic_full_country_history() -> dict:
     for (name, code), history in grouped.items():
         if not history:
             continue
-        # Treasury Table 3 also contains region totals and memo groups. Country codes
-        # below 70000 are individual geographic reporters; totals/memos are excluded.
+        # Treasury Table 3 also contains regional totals, memo groups and an
+        # "All Countries" aggregate. Keep only individual geographic reporters.
         try:
             code_num = int(code)
         except ValueError:
             continue
         if code_num >= 70000:
             continue
-        if name.startswith(("Total ", "Memo:", "Of Which:")) or name == "Grand Total":
+        if name.startswith(("Total ", "Memo:", "Of Which:")) or name in {"Grand Total", "All Countries"}:
             continue
 
         current = history[0]
