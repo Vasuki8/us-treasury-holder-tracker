@@ -154,6 +154,7 @@ function renderSecurityDrill(){
 
     if(details){
       const consistency=row.maturity_consistency||'unknown';
+      const consistencyClass=consistency==='match'?'match':consistency==='mismatch'?'mismatch':'unknown';
       details.innerHTML=[
         detailItem('CUSIP',p7esc(row.cusip)),
         detailItem('Security type',p7esc(row.security_type||row.auction_security_type||'—')),
@@ -163,7 +164,7 @@ function renderSecurityDrill(){
         detailItem('Latest issue date',p7esc(row.issue_date||'—')),
         detailItem('SOMA maturity',p7esc(row.maturity_date||'—')),
         detailItem('Auction maturity',p7esc(row.auction_maturity_date||'—')),
-        detailItem('Maturity cross-check',`<span class="state-badge ${p7esc(consistency==='mismatch'?'cleared':'active')}">${p7esc(consistency)}</span>`),
+        detailItem('Maturity cross-check',`<span class="state-badge ${p7esc(consistencyClass)}">${p7esc(consistency)}</span>`),
         detailItem('Original term length',row.original_term_years==null?'—':`${p7fmtNum(row.original_term_years,2)} years`),
         detailItem('Term remaining',p7fmtPct(row.remaining_term_pct)),
         detailItem('Security age',row.security_age_years==null?'—':`${p7fmtNum(row.security_age_years,2)} years`),
