@@ -1,0 +1,61 @@
+name: Ingest quarterly SEC N-PORT
+
+on:
+  schedule:
+    # SEC publishes N-PORT bulk data quarterly. Run shortly after quarter-end;
+    # a manual run can override the archive URL and quarter label.
+    - cron: "41 6 5 1,4,7,10 *"
+  workflow_dispatch:
+    inputs:
+      archive_url:
+        description: "Optional SEC N-PORT ZIP URL"
+        required: false
+        type: string
+      quarter:
+        description: "Quarter label, e.g. 2026 Q2"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.0.0
+        with:
+          version: "latest-known"
+
+      - name: Install Python
+        run: uv python install 3.13
+
+      - name: Install dependencies
+        run: uv venv --python 3.13 && uv pip install --python .venv/bin/python -r requirements.txt
+
+      - name: Build N-PORT Treasury cache
+        env:
+          ARCHIVE_URL: ${{ inputs.archive_url }}
+          QUARTER: ${{ inputs.quarter }}
+        run: |
+          ARGS=""
+          if [ -n "$ARCHIVE_URL" ]; then ARGS="$ARGS --url $ARCHIVE_URL"; fi
+          if [ -n "$QUARTER" ]; then ARGS="$ARGS --quarter $QUARTER"; fi
+          .venv/bin/python scripts/ingest_nport.py $ARGS
+
+      - name: Commit N-PORT cache if changed
+        run: |
+          if git diff --quiet -- data/nport_latest.json; then
+            echo "No N-PORT cache changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/nport_latest.json
+          git commit -m "data: refresh quarterly SEC N-PORT Treasury cache"
+          git push
