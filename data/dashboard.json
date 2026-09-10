@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T18:02:42Z",
+  "generated_at": "2026-09-10T18:07:27Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -10,11 +10,13 @@
     "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny"
   },
   "fed": {
-    "as_of": "Sep 2, 2026",
-    "treasury_holdings_millions": 4552347,
+    "as_of": "2026-09-02",
+    "treasury_holdings_millions": 4552347.0,
     "treasury_holdings_billions": 4552.347,
     "frequency": "Weekly (Wednesday level; published Thursday)",
-    "source_url": "https://www.federalreserve.gov/releases/h41/current/"
+    "source_url": "https://www.federalreserve.gov/releases/h41/current/",
+    "retrieval_url": "https://fred.stlouisfed.org/series/TREAST",
+    "series": "TREAST"
   },
   "foreign_holders": {
     "as_of": "2026-06",
@@ -149,114 +151,116 @@
   },
   "domestic_sectors": {
     "as_of": "2026:Q1",
+    "observation_date": "2026-01-01",
     "holders": [
       {
-        "name": "Household sector",
+        "name": "Households and nonprofit organizations",
         "series": "LM153061105",
-        "holdings_billions": 3039.0
+        "fred_series": "BOGZ1LM153061105Q",
+        "holdings_billions": 3039.04
       },
       {
         "name": "Nonfinancial corporate business",
         "series": "LM103061103",
-        "holdings_billions": 132.4
+        "fred_series": "BOGZ1LM103061103Q",
+        "holdings_billions": 132.405
       },
       {
         "name": "Nonfinancial noncorporate business",
         "series": "LM113061003",
-        "holdings_billions": 92.2
+        "fred_series": "BOGZ1LM113061003Q",
+        "holdings_billions": 92.201
       },
       {
         "name": "State and local governments",
         "series": "LM213061103",
-        "holdings_billions": 1560.5
+        "fred_series": "BOGZ1LM213061103Q",
+        "holdings_billions": 1560.472
       },
       {
         "name": "Central bank",
         "series": "LM713061103",
-        "holdings_billions": 4000.4
+        "fred_series": "BOGZ1LM713061103Q",
+        "holdings_billions": 4000.42
       },
       {
         "name": "Defined contribution plans",
         "series": "LM343061113",
-        "holdings_billions": 16.1
+        "fred_series": "BOGZ1LM343061113Q",
+        "holdings_billions": 16.127
       },
       {
         "name": "State and local govt. pension funds",
         "series": "LM223061143",
-        "holdings_billions": 573.9
+        "fred_series": "BOGZ1LM223061143Q",
+        "holdings_billions": 573.867
       },
       {
         "name": "Money market funds",
         "series": "FL633061105",
-        "holdings_billions": 3426.4
+        "fred_series": "BOGZ1FL633061105Q",
+        "holdings_billions": 3426.437
       },
       {
         "name": "Mutual funds",
         "series": "LM653061105",
-        "holdings_billions": 1694.4
+        "fred_series": "BOGZ1LM653061105Q",
+        "holdings_billions": 1694.361
       },
       {
         "name": "Other financial business",
         "series": "FL503061123",
-        "holdings_billions": 101.8
+        "fred_series": "BOGZ1FL503061123Q",
+        "holdings_billions": 101.845
       },
       {
         "name": "Rest of the world",
         "series": "LM263061105",
-        "holdings_billions": 9317.2
+        "fred_series": "BOGZ1LM263061105Q",
+        "holdings_billions": 9317.224
       }
     ],
     "frequency": "Quarterly",
-    "source_url": "https://www.federalreserve.gov/releases/z1/current/html/F3_2_s.htm"
+    "source_url": "https://www.federalreserve.gov/releases/z1/current/html/F3_2_s.htm",
+    "retrieval_url": "https://fred.stlouisfed.org/",
+    "partial_failures": []
   },
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:02:14Z"
+      "checked_at": "2026-09-10T18:07:13Z"
     },
     "fed": {
-      "status": "error",
-      "checked_at": "2026-09-10T18:02:15Z",
-      "message": "KeyError: 'DATE'"
+      "status": "ok",
+      "checked_at": "2026-09-10T18:07:14Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:02:25Z"
+      "checked_at": "2026-09-10T18:07:22Z"
     },
     "domestic_sectors": {
-      "status": "error",
-      "checked_at": "2026-09-10T18:02:30Z",
-      "message": "RuntimeError: Too few Z.1 sector series were retrieved. LM153061105: KeyError: 'DATE'; LM103061103: KeyError: 'DATE'; LM113061003: KeyError: 'DATE'"
+      "status": "ok",
+      "checked_at": "2026-09-10T18:07:26Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:02:30Z"
+      "checked_at": "2026-09-10T18:07:26Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T18:02:30Z",
-      "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/data-research/sec-markets-data/dera-form-n-mfp-data-sets"
+      "checked_at": "2026-09-10T18:07:26Z",
+      "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:02:42Z"
+      "checked_at": "2026-09-10T18:07:27Z"
     }
   },
   "errors": [
     {
-      "source": "fed",
-      "checked_at": "2026-09-10T18:02:15Z",
-      "message": "KeyError: 'DATE'"
-    },
-    {
-      "source": "domestic_sectors",
-      "checked_at": "2026-09-10T18:02:30Z",
-      "message": "RuntimeError: Too few Z.1 sector series were retrieved. LM153061105: KeyError: 'DATE'; LM103061103: KeyError: 'DATE'; LM113061003: KeyError: 'DATE'"
-    },
-    {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T18:02:30Z",
-      "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/data-research/sec-markets-data/dera-form-n-mfp-data-sets"
+      "checked_at": "2026-09-10T18:07:26Z",
+      "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
   "soma": {
