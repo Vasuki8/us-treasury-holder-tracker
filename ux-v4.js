@@ -134,9 +134,9 @@
     const eyebrow = document.querySelector('.hero .eyebrow');
     const heading = document.querySelector('.hero h1');
     const lede = document.querySelector('.hero .lede');
-    if (eyebrow) eyebrow.textContent = 'TREASURY INTELLIGENCE';
-    if (heading) heading.textContent = 'US Treasury Tracker';
-    if (lede) lede.textContent = 'Who holds Treasuries, what changed, and how auction demand is behaving — from official data.';
+    if (eyebrow) eyebrow.textContent = 'U.S. TREASURY OWNERSHIP';
+    if (heading) heading.textContent = 'Who Owns U.S. Treasuries?';
+    if (lede) lede.textContent = 'Track the largest holders, country flows and auction demand — with official data and monthly country history back to 2020.';
   }
 
   function simplifyAdvancedNavigation() {

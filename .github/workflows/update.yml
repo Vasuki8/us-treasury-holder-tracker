@@ -12,6 +12,7 @@ on:
       - ui-refresh-research-terminal
       - ux-v2-interactive-workspace
       - ux-v3-interactive-inspector
+      - country-history-header-refresh
     paths:
       - scripts/**
       - app.js
@@ -36,6 +37,8 @@ on:
       - ux-v4.js
       - ux-v4.css
       - ux-v5.css
+      - country-history.js
+      - country-history.css
       - index.html
       - styles.css
       - .github/workflows/update.yml
@@ -75,6 +78,7 @@ jobs:
           node --check ux-v3.js
           node --check ux-v3-runtime.js
           node --check ux-v4.js
+          node --check country-history.js
 
       - name: Install uv
         uses: astral-sh/setup-uv@v10.0.0
@@ -88,7 +92,7 @@ jobs:
         run: uv venv --python 3.13 && uv pip install --python .venv/bin/python -r requirements.txt
 
       - name: Refresh official data
-        run: .venv/bin/python scripts/update_data_v12.py
+        run: .venv/bin/python scripts/update_data_v13.py
 
       - name: Validate Phase 8 output
         run: .venv/bin/python scripts/validate_phase8_state.py
@@ -104,6 +108,9 @@ jobs:
 
       - name: Validate Phase 12 output
         run: .venv/bin/python scripts/validate_phase12_state.py
+
+      - name: Validate expanded country history
+        run: .venv/bin/python scripts/validate_country_history.py
 
       - name: Commit updated data safely
         run: |
@@ -121,12 +128,13 @@ jobs:
             echo "Branch advanced during refresh; regenerating on latest HEAD."
             git restore data/dashboard.json
             git pull --ff-only origin "$GITHUB_REF_NAME"
-            .venv/bin/python scripts/update_data_v12.py
+            .venv/bin/python scripts/update_data_v13.py
             .venv/bin/python scripts/validate_phase8_state.py
             .venv/bin/python scripts/validate_phase9_state.py
             .venv/bin/python scripts/validate_phase10_state.py
             .venv/bin/python scripts/validate_phase11_state.py
             .venv/bin/python scripts/validate_phase12_state.py
+            .venv/bin/python scripts/validate_country_history.py
           fi
 
           if git diff --quiet -- data/dashboard.json; then
