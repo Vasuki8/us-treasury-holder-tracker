@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T19:30:17Z",
+  "generated_at": "2026-09-10T19:32:06Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -1532,59 +1532,59 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:44Z"
+      "checked_at": "2026-09-10T19:31:28Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:44Z"
+      "checked_at": "2026-09-10T19:31:29Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:30:09Z"
+      "checked_at": "2026-09-10T19:32:00Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:52Z"
+      "checked_at": "2026-09-10T19:31:44Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:53Z"
+      "checked_at": "2026-09-10T19:31:44Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T19:29:53Z",
+      "checked_at": "2026-09-10T19:31:44Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:53Z"
+      "checked_at": "2026-09-10T19:31:45Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:55Z"
+      "checked_at": "2026-09-10T19:31:48Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:55Z"
+      "checked_at": "2026-09-10T19:31:48Z"
     },
     "extended_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:57Z"
+      "checked_at": "2026-09-10T19:31:50Z"
     },
     "nport": {
       "status": "pending",
-      "checked_at": "2026-09-10T19:29:57Z",
+      "checked_at": "2026-09-10T19:31:50Z",
       "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
     },
     "government_accounts": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:59Z"
+      "checked_at": "2026-09-10T19:31:52Z"
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T19:29:53Z",
+      "checked_at": "2026-09-10T19:31:44Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -4708,7 +4708,7 @@
   "history": [
     {
       "snapshot_date": "2026-09-10",
-      "generated_at": "2026-09-10T19:29:55Z",
+      "generated_at": "2026-09-10T19:31:48Z",
       "total_public_debt_trillions": 40.08409078544635,
       "debt_held_by_public_trillions": 32.38792109474681,
       "fed_treasuries_billions": 4552.347,
@@ -13622,7 +13622,7 @@
     "metadata_api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
     "metadata_status": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:30:14Z",
+      "checked_at": "2026-09-10T19:32:03Z",
       "matched_cusips": 100,
       "requested_cusips": 100,
       "coverage_pct": 100.0,
@@ -14405,8 +14405,8 @@
         "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:14Z",
-        "seen_count": 4
+        "last_seen_at": "2026-09-10T19:32:03Z",
+        "seen_count": 5
       },
       {
         "severity": "high",
@@ -14423,8 +14423,8 @@
         "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
         "alert_id": "10f3e7909be0493614fc",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:14Z",
-        "seen_count": 4
+        "last_seen_at": "2026-09-10T19:32:03Z",
+        "seen_count": 5
       },
       {
         "severity": "medium",
@@ -14441,8 +14441,8 @@
         "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
         "alert_id": "f49e63e0d57bded6cd29",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:14Z",
-        "seen_count": 4
+        "last_seen_at": "2026-09-10T19:32:03Z",
+        "seen_count": 5
       },
       {
         "severity": "medium",
@@ -14459,8 +14459,8 @@
         "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
         "alert_id": "a626c548ce0c32534d5e",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:14Z",
-        "seen_count": 4
+        "last_seen_at": "2026-09-10T19:32:03Z",
+        "seen_count": 5
       },
       {
         "severity": "medium",
@@ -14477,8 +14477,8 @@
         "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
         "alert_id": "a53c34f1e0828ff7a307",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:14Z",
-        "seen_count": 4
+        "last_seen_at": "2026-09-10T19:32:03Z",
+        "seen_count": 5
       }
     ],
     "alert_count": 5,
@@ -14486,7 +14486,7 @@
     "method": "A change is flagged when it clears a source-specific absolute dollar floor and is either at least 2.5× the median absolute change in the available history or at least 10% versus the previous observation. High severity begins at 4× the historical median or 20%. This is a statistical screening rule, not a prediction."
   },
   "provenance": {
-    "generated_at": "2026-09-10T19:30:14Z",
+    "generated_at": "2026-09-10T19:32:03Z",
     "source_count": 12,
     "series_count": 22,
     "sources": [
@@ -14496,7 +14496,7 @@
         "as_of": "2026-09-08",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:44Z",
+        "checked_at": "2026-09-10T19:31:28Z",
         "message": null,
         "urls": [
           {
@@ -14511,7 +14511,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:44Z",
+        "checked_at": "2026-09-10T19:31:29Z",
         "message": null,
         "urls": [
           {
@@ -14530,7 +14530,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:30:09Z",
+        "checked_at": "2026-09-10T19:32:00Z",
         "message": null,
         "urls": [
           {
@@ -14545,7 +14545,7 @@
         "as_of": "2026:Q1",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:52Z",
+        "checked_at": "2026-09-10T19:31:44Z",
         "message": null,
         "urls": [
           {
@@ -14564,7 +14564,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:53Z",
+        "checked_at": "2026-09-10T19:31:44Z",
         "message": null,
         "urls": [
           {
@@ -14583,7 +14583,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-10T19:29:53Z",
+        "checked_at": "2026-09-10T19:31:44Z",
         "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip",
         "urls": []
       },
@@ -14593,7 +14593,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:53Z",
+        "checked_at": "2026-09-10T19:31:45Z",
         "message": null,
         "urls": [
           {
@@ -14612,7 +14612,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:55Z",
+        "checked_at": "2026-09-10T19:31:48Z",
         "message": null,
         "urls": [
           {
@@ -14627,7 +14627,7 @@
         "as_of": "2026-08-26",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:55Z",
+        "checked_at": "2026-09-10T19:31:48Z",
         "message": null,
         "urls": [
           {
@@ -14646,7 +14646,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:57Z",
+        "checked_at": "2026-09-10T19:31:50Z",
         "message": null,
         "urls": [
           {
@@ -14661,7 +14661,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-10T19:29:57Z",
+        "checked_at": "2026-09-10T19:31:50Z",
         "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data.",
         "urls": [
           {
@@ -14680,7 +14680,7 @@
         "as_of": "2026-07-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:59Z",
+        "checked_at": "2026-09-10T19:31:52Z",
         "message": null,
         "urls": [
           {
@@ -14853,7 +14853,7 @@
     "note": "Provenance records the official source, observation date, retrieval path and latest health check separately so stale-but-valid observations are distinguishable from failed fetches."
   },
   "alert_history": {
-    "generated_at": "2026-09-10T19:30:14Z",
+    "generated_at": "2026-09-10T19:32:03Z",
     "active_count": 5,
     "cleared_count": 0,
     "episode_count": 5,
@@ -14862,7 +14862,7 @@
       {
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 4,
+        "seen_count": 5,
         "cleared_at": null,
         "state": "active",
         "severity": "high",
@@ -14878,12 +14878,12 @@
         "multiple_of_baseline": 6.317073170731667,
         "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
         "series_key": "Foreign country|China, Mainland|MoM",
-        "last_seen_at": "2026-09-10T19:30:14Z"
+        "last_seen_at": "2026-09-10T19:32:03Z"
       },
       {
         "alert_id": "10f3e7909be0493614fc",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 4,
+        "seen_count": 5,
         "cleared_at": null,
         "state": "active",
         "severity": "high",
@@ -14899,12 +14899,12 @@
         "multiple_of_baseline": 5.944019528071598,
         "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
         "series_key": "U.S. sector|Exchange-traded funds|QoQ",
-        "last_seen_at": "2026-09-10T19:30:14Z"
+        "last_seen_at": "2026-09-10T19:32:03Z"
       },
       {
         "alert_id": "f49e63e0d57bded6cd29",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 4,
+        "seen_count": 5,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -14920,12 +14920,12 @@
         "multiple_of_baseline": 2.993203808938721,
         "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
         "series_key": "U.S. sector|Security brokers and dealers|QoQ",
-        "last_seen_at": "2026-09-10T19:30:14Z"
+        "last_seen_at": "2026-09-10T19:32:03Z"
       },
       {
         "alert_id": "a626c548ce0c32534d5e",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 4,
+        "seen_count": 5,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -14941,12 +14941,12 @@
         "multiple_of_baseline": 2.858699045967045,
         "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
         "series_key": "Primary dealer|Treasury dealer net position ex-TIPS|WoW",
-        "last_seen_at": "2026-09-10T19:30:14Z"
+        "last_seen_at": "2026-09-10T19:32:03Z"
       },
       {
         "alert_id": "a53c34f1e0828ff7a307",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 4,
+        "seen_count": 5,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -14962,7 +14962,7 @@
         "multiple_of_baseline": 0.6384486717886203,
         "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
         "series_key": "Primary dealer|Treasury fails to deliver ex-TIPS|WoW",
-        "last_seen_at": "2026-09-10T19:30:14Z"
+        "last_seen_at": "2026-09-10T19:32:03Z"
       }
     ],
     "transitions": [
@@ -15020,7 +15020,7 @@
     "note": "An alert episode is keyed by scope, series name, cadence and source observation date. The first-seen timestamp records when the tracker first detected it; it is cleared only after a healthy source refresh confirms that the episode is no longer current."
   },
   "alert_intelligence": {
-    "generated_at": "2026-09-10T19:30:17Z",
+    "generated_at": "2026-09-10T19:32:06Z",
     "rows": [
       {
         "severity": "high",
@@ -15037,8 +15037,8 @@
         "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
         "alert_id": "10f3e7909be0493614fc",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:14Z",
-        "seen_count": 4,
+        "last_seen_at": "2026-09-10T19:32:03Z",
+        "seen_count": 5,
         "abs_change_percentile": 100.0,
         "robust_z_score": 5.291994121164934,
         "history_change_count": 43,
@@ -15060,8 +15060,8 @@
         "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:14Z",
-        "seen_count": 4,
+        "last_seen_at": "2026-09-10T19:32:03Z",
+        "seen_count": 5,
         "abs_change_percentile": 83.33333333333333,
         "robust_z_score": -3.216797270165979,
         "history_change_count": 12,
@@ -15083,8 +15083,8 @@
         "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
         "alert_id": "a626c548ce0c32534d5e",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:14Z",
-        "seen_count": 4,
+        "last_seen_at": "2026-09-10T19:32:03Z",
+        "seen_count": 5,
         "abs_change_percentile": 88.3495145631068,
         "robust_z_score": 1.925278971881317,
         "history_change_count": 103,
@@ -15106,8 +15106,8 @@
         "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
         "alert_id": "f49e63e0d57bded6cd29",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:14Z",
-        "seen_count": 4,
+        "last_seen_at": "2026-09-10T19:32:03Z",
+        "seen_count": 5,
         "abs_change_percentile": 92.3076923076923,
         "robust_z_score": 1.8011618764010897,
         "history_change_count": 39,
@@ -15129,8 +15129,8 @@
         "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
         "alert_id": "a53c34f1e0828ff7a307",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:14Z",
-        "seen_count": 4,
+        "last_seen_at": "2026-09-10T19:32:03Z",
+        "seen_count": 5,
         "abs_change_percentile": 31.067961165048544,
         "robust_z_score": -0.36518505938062285,
         "history_change_count": 103,
@@ -15146,7 +15146,7 @@
     "method": "Phase 8 supplements the Phase 6 threshold screen with two diagnostics: the percentile rank of the latest absolute move within available historical changes, and a robust z-score based on the median and median absolute deviation. Notification readiness is restricted to newly opened/reopened high-severity episodes or alerts that escalate to high severity."
   },
   "source_publications": {
-    "generated_at": "2026-09-10T19:30:17Z",
+    "generated_at": "2026-09-10T19:32:06Z",
     "current_release_count": 0,
     "current_releases": [],
     "history": [
