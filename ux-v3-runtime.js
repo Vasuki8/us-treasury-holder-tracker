@@ -8,6 +8,12 @@
   }
 
   function loadCleanVisualLayer(){
+    if(!document.getElementById('ux4InlineTrim')){
+      const style=document.createElement('style');
+      style.id='ux4InlineTrim';
+      style.textContent='body.ux4-essential .ux-mode-button[data-mode="data"],body.ux4-essential .ux-mode-button[data-mode="pinned"]{display:none!important}body.ux4-essential main.shell>section.note:not(.panel){display:none!important}';
+      document.head.appendChild(style);
+    }
     if(!document.querySelector('link[data-ux4]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
