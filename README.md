@@ -42,6 +42,15 @@ A GitHub Pages dashboard that checks official U.S. Treasury, Federal Reserve, Ne
 - **Ownership-share snapshot** — foreign holders, Fed H.4.1, SOMA and government-account detail are compared with the appropriate Debt to the Penny denominator from the same date or latest business day before it.
 - **SOMA concentration view** — top-CUSIP concentration and a maturity-bucket view of the large SOMA positions stored by the tracker.
 
+### Phase 6
+- **Audit trail and source provenance** — each major dataset records its observation date, publication cadence, latest health check, retrieval path and official source/API links.
+- **Inline source links** — major dashboard sections and overview cards link directly to the official source represented by that figure.
+- **Historical CSV exports** — export country histories, Federal Reserve sector histories, primary-dealer histories and the tracker's accumulated daily snapshots in one analysis-ready CSV.
+- **Source-provenance export** — download the source registry and series IDs, including observation dates and retrieval links.
+- **Unusual holder-change monitor** — source-cadence-aware screening for unusually large changes. A move must clear a source-specific dollar floor and be at least 2.5× its available-history median absolute change or at least 10% versus the prior observation; higher thresholds are marked high severity.
+- **Alert export** — download the current unusual-change screen with magnitude, percentage move, historical baseline and reason for each flag.
+- **CUSIP audit metadata** — security rows now expose derived time to maturity and identify which source blocks contributed each SOMA/auction/N-PORT match.
+
 The site refreshes daily, but it never fabricates a daily ownership number. Every dataset keeps its real observation date.
 
 ## SEC bulk-data limitation
@@ -55,6 +64,8 @@ Form N-PORT is handled separately by `.github/workflows/nport.yml`. The SEC publ
 There is no single public official database naming every owner of every Treasury security each day. This tracker combines official datasets with different reporting scopes and lags. Auction awards are not current holdings, TIC country attribution can reflect custodial location, primary-dealer net positions are not an ownership register, repo exposure is not the same as direct Treasury ownership, and N-PORT reports market value rather than Treasury par value.
 
 Government-account detail is also not a separate additive category on top of intragovernmental debt; it is a detailed view of federal-account investments. The dashboard therefore compares those account lines with the intragovernmental total instead of adding the two together.
+
+The unusual-change monitor is a statistical research screen, not a forecast. A flag means the latest reported move is large under the stated history-relative rule; it does not identify a cause or imply a future price move.
 
 ## Local setup with uv
 
@@ -91,8 +102,7 @@ The ingestion job keeps only the latest public report for each fund series, iden
 
 ## Next expansion
 
-- Build source-level provenance links beside every major holder row.
-- Add downloadable historical CSVs for country, sector and dealer series.
-- Add alerts for unusually large holder changes using each source's true reporting cadence.
-- Expand Treasury-security metadata beyond the recent auction window.
+- Expand Treasury-security issuance metadata beyond the recent 90-day auction window, including issue/original-issue dates and richer term/coupon context where official data support it.
+- Add persistent alert history so a researcher can see when a holder first crossed the unusual-change threshold and when the flag cleared.
 - Add named-fund drill-down pages whenever SEC N-PORT/N-MFP automated access becomes reliable.
+- Add optional scheduled notifications for newly triggered high-severity holder changes after the underlying reporting source publishes a new observation.
