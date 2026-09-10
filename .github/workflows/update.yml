@@ -12,7 +12,6 @@ on:
       - ui-refresh-research-terminal
       - ux-v2-interactive-workspace
       - ux-v3-interactive-inspector
-      - ux-v4-clean-visuals
     paths:
       - scripts/**
       - app.js
