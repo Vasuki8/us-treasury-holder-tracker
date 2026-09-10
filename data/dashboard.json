@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T18:40:33Z",
+  "generated_at": "2026-09-10T18:58:27Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -1532,59 +1532,59 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:40:04Z"
+      "checked_at": "2026-09-10T18:57:57Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:40:04Z"
+      "checked_at": "2026-09-10T18:57:58Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:40:31Z"
+      "checked_at": "2026-09-10T18:58:24Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:40:16Z"
+      "checked_at": "2026-09-10T18:58:12Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:40:16Z"
+      "checked_at": "2026-09-10T18:58:12Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T18:40:17Z",
+      "checked_at": "2026-09-10T18:58:12Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:40:17Z"
+      "checked_at": "2026-09-10T18:58:12Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:40:19Z"
+      "checked_at": "2026-09-10T18:58:14Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:40:19Z"
+      "checked_at": "2026-09-10T18:58:14Z"
     },
     "extended_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:40:21Z"
+      "checked_at": "2026-09-10T18:58:15Z"
     },
     "nport": {
       "status": "pending",
-      "checked_at": "2026-09-10T18:40:21Z",
+      "checked_at": "2026-09-10T18:58:15Z",
       "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
     },
     "government_accounts": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:40:23Z"
+      "checked_at": "2026-09-10T18:58:16Z"
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T18:40:17Z",
+      "checked_at": "2026-09-10T18:58:12Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -4708,7 +4708,7 @@
   "history": [
     {
       "snapshot_date": "2026-09-10",
-      "generated_at": "2026-09-10T18:40:19Z",
+      "generated_at": "2026-09-10T18:58:14Z",
       "total_public_debt_trillions": 40.08409078544635,
       "debt_held_by_public_trillions": 32.38792109474681,
       "fed_treasuries_billions": 4552.347,
@@ -5699,7 +5699,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 1170,
+        "years_to_maturity": 3.2032854209445585,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912828YB0",
@@ -5711,7 +5716,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 1078,
+        "years_to_maturity": 2.951403148528405,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CCB5",
@@ -5723,7 +5733,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 1716,
+        "years_to_maturity": 4.698151950718686,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CDY4",
@@ -5735,7 +5750,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 1992,
+        "years_to_maturity": 5.453798767967146,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "9128286T2",
@@ -5747,7 +5767,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 986,
+        "years_to_maturity": 2.6995208761122518,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CBL4",
@@ -5759,7 +5784,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 1627,
+        "years_to_maturity": 4.454483230663929,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CDJ7",
@@ -5771,7 +5801,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 1900,
+        "years_to_maturity": 5.201916495550993,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QU5",
@@ -5783,7 +5818,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5645,
+        "years_to_maturity": 15.455167693360712,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QE1",
@@ -5795,7 +5835,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 4914,
+        "years_to_maturity": 13.453798767967145,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CEP2",
@@ -5807,7 +5852,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 2082,
+        "years_to_maturity": 5.700205338809035,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QT8",
@@ -5819,7 +5869,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5553,
+        "years_to_maturity": 15.203285420944558,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QD3",
@@ -5831,7 +5886,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 4822,
+        "years_to_maturity": 13.201916495550993,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810ST6",
@@ -5843,7 +5903,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5188,
+        "years_to_maturity": 14.203969883641342,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QW1",
@@ -5855,7 +5920,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5734,
+        "years_to_maturity": 15.698836413415469,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QH4",
@@ -5867,7 +5937,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5004,
+        "years_to_maturity": 13.700205338809035,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QK7",
@@ -5879,7 +5954,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5096,
+        "years_to_maturity": 13.952087611225188,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797SA6",
@@ -5891,7 +5971,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 29,
+        "years_to_maturity": 0.07939767282683094,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QL5",
@@ -5903,7 +5988,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5188,
+        "years_to_maturity": 14.203969883641342,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912828ZQ6",
@@ -5915,7 +6005,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 1351,
+        "years_to_maturity": 3.698836413415469,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QS0",
@@ -5927,7 +6022,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5461,
+        "years_to_maturity": 14.951403148528405,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912828Z94",
@@ -5939,7 +6039,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 1262,
+        "years_to_maturity": 3.455167693360712,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QQ4",
@@ -5951,7 +6056,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5369,
+        "years_to_maturity": 14.699520876112253,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QN1",
@@ -5963,7 +6073,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5280,
+        "years_to_maturity": 14.455852156057494,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810RP5",
@@ -5975,7 +6090,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 7014,
+        "years_to_maturity": 19.20328542094456,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810SY5",
@@ -5987,7 +6107,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5369,
+        "years_to_maturity": 14.699520876112253,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QC5",
@@ -5999,7 +6124,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 4730,
+        "years_to_maturity": 12.950034223134839,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CAE1",
@@ -6011,7 +6141,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 1443,
+        "years_to_maturity": 3.9507186858316223,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810RU4",
@@ -6023,7 +6158,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 7379,
+        "years_to_maturity": 20.202600958247775,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CCS8",
@@ -6035,7 +6175,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 1808,
+        "years_to_maturity": 4.950034223134839,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810SQ2",
@@ -6047,7 +6192,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5096,
+        "years_to_maturity": 13.952087611225188,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QB7",
@@ -6059,7 +6209,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 4638,
+        "years_to_maturity": 12.698151950718685,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QX9",
@@ -6071,7 +6226,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5826,
+        "years_to_maturity": 15.950718685831623,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810RM2",
@@ -6083,7 +6243,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 6830,
+        "years_to_maturity": 18.699520876112253,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "9128282R0",
@@ -6095,7 +6260,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 347,
+        "years_to_maturity": 0.9500342231348392,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CAV3",
@@ -6107,7 +6277,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 1535,
+        "years_to_maturity": 4.202600958247776,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810SW9",
@@ -6119,7 +6294,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5280,
+        "years_to_maturity": 14.455852156057494,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912828ZB9",
@@ -6131,7 +6311,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 179,
+        "years_to_maturity": 0.49007529089664614,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QZ4",
@@ -6143,7 +6328,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 6010,
+        "years_to_maturity": 16.45448323066393,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797SK4",
@@ -6155,7 +6345,14 @@
         "auction_security_term": "6-Week",
         "auction_offering_billions": 75.0,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 57,
+        "years_to_maturity": 0.15605749486652978,
+        "auction_recency_days": -13,
+        "source_keys": [
+          "soma",
+          "auctions"
+        ]
       },
       {
         "cusip": "91282CFF3",
@@ -6167,7 +6364,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 2174,
+        "years_to_maturity": 5.952087611225188,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912828Z78",
@@ -6179,7 +6381,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 151,
+        "years_to_maturity": 0.4134154688569473,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810TD0",
@@ -6191,7 +6398,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 9297,
+        "years_to_maturity": 25.453798767967147,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797UG0",
@@ -6203,7 +6415,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 15,
+        "years_to_maturity": 0.04106776180698152,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810SP4",
@@ -6215,7 +6432,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 8748,
+        "years_to_maturity": 23.95071868583162,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "9128283F5",
@@ -6227,7 +6449,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 439,
+        "years_to_maturity": 1.2019164955509924,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810RX8",
@@ -6239,7 +6466,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 7560,
+        "years_to_maturity": 20.698151950718685,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "9128286B1",
@@ -6251,7 +6483,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 897,
+        "years_to_maturity": 2.455852156057495,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810TB4",
@@ -6263,7 +6500,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 9205,
+        "years_to_maturity": 25.201916495550993,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797VD6",
@@ -6275,7 +6517,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 20,
+        "years_to_maturity": 0.05475701574264202,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "9128285M8",
@@ -6287,7 +6534,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 805,
+        "years_to_maturity": 2.2039698836413417,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810SX7",
@@ -6299,7 +6551,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 9021,
+        "years_to_maturity": 24.698151950718685,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810RN0",
@@ -6311,7 +6568,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 6922,
+        "years_to_maturity": 18.951403148528406,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797UJ4",
@@ -6323,7 +6585,14 @@
         "auction_security_term": "6-Week",
         "auction_offering_billions": 95.0,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 36,
+        "years_to_maturity": 0.09856262833675565,
+        "auction_recency_days": 8,
+        "source_keys": [
+          "soma",
+          "auctions"
+        ]
       },
       {
         "cusip": "91282CND9",
@@ -6335,7 +6604,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 621,
+        "years_to_maturity": 1.700205338809035,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797VE4",
@@ -6347,7 +6621,14 @@
         "auction_security_term": "4-Week",
         "auction_offering_billions": 100.0,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 27,
+        "years_to_maturity": 0.07392197125256673,
+        "auction_recency_days": 6,
+        "source_keys": [
+          "soma",
+          "auctions"
+        ]
       },
       {
         "cusip": "912810RC4",
@@ -6359,7 +6640,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 6191,
+        "years_to_maturity": 16.95003422313484,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810RG5",
@@ -6371,7 +6657,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 6465,
+        "years_to_maturity": 17.700205338809035,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CNC1",
@@ -6383,7 +6674,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 3177,
+        "years_to_maturity": 8.698151950718685,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810SR0",
@@ -6395,7 +6691,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5004,
+        "years_to_maturity": 13.700205338809035,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912828V98",
@@ -6407,7 +6708,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 166,
+        "years_to_maturity": 0.4544832306639288,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810RD2",
@@ -6419,7 +6725,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 6283,
+        "years_to_maturity": 17.201916495550993,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810SJ8",
@@ -6431,7 +6742,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 8383,
+        "years_to_maturity": 22.951403148528406,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CNU1",
@@ -6443,7 +6759,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 713,
+        "years_to_maturity": 1.9520876112251881,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QY7",
@@ -6455,7 +6776,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5918,
+        "years_to_maturity": 16.202600958247775,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810SK5",
@@ -6467,7 +6793,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 8475,
+        "years_to_maturity": 23.20328542094456,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797VC8",
@@ -6479,7 +6810,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 13,
+        "years_to_maturity": 0.03559206023271732,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810SS8",
@@ -6491,7 +6827,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 8840,
+        "years_to_maturity": 24.202600958247775,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CLW9",
@@ -6503,7 +6844,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 2996,
+        "years_to_maturity": 8.202600958247775,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797SU2",
@@ -6515,7 +6861,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 86,
+        "years_to_maturity": 0.23545516769336072,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810TG3",
@@ -6527,7 +6878,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 9387,
+        "years_to_maturity": 25.700205338809035,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797UF2",
@@ -6539,7 +6895,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 8,
+        "years_to_maturity": 0.02190280629705681,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CPZ8",
@@ -6551,7 +6912,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 3453,
+        "years_to_maturity": 9.453798767967145,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CMM0",
@@ -6563,7 +6929,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 3088,
+        "years_to_maturity": 8.454483230663929,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797RS8",
@@ -6575,7 +6946,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 1,
+        "years_to_maturity": 0.0027378507871321013,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810RE0",
@@ -6587,7 +6963,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 6375,
+        "years_to_maturity": 17.453798767967147,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QA9",
@@ -6599,7 +6980,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 4549,
+        "years_to_maturity": 12.454483230663929,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810FT0",
@@ -6611,7 +6997,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 3453,
+        "years_to_maturity": 9.453798767967145,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CPJ4",
@@ -6623,7 +7014,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 3361,
+        "years_to_maturity": 9.201916495550993,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810PX0",
@@ -6635,7 +7031,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 4273,
+        "years_to_maturity": 11.698836413415469,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912828U24",
@@ -6647,7 +7048,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 74,
+        "years_to_maturity": 0.2026009582477755,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797VL8",
@@ -6659,7 +7065,14 @@
         "auction_security_term": "4-Week",
         "auction_offering_billions": 90.0,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 41,
+        "years_to_maturity": 0.11225188227241616,
+        "auction_recency_days": -8,
+        "source_keys": [
+          "soma",
+          "auctions"
+        ]
       },
       {
         "cusip": "912828YG9",
@@ -6671,7 +7084,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 28,
+        "years_to_maturity": 0.07665982203969883,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810RJ9",
@@ -6683,7 +7101,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 6649,
+        "years_to_maturity": 18.203969883641342,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810SZ2",
@@ -6695,7 +7118,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 9113,
+        "years_to_maturity": 24.95003422313484,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CBS9",
@@ -6707,7 +7135,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 576,
+        "years_to_maturity": 1.5770020533880904,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CPT2",
@@ -6719,7 +7152,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 866,
+        "years_to_maturity": 2.3709787816563996,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797UH8",
@@ -6731,7 +7169,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 22,
+        "years_to_maturity": 0.06023271731690623,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CQA2",
@@ -6743,7 +7186,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 897,
+        "years_to_maturity": 2.455852156057495,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810RS9",
@@ -6755,7 +7203,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 7195,
+        "years_to_maturity": 19.698836413415467,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CMN8",
@@ -6767,7 +7220,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 531,
+        "years_to_maturity": 1.4537987679671458,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810PW2",
@@ -6779,7 +7237,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 4184,
+        "years_to_maturity": 11.455167693360712,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912828X88",
@@ -6791,7 +7254,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 255,
+        "years_to_maturity": 0.6981519507186859,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CGM7",
@@ -6803,7 +7271,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 2358,
+        "years_to_maturity": 6.455852156057495,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810SU3",
@@ -6815,7 +7288,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 8932,
+        "years_to_maturity": 24.45448323066393,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CGQ8",
@@ -6827,7 +7305,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 1275,
+        "years_to_maturity": 3.490759753593429,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810QP6",
@@ -6839,7 +7322,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 5280,
+        "years_to_maturity": 14.455852156057494,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912810PU6",
@@ -6851,7 +7339,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 3908,
+        "years_to_maturity": 10.699520876112253,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "91282CNT4",
@@ -6863,7 +7356,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 3269,
+        "years_to_maturity": 8.950034223134839,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797VB0",
@@ -6875,7 +7373,12 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 6,
+        "years_to_maturity": 0.01642710472279261,
+        "source_keys": [
+          "soma"
+        ]
       },
       {
         "cusip": "912797TC1",
@@ -6887,13 +7390,19 @@
         "auction_security_term": null,
         "auction_offering_billions": null,
         "nport_fund_value_billions": null,
-        "nport_fund_count": null
+        "nport_fund_count": null,
+        "days_to_maturity": 113,
+        "years_to_maturity": 0.30937713894592744,
+        "source_keys": [
+          "soma"
+        ]
       }
     ],
     "row_count": 100,
     "auction_matches": 4,
     "nport_matches": 0,
-    "note": "CUSIP matching combines SOMA positions with recent Treasury auctions and, when the quarterly N-PORT cache is available, fund holdings. A missing match does not mean no other holder owns the security."
+    "note": "CUSIP matching combines SOMA positions with recent Treasury auctions and, when the quarterly N-PORT cache is available, fund holdings. A missing match does not mean no other holder owns the security.",
+    "audit_note": "Security rows identify which source blocks contributed each match and add time-to-maturity / auction-recency fields derived from source dates. A recent-auction match is issuance context, not proof that the auction award is still held by any current owner."
   },
   "change_leaderboard": {
     "largest_absolute_moves": [
@@ -7650,5 +8159,449 @@
       }
     ],
     "note": "Maturity buckets are calculated from the CUSIP-level SOMA sample stored in the dashboard (top positions), so they are a concentration view rather than a full maturity distribution."
+  },
+  "unusual_change_alerts": {
+    "alerts": [
+      {
+        "severity": "high",
+        "scope": "Foreign country",
+        "name": "China, Mainland",
+        "period": "MoM",
+        "as_of": "2026-06",
+        "previous_as_of": "2026-05",
+        "current_billions": 633.4,
+        "change_billions": -25.899999999999977,
+        "change_pct": -3.928408918549974,
+        "baseline_abs_change_billions": 4.100000000000023,
+        "multiple_of_baseline": 6.317073170731667,
+        "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation"
+      },
+      {
+        "severity": "high",
+        "scope": "U.S. sector",
+        "name": "Exchange-traded funds",
+        "period": "QoQ",
+        "as_of": "2026-01-01",
+        "previous_as_of": "2025-10-01",
+        "current_billions": 779.052,
+        "change_billions": 73.05200000000002,
+        "change_pct": 10.34730878186969,
+        "baseline_abs_change_billions": 12.290000000000013,
+        "multiple_of_baseline": 5.944019528071598,
+        "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation"
+      },
+      {
+        "severity": "medium",
+        "scope": "U.S. sector",
+        "name": "Security brokers and dealers",
+        "period": "QoQ",
+        "as_of": "2026-01-01",
+        "previous_as_of": "2025-10-01",
+        "current_billions": 620.413,
+        "change_billions": 77.95500000000004,
+        "change_pct": 14.370697823610316,
+        "baseline_abs_change_billions": 26.043999999999997,
+        "multiple_of_baseline": 2.993203808938721,
+        "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation"
+      },
+      {
+        "severity": "medium",
+        "scope": "Primary dealer",
+        "name": "Treasury dealer net position ex-TIPS",
+        "period": "WoW",
+        "as_of": "2026-08-26",
+        "previous_as_of": "2026-08-19",
+        "current_billions": 477.607,
+        "change_billions": 41.20100000000002,
+        "change_pct": 9.44097927159572,
+        "baseline_abs_change_billions": 14.412499999999994,
+        "multiple_of_baseline": 2.858699045967045,
+        "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation"
+      },
+      {
+        "severity": "medium",
+        "scope": "Primary dealer",
+        "name": "Treasury fails to deliver ex-TIPS",
+        "period": "WoW",
+        "as_of": "2026-08-26",
+        "previous_as_of": "2026-08-19",
+        "current_billions": 76.655,
+        "change_billions": -11.260000000000005,
+        "change_pct": -12.80782574077234,
+        "baseline_abs_change_billions": 17.636500000000005,
+        "multiple_of_baseline": 0.6384486717886203,
+        "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation"
+      }
+    ],
+    "alert_count": 5,
+    "high_count": 2,
+    "method": "A change is flagged when it clears a source-specific absolute dollar floor and is either at least 2.5× the median absolute change in the available history or at least 10% versus the previous observation. High severity begins at 4× the historical median or 20%. This is a statistical screening rule, not a prediction."
+  },
+  "provenance": {
+    "generated_at": "2026-09-10T18:58:27Z",
+    "source_count": 12,
+    "series_count": 22,
+    "sources": [
+      {
+        "key": "overview",
+        "name": "Treasury Fiscal Data — Debt to the Penny",
+        "as_of": "2026-09-08",
+        "frequency": "Business daily",
+        "status": "ok",
+        "checked_at": "2026-09-10T18:57:57Z",
+        "message": null,
+        "urls": [
+          {
+            "label": "Official source",
+            "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny"
+          }
+        ]
+      },
+      {
+        "key": "fed",
+        "name": "Federal Reserve H.4.1",
+        "as_of": "2026-09-02",
+        "frequency": "Weekly (Wednesday level; published Thursday)",
+        "status": "ok",
+        "checked_at": "2026-09-10T18:57:58Z",
+        "message": null,
+        "urls": [
+          {
+            "label": "Official source",
+            "url": "https://www.federalreserve.gov/releases/h41/current/"
+          },
+          {
+            "label": "Retrieval source",
+            "url": "https://fred.stlouisfed.org/series/TREAST"
+          }
+        ]
+      },
+      {
+        "key": "foreign_holders",
+        "name": "Treasury International Capital",
+        "as_of": "2026-06",
+        "frequency": "Monthly",
+        "status": "ok",
+        "checked_at": "2026-09-10T18:58:24Z",
+        "message": null,
+        "urls": [
+          {
+            "label": "Official source",
+            "url": "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.txt"
+          }
+        ]
+      },
+      {
+        "key": "domestic_sectors",
+        "name": "Federal Reserve Financial Accounts",
+        "as_of": "2026:Q1",
+        "frequency": "Quarterly",
+        "status": "ok",
+        "checked_at": "2026-09-10T18:58:12Z",
+        "message": null,
+        "urls": [
+          {
+            "label": "Official source",
+            "url": "https://www.federalreserve.gov/releases/z1/current/html/F3_2_s.htm"
+          },
+          {
+            "label": "Retrieval source",
+            "url": "https://fred.stlouisfed.org/"
+          }
+        ]
+      },
+      {
+        "key": "soma",
+        "name": "New York Fed SOMA",
+        "as_of": "2026-09-02",
+        "frequency": "Weekly (Wednesday holdings; published Thursday)",
+        "status": "ok",
+        "checked_at": "2026-09-10T18:58:12Z",
+        "message": null,
+        "urls": [
+          {
+            "label": "Official source",
+            "url": "https://www.newyorkfed.org/markets/soma-holdings"
+          },
+          {
+            "label": "API",
+            "url": "https://markets.newyorkfed.org/api/soma/tsy/get/all/asof/2026-09-02.json"
+          }
+        ]
+      },
+      {
+        "key": "money_market_funds",
+        "name": "SEC Form N-MFP",
+        "as_of": null,
+        "frequency": null,
+        "status": "error",
+        "checked_at": "2026-09-10T18:58:12Z",
+        "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip",
+        "urls": []
+      },
+      {
+        "key": "auctions",
+        "name": "Treasury Securities Auctions",
+        "as_of": "2026-09-17",
+        "frequency": "Released as auctions occur",
+        "status": "ok",
+        "checked_at": "2026-09-10T18:58:12Z",
+        "message": null,
+        "urls": [
+          {
+            "label": "Official source",
+            "url": "https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/"
+          },
+          {
+            "label": "API",
+            "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query"
+          }
+        ]
+      },
+      {
+        "key": "institutional_aggregates",
+        "name": "Federal Reserve Banks & Dealers",
+        "as_of": "2026-01-01",
+        "frequency": "Quarterly",
+        "status": "ok",
+        "checked_at": "2026-09-10T18:58:14Z",
+        "message": null,
+        "urls": [
+          {
+            "label": "Official source",
+            "url": "https://fred.stlouisfed.org/"
+          }
+        ]
+      },
+      {
+        "key": "primary_dealers",
+        "name": "New York Fed Primary Dealer Statistics",
+        "as_of": "2026-08-26",
+        "frequency": "Weekly; updated Thursdays with the previous week's data",
+        "status": "ok",
+        "checked_at": "2026-09-10T18:58:14Z",
+        "message": null,
+        "urls": [
+          {
+            "label": "Official source",
+            "url": "https://www.newyorkfed.org/markets/primarydealers"
+          },
+          {
+            "label": "API",
+            "url": "https://markets.newyorkfed.org/api/pd/get/PDPOSGST-TOT_PDFTD-USTET_PDFTR-USTET.json"
+          }
+        ]
+      },
+      {
+        "key": "extended_holders",
+        "name": "Federal Reserve Insurance / Pensions / ETFs / Hedge Funds",
+        "as_of": "2026-01-01",
+        "frequency": "Quarterly",
+        "status": "ok",
+        "checked_at": "2026-09-10T18:58:15Z",
+        "message": null,
+        "urls": [
+          {
+            "label": "Official source",
+            "url": "https://fred.stlouisfed.org/"
+          }
+        ]
+      },
+      {
+        "key": "nport",
+        "name": "SEC Form N-PORT quarterly cache",
+        "as_of": null,
+        "frequency": null,
+        "status": "pending",
+        "checked_at": "2026-09-10T18:58:15Z",
+        "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data.",
+        "urls": [
+          {
+            "label": "Dataset page",
+            "url": "https://www.sec.gov/data-research/sec-markets-data/form-n-port-data-sets"
+          },
+          {
+            "label": "Latest archive",
+            "url": "https://www.sec.gov/files/dera/data/form-n-port-data-sets/2026q2_nport.zip"
+          }
+        ]
+      },
+      {
+        "key": "government_accounts",
+        "name": "Treasury Monthly Treasury Statement — Government Accounts",
+        "as_of": "2026-07-31",
+        "frequency": "Monthly",
+        "status": "ok",
+        "checked_at": "2026-09-10T18:58:16Z",
+        "message": null,
+        "urls": [
+          {
+            "label": "Official source",
+            "url": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/"
+          },
+          {
+            "label": "API",
+            "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_6d"
+          }
+        ]
+      }
+    ],
+    "series": [
+      {
+        "section": "domestic_sectors",
+        "name": "Households and nonprofit organizations",
+        "series": "BOGZ1LM153061105Q",
+        "as_of": "2026:Q1",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1LM153061105Q"
+      },
+      {
+        "section": "domestic_sectors",
+        "name": "Nonfinancial corporate business",
+        "series": "BOGZ1LM103061103Q",
+        "as_of": "2026:Q1",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1LM103061103Q"
+      },
+      {
+        "section": "domestic_sectors",
+        "name": "Nonfinancial noncorporate business",
+        "series": "BOGZ1LM113061003Q",
+        "as_of": "2026:Q1",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1LM113061003Q"
+      },
+      {
+        "section": "domestic_sectors",
+        "name": "State and local governments",
+        "series": "BOGZ1LM213061103Q",
+        "as_of": "2026:Q1",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1LM213061103Q"
+      },
+      {
+        "section": "domestic_sectors",
+        "name": "Central bank",
+        "series": "BOGZ1LM713061103Q",
+        "as_of": "2026:Q1",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1LM713061103Q"
+      },
+      {
+        "section": "domestic_sectors",
+        "name": "Defined contribution plans",
+        "series": "BOGZ1LM343061113Q",
+        "as_of": "2026:Q1",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1LM343061113Q"
+      },
+      {
+        "section": "domestic_sectors",
+        "name": "State and local govt. pension funds",
+        "series": "BOGZ1LM223061143Q",
+        "as_of": "2026:Q1",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1LM223061143Q"
+      },
+      {
+        "section": "domestic_sectors",
+        "name": "Money market funds",
+        "series": "BOGZ1FL633061105Q",
+        "as_of": "2026:Q1",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1FL633061105Q"
+      },
+      {
+        "section": "domestic_sectors",
+        "name": "Mutual funds",
+        "series": "BOGZ1LM653061105Q",
+        "as_of": "2026:Q1",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1LM653061105Q"
+      },
+      {
+        "section": "domestic_sectors",
+        "name": "Other financial business",
+        "series": "BOGZ1FL503061123Q",
+        "as_of": "2026:Q1",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1FL503061123Q"
+      },
+      {
+        "section": "domestic_sectors",
+        "name": "Rest of the world",
+        "series": "BOGZ1LM263061105Q",
+        "as_of": "2026:Q1",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1LM263061105Q"
+      },
+      {
+        "section": "institutional_aggregates",
+        "name": "U.S.-chartered depository institutions",
+        "series": "BOGZ1FL763061100Q",
+        "as_of": "2026-01-01",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1FL763061100Q"
+      },
+      {
+        "section": "institutional_aggregates",
+        "name": "Private depository institutions",
+        "series": "BOGZ1LM703061105Q",
+        "as_of": "2026-01-01",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1LM703061105Q"
+      },
+      {
+        "section": "institutional_aggregates",
+        "name": "Security brokers and dealers",
+        "series": "BOGZ1FL663061105Q",
+        "as_of": "2026-01-01",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1FL663061105Q"
+      },
+      {
+        "section": "extended_holders",
+        "name": "Insurance companies",
+        "series": "BOGZ1LM523061105Q",
+        "as_of": "2026-01-01",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1LM523061105Q"
+      },
+      {
+        "section": "extended_holders",
+        "name": "Pension funds",
+        "series": "BOGZ1FL593061105Q",
+        "as_of": "2026-01-01",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1FL593061105Q"
+      },
+      {
+        "section": "extended_holders",
+        "name": "Private pension funds",
+        "series": "BOGZ1FL573061105Q",
+        "as_of": "2026-01-01",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1FL573061105Q"
+      },
+      {
+        "section": "extended_holders",
+        "name": "Exchange-traded funds",
+        "series": "BOGZ1LM563061103Q",
+        "as_of": "2026-01-01",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1LM563061103Q"
+      },
+      {
+        "section": "extended_holders",
+        "name": "Hedge funds",
+        "series": "BOGZ1FL623061103Q",
+        "as_of": "2025-10-01",
+        "source_url": "https://fred.stlouisfed.org/series/BOGZ1FL623061103Q"
+      },
+      {
+        "section": "primary_dealers",
+        "name": "Treasury dealer net position ex-TIPS",
+        "series": "PDPOSGST-TOT",
+        "as_of": "2026-08-26",
+        "source_url": "https://www.newyorkfed.org/markets/primarydealers"
+      },
+      {
+        "section": "primary_dealers",
+        "name": "Treasury fails to deliver ex-TIPS",
+        "series": "PDFTD-USTET",
+        "as_of": "2026-08-26",
+        "source_url": "https://www.newyorkfed.org/markets/primarydealers"
+      },
+      {
+        "section": "primary_dealers",
+        "name": "Treasury fails to receive ex-TIPS",
+        "series": "PDFTR-USTET",
+        "as_of": "2026-08-26",
+        "source_url": "https://www.newyorkfed.org/markets/primarydealers"
+      }
+    ],
+    "note": "Provenance records the official source, observation date, retrieval path and latest health check separately so stale-but-valid observations are distinguishable from failed fetches."
   }
 }

@@ -1,6 +1,13 @@
 name: Update Treasury holder data
 
 on:
+  push:
+    branches:
+      - main
+      - phase6-audit-alerts-exports
+    paths:
+      - scripts/**
+      - .github/workflows/update.yml
   schedule:
     - cron: "17 5 * * *"   # daily, 05:17 UTC
   workflow_dispatch:
@@ -14,10 +21,18 @@ concurrency:
 
 jobs:
   update:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
+
+      - name: Validate dashboard JavaScript
+        run: |
+          node --check app.js
+          node --check phase4.js
+          node --check phase5.js
+          node --check phase6.js
 
       - name: Install uv
         uses: astral-sh/setup-uv@v10.0.0
@@ -43,4 +58,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/dashboard.json
           git commit -m "data: refresh Treasury holder tracker"
-          git push
+          git pull --rebase --autostash origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
