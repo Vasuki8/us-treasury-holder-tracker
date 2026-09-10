@@ -1,38 +1,12 @@
 (() => {
-  const VIEW_KEY = 'treasury-ux-v4-view';
-  const ESSENTIAL_TITLES = [
+  const VIEW_KEY = 'treasury-ux-v5-view';
+  const CORE_TITLES = [
     /research brief/i,
     /market structure map/i,
     /foreign treasury holders/i,
     /ownership share snapshot/i,
     /auction demand monitor/i,
-    /holder profile/i,
-    /holder comparison/i,
-    /cusip security intelligence/i,
-    /security drill/i,
     /largest holder changes/i,
-    /release intelligence/i,
-    /release calendar/i,
-    /alert intelligence/i,
-    /source health/i,
-  ];
-  const ALWAYS_SECONDARY = [
-    /13-month trend/i,
-    /government.*trust-fund/i,
-    /soma concentration/i,
-    /banks.*broker-dealer/i,
-    /insurance.*pensions/i,
-    /primary dealer treasury market positioning/i,
-    /money-market funds/i,
-    /treasury auction takedown/i,
-    /domestic.*sector holders/i,
-    /tracker history/i,
-    /provenance/i,
-    /saved research views/i,
-    /co-movement/i,
-    /cross-holder/i,
-    /signal history/i,
-    /lifecycle/i,
   ];
 
   function titleOf(section) {
@@ -40,21 +14,24 @@
   }
 
   function currentView() {
-    return localStorage.getItem(VIEW_KEY) === 'full' ? 'full' : 'essential';
+    return localStorage.getItem(VIEW_KEY) === 'full' ? 'full' : 'core';
   }
 
   function setView(view) {
     const full = view === 'full';
     document.body.classList.toggle('ux4-full', full);
     document.body.classList.toggle('ux4-essential', !full);
-    localStorage.setItem(VIEW_KEY, full ? 'full' : 'essential');
+    document.body.classList.toggle('ux5-core', !full);
+    localStorage.setItem(VIEW_KEY, full ? 'full' : 'core');
+
     document.querySelectorAll('[data-ux4-view]').forEach(btn => {
-      const active = btn.dataset.ux4View === (full ? 'full' : 'essential');
+      const active = btn.dataset.ux4View === (full ? 'full' : 'core');
       btn.classList.toggle('active', active);
       btn.setAttribute('aria-pressed', String(active));
     });
-    const chip = document.getElementById('ux4CleanChip');
-    if (chip) chip.textContent = full ? 'Full research view' : 'Essential view';
+
+    const trigger = document.getElementById('ux4DataMenuButton');
+    if (trigger) trigger.textContent = full ? 'More ···' : 'More';
     refreshVisibleCount();
     window.dispatchEvent(new Event('resize'));
   }
@@ -68,10 +45,19 @@
         return;
       }
       if (!title) return;
-      const essential = ESSENTIAL_TITLES.some(rx => rx.test(title));
-      const forcedSecondary = ALWAYS_SECONDARY.some(rx => rx.test(title));
-      section.classList.toggle('ux4-secondary', forcedSecondary || !essential);
-      if (essential && !forcedSecondary) section.classList.add('ux4-essential-panel');
+      const core = CORE_TITLES.some(rx => rx.test(title));
+      section.classList.toggle('ux4-secondary', !core);
+      section.classList.toggle('ux4-essential-panel', core);
+    });
+  }
+
+  function trimOverviewCards() {
+    const host = document.getElementById('overviewCards');
+    if (!host) return;
+    const keep = /^(total public debt|debt held by public|federal reserve|foreign holders)$/i;
+    host.querySelectorAll(':scope > .card').forEach(card => {
+      const label = card.querySelector('.kicker')?.textContent?.trim() || '';
+      card.classList.toggle('ux5-overview-extra', !keep.test(label));
     });
   }
 
@@ -96,15 +82,15 @@
       button.type = 'button';
       button.className = 'ux4-info';
       button.textContent = 'i';
-      button.title = 'Show methodology and notes';
-      button.setAttribute('aria-label', `Show notes for ${titleOf(section) || 'this panel'}`);
+      button.title = 'Show explanation';
+      button.setAttribute('aria-label', `Show explanation for ${titleOf(section) || 'this panel'}`);
       button.setAttribute('aria-pressed', 'false');
       button.addEventListener('click', event => {
         event.stopPropagation();
         const open = section.classList.toggle('ux4-show-notes');
         button.classList.toggle('active', open);
         button.setAttribute('aria-pressed', String(open));
-        button.title = open ? 'Hide methodology and notes' : 'Show methodology and notes';
+        button.title = open ? 'Hide explanation' : 'Show explanation';
       });
       tools.prepend(button);
     });
@@ -117,7 +103,7 @@
     toggle.id = 'ux4ViewToggle';
     toggle.className = 'ux4-view-toggle';
     toggle.setAttribute('aria-label', 'Dashboard detail level');
-    toggle.innerHTML = '<button type="button" data-ux4-view="essential">Essential</button><button type="button" data-ux4-view="full">Full</button>';
+    toggle.innerHTML = '<button type="button" data-ux4-view="core">Core</button><button type="button" data-ux4-view="full">Research</button>';
     toggle.querySelectorAll('button').forEach(btn => btn.addEventListener('click', () => setView(btn.dataset.ux4View)));
     actions.insertBefore(toggle, actions.firstChild);
   }
@@ -128,7 +114,7 @@
     const menu = document.createElement('div');
     menu.id = 'ux4DataMenu';
     menu.className = 'ux4-data-menu';
-    menu.innerHTML = '<button type="button" id="ux4DataMenuButton" aria-expanded="false">Data & exports ···</button><div class="ux4-data-popover" id="ux4DataPopover" hidden><button type="button" data-export="json">Download JSON</button><button type="button" data-export="csv">Download snapshot CSV</button><button type="button" data-action="full">Open full research view</button></div>';
+    menu.innerHTML = '<button type="button" id="ux4DataMenuButton" aria-expanded="false">More</button><div class="ux4-data-popover" id="ux4DataPopover" hidden><button type="button" data-action="full">Open full research view</button><button type="button" data-export="json">Download JSON</button><button type="button" data-export="csv">Download snapshot CSV</button></div>';
     side.appendChild(menu);
     const trigger = menu.querySelector('#ux4DataMenuButton');
     const popover = menu.querySelector('#ux4DataPopover');
@@ -146,20 +132,15 @@
 
   function simplifyHero() {
     const eyebrow = document.querySelector('.hero .eyebrow');
+    const heading = document.querySelector('.hero h1');
     const lede = document.querySelector('.hero .lede');
     if (eyebrow) eyebrow.textContent = 'TREASURY INTELLIGENCE';
-    if (lede) lede.textContent = 'See who holds U.S. Treasuries, what is changing, and where market structure is moving — using official data with each source kept on its real reporting date.';
-    const side = document.querySelector('.hero-side');
-    if (side && !document.getElementById('ux4CleanChip')) {
-      const chip = document.createElement('span');
-      chip.id = 'ux4CleanChip';
-      chip.className = 'ux4-clean-chip';
-      side.prepend(chip);
-    }
+    if (heading) heading.textContent = 'US Treasury Tracker';
+    if (lede) lede.textContent = 'Who holds Treasuries, what changed, and how auction demand is behaving — from official data.';
   }
 
-  function simplifyRail() {
-    document.querySelectorAll('.ux-mode-button[data-mode="data"], .ux-mode-button[data-mode="pinned"]').forEach(button => {
+  function simplifyAdvancedNavigation() {
+    document.querySelectorAll('.ux-mode-button[data-mode="compare"], .ux-mode-button[data-mode="data"], .ux-mode-button[data-mode="pinned"]').forEach(button => {
       button.dataset.ux4AdvancedNav = 'true';
     });
   }
@@ -169,16 +150,17 @@
     if (!count) return;
     const visible = [...document.querySelectorAll('main.shell > section')].filter(section => {
       const style = getComputedStyle(section);
-      return !section.hidden && style.display !== 'none' && !section.classList.contains('ux-mode-hidden');
+      return !section.hidden && style.display !== 'none';
     }).length;
-    count.textContent = `${visible} ${visible === 1 ? 'view' : 'views'}`;
+    count.textContent = `${visible} sections`;
   }
 
   function polish() {
     classifyPanels();
+    trimOverviewCards();
     markUnavailablePanels();
     addInfoToggles();
-    simplifyRail();
+    simplifyAdvancedNavigation();
     refreshVisibleCount();
   }
 
@@ -195,13 +177,9 @@
       let timer;
       new MutationObserver(() => {
         clearTimeout(timer);
-        timer = setTimeout(polish, 80);
+        timer = setTimeout(() => { polish(); setView(currentView()); }, 80);
       }).observe(main, {childList:true, subtree:true});
     }
-
-    document.addEventListener('click', event => {
-      if (event.target.closest('.ux-mode-button')) setTimeout(() => { polish(); setView(currentView()); }, 80);
-    });
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

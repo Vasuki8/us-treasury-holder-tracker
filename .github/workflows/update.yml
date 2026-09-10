@@ -35,6 +35,7 @@ on:
       - ux-v3.css
       - ux-v4.js
       - ux-v4.css
+      - ux-v5.css
       - index.html
       - styles.css
       - .github/workflows/update.yml
