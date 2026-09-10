@@ -11,6 +11,7 @@ on:
       - phase12-market-structure-workspace
       - ui-refresh-research-terminal
       - ux-v2-interactive-workspace
+      - ux-v3-interactive-inspector
     paths:
       - scripts/**
       - app.js
@@ -29,6 +30,8 @@ on:
       - ui-refresh.css
       - ux-v2.js
       - ux-v2.css
+      - ux-v3.js
+      - ux-v3.css
       - index.html
       - styles.css
       - .github/workflows/update.yml
@@ -65,6 +68,7 @@ jobs:
           node --check phase12.js
           node --check ui-refresh.js
           node --check ux-v2.js
+          node --check ux-v3.js
 
       - name: Install uv
         uses: astral-sh/setup-uv@v10.0.0
