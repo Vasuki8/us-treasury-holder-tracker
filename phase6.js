@@ -45,6 +45,42 @@ async function loadPhase6(){
   renderUnusualAlerts();
   renderProvenance();
   wirePhase6Downloads();
+  decorateMajorSourceLinks();
+  setTimeout(decorateMajorSourceLinks,500);
+  setTimeout(decorateMajorSourceLinks,1500);
+}
+
+function p6SourceUrl(key){
+  const row=(p6data.provenance?.sources||[]).find(r=>r.key===key);
+  return row?.urls?.[0]?.url||null;
+}
+
+function p6AppendSource(targetId,key){
+  const el=document.getElementById(targetId), url=p6SourceUrl(key);
+  if(!el||!url||el.querySelector('.inline-source')) return;
+  const span=document.createElement('span');
+  span.className='inline-source';
+  span.innerHTML=` · <a href="${p6esc(url)}" target="_blank" rel="noopener noreferrer">official source</a>`;
+  el.appendChild(span);
+}
+
+function decorateMajorSourceLinks(){
+  const targets={
+    govMeta:'government_accounts',foreignMeta:'foreign_holders',somaMeta:'soma',institutionMeta:'institutional_aggregates',
+    extendedMeta:'extended_holders',dealerMeta:'primary_dealers',mmfMeta:'money_market_funds',auctionMeta:'auctions',sectorMeta:'domestic_sectors'
+  };
+  for(const [id,key] of Object.entries(targets)) p6AppendSource(id,key);
+
+  const cards=[...(document.querySelectorAll('#overviewCards .card')||[])];
+  const keys=['overview','overview','fed','foreign_holders','institutional_aggregates','primary_dealers','money_market_funds','money_market_funds'];
+  cards.forEach((card,i)=>{
+    const meta=card.querySelector('.meta'), url=p6SourceUrl(keys[i]);
+    if(!meta||!url||meta.querySelector('.inline-source')) return;
+    const span=document.createElement('span');
+    span.className='inline-source';
+    span.innerHTML=` · <a href="${p6esc(url)}" target="_blank" rel="noopener noreferrer">source</a>`;
+    meta.appendChild(span);
+  });
 }
 
 function renderUnusualAlerts(){
