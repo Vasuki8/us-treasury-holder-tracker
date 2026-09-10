@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T19:09:25Z",
+  "generated_at": "2026-09-10T19:12:16Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -1532,59 +1532,59 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:08:51Z"
+      "checked_at": "2026-09-10T19:11:47Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:08:52Z"
+      "checked_at": "2026-09-10T19:11:47Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:09:20Z"
+      "checked_at": "2026-09-10T19:12:10Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:09:06Z"
+      "checked_at": "2026-09-10T19:11:57Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:09:06Z"
+      "checked_at": "2026-09-10T19:11:58Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T19:09:07Z",
+      "checked_at": "2026-09-10T19:11:58Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:09:07Z"
+      "checked_at": "2026-09-10T19:11:58Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:09:08Z"
+      "checked_at": "2026-09-10T19:11:58Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:09:08Z"
+      "checked_at": "2026-09-10T19:11:59Z"
     },
     "extended_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:09:11Z"
+      "checked_at": "2026-09-10T19:11:59Z"
     },
     "nport": {
       "status": "pending",
-      "checked_at": "2026-09-10T19:09:11Z",
+      "checked_at": "2026-09-10T19:11:59Z",
       "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
     },
     "government_accounts": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:09:12Z"
+      "checked_at": "2026-09-10T19:12:00Z"
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T19:09:07Z",
+      "checked_at": "2026-09-10T19:11:58Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -4708,7 +4708,7 @@
   "history": [
     {
       "snapshot_date": "2026-09-10",
-      "generated_at": "2026-09-10T19:09:08Z",
+      "generated_at": "2026-09-10T19:11:59Z",
       "total_public_debt_trillions": 40.08409078544635,
       "debt_held_by_public_trillions": 32.38792109474681,
       "fed_treasuries_billions": 4552.347,
@@ -13322,7 +13322,7 @@
     "metadata_api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
     "metadata_status": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:09:22Z",
+      "checked_at": "2026-09-10T19:12:13Z",
       "matched_cusips": 100,
       "requested_cusips": 100,
       "coverage_pct": 100.0,
@@ -14105,8 +14105,8 @@
         "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 1
+        "last_seen_at": "2026-09-10T19:12:13Z",
+        "seen_count": 2
       },
       {
         "severity": "high",
@@ -14123,8 +14123,8 @@
         "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
         "alert_id": "10f3e7909be0493614fc",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 1
+        "last_seen_at": "2026-09-10T19:12:13Z",
+        "seen_count": 2
       },
       {
         "severity": "medium",
@@ -14141,8 +14141,8 @@
         "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
         "alert_id": "f49e63e0d57bded6cd29",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 1
+        "last_seen_at": "2026-09-10T19:12:13Z",
+        "seen_count": 2
       },
       {
         "severity": "medium",
@@ -14159,8 +14159,8 @@
         "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
         "alert_id": "a626c548ce0c32534d5e",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 1
+        "last_seen_at": "2026-09-10T19:12:13Z",
+        "seen_count": 2
       },
       {
         "severity": "medium",
@@ -14177,8 +14177,8 @@
         "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
         "alert_id": "a53c34f1e0828ff7a307",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 1
+        "last_seen_at": "2026-09-10T19:12:13Z",
+        "seen_count": 2
       }
     ],
     "alert_count": 5,
@@ -14186,7 +14186,7 @@
     "method": "A change is flagged when it clears a source-specific absolute dollar floor and is either at least 2.5× the median absolute change in the available history or at least 10% versus the previous observation. High severity begins at 4× the historical median or 20%. This is a statistical screening rule, not a prediction."
   },
   "provenance": {
-    "generated_at": "2026-09-10T19:09:22Z",
+    "generated_at": "2026-09-10T19:12:13Z",
     "source_count": 12,
     "series_count": 22,
     "sources": [
@@ -14196,7 +14196,7 @@
         "as_of": "2026-09-08",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-10T19:08:51Z",
+        "checked_at": "2026-09-10T19:11:47Z",
         "message": null,
         "urls": [
           {
@@ -14211,7 +14211,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T19:08:52Z",
+        "checked_at": "2026-09-10T19:11:47Z",
         "message": null,
         "urls": [
           {
@@ -14230,7 +14230,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:09:20Z",
+        "checked_at": "2026-09-10T19:12:10Z",
         "message": null,
         "urls": [
           {
@@ -14245,7 +14245,7 @@
         "as_of": "2026:Q1",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:09:06Z",
+        "checked_at": "2026-09-10T19:11:57Z",
         "message": null,
         "urls": [
           {
@@ -14264,7 +14264,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T19:09:06Z",
+        "checked_at": "2026-09-10T19:11:58Z",
         "message": null,
         "urls": [
           {
@@ -14283,7 +14283,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-10T19:09:07Z",
+        "checked_at": "2026-09-10T19:11:58Z",
         "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip",
         "urls": []
       },
@@ -14293,7 +14293,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-10T19:09:07Z",
+        "checked_at": "2026-09-10T19:11:58Z",
         "message": null,
         "urls": [
           {
@@ -14312,7 +14312,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:09:08Z",
+        "checked_at": "2026-09-10T19:11:58Z",
         "message": null,
         "urls": [
           {
@@ -14327,7 +14327,7 @@
         "as_of": "2026-08-26",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-10T19:09:08Z",
+        "checked_at": "2026-09-10T19:11:59Z",
         "message": null,
         "urls": [
           {
@@ -14346,7 +14346,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:09:11Z",
+        "checked_at": "2026-09-10T19:11:59Z",
         "message": null,
         "urls": [
           {
@@ -14361,7 +14361,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-10T19:09:11Z",
+        "checked_at": "2026-09-10T19:11:59Z",
         "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data.",
         "urls": [
           {
@@ -14380,7 +14380,7 @@
         "as_of": "2026-07-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:09:12Z",
+        "checked_at": "2026-09-10T19:12:00Z",
         "message": null,
         "urls": [
           {
@@ -14553,7 +14553,7 @@
     "note": "Provenance records the official source, observation date, retrieval path and latest health check separately so stale-but-valid observations are distinguishable from failed fetches."
   },
   "alert_history": {
-    "generated_at": "2026-09-10T19:09:22Z",
+    "generated_at": "2026-09-10T19:12:13Z",
     "active_count": 5,
     "cleared_count": 0,
     "episode_count": 5,
@@ -14562,7 +14562,7 @@
       {
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 1,
+        "seen_count": 2,
         "cleared_at": null,
         "state": "active",
         "severity": "high",
@@ -14578,12 +14578,12 @@
         "multiple_of_baseline": 6.317073170731667,
         "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
         "series_key": "Foreign country|China, Mainland|MoM",
-        "last_seen_at": "2026-09-10T19:09:22Z"
+        "last_seen_at": "2026-09-10T19:12:13Z"
       },
       {
         "alert_id": "10f3e7909be0493614fc",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 1,
+        "seen_count": 2,
         "cleared_at": null,
         "state": "active",
         "severity": "high",
@@ -14599,12 +14599,12 @@
         "multiple_of_baseline": 5.944019528071598,
         "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
         "series_key": "U.S. sector|Exchange-traded funds|QoQ",
-        "last_seen_at": "2026-09-10T19:09:22Z"
+        "last_seen_at": "2026-09-10T19:12:13Z"
       },
       {
         "alert_id": "f49e63e0d57bded6cd29",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 1,
+        "seen_count": 2,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -14620,12 +14620,12 @@
         "multiple_of_baseline": 2.993203808938721,
         "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
         "series_key": "U.S. sector|Security brokers and dealers|QoQ",
-        "last_seen_at": "2026-09-10T19:09:22Z"
+        "last_seen_at": "2026-09-10T19:12:13Z"
       },
       {
         "alert_id": "a626c548ce0c32534d5e",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 1,
+        "seen_count": 2,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -14641,12 +14641,12 @@
         "multiple_of_baseline": 2.858699045967045,
         "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
         "series_key": "Primary dealer|Treasury dealer net position ex-TIPS|WoW",
-        "last_seen_at": "2026-09-10T19:09:22Z"
+        "last_seen_at": "2026-09-10T19:12:13Z"
       },
       {
         "alert_id": "a53c34f1e0828ff7a307",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 1,
+        "seen_count": 2,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -14662,7 +14662,7 @@
         "multiple_of_baseline": 0.6384486717886203,
         "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
         "series_key": "Primary dealer|Treasury fails to deliver ex-TIPS|WoW",
-        "last_seen_at": "2026-09-10T19:09:22Z"
+        "last_seen_at": "2026-09-10T19:12:13Z"
       }
     ],
     "transitions": [
