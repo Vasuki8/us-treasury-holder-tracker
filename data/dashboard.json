@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T18:35:59Z",
+  "generated_at": "2026-09-10T18:38:26Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -1532,59 +1532,59 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:35:21Z"
+      "checked_at": "2026-09-10T18:38:05Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:35:22Z"
+      "checked_at": "2026-09-10T18:38:06Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:35:59Z"
+      "checked_at": "2026-09-10T18:38:26Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:35:35Z"
+      "checked_at": "2026-09-10T18:38:14Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:35:35Z"
+      "checked_at": "2026-09-10T18:38:15Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T18:35:36Z",
+      "checked_at": "2026-09-10T18:38:15Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:35:38Z"
+      "checked_at": "2026-09-10T18:38:15Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:35:39Z"
+      "checked_at": "2026-09-10T18:38:16Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:35:39Z"
+      "checked_at": "2026-09-10T18:38:16Z"
     },
     "extended_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:35:41Z"
+      "checked_at": "2026-09-10T18:38:16Z"
     },
     "nport": {
       "status": "pending",
-      "checked_at": "2026-09-10T18:35:41Z",
+      "checked_at": "2026-09-10T18:38:16Z",
       "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
     },
     "government_accounts": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:35:50Z"
+      "checked_at": "2026-09-10T18:38:17Z"
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T18:35:36Z",
+      "checked_at": "2026-09-10T18:38:15Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -4708,7 +4708,7 @@
   "history": [
     {
       "snapshot_date": "2026-09-10",
-      "generated_at": "2026-09-10T18:35:39Z",
+      "generated_at": "2026-09-10T18:38:16Z",
       "total_public_debt_trillions": 40.08409078544635,
       "debt_held_by_public_trillions": 32.38792109474681,
       "fed_treasuries_billions": 4552.347,
@@ -7188,405 +7188,399 @@
     "as_of": "2026-07-31",
     "holders": [
       {
-        "name": "Grand Total",
-        "account_type": null,
-        "holdings_billions": 7700907425.9544,
-        "classification_id": "59085081"
-      },
-      {
         "name": "Federal Old-Age and Survivors Insurance Trust Fund",
         "account_type": null,
-        "holdings_billions": 2246259082.0,
+        "holdings_billions": 2246.259082,
         "classification_id": "59085034"
       },
       {
         "name": "Military Retirement Fund",
         "account_type": null,
-        "holdings_billions": 2116107209.3463998,
+        "holdings_billions": 2116.1072093463995,
         "classification_id": "59085008"
       },
       {
         "name": "Treasury Securities",
         "account_type": null,
-        "holdings_billions": 1150929914.535,
+        "holdings_billions": 1150.929914535,
         "classification_id": "59085025"
       },
       {
         "name": "Uniformed Services Retiree Health Care Fund",
         "account_type": null,
-        "holdings_billions": 506139678.704,
+        "holdings_billions": 506.13967870399995,
         "classification_id": "59084766"
       },
       {
         "name": "Federal Disability Insurance Trust Fund",
         "account_type": null,
-        "holdings_billions": 255832699.0,
+        "holdings_billions": 255.832699,
         "classification_id": "59085036"
       },
       {
         "name": "Other",
         "account_type": null,
-        "holdings_billions": 252606252.04182002,
+        "holdings_billions": 252.60625204182,
         "classification_id": "59084945"
       },
       {
         "name": "Federal Housing Administration Fund",
         "account_type": null,
-        "holdings_billions": 193769793.17060998,
+        "holdings_billions": 193.76979317060997,
         "classification_id": "59084684"
       },
       {
         "name": "Deposit Insurance Fund",
         "account_type": null,
-        "holdings_billions": 139244016.0,
+        "holdings_billions": 139.244016,
         "classification_id": "59084830"
       },
       {
         "name": "Federal Supplementary Medical Insurance Trust Fund",
         "account_type": null,
-        "holdings_billions": 135069691.0,
+        "holdings_billions": 135.069691,
         "classification_id": "59084942"
       },
       {
         "name": "Unemployment Trust Fund",
         "account_type": null,
-        "holdings_billions": 98752911.0,
+        "holdings_billions": 98.752911,
         "classification_id": "59084967"
       },
       {
         "name": "Department of Energy",
         "account_type": null,
-        "holdings_billions": 87034476.15777999,
+        "holdings_billions": 87.03447615777999,
         "classification_id": "59084661"
       },
       {
         "name": "Department of Labor",
         "account_type": null,
-        "holdings_billions": 75718070.43054,
+        "holdings_billions": 75.71807043054,
         "classification_id": "59084702"
       },
       {
         "name": "Employees Life Insurance Fund",
         "account_type": null,
-        "holdings_billions": 59783917.65072,
+        "holdings_billions": 59.78391765072,
         "classification_id": "59085029"
       },
       {
         "name": "Highway Trust Fund",
         "account_type": null,
-        "holdings_billions": 54594233.03438,
+        "holdings_billions": 54.59423303438,
         "classification_id": "59084982"
       },
       {
         "name": "Department of the Interior",
         "account_type": null,
-        "holdings_billions": 31658839.54536,
+        "holdings_billions": 31.658839545359996,
         "classification_id": "59084697"
       },
       {
         "name": "Guarantees of Mortgage-Backed Securities",
         "account_type": null,
-        "holdings_billions": 31628935.0,
+        "holdings_billions": 31.628935,
         "classification_id": "59084691"
       },
       {
         "name": "Department of the Treasury",
         "account_type": null,
-        "holdings_billions": 30256979.15386,
+        "holdings_billions": 30.256979153859998,
         "classification_id": "59084733"
       },
       {
         "name": "National Credit Union Administration",
         "account_type": null,
-        "holdings_billions": 26475176.81102,
+        "holdings_billions": 26.47517681102,
         "classification_id": "59084844"
       },
       {
         "name": "Employees and Retired Employees Health Benefits Fund",
         "account_type": null,
-        "holdings_billions": 23299514.21427,
+        "holdings_billions": 23.299514214269998,
         "classification_id": "59085031"
       },
       {
         "name": "Foreign Service Retirement and Disability Fund",
         "account_type": null,
-        "holdings_billions": 22310004.0,
+        "holdings_billions": 22.310004,
         "classification_id": "59084973"
       },
       {
         "name": "Airport and Airway Trust Fund",
         "account_type": null,
-        "holdings_billions": 22156728.0,
+        "holdings_billions": 22.156727999999998,
         "classification_id": "59084979"
       },
       {
         "name": "Postal Service Contributions",
         "account_type": null,
-        "holdings_billions": 20412640.0,
+        "holdings_billions": 20.41264,
         "classification_id": "59084789"
       },
       {
         "name": "Department of Health and Human Services",
         "account_type": null,
-        "holdings_billions": 17508956.5207,
+        "holdings_billions": 17.5089565207,
         "classification_id": "59084664"
       },
       {
         "name": "Treasury Securities",
         "account_type": null,
-        "holdings_billions": 13808330.000209998,
+        "holdings_billions": 13.808330000209997,
         "classification_id": "59084870"
       },
       {
         "name": "Environmental Protection Agency",
         "account_type": null,
-        "holdings_billions": 13652154.694430001,
+        "holdings_billions": 13.652154694430001,
         "classification_id": "59085012"
       },
       {
         "name": "Department of Homeland Security",
         "account_type": null,
-        "holdings_billions": 13459043.595700001,
+        "holdings_billions": 13.4590435957,
         "classification_id": "59084947"
       },
       {
         "name": "Postal Service",
         "account_type": null,
-        "holdings_billions": 11678323.372100001,
+        "holdings_billions": 11.678323372100001,
         "classification_id": "59084847"
       },
       {
         "name": "Corps of Engineers",
         "account_type": null,
-        "holdings_billions": 10860528.98691,
+        "holdings_billions": 10.86052898691,
         "classification_id": "59085002"
       },
       {
         "name": "International Assistance Programs",
         "account_type": null,
-        "holdings_billions": 7270888.64324,
+        "holdings_billions": 7.27088864324,
         "classification_id": "59084780"
       },
       {
         "name": "Other",
         "account_type": null,
-        "holdings_billions": 4835130.26774,
+        "holdings_billions": 4.835130267739999,
         "classification_id": "59084880"
       },
       {
         "name": "Servicemen'S Group Life Insurance Fund",
         "account_type": null,
-        "holdings_billions": 4833296.0,
+        "holdings_billions": 4.833296,
         "classification_id": "59084753"
       },
       {
         "name": "Department of the Treasury",
         "account_type": null,
-        "holdings_billions": 4718880.36579,
+        "holdings_billions": 4.71888036579,
         "classification_id": "59084984"
       },
       {
         "name": "Treasury Securities",
         "account_type": null,
-        "holdings_billions": 3936436.7,
+        "holdings_billions": 3.9364367,
         "classification_id": "59085059"
       },
       {
         "name": "Department of Transportation",
         "account_type": null,
-        "holdings_billions": 2782597.28221,
+        "holdings_billions": 2.78259728221,
         "classification_id": "59084721"
       },
       {
         "name": "Judicial Retirement Funds",
         "account_type": null,
-        "holdings_billions": 2624632.76185,
+        "holdings_billions": 2.6246327618499996,
         "classification_id": "59084914"
       },
       {
         "name": "Treasury Securities",
         "account_type": null,
-        "holdings_billions": 1874703.78647,
+        "holdings_billions": 1.8747037864699998,
         "classification_id": "59085067"
       },
       {
         "name": "Department of the Interior",
         "account_type": null,
-        "holdings_billions": 1246974.85941,
+        "holdings_billions": 1.24697485941,
         "classification_id": "59084961"
       },
       {
         "name": "FSLIC Resolution Fund",
         "account_type": null,
-        "holdings_billions": 1060533.0,
+        "holdings_billions": 1.060533,
         "classification_id": "59084833"
       },
       {
         "name": "Other",
         "account_type": null,
-        "holdings_billions": 833579.15802,
+        "holdings_billions": 0.8335791580199999,
         "classification_id": "59085010"
       },
       {
         "name": "Other",
         "account_type": null,
-        "holdings_billions": 744458.7162,
+        "holdings_billions": 0.7444587162,
         "classification_id": "59084931"
       },
       {
         "name": "Department of Justice",
         "account_type": null,
-        "holdings_billions": 534532.02568,
+        "holdings_billions": 0.5345320256799999,
         "classification_id": "59084700"
       },
       {
         "name": "Veterans Special Life Insurance Fund",
         "account_type": null,
-        "holdings_billions": 456436.0,
+        "holdings_billions": 0.45643599999999995,
         "classification_id": "59085000"
       },
       {
         "name": "Department of Agriculture",
         "account_type": null,
-        "holdings_billions": 427514.73442,
+        "holdings_billions": 0.42751473442,
         "classification_id": "59084643"
       },
       {
         "name": "Foreign Service Retirement and Disability Fund",
         "account_type": null,
-        "holdings_billions": 379186.92877,
+        "holdings_billions": 0.37918692877,
         "classification_id": "59084714"
       },
       {
         "name": "Federal Housing Finance Agency",
         "account_type": null,
-        "holdings_billions": 321490.76923000003,
+        "holdings_billions": 0.32149076923000003,
         "classification_id": "59084836"
       },
       {
         "name": "National Service Life Insurance",
         "account_type": null,
-        "holdings_billions": 297309.0,
+        "holdings_billions": 0.297309,
         "classification_id": "59084994"
       },
       {
         "name": "National Service Life Insurance",
         "account_type": null,
-        "holdings_billions": 248043.0,
+        "holdings_billions": 0.24804299999999999,
         "classification_id": "59084747"
       },
       {
         "name": "Library of Congress",
         "account_type": null,
-        "holdings_billions": 69988.38453,
+        "holdings_billions": 0.06998838452999999,
         "classification_id": "59084901"
       },
       {
         "name": "General Post Fund, National Homes",
         "account_type": null,
-        "holdings_billions": 63624.37838,
+        "holdings_billions": 0.06362437838,
         "classification_id": "59084990"
       },
       {
         "name": "Harry S Truman Scholarship Foundation",
         "account_type": null,
-        "holdings_billions": 55608.64454,
+        "holdings_billions": 0.05560864454,
         "classification_id": "59085050"
       },
       {
         "name": "Other",
         "account_type": null,
-        "holdings_billions": 52272.8,
+        "holdings_billions": 0.0522728,
         "classification_id": "59084969"
       },
       {
         "name": "Other",
         "account_type": null,
-        "holdings_billions": 46218.7131,
+        "holdings_billions": 0.046218713099999996,
         "classification_id": "59084975"
       },
       {
         "name": "Other",
         "account_type": null,
-        "holdings_billions": 35903.73057,
+        "holdings_billions": 0.03590373057,
         "classification_id": "59084908"
       },
       {
         "name": "Japan-United States Friendship Commission",
         "account_type": null,
-        "holdings_billions": 33286.2295,
+        "holdings_billions": 0.0332862295,
         "classification_id": "59085052"
       },
       {
         "name": "Voluntary Separation Incentive Fund",
         "account_type": null,
-        "holdings_billions": 25100.000079999998,
+        "holdings_billions": 0.025100000079999997,
         "classification_id": "59084925"
       },
       {
         "name": "Other",
         "account_type": null,
-        "holdings_billions": 21539.13784,
+        "holdings_billions": 0.02153913784,
         "classification_id": "59084717"
       },
       {
         "name": "National Aeronautics and Space Administration",
         "account_type": null,
-        "holdings_billions": 15766.768800000002,
+        "holdings_billions": 0.0157667688,
         "classification_id": "59085018"
       },
       {
         "name": "Veterans Reopened Insurance Fund",
         "account_type": null,
-        "holdings_billions": 15676.0,
+        "holdings_billions": 0.015676,
         "classification_id": "59084744"
       },
       {
         "name": "United States Tax Court",
         "account_type": null,
-        "holdings_billions": 13999.69686,
+        "holdings_billions": 0.013999696859999999,
         "classification_id": "59084904"
       },
       {
         "name": "Defense Cooperation Account",
         "account_type": null,
-        "holdings_billions": 9506.25897,
+        "holdings_billions": 0.00950625897,
         "classification_id": "59084654"
       },
       {
         "name": "Department of Agriculture",
         "account_type": null,
-        "holdings_billions": 6842.8683,
+        "holdings_billions": 0.0068428683,
         "classification_id": "59084916"
       },
       {
         "name": "Agency Securities",
         "account_type": null,
-        "holdings_billions": 3767.0,
+        "holdings_billions": 0.003767,
         "classification_id": "59085061"
       },
       {
         "name": "Department of Commerce",
         "account_type": null,
-        "holdings_billions": 2389.3780899999997,
+        "holdings_billions": 0.00238937809,
         "classification_id": "59084645"
       },
       {
         "name": "United States Government Life Insurance Fund",
         "account_type": null,
-        "holdings_billions": 1214.0,
+        "holdings_billions": 0.001214,
         "classification_id": "59084996"
       }
     ],
-    "holder_count": 65,
-    "leaf_total_billions": 15401814851.9088,
-    "social_security_billions": 2502091781.0,
-    "medicare_billions": 135069691.0,
-    "federal_retirement_billions": 2622246888.0504,
+    "holder_count": 64,
+    "leaf_total_billions": 7700.9074259543995,
+    "social_security_billions": 2502.091781,
+    "medicare_billions": 135.069691,
+    "federal_retirement_billions": 2622.2468880504,
     "frequency": "Monthly",
     "source_url": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/",
     "api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_6d",
-    "note": "Detailed federal and trust-fund investments in Government Account Series and other federal securities. Leaf rows are used to reduce subtotal double-counting.",
+    "note": "Detailed federal and trust-fund investments in Government Account Series and other federal securities. API dollar balances are normalized to billions; category totals and Grand Total are excluded from the leaf-line sum to reduce double-counting.",
     "parsed_fields": {
       "description": "classification_desc",
       "close_balance": "close_month_acct_bal_amt"
@@ -7616,9 +7610,9 @@
       },
       {
         "name": "Detailed government-account leaf lines",
-        "holdings_billions": 15401814851.9088,
+        "holdings_billions": 7700.9074259543995,
         "denominator": "Intragovernmental holdings",
-        "share_pct": 200123119.30337465
+        "share_pct": 100.0615596516873
       }
     ],
     "note": "Shares are shown only against the relevant high-level Treasury denominator. These categories should not be summed because source definitions and valuation bases differ."
