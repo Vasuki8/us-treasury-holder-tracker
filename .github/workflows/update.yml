@@ -11,8 +11,13 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: treasury-data-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   update:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -30,7 +35,7 @@ jobs:
         run: uv venv --python 3.13 && uv pip install --python .venv/bin/python -r requirements.txt
 
       - name: Refresh official data
-        run: .venv/bin/python scripts/update_data_v5.py
+        run: .venv/bin/python scripts/update_data_current.py
 
       - name: Commit updated data if changed
         run: |
