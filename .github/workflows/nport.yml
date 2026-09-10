@@ -8,8 +8,6 @@ on:
       - scripts/ingest_nport.py
       - .github/workflows/nport.yml
   schedule:
-    # SEC publishes N-PORT bulk data quarterly. Run shortly after quarter-end;
-    # a manual run can override the archive URL and quarter label.
     - cron: "41 6 5 1,4,7,10 *"
   workflow_dispatch:
     inputs:
@@ -43,6 +41,16 @@ jobs:
 
       - name: Install dependencies
         run: uv venv --python 3.13 && uv pip install --python .venv/bin/python -r requirements.txt
+
+      - name: Probe SEC EDGAR Archives
+        run: |
+          .venv/bin/python - <<'PY'
+          import requests
+          url='https://www.sec.gov/Archives/edgar/data/1557265/000092687726000030/primary_doc.xml'
+          headers={'User-Agent':'us-treasury-holder-tracker Vasuki8 contact via GitHub issues'}
+          r=requests.get(url,headers=headers,timeout=30)
+          print('SEC_ARCHIVES_STATUS',r.status_code,'BYTES',len(r.content))
+          PY
 
       - name: Build N-PORT Treasury cache
         env:
