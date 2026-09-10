@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T18:38:26Z",
+  "generated_at": "2026-09-10T18:40:33Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -1532,59 +1532,59 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:38:05Z"
+      "checked_at": "2026-09-10T18:40:04Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:38:06Z"
+      "checked_at": "2026-09-10T18:40:04Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:38:26Z"
+      "checked_at": "2026-09-10T18:40:31Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:38:14Z"
+      "checked_at": "2026-09-10T18:40:16Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:38:15Z"
+      "checked_at": "2026-09-10T18:40:16Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T18:38:15Z",
+      "checked_at": "2026-09-10T18:40:17Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:38:15Z"
+      "checked_at": "2026-09-10T18:40:17Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:38:16Z"
+      "checked_at": "2026-09-10T18:40:19Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:38:16Z"
+      "checked_at": "2026-09-10T18:40:19Z"
     },
     "extended_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:38:16Z"
+      "checked_at": "2026-09-10T18:40:21Z"
     },
     "nport": {
       "status": "pending",
-      "checked_at": "2026-09-10T18:38:16Z",
+      "checked_at": "2026-09-10T18:40:21Z",
       "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
     },
     "government_accounts": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:38:17Z"
+      "checked_at": "2026-09-10T18:40:23Z"
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T18:38:15Z",
+      "checked_at": "2026-09-10T18:40:17Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -4708,7 +4708,7 @@
   "history": [
     {
       "snapshot_date": "2026-09-10",
-      "generated_at": "2026-09-10T18:38:16Z",
+      "generated_at": "2026-09-10T18:40:19Z",
       "total_public_debt_trillions": 40.08409078544635,
       "debt_held_by_public_trillions": 32.38792109474681,
       "fed_treasuries_billions": 4552.347,
@@ -7587,35 +7587,41 @@
     }
   },
   "ownership_shares": {
-    "debt_held_by_public_billions": 32387.92109474681,
-    "intragovernmental_billions": 7696.16969069954,
     "rows": [
       {
         "name": "Foreign holders (TIC)",
         "holdings_billions": 9299.0,
         "denominator": "Debt held by public",
-        "share_pct": 28.71132102859254
+        "denominator_billions": 31681.308373695032,
+        "denominator_as_of": "2026-06-30",
+        "share_pct": 29.351691825079275
       },
       {
         "name": "Federal Reserve H.4.1",
         "holdings_billions": 4552.347,
         "denominator": "Debt held by public",
-        "share_pct": 14.055693746698585
+        "denominator_billions": 32421.027120428178,
+        "denominator_as_of": "2026-09-02",
+        "share_pct": 14.041341081176325
       },
       {
         "name": "Federal Reserve SOMA par",
         "holdings_billions": 4446.2865402,
         "denominator": "Debt held by public",
-        "share_pct": 13.728224566167569
+        "denominator_billions": 32421.027120428178,
+        "denominator_as_of": "2026-09-02",
+        "share_pct": 13.714206288666396
       },
       {
         "name": "Detailed government-account leaf lines",
         "holdings_billions": 7700.9074259543995,
         "denominator": "Intragovernmental holdings",
-        "share_pct": 100.0615596516873
+        "denominator_billions": 7725.75346800267,
+        "denominator_as_of": "2026-07-31",
+        "share_pct": 99.67839975542613
       }
     ],
-    "note": "Shares are shown only against the relevant high-level Treasury denominator. These categories should not be summed because source definitions and valuation bases differ."
+    "note": "Each share uses a Debt to the Penny denominator from the same observation date, or the latest business day on or before it. Categories still should not be summed because source definitions and valuation bases differ."
   },
   "soma_concentration": {
     "as_of": "2026-09-02",
