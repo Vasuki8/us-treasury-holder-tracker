@@ -28,11 +28,25 @@
       link.dataset.ux5='1';
       document.head.appendChild(link);
     }
+    if(!document.querySelector('link[data-country-history]')){
+      const link=document.createElement('link');
+      link.rel='stylesheet';
+      link.href='country-history.css';
+      link.dataset.countryHistory='1';
+      document.head.appendChild(link);
+    }
     if(!document.querySelector('script[data-ux4]')){
       const script=document.createElement('script');
       script.src='ux-v4.js';
       script.defer=true;
       script.dataset.ux4='1';
+      document.body.appendChild(script);
+    }
+    if(!document.querySelector('script[data-country-history]')){
+      const script=document.createElement('script');
+      script.src='country-history.js';
+      script.defer=true;
+      script.dataset.countryHistory='1';
       document.body.appendChild(script);
     }
   }
