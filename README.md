@@ -18,18 +18,29 @@ A GitHub Pages dashboard that checks official U.S. Treasury, Federal Reserve, Ne
   - U.S. Treasury repurchase agreements are kept separate so repo collateral is not mislabeled as direct Treasury ownership.
 - **Treasury auction takedown** — recent competitive awards split among primary dealers, indirect bidders, and direct bidders, plus recent auction statistics.
 
+### Phase 3
+- **Bank Treasury holdings** — U.S.-chartered and private depository-institution Treasury aggregates from the Federal Reserve Financial Accounts via FRED.
+- **Broker-dealer Treasury holdings** — quarterly security-broker/dealer Treasury assets from the Financial Accounts.
+- **Primary dealer positioning** — weekly New York Fed primary-dealer Treasury net positions and Treasury settlement fails.
+- **Historical series** — bank/dealer history is loaded from official historical feeds, while the tracker also retains one compact dashboard snapshot per day for long-run comparisons.
+- **Exports** — the website can download the full JSON dataset and a flattened current-snapshot CSV.
+
 The site refreshes daily, but it never fabricates a daily ownership number. Every dataset keeps its real observation date.
+
+## Current SEC limitation
+
+SEC Form N-MFP is wired into the tracker, but SEC currently returns HTTP 403 to the GitHub-hosted updater for the public bulk archive. The dashboard exposes this in **Source Health** and retains any last valid N-MFP observation rather than presenting an error as current data. N-PORT bulk files are also very large (hundreds of MB per quarter), so that source needs a separate ingestion strategy rather than being silently added to the daily job.
 
 ## Data-model caveat
 
-There is no single public official database naming every owner of every Treasury security each day. This tracker combines official datasets with different reporting scopes and lags. Auction awards are not current holdings, TIC country attribution can reflect custodial location, and repo exposure is not the same as direct Treasury ownership.
+There is no single public official database naming every owner of every Treasury security each day. This tracker combines official datasets with different reporting scopes and lags. Auction awards are not current holdings, TIC country attribution can reflect custodial location, primary-dealer net positions are not an ownership register, and repo exposure is not the same as direct Treasury ownership.
 
 ## Local setup with uv
 
 ```powershell
 uv venv --python 3.13
 uv pip install --python .venv\Scripts\python.exe -r requirements.txt
-.venv\Scripts\python.exe scripts\update_data.py
+.venv\Scripts\python.exe scripts\update_data_v3.py
 python -m http.server 8000
 ```
 
@@ -45,10 +56,10 @@ Open `http://localhost:8000`.
 
 The updater retains the last successful observation for a source if that source temporarily fails, and the dashboard exposes that failure in **Source Health**.
 
-## Phase 3 candidates
+## Next expansion
 
-- SEC **Form N-PORT** mutual funds and ETFs with direct Treasury holdings.
-- Bank and broker-dealer Treasury aggregates and primary-dealer position data.
-- Historical time series for holder shares and changes.
-- CUSIP cross-source matching across SOMA, SEC funds, and Treasury issuance.
-- Downloadable CSV/JSON snapshots and source-level provenance.
+- SEC **Form N-PORT** mutual funds and ETFs using a separate quarterly ingestion job/cached dataset rather than a 400+ MB daily download.
+- **CUSIP cross-source matching** across SOMA, Treasury issuance, and fund filings.
+- More detailed **insurance and pension** ownership where public official sector data are available.
+- **Holder-share and change analytics** such as 1-month, 3-month, 1-year and cycle comparisons.
+- More granular Treasury issuance metadata and security-level drill-down pages.
