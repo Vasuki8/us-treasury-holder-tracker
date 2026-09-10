@@ -8,6 +8,7 @@ on:
       - phase9-holder-flow-intelligence
       - phase10-release-calendar-regimes
       - phase11-discovery-comparison
+      - phase12-market-structure-workspace
     paths:
       - scripts/**
       - app.js
@@ -20,6 +21,8 @@ on:
       - phase10.js
       - phase11.js
       - phase11.css
+      - phase12.js
+      - phase12.css
       - index.html
       - styles.css
       - .github/workflows/update.yml
@@ -53,6 +56,7 @@ jobs:
           node --check phase9.js
           node --check phase10.js
           node --check phase11.js
+          node --check phase12.js
 
       - name: Install uv
         uses: astral-sh/setup-uv@v10.0.0
@@ -66,7 +70,7 @@ jobs:
         run: uv venv --python 3.13 && uv pip install --python .venv/bin/python -r requirements.txt
 
       - name: Refresh official data
-        run: .venv/bin/python scripts/update_data_v11.py
+        run: .venv/bin/python scripts/update_data_v12.py
 
       - name: Validate Phase 8 output
         run: .venv/bin/python scripts/validate_phase8_state.py
@@ -79,6 +83,9 @@ jobs:
 
       - name: Validate Phase 11 output
         run: .venv/bin/python scripts/validate_phase11_state.py
+
+      - name: Validate Phase 12 output
+        run: .venv/bin/python scripts/validate_phase12_state.py
 
       - name: Commit updated data safely
         run: |
@@ -99,11 +106,12 @@ jobs:
             echo "Branch advanced during refresh; regenerating on latest HEAD."
             git restore data/dashboard.json
             git pull --ff-only origin "$GITHUB_REF_NAME"
-            .venv/bin/python scripts/update_data_v11.py
+            .venv/bin/python scripts/update_data_v12.py
             .venv/bin/python scripts/validate_phase8_state.py
             .venv/bin/python scripts/validate_phase9_state.py
             .venv/bin/python scripts/validate_phase10_state.py
             .venv/bin/python scripts/validate_phase11_state.py
+            .venv/bin/python scripts/validate_phase12_state.py
           fi
 
           if git diff --quiet -- data/dashboard.json; then

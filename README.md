@@ -79,8 +79,16 @@ The site refreshes daily, but it never fabricates a daily ownership number. Ever
 - **Same-scope guardrail** — monthly foreign holders, quarterly U.S. sectors and weekly primary-dealer series cannot be mixed in the comparison chart.
 - **Holder Co-Movement Lens** — computes Pearson correlation of period-to-period percentage changes only on common observation dates, requiring at least six overlapping changes.
 - **Strongest / lowest co-movement pairs** — surfaces the most similar and most divergent historical change patterns for each holder scope and lets the user jump directly into a comparison.
-- **Search index validation** — CI verifies unique navigation entries and coverage of holder/CUSIP search targets.
-- **Co-movement validation** — CI verifies correlation bounds, overlap requirements and pair uniqueness before refreshed data can be committed.
+
+### Phase 12
+- **Market Structure Map** — links foreign-holder breadth, U.S.-sector breadth, primary-dealer breadth, latest auction demand, SOMA concentration, active alerts, data freshness and dealer positioning in one compact interactive view while preserving every component's own observation date.
+- **No synthetic composite score** — the map uses categorical supportive / neutral / cautious states instead of adding incompatible monthly, quarterly and weekly inputs into a fake market number.
+- **Auction Demand Monitor** — scores recent Treasury auctions with a transparent heuristic: 45% bid-to-cover percentile, 35% indirect-bidder-share percentile and 20% inverse primary-dealer-share percentile.
+- **Term-aware auction baselines** — when at least three observations exist for a Treasury term, each auction is evaluated against its own recent term history; otherwise the recent multi-term sample is used.
+- **Auction term explorer** — filter recent auctions by security term and inspect score, bidder mix, bid-to-cover, comparison percentiles and recent term medians.
+- **Saved Research Views** — holder comparisons can be saved and reopened from browser-local storage without creating an account or sending research preferences to a server.
+- **Interactive structure navigation** — clicking a market-structure card jumps directly to the underlying detailed dashboard section.
+- **Phase 12 validation** — CI checks auction-score bounds, percentile integrity, market-structure dimension uniqueness and categorical state consistency before refreshed data is committed.
 
 ## Important interpretation limits
 
@@ -88,11 +96,13 @@ There is no single public official database naming every owner of every Treasury
 
 Government-account detail is a detailed view of intragovernmental investments and must not be added again on top of the intragovernmental total.
 
-Alert diagnostics and the Research Brief are research screens, not forecasts. A high percentile, robust z-score or unusual-change flag means a move is unusual relative to the stored history; it does not identify a cause or imply a future market move.
+Alert diagnostics, the Research Brief, the Market Structure Map and the auction-demand score are research screens, not forecasts or trading recommendations. They organize reported data and historical context; they do not identify causation or predict Treasury prices.
 
 Phase 9/10 flow breadth and regimes are not synchronized capital-flow estimates. Foreign-country data are monthly, U.S. sector data are quarterly, and primary-dealer data are weekly positioning series. The tracker keeps those concepts and dates separate.
 
 Phase 11 co-movement is descriptive association, not evidence that one holder causes another holder's behavior. Correlations are computed only within the same holder scope and can change substantially as more observations arrive.
+
+Phase 12 auction-demand labels are derived tracker metrics, not official Treasury classifications. Auction awards describe issuance demand, not current secondary-market ownership.
 
 Phase 10 release dates are tracker estimates built from normal source cadence and the latest observed reporting period. They are operational freshness diagnostics, not official publisher commitments, and the simple weekday adjustment does not model every U.S. federal holiday.
 
@@ -111,7 +121,7 @@ Form N-PORT is handled separately by `.github/workflows/nport.yml`. The cache ca
 ```powershell
 uv venv --python 3.13
 uv pip install --python .venv\Scripts\python.exe -r requirements.txt
-.venv\Scripts\python.exe scripts\update_data_v11.py
+.venv\Scripts\python.exe scripts\update_data_v12.py
 python -m http.server 8000
 ```
 
@@ -122,7 +132,7 @@ Open `http://localhost:8000`.
 1. Repository **Settings → Pages**.
 2. Set **Source** to **Deploy from a branch**.
 3. Select `main` and `/ (root)`.
-4. `.github/workflows/update.yml` checks the normal live sources daily and runs the current Phase 11 updater.
+4. `.github/workflows/update.yml` checks the normal live sources daily and runs the current Phase 12 updater.
 5. `.github/workflows/nport.yml` remains the separate quarterly/on-demand N-PORT ingestion path.
 
 You can also run either workflow manually from the repository **Actions** tab.
@@ -137,8 +147,8 @@ You can also run either workflow manually from the repository **Actions** tab.
 
 ## Next expansion
 
-- Add a compact market-structure overview that links holder regimes, auction demand, dealer positioning and SOMA concentration without pretending they share one reporting date.
-- Add saved dashboard views in browser storage so recurring research configurations can be restored instantly.
-- Add richer country/sector comparison metrics such as rolling change rank and concentration contribution.
+- Add richer rolling holder analytics such as rolling rank, acceleration and concentration contribution.
+- Add a compact sticky navigation rail / overview architecture as the research terminal grows.
+- Add auction-demand history persistence so score regimes can be studied beyond the current rolling 90-day sample.
 - Improve publisher-specific release expectations when durable machine-readable official calendars are available.
 - Add named-fund drill-downs when SEC N-PORT/N-MFP automated access becomes reliable.
