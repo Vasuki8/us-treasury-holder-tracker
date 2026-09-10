@@ -42,6 +42,13 @@ body.ux5-core .panel .ux3-share { display: none !important; }
 body.ux5-core .inline-note { display: none !important; }
 body.ux5-core .panel.ux4-show-notes .inline-note { display: block !important; }
 
+/* Default tables stop at the useful scan depth; Research view still contains every row. */
+body.ux5-core #foreignTable tr:nth-child(n+11),
+body.ux5-core #moverTable tr:nth-child(n+9),
+body.ux5-core #auctionDemandTable tr:nth-child(n+9) { display: none !important; }
+body.ux5-core #auctionDemandPanel .subsection-head,
+body.ux5-core #auctionDemandPanel .subsection-head + .table-wrap { display: none !important; }
+
 body.ux5-core .table-tall { max-height: 350px; }
 body.ux5-core .chart-wrap { min-height: 300px; }
 body.ux5-core .chart-wrap.compact { min-height: 250px; }
