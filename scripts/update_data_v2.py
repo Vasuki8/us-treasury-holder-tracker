@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import time
 from urllib.parse import urljoin
 
 import pandas as pd
@@ -9,7 +10,7 @@ from bs4 import BeautifulSoup
 
 import update_data as base
 
-# Phase-2 compatibility wrapper. It fixes two live-source behaviors that can vary
+# Phase-2 compatibility wrapper. It fixes live-source behaviors that can vary
 # in hosted CI environments without duplicating the full collector.
 
 _ORIGINAL_GET_RESPONSE = base.get_response
@@ -30,12 +31,41 @@ KNOWN_NMFP_ARCHIVE = (
     "20260810-20260908_nmfp.zip"
 )
 
+TRANSIENT_STATUS_CODES = {408, 425, 429, 500, 502, 503, 504}
+
 
 def get_response(url: str, params: dict | None = None) -> requests.Response:
     headers = SEC_HEADERS if "sec.gov" in url.lower() else base.HEADERS
-    r = requests.get(url, params=params, headers=headers, timeout=base.TIMEOUT)
-    r.raise_for_status()
-    return r
+    # Treasury Fiscal Data occasionally times out from hosted GitHub runners.
+    # Retry only transient network/server failures; deterministic 4xx responses
+    # such as the known SEC 403 are returned immediately to the source-level
+    # error handler instead of wasting several minutes.
+    attempts = 3 if "api.fiscaldata.treasury.gov" in url.lower() else 2
+    last_error: Exception | None = None
+
+    for attempt in range(attempts):
+        try:
+            r = requests.get(url, params=params, headers=headers, timeout=base.TIMEOUT)
+            if r.status_code in TRANSIENT_STATUS_CODES and attempt + 1 < attempts:
+                time.sleep(1.5 * (2 ** attempt))
+                continue
+            r.raise_for_status()
+            return r
+        except (requests.Timeout, requests.ConnectionError) as exc:
+            last_error = exc
+            if attempt + 1 >= attempts:
+                raise
+            time.sleep(1.5 * (2 ** attempt))
+        except requests.HTTPError as exc:
+            last_error = exc
+            response = exc.response
+            if response is None or response.status_code not in TRANSIENT_STATUS_CODES or attempt + 1 >= attempts:
+                raise
+            time.sleep(1.5 * (2 ** attempt))
+
+    if last_error is not None:
+        raise last_error
+    raise RuntimeError(f"No HTTP response returned for {url}")
 
 
 def fetch_fred_series(series_id: str) -> tuple[str, float]:
