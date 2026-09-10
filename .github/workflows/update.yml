@@ -33,6 +33,8 @@ on:
       - ux-v3.js
       - ux-v3-runtime.js
       - ux-v3.css
+      - ux-v4.js
+      - ux-v4.css
       - index.html
       - styles.css
       - .github/workflows/update.yml
@@ -71,6 +73,7 @@ jobs:
           node --check ux-v2.js
           node --check ux-v3.js
           node --check ux-v3-runtime.js
+          node --check ux-v4.js
 
       - name: Install uv
         uses: astral-sh/setup-uv@v10.0.0

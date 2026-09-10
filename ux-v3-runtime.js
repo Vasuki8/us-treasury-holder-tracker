@@ -7,6 +7,29 @@
     });
   }
 
+  function loadCleanVisualLayer(){
+    if(!document.getElementById('ux4InlineTrim')){
+      const style=document.createElement('style');
+      style.id='ux4InlineTrim';
+      style.textContent='body.ux4-essential .ux-mode-button[data-mode="data"],body.ux4-essential .ux-mode-button[data-mode="pinned"]{display:none!important}body.ux4-essential main.shell>section.note:not(.panel){display:none!important}';
+      document.head.appendChild(style);
+    }
+    if(!document.querySelector('link[data-ux4]')){
+      const link=document.createElement('link');
+      link.rel='stylesheet';
+      link.href='ux-v4.css';
+      link.dataset.ux4='1';
+      document.head.appendChild(link);
+    }
+    if(!document.querySelector('script[data-ux4]')){
+      const script=document.createElement('script');
+      script.src='ux-v4.js';
+      script.defer=true;
+      script.dataset.ux4='1';
+      document.body.appendChild(script);
+    }
+  }
+
   let queued = false;
   const observer = new MutationObserver(() => {
     if(queued) return;
@@ -16,6 +39,7 @@
 
   function init(){
     normalizePeekButtons();
+    loadCleanVisualLayer();
     observer.observe(document.body,{childList:true,subtree:true});
     setTimeout(normalizePeekButtons,900);
     setTimeout(normalizePeekButtons,1800);
