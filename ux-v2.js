@@ -17,9 +17,18 @@
     pinned: 'A personal workspace containing only the research panels you have pinned in this browser.',
   };
 
+  function loadPinned() {
+    try {
+      const value = JSON.parse(localStorage.getItem('treasury-pinned-panels') || '[]');
+      return new Set(Array.isArray(value) ? value : []);
+    } catch {
+      return new Set();
+    }
+  }
+
   const state = {
     mode: localStorage.getItem('treasury-ux-mode') || 'overview',
-    pinned: new Set(JSON.parse(localStorage.getItem('treasury-pinned-panels') || '[]')),
+    pinned: loadPinned(),
     observer: null,
     data: null,
   };
@@ -33,7 +42,7 @@
   }
 
   function modesFor(section) {
-    if (section.classList.contains('cards')) return ['overview', 'data'];
+    if (section.id === 'uxOverviewStrip' || section.classList.contains('cards')) return ['overview', 'data'];
     const title = titleOf(section).toLowerCase();
     const group = section.dataset.uiGroup || '';
     const modes = new Set(['data']);
@@ -43,7 +52,6 @@
     if (/holder profile|holder comparison|saved research|co-movement|cross-holder flow|flow intelligence|flow regime|foreign holder 13-month trend|ownership share/.test(title)) modes.add('compare');
     if (['alerts', 'sources', 'history'].includes(group) || /alert|release|freshness|source health|provenance|tracker history|signal history|unusual|research brief|market structure/.test(title)) modes.add('monitor');
 
-    // Important raw ownership tables should be discoverable in Explore even if an older phase did not classify them.
     if (/foreign treasury holders|government.*trust-fund|banks|broker-dealer|insurance|pensions|etfs|hedge funds|primary dealer|money-market|domestic.*sector|soma|cusip|auction/.test(title)) modes.add('explore');
 
     return [...modes];
@@ -113,6 +121,8 @@
   function toggleFocus(section) {
     const current = document.querySelector('.panel.ux-focused');
     if (current && current !== section) current.classList.remove('ux-focused');
+    const willOpen = !section.classList.contains('ux-focused');
+    if (willOpen && section.classList.contains('ui-collapsed')) section.querySelector('.ui-collapse')?.click();
     const active = section.classList.toggle('ux-focused');
     document.body.classList.toggle('ux-panel-focus', active);
     section.querySelector('.ux-focus').textContent = active ? '×' : '⤢';
@@ -205,7 +215,6 @@
     const main = document.querySelector('main.shell');
     if (!main || document.getElementById('uxRail')) return;
 
-    // Disable the earlier category filter so the task-based UX owns visibility.
     document.querySelector('.toolbar-chip[data-group="all"]')?.click();
     document.body.classList.remove('ui-focus-mode');
 
