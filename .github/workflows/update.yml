@@ -1,6 +1,13 @@
 name: Update Treasury holder data
 
 on:
+  push:
+    branches:
+      - main
+      - phase6-audit-alerts-exports
+    paths:
+      - scripts/**
+      - .github/workflows/update.yml
   schedule:
     - cron: "17 5 * * *"   # daily, 05:17 UTC
   workflow_dispatch:
@@ -14,6 +21,7 @@ concurrency:
 
 jobs:
   update:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
