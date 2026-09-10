@@ -1,0 +1,156 @@
+/* Research Terminal UI refresh — layered on top of the phase styles without changing data logic. */
+:root{
+  --ui-bg:#07101d;
+  --ui-surface:rgba(15,27,45,.82);
+  --ui-surface-strong:#101d31;
+  --ui-surface-soft:#0a1728;
+  --ui-border:rgba(121,153,194,.18);
+  --ui-border-strong:rgba(116,168,232,.34);
+  --ui-text:#f3f7fc;
+  --ui-muted:#92a4ba;
+  --ui-blue:#6fb1ff;
+  --ui-cyan:#70d8df;
+  --ui-green:#6ed6a7;
+  --ui-amber:#f4c96f;
+  --ui-red:#ff8392;
+  --ui-violet:#b6a0ff;
+  --ui-radius:18px;
+  --ui-shadow:0 18px 55px rgba(0,0,0,.20);
+}
+
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(900px 540px at 86% -12%,rgba(67,131,214,.20),transparent 64%),
+    radial-gradient(760px 520px at -8% 20%,rgba(62,184,186,.09),transparent 68%),
+    linear-gradient(180deg,#07101d 0%,#08111f 42%,#060d18 100%);
+  font-feature-settings:"tnum" 1,"ss01" 1;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.22;
+  background-image:linear-gradient(rgba(130,160,200,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(130,160,200,.035) 1px,transparent 1px);
+  background-size:36px 36px;
+  mask-image:linear-gradient(to bottom,black,transparent 75%);
+}
+
+.shell{width:min(1400px,calc(100% - 38px))}
+.hero{padding:42px 0 24px;align-items:center;border-bottom:1px solid rgba(125,155,195,.08)}
+.hero>div:first-child{max-width:880px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--ui-cyan);font-size:11px;letter-spacing:.14em}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ui-green);box-shadow:0 0 0 5px rgba(110,214,167,.09)}
+h1{font-size:clamp(38px,5vw,66px);line-height:.98;margin:13px 0 15px;background:linear-gradient(135deg,#fff 10%,#cbd9e9 72%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{max-width:820px;font-size:16px;line-height:1.65;color:#a7b7ca}
+.hero-side{min-width:250px}
+.status{background:rgba(8,20,35,.74);border-color:var(--ui-border-strong);box-shadow:inset 0 1px rgba(255,255,255,.025)}
+
+/* Sticky research navigation */
+.research-toolbar{
+  position:sticky;top:0;z-index:900;
+  width:min(1400px,calc(100% - 38px));margin:0 auto 18px;
+  display:flex;align-items:center;gap:12px;padding:10px 12px;
+  background:rgba(7,16,29,.86);border:1px solid var(--ui-border);border-radius:15px;
+  box-shadow:0 12px 34px rgba(0,0,0,.20);backdrop-filter:blur(18px) saturate(145%);
+}
+.toolbar-brand{display:flex;align-items:center;gap:9px;flex:0 0 auto;padding:0 6px 0 2px}
+.toolbar-mark{width:27px;height:27px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(111,177,255,.24),rgba(112,216,223,.12));border:1px solid rgba(111,177,255,.3);color:var(--ui-blue);font-size:13px;font-weight:900}
+.toolbar-brand strong{font-size:12px;letter-spacing:.01em}.toolbar-brand small{display:block;color:var(--ui-muted);font-size:9px;margin-top:1px}
+.toolbar-nav{display:flex;gap:5px;min-width:0;overflow:auto;scrollbar-width:none;flex:1;padding:1px}.toolbar-nav::-webkit-scrollbar{display:none}
+.toolbar-chip{flex:0 0 auto;border:1px solid transparent;background:transparent;color:var(--ui-muted);border-radius:9px;padding:7px 10px;font-size:11px;font-weight:700;line-height:1;white-space:nowrap}
+.toolbar-chip:hover{background:rgba(111,177,255,.07);color:var(--ui-text);border-color:var(--ui-border)}
+.toolbar-chip.active{background:rgba(111,177,255,.12);color:#dcebff;border-color:rgba(111,177,255,.30)}
+.toolbar-actions{display:flex;align-items:center;gap:7px;flex:0 0 auto}
+.toolbar-action{display:inline-flex;align-items:center;gap:7px;background:#0b192b;border-color:var(--ui-border);padding:7px 10px;border-radius:9px;color:#cbd8e8;font-size:11px;font-weight:700}
+.toolbar-action:hover{background:#102139;border-color:var(--ui-border-strong)}
+.toolbar-count{font-size:9px;color:var(--ui-muted);padding:0 4px;white-space:nowrap}
+
+/* Better hierarchy and depth */
+.cards{gap:12px;margin:4px 0 20px}
+.card,.panel,.note{border-color:var(--ui-border);box-shadow:var(--ui-shadow)}
+.card{position:relative;overflow:hidden;padding:17px 18px;background:linear-gradient(145deg,rgba(18,33,54,.95),rgba(10,22,38,.91))}
+.card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,var(--ui-blue),transparent);opacity:.38}
+.card:nth-child(4n+2)::after{background:linear-gradient(90deg,var(--ui-cyan),transparent)}
+.card:nth-child(4n+3)::after{background:linear-gradient(90deg,var(--ui-green),transparent)}
+.card:nth-child(4n+4)::after{background:linear-gradient(90deg,var(--ui-violet),transparent)}
+.card .kicker{text-transform:uppercase;letter-spacing:.06em;font-size:10px}
+.card .value{font-size:29px;letter-spacing:-.035em;color:#f6f9fd}
+.card .meta{line-height:1.45}
+
+.panel{position:relative;padding:21px;margin:16px 0;background:linear-gradient(180deg,rgba(16,29,49,.89),rgba(9,20,35,.91));overflow:visible}
+.panel::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 1px rgba(255,255,255,.022)}
+.panel-head{position:relative;margin-bottom:17px;align-items:flex-start}
+.panel-head h2{font-size:20px;letter-spacing:-.015em;color:#f2f6fb}
+.panel-head p{font-size:12px;line-height:1.5;max-width:780px}
+.panel[data-ui-group] .panel-head h2::before{display:inline-flex;vertical-align:2px;margin-right:8px;padding:3px 6px;border-radius:6px;border:1px solid var(--ui-border);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--ui-muted);font-weight:850}
+.panel[data-ui-group="market"] .panel-head h2::before{content:"Market";color:var(--ui-cyan);border-color:rgba(112,216,223,.22)}
+.panel[data-ui-group="holders"] .panel-head h2::before{content:"Holders";color:var(--ui-blue);border-color:rgba(111,177,255,.22)}
+.panel[data-ui-group="securities"] .panel-head h2::before{content:"CUSIP";color:var(--ui-violet);border-color:rgba(182,160,255,.22)}
+.panel[data-ui-group="auctions"] .panel-head h2::before{content:"Auction";color:var(--ui-amber);border-color:rgba(244,201,111,.22)}
+.panel[data-ui-group="alerts"] .panel-head h2::before{content:"Monitor";color:var(--ui-red);border-color:rgba(255,131,146,.22)}
+.panel[data-ui-group="sources"] .panel-head h2::before{content:"Audit";color:var(--ui-green);border-color:rgba(110,214,167,.22)}
+.panel[data-ui-group="history"] .panel-head h2::before{content:"History";color:var(--ui-muted)}
+
+.chart-wrap{border-radius:13px;background:linear-gradient(180deg,rgba(8,19,33,.42),rgba(7,16,29,.14));padding:8px}
+.table-wrap{border-color:var(--ui-border);background:rgba(6,15,27,.30);box-shadow:inset 0 1px rgba(255,255,255,.015)}
+th{background:rgba(16,30,50,.97);color:#8fa3bb;font-size:10px;letter-spacing:.07em;padding:10px 12px}
+td{font-variant-numeric:tabular-nums;color:#dfe7f1;padding:10px 12px}
+tbody tr{transition:background .15s ease}tbody tr:hover{background:rgba(111,177,255,.055)}
+.table-tall{max-height:510px}
+
+button,.panel input,.panel select{transition:border-color .16s ease,background .16s ease,transform .16s ease,box-shadow .16s ease}
+button{background:#0b192b;border-color:var(--ui-border);font-weight:650}
+button:hover{background:#10223a;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+button:active{transform:translateY(1px)}
+.panel input,.panel select{background:#071522;border-color:var(--ui-border);box-shadow:inset 0 1px 2px rgba(0,0,0,.2)}
+.panel input:focus,.panel select:focus{outline:none;border-color:rgba(111,177,255,.6);box-shadow:0 0 0 3px rgba(111,177,255,.08)}
+
+.metric-strip{gap:9px}.mini{background:linear-gradient(145deg,#091727,#081321);border-color:var(--ui-border);padding:12px 13px}.mini span{font-size:10px;text-transform:uppercase;letter-spacing:.045em}.mini strong{font-size:19px}
+.note{background:rgba(11,23,39,.72);box-shadow:none}.inline-note{border-color:rgba(121,153,194,.14);line-height:1.55}
+.source{background:linear-gradient(145deg,#091727,#071321);border-color:var(--ui-border)}
+
+/* Focus mode reduces the very long dashboard to the chosen research area. */
+body.ui-focus-mode main>section[data-ui-group]:not(.ui-selected-group){display:none!important}
+body.ui-focus-mode main>.cards:not(.ui-selected-group){display:none!important}
+.ui-focus-banner{display:none;margin:-5px 0 14px;padding:9px 12px;border:1px solid rgba(111,177,255,.20);border-radius:11px;background:rgba(111,177,255,.055);color:#b9c9db;font-size:11px}
+body.ui-focus-mode .ui-focus-banner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.ui-focus-banner button{padding:5px 8px;font-size:10px}
+
+/* Panel collapse controls */
+.ui-panel-tools{display:flex;align-items:center;gap:6px;margin-left:auto}
+.ui-collapse{width:30px;height:30px;display:grid;place-items:center;padding:0;border-radius:8px;color:var(--ui-muted);font-size:15px;line-height:1}
+.panel.ui-collapsed{padding-bottom:13px}.panel.ui-collapsed>.panel-head{margin-bottom:0}.panel.ui-collapsed>:not(.panel-head){display:none!important}.panel.ui-collapsed .ui-collapse{transform:rotate(-90deg)}
+
+/* Density mode */
+body.ui-dense .panel{padding:16px;margin:11px 0}body.ui-dense th,body.ui-dense td{padding-top:7px;padding-bottom:7px}body.ui-dense .chart-wrap{min-height:280px}body.ui-dense .chart-wrap.tall{min-height:340px}body.ui-dense .metric-strip{margin:10px 0}
+
+/* Floating utility */
+.ui-backtop{position:fixed;right:20px;bottom:22px;z-index:850;width:42px;height:42px;border-radius:13px;padding:0;display:grid;place-items:center;background:rgba(13,29,49,.90);border:1px solid var(--ui-border-strong);box-shadow:0 12px 30px rgba(0,0,0,.28);opacity:0;pointer-events:none;transform:translateY(8px);transition:.2s ease}
+.ui-backtop.visible{opacity:1;pointer-events:auto;transform:none}
+
+/* Group-specific visual cues */
+.panel[data-ui-group="market"]{border-color:rgba(112,216,223,.18)}
+.panel[data-ui-group="holders"]{border-color:rgba(111,177,255,.16)}
+.panel[data-ui-group="securities"]{border-color:rgba(182,160,255,.17)}
+.panel[data-ui-group="auctions"]{border-color:rgba(244,201,111,.17)}
+.panel[data-ui-group="alerts"]{border-color:rgba(255,131,146,.16)}
+.panel[data-ui-group="sources"]{border-color:rgba(110,214,167,.16)}
+
+@media(max-width:1050px){
+  .research-toolbar{width:calc(100% - 24px)}
+  .toolbar-brand small,.toolbar-count{display:none}
+  .toolbar-action .ui-action-label{display:none}
+}
+@media(max-width:760px){
+  .shell{width:calc(100% - 24px)}.hero{padding-top:28px}.hero-side{width:100%}.status{white-space:normal}
+  .research-toolbar{top:0;border-radius:0 0 13px 13px;width:100%;border-left:0;border-right:0;padding:8px 10px;margin-bottom:12px}
+  .toolbar-brand{display:none}.toolbar-actions{gap:4px}.toolbar-action{padding:7px 8px}
+  .panel{padding:16px;border-radius:15px}.panel-head h2{font-size:18px}.cards{gap:9px}.card{padding:15px}
+}
+@media(max-width:520px){
+  .toolbar-nav{mask-image:linear-gradient(90deg,#000 88%,transparent)}
+  .download-row{width:100%}.download-row button{flex:1}
+  .ui-backtop{right:12px;bottom:14px;width:38px;height:38px}
+}
+
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
