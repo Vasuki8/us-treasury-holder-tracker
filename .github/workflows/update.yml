@@ -1,6 +1,9 @@
 name: Update Treasury holder data
 
 on:
+  push:
+    branches:
+      - phase2-data-expansion
   schedule:
     - cron: "17 5 * * *"   # daily, 05:17 UTC
   workflow_dispatch:
