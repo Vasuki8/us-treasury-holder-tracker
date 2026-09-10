@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>US Treasury Ownership Tracker</title>
-  <meta name="description" content="Live tracker of U.S. Treasury ownership using official Treasury, Federal Reserve, New York Fed and SEC sources, with provenance, persistent alert history and security-level auction intelligence." />
+  <meta name="description" content="Live tracker of U.S. Treasury ownership using official Treasury, Federal Reserve, New York Fed and SEC sources, with robust alert diagnostics, source-publication monitoring and CUSIP concentration intelligence." />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 </head>
 <body>
   <header class="shell hero">
     <div>
-      <div class="eyebrow">OFFICIAL-DATA DASHBOARD · PHASE 7</div>
+      <div class="eyebrow">OFFICIAL-DATA DASHBOARD · PHASE 8</div>
       <h1>US Treasury Ownership Tracker</h1>
-      <p class="lede">Who holds U.S. Treasury securities — countries, federal trust funds, the Fed, banks, dealers, insurers, pensions, ETFs, hedge funds and fund filings — with source-specific dates, persistent alert history, audit links and CUSIP-level issuance intelligence.</p>
+      <p class="lede">Who holds U.S. Treasury securities — countries, federal trust funds, the Fed, banks, dealers, insurers, pensions, ETFs, hedge funds and fund filings — with source-specific dates, persistent alert history, robust anomaly diagnostics, source-publication tracking and CUSIP-level concentration intelligence.</p>
     </div>
     <div class="hero-side">
       <div class="status" id="updateStatus">Loading data…</div>
@@ -160,7 +160,7 @@
           <tbody id="securityTable"></tbody>
         </table>
       </div>
-      <div class="note inline-note">This cross-source table starts with SOMA securities and matches them to Treasury auction records and the cached SEC N-PORT fund dataset when available. Click a CUSIP row to open the Phase 7 issuance-history drill-down.</div>
+      <div class="note inline-note">This cross-source table starts with SOMA securities and matches them to Treasury auction records and the cached SEC N-PORT fund dataset when available. Click a CUSIP row to open the issuance-history drill-down; Phase 8 adds percent-outstanding concentration diagnostics.</div>
     </section>
 
     <section class="panel">
@@ -227,5 +227,6 @@
   <script src="phase5.js"></script>
   <script src="phase6.js"></script>
   <script src="phase7.js"></script>
+  <script src="phase8.js"></script>
 </body>
 </html>
