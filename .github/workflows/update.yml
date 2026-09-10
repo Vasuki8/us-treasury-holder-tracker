@@ -3,7 +3,7 @@ name: Update Treasury holder data
 on:
   push:
     branches:
-      - phase2-data-expansion
+      - phase3-history-dealers
   schedule:
     - cron: "17 5 * * *"   # daily, 05:17 UTC
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
         run: uv venv --python 3.13 && uv pip install --python .venv/bin/python -r requirements.txt
 
       - name: Refresh official data
-        run: .venv/bin/python scripts/update_data_v2.py
+        run: .venv/bin/python scripts/update_data_v3.py
 
       - name: Commit updated data if changed
         run: |
