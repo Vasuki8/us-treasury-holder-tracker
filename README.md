@@ -34,24 +34,34 @@ A GitHub Pages dashboard that checks official U.S. Treasury, Federal Reserve, Ne
 - **CUSIP security intelligence** — matches SOMA Treasury positions to recent Treasury auction records and, when available, cached SEC N-PORT fund holdings.
 - **Quarterly N-PORT ingestion** — a separate workflow processes the SEC bulk Form N-PORT archive into a compact `data/nport_latest.json` cache so the daily updater never needs to download a 400+ MB ZIP.
 
+### Phase 5
+- **Federal government and trust-fund holders** — Treasury Monthly Treasury Statement Schedule D / Table 6d, including detailed account-level investments such as Social Security-related, Medicare-related, retirement and other federal accounts.
+- **Intragovernmental reconciliation** — the detailed government-account leaf lines are compared with Debt to the Penny intragovernmental holdings using a matching observation date.
+- **13-month TIC history by country** — every country keeps its monthly history plus 1-month, 3-month, 6-month and 12-month changes.
+- **Interactive foreign-holder trend explorer** — select a major foreign holder and view its 13-month Treasury holdings trend.
+- **Ownership-share snapshot** — foreign holders, Fed H.4.1, SOMA and government-account detail are compared with the appropriate Debt to the Penny denominator from the same date or latest business day before it.
+- **SOMA concentration view** — top-CUSIP concentration and a maturity-bucket view of the large SOMA positions stored by the tracker.
+
 The site refreshes daily, but it never fabricates a daily ownership number. Every dataset keeps its real observation date.
 
 ## SEC bulk-data limitation
 
 SEC Form N-MFP is wired into the tracker, but SEC currently returns HTTP 403 to the GitHub-hosted updater for the public bulk archive. The dashboard exposes this in **Source Health** and retains any last valid observation rather than presenting an error as current data.
 
-Form N-PORT is handled separately by `.github/workflows/nport.yml`. The SEC publishes the public bulk dataset quarterly and the latest known archive configured in Phase 4 is **2026 Q2**. If SEC blocks the scheduled GitHub runner, the N-PORT panel remains marked `pending` while aggregate ETF holdings continue to update from Federal Reserve data.
+Form N-PORT is handled separately by `.github/workflows/nport.yml`. The SEC publishes the public bulk dataset quarterly. GitHub-hosted-runner tests also receive HTTP 403 from the SEC dataset page, bulk archive, and tested SEC Archives filing URLs. Until SEC access from hosted runners changes, the N-PORT panel remains `pending` and aggregate ETF holdings continue to update from Federal Reserve data. The N-PORT cache can still be generated from a network environment that SEC permits.
 
 ## Data-model caveat
 
 There is no single public official database naming every owner of every Treasury security each day. This tracker combines official datasets with different reporting scopes and lags. Auction awards are not current holdings, TIC country attribution can reflect custodial location, primary-dealer net positions are not an ownership register, repo exposure is not the same as direct Treasury ownership, and N-PORT reports market value rather than Treasury par value.
+
+Government-account detail is also not a separate additive category on top of intragovernmental debt; it is a detailed view of federal-account investments. The dashboard therefore compares those account lines with the intragovernmental total instead of adding the two together.
 
 ## Local setup with uv
 
 ```powershell
 uv venv --python 3.13
 uv pip install --python .venv\Scripts\python.exe -r requirements.txt
-.venv\Scripts\python.exe scripts\update_data_v4.py
+.venv\Scripts\python.exe scripts\update_data_current.py
 python -m http.server 8000
 ```
 
@@ -63,13 +73,13 @@ Open `http://localhost:8000`.
 2. Set **Source** to **Deploy from a branch**.
 3. Select `main` and `/ (root)`.
 4. `.github/workflows/update.yml` checks the normal live sources daily.
-5. `.github/workflows/nport.yml` handles the large SEC N-PORT archive quarterly or on demand.
+5. `.github/workflows/nport.yml` is reserved for the large SEC N-PORT archive quarterly or on demand.
 
 You can also run either workflow manually from the repository **Actions** tab.
 
 ## N-PORT manual ingestion
 
-For the currently configured SEC archive:
+The ingestion script can auto-discover the latest SEC quarter when SEC permits access, or you can provide an archive explicitly:
 
 ```powershell
 .venv\Scripts\python.exe scripts\ingest_nport.py \
@@ -81,8 +91,8 @@ The ingestion job keeps only the latest public report for each fund series, iden
 
 ## Next expansion
 
-- Automatically discover each newly posted N-PORT quarter and update the quarterly archive manifest.
-- Build named-fund drill-down pages from the N-PORT cache.
-- Add more CUSIP-level Treasury issuance metadata beyond recent auctions.
-- Add source-date-aware 1M/3M/1Y comparisons and alerts for unusually large holder changes.
-- Add provenance links beside every dashboard table row and downloadable historical CSVs.
+- Build source-level provenance links beside every major holder row.
+- Add downloadable historical CSVs for country, sector and dealer series.
+- Add alerts for unusually large holder changes using each source's true reporting cadence.
+- Expand Treasury-security metadata beyond the recent auction window.
+- Add named-fund drill-down pages whenever SEC N-PORT/N-MFP automated access becomes reliable.

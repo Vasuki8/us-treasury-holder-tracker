@@ -11,9 +11,9 @@
 <body>
   <header class="shell hero">
     <div>
-      <div class="eyebrow">OFFICIAL-DATA DASHBOARD · PHASE 4</div>
+      <div class="eyebrow">OFFICIAL-DATA DASHBOARD · PHASE 5</div>
       <h1>US Treasury Ownership Tracker</h1>
-      <p class="lede">Who holds U.S. Treasury securities — countries, the Fed, banks, dealers, insurers, pensions, ETFs, hedge funds and fund filings — with source-specific dates and CUSIP-level matching.</p>
+      <p class="lede">Who holds U.S. Treasury securities — countries, federal trust funds, the Fed, banks, dealers, insurers, pensions, ETFs, hedge funds and fund filings — with source-specific dates, history and CUSIP intelligence.</p>
     </div>
     <div class="hero-side">
       <div class="status" id="updateStatus">Loading data…</div>
@@ -29,13 +29,44 @@
 
     <section class="panel">
       <div class="panel-head">
+        <div><h2>Federal Government & Trust-Fund Treasury Holders</h2><p id="govMeta"></p></div>
+        <input id="govSearch" type="search" placeholder="Search government account…" />
+      </div>
+      <div class="metric-strip metric-four" id="govMetrics"></div>
+      <div class="table-wrap table-tall">
+        <table><thead><tr><th>Federal / trust-fund account</th><th>Account type</th><th>Holdings</th></tr></thead><tbody id="govTable"></tbody></table>
+      </div>
+      <div class="note inline-note">These are detailed intragovernmental investments from Treasury's Monthly Treasury Statement. The tracker uses leaf lines where hierarchy is available to reduce subtotal double-counting.</div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
         <div><h2>Foreign Treasury Holders</h2><p id="foreignMeta"></p></div>
         <input id="countrySearch" type="search" placeholder="Search country…" />
       </div>
       <div class="grid-2">
         <div class="chart-wrap"><canvas id="foreignChart"></canvas></div>
+        <div class="table-wrap table-tall">
+          <table><thead><tr><th>Holder</th><th>Holdings</th><th>1M</th><th>3M</th><th>1Y</th></tr></thead><tbody id="foreignTable"></tbody></table>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><h2>Foreign Holder 13-Month Trend</h2><p id="foreignTrendMeta"></p></div>
+        <select id="trendCountry" aria-label="Select foreign holder"></select>
+      </div>
+      <div class="chart-wrap"><canvas id="foreignTrendChart"></canvas></div>
+      <div class="note inline-note">Treasury TIC country attribution can reflect the location of custodians rather than the ultimate beneficial owner, so country changes should be interpreted with that limitation in mind.</div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>Ownership Share Snapshot</h2><p id="shareMeta"></p></div></div>
+      <div class="grid-2">
+        <div class="chart-wrap compact"><canvas id="shareChart"></canvas></div>
         <div class="table-wrap">
-          <table><thead><tr><th>Holder</th><th>Holdings</th><th>MoM</th></tr></thead><tbody id="foreignTable"></tbody></table>
+          <table><thead><tr><th>Holder group</th><th>Holdings</th><th>Relevant denominator</th><th>Share</th></tr></thead><tbody id="shareTable"></tbody></table>
         </div>
       </div>
     </section>
@@ -56,6 +87,17 @@
           </table>
         </div>
       </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>SOMA Concentration & Maturity View</h2><p id="somaConcentrationMeta"></p></div></div>
+      <div class="grid-2">
+        <div class="chart-wrap compact"><canvas id="somaConcentrationChart"></canvas></div>
+        <div class="table-wrap">
+          <table><thead><tr><th>Maturity bucket</th><th>Stored SOMA par</th></tr></thead><tbody id="somaConcentrationTable"></tbody></table>
+        </div>
+      </div>
+      <div class="note inline-note">This maturity view is calculated from the largest SOMA positions stored in the dashboard, so it is a concentration view rather than a complete maturity distribution of the full portfolio.</div>
     </section>
 
     <section class="panel">
@@ -170,7 +212,7 @@
     </section>
 
     <section class="panel">
-      <div class="panel-head"><div><h2>Source Health</h2><p>Every daily source is checked automatically. N-PORT is handled by a separate quarterly ingestion workflow because the SEC bulk archive is hundreds of MB.</p></div></div>
+      <div class="panel-head"><div><h2>Source Health</h2><p>Every daily source is checked automatically. Large SEC bulk data is handled separately because SEC currently blocks GitHub-hosted runners.</p></div></div>
       <div id="sourceHealth" class="source-grid"></div>
     </section>
 
@@ -179,8 +221,9 @@
     </section>
   </main>
 
-  <footer class="shell footer">Sources: U.S. Treasury Fiscal Data, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, New York Fed SOMA and Primary Dealer Statistics, SEC Form N-MFP, and SEC Form N-PORT.</footer>
+  <footer class="shell footer">Sources: U.S. Treasury Fiscal Data and Monthly Treasury Statement, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, New York Fed SOMA and Primary Dealer Statistics, SEC Form N-MFP, and SEC Form N-PORT.</footer>
   <script src="app.js"></script>
   <script src="phase4.js"></script>
+  <script src="phase5.js"></script>
 </body>
 </html>

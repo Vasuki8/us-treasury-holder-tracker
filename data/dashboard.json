@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T18:27:00Z",
+  "generated_at": "2026-09-10T18:40:33Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -21,133 +21,1437 @@
   "foreign_holders": {
     "as_of": "2026-06",
     "previous_period": "2026-05",
+    "periods": [
+      "2026-06",
+      "2026-05",
+      "2026-04",
+      "2026-03",
+      "2026-02",
+      "2026-01",
+      "2025-12",
+      "2025-11",
+      "2025-10",
+      "2025-09",
+      "2025-08",
+      "2025-07",
+      "2025-06"
+    ],
     "grand_total_billions": 9299.0,
     "foreign_official_billions": 3778.1,
+    "grand_total_history": [
+      {
+        "period": "2026-06",
+        "holdings_billions": 9299.0
+      },
+      {
+        "period": "2026-05",
+        "holdings_billions": 9371.1
+      },
+      {
+        "period": "2026-04",
+        "holdings_billions": 9352.6
+      },
+      {
+        "period": "2026-03",
+        "holdings_billions": 9355.0
+      },
+      {
+        "period": "2026-02",
+        "holdings_billions": 9489.4
+      },
+      {
+        "period": "2026-01",
+        "holdings_billions": 9291.3
+      },
+      {
+        "period": "2025-12",
+        "holdings_billions": 9269.5
+      },
+      {
+        "period": "2025-11",
+        "holdings_billions": 9349.6
+      },
+      {
+        "period": "2025-10",
+        "holdings_billions": 9230.5
+      },
+      {
+        "period": "2025-09",
+        "holdings_billions": 9237.5
+      },
+      {
+        "period": "2025-08",
+        "holdings_billions": 9248.2
+      },
+      {
+        "period": "2025-07",
+        "holdings_billions": 9109.5
+      },
+      {
+        "period": "2025-06",
+        "holdings_billions": 9093.6
+      }
+    ],
+    "foreign_official_history": [
+      {
+        "period": "2026-06",
+        "holdings_billions": 3778.1
+      },
+      {
+        "period": "2026-05",
+        "holdings_billions": 3848.0
+      },
+      {
+        "period": "2026-04",
+        "holdings_billions": 3906.5
+      },
+      {
+        "period": "2026-03",
+        "holdings_billions": 3904.9
+      },
+      {
+        "period": "2026-02",
+        "holdings_billions": 4011.0
+      },
+      {
+        "period": "2026-01",
+        "holdings_billions": 3943.3
+      },
+      {
+        "period": "2025-12",
+        "holdings_billions": 3877.7
+      },
+      {
+        "period": "2025-11",
+        "holdings_billions": 3912.3
+      },
+      {
+        "period": "2025-10",
+        "holdings_billions": 3866.4
+      },
+      {
+        "period": "2025-09",
+        "holdings_billions": 3872.6
+      },
+      {
+        "period": "2025-08",
+        "holdings_billions": 3919.8
+      },
+      {
+        "period": "2025-07",
+        "holdings_billions": 3886.5
+      },
+      {
+        "period": "2025-06",
+        "holdings_billions": 3892.5
+      }
+    ],
     "countries": [
       {
         "name": "Japan",
         "holdings_billions": 1116.7,
         "previous_billions": 1143.1,
-        "change_billions": -26.399999999999864
+        "change_billions": -26.399999999999864,
+        "change_3m_billions": -74.89999999999986,
+        "change_6m_billions": -68.79999999999995,
+        "change_12m_billions": -38.09999999999991,
+        "change_3m_pct": -6.28566633098354,
+        "change_12m_pct": -3.2992726013162375,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 1116.7
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 1143.1
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 1209.9
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 1191.6
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 1239.3
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 1225.3
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 1185.5
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 1202.7
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 1200.0
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 1189.3
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 1183.9
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 1155.4
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 1154.8
+          }
+        ]
       },
       {
         "name": "United Kingdom",
         "holdings_billions": 939.9,
         "previous_billions": 948.6,
-        "change_billions": -8.700000000000045
+        "change_billions": -8.700000000000045,
+        "change_3m_billions": 12.799999999999955,
+        "change_6m_billions": 76.79999999999995,
+        "change_12m_billions": 84.29999999999995,
+        "change_3m_pct": 1.380649336641134,
+        "change_12m_pct": 9.852734922861146,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 939.9
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 948.6
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 937.5
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 927.1
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 897.3
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 879.8
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 863.1
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 879.8
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 875.4
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 862.5
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 901.3
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 895.9
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 855.6
+          }
+        ]
       },
       {
         "name": "China, Mainland",
         "holdings_billions": 633.4,
         "previous_billions": 659.3,
-        "change_billions": -25.899999999999977
+        "change_billions": -25.899999999999977,
+        "change_3m_billions": -19.899999999999977,
+        "change_6m_billions": -51.0,
+        "change_12m_billions": -98.0,
+        "change_3m_pct": -3.0460737792744497,
+        "change_12m_pct": -13.398960896910037,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 633.4
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 659.3
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 651.1
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 653.3
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 694.2
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 695.3
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 684.4
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 683.9
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 687.7
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 699.2
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 699.7
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 695.6
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 731.4
+          }
+        ]
       },
       {
         "name": "Belgium",
         "holdings_billions": 482.5,
         "previous_billions": 472.0,
-        "change_billions": 10.5
+        "change_billions": 10.5,
+        "change_3m_billions": 28.5,
+        "change_6m_billions": 5.199999999999989,
+        "change_12m_billions": 52.19999999999999,
+        "change_3m_pct": 6.277533039647578,
+        "change_12m_pct": 12.131071345572852,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 482.5
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 472.0
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 459.9
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 454.0
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 454.7
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 451.0
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 477.3
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 481.0
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 465.5
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 463.6
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 451.1
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 425.4
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 430.3
+          }
+        ]
       },
       {
         "name": "Canada",
         "holdings_billions": 459.6,
         "previous_billions": 435.8,
-        "change_billions": 23.80000000000001
+        "change_billions": 23.80000000000001,
+        "change_3m_billions": 20.0,
+        "change_6m_billions": -8.699999999999989,
+        "change_12m_billions": 20.700000000000045,
+        "change_3m_pct": 4.549590536851683,
+        "change_12m_pct": 4.716336295283674,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 459.6
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 435.8
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 397.1
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 439.6
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 446.4
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 395.8
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 468.3
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 472.4
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 419.0
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 476.1
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 444.0
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 381.8
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 438.9
+          }
+        ]
       },
       {
         "name": "Cayman Islands",
         "holdings_billions": 453.1,
         "previous_billions": 471.3,
-        "change_billions": -18.19999999999999
+        "change_billions": -18.19999999999999,
+        "change_3m_billions": -7.0,
+        "change_6m_billions": 31.5,
+        "change_12m_billions": 12.200000000000045,
+        "change_3m_pct": -1.5214083894805477,
+        "change_12m_pct": 2.7670673622136643,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 453.1
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 471.3
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 471.6
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 460.1
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 443.4
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 433.2
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 421.6
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 427.6
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 418.5
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 426.8
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 410.5
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 436.8
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 440.9
+          }
+        ]
       },
       {
         "name": "Luxembourg",
         "holdings_billions": 434.2,
         "previous_billions": 436.0,
-        "change_billions": -1.8000000000000114
+        "change_billions": -1.8000000000000114,
+        "change_3m_billions": 1.8000000000000114,
+        "change_6m_billions": 0.19999999999998863,
+        "change_12m_billions": 31.0,
+        "change_3m_pct": 0.4162812210915845,
+        "change_12m_pct": 7.688492063492064,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 434.2
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 436.0
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 431.1
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 432.4
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 446.0
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 446.2
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 434.0
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 424.7
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 417.7
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 419.9
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 409.9
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 403.8
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 403.2
+          }
+        ]
       },
       {
         "name": "France",
         "holdings_billions": 389.9,
         "previous_billions": 393.1,
-        "change_billions": -3.2000000000000455
+        "change_billions": -3.2000000000000455,
+        "change_3m_billions": -3.1000000000000227,
+        "change_6m_billions": 21.0,
+        "change_12m_billions": 16.099999999999966,
+        "change_3m_pct": -0.7888040712468252,
+        "change_12m_pct": 4.307116104868905,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 389.9
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 393.1
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 393.3
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 393.0
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 395.1
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 380.5
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 368.9
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 376.1
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 390.2
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 375.5
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 389.1
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 391.0
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 373.8
+          }
+        ]
       },
       {
         "name": "Ireland",
         "holdings_billions": 353.5,
         "previous_billions": 357.2,
-        "change_billions": -3.6999999999999886
+        "change_billions": -3.6999999999999886,
+        "change_3m_billions": -2.3999999999999773,
+        "change_6m_billions": 12.5,
+        "change_12m_billions": 43.30000000000001,
+        "change_3m_pct": -0.6743467266085916,
+        "change_12m_pct": 13.958736299161837,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 353.5
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 357.2
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 345.3
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 355.9
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 350.8
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 342.1
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 341.0
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 340.3
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 339.9
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 340.0
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 340.0
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 320.2
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 310.2
+          }
+        ]
       },
       {
         "name": "Taiwan",
         "holdings_billions": 302.5,
         "previous_billions": 306.0,
-        "change_billions": -3.5
+        "change_billions": -3.5,
+        "change_3m_billions": 1.6999999999999886,
+        "change_6m_billions": -8.100000000000023,
+        "change_12m_billions": -4.699999999999989,
+        "change_3m_pct": 0.5651595744680813,
+        "change_12m_pct": -1.529947916666663,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 302.5
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 306.0
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 300.9
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 300.8
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 313.5
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 307.8
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 310.6
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 312.9
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 309.4
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 312.5
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 313.4
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 308.8
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 307.2
+          }
+        ]
       },
       {
         "name": "Switzerland",
         "holdings_billions": 284.9,
         "previous_billions": 281.1,
-        "change_billions": 3.7999999999999545
+        "change_billions": 3.7999999999999545,
+        "change_3m_billions": -1.5,
+        "change_6m_billions": -9.200000000000045,
+        "change_12m_billions": -15.700000000000045,
+        "change_3m_pct": -0.5237430167597766,
+        "change_12m_pct": -5.222887558216914,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 284.9
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 281.1
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 288.6
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 286.4
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 286.7
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 289.2
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 294.1
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 300.4
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 302.0
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 301.8
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 303.0
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 303.2
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 300.6
+          }
+        ]
       },
       {
         "name": "Singapore",
         "holdings_billions": 284.4,
         "previous_billions": 278.0,
-        "change_billions": 6.399999999999977
+        "change_billions": 6.399999999999977,
+        "change_3m_billions": 10.099999999999966,
+        "change_6m_billions": 6.0,
+        "change_12m_billions": 30.899999999999977,
+        "change_3m_pct": 3.6820998906306834,
+        "change_12m_pct": 12.189349112426026,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 284.4
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 278.0
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 277.5
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 274.3
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 280.0
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 273.4
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 278.4
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 272.2
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 272.3
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 258.6
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 261.0
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 252.4
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 253.5
+          }
+        ]
       },
       {
         "name": "Hong Kong",
         "holdings_billions": 255.8,
         "previous_billions": 271.9,
-        "change_billions": -16.099999999999966
+        "change_billions": -16.099999999999966,
+        "change_3m_billions": -22.5,
+        "change_6m_billions": -12.599999999999966,
+        "change_12m_billions": 14.0,
+        "change_3m_pct": -8.084800574919152,
+        "change_12m_pct": 5.789909015715467,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 255.8
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 271.9
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 269.1
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 278.3
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 269.2
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 259.9
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 268.4
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 256.6
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 252.0
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 238.9
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 251.9
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 247.5
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 241.8
+          }
+        ]
       },
       {
         "name": "Norway",
         "holdings_billions": 203.2,
         "previous_billions": 207.3,
-        "change_billions": -4.100000000000023
+        "change_billions": -4.100000000000023,
+        "change_3m_billions": -14.200000000000017,
+        "change_6m_billions": -4.900000000000006,
+        "change_12m_billions": 8.099999999999994,
+        "change_3m_pct": -6.5317387304507895,
+        "change_12m_pct": 4.151717068170167,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 203.2
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 207.3
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 214.7
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 217.4
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 223.0
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 218.8
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 208.1
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 218.9
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 193.7
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 215.9
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 214.9
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 208.0
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 195.1
+          }
+        ]
       },
       {
         "name": "India",
         "holdings_billions": 186.4,
         "previous_billions": 181.3,
-        "change_billions": 5.099999999999994
+        "change_billions": 5.099999999999994,
+        "change_3m_billions": 3.4000000000000057,
+        "change_6m_billions": 3.5,
+        "change_12m_billions": -41.0,
+        "change_3m_pct": 1.8579234972677625,
+        "change_12m_pct": -18.02990325417766,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 186.4
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 181.3
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 181.0
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 183.0
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 190.6
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 190.4
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 182.9
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 186.5
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 190.4
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 202.7
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 219.4
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 219.7
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 227.4
+          }
+        ]
       },
       {
         "name": "Brazil",
         "holdings_billions": 168.4,
         "previous_billions": 168.9,
-        "change_billions": -0.5
+        "change_billions": -0.5,
+        "change_3m_billions": 0.4000000000000057,
+        "change_6m_billions": -0.29999999999998295,
+        "change_12m_billions": -47.0,
+        "change_3m_pct": 0.2380952380952415,
+        "change_12m_pct": -21.81987000928505,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 168.4
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 168.9
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 168.6
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 168.0
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 170.6
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 168.0
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 168.7
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 168.2
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 167.8
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 172.8
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 184.6
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 201.8
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 215.4
+          }
+        ]
       },
       {
         "name": "Saudi Arabia",
         "holdings_billions": 142.5,
         "previous_billions": 140.3,
-        "change_billions": 2.1999999999999886
+        "change_billions": 2.1999999999999886,
+        "change_3m_billions": -9.5,
+        "change_6m_billions": -7.0,
+        "change_12m_billions": 12.0,
+        "change_3m_pct": -6.25,
+        "change_12m_pct": 9.195402298850574,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 142.5
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 140.3
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 140.1
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 152.0
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 160.4
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 134.8
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 149.5
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 148.8
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 134.3
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 134.2
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 133.0
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 131.6
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 130.5
+          }
+        ]
       },
       {
         "name": "Korea, South",
         "holdings_billions": 134.7,
         "previous_billions": 132.3,
-        "change_billions": 2.3999999999999773
+        "change_billions": 2.3999999999999773,
+        "change_3m_billions": -2.1000000000000227,
+        "change_6m_billions": -5.900000000000006,
+        "change_12m_billions": 8.199999999999989,
+        "change_3m_pct": -1.5350877192982622,
+        "change_12m_pct": 6.482213438735168,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 134.7
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 132.3
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 135.2
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 136.8
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 140.9
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 141.3
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 140.6
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 145.1
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 145.0
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 142.7
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 135.8
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 132.3
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 126.5
+          }
+        ]
       },
       {
         "name": "United Arab Emirates",
         "holdings_billions": 114.8,
         "previous_billions": 118.6,
-        "change_billions": -3.799999999999997
+        "change_billions": -3.799999999999997,
+        "change_3m_billions": 0.7000000000000028,
+        "change_6m_billions": 19.099999999999994,
+        "change_12m_billions": 18.39999999999999,
+        "change_3m_pct": 0.61349693251534,
+        "change_12m_pct": 19.08713692946057,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 114.8
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 118.6
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 112.5
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 114.1
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 120.0
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 112.4
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 95.7
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 103.5
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 110.7
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 103.3
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 108.7
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 107.7
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 96.4
+          }
+        ]
       },
       {
         "name": "Israel",
         "holdings_billions": 110.9,
         "previous_billions": 117.6,
-        "change_billions": -6.699999999999989
+        "change_billions": -6.699999999999989,
+        "change_3m_billions": 6.1000000000000085,
+        "change_6m_billions": 5.200000000000003,
+        "change_12m_billions": 9.100000000000009,
+        "change_3m_pct": 5.820610687022909,
+        "change_12m_pct": 8.939096267190578,
+        "history": [
+          {
+            "period": "2026-06",
+            "holdings_billions": 110.9
+          },
+          {
+            "period": "2026-05",
+            "holdings_billions": 117.6
+          },
+          {
+            "period": "2026-04",
+            "holdings_billions": 113.4
+          },
+          {
+            "period": "2026-03",
+            "holdings_billions": 104.8
+          },
+          {
+            "period": "2026-02",
+            "holdings_billions": 110.8
+          },
+          {
+            "period": "2026-01",
+            "holdings_billions": 114.7
+          },
+          {
+            "period": "2025-12",
+            "holdings_billions": 105.7
+          },
+          {
+            "period": "2025-11",
+            "holdings_billions": 107.9
+          },
+          {
+            "period": "2025-10",
+            "holdings_billions": 108.6
+          },
+          {
+            "period": "2025-09",
+            "holdings_billions": 105.3
+          },
+          {
+            "period": "2025-08",
+            "holdings_billions": 100.1
+          },
+          {
+            "period": "2025-07",
+            "holdings_billions": 102.5
+          },
+          {
+            "period": "2025-06",
+            "holdings_billions": 101.8
+          }
+        ]
       }
     ],
     "frequency": "Monthly",
     "source_url": "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.txt",
-    "all_country_source_url": "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table3.txt"
+    "all_country_source_url": "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table3.txt",
+    "note": "TIC country attribution can reflect custodial location rather than the ultimate beneficial owner."
   },
   "domestic_sectors": {
     "as_of": "2026:Q1",
@@ -228,55 +1532,59 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:26:37Z"
+      "checked_at": "2026-09-10T18:40:04Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:26:38Z"
+      "checked_at": "2026-09-10T18:40:04Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:26:47Z"
+      "checked_at": "2026-09-10T18:40:31Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:26:52Z"
+      "checked_at": "2026-09-10T18:40:16Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:26:52Z"
+      "checked_at": "2026-09-10T18:40:16Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T18:26:52Z",
+      "checked_at": "2026-09-10T18:40:17Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:26:53Z"
+      "checked_at": "2026-09-10T18:40:17Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:26:54Z"
+      "checked_at": "2026-09-10T18:40:19Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:26:58Z"
+      "checked_at": "2026-09-10T18:40:19Z"
     },
     "extended_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:27:00Z"
+      "checked_at": "2026-09-10T18:40:21Z"
     },
     "nport": {
       "status": "pending",
-      "checked_at": "2026-09-10T18:27:00Z",
+      "checked_at": "2026-09-10T18:40:21Z",
       "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
+    },
+    "government_accounts": {
+      "status": "ok",
+      "checked_at": "2026-09-10T18:40:23Z"
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T18:26:52Z",
+      "checked_at": "2026-09-10T18:40:17Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -3400,7 +4708,7 @@
   "history": [
     {
       "snapshot_date": "2026-09-10",
-      "generated_at": "2026-09-10T18:26:58Z",
+      "generated_at": "2026-09-10T18:40:19Z",
       "total_public_debt_trillions": 40.08409078544635,
       "debt_held_by_public_trillions": 32.38792109474681,
       "fed_treasuries_billions": 4552.347,
@@ -5875,5 +7183,472 @@
       }
     ],
     "note": "Periods differ by source: countries are monthly, sectors quarterly, and primary-dealer series weekly."
+  },
+  "government_accounts": {
+    "as_of": "2026-07-31",
+    "holders": [
+      {
+        "name": "Federal Old-Age and Survivors Insurance Trust Fund",
+        "account_type": null,
+        "holdings_billions": 2246.259082,
+        "classification_id": "59085034"
+      },
+      {
+        "name": "Military Retirement Fund",
+        "account_type": null,
+        "holdings_billions": 2116.1072093463995,
+        "classification_id": "59085008"
+      },
+      {
+        "name": "Treasury Securities",
+        "account_type": null,
+        "holdings_billions": 1150.929914535,
+        "classification_id": "59085025"
+      },
+      {
+        "name": "Uniformed Services Retiree Health Care Fund",
+        "account_type": null,
+        "holdings_billions": 506.13967870399995,
+        "classification_id": "59084766"
+      },
+      {
+        "name": "Federal Disability Insurance Trust Fund",
+        "account_type": null,
+        "holdings_billions": 255.832699,
+        "classification_id": "59085036"
+      },
+      {
+        "name": "Other",
+        "account_type": null,
+        "holdings_billions": 252.60625204182,
+        "classification_id": "59084945"
+      },
+      {
+        "name": "Federal Housing Administration Fund",
+        "account_type": null,
+        "holdings_billions": 193.76979317060997,
+        "classification_id": "59084684"
+      },
+      {
+        "name": "Deposit Insurance Fund",
+        "account_type": null,
+        "holdings_billions": 139.244016,
+        "classification_id": "59084830"
+      },
+      {
+        "name": "Federal Supplementary Medical Insurance Trust Fund",
+        "account_type": null,
+        "holdings_billions": 135.069691,
+        "classification_id": "59084942"
+      },
+      {
+        "name": "Unemployment Trust Fund",
+        "account_type": null,
+        "holdings_billions": 98.752911,
+        "classification_id": "59084967"
+      },
+      {
+        "name": "Department of Energy",
+        "account_type": null,
+        "holdings_billions": 87.03447615777999,
+        "classification_id": "59084661"
+      },
+      {
+        "name": "Department of Labor",
+        "account_type": null,
+        "holdings_billions": 75.71807043054,
+        "classification_id": "59084702"
+      },
+      {
+        "name": "Employees Life Insurance Fund",
+        "account_type": null,
+        "holdings_billions": 59.78391765072,
+        "classification_id": "59085029"
+      },
+      {
+        "name": "Highway Trust Fund",
+        "account_type": null,
+        "holdings_billions": 54.59423303438,
+        "classification_id": "59084982"
+      },
+      {
+        "name": "Department of the Interior",
+        "account_type": null,
+        "holdings_billions": 31.658839545359996,
+        "classification_id": "59084697"
+      },
+      {
+        "name": "Guarantees of Mortgage-Backed Securities",
+        "account_type": null,
+        "holdings_billions": 31.628935,
+        "classification_id": "59084691"
+      },
+      {
+        "name": "Department of the Treasury",
+        "account_type": null,
+        "holdings_billions": 30.256979153859998,
+        "classification_id": "59084733"
+      },
+      {
+        "name": "National Credit Union Administration",
+        "account_type": null,
+        "holdings_billions": 26.47517681102,
+        "classification_id": "59084844"
+      },
+      {
+        "name": "Employees and Retired Employees Health Benefits Fund",
+        "account_type": null,
+        "holdings_billions": 23.299514214269998,
+        "classification_id": "59085031"
+      },
+      {
+        "name": "Foreign Service Retirement and Disability Fund",
+        "account_type": null,
+        "holdings_billions": 22.310004,
+        "classification_id": "59084973"
+      },
+      {
+        "name": "Airport and Airway Trust Fund",
+        "account_type": null,
+        "holdings_billions": 22.156727999999998,
+        "classification_id": "59084979"
+      },
+      {
+        "name": "Postal Service Contributions",
+        "account_type": null,
+        "holdings_billions": 20.41264,
+        "classification_id": "59084789"
+      },
+      {
+        "name": "Department of Health and Human Services",
+        "account_type": null,
+        "holdings_billions": 17.5089565207,
+        "classification_id": "59084664"
+      },
+      {
+        "name": "Treasury Securities",
+        "account_type": null,
+        "holdings_billions": 13.808330000209997,
+        "classification_id": "59084870"
+      },
+      {
+        "name": "Environmental Protection Agency",
+        "account_type": null,
+        "holdings_billions": 13.652154694430001,
+        "classification_id": "59085012"
+      },
+      {
+        "name": "Department of Homeland Security",
+        "account_type": null,
+        "holdings_billions": 13.4590435957,
+        "classification_id": "59084947"
+      },
+      {
+        "name": "Postal Service",
+        "account_type": null,
+        "holdings_billions": 11.678323372100001,
+        "classification_id": "59084847"
+      },
+      {
+        "name": "Corps of Engineers",
+        "account_type": null,
+        "holdings_billions": 10.86052898691,
+        "classification_id": "59085002"
+      },
+      {
+        "name": "International Assistance Programs",
+        "account_type": null,
+        "holdings_billions": 7.27088864324,
+        "classification_id": "59084780"
+      },
+      {
+        "name": "Other",
+        "account_type": null,
+        "holdings_billions": 4.835130267739999,
+        "classification_id": "59084880"
+      },
+      {
+        "name": "Servicemen'S Group Life Insurance Fund",
+        "account_type": null,
+        "holdings_billions": 4.833296,
+        "classification_id": "59084753"
+      },
+      {
+        "name": "Department of the Treasury",
+        "account_type": null,
+        "holdings_billions": 4.71888036579,
+        "classification_id": "59084984"
+      },
+      {
+        "name": "Treasury Securities",
+        "account_type": null,
+        "holdings_billions": 3.9364367,
+        "classification_id": "59085059"
+      },
+      {
+        "name": "Department of Transportation",
+        "account_type": null,
+        "holdings_billions": 2.78259728221,
+        "classification_id": "59084721"
+      },
+      {
+        "name": "Judicial Retirement Funds",
+        "account_type": null,
+        "holdings_billions": 2.6246327618499996,
+        "classification_id": "59084914"
+      },
+      {
+        "name": "Treasury Securities",
+        "account_type": null,
+        "holdings_billions": 1.8747037864699998,
+        "classification_id": "59085067"
+      },
+      {
+        "name": "Department of the Interior",
+        "account_type": null,
+        "holdings_billions": 1.24697485941,
+        "classification_id": "59084961"
+      },
+      {
+        "name": "FSLIC Resolution Fund",
+        "account_type": null,
+        "holdings_billions": 1.060533,
+        "classification_id": "59084833"
+      },
+      {
+        "name": "Other",
+        "account_type": null,
+        "holdings_billions": 0.8335791580199999,
+        "classification_id": "59085010"
+      },
+      {
+        "name": "Other",
+        "account_type": null,
+        "holdings_billions": 0.7444587162,
+        "classification_id": "59084931"
+      },
+      {
+        "name": "Department of Justice",
+        "account_type": null,
+        "holdings_billions": 0.5345320256799999,
+        "classification_id": "59084700"
+      },
+      {
+        "name": "Veterans Special Life Insurance Fund",
+        "account_type": null,
+        "holdings_billions": 0.45643599999999995,
+        "classification_id": "59085000"
+      },
+      {
+        "name": "Department of Agriculture",
+        "account_type": null,
+        "holdings_billions": 0.42751473442,
+        "classification_id": "59084643"
+      },
+      {
+        "name": "Foreign Service Retirement and Disability Fund",
+        "account_type": null,
+        "holdings_billions": 0.37918692877,
+        "classification_id": "59084714"
+      },
+      {
+        "name": "Federal Housing Finance Agency",
+        "account_type": null,
+        "holdings_billions": 0.32149076923000003,
+        "classification_id": "59084836"
+      },
+      {
+        "name": "National Service Life Insurance",
+        "account_type": null,
+        "holdings_billions": 0.297309,
+        "classification_id": "59084994"
+      },
+      {
+        "name": "National Service Life Insurance",
+        "account_type": null,
+        "holdings_billions": 0.24804299999999999,
+        "classification_id": "59084747"
+      },
+      {
+        "name": "Library of Congress",
+        "account_type": null,
+        "holdings_billions": 0.06998838452999999,
+        "classification_id": "59084901"
+      },
+      {
+        "name": "General Post Fund, National Homes",
+        "account_type": null,
+        "holdings_billions": 0.06362437838,
+        "classification_id": "59084990"
+      },
+      {
+        "name": "Harry S Truman Scholarship Foundation",
+        "account_type": null,
+        "holdings_billions": 0.05560864454,
+        "classification_id": "59085050"
+      },
+      {
+        "name": "Other",
+        "account_type": null,
+        "holdings_billions": 0.0522728,
+        "classification_id": "59084969"
+      },
+      {
+        "name": "Other",
+        "account_type": null,
+        "holdings_billions": 0.046218713099999996,
+        "classification_id": "59084975"
+      },
+      {
+        "name": "Other",
+        "account_type": null,
+        "holdings_billions": 0.03590373057,
+        "classification_id": "59084908"
+      },
+      {
+        "name": "Japan-United States Friendship Commission",
+        "account_type": null,
+        "holdings_billions": 0.0332862295,
+        "classification_id": "59085052"
+      },
+      {
+        "name": "Voluntary Separation Incentive Fund",
+        "account_type": null,
+        "holdings_billions": 0.025100000079999997,
+        "classification_id": "59084925"
+      },
+      {
+        "name": "Other",
+        "account_type": null,
+        "holdings_billions": 0.02153913784,
+        "classification_id": "59084717"
+      },
+      {
+        "name": "National Aeronautics and Space Administration",
+        "account_type": null,
+        "holdings_billions": 0.0157667688,
+        "classification_id": "59085018"
+      },
+      {
+        "name": "Veterans Reopened Insurance Fund",
+        "account_type": null,
+        "holdings_billions": 0.015676,
+        "classification_id": "59084744"
+      },
+      {
+        "name": "United States Tax Court",
+        "account_type": null,
+        "holdings_billions": 0.013999696859999999,
+        "classification_id": "59084904"
+      },
+      {
+        "name": "Defense Cooperation Account",
+        "account_type": null,
+        "holdings_billions": 0.00950625897,
+        "classification_id": "59084654"
+      },
+      {
+        "name": "Department of Agriculture",
+        "account_type": null,
+        "holdings_billions": 0.0068428683,
+        "classification_id": "59084916"
+      },
+      {
+        "name": "Agency Securities",
+        "account_type": null,
+        "holdings_billions": 0.003767,
+        "classification_id": "59085061"
+      },
+      {
+        "name": "Department of Commerce",
+        "account_type": null,
+        "holdings_billions": 0.00238937809,
+        "classification_id": "59084645"
+      },
+      {
+        "name": "United States Government Life Insurance Fund",
+        "account_type": null,
+        "holdings_billions": 0.001214,
+        "classification_id": "59084996"
+      }
+    ],
+    "holder_count": 64,
+    "leaf_total_billions": 7700.9074259543995,
+    "social_security_billions": 2502.091781,
+    "medicare_billions": 135.069691,
+    "federal_retirement_billions": 2622.2468880504,
+    "frequency": "Monthly",
+    "source_url": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/",
+    "api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_6d",
+    "note": "Detailed federal and trust-fund investments in Government Account Series and other federal securities. API dollar balances are normalized to billions; category totals and Grand Total are excluded from the leaf-line sum to reduce double-counting.",
+    "parsed_fields": {
+      "description": "classification_desc",
+      "close_balance": "close_month_acct_bal_amt"
+    }
+  },
+  "ownership_shares": {
+    "rows": [
+      {
+        "name": "Foreign holders (TIC)",
+        "holdings_billions": 9299.0,
+        "denominator": "Debt held by public",
+        "denominator_billions": 31681.308373695032,
+        "denominator_as_of": "2026-06-30",
+        "share_pct": 29.351691825079275
+      },
+      {
+        "name": "Federal Reserve H.4.1",
+        "holdings_billions": 4552.347,
+        "denominator": "Debt held by public",
+        "denominator_billions": 32421.027120428178,
+        "denominator_as_of": "2026-09-02",
+        "share_pct": 14.041341081176325
+      },
+      {
+        "name": "Federal Reserve SOMA par",
+        "holdings_billions": 4446.2865402,
+        "denominator": "Debt held by public",
+        "denominator_billions": 32421.027120428178,
+        "denominator_as_of": "2026-09-02",
+        "share_pct": 13.714206288666396
+      },
+      {
+        "name": "Detailed government-account leaf lines",
+        "holdings_billions": 7700.9074259543995,
+        "denominator": "Intragovernmental holdings",
+        "denominator_billions": 7725.75346800267,
+        "denominator_as_of": "2026-07-31",
+        "share_pct": 99.67839975542613
+      }
+    ],
+    "note": "Each share uses a Debt to the Penny denominator from the same observation date, or the latest business day on or before it. Categories still should not be summed because source definitions and valuation bases differ."
+  },
+  "soma_concentration": {
+    "as_of": "2026-09-02",
+    "top10_par_billions": 381.645939,
+    "top10_share_pct": 8.583476020932135,
+    "maturity_buckets": [
+      {
+        "name": "≤1 year",
+        "par_billions": 418.5783693000001
+      },
+      {
+        "name": "1–3 years",
+        "par_billions": 252.5256951
+      },
+      {
+        "name": "3–7 years",
+        "par_billions": 428.3470980000001
+      },
+      {
+        "name": "7–10 years",
+        "par_billions": 127.63317589999998
+      },
+      {
+        "name": ">10 years",
+        "par_billions": 1108.7712099000003
+      }
+    ],
+    "note": "Maturity buckets are calculated from the CUSIP-level SOMA sample stored in the dashboard (top positions), so they are a concentration view rather than a full maturity distribution."
   }
 }
