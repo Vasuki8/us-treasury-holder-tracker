@@ -12,6 +12,7 @@ on:
       - ui-refresh-research-terminal
       - ux-v2-interactive-workspace
       - ux-v3-interactive-inspector
+      - reliability-treasury-timeouts
     paths:
       - scripts/**
       - app.js
