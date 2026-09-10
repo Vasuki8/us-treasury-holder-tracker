@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>US Treasury Ownership Tracker</title>
-  <meta name="description" content="Live tracker of U.S. Treasury ownership using official Treasury and Federal Reserve sources." />
+  <meta name="description" content="Live tracker of U.S. Treasury ownership using official Treasury, Federal Reserve, New York Fed and SEC sources." />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 </head>
 <body>
   <header class="shell hero">
     <div>
-      <div class="eyebrow">OFFICIAL-DATA DASHBOARD</div>
+      <div class="eyebrow">OFFICIAL-DATA DASHBOARD · PHASE 2</div>
       <h1>US Treasury Ownership Tracker</h1>
-      <p class="lede">Who holds U.S. Treasury securities — with source-specific observation dates and automatic daily checks.</p>
+      <p class="lede">Who holds U.S. Treasury securities — countries, sectors, the Federal Reserve, money-market funds and auction participants — with source-specific observation dates.</p>
     </div>
     <div class="status" id="updateStatus">Loading data…</div>
   </header>
@@ -35,24 +35,76 @@
     </section>
 
     <section class="panel">
-      <div class="panel-head"><div><h2>Domestic & Sector Holders</h2><p id="sectorMeta"></p></div></div>
-      <div class="chart-wrap tall"><canvas id="sectorChart"></canvas></div>
-      <div class="table-wrap">
-        <table><thead><tr><th>Sector</th><th>Holdings</th><th>Series</th></tr></thead><tbody id="sectorTable"></tbody></table>
+      <div class="panel-head">
+        <div><h2>Federal Reserve SOMA Treasury Portfolio</h2><p id="somaMeta"></p></div>
+      </div>
+      <div class="grid-2">
+        <div>
+          <div class="chart-wrap compact"><canvas id="somaChart"></canvas></div>
+          <div class="metric-strip" id="somaMetrics"></div>
+        </div>
+        <div class="table-wrap table-tall">
+          <table>
+            <thead><tr><th>CUSIP</th><th>Type</th><th>Maturity</th><th>Par value</th></tr></thead>
+            <tbody id="somaTable"></tbody>
+          </table>
+        </div>
       </div>
     </section>
 
     <section class="panel">
-      <div class="panel-head"><div><h2>Source Health</h2><p>Updater checks these sources every day and keeps the last valid observation if one feed fails.</p></div></div>
+      <div class="panel-head">
+        <div>
+          <h2>Money-Market Funds Holding Treasuries</h2>
+          <p id="mmfMeta"></p>
+        </div>
+        <input id="fundSearch" type="search" placeholder="Search fund…" />
+      </div>
+      <div class="metric-strip" id="mmfMetrics"></div>
+      <div class="note inline-note">Direct Treasury securities and Treasury-collateralized repurchase agreements are shown separately to avoid treating repo collateral as direct Treasury ownership.</div>
+      <div class="table-wrap table-tall">
+        <table>
+          <thead><tr><th>Fund</th><th>Series</th><th>Direct Treasuries</th><th>Treasury repo</th><th>Net assets</th></tr></thead>
+          <tbody id="mmfTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><h2>Treasury Auction Takedown</h2><p id="auctionMeta"></p></div>
+      </div>
+      <div class="grid-2">
+        <div class="chart-wrap compact"><canvas id="auctionChart"></canvas></div>
+        <div class="table-wrap table-tall">
+          <table>
+            <thead><tr><th>Date</th><th>Security</th><th>Accepted</th><th>B/C</th><th>Dealer</th><th>Indirect</th><th>Direct</th></tr></thead>
+            <tbody id="auctionTable"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="note inline-note">Auction takedown shows who was awarded securities at auction. It is not the same thing as current holdings after secondary-market trading.</div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>Domestic & Sector Holders</h2><p id="sectorMeta"></p></div></div>
+      <div class="chart-wrap tall"><canvas id="sectorChart"></canvas></div>
+      <div class="table-wrap">
+        <table><thead><tr><th>Sector</th><th>Holdings</th><th>Fed series</th></tr></thead><tbody id="sectorTable"></tbody></table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>Source Health</h2><p>Every source is checked daily. If one feed fails, the tracker keeps the last valid observation and flags the source.</p></div></div>
       <div id="sourceHealth" class="source-grid"></div>
     </section>
 
     <section class="note">
-      <strong>Important:</strong> “Daily updated” means the website checks official sources every day. Holder data is not universally published daily. Each card/table shows the latest available observation date from its source.
+      <strong>Important:</strong> “Daily updated” means the website checks official sources every day. Treasury-holder datasets publish on different schedules. Every section displays the latest available observation date rather than presenting stale data as today's holdings.
     </section>
   </main>
 
-  <footer class="shell footer">Data: U.S. Treasury Fiscal Data, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts.</footer>
+  <footer class="shell footer">Sources: U.S. Treasury Fiscal Data, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, New York Fed SOMA, and SEC Form N-MFP.</footer>
   <script src="app.js"></script>
 </body>
 </html>
