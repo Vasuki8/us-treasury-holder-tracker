@@ -58,6 +58,9 @@ jobs:
       - name: Refresh official data
         run: .venv/bin/python scripts/update_data_v8.py
 
+      - name: Validate Phase 8 output
+        run: .venv/bin/python scripts/validate_phase8_state.py
+
       - name: Commit updated data if changed
         run: |
           if git diff --quiet -- data/dashboard.json; then
