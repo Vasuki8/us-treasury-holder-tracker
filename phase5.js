@@ -122,3 +122,10 @@ function appendPhase5SourceHealth(){
 function p5lineOptions(){return{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#dbe6f4'}}},scales:{x:{grid:{color:'#223047'},ticks:{color:'#96a6ba'}},y:{grid:{color:'#223047'},ticks:{color:'#96a6ba',callback:v=>`$${v}B`}}}};}
 
 loadPhase5().catch(err=>console.error('Phase 5 UI error',err));
+
+if(!document.querySelector('script[data-phase6-loader]')){
+  const p6=document.createElement('script');
+  p6.src='phase6.js';
+  p6.dataset.phase6Loader='true';
+  document.body.appendChild(p6);
+}
