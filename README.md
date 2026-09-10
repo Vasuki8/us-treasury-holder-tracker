@@ -49,7 +49,18 @@ A GitHub Pages dashboard that checks official U.S. Treasury, Federal Reserve, Ne
 - **Source-provenance export** — download the source registry and series IDs, including observation dates and retrieval links.
 - **Unusual holder-change monitor** — source-cadence-aware screening for unusually large changes. A move must clear a source-specific dollar floor and be at least 2.5× its available-history median absolute change or at least 10% versus the prior observation; higher thresholds are marked high severity.
 - **Alert export** — download the current unusual-change screen with magnitude, percentage move, historical baseline and reason for each flag.
-- **CUSIP audit metadata** — security rows now expose derived time to maturity and identify which source blocks contributed each SOMA/auction/N-PORT match.
+- **CUSIP audit metadata** — security rows expose derived time to maturity and identify which source blocks contributed each SOMA/auction/N-PORT match.
+
+### Phase 7
+- **Persistent alert lifecycle** — every unusual-change episode is retained with a stable ID, first-seen time, last-seen time, run count and cleared time.
+- **Failure-aware clearing** — an alert is not marked cleared because a source temporarily fails. A healthy refresh must confirm that the flagged observation is no longer current.
+- **Lifecycle transitions** — open, clear, reopen and severity-change events accumulate over time so researchers can reconstruct the signal history.
+- **Alert-history CSV** — export the full stored lifecycle, not only the current flags.
+- **Deep Treasury auction metadata by CUSIP** — the daily updater queries Treasury auction history in CUSIP batches rather than limiting security context to the last 90 days.
+- **Issue and original-issue context** — security rows add announcement, issue/original-issue date, original term, auction term, coupon/rate context, latest bid-to-cover, price and reopening counts where Treasury publishes them.
+- **Maturity cross-check** — the tracker compares the Treasury auction maturity with the New York Fed SOMA maturity and records match/mismatch status.
+- **Security drill-down** — selecting or clicking a CUSIP shows SOMA exposure, term remaining, issue age, auction/reopening history and matched official source blocks.
+- **Security metadata CSV** — export the enriched CUSIP-level research table for external analysis.
 
 The site refreshes daily, but it never fabricates a daily ownership number. Every dataset keeps its real observation date.
 
@@ -67,12 +78,14 @@ Government-account detail is also not a separate additive category on top of int
 
 The unusual-change monitor is a statistical research screen, not a forecast. A flag means the latest reported move is large under the stated history-relative rule; it does not identify a cause or imply a future price move.
 
+Phase 7 alert timestamps describe the tracker lifecycle, not the original market event time. `first_seen_at` means the first updater run that detected a flagged source observation; `cleared_at` means a later healthy refresh confirmed that episode was no longer current.
+
 ## Local setup with uv
 
 ```powershell
 uv venv --python 3.13
 uv pip install --python .venv\Scripts\python.exe -r requirements.txt
-.venv\Scripts\python.exe scripts\update_data_current.py
+.venv\Scripts\python.exe scripts\update_data_v7.py
 python -m http.server 8000
 ```
 
@@ -83,7 +96,7 @@ Open `http://localhost:8000`.
 1. Repository **Settings → Pages**.
 2. Set **Source** to **Deploy from a branch**.
 3. Select `main` and `/ (root)`.
-4. `.github/workflows/update.yml` checks the normal live sources daily.
+4. `.github/workflows/update.yml` checks the normal live sources daily and runs the current Phase 7 updater.
 5. `.github/workflows/nport.yml` is reserved for the large SEC N-PORT archive quarterly or on demand.
 
 You can also run either workflow manually from the repository **Actions** tab.
@@ -102,7 +115,7 @@ The ingestion job keeps only the latest public report for each fund series, iden
 
 ## Next expansion
 
-- Expand Treasury-security issuance metadata beyond the recent 90-day auction window, including issue/original-issue dates and richer term/coupon context where official data support it.
-- Add persistent alert history so a researcher can see when a holder first crossed the unusual-change threshold and when the flag cleared.
+- Add opt-in notifications when a **new** high-severity lifecycle episode opens after an underlying monthly, quarterly or weekly source publishes a fresh observation.
+- Add Treasury outstanding-amount and ownership-concentration context at the CUSIP level where an official security-level outstanding source can be joined reliably.
+- Add richer alert diagnostics such as percentile rank and rolling robust z-score while keeping the current transparent threshold rule visible.
 - Add named-fund drill-down pages whenever SEC N-PORT/N-MFP automated access becomes reliable.
-- Add optional scheduled notifications for newly triggered high-severity holder changes after the underlying reporting source publishes a new observation.
