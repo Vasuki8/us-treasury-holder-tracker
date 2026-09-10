@@ -11,11 +11,17 @@
 <body>
   <header class="shell hero">
     <div>
-      <div class="eyebrow">OFFICIAL-DATA DASHBOARD · PHASE 2</div>
+      <div class="eyebrow">OFFICIAL-DATA DASHBOARD · PHASE 3</div>
       <h1>US Treasury Ownership Tracker</h1>
-      <p class="lede">Who holds U.S. Treasury securities — countries, sectors, the Federal Reserve, money-market funds and auction participants — with source-specific observation dates.</p>
+      <p class="lede">Who holds U.S. Treasury securities — countries, sectors, the Federal Reserve, banks, dealers, money-market funds and auction participants — with source-specific observation dates.</p>
     </div>
-    <div class="status" id="updateStatus">Loading data…</div>
+    <div class="hero-side">
+      <div class="status" id="updateStatus">Loading data…</div>
+      <div class="download-row">
+        <button id="downloadJson" type="button">Download JSON</button>
+        <button id="downloadCsv" type="button">Download snapshot CSV</button>
+      </div>
+    </div>
   </header>
 
   <main class="shell">
@@ -50,6 +56,27 @@
           </table>
         </div>
       </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>Banks & Broker-Dealer Treasury Holdings</h2><p id="institutionMeta"></p></div></div>
+      <div class="grid-2">
+        <div class="chart-wrap"><canvas id="institutionChart"></canvas></div>
+        <div class="table-wrap">
+          <table><thead><tr><th>Institution sector</th><th>Holdings</th><th>As of</th><th>Series</th></tr></thead><tbody id="institutionTable"></tbody></table>
+        </div>
+      </div>
+      <div class="note inline-note">These are Federal Reserve sector aggregates. They do not identify the Treasury holdings of an individual bank or broker-dealer.</div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>Primary Dealer Treasury Market Positioning</h2><p id="dealerMeta"></p></div></div>
+      <div class="metric-strip" id="dealerMetrics"></div>
+      <div class="chart-wrap"><canvas id="dealerChart"></canvas></div>
+      <div class="table-wrap">
+        <table><thead><tr><th>Series</th><th>Latest</th><th>WoW</th><th>As of</th></tr></thead><tbody id="dealerTable"></tbody></table>
+      </div>
+      <div class="note inline-note">Primary-dealer positions are aggregate net positions reported to the New York Fed. They are market-positioning data, not a named-dealer ownership register.</div>
     </section>
 
     <section class="panel">
@@ -95,6 +122,12 @@
     </section>
 
     <section class="panel">
+      <div class="panel-head"><div><h2>Tracker History</h2><p>One compact snapshot is retained per day so the dashboard builds its own long-run history over time.</p></div></div>
+      <div class="chart-wrap"><canvas id="historyChart"></canvas></div>
+      <div id="historyEmpty" class="empty-state" hidden>History starts accumulating after Phase 3 is deployed. More points will appear automatically with daily updater runs.</div>
+    </section>
+
+    <section class="panel">
       <div class="panel-head"><div><h2>Source Health</h2><p>Every source is checked daily. If one feed fails, the tracker keeps the last valid observation and flags the source.</p></div></div>
       <div id="sourceHealth" class="source-grid"></div>
     </section>
@@ -104,7 +137,7 @@
     </section>
   </main>
 
-  <footer class="shell footer">Sources: U.S. Treasury Fiscal Data, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, New York Fed SOMA, and SEC Form N-MFP.</footer>
+  <footer class="shell footer">Sources: U.S. Treasury Fiscal Data, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, New York Fed SOMA and Primary Dealer Statistics, and SEC Form N-MFP.</footer>
   <script src="app.js"></script>
 </body>
 </html>
