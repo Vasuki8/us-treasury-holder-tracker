@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T18:09:14Z",
+  "generated_at": "2026-09-10T18:15:28Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -228,38 +228,46 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:08:58Z"
+      "checked_at": "2026-09-10T18:15:15Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:08:59Z"
+      "checked_at": "2026-09-10T18:15:15Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:09:08Z"
+      "checked_at": "2026-09-10T18:15:23Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:09:13Z"
+      "checked_at": "2026-09-10T18:15:24Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:09:13Z"
+      "checked_at": "2026-09-10T18:15:25Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T18:09:14Z",
+      "checked_at": "2026-09-10T18:15:25Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:09:14Z"
+      "checked_at": "2026-09-10T18:15:27Z"
+    },
+    "institutional_aggregates": {
+      "status": "ok",
+      "checked_at": "2026-09-10T18:15:28Z"
+    },
+    "primary_dealers": {
+      "status": "ok",
+      "checked_at": "2026-09-10T18:15:28Z"
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T18:09:14Z",
+      "checked_at": "2026-09-10T18:15:25Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -1580,5 +1588,1817 @@
     "source_url": "https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/",
     "api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
     "note": "Auction takedown is an award-at-auction measure, not a current-holdings measure."
-  }
+  },
+  "institutional_aggregates": {
+    "as_of": "2026-01-01",
+    "institutions": [
+      {
+        "name": "U.S.-chartered depository institutions",
+        "series": "BOGZ1FL763061100Q",
+        "as_of": "2026-01-01",
+        "holdings_billions": 1817.612,
+        "frequency": "Quarterly",
+        "history": [
+          {
+            "date": "2016-04-01",
+            "value_billions": 455.543
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 495.322
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 528.382
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 525.187
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 478.352
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 480.546
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 484.41
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 479.962
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 487.754
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 496.399
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 569.784
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 563.84
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 592.153
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 674.495
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 704.089
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 724.397
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 926.651
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 1019.718
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 1044.445
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 1111.331
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 1195.809
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 1297.6
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 1472.289
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 1471.292
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 1488.523
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 1407.747
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 1388.88
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 1300.967
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 1235.187
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 1240.943
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 1329.208
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 1423.638
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 1405.771
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 1470.895
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 1536.829
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 1545.475
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 1637.092
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 1725.385
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 1744.845
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 1817.612
+          }
+        ]
+      },
+      {
+        "name": "Private depository institutions",
+        "series": "BOGZ1LM703061105Q",
+        "as_of": "2026-01-01",
+        "holdings_billions": 2049.575,
+        "frequency": "Quarterly",
+        "history": [
+          {
+            "date": "2016-04-01",
+            "value_billions": 571.832
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 619.652
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 654.053
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 645.694
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 602.098
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 596.419
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 616.024
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 612.797
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 631.96
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 649.33
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 737.043
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 736.739
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 770.159
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 855.814
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 879.267
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 894.181
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 1103.483
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 1186.801
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 1203.161
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 1257.51
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 1346.708
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 1456.273
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 1641.194
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 1653.695
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 1686.642
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 1605.712
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 1579.707
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 1492.49
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 1433.859
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 1428.059
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 1513.982
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 1614.483
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 1603.631
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 1669.355
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 1722.729
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 1740.868
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 1848.931
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 1940.489
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 1961.741
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 2049.575
+          }
+        ]
+      },
+      {
+        "name": "Security brokers and dealers",
+        "series": "BOGZ1FL663061105Q",
+        "as_of": "2026-01-01",
+        "holdings_billions": 620.413,
+        "frequency": "Quarterly",
+        "history": [
+          {
+            "date": "2016-04-01",
+            "value_billions": 140.879
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 143.078
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 123.967
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 143.078
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 164.612
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 149.038
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 136.275
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 122.712
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 164.694
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 138.529
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 255.063
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 252.87
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 280.077
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 242.59
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 227.675
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 241.108
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 305.105
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 227.271
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 211.955
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 130.587
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 157.157
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 141.75
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 199.7
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 227.898
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 216.847
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 226.282
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 215.874
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 327.564
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 301.323
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 312.371
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 328.712
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 390.499
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 358.565
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 391.555
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 454.199
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 487.312
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 513.235
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 492.573
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 542.458
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 620.413
+          }
+        ]
+      }
+    ],
+    "frequency": "Quarterly",
+    "source_url": "https://fred.stlouisfed.org/",
+    "note": "These are sector aggregates, not named institution-by-institution holdings."
+  },
+  "primary_dealers": {
+    "as_of": "2026-08-26",
+    "series": [
+      {
+        "keyid": "PDPOSGST-TOT",
+        "name": "Treasury dealer net position ex-TIPS",
+        "as_of": "2026-08-26",
+        "value_billions": 477.607,
+        "weekly_change_billions": 41.20100000000002,
+        "history": [
+          {
+            "date": "2024-09-04",
+            "value_billions": 322.765
+          },
+          {
+            "date": "2024-09-11",
+            "value_billions": 322.898
+          },
+          {
+            "date": "2024-09-18",
+            "value_billions": 320.076
+          },
+          {
+            "date": "2024-09-25",
+            "value_billions": 310.931
+          },
+          {
+            "date": "2024-10-02",
+            "value_billions": 299.774
+          },
+          {
+            "date": "2024-10-09",
+            "value_billions": 289.246
+          },
+          {
+            "date": "2024-10-16",
+            "value_billions": 280.638
+          },
+          {
+            "date": "2024-10-23",
+            "value_billions": 253.768
+          },
+          {
+            "date": "2024-10-30",
+            "value_billions": 263.516
+          },
+          {
+            "date": "2024-11-06",
+            "value_billions": 256.528
+          },
+          {
+            "date": "2024-11-13",
+            "value_billions": 255.332
+          },
+          {
+            "date": "2024-11-20",
+            "value_billions": 275.223
+          },
+          {
+            "date": "2024-11-27",
+            "value_billions": 355.891
+          },
+          {
+            "date": "2024-12-04",
+            "value_billions": 341.786
+          },
+          {
+            "date": "2024-12-11",
+            "value_billions": 368.815
+          },
+          {
+            "date": "2024-12-18",
+            "value_billions": 394.021
+          },
+          {
+            "date": "2024-12-25",
+            "value_billions": 398.063
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 374.634
+          },
+          {
+            "date": "2025-01-08",
+            "value_billions": 369.505
+          },
+          {
+            "date": "2025-01-15",
+            "value_billions": 357.155
+          },
+          {
+            "date": "2025-01-22",
+            "value_billions": 376.285
+          },
+          {
+            "date": "2025-01-29",
+            "value_billions": 394.474
+          },
+          {
+            "date": "2025-02-05",
+            "value_billions": 391.418
+          },
+          {
+            "date": "2025-02-12",
+            "value_billions": 408.948
+          },
+          {
+            "date": "2025-02-19",
+            "value_billions": 432.23
+          },
+          {
+            "date": "2025-02-26",
+            "value_billions": 455.32
+          },
+          {
+            "date": "2025-03-05",
+            "value_billions": 408.204
+          },
+          {
+            "date": "2025-03-12",
+            "value_billions": 405.83
+          },
+          {
+            "date": "2025-03-19",
+            "value_billions": 406.699
+          },
+          {
+            "date": "2025-03-26",
+            "value_billions": 418.039
+          },
+          {
+            "date": "2025-04-02",
+            "value_billions": 408.663
+          },
+          {
+            "date": "2025-04-09",
+            "value_billions": 406.95
+          },
+          {
+            "date": "2025-04-16",
+            "value_billions": 391.786
+          },
+          {
+            "date": "2025-04-23",
+            "value_billions": 394.658
+          },
+          {
+            "date": "2025-04-30",
+            "value_billions": 383.227
+          },
+          {
+            "date": "2025-05-07",
+            "value_billions": 370.349
+          },
+          {
+            "date": "2025-05-14",
+            "value_billions": 380.221
+          },
+          {
+            "date": "2025-05-21",
+            "value_billions": 350.192
+          },
+          {
+            "date": "2025-05-28",
+            "value_billions": 403.729
+          },
+          {
+            "date": "2025-06-04",
+            "value_billions": 384.391
+          },
+          {
+            "date": "2025-06-11",
+            "value_billions": 398.656
+          },
+          {
+            "date": "2025-06-18",
+            "value_billions": 411.353
+          },
+          {
+            "date": "2025-06-25",
+            "value_billions": 417.439
+          },
+          {
+            "date": "2025-07-02",
+            "value_billions": 393.699
+          },
+          {
+            "date": "2025-07-09",
+            "value_billions": 368.234
+          },
+          {
+            "date": "2025-07-16",
+            "value_billions": 341.681
+          },
+          {
+            "date": "2025-07-23",
+            "value_billions": 348.983
+          },
+          {
+            "date": "2025-07-30",
+            "value_billions": 362.953
+          },
+          {
+            "date": "2025-08-06",
+            "value_billions": 373.746
+          },
+          {
+            "date": "2025-08-13",
+            "value_billions": 376.744
+          },
+          {
+            "date": "2025-08-20",
+            "value_billions": 388.327
+          },
+          {
+            "date": "2025-08-27",
+            "value_billions": 325.528
+          },
+          {
+            "date": "2025-09-03",
+            "value_billions": 372.781
+          },
+          {
+            "date": "2025-09-10",
+            "value_billions": 408.194
+          },
+          {
+            "date": "2025-09-17",
+            "value_billions": 391.02
+          },
+          {
+            "date": "2025-09-24",
+            "value_billions": 390.364
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 378.284
+          },
+          {
+            "date": "2025-10-08",
+            "value_billions": 391.049
+          },
+          {
+            "date": "2025-10-15",
+            "value_billions": 396.392
+          },
+          {
+            "date": "2025-10-22",
+            "value_billions": 382.11
+          },
+          {
+            "date": "2025-10-29",
+            "value_billions": 413.347
+          },
+          {
+            "date": "2025-11-05",
+            "value_billions": 382.887
+          },
+          {
+            "date": "2025-11-12",
+            "value_billions": 427.123
+          },
+          {
+            "date": "2025-11-19",
+            "value_billions": 420.612
+          },
+          {
+            "date": "2025-11-26",
+            "value_billions": 473.169
+          },
+          {
+            "date": "2025-12-03",
+            "value_billions": 404.773
+          },
+          {
+            "date": "2025-12-10",
+            "value_billions": 425.644
+          },
+          {
+            "date": "2025-12-17",
+            "value_billions": 455.392
+          },
+          {
+            "date": "2025-12-24",
+            "value_billions": 483.529
+          },
+          {
+            "date": "2025-12-31",
+            "value_billions": 476.669
+          },
+          {
+            "date": "2026-01-07",
+            "value_billions": 458.82
+          },
+          {
+            "date": "2026-01-14",
+            "value_billions": 471.327
+          },
+          {
+            "date": "2026-01-21",
+            "value_billions": 481.9
+          },
+          {
+            "date": "2026-01-28",
+            "value_billions": 535.39
+          },
+          {
+            "date": "2026-02-04",
+            "value_billions": 487.484
+          },
+          {
+            "date": "2026-02-11",
+            "value_billions": 498.718
+          },
+          {
+            "date": "2026-02-18",
+            "value_billions": 516.562
+          },
+          {
+            "date": "2026-02-25",
+            "value_billions": 531.105
+          },
+          {
+            "date": "2026-03-04",
+            "value_billions": 511.471
+          },
+          {
+            "date": "2026-03-11",
+            "value_billions": 530.523
+          },
+          {
+            "date": "2026-03-18",
+            "value_billions": 540.028
+          },
+          {
+            "date": "2026-03-25",
+            "value_billions": 557.087
+          },
+          {
+            "date": "2026-04-01",
+            "value_billions": 539.632
+          },
+          {
+            "date": "2026-04-08",
+            "value_billions": 530.718
+          },
+          {
+            "date": "2026-04-15",
+            "value_billions": 546.887
+          },
+          {
+            "date": "2026-04-22",
+            "value_billions": 518.39
+          },
+          {
+            "date": "2026-04-29",
+            "value_billions": 507.728
+          },
+          {
+            "date": "2026-05-06",
+            "value_billions": 500.42
+          },
+          {
+            "date": "2026-05-13",
+            "value_billions": 487.431
+          },
+          {
+            "date": "2026-05-20",
+            "value_billions": 451.696
+          },
+          {
+            "date": "2026-05-27",
+            "value_billions": 516.656
+          },
+          {
+            "date": "2026-06-03",
+            "value_billions": 477.881
+          },
+          {
+            "date": "2026-06-10",
+            "value_billions": 498.615
+          },
+          {
+            "date": "2026-06-17",
+            "value_billions": 492.413
+          },
+          {
+            "date": "2026-06-24",
+            "value_billions": 515.551
+          },
+          {
+            "date": "2026-07-01",
+            "value_billions": 464.081
+          },
+          {
+            "date": "2026-07-08",
+            "value_billions": 482.98
+          },
+          {
+            "date": "2026-07-15",
+            "value_billions": 467.223
+          },
+          {
+            "date": "2026-07-22",
+            "value_billions": 461.59
+          },
+          {
+            "date": "2026-07-29",
+            "value_billions": 473.171
+          },
+          {
+            "date": "2026-08-05",
+            "value_billions": 460.282
+          },
+          {
+            "date": "2026-08-12",
+            "value_billions": 444.67
+          },
+          {
+            "date": "2026-08-19",
+            "value_billions": 436.406
+          },
+          {
+            "date": "2026-08-26",
+            "value_billions": 477.607
+          }
+        ]
+      },
+      {
+        "keyid": "PDFTD-USTET",
+        "name": "Treasury fails to deliver ex-TIPS",
+        "as_of": "2026-08-26",
+        "value_billions": 76.655,
+        "weekly_change_billions": -11.260000000000005,
+        "history": [
+          {
+            "date": "2024-09-04",
+            "value_billions": 129.061
+          },
+          {
+            "date": "2024-09-11",
+            "value_billions": 102.606
+          },
+          {
+            "date": "2024-09-18",
+            "value_billions": 85.475
+          },
+          {
+            "date": "2024-09-25",
+            "value_billions": 203.388
+          },
+          {
+            "date": "2024-10-02",
+            "value_billions": 201.326
+          },
+          {
+            "date": "2024-10-09",
+            "value_billions": 77.907
+          },
+          {
+            "date": "2024-10-16",
+            "value_billions": 90.151
+          },
+          {
+            "date": "2024-10-23",
+            "value_billions": 99.506
+          },
+          {
+            "date": "2024-10-30",
+            "value_billions": 148.575
+          },
+          {
+            "date": "2024-11-06",
+            "value_billions": 95.4
+          },
+          {
+            "date": "2024-11-13",
+            "value_billions": 85.451
+          },
+          {
+            "date": "2024-11-20",
+            "value_billions": 107.795
+          },
+          {
+            "date": "2024-11-27",
+            "value_billions": 102.127
+          },
+          {
+            "date": "2024-12-04",
+            "value_billions": 93.544
+          },
+          {
+            "date": "2024-12-11",
+            "value_billions": 68.153
+          },
+          {
+            "date": "2024-12-18",
+            "value_billions": 77.607
+          },
+          {
+            "date": "2024-12-25",
+            "value_billions": 205.502
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 203.635
+          },
+          {
+            "date": "2025-01-08",
+            "value_billions": 69.947
+          },
+          {
+            "date": "2025-01-15",
+            "value_billions": 75.648
+          },
+          {
+            "date": "2025-01-22",
+            "value_billions": 87.513
+          },
+          {
+            "date": "2025-01-29",
+            "value_billions": 70.683
+          },
+          {
+            "date": "2025-02-05",
+            "value_billions": 65.369
+          },
+          {
+            "date": "2025-02-12",
+            "value_billions": 64.182
+          },
+          {
+            "date": "2025-02-19",
+            "value_billions": 86.265
+          },
+          {
+            "date": "2025-02-26",
+            "value_billions": 56.096
+          },
+          {
+            "date": "2025-03-05",
+            "value_billions": 88.468
+          },
+          {
+            "date": "2025-03-12",
+            "value_billions": 61.253
+          },
+          {
+            "date": "2025-03-19",
+            "value_billions": 75.017
+          },
+          {
+            "date": "2025-03-26",
+            "value_billions": 69.363
+          },
+          {
+            "date": "2025-04-02",
+            "value_billions": 87.553
+          },
+          {
+            "date": "2025-04-09",
+            "value_billions": 81.959
+          },
+          {
+            "date": "2025-04-16",
+            "value_billions": 84.105
+          },
+          {
+            "date": "2025-04-23",
+            "value_billions": 72.604
+          },
+          {
+            "date": "2025-04-30",
+            "value_billions": 56.841
+          },
+          {
+            "date": "2025-05-07",
+            "value_billions": 81.305
+          },
+          {
+            "date": "2025-05-14",
+            "value_billions": 59.033
+          },
+          {
+            "date": "2025-05-21",
+            "value_billions": 76.037
+          },
+          {
+            "date": "2025-05-28",
+            "value_billions": 54.116
+          },
+          {
+            "date": "2025-06-04",
+            "value_billions": 73.348
+          },
+          {
+            "date": "2025-06-11",
+            "value_billions": 99.514
+          },
+          {
+            "date": "2025-06-18",
+            "value_billions": 62.454
+          },
+          {
+            "date": "2025-06-25",
+            "value_billions": 71.849
+          },
+          {
+            "date": "2025-07-02",
+            "value_billions": 84.376
+          },
+          {
+            "date": "2025-07-09",
+            "value_billions": 68.789
+          },
+          {
+            "date": "2025-07-16",
+            "value_billions": 72.393
+          },
+          {
+            "date": "2025-07-23",
+            "value_billions": 89.587
+          },
+          {
+            "date": "2025-07-30",
+            "value_billions": 66.849
+          },
+          {
+            "date": "2025-08-06",
+            "value_billions": 94.258
+          },
+          {
+            "date": "2025-08-13",
+            "value_billions": 92.648
+          },
+          {
+            "date": "2025-08-20",
+            "value_billions": 73.224
+          },
+          {
+            "date": "2025-08-27",
+            "value_billions": 70.786
+          },
+          {
+            "date": "2025-09-03",
+            "value_billions": 95.938
+          },
+          {
+            "date": "2025-09-10",
+            "value_billions": 115.879
+          },
+          {
+            "date": "2025-09-17",
+            "value_billions": 106.436
+          },
+          {
+            "date": "2025-09-24",
+            "value_billions": 155.071
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 116.916
+          },
+          {
+            "date": "2025-10-08",
+            "value_billions": 113.964
+          },
+          {
+            "date": "2025-10-15",
+            "value_billions": 77.37
+          },
+          {
+            "date": "2025-10-22",
+            "value_billions": 85.307
+          },
+          {
+            "date": "2025-10-29",
+            "value_billions": 116.599
+          },
+          {
+            "date": "2025-11-05",
+            "value_billions": 93.449
+          },
+          {
+            "date": "2025-11-12",
+            "value_billions": 117.543
+          },
+          {
+            "date": "2025-11-19",
+            "value_billions": 95.131
+          },
+          {
+            "date": "2025-11-26",
+            "value_billions": 83.324
+          },
+          {
+            "date": "2025-12-03",
+            "value_billions": 121.888
+          },
+          {
+            "date": "2025-12-10",
+            "value_billions": 147.403
+          },
+          {
+            "date": "2025-12-17",
+            "value_billions": 290.52
+          },
+          {
+            "date": "2025-12-24",
+            "value_billions": 94.704
+          },
+          {
+            "date": "2025-12-31",
+            "value_billions": 94.503
+          },
+          {
+            "date": "2026-01-07",
+            "value_billions": 77.014
+          },
+          {
+            "date": "2026-01-14",
+            "value_billions": 67.975
+          },
+          {
+            "date": "2026-01-21",
+            "value_billions": 88.812
+          },
+          {
+            "date": "2026-01-28",
+            "value_billions": 92.288
+          },
+          {
+            "date": "2026-02-04",
+            "value_billions": 98.204
+          },
+          {
+            "date": "2026-02-11",
+            "value_billions": 114.056
+          },
+          {
+            "date": "2026-02-18",
+            "value_billions": 91.263
+          },
+          {
+            "date": "2026-02-25",
+            "value_billions": 79.675
+          },
+          {
+            "date": "2026-03-04",
+            "value_billions": 100.859
+          },
+          {
+            "date": "2026-03-11",
+            "value_billions": 92.841
+          },
+          {
+            "date": "2026-03-18",
+            "value_billions": 191.093
+          },
+          {
+            "date": "2026-03-25",
+            "value_billions": 96.605
+          },
+          {
+            "date": "2026-04-01",
+            "value_billions": 197.018
+          },
+          {
+            "date": "2026-04-08",
+            "value_billions": 120.236
+          },
+          {
+            "date": "2026-04-15",
+            "value_billions": 92.162
+          },
+          {
+            "date": "2026-04-22",
+            "value_billions": 74.937
+          },
+          {
+            "date": "2026-04-29",
+            "value_billions": 73.999
+          },
+          {
+            "date": "2026-05-06",
+            "value_billions": 86.445
+          },
+          {
+            "date": "2026-05-13",
+            "value_billions": 90.527
+          },
+          {
+            "date": "2026-05-20",
+            "value_billions": 112.187
+          },
+          {
+            "date": "2026-05-27",
+            "value_billions": 102.245
+          },
+          {
+            "date": "2026-06-03",
+            "value_billions": 128.923
+          },
+          {
+            "date": "2026-06-10",
+            "value_billions": 111.139
+          },
+          {
+            "date": "2026-06-17",
+            "value_billions": 95.132
+          },
+          {
+            "date": "2026-06-24",
+            "value_billions": 83.497
+          },
+          {
+            "date": "2026-07-01",
+            "value_billions": 96.157
+          },
+          {
+            "date": "2026-07-08",
+            "value_billions": 101.129
+          },
+          {
+            "date": "2026-07-15",
+            "value_billions": 101.788
+          },
+          {
+            "date": "2026-07-22",
+            "value_billions": 92.303
+          },
+          {
+            "date": "2026-07-29",
+            "value_billions": 61.208
+          },
+          {
+            "date": "2026-08-05",
+            "value_billions": 88.362
+          },
+          {
+            "date": "2026-08-12",
+            "value_billions": 108.036
+          },
+          {
+            "date": "2026-08-19",
+            "value_billions": 87.915
+          },
+          {
+            "date": "2026-08-26",
+            "value_billions": 76.655
+          }
+        ]
+      },
+      {
+        "keyid": "PDFTR-USTET",
+        "name": "Treasury fails to receive ex-TIPS",
+        "as_of": "2026-08-26",
+        "value_billions": 88.371,
+        "weekly_change_billions": -8.634,
+        "history": [
+          {
+            "date": "2024-09-04",
+            "value_billions": 135.305
+          },
+          {
+            "date": "2024-09-11",
+            "value_billions": 108.379
+          },
+          {
+            "date": "2024-09-18",
+            "value_billions": 99.232
+          },
+          {
+            "date": "2024-09-25",
+            "value_billions": 194.53
+          },
+          {
+            "date": "2024-10-02",
+            "value_billions": 194.934
+          },
+          {
+            "date": "2024-10-09",
+            "value_billions": 90.159
+          },
+          {
+            "date": "2024-10-16",
+            "value_billions": 102.493
+          },
+          {
+            "date": "2024-10-23",
+            "value_billions": 109.851
+          },
+          {
+            "date": "2024-10-30",
+            "value_billions": 152.585
+          },
+          {
+            "date": "2024-11-06",
+            "value_billions": 92.388
+          },
+          {
+            "date": "2024-11-13",
+            "value_billions": 98.776
+          },
+          {
+            "date": "2024-11-20",
+            "value_billions": 117.917
+          },
+          {
+            "date": "2024-11-27",
+            "value_billions": 110.547
+          },
+          {
+            "date": "2024-12-04",
+            "value_billions": 110.206
+          },
+          {
+            "date": "2024-12-11",
+            "value_billions": 83.803
+          },
+          {
+            "date": "2024-12-18",
+            "value_billions": 82.988
+          },
+          {
+            "date": "2024-12-25",
+            "value_billions": 200.953
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 189.128
+          },
+          {
+            "date": "2025-01-08",
+            "value_billions": 83.963
+          },
+          {
+            "date": "2025-01-15",
+            "value_billions": 81.256
+          },
+          {
+            "date": "2025-01-22",
+            "value_billions": 86.315
+          },
+          {
+            "date": "2025-01-29",
+            "value_billions": 70.939
+          },
+          {
+            "date": "2025-02-05",
+            "value_billions": 69.913
+          },
+          {
+            "date": "2025-02-12",
+            "value_billions": 60.092
+          },
+          {
+            "date": "2025-02-19",
+            "value_billions": 88.0
+          },
+          {
+            "date": "2025-02-26",
+            "value_billions": 65.225
+          },
+          {
+            "date": "2025-03-05",
+            "value_billions": 107.276
+          },
+          {
+            "date": "2025-03-12",
+            "value_billions": 69.782
+          },
+          {
+            "date": "2025-03-19",
+            "value_billions": 81.467
+          },
+          {
+            "date": "2025-03-26",
+            "value_billions": 70.165
+          },
+          {
+            "date": "2025-04-02",
+            "value_billions": 102.24
+          },
+          {
+            "date": "2025-04-09",
+            "value_billions": 92.116
+          },
+          {
+            "date": "2025-04-16",
+            "value_billions": 98.854
+          },
+          {
+            "date": "2025-04-23",
+            "value_billions": 78.527
+          },
+          {
+            "date": "2025-04-30",
+            "value_billions": 57.888
+          },
+          {
+            "date": "2025-05-07",
+            "value_billions": 85.206
+          },
+          {
+            "date": "2025-05-14",
+            "value_billions": 65.939
+          },
+          {
+            "date": "2025-05-21",
+            "value_billions": 79.028
+          },
+          {
+            "date": "2025-05-28",
+            "value_billions": 60.922
+          },
+          {
+            "date": "2025-06-04",
+            "value_billions": 73.12
+          },
+          {
+            "date": "2025-06-11",
+            "value_billions": 89.648
+          },
+          {
+            "date": "2025-06-18",
+            "value_billions": 63.483
+          },
+          {
+            "date": "2025-06-25",
+            "value_billions": 70.568
+          },
+          {
+            "date": "2025-07-02",
+            "value_billions": 87.942
+          },
+          {
+            "date": "2025-07-09",
+            "value_billions": 77.087
+          },
+          {
+            "date": "2025-07-16",
+            "value_billions": 78.605
+          },
+          {
+            "date": "2025-07-23",
+            "value_billions": 88.575
+          },
+          {
+            "date": "2025-07-30",
+            "value_billions": 66.683
+          },
+          {
+            "date": "2025-08-06",
+            "value_billions": 103.613
+          },
+          {
+            "date": "2025-08-13",
+            "value_billions": 101.931
+          },
+          {
+            "date": "2025-08-20",
+            "value_billions": 72.615
+          },
+          {
+            "date": "2025-08-27",
+            "value_billions": 77.934
+          },
+          {
+            "date": "2025-09-03",
+            "value_billions": 135.007
+          },
+          {
+            "date": "2025-09-10",
+            "value_billions": 120.615
+          },
+          {
+            "date": "2025-09-17",
+            "value_billions": 108.106
+          },
+          {
+            "date": "2025-09-24",
+            "value_billions": 165.186
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 129.165
+          },
+          {
+            "date": "2025-10-08",
+            "value_billions": 127.603
+          },
+          {
+            "date": "2025-10-15",
+            "value_billions": 89.349
+          },
+          {
+            "date": "2025-10-22",
+            "value_billions": 93.996
+          },
+          {
+            "date": "2025-10-29",
+            "value_billions": 124.495
+          },
+          {
+            "date": "2025-11-05",
+            "value_billions": 104.582
+          },
+          {
+            "date": "2025-11-12",
+            "value_billions": 132.845
+          },
+          {
+            "date": "2025-11-19",
+            "value_billions": 105.271
+          },
+          {
+            "date": "2025-11-26",
+            "value_billions": 95.889
+          },
+          {
+            "date": "2025-12-03",
+            "value_billions": 120.814
+          },
+          {
+            "date": "2025-12-10",
+            "value_billions": 156.834
+          },
+          {
+            "date": "2025-12-17",
+            "value_billions": 283.226
+          },
+          {
+            "date": "2025-12-24",
+            "value_billions": 111.001
+          },
+          {
+            "date": "2025-12-31",
+            "value_billions": 100.531
+          },
+          {
+            "date": "2026-01-07",
+            "value_billions": 118.543
+          },
+          {
+            "date": "2026-01-14",
+            "value_billions": 89.786
+          },
+          {
+            "date": "2026-01-21",
+            "value_billions": 85.217
+          },
+          {
+            "date": "2026-01-28",
+            "value_billions": 85.717
+          },
+          {
+            "date": "2026-02-04",
+            "value_billions": 123.434
+          },
+          {
+            "date": "2026-02-11",
+            "value_billions": 104.923
+          },
+          {
+            "date": "2026-02-18",
+            "value_billions": 95.591
+          },
+          {
+            "date": "2026-02-25",
+            "value_billions": 70.769
+          },
+          {
+            "date": "2026-03-04",
+            "value_billions": 93.459
+          },
+          {
+            "date": "2026-03-11",
+            "value_billions": 95.379
+          },
+          {
+            "date": "2026-03-18",
+            "value_billions": 188.855
+          },
+          {
+            "date": "2026-03-25",
+            "value_billions": 111.859
+          },
+          {
+            "date": "2026-04-01",
+            "value_billions": 218.463
+          },
+          {
+            "date": "2026-04-08",
+            "value_billions": 136.113
+          },
+          {
+            "date": "2026-04-15",
+            "value_billions": 104.248
+          },
+          {
+            "date": "2026-04-22",
+            "value_billions": 83.487
+          },
+          {
+            "date": "2026-04-29",
+            "value_billions": 75.465
+          },
+          {
+            "date": "2026-05-06",
+            "value_billions": 84.439
+          },
+          {
+            "date": "2026-05-13",
+            "value_billions": 102.242
+          },
+          {
+            "date": "2026-05-20",
+            "value_billions": 123.706
+          },
+          {
+            "date": "2026-05-27",
+            "value_billions": 117.273
+          },
+          {
+            "date": "2026-06-03",
+            "value_billions": 128.351
+          },
+          {
+            "date": "2026-06-10",
+            "value_billions": 124.4
+          },
+          {
+            "date": "2026-06-17",
+            "value_billions": 103.631
+          },
+          {
+            "date": "2026-06-24",
+            "value_billions": 96.833
+          },
+          {
+            "date": "2026-07-01",
+            "value_billions": 107.163
+          },
+          {
+            "date": "2026-07-08",
+            "value_billions": 120.899
+          },
+          {
+            "date": "2026-07-15",
+            "value_billions": 121.614
+          },
+          {
+            "date": "2026-07-22",
+            "value_billions": 94.605
+          },
+          {
+            "date": "2026-07-29",
+            "value_billions": 77.028
+          },
+          {
+            "date": "2026-08-05",
+            "value_billions": 98.478
+          },
+          {
+            "date": "2026-08-12",
+            "value_billions": 119.089
+          },
+          {
+            "date": "2026-08-19",
+            "value_billions": 97.005
+          },
+          {
+            "date": "2026-08-26",
+            "value_billions": 88.371
+          }
+        ]
+      }
+    ],
+    "frequency": "Weekly; updated Thursdays with the previous week's data",
+    "source_url": "https://www.newyorkfed.org/markets/primarydealers",
+    "api_url": "https://markets.newyorkfed.org/api/pd/get/PDPOSGST-TOT_PDFTD-USTET_PDFTR-USTET.json",
+    "note": "Dealer positions are aggregate net positions reported by primary dealers, not a list of each dealer's holdings."
+  },
+  "history": [
+    {
+      "snapshot_date": "2026-09-10",
+      "generated_at": "2026-09-10T18:15:28Z",
+      "total_public_debt_trillions": 40.08409078544635,
+      "debt_held_by_public_trillions": 32.38792109474681,
+      "fed_treasuries_billions": 4552.347,
+      "foreign_holdings_billions": 9299.0,
+      "soma_treasuries_billions": 4446.2865402,
+      "us_banks_treasuries_billions": 1817.612,
+      "primary_dealer_net_billions": 477.607
+    }
+  ]
 }
