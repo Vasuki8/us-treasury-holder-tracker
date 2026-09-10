@@ -11,7 +11,7 @@
     if(!document.getElementById('ux4InlineTrim')){
       const style=document.createElement('style');
       style.id='ux4InlineTrim';
-      style.textContent='body.ux4-essential .ux-mode-button[data-mode="data"],body.ux4-essential .ux-mode-button[data-mode="pinned"]{display:none!important}body.ux4-essential main.shell>section.note:not(.panel){display:none!important}';
+      style.textContent='body.ux4-essential .ux-mode-button[data-mode="compare"],body.ux4-essential .ux-mode-button[data-mode="data"],body.ux4-essential .ux-mode-button[data-mode="pinned"]{display:none!important}body.ux4-essential main.shell>section.note:not(.panel){display:none!important}';
       document.head.appendChild(style);
     }
     if(!document.querySelector('link[data-ux4]')){
@@ -19,6 +19,13 @@
       link.rel='stylesheet';
       link.href='ux-v4.css';
       link.dataset.ux4='1';
+      document.head.appendChild(link);
+    }
+    if(!document.querySelector('link[data-ux5]')){
+      const link=document.createElement('link');
+      link.rel='stylesheet';
+      link.href='ux-v5.css';
+      link.dataset.ux5='1';
       document.head.appendChild(link);
     }
     if(!document.querySelector('script[data-ux4]')){
