@@ -1,6 +1,6 @@
 (() => {
   const state = { data: null, selected: null, range: '5Y', drawerChart: null, trendChart: null, observer: null };
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
   const fmtB = value => value == null || !Number.isFinite(Number(value)) ? '—' : `$${Number(value).toLocaleString(undefined,{maximumFractionDigits:1})}B`;
   const fmtPct = value => value == null || !Number.isFinite(Number(value)) ? '—' : `${Number(value).toFixed(1)}%`;
   const signedB = value => value == null || !Number.isFinite(Number(value)) ? '—' : `${Number(value)>=0?'+':''}${Number(value).toFixed(1)}B`;
@@ -89,8 +89,6 @@
     ];
     document.getElementById('countryHistoryFlow').innerHTML = flow.map(([k,v,c]) => `<div class="country-history-metric ${c}"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('');
     document.getElementById('countryHistoryNote').textContent = `History available ${f.history_start || 'from the earliest stored observation'} to ${f.as_of || 'latest'}. TIC country attribution can reflect custodial location rather than the ultimate beneficial owner.`;
-    rangeButtons(document.getElementById('countryHistoryRange'),state.range,r=>{state.range=r;rangeButtons(document.getElementById('countryHistoryRange'),r,arguments.callee);drawDrawerChart();});
-    // Re-bind without relying on arguments.callee in strict browser environments.
     const host = document.getElementById('countryHistoryRange');
     const bind = r => { state.range=r; rangeButtons(host,r,bind); drawDrawerChart(); };
     rangeButtons(host,state.range,bind);
@@ -133,7 +131,7 @@
     const canvas = document.getElementById('foreignTrendChart');
     const meta = document.getElementById('foreignTrendMeta');
     const panel = canvas?.closest('.panel');
-    if(!select || !canvas || !panel || !countries().length) return;
+    if(!select || !canvas || !panel || !countries().length || !window.Chart) return;
     const h2 = panel.querySelector('h2');
     if(h2) h2.textContent = 'Foreign Holder History';
 
