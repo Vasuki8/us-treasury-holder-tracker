@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T19:14:01Z",
+  "generated_at": "2026-09-10T19:30:17Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -1532,59 +1532,59 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:13:28Z"
+      "checked_at": "2026-09-10T19:29:44Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:13:29Z"
+      "checked_at": "2026-09-10T19:29:44Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:13:58Z"
+      "checked_at": "2026-09-10T19:30:09Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:13:41Z"
+      "checked_at": "2026-09-10T19:29:52Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:13:43Z"
+      "checked_at": "2026-09-10T19:29:53Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T19:13:43Z",
+      "checked_at": "2026-09-10T19:29:53Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:13:43Z"
+      "checked_at": "2026-09-10T19:29:53Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:13:44Z"
+      "checked_at": "2026-09-10T19:29:55Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:13:45Z"
+      "checked_at": "2026-09-10T19:29:55Z"
     },
     "extended_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:13:47Z"
+      "checked_at": "2026-09-10T19:29:57Z"
     },
     "nport": {
       "status": "pending",
-      "checked_at": "2026-09-10T19:13:47Z",
+      "checked_at": "2026-09-10T19:29:57Z",
       "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
     },
     "government_accounts": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:13:48Z"
+      "checked_at": "2026-09-10T19:29:59Z"
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T19:13:43Z",
+      "checked_at": "2026-09-10T19:29:53Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -4708,7 +4708,7 @@
   "history": [
     {
       "snapshot_date": "2026-09-10",
-      "generated_at": "2026-09-10T19:13:45Z",
+      "generated_at": "2026-09-10T19:29:55Z",
       "total_public_debt_trillions": 40.08409078544635,
       "debt_held_by_public_trillions": 32.38792109474681,
       "fed_treasuries_billions": 4552.347,
@@ -5766,7 +5766,10 @@
         "security_age_years": 6.798083504449007,
         "original_term_years": 10.001368925393566,
         "remaining_term_pct": 32.028469750889684,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 88.5525072,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 25
       },
       {
         "cusip": "912828YB0",
@@ -5845,7 +5848,10 @@
         "security_age_years": 7.049965776865161,
         "original_term_years": 10.001368925393566,
         "remaining_term_pct": 29.50999178757186,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 92.61867000000001,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 29
       },
       {
         "cusip": "91282CCB5",
@@ -5924,7 +5930,10 @@
         "security_age_years": 5.295003422313484,
         "original_term_years": 9.99315537303217,
         "remaining_term_pct": 47.013698630136986,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 147.6777151,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 49
       },
       {
         "cusip": "91282CDY4",
@@ -6003,7 +6012,10 @@
         "security_age_years": 4.544832306639288,
         "original_term_years": 9.998631074606434,
         "remaining_term_pct": 54.54545454545454,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 140.51270510000003,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 57
       },
       {
         "cusip": "9128286T2",
@@ -6095,7 +6107,10 @@
         "security_age_years": 7.301848049281314,
         "original_term_years": 10.001368925393566,
         "remaining_term_pct": 26.99151382425404,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 84.17305890000002,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 37
       },
       {
         "cusip": "91282CBL4",
@@ -6174,7 +6189,10 @@
         "security_age_years": 5.541409993155373,
         "original_term_years": 9.995893223819301,
         "remaining_term_pct": 44.563133388112846,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 140.0626147,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 59
       },
       {
         "cusip": "91282CDJ7",
@@ -6253,7 +6271,10 @@
         "security_age_years": 4.7967145790554415,
         "original_term_years": 9.998631074606434,
         "remaining_term_pct": 52.026286966046,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 144.57227590000002,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 66
       },
       {
         "cusip": "912810QU5",
@@ -6332,7 +6353,10 @@
         "security_age_years": 14.546201232032855,
         "original_term_years": 30.001368925393567,
         "remaining_term_pct": 51.51487497718562,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 47.2190442,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 6
       },
       {
         "cusip": "912810QE1",
@@ -6411,7 +6435,10 @@
         "security_age_years": 16.542094455852155,
         "original_term_years": 29.9958932238193,
         "remaining_term_pct": 44.85213581599124,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 44.902490300000004,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 10
       },
       {
         "cusip": "91282CEP2",
@@ -6490,7 +6517,10 @@
         "security_age_years": 4.298425735797399,
         "original_term_years": 9.998631074606434,
         "remaining_term_pct": 57.009857612267254,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 132.74463390000003,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 62
       },
       {
         "cusip": "912810QT8",
@@ -6569,7 +6599,10 @@
         "security_age_years": 14.798083504449007,
         "original_term_years": 30.001368925393567,
         "remaining_term_pct": 50.6753057127213,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 44.6224439,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 1
       },
       {
         "cusip": "912810QD3",
@@ -6648,7 +6681,10 @@
         "security_age_years": 16.79397672826831,
         "original_term_years": 29.9958932238193,
         "remaining_term_pct": 44.012413289521724,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 44.564249100000005,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 14
       },
       {
         "cusip": "912810ST6",
@@ -6727,7 +6763,10 @@
         "security_age_years": 5.754962354551677,
         "original_term_years": 19.958932238193018,
         "remaining_term_pct": 71.16598079561042,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 83.2559695,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 41
       },
       {
         "cusip": "912810QW1",
@@ -6806,7 +6845,10 @@
         "security_age_years": 14.299794661190965,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 52.33184265766177,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 43.918685599999996,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 4
       },
       {
         "cusip": "912810QH4",
@@ -6885,7 +6927,10 @@
         "security_age_years": 16.295687885010267,
         "original_term_years": 29.9958932238193,
         "remaining_term_pct": 45.673603504928806,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 43.4730444,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 13
       },
       {
         "cusip": "912810QK7",
@@ -6964,7 +7009,10 @@
         "security_age_years": 16.046543463381244,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 46.50908095281555,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 43.2133168,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 7
       },
       {
         "cusip": "912797SA6",
@@ -7056,7 +7104,10 @@
         "security_age_years": 0.917180013689254,
         "original_term_years": 0.9965776865160849,
         "remaining_term_pct": 7.967032967032966,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 334.13542940000013,
+        "soma_concentration_tier": "Lower",
+        "soma_concentration_rank": 90
       },
       {
         "cusip": "912810QL5",
@@ -7135,7 +7186,10 @@
         "security_age_years": 15.797399041752225,
         "original_term_years": 30.001368925393567,
         "remaining_term_pct": 47.34440591348786,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 42.9031887,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 3
       },
       {
         "cusip": "912828ZQ6",
@@ -7214,7 +7268,10 @@
         "security_age_years": 6.299794661190965,
         "original_term_years": 9.998631074606434,
         "remaining_term_pct": 36.9934282584885,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 109.61972149999997,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 52
       },
       {
         "cusip": "912810QS0",
@@ -7293,7 +7350,10 @@
         "security_age_years": 15.049965776865161,
         "original_term_years": 30.001368925393567,
         "remaining_term_pct": 49.83573644825698,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 42.4888374,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 5
       },
       {
         "cusip": "912828Z94",
@@ -7372,7 +7432,10 @@
         "security_age_years": 6.537987679671458,
         "original_term_years": 9.99315537303217,
         "remaining_term_pct": 34.57534246575342,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 87.40159569999999,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 45
       },
       {
         "cusip": "912810QQ4",
@@ -7451,7 +7514,10 @@
         "security_age_years": 15.299110198494182,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 49.0006388610021,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 41.99550730000001,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 12
       },
       {
         "cusip": "912810QN1",
@@ -7530,7 +7596,10 @@
         "security_age_years": 15.545516769336071,
         "original_term_years": 30.001368925393567,
         "remaining_term_pct": 48.183975177952185,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 43.0049451,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 20
       },
       {
         "cusip": "912810RP5",
@@ -7609,7 +7678,10 @@
         "security_age_years": 10.795345653661876,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 64.0138724103313,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 41.7916697,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 17
       },
       {
         "cusip": "912810SY5",
@@ -7688,7 +7760,10 @@
         "security_age_years": 5.253935660506502,
         "original_term_years": 19.953456536618756,
         "remaining_term_pct": 73.66904500548847,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 75.46484059999999,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 39
       },
       {
         "cusip": "912810QC5",
@@ -7767,7 +7842,10 @@
         "security_age_years": 17.04312114989733,
         "original_term_years": 29.99315537303217,
         "remaining_term_pct": 43.17663167503423,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 41.4305382,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 8
       },
       {
         "cusip": "91282CAE1",
@@ -7846,7 +7924,10 @@
         "security_age_years": 6.0424366872005475,
         "original_term_years": 9.99315537303217,
         "remaining_term_pct": 39.534246575342465,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 132.3506532,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 73
       },
       {
         "cusip": "912810RU4",
@@ -7925,7 +8006,10 @@
         "security_age_years": 9.796030116358658,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 67.34507620699097,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 40.064774500000006,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 11
       },
       {
         "cusip": "91282CCS8",
@@ -8004,7 +8088,10 @@
         "security_age_years": 5.045859000684462,
         "original_term_years": 9.995893223819301,
         "remaining_term_pct": 49.520679265954534,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 141.34445720000002,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 74
       },
       {
         "cusip": "912810SQ2",
@@ -8083,7 +8170,10 @@
         "security_age_years": 6.0041067761806985,
         "original_term_years": 19.956194387405887,
         "remaining_term_pct": 69.91356839072576,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 75.48874940000002,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 43
       },
       {
         "cusip": "912810QB7",
@@ -8162,7 +8252,10 @@
         "security_age_years": 17.300479123887747,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 42.32910468193848,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 38.778773,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 9
       },
       {
         "cusip": "912810QX9",
@@ -8241,7 +8334,10 @@
         "security_age_years": 14.047912388774812,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 53.171488546134896,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 41.795432299999995,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 22
       },
       {
         "cusip": "912810RM2",
@@ -8320,7 +8416,10 @@
         "security_age_years": 11.301848049281315,
         "original_term_years": 30.001368925393567,
         "remaining_term_pct": 62.32889213360102,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 41.285714600000006,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 21
       },
       {
         "cusip": "9128282R0",
@@ -8399,7 +8498,10 @@
         "security_age_years": 9.048596851471595,
         "original_term_years": 9.998631074606434,
         "remaining_term_pct": 9.501642935377875,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 69.4453604,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 40
       },
       {
         "cusip": "91282CAV3",
@@ -8478,7 +8580,10 @@
         "security_age_years": 5.793292265571527,
         "original_term_years": 9.995893223819301,
         "remaining_term_pct": 42.04327581484525,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 133.68082069999994,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 76
       },
       {
         "cusip": "912810SW9",
@@ -8557,7 +8662,10 @@
         "security_age_years": 5.505817932922656,
         "original_term_years": 19.96167008898015,
         "remaining_term_pct": 72.41804965025374,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 82.4990878,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 50
       },
       {
         "cusip": "912828ZB9",
@@ -8607,7 +8715,10 @@
             "reopening": false
           }
         ],
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 36.7373239,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 23
       },
       {
         "cusip": "912810QZ4",
@@ -8686,7 +8797,10 @@
         "security_age_years": 13.544147843942506,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 54.85078032308114,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 41.9997585,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 26
       },
       {
         "cusip": "912797SK4",
@@ -8779,7 +8893,10 @@
         "security_age_years": 0.840520191649555,
         "original_term_years": 0.9965776865160849,
         "remaining_term_pct": 15.659340659340659,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 233.60659309999988,
+        "soma_concentration_tier": "Lower",
+        "soma_concentration_rank": 89
       },
       {
         "cusip": "91282CFF3",
@@ -8858,7 +8975,10 @@
         "security_age_years": 4.049281314168378,
         "original_term_years": 10.001368925393566,
         "remaining_term_pct": 59.512729263618944,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 119.42420319999998,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 77
       },
       {
         "cusip": "912828Z78",
@@ -8924,7 +9044,10 @@
         "security_age_years": 6.587268993839836,
         "original_term_years": 7.000684462696783,
         "remaining_term_pct": 5.905357841220179,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 95.49684060000001,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 67
       },
       {
         "cusip": "912810TD0",
@@ -9003,7 +9126,10 @@
         "security_age_years": 4.544832306639288,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 84.8498676645067,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 85.01938149999998,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 55
       },
       {
         "cusip": "912797UG0",
@@ -9082,7 +9208,10 @@
         "security_age_years": 0.45722108145106094,
         "original_term_years": 0.49828884325804246,
         "remaining_term_pct": 8.241758241758241,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 282.1592617000002,
+        "soma_concentration_tier": "Lower",
+        "soma_concentration_rank": 92
       },
       {
         "cusip": "912810SP4",
@@ -9161,7 +9290,10 @@
         "security_age_years": 6.0424366872005475,
         "original_term_years": 29.99315537303217,
         "remaining_term_pct": 79.85394796896395,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 89.0185089,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 60
       },
       {
         "cusip": "9128283F5",
@@ -9240,7 +9372,10 @@
         "security_age_years": 8.796714579055442,
         "original_term_years": 9.998631074606434,
         "remaining_term_pct": 12.020810514786419,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 65.5681106,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 46
       },
       {
         "cusip": "912810RX8",
@@ -9319,7 +9454,10 @@
         "security_age_years": 9.300479123887747,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 68.99698822670439,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 40.685115,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 27
       },
       {
         "cusip": "9128286B1",
@@ -9398,7 +9536,10 @@
         "security_age_years": 7.545516769336071,
         "original_term_years": 10.001368925393566,
         "remaining_term_pct": 24.555160142348754,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 80.704475,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 53
       },
       {
         "cusip": "912810TB4",
@@ -9477,7 +9618,10 @@
         "security_age_years": 4.7967145790554415,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 84.01022177603359,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 90.23530730000002,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 64
       },
       {
         "cusip": "912797VD6",
@@ -9556,7 +9700,10 @@
         "security_age_years": 0.27104722792607805,
         "original_term_years": 0.3258042436687201,
         "remaining_term_pct": 16.80672268907563,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 294.70721380000015,
+        "soma_concentration_tier": "Lower",
+        "soma_concentration_rank": 95
       },
       {
         "cusip": "9128285M8",
@@ -9635,7 +9782,10 @@
         "security_age_years": 7.797399041752224,
         "original_term_years": 10.001368925393566,
         "remaining_term_pct": 22.036682179030933,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 80.48685429999999,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 56
       },
       {
         "cusip": "912810SX7",
@@ -9714,7 +9864,10 @@
         "security_age_years": 5.295003422313484,
         "original_term_years": 29.99315537303217,
         "remaining_term_pct": 82.34596074851666,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 92.72858680000002,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 70
       },
       {
         "cusip": "912810RN0",
@@ -9793,7 +9946,10 @@
         "security_age_years": 11.044490075290897,
         "original_term_years": 29.9958932238193,
         "remaining_term_pct": 63.17999269806499,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 40.3009862,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 28
       },
       {
         "cusip": "912797UJ4",
@@ -9873,7 +10029,10 @@
         "security_age_years": 0.3997262149212868,
         "original_term_years": 0.49828884325804246,
         "remaining_term_pct": 19.78021978021978,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 278.7753829999999,
+        "soma_concentration_tier": "Lower",
+        "soma_concentration_rank": 93
       },
       {
         "cusip": "91282CND9",
@@ -9923,7 +10082,10 @@
             "reopening": false
           }
         ],
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 78.27344180000003,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 54
       },
       {
         "cusip": "912797VE4",
@@ -10003,7 +10165,10 @@
         "security_age_years": 0.2518822724161533,
         "original_term_years": 0.3258042436687201,
         "remaining_term_pct": 22.689075630252102,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 285.6966189,
+        "soma_concentration_tier": "Lower",
+        "soma_concentration_rank": 94
       },
       {
         "cusip": "912810RC4",
@@ -10082,7 +10247,10 @@
         "security_age_years": 13.048596851471595,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 56.50269234279456,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 41.903968400000004,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 31
       },
       {
         "cusip": "912810RG5",
@@ -10161,7 +10329,10 @@
         "security_age_years": 12.301163586584531,
         "original_term_years": 30.001368925393567,
         "remaining_term_pct": 58.99799233436759,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 41.9881145,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 32
       },
       {
         "cusip": "91282CNC1",
@@ -10240,7 +10411,10 @@
         "security_age_years": 1.3004791238877482,
         "original_term_years": 9.998631074606434,
         "remaining_term_pct": 86.9934282584885,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 140.1298767,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 79
       },
       {
         "cusip": "912810SR0",
@@ -10319,7 +10493,10 @@
         "security_age_years": 6.253251197809719,
         "original_term_years": 19.953456536618756,
         "remaining_term_pct": 68.66081229418222,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 55.391639099999985,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 42
       },
       {
         "cusip": "912828V98",
@@ -10398,7 +10575,10 @@
         "security_age_years": 9.544147843942506,
         "original_term_years": 9.998631074606434,
         "remaining_term_pct": 4.545454545454546,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 61.00286840000001,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 47
       },
       {
         "cusip": "912810RD2",
@@ -10477,7 +10657,10 @@
         "security_age_years": 12.796714579055442,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 57.34233823126769,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 41.994786899999994,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 33
       },
       {
         "cusip": "912810SJ8",
@@ -10556,7 +10739,10 @@
         "security_age_years": 7.049965776865161,
         "original_term_years": 30.001368925393567,
         "remaining_term_pct": 76.5011863478737,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 63.2363568,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 48
       },
       {
         "cusip": "91282CNU1",
@@ -10606,7 +10792,10 @@
             "reopening": false
           }
         ],
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 77.41833380000001,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 58
       },
       {
         "cusip": "912810QY7",
@@ -10685,7 +10874,10 @@
         "security_age_years": 13.796030116358658,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 54.01113443460801,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 41.9440093,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 34
       },
       {
         "cusip": "912810SK5",
@@ -10764,7 +10956,10 @@
         "security_age_years": 6.798083504449007,
         "original_term_years": 30.001368925393567,
         "remaining_term_pct": 77.34075561233801,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 58.17074879999999,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 44
       },
       {
         "cusip": "912797VC8",
@@ -10843,7 +11038,10 @@
         "security_age_years": 0.29021218343600275,
         "original_term_years": 0.3258042436687201,
         "remaining_term_pct": 10.92436974789916,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 295.91589410000006,
+        "soma_concentration_tier": "Lower",
+        "soma_concentration_rank": 97
       },
       {
         "cusip": "912810SS8",
@@ -10922,7 +11120,10 @@
         "security_age_years": 5.793292265571527,
         "original_term_years": 29.9958932238193,
         "remaining_term_pct": 80.68638189120117,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 85.4582569,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 69
       },
       {
         "cusip": "91282CLW9",
@@ -11001,7 +11202,10 @@
         "security_age_years": 1.7960301163586585,
         "original_term_years": 9.998631074606434,
         "remaining_term_pct": 82.03723986856517,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 139.0559167,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 81
       },
       {
         "cusip": "912797SU2",
@@ -11080,7 +11284,10 @@
         "security_age_years": 0.7611225188227242,
         "original_term_years": 0.9965776865160849,
         "remaining_term_pct": 23.626373626373624,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 228.40295530000012,
+        "soma_concentration_tier": "Lower",
+        "soma_concentration_rank": 91
       },
       {
         "cusip": "912810TG3",
@@ -11159,7 +11366,10 @@
         "security_age_years": 4.298425735797399,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 85.6712603814913,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 78.30116960000001,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 61
       },
       {
         "cusip": "912797UF2",
@@ -11238,7 +11448,10 @@
         "security_age_years": 0.47638603696098564,
         "original_term_years": 0.49828884325804246,
         "remaining_term_pct": 4.395604395604396,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 277.7814900000002,
+        "soma_concentration_tier": "Lower",
+        "soma_concentration_rank": 96
       },
       {
         "cusip": "91282CPZ8",
@@ -11317,7 +11530,10 @@
         "security_age_years": 0.5393566050650239,
         "original_term_years": 9.99315537303217,
         "remaining_term_pct": 94.6027397260274,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 138.8255938,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 82
       },
       {
         "cusip": "91282CMM0",
@@ -11396,7 +11612,10 @@
         "security_age_years": 1.5359342915811087,
         "original_term_years": 9.990417522245037,
         "remaining_term_pct": 84.6259249109345,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 138.49427129999995,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 83
       },
       {
         "cusip": "912797RS8",
@@ -11488,7 +11707,10 @@
         "security_age_years": 0.9938398357289527,
         "original_term_years": 0.9965776865160849,
         "remaining_term_pct": 0.27472527472527475,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 325.99699999999984,
+        "soma_concentration_tier": "Lower",
+        "soma_concentration_rank": 99
       },
       {
         "cusip": "912810RE0",
@@ -11567,7 +11789,10 @@
         "security_age_years": 12.536618754277892,
         "original_term_years": 29.99041752224504,
         "remaining_term_pct": 58.19791856855942,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 41.8448793,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 35
       },
       {
         "cusip": "912810QA9",
@@ -11633,7 +11858,10 @@
         "security_age_years": 17.53867214236824,
         "original_term_years": 29.99315537303217,
         "remaining_term_pct": 41.52441807393884,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 25.9085693,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 18
       },
       {
         "cusip": "912810FT0",
@@ -11699,7 +11927,10 @@
         "security_age_years": 20.54483230663929,
         "original_term_years": 29.998631074606433,
         "remaining_term_pct": 31.5141005749749,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 26.397130000000004,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 19
       },
       {
         "cusip": "91282CPJ4",
@@ -11778,7 +12009,10 @@
         "security_age_years": 0.7912388774811773,
         "original_term_years": 9.99315537303217,
         "remaining_term_pct": 92.08219178082192,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 137.84244370000005,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 84
       },
       {
         "cusip": "912810PX0",
@@ -11844,7 +12078,10 @@
         "security_age_years": 18.04791238877481,
         "original_term_years": 29.746748802190282,
         "remaining_term_pct": 39.32811780947998,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 25.500122800000003,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 16
       },
       {
         "cusip": "912828U24",
@@ -11923,7 +12160,10 @@
         "security_age_years": 9.796030116358658,
         "original_term_years": 9.998631074606434,
         "remaining_term_pct": 2.026286966046002,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 64.2875749,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 51
       },
       {
         "cusip": "912797VL8",
@@ -12003,7 +12243,10 @@
         "security_age_years": 0.2135523613963039,
         "original_term_years": 0.3258042436687201,
         "remaining_term_pct": 34.45378151260504,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 181.0500826,
+        "soma_concentration_tier": "Lower",
+        "soma_concentration_rank": 88
       },
       {
         "cusip": "912828YG9",
@@ -12053,7 +12296,10 @@
             "reopening": false
           }
         ],
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 35.3242104,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 30
       },
       {
         "cusip": "912810RJ9",
@@ -12132,7 +12378,10 @@
         "security_age_years": 11.791923340177961,
         "original_term_years": 29.9958932238193,
         "remaining_term_pct": 60.68820737495436,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 41.4748915,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 36
       },
       {
         "cusip": "912810SZ2",
@@ -12211,7 +12460,10 @@
         "security_age_years": 5.045859000684462,
         "original_term_years": 29.9958932238193,
         "remaining_term_pct": 83.1781672143118,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 90.03666260000003,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 75
       },
       {
         "cusip": "91282CBS9",
@@ -12261,7 +12513,10 @@
             "reopening": false
           }
         ],
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 72.451916,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 65
       },
       {
         "cusip": "91282CPT2",
@@ -12311,7 +12566,10 @@
             "reopening": false
           }
         ],
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 74.88195909999997,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 68
       },
       {
         "cusip": "912797UH8",
@@ -12390,7 +12648,10 @@
         "security_age_years": 0.4380561259411362,
         "original_term_years": 0.49828884325804246,
         "remaining_term_pct": 12.087912087912088,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 276.6783955999999,
+        "soma_concentration_tier": "Lower",
+        "soma_concentration_rank": 98
       },
       {
         "cusip": "91282CQA2",
@@ -12440,7 +12701,10 @@
             "reopening": false
           }
         ],
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 74.43437459999998,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 71
       },
       {
         "cusip": "912810RS9",
@@ -12519,7 +12783,10 @@
         "security_age_years": 10.297056810403832,
         "original_term_years": 29.9958932238193,
         "remaining_term_pct": 65.67177802117561,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 40.47753470000001,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 38
       },
       {
         "cusip": "91282CMN8",
@@ -12569,7 +12836,10 @@
             "reopening": false
           }
         ],
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 73.13109929999999,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 72
       },
       {
         "cusip": "912810PW2",
@@ -12635,7 +12905,10 @@
         "security_age_years": 18.546201232032853,
         "original_term_years": 30.001368925393567,
         "remaining_term_pct": 38.18215002737726,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 22.5251487,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 15
       },
       {
         "cusip": "912828X88",
@@ -12714,7 +12987,10 @@
         "security_age_years": 9.300479123887747,
         "original_term_years": 9.998631074606434,
         "remaining_term_pct": 6.982475355969332,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 66.86322060000002,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 63
       },
       {
         "cusip": "91282CGM7",
@@ -12793,7 +13069,10 @@
         "security_age_years": 3.5455167693360714,
         "original_term_years": 10.001368925393566,
         "remaining_term_pct": 64.54968519025458,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 114.51584739999998,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 80
       },
       {
         "cusip": "912810SU3",
@@ -12872,7 +13151,10 @@
         "security_age_years": 5.541409993155373,
         "original_term_years": 29.9958932238193,
         "remaining_term_pct": 81.52610441767068,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 88.19149109999998,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 78
       },
       {
         "cusip": "91282CGQ8",
@@ -12938,7 +13220,10 @@
         "security_age_years": 3.509924709103354,
         "original_term_years": 7.000684462696783,
         "remaining_term_pct": 49.863120844739925,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 119.60479380000004,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 85
       },
       {
         "cusip": "912810QP6",
@@ -13017,7 +13302,10 @@
         "security_age_years": 15.509924709103354,
         "original_term_years": 29.965776865160848,
         "remaining_term_pct": 48.24120603015075,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 23.964657099999997,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 24
       },
       {
         "cusip": "912810PU6",
@@ -13083,7 +13371,10 @@
         "security_age_years": 19.04996577686516,
         "original_term_years": 29.749486652977414,
         "remaining_term_pct": 35.96539665010123,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 21.413045,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 2
       },
       {
         "cusip": "91282CNT4",
@@ -13162,7 +13453,10 @@
         "security_age_years": 1.0485968514715949,
         "original_term_years": 9.998631074606434,
         "remaining_term_pct": 89.51259583789705,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 134.93476649999997,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 86
       },
       {
         "cusip": "912797VB0",
@@ -13241,7 +13535,10 @@
         "security_age_years": 0.30937713894592744,
         "original_term_years": 0.3258042436687201,
         "remaining_term_pct": 5.042016806722689,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 285.6231825999999,
+        "soma_concentration_tier": "Lower",
+        "soma_concentration_rank": 100
       },
       {
         "cusip": "912797TC1",
@@ -13307,7 +13604,10 @@
         "security_age_years": 0.6844626967830253,
         "original_term_years": 0.9938398357289527,
         "remaining_term_pct": 31.129476584022036,
-        "maturity_consistency": "match"
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 134.57271020000005,
+        "soma_concentration_tier": "Material",
+        "soma_concentration_rank": 87
       }
     ],
     "row_count": 100,
@@ -13322,7 +13622,7 @@
     "metadata_api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
     "metadata_status": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:13:59Z",
+      "checked_at": "2026-09-10T19:30:14Z",
       "matched_cusips": 100,
       "requested_cusips": 100,
       "coverage_pct": 100.0,
@@ -14105,8 +14405,8 @@
         "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:13:59Z",
-        "seen_count": 3
+        "last_seen_at": "2026-09-10T19:30:14Z",
+        "seen_count": 4
       },
       {
         "severity": "high",
@@ -14123,8 +14423,8 @@
         "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
         "alert_id": "10f3e7909be0493614fc",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:13:59Z",
-        "seen_count": 3
+        "last_seen_at": "2026-09-10T19:30:14Z",
+        "seen_count": 4
       },
       {
         "severity": "medium",
@@ -14141,8 +14441,8 @@
         "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
         "alert_id": "f49e63e0d57bded6cd29",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:13:59Z",
-        "seen_count": 3
+        "last_seen_at": "2026-09-10T19:30:14Z",
+        "seen_count": 4
       },
       {
         "severity": "medium",
@@ -14159,8 +14459,8 @@
         "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
         "alert_id": "a626c548ce0c32534d5e",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:13:59Z",
-        "seen_count": 3
+        "last_seen_at": "2026-09-10T19:30:14Z",
+        "seen_count": 4
       },
       {
         "severity": "medium",
@@ -14177,8 +14477,8 @@
         "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
         "alert_id": "a53c34f1e0828ff7a307",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:13:59Z",
-        "seen_count": 3
+        "last_seen_at": "2026-09-10T19:30:14Z",
+        "seen_count": 4
       }
     ],
     "alert_count": 5,
@@ -14186,7 +14486,7 @@
     "method": "A change is flagged when it clears a source-specific absolute dollar floor and is either at least 2.5× the median absolute change in the available history or at least 10% versus the previous observation. High severity begins at 4× the historical median or 20%. This is a statistical screening rule, not a prediction."
   },
   "provenance": {
-    "generated_at": "2026-09-10T19:13:59Z",
+    "generated_at": "2026-09-10T19:30:14Z",
     "source_count": 12,
     "series_count": 22,
     "sources": [
@@ -14196,7 +14496,7 @@
         "as_of": "2026-09-08",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-10T19:13:28Z",
+        "checked_at": "2026-09-10T19:29:44Z",
         "message": null,
         "urls": [
           {
@@ -14211,7 +14511,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T19:13:29Z",
+        "checked_at": "2026-09-10T19:29:44Z",
         "message": null,
         "urls": [
           {
@@ -14230,7 +14530,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:13:58Z",
+        "checked_at": "2026-09-10T19:30:09Z",
         "message": null,
         "urls": [
           {
@@ -14245,7 +14545,7 @@
         "as_of": "2026:Q1",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:13:41Z",
+        "checked_at": "2026-09-10T19:29:52Z",
         "message": null,
         "urls": [
           {
@@ -14264,7 +14564,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T19:13:43Z",
+        "checked_at": "2026-09-10T19:29:53Z",
         "message": null,
         "urls": [
           {
@@ -14283,7 +14583,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-10T19:13:43Z",
+        "checked_at": "2026-09-10T19:29:53Z",
         "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip",
         "urls": []
       },
@@ -14293,7 +14593,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-10T19:13:43Z",
+        "checked_at": "2026-09-10T19:29:53Z",
         "message": null,
         "urls": [
           {
@@ -14312,7 +14612,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:13:44Z",
+        "checked_at": "2026-09-10T19:29:55Z",
         "message": null,
         "urls": [
           {
@@ -14327,7 +14627,7 @@
         "as_of": "2026-08-26",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-10T19:13:45Z",
+        "checked_at": "2026-09-10T19:29:55Z",
         "message": null,
         "urls": [
           {
@@ -14346,7 +14646,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:13:47Z",
+        "checked_at": "2026-09-10T19:29:57Z",
         "message": null,
         "urls": [
           {
@@ -14361,7 +14661,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-10T19:13:47Z",
+        "checked_at": "2026-09-10T19:29:57Z",
         "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data.",
         "urls": [
           {
@@ -14380,7 +14680,7 @@
         "as_of": "2026-07-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:13:48Z",
+        "checked_at": "2026-09-10T19:29:59Z",
         "message": null,
         "urls": [
           {
@@ -14553,7 +14853,7 @@
     "note": "Provenance records the official source, observation date, retrieval path and latest health check separately so stale-but-valid observations are distinguishable from failed fetches."
   },
   "alert_history": {
-    "generated_at": "2026-09-10T19:13:59Z",
+    "generated_at": "2026-09-10T19:30:14Z",
     "active_count": 5,
     "cleared_count": 0,
     "episode_count": 5,
@@ -14562,7 +14862,7 @@
       {
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 3,
+        "seen_count": 4,
         "cleared_at": null,
         "state": "active",
         "severity": "high",
@@ -14578,12 +14878,12 @@
         "multiple_of_baseline": 6.317073170731667,
         "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
         "series_key": "Foreign country|China, Mainland|MoM",
-        "last_seen_at": "2026-09-10T19:13:59Z"
+        "last_seen_at": "2026-09-10T19:30:14Z"
       },
       {
         "alert_id": "10f3e7909be0493614fc",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 3,
+        "seen_count": 4,
         "cleared_at": null,
         "state": "active",
         "severity": "high",
@@ -14599,12 +14899,12 @@
         "multiple_of_baseline": 5.944019528071598,
         "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
         "series_key": "U.S. sector|Exchange-traded funds|QoQ",
-        "last_seen_at": "2026-09-10T19:13:59Z"
+        "last_seen_at": "2026-09-10T19:30:14Z"
       },
       {
         "alert_id": "f49e63e0d57bded6cd29",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 3,
+        "seen_count": 4,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -14620,12 +14920,12 @@
         "multiple_of_baseline": 2.993203808938721,
         "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
         "series_key": "U.S. sector|Security brokers and dealers|QoQ",
-        "last_seen_at": "2026-09-10T19:13:59Z"
+        "last_seen_at": "2026-09-10T19:30:14Z"
       },
       {
         "alert_id": "a626c548ce0c32534d5e",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 3,
+        "seen_count": 4,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -14641,12 +14941,12 @@
         "multiple_of_baseline": 2.858699045967045,
         "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
         "series_key": "Primary dealer|Treasury dealer net position ex-TIPS|WoW",
-        "last_seen_at": "2026-09-10T19:13:59Z"
+        "last_seen_at": "2026-09-10T19:30:14Z"
       },
       {
         "alert_id": "a53c34f1e0828ff7a307",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 3,
+        "seen_count": 4,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -14662,7 +14962,7 @@
         "multiple_of_baseline": 0.6384486717886203,
         "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
         "series_key": "Primary dealer|Treasury fails to deliver ex-TIPS|WoW",
-        "last_seen_at": "2026-09-10T19:13:59Z"
+        "last_seen_at": "2026-09-10T19:30:14Z"
       }
     ],
     "transitions": [
@@ -14718,5 +15018,570 @@
       }
     ],
     "note": "An alert episode is keyed by scope, series name, cadence and source observation date. The first-seen timestamp records when the tracker first detected it; it is cleared only after a healthy source refresh confirms that the episode is no longer current."
+  },
+  "alert_intelligence": {
+    "generated_at": "2026-09-10T19:30:17Z",
+    "rows": [
+      {
+        "severity": "high",
+        "scope": "U.S. sector",
+        "name": "Exchange-traded funds",
+        "period": "QoQ",
+        "as_of": "2026-01-01",
+        "previous_as_of": "2025-10-01",
+        "current_billions": 779.052,
+        "change_billions": 73.05200000000002,
+        "change_pct": 10.34730878186969,
+        "baseline_abs_change_billions": 12.290000000000013,
+        "multiple_of_baseline": 5.944019528071598,
+        "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
+        "alert_id": "10f3e7909be0493614fc",
+        "first_seen_at": "2026-09-10T19:09:22Z",
+        "last_seen_at": "2026-09-10T19:30:14Z",
+        "seen_count": 4,
+        "abs_change_percentile": 100.0,
+        "robust_z_score": 5.291994121164934,
+        "history_change_count": 43,
+        "new_this_run": false,
+        "severity_changed_this_run": false
+      },
+      {
+        "severity": "high",
+        "scope": "Foreign country",
+        "name": "China, Mainland",
+        "period": "MoM",
+        "as_of": "2026-06",
+        "previous_as_of": "2026-05",
+        "current_billions": 633.4,
+        "change_billions": -25.899999999999977,
+        "change_pct": -3.928408918549974,
+        "baseline_abs_change_billions": 4.100000000000023,
+        "multiple_of_baseline": 6.317073170731667,
+        "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
+        "alert_id": "70599bd6721a756b9772",
+        "first_seen_at": "2026-09-10T19:09:22Z",
+        "last_seen_at": "2026-09-10T19:30:14Z",
+        "seen_count": 4,
+        "abs_change_percentile": 83.33333333333333,
+        "robust_z_score": -3.216797270165979,
+        "history_change_count": 12,
+        "new_this_run": false,
+        "severity_changed_this_run": false
+      },
+      {
+        "severity": "medium",
+        "scope": "Primary dealer",
+        "name": "Treasury dealer net position ex-TIPS",
+        "period": "WoW",
+        "as_of": "2026-08-26",
+        "previous_as_of": "2026-08-19",
+        "current_billions": 477.607,
+        "change_billions": 41.20100000000002,
+        "change_pct": 9.44097927159572,
+        "baseline_abs_change_billions": 14.412499999999994,
+        "multiple_of_baseline": 2.858699045967045,
+        "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
+        "alert_id": "a626c548ce0c32534d5e",
+        "first_seen_at": "2026-09-10T19:09:22Z",
+        "last_seen_at": "2026-09-10T19:30:14Z",
+        "seen_count": 4,
+        "abs_change_percentile": 88.3495145631068,
+        "robust_z_score": 1.925278971881317,
+        "history_change_count": 103,
+        "new_this_run": false,
+        "severity_changed_this_run": false
+      },
+      {
+        "severity": "medium",
+        "scope": "U.S. sector",
+        "name": "Security brokers and dealers",
+        "period": "QoQ",
+        "as_of": "2026-01-01",
+        "previous_as_of": "2025-10-01",
+        "current_billions": 620.413,
+        "change_billions": 77.95500000000004,
+        "change_pct": 14.370697823610316,
+        "baseline_abs_change_billions": 26.043999999999997,
+        "multiple_of_baseline": 2.993203808938721,
+        "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
+        "alert_id": "f49e63e0d57bded6cd29",
+        "first_seen_at": "2026-09-10T19:09:22Z",
+        "last_seen_at": "2026-09-10T19:30:14Z",
+        "seen_count": 4,
+        "abs_change_percentile": 92.3076923076923,
+        "robust_z_score": 1.8011618764010897,
+        "history_change_count": 39,
+        "new_this_run": false,
+        "severity_changed_this_run": false
+      },
+      {
+        "severity": "medium",
+        "scope": "Primary dealer",
+        "name": "Treasury fails to deliver ex-TIPS",
+        "period": "WoW",
+        "as_of": "2026-08-26",
+        "previous_as_of": "2026-08-19",
+        "current_billions": 76.655,
+        "change_billions": -11.260000000000005,
+        "change_pct": -12.80782574077234,
+        "baseline_abs_change_billions": 17.636500000000005,
+        "multiple_of_baseline": 0.6384486717886203,
+        "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
+        "alert_id": "a53c34f1e0828ff7a307",
+        "first_seen_at": "2026-09-10T19:09:22Z",
+        "last_seen_at": "2026-09-10T19:30:14Z",
+        "seen_count": 4,
+        "abs_change_percentile": 31.067961165048544,
+        "robust_z_score": -0.36518505938062285,
+        "history_change_count": 103,
+        "new_this_run": false,
+        "severity_changed_this_run": false
+      }
+    ],
+    "alert_count": 5,
+    "high_count": 2,
+    "new_alert_count": 0,
+    "notification_ready_count": 0,
+    "notification_queue": [],
+    "method": "Phase 8 supplements the Phase 6 threshold screen with two diagnostics: the percentile rank of the latest absolute move within available historical changes, and a robust z-score based on the median and median absolute deviation. Notification readiness is restricted to newly opened/reopened high-severity episodes or alerts that escalate to high severity."
+  },
+  "source_publications": {
+    "generated_at": "2026-09-10T19:30:17Z",
+    "current_release_count": 0,
+    "current_releases": [],
+    "history": [
+      {
+        "source_key": "overview",
+        "source_name": "Treasury Fiscal Data — Debt to the Penny",
+        "observation_date": "2026-09-08",
+        "frequency": "Business daily",
+        "detected_at": "2026-09-10T19:30:17Z",
+        "status": "ok",
+        "event": "baseline"
+      },
+      {
+        "source_key": "fed",
+        "source_name": "Federal Reserve H.4.1",
+        "observation_date": "2026-09-02",
+        "frequency": "Weekly (Wednesday level; published Thursday)",
+        "detected_at": "2026-09-10T19:30:17Z",
+        "status": "ok",
+        "event": "baseline"
+      },
+      {
+        "source_key": "foreign_holders",
+        "source_name": "Treasury International Capital",
+        "observation_date": "2026-06",
+        "frequency": "Monthly",
+        "detected_at": "2026-09-10T19:30:17Z",
+        "status": "ok",
+        "event": "baseline"
+      },
+      {
+        "source_key": "domestic_sectors",
+        "source_name": "Federal Reserve Financial Accounts",
+        "observation_date": "2026:Q1",
+        "frequency": "Quarterly",
+        "detected_at": "2026-09-10T19:30:17Z",
+        "status": "ok",
+        "event": "baseline"
+      },
+      {
+        "source_key": "soma",
+        "source_name": "New York Fed SOMA",
+        "observation_date": "2026-09-02",
+        "frequency": "Weekly (Wednesday holdings; published Thursday)",
+        "detected_at": "2026-09-10T19:30:17Z",
+        "status": "ok",
+        "event": "baseline"
+      },
+      {
+        "source_key": "auctions",
+        "source_name": "Treasury Securities Auctions",
+        "observation_date": "2026-09-17",
+        "frequency": "Released as auctions occur",
+        "detected_at": "2026-09-10T19:30:17Z",
+        "status": "ok",
+        "event": "baseline"
+      },
+      {
+        "source_key": "institutional_aggregates",
+        "source_name": "Federal Reserve Banks & Dealers",
+        "observation_date": "2026-01-01",
+        "frequency": "Quarterly",
+        "detected_at": "2026-09-10T19:30:17Z",
+        "status": "ok",
+        "event": "baseline"
+      },
+      {
+        "source_key": "primary_dealers",
+        "source_name": "New York Fed Primary Dealer Statistics",
+        "observation_date": "2026-08-26",
+        "frequency": "Weekly; updated Thursdays with the previous week's data",
+        "detected_at": "2026-09-10T19:30:17Z",
+        "status": "ok",
+        "event": "baseline"
+      },
+      {
+        "source_key": "extended_holders",
+        "source_name": "Federal Reserve Insurance / Pensions / ETFs / Hedge Funds",
+        "observation_date": "2026-01-01",
+        "frequency": "Quarterly",
+        "detected_at": "2026-09-10T19:30:17Z",
+        "status": "ok",
+        "event": "baseline"
+      },
+      {
+        "source_key": "government_accounts",
+        "source_name": "Treasury Monthly Treasury Statement — Government Accounts",
+        "observation_date": "2026-07-31",
+        "frequency": "Monthly",
+        "detected_at": "2026-09-10T19:30:17Z",
+        "status": "ok",
+        "event": "baseline"
+      }
+    ],
+    "history_count": 10,
+    "note": "A release event is recorded when a tracked source exposes an observation date the tracker has not seen before. The first Phase 8 run establishes a baseline and does not treat existing observations as fresh releases."
+  },
+  "cusip_concentration": {
+    "as_of": "2026-09-02",
+    "security_count": 100,
+    "very_high_count": 29,
+    "high_or_above_count": 58,
+    "median_soma_pct_outstanding": 28.04431774597178,
+    "top_securities": [
+      {
+        "cusip": "912810QT8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-11-15",
+        "soma_par_billions": 31.2356696,
+        "soma_pct_outstanding": 69.99990782665313,
+        "implied_outstanding_billions": 44.6224439,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 1,
+        "years_to_maturity": 15.203285420944558
+      },
+      {
+        "cusip": "912810PU6",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2037-05-15",
+        "soma_par_billions": 14.989046,
+        "soma_pct_outstanding": 69.99960071068827,
+        "implied_outstanding_billions": 21.413045,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 2,
+        "years_to_maturity": 10.699520876112253
+      },
+      {
+        "cusip": "912810QL5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-11-15",
+        "soma_par_billions": 30.032015,
+        "soma_pct_outstanding": 69.99949400031424,
+        "implied_outstanding_billions": 42.9031887,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 3,
+        "years_to_maturity": 14.203969883641342
+      },
+      {
+        "cusip": "912810QW1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2042-05-15",
+        "soma_par_billions": 30.7428278,
+        "soma_pct_outstanding": 69.99942593910416,
+        "implied_outstanding_billions": 43.918685599999996,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 4,
+        "years_to_maturity": 15.698836413415469
+      },
+      {
+        "cusip": "912810QS0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-08-15",
+        "soma_par_billions": 29.7419284,
+        "soma_pct_outstanding": 69.999393299474,
+        "implied_outstanding_billions": 42.4888374,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 5,
+        "years_to_maturity": 14.951403148528405
+      },
+      {
+        "cusip": "912810QU5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2042-02-15",
+        "soma_par_billions": 33.0529988,
+        "soma_pct_outstanding": 69.99929659736738,
+        "implied_outstanding_billions": 47.2190442,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 6,
+        "years_to_maturity": 15.455167693360712
+      },
+      {
+        "cusip": "912810QK7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-08-15",
+        "soma_par_billions": 30.2490101,
+        "soma_pct_outstanding": 69.99927878713535,
+        "implied_outstanding_billions": 43.2133168,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 7,
+        "years_to_maturity": 13.952087611225188
+      },
+      {
+        "cusip": "912810QC5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2039-08-15",
+        "soma_par_billions": 29.0009553,
+        "soma_pct_outstanding": 69.9989827793258,
+        "implied_outstanding_billions": 41.4305382,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 8,
+        "years_to_maturity": 12.950034223134839
+      },
+      {
+        "cusip": "912810QB7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2039-05-15",
+        "soma_par_billions": 27.1447422,
+        "soma_pct_outstanding": 69.99897134445176,
+        "implied_outstanding_billions": 38.778773,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 9,
+        "years_to_maturity": 12.698151950718685
+      },
+      {
+        "cusip": "912810QE1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-02-15",
+        "soma_par_billions": 31.4312244,
+        "soma_pct_outstanding": 69.99884458524119,
+        "implied_outstanding_billions": 44.902490300000004,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 10,
+        "years_to_maturity": 13.453798767967145
+      },
+      {
+        "cusip": "912810RU4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2046-11-15",
+        "soma_par_billions": 28.0447443,
+        "soma_pct_outstanding": 69.9985077914266,
+        "implied_outstanding_billions": 40.064774500000006,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 11,
+        "years_to_maturity": 20.202600958247775
+      },
+      {
+        "cusip": "912810QQ4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-05-15",
+        "soma_par_billions": 29.396,
+        "soma_pct_outstanding": 69.99796380599979,
+        "implied_outstanding_billions": 41.99550730000001,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 12,
+        "years_to_maturity": 14.699520876112253
+      },
+      {
+        "cusip": "912810QH4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-05-15",
+        "soma_par_billions": 30.430176,
+        "soma_pct_outstanding": 69.99780305241286,
+        "implied_outstanding_billions": 43.4730444,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 13,
+        "years_to_maturity": 13.700205338809035
+      },
+      {
+        "cusip": "912810QD3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2039-11-15",
+        "soma_par_billions": 31.1939753,
+        "soma_pct_outstanding": 69.99775813568012,
+        "implied_outstanding_billions": 44.564249100000005,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 14,
+        "years_to_maturity": 13.201916495550993
+      },
+      {
+        "cusip": "912810PW2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2038-02-15",
+        "soma_par_billions": 15.7670002,
+        "soma_pct_outstanding": 69.99731904100594,
+        "implied_outstanding_billions": 22.5251487,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 15,
+        "years_to_maturity": 11.455167693360712
+      },
+      {
+        "cusip": "912810PX0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2038-05-15",
+        "soma_par_billions": 17.8492566,
+        "soma_pct_outstanding": 69.99674762350556,
+        "implied_outstanding_billions": 25.500122800000003,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 16,
+        "years_to_maturity": 11.698836413415469
+      },
+      {
+        "cusip": "912810RP5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2045-11-15",
+        "soma_par_billions": 29.2235215,
+        "soma_pct_outstanding": 69.92666650980925,
+        "implied_outstanding_billions": 41.7916697,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 17,
+        "years_to_maturity": 19.20328542094456
+      },
+      {
+        "cusip": "912810QA9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2039-02-15",
+        "soma_par_billions": 18.0715271,
+        "soma_pct_outstanding": 69.75115796918976,
+        "implied_outstanding_billions": 25.9085693,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 18,
+        "years_to_maturity": 12.454483230663929
+      },
+      {
+        "cusip": "912810FT0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2036-02-15",
+        "soma_par_billions": 18.030823,
+        "soma_pct_outstanding": 68.30599765959406,
+        "implied_outstanding_billions": 26.397130000000004,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 19,
+        "years_to_maturity": 9.453798767967145
+      },
+      {
+        "cusip": "912810QN1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-02-15",
+        "soma_par_billions": 29.3590452,
+        "soma_pct_outstanding": 68.26899820876646,
+        "implied_outstanding_billions": 43.0049451,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 20,
+        "years_to_maturity": 14.455852156057494
+      },
+      {
+        "cusip": "912810RM2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2045-05-15",
+        "soma_par_billions": 26.3718791,
+        "soma_pct_outstanding": 63.876523285369025,
+        "implied_outstanding_billions": 41.285714600000006,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 21,
+        "years_to_maturity": 18.699520876112253
+      },
+      {
+        "cusip": "912810QX9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2042-08-15",
+        "soma_par_billions": 26.598,
+        "soma_pct_outstanding": 63.63853305568035,
+        "implied_outstanding_billions": 41.795432299999995,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 22,
+        "years_to_maturity": 15.950718685831623
+      },
+      {
+        "cusip": "912828ZB9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-02-28",
+        "soma_par_billions": 23.1573208,
+        "soma_pct_outstanding": 63.034860304563445,
+        "implied_outstanding_billions": 36.7373239,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 23,
+        "years_to_maturity": 0.49007529089664614
+      },
+      {
+        "cusip": "912810QP6",
+        "security_type": "TIPS",
+        "maturity_date": "2041-02-15",
+        "soma_par_billions": 15.0009021,
+        "soma_pct_outstanding": 62.595938833608436,
+        "implied_outstanding_billions": 23.964657099999997,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 24,
+        "years_to_maturity": 14.455852156057494
+      },
+      {
+        "cusip": "912828YS3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-11-15",
+        "soma_par_billions": 54.4976408,
+        "soma_pct_outstanding": 61.542741728265824,
+        "implied_outstanding_billions": 88.5525072,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 25,
+        "years_to_maturity": 3.2032854209445585
+      },
+      {
+        "cusip": "912810QZ4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2043-02-15",
+        "soma_par_billions": 22.878,
+        "soma_pct_outstanding": 54.47174178394383,
+        "implied_outstanding_billions": 41.9997585,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 26,
+        "years_to_maturity": 16.45448323066393
+      },
+      {
+        "cusip": "912810RX8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2047-05-15",
+        "soma_par_billions": 21.5375541,
+        "soma_pct_outstanding": 52.93718378330748,
+        "implied_outstanding_billions": 40.685115,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 27,
+        "years_to_maturity": 20.698151950718685
+      },
+      {
+        "cusip": "912810RN0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2045-08-15",
+        "soma_par_billions": 20.5586402,
+        "soma_pct_outstanding": 51.01274717689167,
+        "implied_outstanding_billions": 40.3009862,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 28,
+        "years_to_maturity": 18.951403148528406
+      },
+      {
+        "cusip": "912828YB0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-08-15",
+        "soma_par_billions": 47.1369167,
+        "soma_pct_outstanding": 50.89353658393064,
+        "implied_outstanding_billions": 92.61867000000001,
+        "soma_concentration_tier": "Very high",
+        "soma_concentration_rank": 29,
+        "years_to_maturity": 2.951403148528405
+      },
+      {
+        "cusip": "912828YG9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2026-09-30",
+        "soma_par_billions": 17.4722193,
+        "soma_pct_outstanding": 49.46244828164652,
+        "implied_outstanding_billions": 35.3242104,
+        "soma_concentration_tier": "High",
+        "soma_concentration_rank": 30,
+        "years_to_maturity": 0.07665982203969883
+      }
+    ],
+    "note": "Implied outstanding amount is derived from SOMA par value divided by SOMA's reported percent outstanding for the same CUSIP. This is a concentration diagnostic, not a separate Treasury outstanding-security source."
   }
 }
