@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T19:30:17Z",
+  "generated_at": "2026-09-10T19:40:13Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -1532,59 +1532,59 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:36Z"
+      "checked_at": "2026-09-10T19:39:38Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:37Z"
+      "checked_at": "2026-09-10T19:39:39Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:30:08Z"
+      "checked_at": "2026-09-10T19:40:08Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:52Z"
+      "checked_at": "2026-09-10T19:39:52Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:52Z"
+      "checked_at": "2026-09-10T19:39:53Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T19:29:53Z",
+      "checked_at": "2026-09-10T19:39:53Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:53Z"
+      "checked_at": "2026-09-10T19:39:53Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:55Z"
+      "checked_at": "2026-09-10T19:39:55Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:55Z"
+      "checked_at": "2026-09-10T19:39:55Z"
     },
     "extended_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:57Z"
+      "checked_at": "2026-09-10T19:39:57Z"
     },
     "nport": {
       "status": "pending",
-      "checked_at": "2026-09-10T19:29:57Z",
+      "checked_at": "2026-09-10T19:39:57Z",
       "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
     },
     "government_accounts": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:29:59Z"
+      "checked_at": "2026-09-10T19:39:59Z"
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T19:29:53Z",
+      "checked_at": "2026-09-10T19:39:53Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -4708,7 +4708,7 @@
   "history": [
     {
       "snapshot_date": "2026-09-10",
-      "generated_at": "2026-09-10T19:29:55Z",
+      "generated_at": "2026-09-10T19:39:55Z",
       "total_public_debt_trillions": 40.08409078544635,
       "debt_held_by_public_trillions": 32.38792109474681,
       "fed_treasuries_billions": 4552.347,
@@ -13622,7 +13622,7 @@
     "metadata_api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
     "metadata_status": {
       "status": "ok",
-      "checked_at": "2026-09-10T19:30:13Z",
+      "checked_at": "2026-09-10T19:40:10Z",
       "matched_cusips": 100,
       "requested_cusips": 100,
       "coverage_pct": 100.0,
@@ -14405,8 +14405,8 @@
         "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:13Z",
-        "seen_count": 6
+        "last_seen_at": "2026-09-10T19:40:10Z",
+        "seen_count": 7
       },
       {
         "severity": "high",
@@ -14423,8 +14423,8 @@
         "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
         "alert_id": "10f3e7909be0493614fc",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:13Z",
-        "seen_count": 6
+        "last_seen_at": "2026-09-10T19:40:10Z",
+        "seen_count": 7
       },
       {
         "severity": "medium",
@@ -14441,8 +14441,8 @@
         "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
         "alert_id": "f49e63e0d57bded6cd29",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:13Z",
-        "seen_count": 6
+        "last_seen_at": "2026-09-10T19:40:10Z",
+        "seen_count": 7
       },
       {
         "severity": "medium",
@@ -14459,8 +14459,8 @@
         "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
         "alert_id": "a626c548ce0c32534d5e",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:13Z",
-        "seen_count": 6
+        "last_seen_at": "2026-09-10T19:40:10Z",
+        "seen_count": 7
       },
       {
         "severity": "medium",
@@ -14477,8 +14477,8 @@
         "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
         "alert_id": "a53c34f1e0828ff7a307",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:13Z",
-        "seen_count": 6
+        "last_seen_at": "2026-09-10T19:40:10Z",
+        "seen_count": 7
       }
     ],
     "alert_count": 5,
@@ -14486,7 +14486,7 @@
     "method": "A change is flagged when it clears a source-specific absolute dollar floor and is either at least 2.5× the median absolute change in the available history or at least 10% versus the previous observation. High severity begins at 4× the historical median or 20%. This is a statistical screening rule, not a prediction."
   },
   "provenance": {
-    "generated_at": "2026-09-10T19:30:13Z",
+    "generated_at": "2026-09-10T19:40:10Z",
     "source_count": 12,
     "series_count": 22,
     "sources": [
@@ -14496,7 +14496,7 @@
         "as_of": "2026-09-08",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:36Z",
+        "checked_at": "2026-09-10T19:39:38Z",
         "message": null,
         "urls": [
           {
@@ -14511,7 +14511,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:37Z",
+        "checked_at": "2026-09-10T19:39:39Z",
         "message": null,
         "urls": [
           {
@@ -14530,7 +14530,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:30:08Z",
+        "checked_at": "2026-09-10T19:40:08Z",
         "message": null,
         "urls": [
           {
@@ -14545,7 +14545,7 @@
         "as_of": "2026:Q1",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:52Z",
+        "checked_at": "2026-09-10T19:39:52Z",
         "message": null,
         "urls": [
           {
@@ -14564,7 +14564,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:52Z",
+        "checked_at": "2026-09-10T19:39:53Z",
         "message": null,
         "urls": [
           {
@@ -14583,7 +14583,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-10T19:29:53Z",
+        "checked_at": "2026-09-10T19:39:53Z",
         "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip",
         "urls": []
       },
@@ -14593,7 +14593,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:53Z",
+        "checked_at": "2026-09-10T19:39:53Z",
         "message": null,
         "urls": [
           {
@@ -14612,7 +14612,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:55Z",
+        "checked_at": "2026-09-10T19:39:55Z",
         "message": null,
         "urls": [
           {
@@ -14627,7 +14627,7 @@
         "as_of": "2026-08-26",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:55Z",
+        "checked_at": "2026-09-10T19:39:55Z",
         "message": null,
         "urls": [
           {
@@ -14646,7 +14646,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:57Z",
+        "checked_at": "2026-09-10T19:39:57Z",
         "message": null,
         "urls": [
           {
@@ -14661,7 +14661,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-10T19:29:57Z",
+        "checked_at": "2026-09-10T19:39:57Z",
         "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data.",
         "urls": [
           {
@@ -14680,7 +14680,7 @@
         "as_of": "2026-07-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:59Z",
+        "checked_at": "2026-09-10T19:39:59Z",
         "message": null,
         "urls": [
           {
@@ -14853,7 +14853,7 @@
     "note": "Provenance records the official source, observation date, retrieval path and latest health check separately so stale-but-valid observations are distinguishable from failed fetches."
   },
   "alert_history": {
-    "generated_at": "2026-09-10T19:30:13Z",
+    "generated_at": "2026-09-10T19:40:10Z",
     "active_count": 5,
     "cleared_count": 0,
     "episode_count": 5,
@@ -14862,7 +14862,7 @@
       {
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 6,
+        "seen_count": 7,
         "cleared_at": null,
         "state": "active",
         "severity": "high",
@@ -14878,12 +14878,12 @@
         "multiple_of_baseline": 6.317073170731667,
         "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
         "series_key": "Foreign country|China, Mainland|MoM",
-        "last_seen_at": "2026-09-10T19:30:13Z"
+        "last_seen_at": "2026-09-10T19:40:10Z"
       },
       {
         "alert_id": "10f3e7909be0493614fc",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 6,
+        "seen_count": 7,
         "cleared_at": null,
         "state": "active",
         "severity": "high",
@@ -14899,12 +14899,12 @@
         "multiple_of_baseline": 5.944019528071598,
         "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
         "series_key": "U.S. sector|Exchange-traded funds|QoQ",
-        "last_seen_at": "2026-09-10T19:30:13Z"
+        "last_seen_at": "2026-09-10T19:40:10Z"
       },
       {
         "alert_id": "f49e63e0d57bded6cd29",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 6,
+        "seen_count": 7,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -14920,12 +14920,12 @@
         "multiple_of_baseline": 2.993203808938721,
         "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
         "series_key": "U.S. sector|Security brokers and dealers|QoQ",
-        "last_seen_at": "2026-09-10T19:30:13Z"
+        "last_seen_at": "2026-09-10T19:40:10Z"
       },
       {
         "alert_id": "a626c548ce0c32534d5e",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 6,
+        "seen_count": 7,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -14941,12 +14941,12 @@
         "multiple_of_baseline": 2.858699045967045,
         "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
         "series_key": "Primary dealer|Treasury dealer net position ex-TIPS|WoW",
-        "last_seen_at": "2026-09-10T19:30:13Z"
+        "last_seen_at": "2026-09-10T19:40:10Z"
       },
       {
         "alert_id": "a53c34f1e0828ff7a307",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 6,
+        "seen_count": 7,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -14962,7 +14962,7 @@
         "multiple_of_baseline": 0.6384486717886203,
         "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
         "series_key": "Primary dealer|Treasury fails to deliver ex-TIPS|WoW",
-        "last_seen_at": "2026-09-10T19:30:13Z"
+        "last_seen_at": "2026-09-10T19:40:10Z"
       }
     ],
     "transitions": [
@@ -15020,7 +15020,7 @@
     "note": "An alert episode is keyed by scope, series name, cadence and source observation date. The first-seen timestamp records when the tracker first detected it; it is cleared only after a healthy source refresh confirms that the episode is no longer current."
   },
   "alert_intelligence": {
-    "generated_at": "2026-09-10T19:30:17Z",
+    "generated_at": "2026-09-10T19:40:13Z",
     "row_count": 5,
     "extreme_count": 1,
     "elevated_count": 3,
@@ -15040,8 +15040,8 @@
         "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
         "alert_id": "10f3e7909be0493614fc",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:13Z",
-        "seen_count": 6,
+        "last_seen_at": "2026-09-10T19:40:10Z",
+        "seen_count": 7,
         "history_change_count": 42,
         "abs_change_percentile": 100.0,
         "robust_z": 5.291994119626493,
@@ -15065,8 +15065,8 @@
         "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:13Z",
-        "seen_count": 6,
+        "last_seen_at": "2026-09-10T19:40:10Z",
+        "seen_count": 7,
         "history_change_count": 11,
         "abs_change_percentile": 81.81818181818181,
         "robust_z": -3.21679726923082,
@@ -15090,8 +15090,8 @@
         "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
         "alert_id": "f49e63e0d57bded6cd29",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:13Z",
-        "seen_count": 6,
+        "last_seen_at": "2026-09-10T19:40:10Z",
+        "seen_count": 7,
         "history_change_count": 38,
         "abs_change_percentile": 92.10526315789474,
         "robust_z": 1.801161875877472,
@@ -15115,8 +15115,8 @@
         "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
         "alert_id": "a626c548ce0c32534d5e",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:13Z",
-        "seen_count": 6,
+        "last_seen_at": "2026-09-10T19:40:10Z",
+        "seen_count": 7,
         "history_change_count": 102,
         "abs_change_percentile": 88.23529411764706,
         "robust_z": 1.925278971321617,
@@ -15140,8 +15140,8 @@
         "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
         "alert_id": "a53c34f1e0828ff7a307",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T19:30:13Z",
-        "seen_count": 6,
+        "last_seen_at": "2026-09-10T19:40:10Z",
+        "seen_count": 7,
         "history_change_count": 102,
         "abs_change_percentile": 30.392156862745097,
         "robust_z": -0.3651850592744595,
@@ -15154,7 +15154,7 @@
     "method": "Phase 8 keeps the transparent Phase 6 threshold rule and adds two diagnostics: the percentile rank of the latest absolute change versus prior historical absolute changes, and a robust z-score based on the median and median absolute deviation (MAD). These diagnostics rank unusual moves; they do not forecast prices or infer causes."
   },
   "phase8_notifications": {
-    "generated_at": "2026-09-10T19:30:17Z",
+    "generated_at": "2026-09-10T19:40:13Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:25:05Z",
     "last_processed_transition_at": "2026-09-10T19:09:22Z",
@@ -15182,7 +15182,7 @@
     "note": "The queue contains only high-severity lifecycle transitions that occurred after Phase 8 established its watermark. Existing high alerts are watched but are not retroactively labeled new. This block is notification-ready output; delivery is intentionally separate from the data updater."
   },
   "publication_history": {
-    "generated_at": "2026-09-10T19:30:17Z",
+    "generated_at": "2026-09-10T19:40:13Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:25:05Z",
     "source_count": 12,
@@ -15195,7 +15195,7 @@
         "as_of": "2026-09-08",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:36Z"
+        "checked_at": "2026-09-10T19:39:38Z"
       },
       {
         "key": "fed",
@@ -15203,7 +15203,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:37Z"
+        "checked_at": "2026-09-10T19:39:39Z"
       },
       {
         "key": "foreign_holders",
@@ -15211,7 +15211,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:30:08Z"
+        "checked_at": "2026-09-10T19:40:08Z"
       },
       {
         "key": "domestic_sectors",
@@ -15219,7 +15219,7 @@
         "as_of": "2026:Q1",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:52Z"
+        "checked_at": "2026-09-10T19:39:52Z"
       },
       {
         "key": "soma",
@@ -15227,7 +15227,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:52Z"
+        "checked_at": "2026-09-10T19:39:53Z"
       },
       {
         "key": "money_market_funds",
@@ -15235,7 +15235,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-10T19:29:53Z"
+        "checked_at": "2026-09-10T19:39:53Z"
       },
       {
         "key": "auctions",
@@ -15243,7 +15243,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:53Z"
+        "checked_at": "2026-09-10T19:39:53Z"
       },
       {
         "key": "institutional_aggregates",
@@ -15251,7 +15251,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:55Z"
+        "checked_at": "2026-09-10T19:39:55Z"
       },
       {
         "key": "primary_dealers",
@@ -15259,7 +15259,7 @@
         "as_of": "2026-08-26",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:55Z"
+        "checked_at": "2026-09-10T19:39:55Z"
       },
       {
         "key": "extended_holders",
@@ -15267,7 +15267,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:57Z"
+        "checked_at": "2026-09-10T19:39:57Z"
       },
       {
         "key": "nport",
@@ -15275,7 +15275,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-10T19:29:57Z"
+        "checked_at": "2026-09-10T19:39:57Z"
       },
       {
         "key": "government_accounts",
@@ -15283,7 +15283,7 @@
         "as_of": "2026-07-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T19:29:59Z"
+        "checked_at": "2026-09-10T19:39:59Z"
       }
     ],
     "events": [],
@@ -15951,5 +15951,5029 @@
     ],
     "source_url": "https://www.newyorkfed.org/markets/soma-holdings",
     "note": "SOMA percent-outstanding comes from the New York Fed holding data already used by the tracker. Implied outstanding amount is derived as SOMA par divided by SOMA percent outstanding and is shown only where both inputs are available. Percentile ranks compare the stored SOMA CUSIP universe, not every outstanding Treasury security."
+  },
+  "holder_profiles": {
+    "generated_at": "2026-09-10T19:40:13Z",
+    "profile_count": 42,
+    "scope_counts": {
+      "Foreign country": 20,
+      "U.S. sector": 19,
+      "Primary dealer": 3
+    },
+    "profiles": [
+      {
+        "profile_id": "7838b65c67314ac315",
+        "scope": "Foreign country",
+        "name": "Japan",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 1116.7,
+        "previous_billions": 1143.1,
+        "change_billions": -26.399999999999864,
+        "change_pct": -2.3095092292887642,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 1154.8
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 1155.4
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 1183.9
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 1189.3
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 1200.0
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 1202.7
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 1185.5
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 1225.3
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 1239.3
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 1191.6
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 1209.9
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 1143.1
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 1116.7
+          }
+        ],
+        "change_3m_billions": -74.89999999999986,
+        "change_6m_billions": -68.79999999999995,
+        "change_12m_billions": -38.09999999999991,
+        "rank_within_scope": 1,
+        "share_of_tracked_scope_pct": 14.986646625421068,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 12.008818152489516,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "62b487befec8d3c201",
+        "scope": "Foreign country",
+        "name": "United Kingdom",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 939.9,
+        "previous_billions": 948.6,
+        "change_billions": -8.700000000000045,
+        "change_pct": -0.9171410499683792,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 855.6
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 895.9
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 901.3
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 862.5
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 875.4
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 879.8
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 863.1
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 879.8
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 897.3
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 927.1
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 937.5
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 948.6
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 939.9
+          }
+        ],
+        "change_3m_billions": 12.799999999999955,
+        "change_6m_billions": 76.79999999999995,
+        "change_12m_billions": 84.29999999999995,
+        "rank_within_scope": 2,
+        "share_of_tracked_scope_pct": 12.613906298229837,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 10.107538444994086,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "32efcd32716675dc1d",
+        "scope": "Foreign country",
+        "name": "China, Mainland",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 633.4,
+        "previous_billions": 659.3,
+        "change_billions": -25.899999999999977,
+        "change_pct": -3.928408918549974,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 731.4
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 695.6
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 699.7
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 699.2
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 687.7
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 683.9
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 684.4
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 695.3
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 694.2
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 653.3
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 651.1
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 659.3
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 633.4
+          }
+        ],
+        "change_3m_billions": -19.899999999999977,
+        "change_6m_billions": -51.0,
+        "change_12m_billions": -98.0,
+        "rank_within_scope": 3,
+        "share_of_tracked_scope_pct": 8.500530108840069,
+        "alert_severity": "high",
+        "diagnostic_label": "elevated",
+        "abs_change_percentile": 81.81818181818181,
+        "robust_z": -3.21679726923082,
+        "alert_first_seen_at": "2026-09-10T19:09:22Z",
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 6.811485105925367,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "24f0ec9594ef4d337b",
+        "scope": "Foreign country",
+        "name": "Belgium",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 482.5,
+        "previous_billions": 472.0,
+        "change_billions": 10.5,
+        "change_pct": 2.2245762711864407,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 430.3
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 425.4
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 451.1
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 463.6
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 465.5
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 481.0
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 477.3
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 451.0
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 454.7
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 454.0
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 459.9
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 472.0
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 482.5
+          }
+        ],
+        "change_3m_billions": 28.5,
+        "change_6m_billions": 5.199999999999989,
+        "change_12m_billions": 52.19999999999999,
+        "rank_within_scope": 4,
+        "share_of_tracked_scope_pct": 6.475380135009997,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 5.18872997096462,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "0abb56726b47a9d77d",
+        "scope": "Foreign country",
+        "name": "Canada",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 459.6,
+        "previous_billions": 435.8,
+        "change_billions": 23.80000000000001,
+        "change_pct": 5.461220743460305,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 438.9
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 381.8
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 444.0
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 476.1
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 419.0
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 472.4
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 468.3
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 395.8
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 446.4
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 439.6
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 397.1
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 435.8
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 459.6
+          }
+        ],
+        "change_3m_billions": 20.0,
+        "change_6m_billions": -8.699999999999989,
+        "change_12m_billions": 20.700000000000045,
+        "rank_within_scope": 5,
+        "share_of_tracked_scope_pct": 6.168051212540094,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 4.942466931928164,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "3c6a85b8986163bb63",
+        "scope": "Foreign country",
+        "name": "Cayman Islands",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 453.1,
+        "previous_billions": 471.3,
+        "change_billions": -18.19999999999999,
+        "change_pct": -3.8616592403988945,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 440.9
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 436.8
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 410.5
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 426.8
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 418.5
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 427.6
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 421.6
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 433.2
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 443.4
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 460.1
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 471.6
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 471.3
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 453.1
+          }
+        ],
+        "change_3m_billions": -7.0,
+        "change_6m_billions": 31.5,
+        "change_12m_billions": 12.200000000000045,
+        "rank_within_scope": 6,
+        "share_of_tracked_scope_pct": 6.08081811227571,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 4.872566942682009,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "c12ce1a264c88c7dbc",
+        "scope": "Foreign country",
+        "name": "Luxembourg",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 434.2,
+        "previous_billions": 436.0,
+        "change_billions": -1.8000000000000114,
+        "change_pct": -0.41284403669725034,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 403.2
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 403.8
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 409.9
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 419.9
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 417.7
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 424.7
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 434.0
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 446.2
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 446.0
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 432.4
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 431.1
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 436.0
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 434.2
+          }
+        ],
+        "change_3m_billions": 1.8000000000000114,
+        "change_6m_billions": 0.19999999999998863,
+        "change_12m_billions": 31.0,
+        "rank_within_scope": 7,
+        "share_of_tracked_scope_pct": 5.827171097660811,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 4.669319281643188,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "9e507cc096958c3866",
+        "scope": "Foreign country",
+        "name": "France",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 389.9,
+        "previous_billions": 393.1,
+        "change_billions": -3.2000000000000455,
+        "change_pct": -0.8140422284406118,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 373.8
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 391.0
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 389.1
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 375.5
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 390.2
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 376.1
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 368.9
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 380.5
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 395.1
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 393.0
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 393.3
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 393.1
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 389.9
+          }
+        ],
+        "change_3m_billions": -3.1000000000000227,
+        "change_6m_billions": 21.0,
+        "change_12m_billions": 16.099999999999966,
+        "rank_within_scope": 8,
+        "share_of_tracked_scope_pct": 5.232643968166628,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 4.192923970319389,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "23916e9a54d4a89e55",
+        "scope": "Foreign country",
+        "name": "Ireland",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 353.5,
+        "previous_billions": 357.2,
+        "change_billions": -3.6999999999999886,
+        "change_pct": -1.035834266517354,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 310.2
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 320.2
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 340.0
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 340.0
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 339.9
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 340.3
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 341.0
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 342.1
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 350.8
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 355.9
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 345.3
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 357.2
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 353.5
+          }
+        ],
+        "change_3m_billions": -2.3999999999999773,
+        "change_6m_billions": 12.5,
+        "change_12m_billions": 43.30000000000001,
+        "rank_within_scope": 9,
+        "share_of_tracked_scope_pct": 4.744138606686081,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 3.8014840305409185,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "78f20c7a5ffe990c68",
+        "scope": "Foreign country",
+        "name": "Taiwan",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 302.5,
+        "previous_billions": 306.0,
+        "change_billions": -3.5,
+        "change_pct": -1.1437908496732025,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 307.2
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 308.8
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 313.4
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 312.5
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 309.4
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 312.9
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 310.6
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 307.8
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 313.5
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 300.8
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 300.9
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 306.0
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 302.5
+          }
+        ],
+        "change_3m_billions": 1.6999999999999886,
+        "change_6m_billions": -8.100000000000023,
+        "change_12m_billions": -4.699999999999989,
+        "rank_within_scope": 10,
+        "share_of_tracked_scope_pct": 4.059694281534766,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 3.2530379610710827,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "a02804d388ebfdab48",
+        "scope": "Foreign country",
+        "name": "Switzerland",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 284.9,
+        "previous_billions": 281.1,
+        "change_billions": 3.7999999999999545,
+        "change_pct": 1.3518320882248147,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 300.6
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 303.2
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 303.0
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 301.8
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 302.0
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 300.4
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 294.1
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 289.2
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 286.7
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 286.4
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 288.6
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 281.1
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 284.9
+          }
+        ],
+        "change_3m_billions": -1.5,
+        "change_6m_billions": -9.200000000000045,
+        "change_12m_billions": -15.700000000000045,
+        "rank_within_scope": 11,
+        "share_of_tracked_scope_pct": 3.8234938869727424,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 3.0637702978814922,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "fe5a06cc1fc3d4edd1",
+        "scope": "Foreign country",
+        "name": "Singapore",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 284.4,
+        "previous_billions": 278.0,
+        "change_billions": 6.399999999999977,
+        "change_pct": 2.302158273381287,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 253.5
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 252.4
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 261.0
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 258.6
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 272.3
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 272.2
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 278.4
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 273.4
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 280.0
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 274.3
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 277.5
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 278.0
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 284.4
+          }
+        ],
+        "change_3m_billions": 10.099999999999966,
+        "change_6m_billions": 6.0,
+        "change_12m_billions": 30.899999999999977,
+        "rank_within_scope": 12,
+        "share_of_tracked_scope_pct": 3.8167836484908673,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 3.058393375631788,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "c588bed2a1c2ee5508",
+        "scope": "Foreign country",
+        "name": "Hong Kong",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 255.8,
+        "previous_billions": 271.9,
+        "change_billions": -16.099999999999966,
+        "change_pct": -5.921294593600576,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 241.8
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 247.5
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 251.9
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 238.9
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 252.0
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 256.6
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 268.4
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 259.9
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 269.2
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 278.3
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 269.1
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 271.9
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 255.8
+          }
+        ],
+        "change_3m_billions": -22.5,
+        "change_6m_billions": -12.599999999999966,
+        "change_12m_billions": 14.0,
+        "rank_within_scope": 13,
+        "share_of_tracked_scope_pct": 3.432958007327581,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 2.750833422948704,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "fa2b24bbf0a55a1468",
+        "scope": "Foreign country",
+        "name": "Norway",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 203.2,
+        "previous_billions": 207.3,
+        "change_billions": -4.100000000000023,
+        "change_pct": -1.977809937288964,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 195.1
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 208.0
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 214.9
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 215.9
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 193.7
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 218.9
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 208.1
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 218.8
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 223.0
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 217.4
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 214.7
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 207.3
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 203.2
+          }
+        ],
+        "change_3m_billions": -14.200000000000017,
+        "change_6m_billions": -4.900000000000006,
+        "change_12m_billions": 8.099999999999994,
+        "rank_within_scope": 14,
+        "share_of_tracked_scope_pct": 2.727040919034262,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 2.185181202279815,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "7ebd91f02831f8117e",
+        "scope": "Foreign country",
+        "name": "India",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 186.4,
+        "previous_billions": 181.3,
+        "change_billions": 5.099999999999994,
+        "change_pct": 2.813017098731381,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 227.4
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 219.7
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 219.4
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 202.7
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 190.4
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 186.5
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 182.9
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 190.4
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 190.6
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 183.0
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 181.0
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 181.3
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 186.4
+          }
+        ],
+        "change_3m_billions": 3.4000000000000057,
+        "change_6m_billions": 3.5,
+        "change_12m_billions": -41.0,
+        "rank_within_scope": 15,
+        "share_of_tracked_scope_pct": 2.501576906043241,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 2.0045166146897517,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "11200d758aba4ff2ff",
+        "scope": "Foreign country",
+        "name": "Brazil",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 168.4,
+        "previous_billions": 168.9,
+        "change_billions": -0.5,
+        "change_pct": -0.2960331557134399,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 215.4
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 201.8
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 184.6
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 172.8
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 167.8
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 168.2
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 168.7
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 168.0
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 170.6
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 168.0
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 168.6
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 168.9
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 168.4
+          }
+        ],
+        "change_3m_billions": 0.4000000000000057,
+        "change_6m_billions": -0.29999999999998295,
+        "change_12m_billions": -47.0,
+        "rank_within_scope": 16,
+        "share_of_tracked_scope_pct": 2.2600083206957176,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 1.8109474137003978,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "7576c867e19af1fb60",
+        "scope": "Foreign country",
+        "name": "Saudi Arabia",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 142.5,
+        "previous_billions": 140.3,
+        "change_billions": 2.1999999999999886,
+        "change_pct": 1.5680684248039831,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 130.5
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 131.6
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 133.0
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 134.2
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 134.3
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 148.8
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 149.5
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 134.8
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 160.4
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 152.0
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 140.1
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 140.3
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 142.5
+          }
+        ],
+        "change_3m_billions": -9.5,
+        "change_6m_billions": -7.0,
+        "change_12m_billions": 12.0,
+        "rank_within_scope": 17,
+        "share_of_tracked_scope_pct": 1.912417967334559,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 1.5324228411657168,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "ce2367e3c9ba9d3fef",
+        "scope": "Foreign country",
+        "name": "Korea, South",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 134.7,
+        "previous_billions": 132.3,
+        "change_billions": 2.3999999999999773,
+        "change_pct": 1.8140589569160825,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 126.5
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 132.3
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 135.8
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 142.7
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 145.0
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 145.1
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 140.6
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 141.3
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 140.9
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 136.8
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 135.2
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 132.3
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 134.7
+          }
+        ],
+        "change_3m_billions": -2.1000000000000227,
+        "change_6m_billions": -5.900000000000006,
+        "change_12m_billions": 8.199999999999989,
+        "rank_within_scope": 18,
+        "share_of_tracked_scope_pct": 1.8077382470172987,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 1.44854285407033,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "d28277d1edfa2670e2",
+        "scope": "Foreign country",
+        "name": "United Arab Emirates",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 114.8,
+        "previous_billions": 118.6,
+        "change_billions": -3.799999999999997,
+        "change_pct": -3.2040472175379406,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 96.4
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 107.7
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 108.7
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 103.3
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 110.7
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 103.5
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 95.7
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 112.4
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 120.0
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 114.1
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 112.5
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 118.6
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 114.8
+          }
+        ],
+        "change_3m_billions": 0.7000000000000028,
+        "change_6m_billions": 19.099999999999994,
+        "change_12m_billions": 18.39999999999999,
+        "rank_within_scope": 19,
+        "share_of_tracked_scope_pct": 1.540670755438648,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 1.2345413485321002,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "1834b5ee41e0f9abb2",
+        "scope": "Foreign country",
+        "name": "Israel",
+        "concept": "current_holdings",
+        "source_key": "foreign_holders",
+        "frequency": "Monthly",
+        "series": null,
+        "as_of": "2026-06",
+        "current_billions": 110.9,
+        "previous_billions": 117.6,
+        "change_billions": -6.699999999999989,
+        "change_pct": -5.6972789115646165,
+        "history": [
+          {
+            "date": "2025-06",
+            "value_billions": 101.8
+          },
+          {
+            "date": "2025-07",
+            "value_billions": 102.5
+          },
+          {
+            "date": "2025-08",
+            "value_billions": 100.1
+          },
+          {
+            "date": "2025-09",
+            "value_billions": 105.3
+          },
+          {
+            "date": "2025-10",
+            "value_billions": 108.6
+          },
+          {
+            "date": "2025-11",
+            "value_billions": 107.9
+          },
+          {
+            "date": "2025-12",
+            "value_billions": 105.7
+          },
+          {
+            "date": "2026-01",
+            "value_billions": 114.7
+          },
+          {
+            "date": "2026-02",
+            "value_billions": 110.8
+          },
+          {
+            "date": "2026-03",
+            "value_billions": 104.8
+          },
+          {
+            "date": "2026-04",
+            "value_billions": 113.4
+          },
+          {
+            "date": "2026-05",
+            "value_billions": 117.6
+          },
+          {
+            "date": "2026-06",
+            "value_billions": 110.9
+          }
+        ],
+        "change_3m_billions": 6.1000000000000085,
+        "change_6m_billions": 5.200000000000003,
+        "change_12m_billions": 9.100000000000009,
+        "rank_within_scope": 20,
+        "share_of_tracked_scope_pct": 1.4883308952800183,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Treasury International Capital",
+        "source_url": null,
+        "share_of_foreign_total_pct": 1.192601354984407,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "0e2ff544ed14b70820",
+        "scope": "Primary dealer",
+        "name": "Treasury dealer net position ex-TIPS",
+        "concept": "market_positioning",
+        "source_key": "primary_dealers",
+        "frequency": "Weekly; updated Thursdays with the previous week's data",
+        "series": "PDPOSGST-TOT",
+        "as_of": "2026-08-26",
+        "current_billions": 477.607,
+        "previous_billions": 436.406,
+        "change_billions": 41.20100000000002,
+        "change_pct": 9.44097927159572,
+        "history": [
+          {
+            "date": "2024-09-04",
+            "value_billions": 322.765
+          },
+          {
+            "date": "2024-09-11",
+            "value_billions": 322.898
+          },
+          {
+            "date": "2024-09-18",
+            "value_billions": 320.076
+          },
+          {
+            "date": "2024-09-25",
+            "value_billions": 310.931
+          },
+          {
+            "date": "2024-10-02",
+            "value_billions": 299.774
+          },
+          {
+            "date": "2024-10-09",
+            "value_billions": 289.246
+          },
+          {
+            "date": "2024-10-16",
+            "value_billions": 280.638
+          },
+          {
+            "date": "2024-10-23",
+            "value_billions": 253.768
+          },
+          {
+            "date": "2024-10-30",
+            "value_billions": 263.516
+          },
+          {
+            "date": "2024-11-06",
+            "value_billions": 256.528
+          },
+          {
+            "date": "2024-11-13",
+            "value_billions": 255.332
+          },
+          {
+            "date": "2024-11-20",
+            "value_billions": 275.223
+          },
+          {
+            "date": "2024-11-27",
+            "value_billions": 355.891
+          },
+          {
+            "date": "2024-12-04",
+            "value_billions": 341.786
+          },
+          {
+            "date": "2024-12-11",
+            "value_billions": 368.815
+          },
+          {
+            "date": "2024-12-18",
+            "value_billions": 394.021
+          },
+          {
+            "date": "2024-12-25",
+            "value_billions": 398.063
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 374.634
+          },
+          {
+            "date": "2025-01-08",
+            "value_billions": 369.505
+          },
+          {
+            "date": "2025-01-15",
+            "value_billions": 357.155
+          },
+          {
+            "date": "2025-01-22",
+            "value_billions": 376.285
+          },
+          {
+            "date": "2025-01-29",
+            "value_billions": 394.474
+          },
+          {
+            "date": "2025-02-05",
+            "value_billions": 391.418
+          },
+          {
+            "date": "2025-02-12",
+            "value_billions": 408.948
+          },
+          {
+            "date": "2025-02-19",
+            "value_billions": 432.23
+          },
+          {
+            "date": "2025-02-26",
+            "value_billions": 455.32
+          },
+          {
+            "date": "2025-03-05",
+            "value_billions": 408.204
+          },
+          {
+            "date": "2025-03-12",
+            "value_billions": 405.83
+          },
+          {
+            "date": "2025-03-19",
+            "value_billions": 406.699
+          },
+          {
+            "date": "2025-03-26",
+            "value_billions": 418.039
+          },
+          {
+            "date": "2025-04-02",
+            "value_billions": 408.663
+          },
+          {
+            "date": "2025-04-09",
+            "value_billions": 406.95
+          },
+          {
+            "date": "2025-04-16",
+            "value_billions": 391.786
+          },
+          {
+            "date": "2025-04-23",
+            "value_billions": 394.658
+          },
+          {
+            "date": "2025-04-30",
+            "value_billions": 383.227
+          },
+          {
+            "date": "2025-05-07",
+            "value_billions": 370.349
+          },
+          {
+            "date": "2025-05-14",
+            "value_billions": 380.221
+          },
+          {
+            "date": "2025-05-21",
+            "value_billions": 350.192
+          },
+          {
+            "date": "2025-05-28",
+            "value_billions": 403.729
+          },
+          {
+            "date": "2025-06-04",
+            "value_billions": 384.391
+          },
+          {
+            "date": "2025-06-11",
+            "value_billions": 398.656
+          },
+          {
+            "date": "2025-06-18",
+            "value_billions": 411.353
+          },
+          {
+            "date": "2025-06-25",
+            "value_billions": 417.439
+          },
+          {
+            "date": "2025-07-02",
+            "value_billions": 393.699
+          },
+          {
+            "date": "2025-07-09",
+            "value_billions": 368.234
+          },
+          {
+            "date": "2025-07-16",
+            "value_billions": 341.681
+          },
+          {
+            "date": "2025-07-23",
+            "value_billions": 348.983
+          },
+          {
+            "date": "2025-07-30",
+            "value_billions": 362.953
+          },
+          {
+            "date": "2025-08-06",
+            "value_billions": 373.746
+          },
+          {
+            "date": "2025-08-13",
+            "value_billions": 376.744
+          },
+          {
+            "date": "2025-08-20",
+            "value_billions": 388.327
+          },
+          {
+            "date": "2025-08-27",
+            "value_billions": 325.528
+          },
+          {
+            "date": "2025-09-03",
+            "value_billions": 372.781
+          },
+          {
+            "date": "2025-09-10",
+            "value_billions": 408.194
+          },
+          {
+            "date": "2025-09-17",
+            "value_billions": 391.02
+          },
+          {
+            "date": "2025-09-24",
+            "value_billions": 390.364
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 378.284
+          },
+          {
+            "date": "2025-10-08",
+            "value_billions": 391.049
+          },
+          {
+            "date": "2025-10-15",
+            "value_billions": 396.392
+          },
+          {
+            "date": "2025-10-22",
+            "value_billions": 382.11
+          },
+          {
+            "date": "2025-10-29",
+            "value_billions": 413.347
+          },
+          {
+            "date": "2025-11-05",
+            "value_billions": 382.887
+          },
+          {
+            "date": "2025-11-12",
+            "value_billions": 427.123
+          },
+          {
+            "date": "2025-11-19",
+            "value_billions": 420.612
+          },
+          {
+            "date": "2025-11-26",
+            "value_billions": 473.169
+          },
+          {
+            "date": "2025-12-03",
+            "value_billions": 404.773
+          },
+          {
+            "date": "2025-12-10",
+            "value_billions": 425.644
+          },
+          {
+            "date": "2025-12-17",
+            "value_billions": 455.392
+          },
+          {
+            "date": "2025-12-24",
+            "value_billions": 483.529
+          },
+          {
+            "date": "2025-12-31",
+            "value_billions": 476.669
+          },
+          {
+            "date": "2026-01-07",
+            "value_billions": 458.82
+          },
+          {
+            "date": "2026-01-14",
+            "value_billions": 471.327
+          },
+          {
+            "date": "2026-01-21",
+            "value_billions": 481.9
+          },
+          {
+            "date": "2026-01-28",
+            "value_billions": 535.39
+          },
+          {
+            "date": "2026-02-04",
+            "value_billions": 487.484
+          },
+          {
+            "date": "2026-02-11",
+            "value_billions": 498.718
+          },
+          {
+            "date": "2026-02-18",
+            "value_billions": 516.562
+          },
+          {
+            "date": "2026-02-25",
+            "value_billions": 531.105
+          },
+          {
+            "date": "2026-03-04",
+            "value_billions": 511.471
+          },
+          {
+            "date": "2026-03-11",
+            "value_billions": 530.523
+          },
+          {
+            "date": "2026-03-18",
+            "value_billions": 540.028
+          },
+          {
+            "date": "2026-03-25",
+            "value_billions": 557.087
+          },
+          {
+            "date": "2026-04-01",
+            "value_billions": 539.632
+          },
+          {
+            "date": "2026-04-08",
+            "value_billions": 530.718
+          },
+          {
+            "date": "2026-04-15",
+            "value_billions": 546.887
+          },
+          {
+            "date": "2026-04-22",
+            "value_billions": 518.39
+          },
+          {
+            "date": "2026-04-29",
+            "value_billions": 507.728
+          },
+          {
+            "date": "2026-05-06",
+            "value_billions": 500.42
+          },
+          {
+            "date": "2026-05-13",
+            "value_billions": 487.431
+          },
+          {
+            "date": "2026-05-20",
+            "value_billions": 451.696
+          },
+          {
+            "date": "2026-05-27",
+            "value_billions": 516.656
+          },
+          {
+            "date": "2026-06-03",
+            "value_billions": 477.881
+          },
+          {
+            "date": "2026-06-10",
+            "value_billions": 498.615
+          },
+          {
+            "date": "2026-06-17",
+            "value_billions": 492.413
+          },
+          {
+            "date": "2026-06-24",
+            "value_billions": 515.551
+          },
+          {
+            "date": "2026-07-01",
+            "value_billions": 464.081
+          },
+          {
+            "date": "2026-07-08",
+            "value_billions": 482.98
+          },
+          {
+            "date": "2026-07-15",
+            "value_billions": 467.223
+          },
+          {
+            "date": "2026-07-22",
+            "value_billions": 461.59
+          },
+          {
+            "date": "2026-07-29",
+            "value_billions": 473.171
+          },
+          {
+            "date": "2026-08-05",
+            "value_billions": 460.282
+          },
+          {
+            "date": "2026-08-12",
+            "value_billions": 444.67
+          },
+          {
+            "date": "2026-08-19",
+            "value_billions": 436.406
+          },
+          {
+            "date": "2026-08-26",
+            "value_billions": 477.607
+          }
+        ],
+        "rank_within_scope": 1,
+        "share_of_tracked_scope_pct": null,
+        "alert_severity": "medium",
+        "diagnostic_label": "elevated",
+        "abs_change_percentile": 88.23529411764706,
+        "robust_z": 1.925278971321617,
+        "alert_first_seen_at": "2026-09-10T19:09:22Z",
+        "source_name": "New York Fed Primary Dealer Statistics",
+        "source_url": null,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "2e97b56e1725fe973a",
+        "scope": "Primary dealer",
+        "name": "Treasury fails to receive ex-TIPS",
+        "concept": "market_positioning",
+        "source_key": "primary_dealers",
+        "frequency": "Weekly; updated Thursdays with the previous week's data",
+        "series": "PDFTR-USTET",
+        "as_of": "2026-08-26",
+        "current_billions": 88.371,
+        "previous_billions": 97.005,
+        "change_billions": -8.634,
+        "change_pct": -8.900572135456935,
+        "history": [
+          {
+            "date": "2024-09-04",
+            "value_billions": 135.305
+          },
+          {
+            "date": "2024-09-11",
+            "value_billions": 108.379
+          },
+          {
+            "date": "2024-09-18",
+            "value_billions": 99.232
+          },
+          {
+            "date": "2024-09-25",
+            "value_billions": 194.53
+          },
+          {
+            "date": "2024-10-02",
+            "value_billions": 194.934
+          },
+          {
+            "date": "2024-10-09",
+            "value_billions": 90.159
+          },
+          {
+            "date": "2024-10-16",
+            "value_billions": 102.493
+          },
+          {
+            "date": "2024-10-23",
+            "value_billions": 109.851
+          },
+          {
+            "date": "2024-10-30",
+            "value_billions": 152.585
+          },
+          {
+            "date": "2024-11-06",
+            "value_billions": 92.388
+          },
+          {
+            "date": "2024-11-13",
+            "value_billions": 98.776
+          },
+          {
+            "date": "2024-11-20",
+            "value_billions": 117.917
+          },
+          {
+            "date": "2024-11-27",
+            "value_billions": 110.547
+          },
+          {
+            "date": "2024-12-04",
+            "value_billions": 110.206
+          },
+          {
+            "date": "2024-12-11",
+            "value_billions": 83.803
+          },
+          {
+            "date": "2024-12-18",
+            "value_billions": 82.988
+          },
+          {
+            "date": "2024-12-25",
+            "value_billions": 200.953
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 189.128
+          },
+          {
+            "date": "2025-01-08",
+            "value_billions": 83.963
+          },
+          {
+            "date": "2025-01-15",
+            "value_billions": 81.256
+          },
+          {
+            "date": "2025-01-22",
+            "value_billions": 86.315
+          },
+          {
+            "date": "2025-01-29",
+            "value_billions": 70.939
+          },
+          {
+            "date": "2025-02-05",
+            "value_billions": 69.913
+          },
+          {
+            "date": "2025-02-12",
+            "value_billions": 60.092
+          },
+          {
+            "date": "2025-02-19",
+            "value_billions": 88.0
+          },
+          {
+            "date": "2025-02-26",
+            "value_billions": 65.225
+          },
+          {
+            "date": "2025-03-05",
+            "value_billions": 107.276
+          },
+          {
+            "date": "2025-03-12",
+            "value_billions": 69.782
+          },
+          {
+            "date": "2025-03-19",
+            "value_billions": 81.467
+          },
+          {
+            "date": "2025-03-26",
+            "value_billions": 70.165
+          },
+          {
+            "date": "2025-04-02",
+            "value_billions": 102.24
+          },
+          {
+            "date": "2025-04-09",
+            "value_billions": 92.116
+          },
+          {
+            "date": "2025-04-16",
+            "value_billions": 98.854
+          },
+          {
+            "date": "2025-04-23",
+            "value_billions": 78.527
+          },
+          {
+            "date": "2025-04-30",
+            "value_billions": 57.888
+          },
+          {
+            "date": "2025-05-07",
+            "value_billions": 85.206
+          },
+          {
+            "date": "2025-05-14",
+            "value_billions": 65.939
+          },
+          {
+            "date": "2025-05-21",
+            "value_billions": 79.028
+          },
+          {
+            "date": "2025-05-28",
+            "value_billions": 60.922
+          },
+          {
+            "date": "2025-06-04",
+            "value_billions": 73.12
+          },
+          {
+            "date": "2025-06-11",
+            "value_billions": 89.648
+          },
+          {
+            "date": "2025-06-18",
+            "value_billions": 63.483
+          },
+          {
+            "date": "2025-06-25",
+            "value_billions": 70.568
+          },
+          {
+            "date": "2025-07-02",
+            "value_billions": 87.942
+          },
+          {
+            "date": "2025-07-09",
+            "value_billions": 77.087
+          },
+          {
+            "date": "2025-07-16",
+            "value_billions": 78.605
+          },
+          {
+            "date": "2025-07-23",
+            "value_billions": 88.575
+          },
+          {
+            "date": "2025-07-30",
+            "value_billions": 66.683
+          },
+          {
+            "date": "2025-08-06",
+            "value_billions": 103.613
+          },
+          {
+            "date": "2025-08-13",
+            "value_billions": 101.931
+          },
+          {
+            "date": "2025-08-20",
+            "value_billions": 72.615
+          },
+          {
+            "date": "2025-08-27",
+            "value_billions": 77.934
+          },
+          {
+            "date": "2025-09-03",
+            "value_billions": 135.007
+          },
+          {
+            "date": "2025-09-10",
+            "value_billions": 120.615
+          },
+          {
+            "date": "2025-09-17",
+            "value_billions": 108.106
+          },
+          {
+            "date": "2025-09-24",
+            "value_billions": 165.186
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 129.165
+          },
+          {
+            "date": "2025-10-08",
+            "value_billions": 127.603
+          },
+          {
+            "date": "2025-10-15",
+            "value_billions": 89.349
+          },
+          {
+            "date": "2025-10-22",
+            "value_billions": 93.996
+          },
+          {
+            "date": "2025-10-29",
+            "value_billions": 124.495
+          },
+          {
+            "date": "2025-11-05",
+            "value_billions": 104.582
+          },
+          {
+            "date": "2025-11-12",
+            "value_billions": 132.845
+          },
+          {
+            "date": "2025-11-19",
+            "value_billions": 105.271
+          },
+          {
+            "date": "2025-11-26",
+            "value_billions": 95.889
+          },
+          {
+            "date": "2025-12-03",
+            "value_billions": 120.814
+          },
+          {
+            "date": "2025-12-10",
+            "value_billions": 156.834
+          },
+          {
+            "date": "2025-12-17",
+            "value_billions": 283.226
+          },
+          {
+            "date": "2025-12-24",
+            "value_billions": 111.001
+          },
+          {
+            "date": "2025-12-31",
+            "value_billions": 100.531
+          },
+          {
+            "date": "2026-01-07",
+            "value_billions": 118.543
+          },
+          {
+            "date": "2026-01-14",
+            "value_billions": 89.786
+          },
+          {
+            "date": "2026-01-21",
+            "value_billions": 85.217
+          },
+          {
+            "date": "2026-01-28",
+            "value_billions": 85.717
+          },
+          {
+            "date": "2026-02-04",
+            "value_billions": 123.434
+          },
+          {
+            "date": "2026-02-11",
+            "value_billions": 104.923
+          },
+          {
+            "date": "2026-02-18",
+            "value_billions": 95.591
+          },
+          {
+            "date": "2026-02-25",
+            "value_billions": 70.769
+          },
+          {
+            "date": "2026-03-04",
+            "value_billions": 93.459
+          },
+          {
+            "date": "2026-03-11",
+            "value_billions": 95.379
+          },
+          {
+            "date": "2026-03-18",
+            "value_billions": 188.855
+          },
+          {
+            "date": "2026-03-25",
+            "value_billions": 111.859
+          },
+          {
+            "date": "2026-04-01",
+            "value_billions": 218.463
+          },
+          {
+            "date": "2026-04-08",
+            "value_billions": 136.113
+          },
+          {
+            "date": "2026-04-15",
+            "value_billions": 104.248
+          },
+          {
+            "date": "2026-04-22",
+            "value_billions": 83.487
+          },
+          {
+            "date": "2026-04-29",
+            "value_billions": 75.465
+          },
+          {
+            "date": "2026-05-06",
+            "value_billions": 84.439
+          },
+          {
+            "date": "2026-05-13",
+            "value_billions": 102.242
+          },
+          {
+            "date": "2026-05-20",
+            "value_billions": 123.706
+          },
+          {
+            "date": "2026-05-27",
+            "value_billions": 117.273
+          },
+          {
+            "date": "2026-06-03",
+            "value_billions": 128.351
+          },
+          {
+            "date": "2026-06-10",
+            "value_billions": 124.4
+          },
+          {
+            "date": "2026-06-17",
+            "value_billions": 103.631
+          },
+          {
+            "date": "2026-06-24",
+            "value_billions": 96.833
+          },
+          {
+            "date": "2026-07-01",
+            "value_billions": 107.163
+          },
+          {
+            "date": "2026-07-08",
+            "value_billions": 120.899
+          },
+          {
+            "date": "2026-07-15",
+            "value_billions": 121.614
+          },
+          {
+            "date": "2026-07-22",
+            "value_billions": 94.605
+          },
+          {
+            "date": "2026-07-29",
+            "value_billions": 77.028
+          },
+          {
+            "date": "2026-08-05",
+            "value_billions": 98.478
+          },
+          {
+            "date": "2026-08-12",
+            "value_billions": 119.089
+          },
+          {
+            "date": "2026-08-19",
+            "value_billions": 97.005
+          },
+          {
+            "date": "2026-08-26",
+            "value_billions": 88.371
+          }
+        ],
+        "rank_within_scope": 2,
+        "share_of_tracked_scope_pct": null,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "New York Fed Primary Dealer Statistics",
+        "source_url": null,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "f21942ed292b92fa6a",
+        "scope": "Primary dealer",
+        "name": "Treasury fails to deliver ex-TIPS",
+        "concept": "market_positioning",
+        "source_key": "primary_dealers",
+        "frequency": "Weekly; updated Thursdays with the previous week's data",
+        "series": "PDFTD-USTET",
+        "as_of": "2026-08-26",
+        "current_billions": 76.655,
+        "previous_billions": 87.915,
+        "change_billions": -11.260000000000005,
+        "change_pct": -12.80782574077234,
+        "history": [
+          {
+            "date": "2024-09-04",
+            "value_billions": 129.061
+          },
+          {
+            "date": "2024-09-11",
+            "value_billions": 102.606
+          },
+          {
+            "date": "2024-09-18",
+            "value_billions": 85.475
+          },
+          {
+            "date": "2024-09-25",
+            "value_billions": 203.388
+          },
+          {
+            "date": "2024-10-02",
+            "value_billions": 201.326
+          },
+          {
+            "date": "2024-10-09",
+            "value_billions": 77.907
+          },
+          {
+            "date": "2024-10-16",
+            "value_billions": 90.151
+          },
+          {
+            "date": "2024-10-23",
+            "value_billions": 99.506
+          },
+          {
+            "date": "2024-10-30",
+            "value_billions": 148.575
+          },
+          {
+            "date": "2024-11-06",
+            "value_billions": 95.4
+          },
+          {
+            "date": "2024-11-13",
+            "value_billions": 85.451
+          },
+          {
+            "date": "2024-11-20",
+            "value_billions": 107.795
+          },
+          {
+            "date": "2024-11-27",
+            "value_billions": 102.127
+          },
+          {
+            "date": "2024-12-04",
+            "value_billions": 93.544
+          },
+          {
+            "date": "2024-12-11",
+            "value_billions": 68.153
+          },
+          {
+            "date": "2024-12-18",
+            "value_billions": 77.607
+          },
+          {
+            "date": "2024-12-25",
+            "value_billions": 205.502
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 203.635
+          },
+          {
+            "date": "2025-01-08",
+            "value_billions": 69.947
+          },
+          {
+            "date": "2025-01-15",
+            "value_billions": 75.648
+          },
+          {
+            "date": "2025-01-22",
+            "value_billions": 87.513
+          },
+          {
+            "date": "2025-01-29",
+            "value_billions": 70.683
+          },
+          {
+            "date": "2025-02-05",
+            "value_billions": 65.369
+          },
+          {
+            "date": "2025-02-12",
+            "value_billions": 64.182
+          },
+          {
+            "date": "2025-02-19",
+            "value_billions": 86.265
+          },
+          {
+            "date": "2025-02-26",
+            "value_billions": 56.096
+          },
+          {
+            "date": "2025-03-05",
+            "value_billions": 88.468
+          },
+          {
+            "date": "2025-03-12",
+            "value_billions": 61.253
+          },
+          {
+            "date": "2025-03-19",
+            "value_billions": 75.017
+          },
+          {
+            "date": "2025-03-26",
+            "value_billions": 69.363
+          },
+          {
+            "date": "2025-04-02",
+            "value_billions": 87.553
+          },
+          {
+            "date": "2025-04-09",
+            "value_billions": 81.959
+          },
+          {
+            "date": "2025-04-16",
+            "value_billions": 84.105
+          },
+          {
+            "date": "2025-04-23",
+            "value_billions": 72.604
+          },
+          {
+            "date": "2025-04-30",
+            "value_billions": 56.841
+          },
+          {
+            "date": "2025-05-07",
+            "value_billions": 81.305
+          },
+          {
+            "date": "2025-05-14",
+            "value_billions": 59.033
+          },
+          {
+            "date": "2025-05-21",
+            "value_billions": 76.037
+          },
+          {
+            "date": "2025-05-28",
+            "value_billions": 54.116
+          },
+          {
+            "date": "2025-06-04",
+            "value_billions": 73.348
+          },
+          {
+            "date": "2025-06-11",
+            "value_billions": 99.514
+          },
+          {
+            "date": "2025-06-18",
+            "value_billions": 62.454
+          },
+          {
+            "date": "2025-06-25",
+            "value_billions": 71.849
+          },
+          {
+            "date": "2025-07-02",
+            "value_billions": 84.376
+          },
+          {
+            "date": "2025-07-09",
+            "value_billions": 68.789
+          },
+          {
+            "date": "2025-07-16",
+            "value_billions": 72.393
+          },
+          {
+            "date": "2025-07-23",
+            "value_billions": 89.587
+          },
+          {
+            "date": "2025-07-30",
+            "value_billions": 66.849
+          },
+          {
+            "date": "2025-08-06",
+            "value_billions": 94.258
+          },
+          {
+            "date": "2025-08-13",
+            "value_billions": 92.648
+          },
+          {
+            "date": "2025-08-20",
+            "value_billions": 73.224
+          },
+          {
+            "date": "2025-08-27",
+            "value_billions": 70.786
+          },
+          {
+            "date": "2025-09-03",
+            "value_billions": 95.938
+          },
+          {
+            "date": "2025-09-10",
+            "value_billions": 115.879
+          },
+          {
+            "date": "2025-09-17",
+            "value_billions": 106.436
+          },
+          {
+            "date": "2025-09-24",
+            "value_billions": 155.071
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 116.916
+          },
+          {
+            "date": "2025-10-08",
+            "value_billions": 113.964
+          },
+          {
+            "date": "2025-10-15",
+            "value_billions": 77.37
+          },
+          {
+            "date": "2025-10-22",
+            "value_billions": 85.307
+          },
+          {
+            "date": "2025-10-29",
+            "value_billions": 116.599
+          },
+          {
+            "date": "2025-11-05",
+            "value_billions": 93.449
+          },
+          {
+            "date": "2025-11-12",
+            "value_billions": 117.543
+          },
+          {
+            "date": "2025-11-19",
+            "value_billions": 95.131
+          },
+          {
+            "date": "2025-11-26",
+            "value_billions": 83.324
+          },
+          {
+            "date": "2025-12-03",
+            "value_billions": 121.888
+          },
+          {
+            "date": "2025-12-10",
+            "value_billions": 147.403
+          },
+          {
+            "date": "2025-12-17",
+            "value_billions": 290.52
+          },
+          {
+            "date": "2025-12-24",
+            "value_billions": 94.704
+          },
+          {
+            "date": "2025-12-31",
+            "value_billions": 94.503
+          },
+          {
+            "date": "2026-01-07",
+            "value_billions": 77.014
+          },
+          {
+            "date": "2026-01-14",
+            "value_billions": 67.975
+          },
+          {
+            "date": "2026-01-21",
+            "value_billions": 88.812
+          },
+          {
+            "date": "2026-01-28",
+            "value_billions": 92.288
+          },
+          {
+            "date": "2026-02-04",
+            "value_billions": 98.204
+          },
+          {
+            "date": "2026-02-11",
+            "value_billions": 114.056
+          },
+          {
+            "date": "2026-02-18",
+            "value_billions": 91.263
+          },
+          {
+            "date": "2026-02-25",
+            "value_billions": 79.675
+          },
+          {
+            "date": "2026-03-04",
+            "value_billions": 100.859
+          },
+          {
+            "date": "2026-03-11",
+            "value_billions": 92.841
+          },
+          {
+            "date": "2026-03-18",
+            "value_billions": 191.093
+          },
+          {
+            "date": "2026-03-25",
+            "value_billions": 96.605
+          },
+          {
+            "date": "2026-04-01",
+            "value_billions": 197.018
+          },
+          {
+            "date": "2026-04-08",
+            "value_billions": 120.236
+          },
+          {
+            "date": "2026-04-15",
+            "value_billions": 92.162
+          },
+          {
+            "date": "2026-04-22",
+            "value_billions": 74.937
+          },
+          {
+            "date": "2026-04-29",
+            "value_billions": 73.999
+          },
+          {
+            "date": "2026-05-06",
+            "value_billions": 86.445
+          },
+          {
+            "date": "2026-05-13",
+            "value_billions": 90.527
+          },
+          {
+            "date": "2026-05-20",
+            "value_billions": 112.187
+          },
+          {
+            "date": "2026-05-27",
+            "value_billions": 102.245
+          },
+          {
+            "date": "2026-06-03",
+            "value_billions": 128.923
+          },
+          {
+            "date": "2026-06-10",
+            "value_billions": 111.139
+          },
+          {
+            "date": "2026-06-17",
+            "value_billions": 95.132
+          },
+          {
+            "date": "2026-06-24",
+            "value_billions": 83.497
+          },
+          {
+            "date": "2026-07-01",
+            "value_billions": 96.157
+          },
+          {
+            "date": "2026-07-08",
+            "value_billions": 101.129
+          },
+          {
+            "date": "2026-07-15",
+            "value_billions": 101.788
+          },
+          {
+            "date": "2026-07-22",
+            "value_billions": 92.303
+          },
+          {
+            "date": "2026-07-29",
+            "value_billions": 61.208
+          },
+          {
+            "date": "2026-08-05",
+            "value_billions": 88.362
+          },
+          {
+            "date": "2026-08-12",
+            "value_billions": 108.036
+          },
+          {
+            "date": "2026-08-19",
+            "value_billions": 87.915
+          },
+          {
+            "date": "2026-08-26",
+            "value_billions": 76.655
+          }
+        ],
+        "rank_within_scope": 3,
+        "share_of_tracked_scope_pct": null,
+        "alert_severity": "medium",
+        "diagnostic_label": "notable",
+        "abs_change_percentile": 30.392156862745097,
+        "robust_z": -0.3651850592744595,
+        "alert_first_seen_at": "2026-09-10T19:09:22Z",
+        "source_name": "New York Fed Primary Dealer Statistics",
+        "source_url": null,
+        "latest_direction": "reducing"
+      },
+      {
+        "profile_id": "6b5a1d7cad8521d529",
+        "scope": "U.S. sector",
+        "name": "Rest of the world",
+        "concept": "current_holdings",
+        "source_key": "domestic_sectors",
+        "frequency": "Quarterly",
+        "series": "LM263061105",
+        "as_of": "2026:Q1",
+        "current_billions": 9317.224,
+        "previous_billions": null,
+        "change_billions": null,
+        "change_pct": null,
+        "history": [],
+        "rank_within_scope": 1,
+        "share_of_tracked_scope_pct": 29.167073885618862,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Financial Accounts",
+        "source_url": null
+      },
+      {
+        "profile_id": "5f4029af535b1afbba",
+        "scope": "U.S. sector",
+        "name": "Central bank",
+        "concept": "current_holdings",
+        "source_key": "domestic_sectors",
+        "frequency": "Quarterly",
+        "series": "LM713061103",
+        "as_of": "2026:Q1",
+        "current_billions": 4000.42,
+        "previous_billions": null,
+        "change_billions": null,
+        "change_pct": null,
+        "history": [],
+        "rank_within_scope": 2,
+        "share_of_tracked_scope_pct": 12.5231019146376,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Financial Accounts",
+        "source_url": null
+      },
+      {
+        "profile_id": "fed6b8b4195b006aa0",
+        "scope": "U.S. sector",
+        "name": "Money market funds",
+        "concept": "current_holdings",
+        "source_key": "domestic_sectors",
+        "frequency": "Quarterly",
+        "series": "FL633061105",
+        "as_of": "2026:Q1",
+        "current_billions": 3426.437,
+        "previous_billions": null,
+        "change_billions": null,
+        "change_pct": null,
+        "history": [],
+        "rank_within_scope": 3,
+        "share_of_tracked_scope_pct": 10.72627867950993,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Financial Accounts",
+        "source_url": null
+      },
+      {
+        "profile_id": "f81405204fee182799",
+        "scope": "U.S. sector",
+        "name": "Households and nonprofit organizations",
+        "concept": "current_holdings",
+        "source_key": "domestic_sectors",
+        "frequency": "Quarterly",
+        "series": "LM153061105",
+        "as_of": "2026:Q1",
+        "current_billions": 3039.04,
+        "previous_billions": null,
+        "change_billions": null,
+        "change_pct": null,
+        "history": [],
+        "rank_within_scope": 4,
+        "share_of_tracked_scope_pct": 9.513552987601365,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Financial Accounts",
+        "source_url": null
+      },
+      {
+        "profile_id": "2a43969994f0ac62ac",
+        "scope": "U.S. sector",
+        "name": "Private depository institutions",
+        "concept": "current_holdings",
+        "source_key": "institutional_aggregates",
+        "frequency": "Quarterly",
+        "series": "BOGZ1LM703061105Q",
+        "as_of": "2026-01-01",
+        "current_billions": 2049.575,
+        "previous_billions": 1961.741,
+        "change_billions": 87.83399999999983,
+        "change_pct": 4.4773494564267065,
+        "history": [
+          {
+            "date": "2016-04-01",
+            "value_billions": 571.832
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 619.652
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 654.053
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 645.694
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 602.098
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 596.419
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 616.024
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 612.797
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 631.96
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 649.33
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 737.043
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 736.739
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 770.159
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 855.814
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 879.267
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 894.181
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 1103.483
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 1186.801
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 1203.161
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 1257.51
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 1346.708
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 1456.273
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 1641.194
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 1653.695
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 1686.642
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 1605.712
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 1579.707
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 1492.49
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 1433.859
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 1428.059
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 1513.982
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 1614.483
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 1603.631
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 1669.355
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 1722.729
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 1740.868
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 1848.931
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 1940.489
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 1961.741
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 2049.575
+          }
+        ],
+        "rank_within_scope": 5,
+        "share_of_tracked_scope_pct": 6.416085462699756,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Banks & Dealers",
+        "source_url": null,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "e2689f5ea65834db2a",
+        "scope": "U.S. sector",
+        "name": "U.S.-chartered depository institutions",
+        "concept": "current_holdings",
+        "source_key": "institutional_aggregates",
+        "frequency": "Quarterly",
+        "series": "BOGZ1FL763061100Q",
+        "as_of": "2026-01-01",
+        "current_billions": 1817.612,
+        "previous_billions": 1744.845,
+        "change_billions": 72.76700000000005,
+        "change_pct": 4.170399089890509,
+        "history": [
+          {
+            "date": "2016-04-01",
+            "value_billions": 455.543
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 495.322
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 528.382
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 525.187
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 478.352
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 480.546
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 484.41
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 479.962
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 487.754
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 496.399
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 569.784
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 563.84
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 592.153
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 674.495
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 704.089
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 724.397
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 926.651
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 1019.718
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 1044.445
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 1111.331
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 1195.809
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 1297.6
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 1472.289
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 1471.292
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 1488.523
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 1407.747
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 1388.88
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 1300.967
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 1235.187
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 1240.943
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 1329.208
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 1423.638
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 1405.771
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 1470.895
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 1536.829
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 1545.475
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 1637.092
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 1725.385
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 1744.845
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 1817.612
+          }
+        ],
+        "rank_within_scope": 6,
+        "share_of_tracked_scope_pct": 5.689937635865304,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Banks & Dealers",
+        "source_url": null,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "58ea2b1cca720b2052",
+        "scope": "U.S. sector",
+        "name": "Mutual funds",
+        "concept": "current_holdings",
+        "source_key": "domestic_sectors",
+        "frequency": "Quarterly",
+        "series": "LM653061105",
+        "as_of": "2026:Q1",
+        "current_billions": 1694.361,
+        "previous_billions": null,
+        "change_billions": null,
+        "change_pct": null,
+        "history": [],
+        "rank_within_scope": 7,
+        "share_of_tracked_scope_pct": 5.304106939568165,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Financial Accounts",
+        "source_url": null
+      },
+      {
+        "profile_id": "374c7365713484e727",
+        "scope": "U.S. sector",
+        "name": "State and local governments",
+        "concept": "current_holdings",
+        "source_key": "domestic_sectors",
+        "frequency": "Quarterly",
+        "series": "LM213061103",
+        "as_of": "2026:Q1",
+        "current_billions": 1560.472,
+        "previous_billions": null,
+        "change_billions": null,
+        "change_pct": null,
+        "history": [],
+        "rank_within_scope": 8,
+        "share_of_tracked_scope_pct": 4.884974550406798,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Financial Accounts",
+        "source_url": null
+      },
+      {
+        "profile_id": "d9dbe5f2e9e215d97b",
+        "scope": "U.S. sector",
+        "name": "Pension funds",
+        "concept": "current_holdings",
+        "source_key": "extended_holders",
+        "frequency": "Quarterly",
+        "series": "BOGZ1FL593061105Q",
+        "as_of": "2026-01-01",
+        "current_billions": 1203.049,
+        "previous_billions": 1144.003,
+        "change_billions": 59.04600000000005,
+        "change_pct": 5.161350101354634,
+        "history": [
+          {
+            "date": "2015-04-01",
+            "value_billions": 503.195
+          },
+          {
+            "date": "2015-07-01",
+            "value_billions": 488.6
+          },
+          {
+            "date": "2015-10-01",
+            "value_billions": 487.306
+          },
+          {
+            "date": "2016-01-01",
+            "value_billions": 496.795
+          },
+          {
+            "date": "2016-04-01",
+            "value_billions": 519.824
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 541.556
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 547.44
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 580.191
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 615.832
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 630.868
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 664.256
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 674.693
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 685.724
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 681.924
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 762.092
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 771.419
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 822.164
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 799.51
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 796.707
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 830.668
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 786.013
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 810.816
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 839.87
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 822.43
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 894.803
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 903.756
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 944.067
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 878.418
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 840.174
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 781.809
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 767.446
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 823.153
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 822.266
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 833.962
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 907.398
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 928.762
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 971.525
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 1046.903
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 1014.327
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 1056.247
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 1071.955
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 1124.379
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 1144.003
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 1203.049
+          }
+        ],
+        "rank_within_scope": 9,
+        "share_of_tracked_scope_pct": 3.766080870334327,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Insurance / Pensions / ETFs / Hedge Funds",
+        "source_url": null,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "e6cf8cd3c979461286",
+        "scope": "U.S. sector",
+        "name": "Exchange-traded funds",
+        "concept": "current_holdings",
+        "source_key": "extended_holders",
+        "frequency": "Quarterly",
+        "series": "BOGZ1LM563061103Q",
+        "as_of": "2026-01-01",
+        "current_billions": 779.052,
+        "previous_billions": 706.0,
+        "change_billions": 73.05200000000002,
+        "change_pct": 10.34730878186969,
+        "history": [
+          {
+            "date": "2015-04-01",
+            "value_billions": 70.774
+          },
+          {
+            "date": "2015-07-01",
+            "value_billions": 85.189
+          },
+          {
+            "date": "2015-10-01",
+            "value_billions": 80.254
+          },
+          {
+            "date": "2016-01-01",
+            "value_billions": 92.311
+          },
+          {
+            "date": "2016-04-01",
+            "value_billions": 92.18
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 92.529
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 92.939
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 102.33
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 107.952
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 116.995
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 119.572
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 128.72
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 145.298
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 150.5
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 176.141
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 190.324
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 211.366
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 222.946
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 227.645
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 258.336
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 265.135
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 269.829
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 270.617
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 274.577
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 293.253
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 305.776
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 332.052
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 336.12
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 362.468
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 381.432
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 400.514
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 451.476
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 460.559
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 469.123
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 502.261
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 504.33
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 523.134
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 568.796
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 555.795
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 604.948
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 635.749
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 674.948
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 706.0
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 779.052
+          }
+        ],
+        "rank_within_scope": 10,
+        "share_of_tracked_scope_pct": 2.43878082621381,
+        "alert_severity": "high",
+        "diagnostic_label": "extreme",
+        "abs_change_percentile": 100.0,
+        "robust_z": 5.291994119626493,
+        "alert_first_seen_at": "2026-09-10T19:09:22Z",
+        "source_name": "Federal Reserve Insurance / Pensions / ETFs / Hedge Funds",
+        "source_url": null,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "6744531245f5a13bff",
+        "scope": "U.S. sector",
+        "name": "Security brokers and dealers",
+        "concept": "current_holdings",
+        "source_key": "institutional_aggregates",
+        "frequency": "Quarterly",
+        "series": "BOGZ1FL663061105Q",
+        "as_of": "2026-01-01",
+        "current_billions": 620.413,
+        "previous_billions": 542.458,
+        "change_billions": 77.95500000000004,
+        "change_pct": 14.370697823610316,
+        "history": [
+          {
+            "date": "2016-04-01",
+            "value_billions": 140.879
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 143.078
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 123.967
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 143.078
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 164.612
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 149.038
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 136.275
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 122.712
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 164.694
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 138.529
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 255.063
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 252.87
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 280.077
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 242.59
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 227.675
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 241.108
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 305.105
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 227.271
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 211.955
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 130.587
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 157.157
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 141.75
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 199.7
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 227.898
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 216.847
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 226.282
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 215.874
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 327.564
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 301.323
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 312.371
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 328.712
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 390.499
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 358.565
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 391.555
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 454.199
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 487.312
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 513.235
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 492.573
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 542.458
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 620.413
+          }
+        ],
+        "rank_within_scope": 11,
+        "share_of_tracked_scope_pct": 1.942169879204198,
+        "alert_severity": "medium",
+        "diagnostic_label": "elevated",
+        "abs_change_percentile": 92.10526315789474,
+        "robust_z": 1.801161875877472,
+        "alert_first_seen_at": "2026-09-10T19:09:22Z",
+        "source_name": "Federal Reserve Banks & Dealers",
+        "source_url": null,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "4ebdff78dbf2a43f82",
+        "scope": "U.S. sector",
+        "name": "Private pension funds",
+        "concept": "current_holdings",
+        "source_key": "extended_holders",
+        "frequency": "Quarterly",
+        "series": "BOGZ1FL573061105Q",
+        "as_of": "2026-01-01",
+        "current_billions": 606.993,
+        "previous_billions": 602.172,
+        "change_billions": 4.821000000000026,
+        "change_pct": 0.8006018214065128,
+        "history": [
+          {
+            "date": "2015-04-01",
+            "value_billions": 294.125
+          },
+          {
+            "date": "2015-07-01",
+            "value_billions": 294.529
+          },
+          {
+            "date": "2015-10-01",
+            "value_billions": 286.719
+          },
+          {
+            "date": "2016-01-01",
+            "value_billions": 300.117
+          },
+          {
+            "date": "2016-04-01",
+            "value_billions": 310.075
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 312.739
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 304.124
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 316.008
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 329.745
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 340.841
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 350.889
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 351.012
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 355.964
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 358.044
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 371.912
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 390.904
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 413.608
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 434.03
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 440.034
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 476.895
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 473.282
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 469.582
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 461.231
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 453.311
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 476.849
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 491.405
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 507.815
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 475.223
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 453.189
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 428.09
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 427.656
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 451.173
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 454.705
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 448.957
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 484.822
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 488.304
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 496.849
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 531.977
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 523.763
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 549.275
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 566.434
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 588.738
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 602.172
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 606.993
+          }
+        ],
+        "rank_within_scope": 12,
+        "share_of_tracked_scope_pct": 1.900159283393149,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Insurance / Pensions / ETFs / Hedge Funds",
+        "source_url": null,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "27db7d1b80a38bca90",
+        "scope": "U.S. sector",
+        "name": "Insurance companies",
+        "concept": "current_holdings",
+        "source_key": "extended_holders",
+        "frequency": "Quarterly",
+        "series": "BOGZ1LM523061105Q",
+        "as_of": "2026-01-01",
+        "current_billions": 597.931,
+        "previous_billions": 571.753,
+        "change_billions": 26.177999999999997,
+        "change_pct": 4.578550527937762,
+        "history": [
+          {
+            "date": "2015-04-01",
+            "value_billions": 313.14
+          },
+          {
+            "date": "2015-07-01",
+            "value_billions": 315.527
+          },
+          {
+            "date": "2015-10-01",
+            "value_billions": 315.704
+          },
+          {
+            "date": "2016-01-01",
+            "value_billions": 324.727
+          },
+          {
+            "date": "2016-04-01",
+            "value_billions": 339.471
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 351.105
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 340.322
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 348.75
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 359.153
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 370.749
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 384.406
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 373.453
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 366.711
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 367.776
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 366.2
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 366.828
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 369.337
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 372.676
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 374.759
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 402.747
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 408.664
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 419.635
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 404.743
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 398.712
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 424.614
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 426.467
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 422.421
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 376.341
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 367.208
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 368.434
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 392.757
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 405.739
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 408.441
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 428.035
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 445.606
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 471.923
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 551.416
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 619.053
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 549.75
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 560.68
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 529.785
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 589.24
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 571.753
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 597.931
+          }
+        ],
+        "rank_within_scope": 13,
+        "share_of_tracked_scope_pct": 1.8717911746569549,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Insurance / Pensions / ETFs / Hedge Funds",
+        "source_url": null,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "1c27856920b88bf5ff",
+        "scope": "U.S. sector",
+        "name": "State and local govt. pension funds",
+        "concept": "current_holdings",
+        "source_key": "domestic_sectors",
+        "frequency": "Quarterly",
+        "series": "LM223061143",
+        "as_of": "2026:Q1",
+        "current_billions": 573.867,
+        "previous_billions": null,
+        "change_billions": null,
+        "change_pct": null,
+        "history": [],
+        "rank_within_scope": 14,
+        "share_of_tracked_scope_pct": 1.7964601033009873,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Financial Accounts",
+        "source_url": null
+      },
+      {
+        "profile_id": "5bf347c2484464fbe1",
+        "scope": "U.S. sector",
+        "name": "Hedge funds",
+        "concept": "current_holdings",
+        "source_key": "extended_holders",
+        "frequency": "Quarterly",
+        "series": "BOGZ1FL623061103Q",
+        "as_of": "2025-10-01",
+        "current_billions": 315.298,
+        "previous_billions": 294.907,
+        "change_billions": 20.39100000000002,
+        "change_pct": 6.914383178425748,
+        "history": [
+          {
+            "date": "2015-01-01",
+            "value_billions": 200.407
+          },
+          {
+            "date": "2015-04-01",
+            "value_billions": 188.008
+          },
+          {
+            "date": "2015-07-01",
+            "value_billions": 182.911
+          },
+          {
+            "date": "2015-10-01",
+            "value_billions": 173.468
+          },
+          {
+            "date": "2016-01-01",
+            "value_billions": 182.233
+          },
+          {
+            "date": "2016-04-01",
+            "value_billions": 205.971
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 201.808
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 204.283
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 196.807
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 174.927
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 176.311
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 197.947
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 196.028
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 210.691
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 211.38
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 212.009
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 218.631
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 241.605
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 256.538
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 232.854
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 211.29
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 189.007
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 195.972
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 149.614
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 137.202
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 144.076
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 148.461
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 161.2
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 186.675
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 193.242
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 192.487
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 172.626
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 189.445
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 196.853
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 223.746
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 209.446
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 236.671
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 248.292
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 275.632
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 277.74
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 270.426
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 287.058
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 294.907
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 315.298
+          }
+        ],
+        "rank_within_scope": 15,
+        "share_of_tracked_scope_pct": 0.9870236093913654,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Insurance / Pensions / ETFs / Hedge Funds",
+        "source_url": null,
+        "latest_direction": "accumulating"
+      },
+      {
+        "profile_id": "e69a955b3778356542",
+        "scope": "U.S. sector",
+        "name": "Nonfinancial corporate business",
+        "concept": "current_holdings",
+        "source_key": "domestic_sectors",
+        "frequency": "Quarterly",
+        "series": "LM103061103",
+        "as_of": "2026:Q1",
+        "current_billions": 132.405,
+        "previous_billions": null,
+        "change_billions": null,
+        "change_pct": null,
+        "history": [],
+        "rank_within_scope": 16,
+        "share_of_tracked_scope_pct": 0.4144868061372534,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Financial Accounts",
+        "source_url": null
+      },
+      {
+        "profile_id": "e49679bf515903cec5",
+        "scope": "U.S. sector",
+        "name": "Other financial business",
+        "concept": "current_holdings",
+        "source_key": "domestic_sectors",
+        "frequency": "Quarterly",
+        "series": "FL503061123",
+        "as_of": "2026:Q1",
+        "current_billions": 101.845,
+        "previous_billions": null,
+        "change_billions": null,
+        "change_pct": null,
+        "history": [],
+        "rank_within_scope": 17,
+        "share_of_tracked_scope_pct": 0.3188203524870554,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Financial Accounts",
+        "source_url": null
+      },
+      {
+        "profile_id": "19a1b92b75d1029118",
+        "scope": "U.S. sector",
+        "name": "Nonfinancial noncorporate business",
+        "concept": "current_holdings",
+        "source_key": "domestic_sectors",
+        "frequency": "Quarterly",
+        "series": "LM113061003",
+        "as_of": "2026:Q1",
+        "current_billions": 92.201,
+        "previous_billions": null,
+        "change_billions": null,
+        "change_pct": null,
+        "history": [],
+        "rank_within_scope": 18,
+        "share_of_tracked_scope_pct": 0.2886303237238843,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Financial Accounts",
+        "source_url": null
+      },
+      {
+        "profile_id": "774b97c51a7afadc46",
+        "scope": "U.S. sector",
+        "name": "Defined contribution plans",
+        "concept": "current_holdings",
+        "source_key": "domestic_sectors",
+        "frequency": "Quarterly",
+        "series": "LM343061113",
+        "as_of": "2026:Q1",
+        "current_billions": 16.127,
+        "previous_billions": null,
+        "change_billions": null,
+        "change_pct": null,
+        "history": [],
+        "rank_within_scope": 19,
+        "share_of_tracked_scope_pct": 0.05048471524923897,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Financial Accounts",
+        "source_url": null
+      }
+    ],
+    "note": "Holder profiles preserve each source's own cadence. Foreign-country profiles are monthly current holdings, U.S. sectors are quarterly aggregate holdings, and primary-dealer profiles are weekly market-positioning series rather than ownership balances."
+  },
+  "flow_intelligence": {
+    "generated_at": "2026-09-10T19:40:13Z",
+    "scope_summaries": [
+      {
+        "scope": "Foreign country",
+        "concept": "current_holdings",
+        "profile_count": 20,
+        "change_count": 20,
+        "accumulating_count": 7,
+        "reducing_count": 13,
+        "flat_count": 0,
+        "accumulation_breadth_pct": 35.0,
+        "median_change_pct": -0.8655916392044956,
+        "observation_dates": [
+          "2026-06"
+        ],
+        "frequencies": [
+          "Monthly"
+        ],
+        "reported_total_change_billions": -72.10000000000036,
+        "top_accumulators": [
+          {
+            "profile_id": "0abb56726b47a9d77d",
+            "name": "Canada",
+            "change_billions": 23.80000000000001,
+            "change_pct": 5.461220743460305,
+            "as_of": "2026-06"
+          },
+          {
+            "profile_id": "24f0ec9594ef4d337b",
+            "name": "Belgium",
+            "change_billions": 10.5,
+            "change_pct": 2.2245762711864407,
+            "as_of": "2026-06"
+          },
+          {
+            "profile_id": "fe5a06cc1fc3d4edd1",
+            "name": "Singapore",
+            "change_billions": 6.399999999999977,
+            "change_pct": 2.302158273381287,
+            "as_of": "2026-06"
+          },
+          {
+            "profile_id": "7ebd91f02831f8117e",
+            "name": "India",
+            "change_billions": 5.099999999999994,
+            "change_pct": 2.813017098731381,
+            "as_of": "2026-06"
+          },
+          {
+            "profile_id": "a02804d388ebfdab48",
+            "name": "Switzerland",
+            "change_billions": 3.7999999999999545,
+            "change_pct": 1.3518320882248147,
+            "as_of": "2026-06"
+          }
+        ],
+        "top_reducers": [
+          {
+            "profile_id": "7838b65c67314ac315",
+            "name": "Japan",
+            "change_billions": -26.399999999999864,
+            "change_pct": -2.3095092292887642,
+            "as_of": "2026-06"
+          },
+          {
+            "profile_id": "32efcd32716675dc1d",
+            "name": "China, Mainland",
+            "change_billions": -25.899999999999977,
+            "change_pct": -3.928408918549974,
+            "as_of": "2026-06"
+          },
+          {
+            "profile_id": "3c6a85b8986163bb63",
+            "name": "Cayman Islands",
+            "change_billions": -18.19999999999999,
+            "change_pct": -3.8616592403988945,
+            "as_of": "2026-06"
+          },
+          {
+            "profile_id": "c588bed2a1c2ee5508",
+            "name": "Hong Kong",
+            "change_billions": -16.099999999999966,
+            "change_pct": -5.921294593600576,
+            "as_of": "2026-06"
+          },
+          {
+            "profile_id": "62b487befec8d3c201",
+            "name": "United Kingdom",
+            "change_billions": -8.700000000000045,
+            "change_pct": -0.9171410499683792,
+            "as_of": "2026-06"
+          }
+        ]
+      },
+      {
+        "scope": "U.S. sector",
+        "concept": "current_holdings",
+        "profile_count": 19,
+        "change_count": 8,
+        "accumulating_count": 8,
+        "reducing_count": 0,
+        "flat_count": 0,
+        "accumulation_breadth_pct": 100.0,
+        "median_change_pct": 4.869950314646198,
+        "observation_dates": [
+          "2025-10-01",
+          "2026-01-01"
+        ],
+        "frequencies": [
+          "Quarterly"
+        ],
+        "reported_total_change_billions": null,
+        "top_accumulators": [
+          {
+            "profile_id": "2a43969994f0ac62ac",
+            "name": "Private depository institutions",
+            "change_billions": 87.83399999999983,
+            "change_pct": 4.4773494564267065,
+            "as_of": "2026-01-01"
+          },
+          {
+            "profile_id": "6744531245f5a13bff",
+            "name": "Security brokers and dealers",
+            "change_billions": 77.95500000000004,
+            "change_pct": 14.370697823610316,
+            "as_of": "2026-01-01"
+          },
+          {
+            "profile_id": "e6cf8cd3c979461286",
+            "name": "Exchange-traded funds",
+            "change_billions": 73.05200000000002,
+            "change_pct": 10.34730878186969,
+            "as_of": "2026-01-01"
+          },
+          {
+            "profile_id": "e2689f5ea65834db2a",
+            "name": "U.S.-chartered depository institutions",
+            "change_billions": 72.76700000000005,
+            "change_pct": 4.170399089890509,
+            "as_of": "2026-01-01"
+          },
+          {
+            "profile_id": "d9dbe5f2e9e215d97b",
+            "name": "Pension funds",
+            "change_billions": 59.04600000000005,
+            "change_pct": 5.161350101354634,
+            "as_of": "2026-01-01"
+          }
+        ],
+        "top_reducers": []
+      },
+      {
+        "scope": "Primary dealer",
+        "concept": "market_positioning",
+        "profile_count": 3,
+        "change_count": 3,
+        "accumulating_count": 1,
+        "reducing_count": 2,
+        "flat_count": 0,
+        "accumulation_breadth_pct": 33.33333333333333,
+        "median_change_pct": -8.900572135456935,
+        "observation_dates": [
+          "2026-08-26"
+        ],
+        "frequencies": [
+          "Weekly; updated Thursdays with the previous week's data"
+        ],
+        "reported_total_change_billions": null,
+        "top_accumulators": [
+          {
+            "profile_id": "0e2ff544ed14b70820",
+            "name": "Treasury dealer net position ex-TIPS",
+            "change_billions": 41.20100000000002,
+            "change_pct": 9.44097927159572,
+            "as_of": "2026-08-26"
+          }
+        ],
+        "top_reducers": [
+          {
+            "profile_id": "f21942ed292b92fa6a",
+            "name": "Treasury fails to deliver ex-TIPS",
+            "change_billions": -11.260000000000005,
+            "change_pct": -12.80782574077234,
+            "as_of": "2026-08-26"
+          },
+          {
+            "profile_id": "2e97b56e1725fe973a",
+            "name": "Treasury fails to receive ex-TIPS",
+            "change_billions": -8.634,
+            "change_pct": -8.900572135456935,
+            "as_of": "2026-08-26"
+          }
+        ]
+      }
+    ],
+    "signals": [
+      {
+        "type": "directional_divergence",
+        "label": "Domestic/foreign directional divergence",
+        "strength_pct_points": 65.0,
+        "description": "Tracked U.S. sector accumulation breadth is 100.0% versus 35.0% for foreign countries.",
+        "caveat": "This compares directional breadth only. U.S. sectors are quarterly while foreign-country data are monthly, so the dollar changes are not added together."
+      }
+    ],
+    "signal_count": 1,
+    "foreign_concentration": {
+      "as_of": "2026-06",
+      "top5_share_pct": 39.05903860630175,
+      "top10_share_pct": 59.848370792558335,
+      "foreign_total_billions": 9299.0
+    },
+    "note": "Phase 9 compares accumulation/reduction breadth within each source cadence instead of summing monthly, quarterly and weekly changes into a false synchronized flow number. Primary-dealer series remain classified as market positioning, not ownership."
   }
 }
