@@ -4,15 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>US Treasury Ownership Tracker</title>
-  <meta name="description" content="Interactive U.S. Treasury ownership tracker using official Treasury, Federal Reserve, New York Fed and SEC sources, with global search, holder comparison, release-freshness diagnostics, flow regimes, alerts and CUSIP analytics." />
+  <meta name="description" content="Interactive U.S. Treasury ownership and market-structure tracker using official Treasury, Federal Reserve, New York Fed and SEC sources, with global search, holder comparison, auction-demand diagnostics, flow regimes and CUSIP analytics." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="phase11.css" />
+  <link rel="stylesheet" href="phase12.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 </head>
 <body>
   <header class="shell hero">
     <div>
-      <div class="eyebrow">OFFICIAL-DATA DASHBOARD · PHASE 11</div>
+      <div class="eyebrow">OFFICIAL-DATA DASHBOARD · PHASE 12</div>
       <h1>US Treasury Ownership Tracker</h1>
       <p class="lede">Who holds U.S. Treasury securities — with source-specific dates, holder drill-downs, cross-holder flow regimes, release-freshness diagnostics, persistent alerts and CUSIP-level concentration intelligence.</p>
     </div>
@@ -73,153 +74,71 @@
     </section>
 
     <section class="panel">
-      <div class="panel-head">
-        <div><h2>Federal Reserve SOMA Treasury Portfolio</h2><p id="somaMeta"></p></div>
-      </div>
+      <div class="panel-head"><div><h2>Federal Reserve SOMA Treasury Portfolio</h2><p id="somaMeta"></p></div></div>
       <div class="grid-2">
-        <div>
-          <div class="chart-wrap compact"><canvas id="somaChart"></canvas></div>
-          <div class="metric-strip" id="somaMetrics"></div>
-        </div>
-        <div class="table-wrap table-tall">
-          <table>
-            <thead><tr><th>CUSIP</th><th>Type</th><th>Maturity</th><th>Par value</th></tr></thead>
-            <tbody id="somaTable"></tbody>
-          </table>
-        </div>
+        <div><div class="chart-wrap compact"><canvas id="somaChart"></canvas></div><div class="metric-strip" id="somaMetrics"></div></div>
+        <div class="table-wrap table-tall"><table><thead><tr><th>CUSIP</th><th>Type</th><th>Maturity</th><th>Par value</th></tr></thead><tbody id="somaTable"></tbody></table></div>
       </div>
     </section>
 
     <section class="panel">
       <div class="panel-head"><div><h2>SOMA Concentration & Maturity View</h2><p id="somaConcentrationMeta"></p></div></div>
-      <div class="grid-2">
-        <div class="chart-wrap compact"><canvas id="somaConcentrationChart"></canvas></div>
-        <div class="table-wrap">
-          <table><thead><tr><th>Maturity bucket</th><th>Stored SOMA par</th></tr></thead><tbody id="somaConcentrationTable"></tbody></table>
-        </div>
-      </div>
+      <div class="grid-2"><div class="chart-wrap compact"><canvas id="somaConcentrationChart"></canvas></div><div class="table-wrap"><table><thead><tr><th>Maturity bucket</th><th>Stored SOMA par</th></tr></thead><tbody id="somaConcentrationTable"></tbody></table></div></div>
       <div class="note inline-note">This maturity view is calculated from the largest SOMA positions stored in the dashboard, so it is a concentration view rather than a complete maturity distribution of the full portfolio.</div>
     </section>
 
     <section class="panel">
       <div class="panel-head"><div><h2>Banks & Broker-Dealer Treasury Holdings</h2><p id="institutionMeta"></p></div></div>
-      <div class="grid-2">
-        <div class="chart-wrap"><canvas id="institutionChart"></canvas></div>
-        <div class="table-wrap">
-          <table><thead><tr><th>Institution sector</th><th>Holdings</th><th>As of</th><th>Series</th></tr></thead><tbody id="institutionTable"></tbody></table>
-        </div>
-      </div>
+      <div class="grid-2"><div class="chart-wrap"><canvas id="institutionChart"></canvas></div><div class="table-wrap"><table><thead><tr><th>Institution sector</th><th>Holdings</th><th>As of</th><th>Series</th></tr></thead><tbody id="institutionTable"></tbody></table></div></div>
       <div class="note inline-note">These are Federal Reserve sector aggregates. They do not identify the Treasury holdings of an individual bank or broker-dealer.</div>
     </section>
 
     <section class="panel">
       <div class="panel-head"><div><h2>Insurance, Pensions, ETFs & Hedge Funds</h2><p id="extendedMeta"></p></div></div>
-      <div class="grid-2">
-        <div class="chart-wrap"><canvas id="extendedChart"></canvas></div>
-        <div class="table-wrap table-tall">
-          <table><thead><tr><th>Holder sector</th><th>Holdings</th><th>QoQ</th><th>YoY</th><th>As of</th></tr></thead><tbody id="extendedTable"></tbody></table>
-        </div>
-      </div>
+      <div class="grid-2"><div class="chart-wrap"><canvas id="extendedChart"></canvas></div><div class="table-wrap table-tall"><table><thead><tr><th>Holder sector</th><th>Holdings</th><th>QoQ</th><th>YoY</th><th>As of</th></tr></thead><tbody id="extendedTable"></tbody></table></div></div>
       <div class="note inline-note">Sector-level holdings come from Federal Reserve Financial Accounts via FRED. ETF and hedge-fund figures are aggregates; individual-fund detail comes from Form N-PORT when the quarterly cache is available.</div>
     </section>
 
     <section class="panel">
       <div class="panel-head"><div><h2>Primary Dealer Treasury Market Positioning</h2><p id="dealerMeta"></p></div></div>
-      <div class="metric-strip" id="dealerMetrics"></div>
-      <div class="chart-wrap"><canvas id="dealerChart"></canvas></div>
-      <div class="table-wrap">
-        <table><thead><tr><th>Series</th><th>Latest</th><th>WoW</th><th>As of</th></tr></thead><tbody id="dealerTable"></tbody></table>
-      </div>
+      <div class="metric-strip" id="dealerMetrics"></div><div class="chart-wrap"><canvas id="dealerChart"></canvas></div><div class="table-wrap"><table><thead><tr><th>Series</th><th>Latest</th><th>WoW</th><th>As of</th></tr></thead><tbody id="dealerTable"></tbody></table></div>
       <div class="note inline-note">Primary-dealer positions are aggregate net positions reported to the New York Fed. They are market-positioning data, not a named-dealer ownership register.</div>
     </section>
 
     <section class="panel">
-      <div class="panel-head">
-        <div><h2>Largest Holder Changes</h2><p id="moverMeta"></p></div>
-        <select id="moverScope">
-          <option value="all">All scopes</option>
-          <option value="Foreign country">Foreign countries</option>
-          <option value="U.S. sector">U.S. sectors</option>
-          <option value="Primary dealer">Primary dealer series</option>
-        </select>
-      </div>
-      <div class="table-wrap table-tall">
-        <table><thead><tr><th>Scope</th><th>Holder / series</th><th>Period</th><th>Current</th><th>Change</th></tr></thead><tbody id="moverTable"></tbody></table>
-      </div>
+      <div class="panel-head"><div><h2>Largest Holder Changes</h2><p id="moverMeta"></p></div><select id="moverScope"><option value="all">All scopes</option><option value="Foreign country">Foreign countries</option><option value="U.S. sector">U.S. sectors</option><option value="Primary dealer">Primary dealer series</option></select></div>
+      <div class="table-wrap table-tall"><table><thead><tr><th>Scope</th><th>Holder / series</th><th>Period</th><th>Current</th><th>Change</th></tr></thead><tbody id="moverTable"></tbody></table></div>
     </section>
 
     <section class="panel">
-      <div class="panel-head">
-        <div><h2>CUSIP Security Intelligence</h2><p id="securityMeta"></p></div>
-        <input id="cusipSearch" type="search" placeholder="Search CUSIP, type, maturity…" />
-      </div>
-      <div class="metric-strip" id="securityMetrics"></div>
-      <div id="nportStatus" class="note inline-note"></div>
-      <div class="table-wrap table-tall security-table">
-        <table>
-          <thead><tr><th>CUSIP</th><th>Type</th><th>Maturity</th><th>SOMA par</th><th>SOMA % outstanding</th><th>Recent auction</th><th>Auction size</th><th>N-PORT fund value</th><th>Funds</th></tr></thead>
-          <tbody id="securityTable"></tbody>
-        </table>
-      </div>
+      <div class="panel-head"><div><h2>CUSIP Security Intelligence</h2><p id="securityMeta"></p></div><input id="cusipSearch" type="search" placeholder="Search CUSIP, type, maturity…" /></div>
+      <div class="metric-strip" id="securityMetrics"></div><div id="nportStatus" class="note inline-note"></div>
+      <div class="table-wrap table-tall security-table"><table><thead><tr><th>CUSIP</th><th>Type</th><th>Maturity</th><th>SOMA par</th><th>SOMA % outstanding</th><th>Recent auction</th><th>Auction size</th><th>N-PORT fund value</th><th>Funds</th></tr></thead><tbody id="securityTable"></tbody></table></div>
       <div class="note inline-note">This cross-source table starts with SOMA securities and matches them to Treasury auction records and the cached SEC N-PORT fund dataset when available. Click a CUSIP row to open the issuance-history drill-down; Phase 8 adds percent-outstanding concentration diagnostics.</div>
     </section>
 
     <section class="panel">
-      <div class="panel-head">
-        <div>
-          <h2>Money-Market Funds Holding Treasuries</h2>
-          <p id="mmfMeta"></p>
-        </div>
-        <input id="fundSearch" type="search" placeholder="Search fund…" />
-      </div>
-      <div class="metric-strip" id="mmfMetrics"></div>
-      <div class="note inline-note">Direct Treasury securities and Treasury-collateralized repurchase agreements are shown separately to avoid treating repo collateral as direct Treasury ownership.</div>
-      <div class="table-wrap table-tall">
-        <table>
-          <thead><tr><th>Fund</th><th>Series</th><th>Direct Treasuries</th><th>Treasury repo</th><th>Net assets</th></tr></thead>
-          <tbody id="mmfTable"></tbody>
-        </table>
-      </div>
+      <div class="panel-head"><div><h2>Money-Market Funds Holding Treasuries</h2><p id="mmfMeta"></p></div><input id="fundSearch" type="search" placeholder="Search fund…" /></div>
+      <div class="metric-strip" id="mmfMetrics"></div><div class="note inline-note">Direct Treasury securities and Treasury-collateralized repurchase agreements are shown separately to avoid treating repo collateral as direct Treasury ownership.</div>
+      <div class="table-wrap table-tall"><table><thead><tr><th>Fund</th><th>Series</th><th>Direct Treasuries</th><th>Treasury repo</th><th>Net assets</th></tr></thead><tbody id="mmfTable"></tbody></table></div>
     </section>
 
     <section class="panel">
-      <div class="panel-head">
-        <div><h2>Treasury Auction Takedown</h2><p id="auctionMeta"></p></div>
-      </div>
-      <div class="grid-2">
-        <div class="chart-wrap compact"><canvas id="auctionChart"></canvas></div>
-        <div class="table-wrap table-tall">
-          <table>
-            <thead><tr><th>Date</th><th>Security</th><th>Accepted</th><th>B/C</th><th>Dealer</th><th>Indirect</th><th>Direct</th></tr></thead>
-            <tbody id="auctionTable"></tbody>
-          </table>
-        </div>
-      </div>
+      <div class="panel-head"><div><h2>Treasury Auction Takedown</h2><p id="auctionMeta"></p></div></div>
+      <div class="grid-2"><div class="chart-wrap compact"><canvas id="auctionChart"></canvas></div><div class="table-wrap table-tall"><table><thead><tr><th>Date</th><th>Security</th><th>Accepted</th><th>B/C</th><th>Dealer</th><th>Indirect</th><th>Direct</th></tr></thead><tbody id="auctionTable"></tbody></table></div></div>
       <div class="note inline-note">Auction takedown shows who was awarded securities at auction. It is not the same thing as current holdings after secondary-market trading.</div>
     </section>
 
     <section class="panel">
       <div class="panel-head"><div><h2>Domestic & Sector Holders</h2><p id="sectorMeta"></p></div></div>
-      <div class="chart-wrap tall"><canvas id="sectorChart"></canvas></div>
-      <div class="table-wrap">
-        <table><thead><tr><th>Sector</th><th>Holdings</th><th>Fed series</th></tr></thead><tbody id="sectorTable"></tbody></table>
-      </div>
+      <div class="chart-wrap tall"><canvas id="sectorChart"></canvas></div><div class="table-wrap"><table><thead><tr><th>Sector</th><th>Holdings</th><th>Fed series</th></tr></thead><tbody id="sectorTable"></tbody></table></div>
     </section>
 
-    <section class="panel">
-      <div class="panel-head"><div><h2>Tracker History</h2><p>One compact snapshot is retained per day so the dashboard builds its own long-run history over time.</p></div></div>
-      <div class="chart-wrap"><canvas id="historyChart"></canvas></div>
-      <div id="historyEmpty" class="empty-state" hidden>History starts accumulating after Phase 3 is deployed. More points will appear automatically with daily updater runs.</div>
-    </section>
+    <section class="panel"><div class="panel-head"><div><h2>Tracker History</h2><p>One compact snapshot is retained per day so the dashboard builds its own long-run history over time.</p></div></div><div class="chart-wrap"><canvas id="historyChart"></canvas></div><div id="historyEmpty" class="empty-state" hidden>History starts accumulating after Phase 3 is deployed. More points will appear automatically with daily updater runs.</div></section>
 
-    <section class="panel">
-      <div class="panel-head"><div><h2>Source Health</h2><p>Every daily source is checked automatically. Large SEC bulk data is handled separately because SEC currently blocks GitHub-hosted runners.</p></div></div>
-      <div id="sourceHealth" class="source-grid"></div>
-    </section>
+    <section class="panel"><div class="panel-head"><div><h2>Source Health</h2><p>Every daily source is checked automatically. Large SEC bulk data is handled separately because SEC currently blocks GitHub-hosted runners.</p></div></div><div id="sourceHealth" class="source-grid"></div></section>
 
-    <section class="note">
-      <strong>Important:</strong> “Daily updated” means the website checks official sources every day. Treasury-holder datasets publish on different schedules. Every section displays the latest available observation date rather than presenting stale data as today's holdings.
-    </section>
+    <section class="note"><strong>Important:</strong> “Daily updated” means the website checks official sources every day. Treasury-holder datasets publish on different schedules. Every section displays the latest available observation date rather than presenting stale data as today's holdings.</section>
   </main>
 
   <footer class="shell footer">Sources: U.S. Treasury Fiscal Data and Monthly Treasury Statement, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, New York Fed SOMA and Primary Dealer Statistics, SEC Form N-MFP, and SEC Form N-PORT.</footer>
@@ -232,5 +151,6 @@
   <script src="phase9.js"></script>
   <script src="phase10.js"></script>
   <script src="phase11.js"></script>
+  <script src="phase12.js"></script>
 </body>
 </html>
