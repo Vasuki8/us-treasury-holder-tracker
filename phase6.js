@@ -1,10 +1,44 @@
 const p6fmtB=v=>v==null?'—':`$${Number(v).toLocaleString(undefined,{maximumFractionDigits:1})}B`;
 const p6fmtPct=v=>v==null?'—':`${Number(v)>=0?'+':''}${Number(v).toFixed(1)}%`;
 const p6signedB=v=>v==null?'—':`${Number(v)>=0?'+':''}${Number(v).toFixed(1)}B`;
-const p6esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
+const p6esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let p6data;
 
+function ensurePhase6Scaffold(){
+  const eyebrow=document.querySelector('.eyebrow');
+  if(eyebrow) eyebrow.textContent='OFFICIAL-DATA DASHBOARD · PHASE 6';
+
+  const downloads=document.querySelector('.download-row');
+  if(downloads&&!document.getElementById('downloadHistoryCsv')){
+    downloads.insertAdjacentHTML('beforeend','<button id="downloadHistoryCsv" type="button">Download history CSV</button><button id="downloadSourceCsv" type="button">Download sources CSV</button>');
+  }
+
+  const moverPanel=document.getElementById('moverTable')?.closest('.panel');
+  if(moverPanel&&!document.getElementById('alertTable')){
+    moverPanel.insertAdjacentHTML('afterend',`<section class="panel">
+      <div class="panel-head">
+        <div><h2>Unusual Holder-Change Monitor</h2><p id="alertMeta"></p></div>
+        <div class="panel-actions"><select id="alertScope" aria-label="Filter unusual changes"><option value="all">All scopes</option><option value="Foreign country">Foreign countries</option><option value="U.S. sector">U.S. sectors</option><option value="Primary dealer">Primary dealer series</option></select><button id="downloadAlertsCsv" type="button">Download alerts CSV</button></div>
+      </div>
+      <div class="metric-strip" id="alertMetrics"></div>
+      <div class="table-wrap table-tall"><table><thead><tr><th>Severity</th><th>Scope</th><th>Holder / series</th><th>Period</th><th>Change</th><th>% change</th><th>Vs baseline</th><th>As of</th></tr></thead><tbody id="alertTable"></tbody></table></div>
+      <div class="note inline-note">Flags identify changes that are unusually large relative to the available history and a source-specific dollar floor. They are research signals, not forecasts or trading recommendations.</div>
+    </section>`);
+  }
+
+  const sourcePanel=document.getElementById('sourceHealth')?.closest('.panel');
+  if(sourcePanel&&!document.getElementById('provenanceTable')){
+    sourcePanel.insertAdjacentHTML('afterend',`<section class="panel">
+      <div class="panel-head"><div><h2>Audit Trail & Source Provenance</h2><p id="provenanceMeta"></p></div><input id="provenanceSearch" type="search" placeholder="Search source, cadence, status…" /></div>
+      <div class="metric-strip metric-four" id="provenanceMetrics"></div>
+      <div class="table-wrap table-tall provenance-table"><table><thead><tr><th>Dataset</th><th>Observation date</th><th>Cadence</th><th>Health</th><th>Last checked</th><th>Official links</th></tr></thead><tbody id="provenanceTable"></tbody></table></div>
+      <div class="note inline-note">Observation date and retrieval time are intentionally separate. A healthy source can legitimately report an older monthly or quarterly observation even though the website checked it today.</div>
+    </section>`);
+  }
+}
+
 async function loadPhase6(){
+  ensurePhase6Scaffold();
   const r=await fetch(`data/dashboard.json?v=${Date.now()}`);
   if(!r.ok) throw new Error(`dashboard.json ${r.status}`);
   p6data=await r.json();
