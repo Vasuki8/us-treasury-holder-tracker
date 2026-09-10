@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-10T20:14:51Z",
+  "generated_at": "2026-09-10T21:02:12Z",
   "overview": {
-    "as_of": "2026-09-08",
-    "total_public_debt": 40084090785446.35,
-    "debt_held_by_public": 32387921094746.81,
-    "intragovernmental_holdings": 7696169690699.54,
-    "daily_change": -10499850855.351562,
+    "as_of": "2026-09-09",
+    "total_public_debt": 40074284925786.5,
+    "debt_held_by_public": 32388611390871.8,
+    "intragovernmental_holdings": 7685673534914.7,
+    "daily_change": -9805859659.851562,
     "frequency": "Business daily",
     "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny"
   },
   "fed": {
-    "as_of": "2026-09-02",
-    "treasury_holdings_millions": 4552347.0,
-    "treasury_holdings_billions": 4552.347,
+    "as_of": "2026-09-09",
+    "treasury_holdings_millions": 4552337.0,
+    "treasury_holdings_billions": 4552.337,
     "frequency": "Weekly (Wednesday level; published Thursday)",
     "source_url": "https://www.federalreserve.gov/releases/h41/current/",
     "retrieval_url": "https://fred.stlouisfed.org/series/TREAST",
@@ -1532,64 +1532,64 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T20:14:12Z"
+      "checked_at": "2026-09-10T21:01:31Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T20:14:12Z"
+      "checked_at": "2026-09-10T21:01:31Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T20:14:46Z"
+      "checked_at": "2026-09-10T21:02:03Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T20:14:25Z"
+      "checked_at": "2026-09-10T21:01:43Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T20:14:26Z"
+      "checked_at": "2026-09-10T21:01:44Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T20:14:26Z",
+      "checked_at": "2026-09-10T21:01:44Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T20:14:26Z"
+      "checked_at": "2026-09-10T21:01:46Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-10T20:14:27Z"
+      "checked_at": "2026-09-10T21:01:47Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-10T20:14:28Z"
+      "checked_at": "2026-09-10T21:01:51Z"
     },
     "extended_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T20:14:34Z"
+      "checked_at": "2026-09-10T21:01:53Z"
     },
     "nport": {
       "status": "pending",
-      "checked_at": "2026-09-10T20:14:34Z",
+      "checked_at": "2026-09-10T21:01:53Z",
       "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
     },
     "government_accounts": {
       "status": "ok",
-      "checked_at": "2026-09-10T20:14:36Z"
+      "checked_at": "2026-09-10T21:01:54Z"
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T20:14:26Z",
+      "checked_at": "2026-09-10T21:01:44Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
   "soma": {
-    "as_of": "2026-09-02",
+    "as_of": "2026-09-09",
     "treasury_total_billions": 4446.2865402,
     "by_type": [
       {
@@ -1914,7 +1914,7 @@
         "coupon_rate": null,
         "par_value_billions": 26.3234032,
         "inflation_compensation_billions": 0.0,
-        "percent_outstanding": 0.3790520064750071
+        "percent_outstanding": 0.3863681777911159
       },
       {
         "cusip": "91282CAV3",
@@ -2013,7 +2013,7 @@
         "coupon_rate": null,
         "par_value_billions": 21.5800875,
         "inflation_compensation_billions": 0.0,
-        "percent_outstanding": 0.3291247422340701
+        "percent_outstanding": 0.3291498420759799
       },
       {
         "cusip": "912810RX8",
@@ -2094,7 +2094,7 @@
         "coupon_rate": null,
         "par_value_billions": 20.4735924,
         "inflation_compensation_billions": 0.0,
-        "percent_outstanding": 0.2615649948332794
+        "percent_outstanding": 0.2629085337281188
       },
       {
         "cusip": "912797VE4",
@@ -2103,7 +2103,7 @@
         "coupon_rate": null,
         "par_value_billions": 20.4161103,
         "inflation_compensation_billions": 0.0,
-        "percent_outstanding": 0.0714608047466816
+        "percent_outstanding": 0.0714642367715966
       },
       {
         "cusip": "912810RC4",
@@ -2175,7 +2175,7 @@
         "coupon_rate": null,
         "par_value_billions": 19.6836884,
         "inflation_compensation_billions": 0.0,
-        "percent_outstanding": 0.2542509950013933
+        "percent_outstanding": 0.2551838104575623
       },
       {
         "cusip": "912810QY7",
@@ -2247,7 +2247,7 @@
         "coupon_rate": null,
         "par_value_billions": 18.8983008,
         "inflation_compensation_billions": 0.0,
-        "percent_outstanding": 0.0680329736873396
+        "percent_outstanding": 0.0680330936961131
       },
       {
         "cusip": "91282CPZ8",
@@ -2266,15 +2266,6 @@
         "par_value_billions": 18.7064926,
         "inflation_compensation_billions": 0.0,
         "percent_outstanding": 0.1350705153679523
-      },
-      {
-        "cusip": "912797RS8",
-        "security_type": "Bills",
-        "maturity_date": "2026-09-03",
-        "coupon_rate": null,
-        "par_value_billions": 18.5679375,
-        "inflation_compensation_billions": 0.0,
-        "percent_outstanding": 0.0569573876446716
       },
       {
         "cusip": "912810RE0",
@@ -2373,7 +2364,7 @@
         "coupon_rate": null,
         "par_value_billions": 16.9114095,
         "inflation_compensation_billions": 0.0,
-        "percent_outstanding": 0.2334156283734443
+        "percent_outstanding": 0.2340973846455657
       },
       {
         "cusip": "91282CPT2",
@@ -2457,6 +2448,15 @@
         "percent_outstanding": 0.1773961365758108
       },
       {
+        "cusip": "912797UK1",
+        "security_type": "Bills",
+        "maturity_date": "2026-10-15",
+        "coupon_rate": null,
+        "par_value_billions": 15.4729221,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.0581939669036295
+      },
+      {
         "cusip": "91282CGQ8",
         "security_type": "Notes & Bonds",
         "maturity_date": "2030-02-28",
@@ -2471,7 +2471,7 @@
         "maturity_date": "2041-02-15",
         "coupon_rate": null,
         "par_value_billions": 15.0009021,
-        "inflation_compensation_billions": 7.874723557399999,
+        "inflation_compensation_billions": 7.8741235213100005,
         "percent_outstanding": 0.6259593883360843
       },
       {
@@ -2493,15 +2493,6 @@
         "percent_outstanding": 0.1109993709441814
       },
       {
-        "cusip": "912797VB0",
-        "security_type": "Bills",
-        "maturity_date": "2026-09-08",
-        "coupon_rate": null,
-        "par_value_billions": 14.7774138,
-        "inflation_compensation_billions": 0.0,
-        "percent_outstanding": 0.0517374453483875
-      },
-      {
         "cusip": "912797TC1",
         "security_type": "Bills",
         "maturity_date": "2026-12-24",
@@ -2509,12 +2500,21 @@
         "par_value_billions": 14.7450983,
         "inflation_compensation_billions": 0.0,
         "percent_outstanding": 0.1095697506432474
+      },
+      {
+        "cusip": "91282CRG8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-08-15",
+        "coupon_rate": null,
+        "par_value_billions": 14.6705632,
+        "inflation_compensation_billions": 0.0,
+        "percent_outstanding": 0.2018781482424797
       }
     ],
-    "security_count": 433,
+    "security_count": 434,
     "frequency": "Weekly (Wednesday holdings; published Thursday)",
     "source_url": "https://www.newyorkfed.org/markets/soma-holdings",
-    "api_url": "https://markets.newyorkfed.org/api/soma/tsy/get/all/asof/2026-09-02.json"
+    "api_url": "https://markets.newyorkfed.org/api/soma/tsy/get/all/asof/2026-09-09.json"
   },
   "auctions": {
     "as_of": "2026-09-17",
@@ -3422,19 +3422,15 @@
     "note": "These are sector aggregates, not named institution-by-institution holdings."
   },
   "primary_dealers": {
-    "as_of": "2026-08-26",
+    "as_of": "2026-09-02",
     "series": [
       {
         "keyid": "PDPOSGST-TOT",
         "name": "Treasury dealer net position ex-TIPS",
-        "as_of": "2026-08-26",
-        "value_billions": 477.607,
-        "weekly_change_billions": 41.20100000000002,
+        "as_of": "2026-09-02",
+        "value_billions": 455.185,
+        "weekly_change_billions": -22.422000000000025,
         "history": [
-          {
-            "date": "2024-09-04",
-            "value_billions": 322.765
-          },
           {
             "date": "2024-09-11",
             "value_billions": 322.898
@@ -3846,20 +3842,20 @@
           {
             "date": "2026-08-26",
             "value_billions": 477.607
+          },
+          {
+            "date": "2026-09-02",
+            "value_billions": 455.185
           }
         ]
       },
       {
         "keyid": "PDFTD-USTET",
         "name": "Treasury fails to deliver ex-TIPS",
-        "as_of": "2026-08-26",
-        "value_billions": 76.655,
-        "weekly_change_billions": -11.260000000000005,
+        "as_of": "2026-09-02",
+        "value_billions": 86.026,
+        "weekly_change_billions": 9.370999999999995,
         "history": [
-          {
-            "date": "2024-09-04",
-            "value_billions": 129.061
-          },
           {
             "date": "2024-09-11",
             "value_billions": 102.606
@@ -4271,20 +4267,20 @@
           {
             "date": "2026-08-26",
             "value_billions": 76.655
+          },
+          {
+            "date": "2026-09-02",
+            "value_billions": 86.026
           }
         ]
       },
       {
         "keyid": "PDFTR-USTET",
         "name": "Treasury fails to receive ex-TIPS",
-        "as_of": "2026-08-26",
-        "value_billions": 88.371,
-        "weekly_change_billions": -8.634,
+        "as_of": "2026-09-02",
+        "value_billions": 87.259,
+        "weekly_change_billions": -1.1119999999999948,
         "history": [
-          {
-            "date": "2024-09-04",
-            "value_billions": 135.305
-          },
           {
             "date": "2024-09-11",
             "value_billions": 108.379
@@ -4696,6 +4692,10 @@
           {
             "date": "2026-08-26",
             "value_billions": 88.371
+          },
+          {
+            "date": "2026-09-02",
+            "value_billions": 87.259
           }
         ]
       }
@@ -4708,14 +4708,14 @@
   "history": [
     {
       "snapshot_date": "2026-09-10",
-      "generated_at": "2026-09-10T20:14:28Z",
-      "total_public_debt_trillions": 40.08409078544635,
-      "debt_held_by_public_trillions": 32.38792109474681,
-      "fed_treasuries_billions": 4552.347,
+      "generated_at": "2026-09-10T21:01:51Z",
+      "total_public_debt_trillions": 40.0742849257865,
+      "debt_held_by_public_trillions": 32.3886113908718,
+      "fed_treasuries_billions": 4552.337,
       "foreign_holdings_billions": 9299.0,
       "soma_treasuries_billions": 4446.2865402,
       "us_banks_treasuries_billions": 1817.612,
-      "primary_dealer_net_billions": 477.607,
+      "primary_dealer_net_billions": 455.185,
       "insurance_treasuries_billions": 597.931,
       "pension_treasuries_billions": 1203.049,
       "etf_treasuries_billions": 779.052,
@@ -5687,7 +5687,7 @@
     "note": "SEC Form N-PORT bulk files are hundreds of MB and are ingested by a separate quarterly workflow rather than the daily updater."
   },
   "security_intelligence": {
-    "as_of": "2026-09-02",
+    "as_of": "2026-09-09",
     "rows": [
       {
         "cusip": "912828YS3",
@@ -5700,8 +5700,8 @@
         "auction_offering_billions": 24.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 1170,
-        "years_to_maturity": 3.2032854209445585,
+        "days_to_maturity": 1163,
+        "years_to_maturity": 3.184120465434634,
         "source_keys": [
           "soma",
           "auctions"
@@ -5763,9 +5763,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 6.798083504449007,
+        "security_age_years": 6.8172484599589325,
         "original_term_years": 10.001368925393566,
-        "remaining_term_pct": 32.028469750889684,
+        "remaining_term_pct": 31.836846427593755,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 88.5525072,
         "soma_concentration_percentile": 76.0,
@@ -5782,8 +5782,8 @@
         "auction_offering_billions": 24.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 1078,
-        "years_to_maturity": 2.951403148528405,
+        "days_to_maturity": 1071,
+        "years_to_maturity": 2.9322381930184807,
         "source_keys": [
           "soma",
           "auctions"
@@ -5845,9 +5845,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 7.049965776865161,
+        "security_age_years": 7.069130732375085,
         "original_term_years": 10.001368925393566,
-        "remaining_term_pct": 29.50999178757186,
+        "remaining_term_pct": 29.31836846427594,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 92.61867000000001,
         "soma_concentration_percentile": 72.0,
@@ -5864,8 +5864,8 @@
         "auction_offering_billions": 38.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 1716,
-        "years_to_maturity": 4.698151950718686,
+        "days_to_maturity": 1709,
+        "years_to_maturity": 4.678986995208761,
         "source_keys": [
           "soma",
           "auctions"
@@ -5927,9 +5927,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 5.295003422313484,
+        "security_age_years": 5.314168377823409,
         "original_term_years": 9.99315537303217,
-        "remaining_term_pct": 47.013698630136986,
+        "remaining_term_pct": 46.821917808219176,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 147.6777151,
         "soma_concentration_percentile": 52.0,
@@ -5946,8 +5946,8 @@
         "auction_offering_billions": 34.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 1992,
-        "years_to_maturity": 5.453798767967146,
+        "days_to_maturity": 1985,
+        "years_to_maturity": 5.434633812457221,
         "source_keys": [
           "soma",
           "auctions"
@@ -6009,9 +6009,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 4.544832306639288,
+        "security_age_years": 4.563997262149213,
         "original_term_years": 9.998631074606434,
-        "remaining_term_pct": 54.54545454545454,
+        "remaining_term_pct": 54.353778751369106,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 140.51270510000003,
         "soma_concentration_percentile": 44.0,
@@ -6028,8 +6028,8 @@
         "auction_offering_billions": 24.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 986,
-        "years_to_maturity": 2.6995208761122518,
+        "days_to_maturity": 979,
+        "years_to_maturity": 2.6803559206023273,
         "source_keys": [
           "soma",
           "auctions"
@@ -6104,9 +6104,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 7.301848049281314,
+        "security_age_years": 7.321013004791239,
         "original_term_years": 10.001368925393566,
-        "remaining_term_pct": 26.99151382425404,
+        "remaining_term_pct": 26.799890500958117,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 84.17305890000002,
         "soma_concentration_percentile": 64.0,
@@ -6123,8 +6123,8 @@
         "auction_offering_billions": 38.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 1627,
-        "years_to_maturity": 4.454483230663929,
+        "days_to_maturity": 1620,
+        "years_to_maturity": 4.435318275154004,
         "source_keys": [
           "soma",
           "auctions"
@@ -6186,9 +6186,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 5.541409993155373,
+        "security_age_years": 5.560574948665297,
         "original_term_years": 9.995893223819301,
-        "remaining_term_pct": 44.563133388112846,
+        "remaining_term_pct": 44.37140509449466,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 140.0626147,
         "soma_concentration_percentile": 42.0,
@@ -6205,8 +6205,8 @@
         "auction_offering_billions": 36.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 1900,
-        "years_to_maturity": 5.201916495550993,
+        "days_to_maturity": 1893,
+        "years_to_maturity": 5.1827515400410675,
         "source_keys": [
           "soma",
           "auctions"
@@ -6268,9 +6268,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 4.7967145790554415,
+        "security_age_years": 4.815879534565366,
         "original_term_years": 9.998631074606434,
-        "remaining_term_pct": 52.026286966046,
+        "remaining_term_pct": 51.83461117196057,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 144.57227590000002,
         "soma_concentration_percentile": 35.0,
@@ -6287,8 +6287,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5645,
-        "years_to_maturity": 15.455167693360712,
+        "days_to_maturity": 5638,
+        "years_to_maturity": 15.436002737850787,
         "source_keys": [
           "soma",
           "auctions"
@@ -6350,9 +6350,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 14.546201232032855,
+        "security_age_years": 14.565366187542779,
         "original_term_years": 30.001368925393567,
-        "remaining_term_pct": 51.51487497718562,
+        "remaining_term_pct": 51.45099470706334,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 47.2190442,
         "soma_concentration_percentile": 95.0,
@@ -6369,8 +6369,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 4914,
-        "years_to_maturity": 13.453798767967145,
+        "days_to_maturity": 4907,
+        "years_to_maturity": 13.434633812457221,
         "source_keys": [
           "soma",
           "auctions"
@@ -6432,9 +6432,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 16.542094455852155,
+        "security_age_years": 16.56125941136208,
         "original_term_years": 29.9958932238193,
-        "remaining_term_pct": 44.85213581599124,
+        "remaining_term_pct": 44.78824388462942,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 44.902490300000004,
         "soma_concentration_percentile": 91.0,
@@ -6451,8 +6451,8 @@
         "auction_offering_billions": 33.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 2082,
-        "years_to_maturity": 5.700205338809035,
+        "days_to_maturity": 2075,
+        "years_to_maturity": 5.68104038329911,
         "source_keys": [
           "soma",
           "auctions"
@@ -6514,9 +6514,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 4.298425735797399,
+        "security_age_years": 4.317590691307323,
         "original_term_years": 9.998631074606434,
-        "remaining_term_pct": 57.009857612267254,
+        "remaining_term_pct": 56.81818181818182,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 132.74463390000003,
         "soma_concentration_percentile": 39.0,
@@ -6533,8 +6533,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5553,
-        "years_to_maturity": 15.203285420944558,
+        "days_to_maturity": 5546,
+        "years_to_maturity": 15.184120465434633,
         "source_keys": [
           "soma",
           "auctions"
@@ -6596,9 +6596,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 14.798083504449007,
+        "security_age_years": 14.817248459958932,
         "original_term_years": 30.001368925393567,
-        "remaining_term_pct": 50.6753057127213,
+        "remaining_term_pct": 50.611425442599014,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 44.6224439,
         "soma_concentration_percentile": 100.0,
@@ -6615,8 +6615,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 4822,
-        "years_to_maturity": 13.201916495550993,
+        "days_to_maturity": 4815,
+        "years_to_maturity": 13.182751540041068,
         "source_keys": [
           "soma",
           "auctions"
@@ -6678,9 +6678,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 16.79397672826831,
+        "security_age_years": 16.813141683778234,
         "original_term_years": 29.9958932238193,
-        "remaining_term_pct": 44.012413289521724,
+        "remaining_term_pct": 43.948521358159915,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 44.564249100000005,
         "soma_concentration_percentile": 87.0,
@@ -6697,8 +6697,8 @@
         "auction_offering_billions": 24.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5188,
-        "years_to_maturity": 14.203969883641342,
+        "days_to_maturity": 5181,
+        "years_to_maturity": 14.184804928131417,
         "source_keys": [
           "soma",
           "auctions"
@@ -6760,9 +6760,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 5.754962354551677,
+        "security_age_years": 5.774127310061601,
         "original_term_years": 19.958932238193018,
-        "remaining_term_pct": 71.16598079561042,
+        "remaining_term_pct": 71.06995884773663,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 83.2559695,
         "soma_concentration_percentile": 60.0,
@@ -6779,8 +6779,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5734,
-        "years_to_maturity": 15.698836413415469,
+        "days_to_maturity": 5727,
+        "years_to_maturity": 15.679671457905544,
         "source_keys": [
           "soma",
           "auctions"
@@ -6842,9 +6842,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 14.299794661190965,
+        "security_age_years": 14.318959616700889,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 52.33184265766177,
+        "remaining_term_pct": 52.26795655745185,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 43.918685599999996,
         "soma_concentration_percentile": 97.0,
@@ -6861,8 +6861,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5004,
-        "years_to_maturity": 13.700205338809035,
+        "days_to_maturity": 4997,
+        "years_to_maturity": 13.681040383299111,
         "source_keys": [
           "soma",
           "auctions"
@@ -6924,9 +6924,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 16.295687885010267,
+        "security_age_years": 16.314852840520192,
         "original_term_years": 29.9958932238193,
-        "remaining_term_pct": 45.673603504928806,
+        "remaining_term_pct": 45.609711573567,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 43.4730444,
         "soma_concentration_percentile": 88.0,
@@ -6943,8 +6943,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5096,
-        "years_to_maturity": 13.952087611225188,
+        "days_to_maturity": 5089,
+        "years_to_maturity": 13.932922655715263,
         "source_keys": [
           "soma",
           "auctions"
@@ -7006,9 +7006,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 16.046543463381244,
+        "security_age_years": 16.06570841889117,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 46.50908095281555,
+        "remaining_term_pct": 46.445194852605646,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 43.2133168,
         "soma_concentration_percentile": 94.0,
@@ -7025,8 +7025,8 @@
         "auction_offering_billions": 95.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 29,
-        "years_to_maturity": 0.07939767282683094,
+        "days_to_maturity": 22,
+        "years_to_maturity": 0.06023271731690623,
         "source_keys": [
           "soma",
           "auctions"
@@ -7101,12 +7101,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.917180013689254,
+        "security_age_years": 0.9363449691991786,
         "original_term_years": 0.9965776865160849,
-        "remaining_term_pct": 7.967032967032966,
+        "remaining_term_pct": 6.043956043956044,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 334.13542940000013,
-        "soma_concentration_percentile": 11.0,
+        "soma_concentration_percentile": 10.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -7120,8 +7120,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5188,
-        "years_to_maturity": 14.203969883641342,
+        "days_to_maturity": 5181,
+        "years_to_maturity": 14.184804928131417,
         "source_keys": [
           "soma",
           "auctions"
@@ -7183,9 +7183,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 15.797399041752225,
+        "security_age_years": 15.816563997262149,
         "original_term_years": 30.001368925393567,
-        "remaining_term_pct": 47.34440591348786,
+        "remaining_term_pct": 47.28052564336558,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 42.9031887,
         "soma_concentration_percentile": 98.0,
@@ -7202,8 +7202,8 @@
         "auction_offering_billions": 29.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 1351,
-        "years_to_maturity": 3.698836413415469,
+        "days_to_maturity": 1344,
+        "years_to_maturity": 3.679671457905544,
         "source_keys": [
           "soma",
           "auctions"
@@ -7265,9 +7265,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 6.299794661190965,
+        "security_age_years": 6.31895961670089,
         "original_term_years": 9.998631074606434,
-        "remaining_term_pct": 36.9934282584885,
+        "remaining_term_pct": 36.801752464403066,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 109.61972149999997,
         "soma_concentration_percentile": 49.0,
@@ -7284,8 +7284,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5461,
-        "years_to_maturity": 14.951403148528405,
+        "days_to_maturity": 5454,
+        "years_to_maturity": 14.932238193018481,
         "source_keys": [
           "soma",
           "auctions"
@@ -7347,9 +7347,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 15.049965776865161,
+        "security_age_years": 15.069130732375086,
         "original_term_years": 30.001368925393567,
-        "remaining_term_pct": 49.83573644825698,
+        "remaining_term_pct": 49.77185617813469,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 42.4888374,
         "soma_concentration_percentile": 96.0,
@@ -7366,8 +7366,8 @@
         "auction_offering_billions": 25.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 1262,
-        "years_to_maturity": 3.455167693360712,
+        "days_to_maturity": 1255,
+        "years_to_maturity": 3.436002737850787,
         "source_keys": [
           "soma",
           "auctions"
@@ -7429,9 +7429,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 6.537987679671458,
+        "security_age_years": 6.5571526351813825,
         "original_term_years": 9.99315537303217,
-        "remaining_term_pct": 34.57534246575342,
+        "remaining_term_pct": 34.38356164383561,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 87.40159569999999,
         "soma_concentration_percentile": 56.0,
@@ -7448,8 +7448,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5369,
-        "years_to_maturity": 14.699520876112253,
+        "days_to_maturity": 5362,
+        "years_to_maturity": 14.680355920602327,
         "source_keys": [
           "soma",
           "auctions"
@@ -7511,9 +7511,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 15.299110198494182,
+        "security_age_years": 15.318275154004107,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 49.0006388610021,
+        "remaining_term_pct": 48.93675276079219,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 41.99550730000001,
         "soma_concentration_percentile": 89.0,
@@ -7530,8 +7530,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5280,
-        "years_to_maturity": 14.455852156057494,
+        "days_to_maturity": 5273,
+        "years_to_maturity": 14.43668720054757,
         "source_keys": [
           "soma",
           "auctions"
@@ -7593,9 +7593,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 15.545516769336071,
+        "security_age_years": 15.564681724845997,
         "original_term_years": 30.001368925393567,
-        "remaining_term_pct": 48.183975177952185,
+        "remaining_term_pct": 48.120094907829895,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 43.0049451,
         "soma_concentration_percentile": 81.0,
@@ -7612,8 +7612,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 7014,
-        "years_to_maturity": 19.20328542094456,
+        "days_to_maturity": 7007,
+        "years_to_maturity": 19.184120465434635,
         "source_keys": [
           "soma",
           "auctions"
@@ -7675,9 +7675,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 10.795345653661876,
+        "security_age_years": 10.8145106091718,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 64.0138724103313,
+        "remaining_term_pct": 63.94998631012139,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 41.7916697,
         "soma_concentration_percentile": 84.0,
@@ -7694,8 +7694,8 @@
         "auction_offering_billions": 24.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5369,
-        "years_to_maturity": 14.699520876112253,
+        "days_to_maturity": 5362,
+        "years_to_maturity": 14.680355920602327,
         "source_keys": [
           "soma",
           "auctions"
@@ -7757,12 +7757,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 5.253935660506502,
+        "security_age_years": 5.2731006160164275,
         "original_term_years": 19.953456536618756,
-        "remaining_term_pct": 73.66904500548847,
+        "remaining_term_pct": 73.57299670691548,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 75.46484059999999,
-        "soma_concentration_percentile": 62.0,
+        "soma_concentration_percentile": 61.0,
         "soma_concentration_band": "elevated"
       },
       {
@@ -7776,8 +7776,8 @@
         "auction_offering_billions": 12.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 4730,
-        "years_to_maturity": 12.950034223134839,
+        "days_to_maturity": 4723,
+        "years_to_maturity": 12.930869267624914,
         "source_keys": [
           "soma",
           "auctions"
@@ -7839,9 +7839,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 17.04312114989733,
+        "security_age_years": 17.062286105407257,
         "original_term_years": 29.99315537303217,
-        "remaining_term_pct": 43.17663167503423,
+        "remaining_term_pct": 43.11273391145596,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 41.4305382,
         "soma_concentration_percentile": 93.0,
@@ -7858,8 +7858,8 @@
         "auction_offering_billions": 35.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 1443,
-        "years_to_maturity": 3.9507186858316223,
+        "days_to_maturity": 1436,
+        "years_to_maturity": 3.9315537303216974,
         "source_keys": [
           "soma",
           "auctions"
@@ -7921,9 +7921,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 6.0424366872005475,
+        "security_age_years": 6.061601642710472,
         "original_term_years": 9.99315537303217,
-        "remaining_term_pct": 39.534246575342465,
+        "remaining_term_pct": 39.34246575342466,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 132.3506532,
         "soma_concentration_percentile": 28.0,
@@ -7940,8 +7940,8 @@
         "auction_offering_billions": 12.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 7379,
-        "years_to_maturity": 20.202600958247775,
+        "days_to_maturity": 7372,
+        "years_to_maturity": 20.18343600273785,
         "source_keys": [
           "soma",
           "auctions"
@@ -8003,9 +8003,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 9.796030116358658,
+        "security_age_years": 9.815195071868583,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 67.34507620699097,
+        "remaining_term_pct": 67.28119010678105,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 40.064774500000006,
         "soma_concentration_percentile": 90.0,
@@ -8022,8 +8022,8 @@
         "auction_offering_billions": 38.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 1808,
-        "years_to_maturity": 4.950034223134839,
+        "days_to_maturity": 1801,
+        "years_to_maturity": 4.930869267624915,
         "source_keys": [
           "soma",
           "auctions"
@@ -8085,12 +8085,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 5.045859000684462,
+        "security_age_years": 5.065023956194388,
         "original_term_years": 9.995893223819301,
-        "remaining_term_pct": 49.520679265954534,
+        "remaining_term_pct": 49.328950972336344,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 141.34445720000002,
-        "soma_concentration_percentile": 27.0,
+        "soma_concentration_percentile": 26.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -8104,8 +8104,8 @@
         "auction_offering_billions": 22.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5096,
-        "years_to_maturity": 13.952087611225188,
+        "days_to_maturity": 5089,
+        "years_to_maturity": 13.932922655715263,
         "source_keys": [
           "soma",
           "auctions"
@@ -8167,9 +8167,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 6.0041067761806985,
+        "security_age_years": 6.023271731690623,
         "original_term_years": 19.956194387405887,
-        "remaining_term_pct": 69.91356839072576,
+        "remaining_term_pct": 69.81753326930992,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 75.48874940000002,
         "soma_concentration_percentile": 58.0,
@@ -8186,8 +8186,8 @@
         "auction_offering_billions": 11.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 4638,
-        "years_to_maturity": 12.698151950718685,
+        "days_to_maturity": 4631,
+        "years_to_maturity": 12.678986995208762,
         "source_keys": [
           "soma",
           "auctions"
@@ -8249,9 +8249,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 17.300479123887747,
+        "security_age_years": 17.319644079397673,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 42.32910468193848,
+        "remaining_term_pct": 42.265218581728575,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 38.778773,
         "soma_concentration_percentile": 92.0,
@@ -8268,8 +8268,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5826,
-        "years_to_maturity": 15.950718685831623,
+        "days_to_maturity": 5819,
+        "years_to_maturity": 15.931553730321697,
         "source_keys": [
           "soma",
           "auctions"
@@ -8331,9 +8331,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 14.047912388774812,
+        "security_age_years": 14.067077344284737,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 53.171488546134896,
+        "remaining_term_pct": 53.10760244592498,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 41.795432299999995,
         "soma_concentration_percentile": 79.0,
@@ -8350,8 +8350,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 6830,
-        "years_to_maturity": 18.699520876112253,
+        "days_to_maturity": 6823,
+        "years_to_maturity": 18.680355920602327,
         "source_keys": [
           "soma",
           "auctions"
@@ -8413,9 +8413,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 11.301848049281315,
+        "security_age_years": 11.321013004791238,
         "original_term_years": 30.001368925393567,
-        "remaining_term_pct": 62.32889213360102,
+        "remaining_term_pct": 62.26501186347873,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 41.285714600000006,
         "soma_concentration_percentile": 80.0,
@@ -8426,14 +8426,14 @@
         "security_type": "Notes & Bonds",
         "maturity_date": "2027-08-15",
         "soma_par_billions": 26.3234032,
-        "soma_pct_outstanding": 37.905200647500706,
+        "soma_pct_outstanding": 38.63681777911159,
         "latest_auction_date": "2017-10-11",
         "auction_security_term": "9-Year 10-Month",
         "auction_offering_billions": 20.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 347,
-        "years_to_maturity": 0.9500342231348392,
+        "days_to_maturity": 340,
+        "years_to_maturity": 0.9308692676249144,
         "source_keys": [
           "soma",
           "auctions"
@@ -8495,12 +8495,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 9.048596851471595,
+        "security_age_years": 9.067761806981519,
         "original_term_years": 9.998631074606434,
-        "remaining_term_pct": 9.501642935377875,
+        "remaining_term_pct": 9.309967141292443,
         "maturity_consistency": "match",
-        "implied_outstanding_billions": 69.4453604,
-        "soma_concentration_percentile": 61.0,
+        "implied_outstanding_billions": 68.1303604,
+        "soma_concentration_percentile": 62.0,
         "soma_concentration_band": "elevated"
       },
       {
@@ -8514,8 +8514,8 @@
         "auction_offering_billions": 38.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 1535,
-        "years_to_maturity": 4.202600958247776,
+        "days_to_maturity": 1528,
+        "years_to_maturity": 4.183436002737851,
         "source_keys": [
           "soma",
           "auctions"
@@ -8577,12 +8577,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 5.793292265571527,
+        "security_age_years": 5.812457221081451,
         "original_term_years": 9.995893223819301,
-        "remaining_term_pct": 42.04327581484525,
+        "remaining_term_pct": 41.85154752122706,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 133.68082069999994,
-        "soma_concentration_percentile": 25.0,
+        "soma_concentration_percentile": 24.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -8596,8 +8596,8 @@
         "auction_offering_billions": 24.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5280,
-        "years_to_maturity": 14.455852156057494,
+        "days_to_maturity": 5273,
+        "years_to_maturity": 14.43668720054757,
         "source_keys": [
           "soma",
           "auctions"
@@ -8659,9 +8659,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 5.505817932922656,
+        "security_age_years": 5.5249828884325805,
         "original_term_years": 19.96167008898015,
-        "remaining_term_pct": 72.41804965025374,
+        "remaining_term_pct": 72.32204087230832,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 82.4990878,
         "soma_concentration_percentile": 51.0,
@@ -8678,8 +8678,8 @@
         "auction_offering_billions": 32.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 179,
-        "years_to_maturity": 0.49007529089664614,
+        "days_to_maturity": 172,
+        "years_to_maturity": 0.47091033538672145,
         "source_keys": [
           "soma",
           "auctions"
@@ -8731,8 +8731,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 6010,
-        "years_to_maturity": 16.45448323066393,
+        "days_to_maturity": 6003,
+        "years_to_maturity": 16.435318275154003,
         "source_keys": [
           "soma",
           "auctions"
@@ -8794,9 +8794,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 13.544147843942506,
+        "security_age_years": 13.56331279945243,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 54.85078032308114,
+        "remaining_term_pct": 54.78689422287122,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 41.9997585,
         "soma_concentration_percentile": 75.0,
@@ -8813,9 +8813,9 @@
         "auction_offering_billions": 75.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 57,
-        "years_to_maturity": 0.15605749486652978,
-        "auction_recency_days": -13,
+        "days_to_maturity": 50,
+        "years_to_maturity": 0.13689253935660506,
+        "auction_recency_days": -6,
         "source_keys": [
           "soma",
           "auctions"
@@ -8890,12 +8890,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.840520191649555,
+        "security_age_years": 0.8596851471594799,
         "original_term_years": 0.9965776865160849,
-        "remaining_term_pct": 15.659340659340659,
+        "remaining_term_pct": 13.736263736263737,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 233.60659309999988,
-        "soma_concentration_percentile": 12.0,
+        "soma_concentration_percentile": 11.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -8909,8 +8909,8 @@
         "auction_offering_billions": 32.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 2174,
-        "years_to_maturity": 5.952087611225188,
+        "days_to_maturity": 2167,
+        "years_to_maturity": 5.932922655715264,
         "source_keys": [
           "soma",
           "auctions"
@@ -8972,12 +8972,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 4.049281314168378,
+        "security_age_years": 4.068446269678303,
         "original_term_years": 10.001368925393566,
-        "remaining_term_pct": 59.512729263618944,
+        "remaining_term_pct": 59.32110594032303,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 119.42420319999998,
-        "soma_concentration_percentile": 24.0,
+        "soma_concentration_percentile": 23.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -8991,8 +8991,8 @@
         "auction_offering_billions": 55.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 151,
-        "years_to_maturity": 0.4134154688569473,
+        "days_to_maturity": 144,
+        "years_to_maturity": 0.3942505133470226,
         "source_keys": [
           "soma",
           "auctions"
@@ -9041,9 +9041,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 6.587268993839836,
+        "security_age_years": 6.606433949349761,
         "original_term_years": 7.000684462696783,
-        "remaining_term_pct": 5.905357841220179,
+        "remaining_term_pct": 5.631599530700039,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 95.49684060000001,
         "soma_concentration_percentile": 34.0,
@@ -9060,8 +9060,8 @@
         "auction_offering_billions": 20.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 9297,
-        "years_to_maturity": 25.453798767967147,
+        "days_to_maturity": 9290,
+        "years_to_maturity": 25.43463381245722,
         "source_keys": [
           "soma",
           "auctions"
@@ -9123,9 +9123,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 4.544832306639288,
+        "security_age_years": 4.563997262149213,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 84.8498676645067,
+        "remaining_term_pct": 84.7859815642968,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 85.01938149999998,
         "soma_concentration_percentile": 46.0,
@@ -9142,8 +9142,8 @@
         "auction_offering_billions": 95.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 15,
-        "years_to_maturity": 0.04106776180698152,
+        "days_to_maturity": 8,
+        "years_to_maturity": 0.02190280629705681,
         "source_keys": [
           "soma",
           "auctions"
@@ -9205,12 +9205,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.45722108145106094,
+        "security_age_years": 0.47638603696098564,
         "original_term_years": 0.49828884325804246,
-        "remaining_term_pct": 8.241758241758241,
+        "remaining_term_pct": 4.395604395604396,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 282.1592617000002,
-        "soma_concentration_percentile": 9.0,
+        "soma_concentration_percentile": 8.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -9224,8 +9224,8 @@
         "auction_offering_billions": 23.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 8748,
-        "years_to_maturity": 23.95071868583162,
+        "days_to_maturity": 8741,
+        "years_to_maturity": 23.9315537303217,
         "source_keys": [
           "soma",
           "auctions"
@@ -9287,9 +9287,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 6.0424366872005475,
+        "security_age_years": 6.061601642710472,
         "original_term_years": 29.99315537303217,
-        "remaining_term_pct": 79.85394796896395,
+        "remaining_term_pct": 79.79005020538567,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 89.0185089,
         "soma_concentration_percentile": 41.0,
@@ -9300,14 +9300,14 @@
         "security_type": "Notes & Bonds",
         "maturity_date": "2027-11-15",
         "soma_par_billions": 21.5800875,
-        "soma_pct_outstanding": 32.91247422340701,
+        "soma_pct_outstanding": 32.91498420759799,
         "latest_auction_date": "2018-01-10",
         "auction_security_term": "9-Year 10-Month",
         "auction_offering_billions": 20.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 439,
-        "years_to_maturity": 1.2019164955509924,
+        "days_to_maturity": 432,
+        "years_to_maturity": 1.1827515400410678,
         "source_keys": [
           "soma",
           "auctions"
@@ -9369,11 +9369,11 @@
             "reopening": false
           }
         ],
-        "security_age_years": 8.796714579055442,
+        "security_age_years": 8.815879534565367,
         "original_term_years": 9.998631074606434,
-        "remaining_term_pct": 12.020810514786419,
+        "remaining_term_pct": 11.829134720700987,
         "maturity_consistency": "match",
-        "implied_outstanding_billions": 65.5681106,
+        "implied_outstanding_billions": 65.56311059999999,
         "soma_concentration_percentile": 55.0,
         "soma_concentration_band": "elevated"
       },
@@ -9388,8 +9388,8 @@
         "auction_offering_billions": 12.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 7560,
-        "years_to_maturity": 20.698151950718685,
+        "days_to_maturity": 7553,
+        "years_to_maturity": 20.67898699520876,
         "source_keys": [
           "soma",
           "auctions"
@@ -9451,9 +9451,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 9.300479123887747,
+        "security_age_years": 9.319644079397673,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 68.99698822670439,
+        "remaining_term_pct": 68.93310212649449,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 40.685115,
         "soma_concentration_percentile": 74.0,
@@ -9470,8 +9470,8 @@
         "auction_offering_billions": 24.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 897,
-        "years_to_maturity": 2.455852156057495,
+        "days_to_maturity": 890,
+        "years_to_maturity": 2.43668720054757,
         "source_keys": [
           "soma",
           "auctions"
@@ -9533,9 +9533,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 7.545516769336071,
+        "security_age_years": 7.564681724845996,
         "original_term_years": 10.001368925393566,
-        "remaining_term_pct": 24.555160142348754,
+        "remaining_term_pct": 24.363536819052833,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 80.704475,
         "soma_concentration_percentile": 48.0,
@@ -9552,8 +9552,8 @@
         "auction_offering_billions": 22.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 9205,
-        "years_to_maturity": 25.201916495550993,
+        "days_to_maturity": 9198,
+        "years_to_maturity": 25.182751540041068,
         "source_keys": [
           "soma",
           "auctions"
@@ -9615,9 +9615,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 4.7967145790554415,
+        "security_age_years": 4.815879534565366,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 84.01022177603359,
+        "remaining_term_pct": 83.94633567582368,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 90.23530730000002,
         "soma_concentration_percentile": 37.0,
@@ -9634,8 +9634,8 @@
         "auction_offering_billions": 110.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 20,
-        "years_to_maturity": 0.05475701574264202,
+        "days_to_maturity": 13,
+        "years_to_maturity": 0.03559206023271732,
         "source_keys": [
           "soma",
           "auctions"
@@ -9697,12 +9697,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.27104722792607805,
+        "security_age_years": 0.29021218343600275,
         "original_term_years": 0.3258042436687201,
-        "remaining_term_pct": 16.80672268907563,
+        "remaining_term_pct": 10.92436974789916,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 294.70721380000015,
-        "soma_concentration_percentile": 6.0,
+        "soma_concentration_percentile": 5.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -9716,8 +9716,8 @@
         "auction_offering_billions": 24.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 805,
-        "years_to_maturity": 2.2039698836413417,
+        "days_to_maturity": 798,
+        "years_to_maturity": 2.184804928131417,
         "source_keys": [
           "soma",
           "auctions"
@@ -9779,9 +9779,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 7.797399041752224,
+        "security_age_years": 7.816563997262149,
         "original_term_years": 10.001368925393566,
-        "remaining_term_pct": 22.036682179030933,
+        "remaining_term_pct": 21.84505885573501,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 80.48685429999999,
         "soma_concentration_percentile": 45.0,
@@ -9798,8 +9798,8 @@
         "auction_offering_billions": 24.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 9021,
-        "years_to_maturity": 24.698151950718685,
+        "days_to_maturity": 9014,
+        "years_to_maturity": 24.67898699520876,
         "source_keys": [
           "soma",
           "auctions"
@@ -9861,9 +9861,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 5.295003422313484,
+        "security_age_years": 5.314168377823409,
         "original_term_years": 29.99315537303217,
-        "remaining_term_pct": 82.34596074851666,
+        "remaining_term_pct": 82.28206298493839,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 92.72858680000002,
         "soma_concentration_percentile": 31.0,
@@ -9880,8 +9880,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 6922,
-        "years_to_maturity": 18.951403148528406,
+        "days_to_maturity": 6915,
+        "years_to_maturity": 18.93223819301848,
         "source_keys": [
           "soma",
           "auctions"
@@ -9943,9 +9943,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 11.044490075290897,
+        "security_age_years": 11.063655030800822,
         "original_term_years": 29.9958932238193,
-        "remaining_term_pct": 63.17999269806499,
+        "remaining_term_pct": 63.11610076670318,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 40.3009862,
         "soma_concentration_percentile": 73.0,
@@ -9962,9 +9962,9 @@
         "auction_offering_billions": 95.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 36,
-        "years_to_maturity": 0.09856262833675565,
-        "auction_recency_days": 8,
+        "days_to_maturity": 29,
+        "years_to_maturity": 0.07939767282683094,
+        "auction_recency_days": 15,
         "source_keys": [
           "soma",
           "auctions"
@@ -10026,12 +10026,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.3997262149212868,
+        "security_age_years": 0.4188911704312115,
         "original_term_years": 0.49828884325804246,
-        "remaining_term_pct": 19.78021978021978,
+        "remaining_term_pct": 15.934065934065933,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 278.7753829999999,
-        "soma_concentration_percentile": 8.0,
+        "soma_concentration_percentile": 7.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -10039,14 +10039,14 @@
         "security_type": "Notes & Bonds",
         "maturity_date": "2028-05-15",
         "soma_par_billions": 20.4735924,
-        "soma_pct_outstanding": 26.156499483327938,
+        "soma_pct_outstanding": 26.290853372811878,
         "latest_auction_date": "2025-05-05",
         "auction_security_term": "3-Year",
         "auction_offering_billions": 58.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 621,
-        "years_to_maturity": 1.700205338809035,
+        "days_to_maturity": 614,
+        "years_to_maturity": 1.68104038329911,
         "source_keys": [
           "soma",
           "auctions"
@@ -10083,7 +10083,7 @@
           }
         ],
         "maturity_consistency": "match",
-        "implied_outstanding_billions": 78.27344180000003,
+        "implied_outstanding_billions": 77.87344180000002,
         "soma_concentration_percentile": 47.0,
         "soma_concentration_band": "normal"
       },
@@ -10092,15 +10092,15 @@
         "security_type": "Bills",
         "maturity_date": "2026-09-29",
         "soma_par_billions": 20.4161103,
-        "soma_pct_outstanding": 7.146080474668159,
+        "soma_pct_outstanding": 7.14642367715966,
         "latest_auction_date": "2026-08-27",
         "auction_security_term": "4-Week",
         "auction_offering_billions": 100.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 27,
-        "years_to_maturity": 0.07392197125256673,
-        "auction_recency_days": 6,
+        "days_to_maturity": 20,
+        "years_to_maturity": 0.05475701574264202,
+        "auction_recency_days": 13,
         "source_keys": [
           "soma",
           "auctions"
@@ -10162,12 +10162,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.2518822724161533,
+        "security_age_years": 0.27104722792607805,
         "original_term_years": 0.3258042436687201,
-        "remaining_term_pct": 22.689075630252102,
+        "remaining_term_pct": 16.80672268907563,
         "maturity_consistency": "match",
-        "implied_outstanding_billions": 285.6966189,
-        "soma_concentration_percentile": 7.0,
+        "implied_outstanding_billions": 285.68289849999996,
+        "soma_concentration_percentile": 6.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -10181,8 +10181,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 6191,
-        "years_to_maturity": 16.95003422313484,
+        "days_to_maturity": 6184,
+        "years_to_maturity": 16.930869267624914,
         "source_keys": [
           "soma",
           "auctions"
@@ -10244,9 +10244,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 13.048596851471595,
+        "security_age_years": 13.067761806981519,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 56.50269234279456,
+        "remaining_term_pct": 56.43880624258465,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 41.903968400000004,
         "soma_concentration_percentile": 70.0,
@@ -10263,8 +10263,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 6465,
-        "years_to_maturity": 17.700205338809035,
+        "days_to_maturity": 6458,
+        "years_to_maturity": 17.68104038329911,
         "source_keys": [
           "soma",
           "auctions"
@@ -10326,9 +10326,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 12.301163586584531,
+        "security_age_years": 12.320328542094456,
         "original_term_years": 30.001368925393567,
-        "remaining_term_pct": 58.99799233436759,
+        "remaining_term_pct": 58.934112064245305,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 41.9881145,
         "soma_concentration_percentile": 69.0,
@@ -10345,8 +10345,8 @@
         "auction_offering_billions": 39.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 3177,
-        "years_to_maturity": 8.698151950718685,
+        "days_to_maturity": 3170,
+        "years_to_maturity": 8.678986995208762,
         "source_keys": [
           "soma",
           "auctions"
@@ -10408,12 +10408,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 1.3004791238877482,
+        "security_age_years": 1.319644079397673,
         "original_term_years": 9.998631074606434,
-        "remaining_term_pct": 86.9934282584885,
+        "remaining_term_pct": 86.80175246440307,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 140.1298767,
-        "soma_concentration_percentile": 22.0,
+        "soma_concentration_percentile": 21.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -10427,8 +10427,8 @@
         "auction_offering_billions": 17.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5004,
-        "years_to_maturity": 13.700205338809035,
+        "days_to_maturity": 4997,
+        "years_to_maturity": 13.681040383299111,
         "source_keys": [
           "soma",
           "auctions"
@@ -10490,9 +10490,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 6.253251197809719,
+        "security_age_years": 6.272416153319644,
         "original_term_years": 19.953456536618756,
-        "remaining_term_pct": 68.66081229418222,
+        "remaining_term_pct": 68.56476399560923,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 55.391639099999985,
         "soma_concentration_percentile": 59.0,
@@ -10509,8 +10509,8 @@
         "auction_offering_billions": 20.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 166,
-        "years_to_maturity": 0.4544832306639288,
+        "days_to_maturity": 159,
+        "years_to_maturity": 0.4353182751540041,
         "source_keys": [
           "soma",
           "auctions"
@@ -10572,9 +10572,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 9.544147843942506,
+        "security_age_years": 9.56331279945243,
         "original_term_years": 9.998631074606434,
-        "remaining_term_pct": 4.545454545454546,
+        "remaining_term_pct": 4.353778751369113,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 61.00286840000001,
         "soma_concentration_percentile": 54.0,
@@ -10591,8 +10591,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 6283,
-        "years_to_maturity": 17.201916495550993,
+        "days_to_maturity": 6276,
+        "years_to_maturity": 17.182751540041068,
         "source_keys": [
           "soma",
           "auctions"
@@ -10654,9 +10654,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 12.796714579055442,
+        "security_age_years": 12.815879534565367,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 57.34233823126769,
+        "remaining_term_pct": 57.27845213105777,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 41.994786899999994,
         "soma_concentration_percentile": 68.0,
@@ -10673,8 +10673,8 @@
         "auction_offering_billions": 16.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 8383,
-        "years_to_maturity": 22.951403148528406,
+        "days_to_maturity": 8376,
+        "years_to_maturity": 22.93223819301848,
         "source_keys": [
           "soma",
           "auctions"
@@ -10736,9 +10736,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 7.049965776865161,
+        "security_age_years": 7.069130732375085,
         "original_term_years": 30.001368925393567,
-        "remaining_term_pct": 76.5011863478737,
+        "remaining_term_pct": 76.43730607775142,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 63.2363568,
         "soma_concentration_percentile": 53.0,
@@ -10749,14 +10749,14 @@
         "security_type": "Notes & Bonds",
         "maturity_date": "2028-08-15",
         "soma_par_billions": 19.6836884,
-        "soma_pct_outstanding": 25.425099500139332,
+        "soma_pct_outstanding": 25.51838104575623,
         "latest_auction_date": "2025-08-05",
         "auction_security_term": "3-Year",
         "auction_offering_billions": 58.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 713,
-        "years_to_maturity": 1.9520876112251881,
+        "days_to_maturity": 706,
+        "years_to_maturity": 1.9329226557152634,
         "source_keys": [
           "soma",
           "auctions"
@@ -10793,7 +10793,7 @@
           }
         ],
         "maturity_consistency": "match",
-        "implied_outstanding_billions": 77.41833380000001,
+        "implied_outstanding_billions": 77.13533380000001,
         "soma_concentration_percentile": 43.0,
         "soma_concentration_band": "normal"
       },
@@ -10808,8 +10808,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5918,
-        "years_to_maturity": 16.202600958247775,
+        "days_to_maturity": 5911,
+        "years_to_maturity": 16.18343600273785,
         "source_keys": [
           "soma",
           "auctions"
@@ -10871,9 +10871,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 13.796030116358658,
+        "security_age_years": 13.815195071868583,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 54.01113443460801,
+        "remaining_term_pct": 53.947248334398104,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 41.9440093,
         "soma_concentration_percentile": 67.0,
@@ -10890,8 +10890,8 @@
         "auction_offering_billions": 16.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 8475,
-        "years_to_maturity": 23.20328542094456,
+        "days_to_maturity": 8468,
+        "years_to_maturity": 23.184120465434635,
         "source_keys": [
           "soma",
           "auctions"
@@ -10953,9 +10953,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 6.798083504449007,
+        "security_age_years": 6.8172484599589325,
         "original_term_years": 30.001368925393567,
-        "remaining_term_pct": 77.34075561233801,
+        "remaining_term_pct": 77.27687534221573,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 58.17074879999999,
         "soma_concentration_percentile": 57.0,
@@ -10972,8 +10972,8 @@
         "auction_offering_billions": 110.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 13,
-        "years_to_maturity": 0.03559206023271732,
+        "days_to_maturity": 6,
+        "years_to_maturity": 0.01642710472279261,
         "source_keys": [
           "soma",
           "auctions"
@@ -11035,12 +11035,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.29021218343600275,
+        "security_age_years": 0.30937713894592744,
         "original_term_years": 0.3258042436687201,
-        "remaining_term_pct": 10.92436974789916,
+        "remaining_term_pct": 5.042016806722689,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 295.91589410000006,
-        "soma_concentration_percentile": 4.0,
+        "soma_concentration_percentile": 3.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -11054,8 +11054,8 @@
         "auction_offering_billions": 24.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 8840,
-        "years_to_maturity": 24.202600958247775,
+        "days_to_maturity": 8833,
+        "years_to_maturity": 24.18343600273785,
         "source_keys": [
           "soma",
           "auctions"
@@ -11117,9 +11117,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 5.793292265571527,
+        "security_age_years": 5.812457221081451,
         "original_term_years": 29.9958932238193,
-        "remaining_term_pct": 80.68638189120117,
+        "remaining_term_pct": 80.62248995983936,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 85.4582569,
         "soma_concentration_percentile": 32.0,
@@ -11136,8 +11136,8 @@
         "auction_offering_billions": 39.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 2996,
-        "years_to_maturity": 8.202600958247775,
+        "days_to_maturity": 2989,
+        "years_to_maturity": 8.183436002737851,
         "source_keys": [
           "soma",
           "auctions"
@@ -11199,12 +11199,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 1.7960301163586585,
+        "security_age_years": 1.8151950718685832,
         "original_term_years": 9.998631074606434,
-        "remaining_term_pct": 82.03723986856517,
+        "remaining_term_pct": 81.84556407447974,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 139.0559167,
-        "soma_concentration_percentile": 20.0,
+        "soma_concentration_percentile": 19.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -11218,8 +11218,8 @@
         "auction_offering_billions": 92.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 86,
-        "years_to_maturity": 0.23545516769336072,
+        "days_to_maturity": 79,
+        "years_to_maturity": 0.216290212183436,
         "source_keys": [
           "soma",
           "auctions"
@@ -11281,12 +11281,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.7611225188227242,
+        "security_age_years": 0.7802874743326489,
         "original_term_years": 0.9965776865160849,
-        "remaining_term_pct": 23.626373626373624,
+        "remaining_term_pct": 21.703296703296704,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 228.40295530000012,
-        "soma_concentration_percentile": 10.0,
+        "soma_concentration_percentile": 9.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -11300,8 +11300,8 @@
         "auction_offering_billions": 19.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 9387,
-        "years_to_maturity": 25.700205338809035,
+        "days_to_maturity": 9380,
+        "years_to_maturity": 25.68104038329911,
         "source_keys": [
           "soma",
           "auctions"
@@ -11363,9 +11363,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 4.298425735797399,
+        "security_age_years": 4.317590691307323,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 85.6712603814913,
+        "remaining_term_pct": 85.60737428128137,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 78.30116960000001,
         "soma_concentration_percentile": 40.0,
@@ -11376,14 +11376,14 @@
         "security_type": "Bills",
         "maturity_date": "2026-09-10",
         "soma_par_billions": 18.8983008,
-        "soma_pct_outstanding": 6.8032973687339595,
+        "soma_pct_outstanding": 6.80330936961131,
         "latest_auction_date": "2026-07-28",
         "auction_security_term": "6-Week",
         "auction_offering_billions": 95.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 8,
-        "years_to_maturity": 0.02190280629705681,
+        "days_to_maturity": 1,
+        "years_to_maturity": 0.0027378507871321013,
         "source_keys": [
           "soma",
           "auctions"
@@ -11445,12 +11445,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.47638603696098564,
+        "security_age_years": 0.49555099247091033,
         "original_term_years": 0.49828884325804246,
-        "remaining_term_pct": 4.395604395604396,
+        "remaining_term_pct": 0.5494505494505495,
         "maturity_consistency": "match",
-        "implied_outstanding_billions": 277.7814900000002,
-        "soma_concentration_percentile": 5.0,
+        "implied_outstanding_billions": 277.7810000000001,
+        "soma_concentration_percentile": 4.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -11464,8 +11464,8 @@
         "auction_offering_billions": 39.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 3453,
-        "years_to_maturity": 9.453798767967145,
+        "days_to_maturity": 3446,
+        "years_to_maturity": 9.434633812457221,
         "source_keys": [
           "soma",
           "auctions"
@@ -11527,12 +11527,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.5393566050650239,
+        "security_age_years": 0.5585215605749486,
         "original_term_years": 9.99315537303217,
-        "remaining_term_pct": 94.6027397260274,
+        "remaining_term_pct": 94.41095890410959,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 138.8255938,
-        "soma_concentration_percentile": 19.0,
+        "soma_concentration_percentile": 18.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -11546,8 +11546,8 @@
         "auction_offering_billions": 39.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 3088,
-        "years_to_maturity": 8.454483230663929,
+        "days_to_maturity": 3081,
+        "years_to_maturity": 8.435318275154003,
         "source_keys": [
           "soma",
           "auctions"
@@ -11609,107 +11609,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 1.5359342915811087,
+        "security_age_years": 1.5550992470910336,
         "original_term_years": 9.990417522245037,
-        "remaining_term_pct": 84.6259249109345,
+        "remaining_term_pct": 84.43409153192655,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 138.49427129999995,
-        "soma_concentration_percentile": 18.0,
-        "soma_concentration_band": "normal"
-      },
-      {
-        "cusip": "912797RS8",
-        "security_type": "Bills",
-        "maturity_date": "2026-09-03",
-        "soma_par_billions": 18.5679375,
-        "soma_pct_outstanding": 5.69573876446716,
-        "latest_auction_date": "2026-07-21",
-        "auction_security_term": "6-Week",
-        "auction_offering_billions": 95.0,
-        "nport_fund_value_billions": null,
-        "nport_fund_count": null,
-        "days_to_maturity": 1,
-        "years_to_maturity": 0.0027378507871321013,
-        "source_keys": [
-          "soma",
-          "auctions"
-        ],
-        "soma_coupon_rate_pct": null,
-        "auction_metadata_match": true,
-        "auction_count": 4,
-        "reopening_count": 3,
-        "announcement_date": null,
-        "issue_date": "2026-07-23",
-        "original_issue_date": "2025-09-04",
-        "auction_maturity_date": "2026-09-03",
-        "auction_security_type": "Bill",
-        "original_security_term": "52-Week",
-        "auction_interest_rate_pct": null,
-        "latest_high_yield_pct": null,
-        "latest_high_investment_rate_pct": 3.717,
-        "latest_auction_price": null,
-        "latest_bid_to_cover": 2.79,
-        "latest_is_reopening": true,
-        "auction_history": [
-          {
-            "auction_date": "2026-07-21",
-            "announcement_date": null,
-            "issue_date": "2026-07-23",
-            "maturity_date": "2026-09-03",
-            "offering_billions": 95.0,
-            "bid_to_cover": 2.79,
-            "high_yield_pct": null,
-            "high_investment_rate_pct": 3.717,
-            "interest_rate_pct": null,
-            "price": null,
-            "reopening": true
-          },
-          {
-            "auction_date": "2026-06-01",
-            "announcement_date": null,
-            "issue_date": "2026-06-04",
-            "maturity_date": "2026-09-03",
-            "offering_billions": 89.0,
-            "bid_to_cover": 2.69,
-            "high_yield_pct": null,
-            "high_investment_rate_pct": 3.714,
-            "interest_rate_pct": null,
-            "price": null,
-            "reopening": true
-          },
-          {
-            "auction_date": "2026-03-02",
-            "announcement_date": null,
-            "issue_date": "2026-03-05",
-            "maturity_date": "2026-09-03",
-            "offering_billions": 77.0,
-            "bid_to_cover": 3.1,
-            "high_yield_pct": null,
-            "high_investment_rate_pct": 3.649,
-            "interest_rate_pct": null,
-            "price": null,
-            "reopening": true
-          },
-          {
-            "auction_date": "2025-09-02",
-            "announcement_date": null,
-            "issue_date": "2025-09-04",
-            "maturity_date": "2026-09-03",
-            "offering_billions": 50.0,
-            "bid_to_cover": 3.82,
-            "high_yield_pct": null,
-            "high_investment_rate_pct": 3.817,
-            "interest_rate_pct": null,
-            "price": null,
-            "reopening": false
-          }
-        ],
-        "security_age_years": 0.9938398357289527,
-        "original_term_years": 0.9965776865160849,
-        "remaining_term_pct": 0.27472527472527475,
-        "maturity_consistency": "match",
-        "implied_outstanding_billions": 325.99699999999984,
-        "soma_concentration_percentile": 2.0,
+        "soma_concentration_percentile": 17.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -11723,8 +11628,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 6375,
-        "years_to_maturity": 17.453798767967147,
+        "days_to_maturity": 6368,
+        "years_to_maturity": 17.43463381245722,
         "source_keys": [
           "soma",
           "auctions"
@@ -11786,9 +11691,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 12.536618754277892,
+        "security_age_years": 12.555783709787816,
         "original_term_years": 29.99041752224504,
-        "remaining_term_pct": 58.19791856855942,
+        "remaining_term_pct": 58.134014971699834,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 41.8448793,
         "soma_concentration_percentile": 66.0,
@@ -11805,8 +11710,8 @@
         "auction_offering_billions": 11.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 4549,
-        "years_to_maturity": 12.454483230663929,
+        "days_to_maturity": 4542,
+        "years_to_maturity": 12.435318275154003,
         "source_keys": [
           "soma",
           "auctions"
@@ -11855,9 +11760,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 17.53867214236824,
+        "security_age_years": 17.557837097878167,
         "original_term_years": 29.99315537303217,
-        "remaining_term_pct": 41.52441807393884,
+        "remaining_term_pct": 41.460520310360565,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 25.9085693,
         "soma_concentration_percentile": 83.0,
@@ -11874,8 +11779,8 @@
         "auction_offering_billions": 10.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 3453,
-        "years_to_maturity": 9.453798767967145,
+        "days_to_maturity": 3446,
+        "years_to_maturity": 9.434633812457221,
         "source_keys": [
           "soma",
           "auctions"
@@ -11924,9 +11829,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 20.54483230663929,
+        "security_age_years": 20.56399726214921,
         "original_term_years": 29.998631074606433,
-        "remaining_term_pct": 31.5141005749749,
+        "remaining_term_pct": 31.45021447476499,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 26.397130000000004,
         "soma_concentration_percentile": 82.0,
@@ -11943,8 +11848,8 @@
         "auction_offering_billions": 39.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 3361,
-        "years_to_maturity": 9.201916495550993,
+        "days_to_maturity": 3354,
+        "years_to_maturity": 9.182751540041068,
         "source_keys": [
           "soma",
           "auctions"
@@ -12006,12 +11911,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.7912388774811773,
+        "security_age_years": 0.810403832991102,
         "original_term_years": 9.99315537303217,
-        "remaining_term_pct": 92.08219178082192,
+        "remaining_term_pct": 91.89041095890411,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 137.84244370000005,
-        "soma_concentration_percentile": 17.0,
+        "soma_concentration_percentile": 16.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -12025,8 +11930,8 @@
         "auction_offering_billions": 10.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 4273,
-        "years_to_maturity": 11.698836413415469,
+        "days_to_maturity": 4266,
+        "years_to_maturity": 11.679671457905544,
         "source_keys": [
           "soma",
           "auctions"
@@ -12075,9 +11980,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 18.04791238877481,
+        "security_age_years": 18.067077344284737,
         "original_term_years": 29.746748802190282,
-        "remaining_term_pct": 39.32811780947998,
+        "remaining_term_pct": 39.263690750115046,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 25.500122800000003,
         "soma_concentration_percentile": 85.0,
@@ -12094,8 +11999,8 @@
         "auction_offering_billions": 20.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 74,
-        "years_to_maturity": 0.2026009582477755,
+        "days_to_maturity": 67,
+        "years_to_maturity": 0.1834360027378508,
         "source_keys": [
           "soma",
           "auctions"
@@ -12157,9 +12062,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 9.796030116358658,
+        "security_age_years": 9.815195071868583,
         "original_term_years": 9.998631074606434,
-        "remaining_term_pct": 2.026286966046002,
+        "remaining_term_pct": 1.8346111719605696,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 64.2875749,
         "soma_concentration_percentile": 50.0,
@@ -12176,9 +12081,9 @@
         "auction_offering_billions": 90.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 41,
-        "years_to_maturity": 0.11225188227241616,
-        "auction_recency_days": -8,
+        "days_to_maturity": 34,
+        "years_to_maturity": 0.09308692676249145,
+        "auction_recency_days": -1,
         "source_keys": [
           "soma",
           "auctions"
@@ -12240,12 +12145,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.2135523613963039,
+        "security_age_years": 0.2327173169062286,
         "original_term_years": 0.3258042436687201,
-        "remaining_term_pct": 34.45378151260504,
+        "remaining_term_pct": 28.57142857142857,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 181.0500826,
-        "soma_concentration_percentile": 13.0,
+        "soma_concentration_percentile": 12.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -12259,8 +12164,8 @@
         "auction_offering_billions": 32.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 28,
-        "years_to_maturity": 0.07665982203969883,
+        "days_to_maturity": 21,
+        "years_to_maturity": 0.057494866529774126,
         "source_keys": [
           "soma",
           "auctions"
@@ -12312,8 +12217,8 @@
         "auction_offering_billions": 13.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 6649,
-        "years_to_maturity": 18.203969883641342,
+        "days_to_maturity": 6642,
+        "years_to_maturity": 18.184804928131417,
         "source_keys": [
           "soma",
           "auctions"
@@ -12375,9 +12280,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 11.791923340177961,
+        "security_age_years": 11.811088295687885,
         "original_term_years": 29.9958932238193,
-        "remaining_term_pct": 60.68820737495436,
+        "remaining_term_pct": 60.62431544359255,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 41.4748915,
         "soma_concentration_percentile": 65.0,
@@ -12394,8 +12299,8 @@
         "auction_offering_billions": 24.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 9113,
-        "years_to_maturity": 24.95003422313484,
+        "days_to_maturity": 9106,
+        "years_to_maturity": 24.930869267624914,
         "source_keys": [
           "soma",
           "auctions"
@@ -12457,12 +12362,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 5.045859000684462,
+        "security_age_years": 5.065023956194388,
         "original_term_years": 29.9958932238193,
-        "remaining_term_pct": 83.1781672143118,
+        "remaining_term_pct": 83.11427528294998,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 90.03666260000003,
-        "soma_concentration_percentile": 26.0,
+        "soma_concentration_percentile": 25.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -12470,14 +12375,14 @@
         "security_type": "Notes & Bonds",
         "maturity_date": "2028-03-31",
         "soma_par_billions": 16.9114095,
-        "soma_pct_outstanding": 23.34156283734443,
+        "soma_pct_outstanding": 23.409738464556572,
         "latest_auction_date": "2021-03-25",
         "auction_security_term": "7-Year",
         "auction_offering_billions": 62.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 576,
-        "years_to_maturity": 1.5770020533880904,
+        "days_to_maturity": 569,
+        "years_to_maturity": 1.5578370978781657,
         "source_keys": [
           "soma",
           "auctions"
@@ -12514,7 +12419,7 @@
           }
         ],
         "maturity_consistency": "match",
-        "implied_outstanding_billions": 72.451916,
+        "implied_outstanding_billions": 72.24091599999998,
         "soma_concentration_percentile": 36.0,
         "soma_concentration_band": "normal"
       },
@@ -12529,8 +12434,8 @@
         "auction_offering_billions": 58.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 866,
-        "years_to_maturity": 2.3709787816563996,
+        "days_to_maturity": 859,
+        "years_to_maturity": 2.351813826146475,
         "source_keys": [
           "soma",
           "auctions"
@@ -12582,8 +12487,8 @@
         "auction_offering_billions": 95.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 22,
-        "years_to_maturity": 0.06023271731690623,
+        "days_to_maturity": 15,
+        "years_to_maturity": 0.04106776180698152,
         "source_keys": [
           "soma",
           "auctions"
@@ -12645,12 +12550,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.4380561259411362,
+        "security_age_years": 0.45722108145106094,
         "original_term_years": 0.49828884325804246,
-        "remaining_term_pct": 12.087912087912088,
+        "remaining_term_pct": 8.241758241758241,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 276.6783955999999,
-        "soma_concentration_percentile": 3.0,
+        "soma_concentration_percentile": 2.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -12664,8 +12569,8 @@
         "auction_offering_billions": 58.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 897,
-        "years_to_maturity": 2.455852156057495,
+        "days_to_maturity": 890,
+        "years_to_maturity": 2.43668720054757,
         "source_keys": [
           "soma",
           "auctions"
@@ -12717,8 +12622,8 @@
         "auction_offering_billions": 12.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 7195,
-        "years_to_maturity": 19.698836413415467,
+        "days_to_maturity": 7188,
+        "years_to_maturity": 19.679671457905545,
         "source_keys": [
           "soma",
           "auctions"
@@ -12780,9 +12685,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 10.297056810403832,
+        "security_age_years": 10.316221765913758,
         "original_term_years": 29.9958932238193,
-        "remaining_term_pct": 65.67177802117561,
+        "remaining_term_pct": 65.6078860898138,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 40.47753470000001,
         "soma_concentration_percentile": 63.0,
@@ -12799,8 +12704,8 @@
         "auction_offering_billions": 58.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 531,
-        "years_to_maturity": 1.4537987679671458,
+        "days_to_maturity": 524,
+        "years_to_maturity": 1.434633812457221,
         "source_keys": [
           "soma",
           "auctions"
@@ -12852,8 +12757,8 @@
         "auction_offering_billions": 6.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 4184,
-        "years_to_maturity": 11.455167693360712,
+        "days_to_maturity": 4177,
+        "years_to_maturity": 11.436002737850787,
         "source_keys": [
           "soma",
           "auctions"
@@ -12902,9 +12807,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 18.546201232032853,
+        "security_age_years": 18.56536618754278,
         "original_term_years": 30.001368925393567,
-        "remaining_term_pct": 38.18215002737726,
+        "remaining_term_pct": 38.11826975725497,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 22.5251487,
         "soma_concentration_percentile": 86.0,
@@ -12921,8 +12826,8 @@
         "auction_offering_billions": 20.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 255,
-        "years_to_maturity": 0.6981519507186859,
+        "days_to_maturity": 248,
+        "years_to_maturity": 0.6789869952087612,
         "source_keys": [
           "soma",
           "auctions"
@@ -12984,9 +12889,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 9.300479123887747,
+        "security_age_years": 9.319644079397673,
         "original_term_years": 9.998631074606434,
-        "remaining_term_pct": 6.982475355969332,
+        "remaining_term_pct": 6.790799561883899,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 66.86322060000002,
         "soma_concentration_percentile": 38.0,
@@ -13003,8 +12908,8 @@
         "auction_offering_billions": 32.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 2358,
-        "years_to_maturity": 6.455852156057495,
+        "days_to_maturity": 2351,
+        "years_to_maturity": 6.436687200547571,
         "source_keys": [
           "soma",
           "auctions"
@@ -13066,12 +12971,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 3.5455167693360714,
+        "security_age_years": 3.564681724845996,
         "original_term_years": 10.001368925393566,
-        "remaining_term_pct": 64.54968519025458,
+        "remaining_term_pct": 64.35806186695866,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 114.51584739999998,
-        "soma_concentration_percentile": 21.0,
+        "soma_concentration_percentile": 20.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -13085,8 +12990,8 @@
         "auction_offering_billions": 24.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 8932,
-        "years_to_maturity": 24.45448323066393,
+        "days_to_maturity": 8925,
+        "years_to_maturity": 24.435318275154003,
         "source_keys": [
           "soma",
           "auctions"
@@ -13148,12 +13053,95 @@
             "reopening": false
           }
         ],
-        "security_age_years": 5.541409993155373,
+        "security_age_years": 5.560574948665297,
         "original_term_years": 29.9958932238193,
-        "remaining_term_pct": 81.52610441767068,
+        "remaining_term_pct": 81.46221248630887,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 88.19149109999998,
-        "soma_concentration_percentile": 23.0,
+        "soma_concentration_percentile": 22.0,
+        "soma_concentration_band": "normal"
+      },
+      {
+        "cusip": "912797UK1",
+        "security_type": "Bills",
+        "maturity_date": "2026-10-15",
+        "soma_par_billions": 15.4729221,
+        "soma_pct_outstanding": 5.81939669036295,
+        "latest_auction_date": "2026-09-01",
+        "auction_security_term": "6-Week",
+        "auction_offering_billions": 85.0,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null,
+        "days_to_maturity": 36,
+        "years_to_maturity": 0.09856262833675565,
+        "auction_recency_days": 8,
+        "source_keys": [
+          "soma",
+          "auctions"
+        ],
+        "soma_coupon_rate_pct": null,
+        "auction_metadata_match": true,
+        "auction_count": 3,
+        "reopening_count": 2,
+        "announcement_date": null,
+        "issue_date": "2026-09-03",
+        "original_issue_date": "2026-04-16",
+        "auction_maturity_date": "2026-10-15",
+        "auction_security_type": "Bill",
+        "original_security_term": "26-Week",
+        "auction_interest_rate_pct": null,
+        "latest_high_yield_pct": null,
+        "latest_high_investment_rate_pct": 3.803,
+        "latest_auction_price": null,
+        "latest_bid_to_cover": 2.85,
+        "latest_is_reopening": true,
+        "auction_history": [
+          {
+            "auction_date": "2026-09-01",
+            "announcement_date": null,
+            "issue_date": "2026-09-03",
+            "maturity_date": "2026-10-15",
+            "offering_billions": 85.0,
+            "bid_to_cover": 2.85,
+            "high_yield_pct": null,
+            "high_investment_rate_pct": 3.803,
+            "interest_rate_pct": null,
+            "price": null,
+            "reopening": true
+          },
+          {
+            "auction_date": "2026-07-13",
+            "announcement_date": null,
+            "issue_date": "2026-07-16",
+            "maturity_date": "2026-10-15",
+            "offering_billions": 92.0,
+            "bid_to_cover": 2.84,
+            "high_yield_pct": null,
+            "high_investment_rate_pct": 3.849,
+            "interest_rate_pct": null,
+            "price": null,
+            "reopening": true
+          },
+          {
+            "auction_date": "2026-04-13",
+            "announcement_date": null,
+            "issue_date": "2026-04-16",
+            "maturity_date": "2026-10-15",
+            "offering_billions": 77.0,
+            "bid_to_cover": 2.84,
+            "high_yield_pct": null,
+            "high_investment_rate_pct": 3.728,
+            "interest_rate_pct": null,
+            "price": null,
+            "reopening": false
+          }
+        ],
+        "security_age_years": 0.3997262149212868,
+        "original_term_years": 0.49828884325804246,
+        "remaining_term_pct": 19.78021978021978,
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 265.8853300999999,
+        "soma_concentration_percentile": 1.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -13167,8 +13155,8 @@
         "auction_offering_billions": 70.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 1275,
-        "years_to_maturity": 3.490759753593429,
+        "days_to_maturity": 1268,
+        "years_to_maturity": 3.4715947980835042,
         "source_keys": [
           "soma",
           "auctions"
@@ -13217,12 +13205,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 3.509924709103354,
+        "security_age_years": 3.5290896646132786,
         "original_term_years": 7.000684462696783,
-        "remaining_term_pct": 49.863120844739925,
+        "remaining_term_pct": 49.58936253421979,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 119.60479380000004,
-        "soma_concentration_percentile": 16.0,
+        "soma_concentration_percentile": 15.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -13236,8 +13224,8 @@
         "auction_offering_billions": 7.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 5280,
-        "years_to_maturity": 14.455852156057494,
+        "days_to_maturity": 5273,
+        "years_to_maturity": 14.43668720054757,
         "source_keys": [
           "soma",
           "auctions"
@@ -13299,9 +13287,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 15.509924709103354,
+        "security_age_years": 15.529089664613279,
         "original_term_years": 29.965776865160848,
-        "remaining_term_pct": 48.24120603015075,
+        "remaining_term_pct": 48.1772498857926,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 23.964657099999997,
         "soma_concentration_percentile": 77.0,
@@ -13318,8 +13306,8 @@
         "auction_offering_billions": 5.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 3908,
-        "years_to_maturity": 10.699520876112253,
+        "days_to_maturity": 3901,
+        "years_to_maturity": 10.680355920602327,
         "source_keys": [
           "soma",
           "auctions"
@@ -13368,9 +13356,9 @@
             "reopening": false
           }
         ],
-        "security_age_years": 19.04996577686516,
+        "security_age_years": 19.069130732375086,
         "original_term_years": 29.749486652977414,
-        "remaining_term_pct": 35.96539665010123,
+        "remaining_term_pct": 35.90097551997055,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 21.413045,
         "soma_concentration_percentile": 99.0,
@@ -13387,8 +13375,8 @@
         "auction_offering_billions": 39.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 3269,
-        "years_to_maturity": 8.950034223134839,
+        "days_to_maturity": 3262,
+        "years_to_maturity": 8.930869267624914,
         "source_keys": [
           "soma",
           "auctions"
@@ -13450,94 +13438,12 @@
             "reopening": false
           }
         ],
-        "security_age_years": 1.0485968514715949,
+        "security_age_years": 1.0677618069815196,
         "original_term_years": 9.998631074606434,
-        "remaining_term_pct": 89.51259583789705,
+        "remaining_term_pct": 89.32092004381161,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 134.93476649999997,
-        "soma_concentration_percentile": 15.0,
-        "soma_concentration_band": "normal"
-      },
-      {
-        "cusip": "912797VB0",
-        "security_type": "Bills",
-        "maturity_date": "2026-09-08",
-        "soma_par_billions": 14.7774138,
-        "soma_pct_outstanding": 5.17374453483875,
-        "latest_auction_date": "2026-08-06",
-        "auction_security_term": "4-Week",
-        "auction_offering_billions": 110.0,
-        "nport_fund_value_billions": null,
-        "nport_fund_count": null,
-        "days_to_maturity": 6,
-        "years_to_maturity": 0.01642710472279261,
-        "source_keys": [
-          "soma",
-          "auctions"
-        ],
-        "soma_coupon_rate_pct": null,
-        "auction_metadata_match": true,
-        "auction_count": 3,
-        "reopening_count": 2,
-        "announcement_date": null,
-        "issue_date": "2026-08-11",
-        "original_issue_date": "2026-05-12",
-        "auction_maturity_date": "2026-09-08",
-        "auction_security_type": "Bill",
-        "original_security_term": "17-Week",
-        "auction_interest_rate_pct": null,
-        "latest_high_yield_pct": null,
-        "latest_high_investment_rate_pct": 3.701,
-        "latest_auction_price": null,
-        "latest_bid_to_cover": 2.68,
-        "latest_is_reopening": true,
-        "auction_history": [
-          {
-            "auction_date": "2026-08-06",
-            "announcement_date": null,
-            "issue_date": "2026-08-11",
-            "maturity_date": "2026-09-08",
-            "offering_billions": 110.0,
-            "bid_to_cover": 2.68,
-            "high_yield_pct": null,
-            "high_investment_rate_pct": 3.701,
-            "interest_rate_pct": null,
-            "price": null,
-            "reopening": true
-          },
-          {
-            "auction_date": "2026-07-09",
-            "announcement_date": null,
-            "issue_date": "2026-07-14",
-            "maturity_date": "2026-09-08",
-            "offering_billions": 95.0,
-            "bid_to_cover": 2.95,
-            "high_yield_pct": null,
-            "high_investment_rate_pct": 3.706,
-            "interest_rate_pct": null,
-            "price": null,
-            "reopening": true
-          },
-          {
-            "auction_date": "2026-05-06",
-            "announcement_date": null,
-            "issue_date": "2026-05-12",
-            "maturity_date": "2026-09-08",
-            "offering_billions": 69.0,
-            "bid_to_cover": 3.13,
-            "high_yield_pct": null,
-            "high_investment_rate_pct": 3.699,
-            "interest_rate_pct": null,
-            "price": null,
-            "reopening": false
-          }
-        ],
-        "security_age_years": 0.30937713894592744,
-        "original_term_years": 0.3258042436687201,
-        "remaining_term_pct": 5.042016806722689,
-        "maturity_consistency": "match",
-        "implied_outstanding_billions": 285.6231825999999,
-        "soma_concentration_percentile": 1.0,
+        "soma_concentration_percentile": 14.0,
         "soma_concentration_band": "normal"
       },
       {
@@ -13551,8 +13457,8 @@
         "auction_offering_billions": 77.0,
         "nport_fund_value_billions": null,
         "nport_fund_count": null,
-        "days_to_maturity": 113,
-        "years_to_maturity": 0.30937713894592744,
+        "days_to_maturity": 106,
+        "years_to_maturity": 0.29021218343600275,
         "source_keys": [
           "soma",
           "auctions"
@@ -13601,17 +13507,70 @@
             "reopening": false
           }
         ],
-        "security_age_years": 0.6844626967830253,
+        "security_age_years": 0.70362765229295,
         "original_term_years": 0.9938398357289527,
-        "remaining_term_pct": 31.129476584022036,
+        "remaining_term_pct": 29.201101928374655,
         "maturity_consistency": "match",
         "implied_outstanding_billions": 134.57271020000005,
-        "soma_concentration_percentile": 14.0,
+        "soma_concentration_percentile": 13.0,
+        "soma_concentration_band": "normal"
+      },
+      {
+        "cusip": "91282CRG8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-08-15",
+        "soma_par_billions": 14.6705632,
+        "soma_pct_outstanding": 20.187814824247972,
+        "latest_auction_date": "2026-08-11",
+        "auction_security_term": "3-Year",
+        "auction_offering_billions": 58.0,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null,
+        "days_to_maturity": 1071,
+        "years_to_maturity": 2.9322381930184807,
+        "source_keys": [
+          "soma",
+          "auctions"
+        ],
+        "soma_coupon_rate_pct": null,
+        "auction_metadata_match": true,
+        "auction_count": 1,
+        "reopening_count": 0,
+        "announcement_date": null,
+        "issue_date": "2026-08-17",
+        "original_issue_date": "null",
+        "auction_maturity_date": "2029-08-15",
+        "auction_security_type": "Note",
+        "original_security_term": "3-Year",
+        "auction_interest_rate_pct": null,
+        "latest_high_yield_pct": 4.291,
+        "latest_high_investment_rate_pct": null,
+        "latest_auction_price": null,
+        "latest_bid_to_cover": 2.71,
+        "latest_is_reopening": false,
+        "auction_history": [
+          {
+            "auction_date": "2026-08-11",
+            "announcement_date": null,
+            "issue_date": "2026-08-17",
+            "maturity_date": "2029-08-15",
+            "offering_billions": 58.0,
+            "bid_to_cover": 2.71,
+            "high_yield_pct": 4.291,
+            "high_investment_rate_pct": null,
+            "interest_rate_pct": null,
+            "price": null,
+            "reopening": false
+          }
+        ],
+        "maturity_consistency": "match",
+        "implied_outstanding_billions": 72.6703872,
+        "soma_concentration_percentile": 27.0,
         "soma_concentration_band": "normal"
       }
     ],
     "row_count": 100,
-    "auction_matches": 4,
+    "auction_matches": 5,
     "nport_matches": 0,
     "note": "CUSIP matching combines SOMA positions with recent Treasury auctions and, when the quarterly N-PORT cache is available, fund holdings. A missing match does not mean no other holder owns the security.",
     "audit_note": "Security rows identify which source blocks contributed each match and add time-to-maturity / auction-recency fields derived from source dates. A recent-auction match is issuance context, not proof that the auction award is still held by any current owner.",
@@ -13622,7 +13581,7 @@
     "metadata_api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
     "metadata_status": {
       "status": "ok",
-      "checked_at": "2026-09-10T20:14:48Z",
+      "checked_at": "2026-09-10T21:02:07Z",
       "matched_cusips": 100,
       "requested_cusips": 100,
       "coverage_pct": 100.0,
@@ -13670,13 +13629,6 @@
         "change_billions": 59.04600000000005
       },
       {
-        "scope": "Primary dealer",
-        "name": "Treasury dealer net position ex-TIPS",
-        "period": "WoW",
-        "current_billions": 477.607,
-        "change_billions": 41.20100000000002
-      },
-      {
         "scope": "Foreign country",
         "name": "Japan",
         "period": "MoM",
@@ -13705,6 +13657,13 @@
         "change_billions": 23.80000000000001
       },
       {
+        "scope": "Primary dealer",
+        "name": "Treasury dealer net position ex-TIPS",
+        "period": "WoW",
+        "current_billions": 455.185,
+        "change_billions": -22.422000000000025
+      },
+      {
         "scope": "U.S. sector",
         "name": "Hedge funds",
         "period": "QoQ",
@@ -13726,13 +13685,6 @@
         "change_billions": -16.099999999999966
       },
       {
-        "scope": "Primary dealer",
-        "name": "Treasury fails to deliver ex-TIPS",
-        "period": "WoW",
-        "current_billions": 76.655,
-        "change_billions": -11.260000000000005
-      },
-      {
         "scope": "Foreign country",
         "name": "Belgium",
         "period": "MoM",
@@ -13740,18 +13692,18 @@
         "change_billions": 10.5
       },
       {
+        "scope": "Primary dealer",
+        "name": "Treasury fails to deliver ex-TIPS",
+        "period": "WoW",
+        "current_billions": 86.026,
+        "change_billions": 9.370999999999995
+      },
+      {
         "scope": "Foreign country",
         "name": "United Kingdom",
         "period": "MoM",
         "current_billions": 939.9,
         "change_billions": -8.700000000000045
-      },
-      {
-        "scope": "Primary dealer",
-        "name": "Treasury fails to receive ex-TIPS",
-        "period": "WoW",
-        "current_billions": 88.371,
-        "change_billions": -8.634
       },
       {
         "scope": "Foreign country",
@@ -13773,6 +13725,13 @@
         "period": "MoM",
         "current_billions": 186.4,
         "change_billions": 5.099999999999994
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "Private pension funds",
+        "period": "QoQ",
+        "current_billions": 606.993,
+        "change_billions": 4.821000000000026
       }
     ],
     "largest_increases": [
@@ -13812,13 +13771,6 @@
         "change_billions": 59.04600000000005
       },
       {
-        "scope": "Primary dealer",
-        "name": "Treasury dealer net position ex-TIPS",
-        "period": "WoW",
-        "current_billions": 477.607,
-        "change_billions": 41.20100000000002
-      },
-      {
         "scope": "U.S. sector",
         "name": "Insurance companies",
         "period": "QoQ",
@@ -13845,6 +13797,13 @@
         "period": "MoM",
         "current_billions": 482.5,
         "change_billions": 10.5
+      },
+      {
+        "scope": "Primary dealer",
+        "name": "Treasury fails to deliver ex-TIPS",
+        "period": "WoW",
+        "current_billions": 86.026,
+        "change_billions": 9.370999999999995
       }
     ],
     "largest_decreases": [
@@ -13863,6 +13822,13 @@
         "change_billions": -25.899999999999977
       },
       {
+        "scope": "Primary dealer",
+        "name": "Treasury dealer net position ex-TIPS",
+        "period": "WoW",
+        "current_billions": 455.185,
+        "change_billions": -22.422000000000025
+      },
+      {
         "scope": "Foreign country",
         "name": "Cayman Islands",
         "period": "MoM",
@@ -13877,25 +13843,11 @@
         "change_billions": -16.099999999999966
       },
       {
-        "scope": "Primary dealer",
-        "name": "Treasury fails to deliver ex-TIPS",
-        "period": "WoW",
-        "current_billions": 76.655,
-        "change_billions": -11.260000000000005
-      },
-      {
         "scope": "Foreign country",
         "name": "United Kingdom",
         "period": "MoM",
         "current_billions": 939.9,
         "change_billions": -8.700000000000045
-      },
-      {
-        "scope": "Primary dealer",
-        "name": "Treasury fails to receive ex-TIPS",
-        "period": "WoW",
-        "current_billions": 88.371,
-        "change_billions": -8.634
       },
       {
         "scope": "Foreign country",
@@ -13917,6 +13869,13 @@
         "period": "MoM",
         "current_billions": 114.8,
         "change_billions": -3.799999999999997
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Ireland",
+        "period": "MoM",
+        "current_billions": 353.5,
+        "change_billions": -3.6999999999999886
       }
     ],
     "note": "Periods differ by source: countries are monthly, sectors quarterly, and primary-dealer series weekly."
@@ -14335,19 +14294,19 @@
       },
       {
         "name": "Federal Reserve H.4.1",
-        "holdings_billions": 4552.347,
+        "holdings_billions": 4552.337,
         "denominator": "Debt held by public",
-        "denominator_billions": 32421.027120428178,
-        "denominator_as_of": "2026-09-02",
-        "share_pct": 14.041341081176325
+        "denominator_billions": 32388.6113908718,
+        "denominator_as_of": "2026-09-09",
+        "share_pct": 14.055363303667296
       },
       {
         "name": "Federal Reserve SOMA par",
         "holdings_billions": 4446.2865402,
         "denominator": "Debt held by public",
-        "denominator_billions": 32421.027120428178,
-        "denominator_as_of": "2026-09-02",
-        "share_pct": 13.714206288666396
+        "denominator_billions": 32388.6113908718,
+        "denominator_as_of": "2026-09-09",
+        "share_pct": 13.727931977513283
       },
       {
         "name": "Detailed government-account leaf lines",
@@ -14361,17 +14320,17 @@
     "note": "Each share uses a Debt to the Penny denominator from the same observation date, or the latest business day on or before it. Categories still should not be summed because source definitions and valuation bases differ."
   },
   "soma_concentration": {
-    "as_of": "2026-09-02",
+    "as_of": "2026-09-09",
     "top10_par_billions": 381.645939,
     "top10_share_pct": 8.583476020932135,
     "maturity_buckets": [
       {
         "name": "≤1 year",
-        "par_billions": 418.5783693000001
+        "par_billions": 400.7059401000001
       },
       {
         "name": "1–3 years",
-        "par_billions": 252.5256951
+        "par_billions": 267.1962583
       },
       {
         "name": "3–7 years",
@@ -14405,8 +14364,8 @@
         "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T20:14:48Z",
-        "seen_count": 15
+        "last_seen_at": "2026-09-10T21:02:07Z",
+        "seen_count": 16
       },
       {
         "severity": "high",
@@ -14423,8 +14382,8 @@
         "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
         "alert_id": "10f3e7909be0493614fc",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T20:14:48Z",
-        "seen_count": 15
+        "last_seen_at": "2026-09-10T21:02:07Z",
+        "seen_count": 16
       },
       {
         "severity": "medium",
@@ -14441,62 +14400,26 @@
         "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
         "alert_id": "f49e63e0d57bded6cd29",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T20:14:48Z",
-        "seen_count": 15
-      },
-      {
-        "severity": "medium",
-        "scope": "Primary dealer",
-        "name": "Treasury dealer net position ex-TIPS",
-        "period": "WoW",
-        "as_of": "2026-08-26",
-        "previous_as_of": "2026-08-19",
-        "current_billions": 477.607,
-        "change_billions": 41.20100000000002,
-        "change_pct": 9.44097927159572,
-        "baseline_abs_change_billions": 14.412499999999994,
-        "multiple_of_baseline": 2.858699045967045,
-        "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
-        "alert_id": "a626c548ce0c32534d5e",
-        "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T20:14:48Z",
-        "seen_count": 15
-      },
-      {
-        "severity": "medium",
-        "scope": "Primary dealer",
-        "name": "Treasury fails to deliver ex-TIPS",
-        "period": "WoW",
-        "as_of": "2026-08-26",
-        "previous_as_of": "2026-08-19",
-        "current_billions": 76.655,
-        "change_billions": -11.260000000000005,
-        "change_pct": -12.80782574077234,
-        "baseline_abs_change_billions": 17.636500000000005,
-        "multiple_of_baseline": 0.6384486717886203,
-        "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
-        "alert_id": "a53c34f1e0828ff7a307",
-        "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T20:14:48Z",
-        "seen_count": 15
+        "last_seen_at": "2026-09-10T21:02:07Z",
+        "seen_count": 16
       }
     ],
-    "alert_count": 5,
+    "alert_count": 3,
     "high_count": 2,
     "method": "A change is flagged when it clears a source-specific absolute dollar floor and is either at least 2.5× the median absolute change in the available history or at least 10% versus the previous observation. High severity begins at 4× the historical median or 20%. This is a statistical screening rule, not a prediction."
   },
   "provenance": {
-    "generated_at": "2026-09-10T20:14:48Z",
+    "generated_at": "2026-09-10T21:02:07Z",
     "source_count": 12,
     "series_count": 22,
     "sources": [
       {
         "key": "overview",
         "name": "Treasury Fiscal Data — Debt to the Penny",
-        "as_of": "2026-09-08",
+        "as_of": "2026-09-09",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:12Z",
+        "checked_at": "2026-09-10T21:01:31Z",
         "message": null,
         "urls": [
           {
@@ -14508,10 +14431,10 @@
       {
         "key": "fed",
         "name": "Federal Reserve H.4.1",
-        "as_of": "2026-09-02",
+        "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:12Z",
+        "checked_at": "2026-09-10T21:01:31Z",
         "message": null,
         "urls": [
           {
@@ -14530,7 +14453,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:46Z",
+        "checked_at": "2026-09-10T21:02:03Z",
         "message": null,
         "urls": [
           {
@@ -14545,7 +14468,7 @@
         "as_of": "2026:Q1",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:25Z",
+        "checked_at": "2026-09-10T21:01:43Z",
         "message": null,
         "urls": [
           {
@@ -14561,10 +14484,10 @@
       {
         "key": "soma",
         "name": "New York Fed SOMA",
-        "as_of": "2026-09-02",
+        "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:26Z",
+        "checked_at": "2026-09-10T21:01:44Z",
         "message": null,
         "urls": [
           {
@@ -14573,7 +14496,7 @@
           },
           {
             "label": "API",
-            "url": "https://markets.newyorkfed.org/api/soma/tsy/get/all/asof/2026-09-02.json"
+            "url": "https://markets.newyorkfed.org/api/soma/tsy/get/all/asof/2026-09-09.json"
           }
         ]
       },
@@ -14583,7 +14506,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-10T20:14:26Z",
+        "checked_at": "2026-09-10T21:01:44Z",
         "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip",
         "urls": []
       },
@@ -14593,7 +14516,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:26Z",
+        "checked_at": "2026-09-10T21:01:46Z",
         "message": null,
         "urls": [
           {
@@ -14612,7 +14535,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:27Z",
+        "checked_at": "2026-09-10T21:01:47Z",
         "message": null,
         "urls": [
           {
@@ -14624,10 +14547,10 @@
       {
         "key": "primary_dealers",
         "name": "New York Fed Primary Dealer Statistics",
-        "as_of": "2026-08-26",
+        "as_of": "2026-09-02",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:28Z",
+        "checked_at": "2026-09-10T21:01:51Z",
         "message": null,
         "urls": [
           {
@@ -14646,7 +14569,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:34Z",
+        "checked_at": "2026-09-10T21:01:53Z",
         "message": null,
         "urls": [
           {
@@ -14661,7 +14584,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-10T20:14:34Z",
+        "checked_at": "2026-09-10T21:01:53Z",
         "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data.",
         "urls": [
           {
@@ -14680,7 +14603,7 @@
         "as_of": "2026-07-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:36Z",
+        "checked_at": "2026-09-10T21:01:54Z",
         "message": null,
         "urls": [
           {
@@ -14832,37 +14755,37 @@
         "section": "primary_dealers",
         "name": "Treasury dealer net position ex-TIPS",
         "series": "PDPOSGST-TOT",
-        "as_of": "2026-08-26",
+        "as_of": "2026-09-02",
         "source_url": "https://www.newyorkfed.org/markets/primarydealers"
       },
       {
         "section": "primary_dealers",
         "name": "Treasury fails to deliver ex-TIPS",
         "series": "PDFTD-USTET",
-        "as_of": "2026-08-26",
+        "as_of": "2026-09-02",
         "source_url": "https://www.newyorkfed.org/markets/primarydealers"
       },
       {
         "section": "primary_dealers",
         "name": "Treasury fails to receive ex-TIPS",
         "series": "PDFTR-USTET",
-        "as_of": "2026-08-26",
+        "as_of": "2026-09-02",
         "source_url": "https://www.newyorkfed.org/markets/primarydealers"
       }
     ],
     "note": "Provenance records the official source, observation date, retrieval path and latest health check separately so stale-but-valid observations are distinguishable from failed fetches."
   },
   "alert_history": {
-    "generated_at": "2026-09-10T20:14:48Z",
-    "active_count": 5,
-    "cleared_count": 0,
+    "generated_at": "2026-09-10T21:02:07Z",
+    "active_count": 3,
+    "cleared_count": 2,
     "episode_count": 5,
-    "transition_count": 5,
+    "transition_count": 7,
     "episodes": [
       {
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 15,
+        "seen_count": 16,
         "cleared_at": null,
         "state": "active",
         "severity": "high",
@@ -14878,12 +14801,12 @@
         "multiple_of_baseline": 6.317073170731667,
         "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
         "series_key": "Foreign country|China, Mainland|MoM",
-        "last_seen_at": "2026-09-10T20:14:48Z"
+        "last_seen_at": "2026-09-10T21:02:07Z"
       },
       {
         "alert_id": "10f3e7909be0493614fc",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 15,
+        "seen_count": 16,
         "cleared_at": null,
         "state": "active",
         "severity": "high",
@@ -14899,12 +14822,12 @@
         "multiple_of_baseline": 5.944019528071598,
         "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
         "series_key": "U.S. sector|Exchange-traded funds|QoQ",
-        "last_seen_at": "2026-09-10T20:14:48Z"
+        "last_seen_at": "2026-09-10T21:02:07Z"
       },
       {
         "alert_id": "f49e63e0d57bded6cd29",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 15,
+        "seen_count": 16,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -14920,14 +14843,14 @@
         "multiple_of_baseline": 2.993203808938721,
         "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
         "series_key": "U.S. sector|Security brokers and dealers|QoQ",
-        "last_seen_at": "2026-09-10T20:14:48Z"
+        "last_seen_at": "2026-09-10T21:02:07Z"
       },
       {
         "alert_id": "a626c548ce0c32534d5e",
         "first_seen_at": "2026-09-10T19:09:22Z",
         "seen_count": 15,
-        "cleared_at": null,
-        "state": "active",
+        "cleared_at": "2026-09-10T21:02:07Z",
+        "state": "cleared",
         "severity": "medium",
         "scope": "Primary dealer",
         "name": "Treasury dealer net position ex-TIPS",
@@ -14941,14 +14864,15 @@
         "multiple_of_baseline": 2.858699045967045,
         "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
         "series_key": "Primary dealer|Treasury dealer net position ex-TIPS|WoW",
-        "last_seen_at": "2026-09-10T20:14:48Z"
+        "last_seen_at": "2026-09-10T20:14:48Z",
+        "last_observation_checked": "2026-09-02"
       },
       {
         "alert_id": "a53c34f1e0828ff7a307",
         "first_seen_at": "2026-09-10T19:09:22Z",
         "seen_count": 15,
-        "cleared_at": null,
-        "state": "active",
+        "cleared_at": "2026-09-10T21:02:07Z",
+        "state": "cleared",
         "severity": "medium",
         "scope": "Primary dealer",
         "name": "Treasury fails to deliver ex-TIPS",
@@ -14962,10 +14886,33 @@
         "multiple_of_baseline": 0.6384486717886203,
         "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
         "series_key": "Primary dealer|Treasury fails to deliver ex-TIPS|WoW",
-        "last_seen_at": "2026-09-10T20:14:48Z"
+        "last_seen_at": "2026-09-10T20:14:48Z",
+        "last_observation_checked": "2026-09-02"
       }
     ],
     "transitions": [
+      {
+        "event": "cleared",
+        "alert_id": "a626c548ce0c32534d5e",
+        "at": "2026-09-10T21:02:07Z",
+        "scope": "Primary dealer",
+        "name": "Treasury dealer net position ex-TIPS",
+        "period": "WoW",
+        "as_of": "2026-08-26",
+        "severity": "medium",
+        "replacement_observation": "2026-09-02"
+      },
+      {
+        "event": "cleared",
+        "alert_id": "a53c34f1e0828ff7a307",
+        "at": "2026-09-10T21:02:07Z",
+        "scope": "Primary dealer",
+        "name": "Treasury fails to deliver ex-TIPS",
+        "period": "WoW",
+        "as_of": "2026-08-26",
+        "severity": "medium",
+        "replacement_observation": "2026-09-02"
+      },
       {
         "event": "opened",
         "alert_id": "70599bd6721a756b9772",
@@ -15020,10 +14967,10 @@
     "note": "An alert episode is keyed by scope, series name, cadence and source observation date. The first-seen timestamp records when the tracker first detected it; it is cleared only after a healthy source refresh confirms that the episode is no longer current."
   },
   "alert_intelligence": {
-    "generated_at": "2026-09-10T20:14:51Z",
-    "row_count": 5,
+    "generated_at": "2026-09-10T21:02:12Z",
+    "row_count": 3,
     "extreme_count": 1,
-    "elevated_count": 3,
+    "elevated_count": 2,
     "rows": [
       {
         "severity": "high",
@@ -15040,8 +14987,8 @@
         "reason": "5.9× the median absolute change in the available history; +10.3% versus the previous observation",
         "alert_id": "10f3e7909be0493614fc",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T20:14:48Z",
-        "seen_count": 15,
+        "last_seen_at": "2026-09-10T21:02:07Z",
+        "seen_count": 16,
         "history_change_count": 42,
         "abs_change_percentile": 100.0,
         "robust_z": 5.291994119626493,
@@ -15065,8 +15012,8 @@
         "reason": "6.3× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T20:14:48Z",
-        "seen_count": 15,
+        "last_seen_at": "2026-09-10T21:02:07Z",
+        "seen_count": 16,
         "history_change_count": 11,
         "abs_change_percentile": 81.81818181818181,
         "robust_z": -3.21679726923082,
@@ -15090,8 +15037,8 @@
         "reason": "3.0× the median absolute change in the available history; +14.4% versus the previous observation",
         "alert_id": "f49e63e0d57bded6cd29",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T20:14:48Z",
-        "seen_count": 15,
+        "last_seen_at": "2026-09-10T21:02:07Z",
+        "seen_count": 16,
         "history_change_count": 38,
         "abs_change_percentile": 92.10526315789474,
         "robust_z": 1.801161875877472,
@@ -15099,65 +15046,15 @@
         "mad_change_billions": 25.356999999999985,
         "diagnostic_score": 64.06425033772209,
         "diagnostic_label": "elevated"
-      },
-      {
-        "severity": "medium",
-        "scope": "Primary dealer",
-        "name": "Treasury dealer net position ex-TIPS",
-        "period": "WoW",
-        "as_of": "2026-08-26",
-        "previous_as_of": "2026-08-19",
-        "current_billions": 477.607,
-        "change_billions": 41.20100000000002,
-        "change_pct": 9.44097927159572,
-        "baseline_abs_change_billions": 14.412499999999994,
-        "multiple_of_baseline": 2.858699045967045,
-        "reason": "2.9× the median absolute change in the available history; +9.4% versus the previous observation",
-        "alert_id": "a626c548ce0c32534d5e",
-        "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T20:14:48Z",
-        "seen_count": 15,
-        "history_change_count": 102,
-        "abs_change_percentile": 88.23529411764706,
-        "robust_z": 1.925278971321617,
-        "median_change_billions": -0.9260000000000161,
-        "mad_change_billions": 14.75849999999997,
-        "diagnostic_score": 63.370436772039696,
-        "diagnostic_label": "elevated"
-      },
-      {
-        "severity": "medium",
-        "scope": "Primary dealer",
-        "name": "Treasury fails to deliver ex-TIPS",
-        "period": "WoW",
-        "as_of": "2026-08-26",
-        "previous_as_of": "2026-08-19",
-        "current_billions": 76.655,
-        "change_billions": -11.260000000000005,
-        "change_pct": -12.80782574077234,
-        "baseline_abs_change_billions": 17.636500000000005,
-        "multiple_of_baseline": 0.6384486717886203,
-        "reason": "0.6× the median absolute change in the available history; -12.8% versus the previous observation",
-        "alert_id": "a53c34f1e0828ff7a307",
-        "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-10T20:14:48Z",
-        "seen_count": 15,
-        "history_change_count": 102,
-        "abs_change_percentile": 30.392156862745097,
-        "robust_z": -0.3651850592744595,
-        "median_change_billions": -1.3984999999999985,
-        "mad_change_billions": 18.214,
-        "diagnostic_score": 18.847929024117143,
-        "diagnostic_label": "notable"
       }
     ],
     "method": "Phase 8 keeps the transparent Phase 6 threshold rule and adds two diagnostics: the percentile rank of the latest absolute change versus prior historical absolute changes, and a robust z-score based on the median and median absolute deviation (MAD). These diagnostics rank unusual moves; they do not forecast prices or infer causes."
   },
   "phase8_notifications": {
-    "generated_at": "2026-09-10T20:14:51Z",
+    "generated_at": "2026-09-10T21:02:12Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:25:05Z",
-    "last_processed_transition_at": "2026-09-10T19:09:22Z",
+    "last_processed_transition_at": "2026-09-10T21:02:07Z",
     "new_high_count": 0,
     "active_high_count": 2,
     "queue": [],
@@ -15182,28 +15079,28 @@
     "note": "The queue contains only high-severity lifecycle transitions that occurred after Phase 8 established its watermark. Existing high alerts are watched but are not retroactively labeled new. This block is notification-ready output; delivery is intentionally separate from the data updater."
   },
   "publication_history": {
-    "generated_at": "2026-09-10T20:14:51Z",
+    "generated_at": "2026-09-10T21:02:12Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:25:05Z",
     "source_count": 12,
-    "event_count": 0,
-    "new_event_count": 0,
+    "event_count": 4,
+    "new_event_count": 4,
     "latest": [
       {
         "key": "overview",
         "name": "Treasury Fiscal Data — Debt to the Penny",
-        "as_of": "2026-09-08",
+        "as_of": "2026-09-09",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:12Z"
+        "checked_at": "2026-09-10T21:01:31Z"
       },
       {
         "key": "fed",
         "name": "Federal Reserve H.4.1",
-        "as_of": "2026-09-02",
+        "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:12Z"
+        "checked_at": "2026-09-10T21:01:31Z"
       },
       {
         "key": "foreign_holders",
@@ -15211,7 +15108,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:46Z"
+        "checked_at": "2026-09-10T21:02:03Z"
       },
       {
         "key": "domestic_sectors",
@@ -15219,15 +15116,15 @@
         "as_of": "2026:Q1",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:25Z"
+        "checked_at": "2026-09-10T21:01:43Z"
       },
       {
         "key": "soma",
         "name": "New York Fed SOMA",
-        "as_of": "2026-09-02",
+        "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:26Z"
+        "checked_at": "2026-09-10T21:01:44Z"
       },
       {
         "key": "money_market_funds",
@@ -15235,7 +15132,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-10T20:14:26Z"
+        "checked_at": "2026-09-10T21:01:44Z"
       },
       {
         "key": "auctions",
@@ -15243,7 +15140,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:26Z"
+        "checked_at": "2026-09-10T21:01:46Z"
       },
       {
         "key": "institutional_aggregates",
@@ -15251,15 +15148,15 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:27Z"
+        "checked_at": "2026-09-10T21:01:47Z"
       },
       {
         "key": "primary_dealers",
         "name": "New York Fed Primary Dealer Statistics",
-        "as_of": "2026-08-26",
+        "as_of": "2026-09-02",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:28Z"
+        "checked_at": "2026-09-10T21:01:51Z"
       },
       {
         "key": "extended_holders",
@@ -15267,7 +15164,7 @@
         "as_of": "2026-01-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:34Z"
+        "checked_at": "2026-09-10T21:01:53Z"
       },
       {
         "key": "nport",
@@ -15275,7 +15172,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-10T20:14:34Z"
+        "checked_at": "2026-09-10T21:01:53Z"
       },
       {
         "key": "government_accounts",
@@ -15283,17 +15180,58 @@
         "as_of": "2026-07-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-10T20:14:36Z"
+        "checked_at": "2026-09-10T21:01:54Z"
       }
     ],
-    "events": [],
+    "events": [
+      {
+        "event": "new_observation",
+        "at": "2026-09-10T21:02:12Z",
+        "key": "overview",
+        "name": "Treasury Fiscal Data — Debt to the Penny",
+        "previous_as_of": "2026-09-08",
+        "as_of": "2026-09-09",
+        "frequency": "Business daily",
+        "status": "ok"
+      },
+      {
+        "event": "new_observation",
+        "at": "2026-09-10T21:02:12Z",
+        "key": "fed",
+        "name": "Federal Reserve H.4.1",
+        "previous_as_of": "2026-09-02",
+        "as_of": "2026-09-09",
+        "frequency": "Weekly (Wednesday level; published Thursday)",
+        "status": "ok"
+      },
+      {
+        "event": "new_observation",
+        "at": "2026-09-10T21:02:12Z",
+        "key": "soma",
+        "name": "New York Fed SOMA",
+        "previous_as_of": "2026-09-02",
+        "as_of": "2026-09-09",
+        "frequency": "Weekly (Wednesday holdings; published Thursday)",
+        "status": "ok"
+      },
+      {
+        "event": "new_observation",
+        "at": "2026-09-10T21:02:12Z",
+        "key": "primary_dealers",
+        "name": "New York Fed Primary Dealer Statistics",
+        "previous_as_of": "2026-08-26",
+        "as_of": "2026-09-02",
+        "frequency": "Weekly; updated Thursdays with the previous week's data",
+        "status": "ok"
+      }
+    ],
     "note": "This ledger records source observation-date changes detected by the daily updater. The detection timestamp is not the publisher's exact release timestamp; it is when this tracker first observed the new official reporting period."
   },
   "security_concentration": {
-    "as_of": "2026-09-02",
+    "as_of": "2026-09-09",
     "security_count": 100,
     "coverage_count": 100,
-    "weighted_average_soma_pct_outstanding": 38.53379505122604,
+    "weighted_average_soma_pct_outstanding": 38.68488343619157,
     "at_or_above_30pct": 48,
     "at_or_above_50pct": 29,
     "at_or_above_70pct": 0,
@@ -15793,30 +15731,30 @@
         "latest_auction_date": "2016-07-13"
       },
       {
+        "cusip": "9128282R0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-08-15",
+        "soma_par_billions": 26.3234032,
+        "soma_pct_outstanding": 38.63681777911159,
+        "implied_outstanding_billions": 68.1303604,
+        "concentration_percentile": 62.0,
+        "concentration_band": "elevated",
+        "original_issue_date": "2017-08-15",
+        "original_security_term": "10-Year",
+        "latest_auction_date": "2017-10-11"
+      },
+      {
         "cusip": "912810SY5",
         "security_type": "Notes & Bonds",
         "maturity_date": "2041-05-15",
         "soma_par_billions": 29.0350163,
         "soma_pct_outstanding": 38.47489250510655,
         "implied_outstanding_billions": 75.46484059999999,
-        "concentration_percentile": 62.0,
+        "concentration_percentile": 61.0,
         "concentration_band": "elevated",
         "original_issue_date": "2021-06-01",
         "original_security_term": "20-Year",
         "latest_auction_date": "2021-07-21"
-      },
-      {
-        "cusip": "9128282R0",
-        "security_type": "Notes & Bonds",
-        "maturity_date": "2027-08-15",
-        "soma_par_billions": 26.3234032,
-        "soma_pct_outstanding": 37.905200647500706,
-        "implied_outstanding_billions": 69.4453604,
-        "concentration_percentile": 61.0,
-        "concentration_band": "elevated",
-        "original_issue_date": "2017-08-15",
-        "original_security_term": "10-Year",
-        "latest_auction_date": "2017-10-11"
       },
       {
         "cusip": "912810ST6",
@@ -15888,8 +15826,8 @@
         "security_type": "Notes & Bonds",
         "maturity_date": "2027-11-15",
         "soma_par_billions": 21.5800875,
-        "soma_pct_outstanding": 32.91247422340701,
-        "implied_outstanding_billions": 65.5681106,
+        "soma_pct_outstanding": 32.91498420759799,
+        "implied_outstanding_billions": 65.56311059999999,
         "concentration_percentile": 55.0,
         "concentration_band": "elevated",
         "original_issue_date": "2017-11-15",
@@ -15953,7 +15891,7 @@
     "note": "SOMA percent-outstanding comes from the New York Fed holding data already used by the tracker. Implied outstanding amount is derived as SOMA par divided by SOMA percent outstanding and is shown only where both inputs are available. Percentile ranks compare the stored SOMA CUSIP universe, not every outstanding Treasury security."
   },
   "holder_profiles": {
-    "generated_at": "2026-09-10T20:14:51Z",
+    "generated_at": "2026-09-10T21:02:12Z",
     "profile_count": 42,
     "scope_counts": {
       "Foreign country": 20,
@@ -17609,16 +17547,12 @@
         "source_key": "primary_dealers",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "series": "PDPOSGST-TOT",
-        "as_of": "2026-08-26",
-        "current_billions": 477.607,
-        "previous_billions": 436.406,
-        "change_billions": 41.20100000000002,
-        "change_pct": 9.44097927159572,
+        "as_of": "2026-09-02",
+        "current_billions": 455.185,
+        "previous_billions": 477.607,
+        "change_billions": -22.422000000000025,
+        "change_pct": -4.6946548103357,
         "history": [
-          {
-            "date": "2024-09-04",
-            "value_billions": 322.765
-          },
           {
             "date": "2024-09-11",
             "value_billions": 322.898
@@ -18030,18 +17964,22 @@
           {
             "date": "2026-08-26",
             "value_billions": 477.607
+          },
+          {
+            "date": "2026-09-02",
+            "value_billions": 455.185
           }
         ],
         "rank_within_scope": 1,
         "share_of_tracked_scope_pct": null,
-        "alert_severity": "medium",
-        "diagnostic_label": "elevated",
-        "abs_change_percentile": 88.23529411764706,
-        "robust_z": 1.925278971321617,
-        "alert_first_seen_at": "2026-09-10T19:09:22Z",
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
         "source_name": "New York Fed Primary Dealer Statistics",
         "source_url": null,
-        "latest_direction": "accumulating"
+        "latest_direction": "reducing"
       },
       {
         "profile_id": "2e97b56e1725fe973a",
@@ -18051,16 +17989,12 @@
         "source_key": "primary_dealers",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "series": "PDFTR-USTET",
-        "as_of": "2026-08-26",
-        "current_billions": 88.371,
-        "previous_billions": 97.005,
-        "change_billions": -8.634,
-        "change_pct": -8.900572135456935,
+        "as_of": "2026-09-02",
+        "current_billions": 87.259,
+        "previous_billions": 88.371,
+        "change_billions": -1.1119999999999948,
+        "change_pct": -1.2583313530456766,
         "history": [
-          {
-            "date": "2024-09-04",
-            "value_billions": 135.305
-          },
           {
             "date": "2024-09-11",
             "value_billions": 108.379
@@ -18472,6 +18406,10 @@
           {
             "date": "2026-08-26",
             "value_billions": 88.371
+          },
+          {
+            "date": "2026-09-02",
+            "value_billions": 87.259
           }
         ],
         "rank_within_scope": 2,
@@ -18493,16 +18431,12 @@
         "source_key": "primary_dealers",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "series": "PDFTD-USTET",
-        "as_of": "2026-08-26",
-        "current_billions": 76.655,
-        "previous_billions": 87.915,
-        "change_billions": -11.260000000000005,
-        "change_pct": -12.80782574077234,
+        "as_of": "2026-09-02",
+        "current_billions": 86.026,
+        "previous_billions": 76.655,
+        "change_billions": 9.370999999999995,
+        "change_pct": 12.224903789707122,
         "history": [
-          {
-            "date": "2024-09-04",
-            "value_billions": 129.061
-          },
           {
             "date": "2024-09-11",
             "value_billions": 102.606
@@ -18914,18 +18848,22 @@
           {
             "date": "2026-08-26",
             "value_billions": 76.655
+          },
+          {
+            "date": "2026-09-02",
+            "value_billions": 86.026
           }
         ],
         "rank_within_scope": 3,
         "share_of_tracked_scope_pct": null,
-        "alert_severity": "medium",
-        "diagnostic_label": "notable",
-        "abs_change_percentile": 30.392156862745097,
-        "robust_z": -0.3651850592744595,
-        "alert_first_seen_at": "2026-09-10T19:09:22Z",
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
         "source_name": "New York Fed Primary Dealer Statistics",
         "source_url": null,
-        "latest_direction": "reducing"
+        "latest_direction": "accumulating"
       },
       {
         "profile_id": "6b5a1d7cad8521d529",
@@ -20763,7 +20701,7 @@
     "note": "Holder profiles preserve each source's own cadence. Foreign-country profiles are monthly current holdings, U.S. sectors are quarterly aggregate holdings, and primary-dealer profiles are weekly market-positioning series rather than ownership balances."
   },
   "flow_intelligence": {
-    "generated_at": "2026-09-10T20:14:51Z",
+    "generated_at": "2026-09-10T21:02:12Z",
     "scope_summaries": [
       {
         "scope": "Foreign country",
@@ -20923,9 +20861,9 @@
         "reducing_count": 2,
         "flat_count": 0,
         "accumulation_breadth_pct": 33.33333333333333,
-        "median_change_pct": -8.900572135456935,
+        "median_change_pct": -1.2583313530456766,
         "observation_dates": [
-          "2026-08-26"
+          "2026-09-02"
         ],
         "frequencies": [
           "Weekly; updated Thursdays with the previous week's data"
@@ -20933,27 +20871,27 @@
         "reported_total_change_billions": null,
         "top_accumulators": [
           {
-            "profile_id": "0e2ff544ed14b70820",
-            "name": "Treasury dealer net position ex-TIPS",
-            "change_billions": 41.20100000000002,
-            "change_pct": 9.44097927159572,
-            "as_of": "2026-08-26"
+            "profile_id": "f21942ed292b92fa6a",
+            "name": "Treasury fails to deliver ex-TIPS",
+            "change_billions": 9.370999999999995,
+            "change_pct": 12.224903789707122,
+            "as_of": "2026-09-02"
           }
         ],
         "top_reducers": [
           {
-            "profile_id": "f21942ed292b92fa6a",
-            "name": "Treasury fails to deliver ex-TIPS",
-            "change_billions": -11.260000000000005,
-            "change_pct": -12.80782574077234,
-            "as_of": "2026-08-26"
+            "profile_id": "0e2ff544ed14b70820",
+            "name": "Treasury dealer net position ex-TIPS",
+            "change_billions": -22.422000000000025,
+            "change_pct": -4.6946548103357,
+            "as_of": "2026-09-02"
           },
           {
             "profile_id": "2e97b56e1725fe973a",
             "name": "Treasury fails to receive ex-TIPS",
-            "change_billions": -8.634,
-            "change_pct": -8.900572135456935,
-            "as_of": "2026-08-26"
+            "change_billions": -1.1119999999999948,
+            "change_pct": -1.2583313530456766,
+            "as_of": "2026-09-02"
           }
         ]
       }
@@ -20977,18 +20915,19 @@
     "note": "Phase 9 compares accumulation/reduction breadth within each source cadence instead of summing monthly, quarterly and weekly changes into a false synchronized flow number. Primary-dealer series remain classified as market positioning, not ownership."
   },
   "release_calendar": {
-    "generated_at": "2026-09-10T20:14:51Z",
+    "generated_at": "2026-09-10T21:02:12Z",
     "today": "2026-09-10",
     "source_count": 12,
     "status_counts": {
-      "overdue": 3,
+      "overdue": 2,
       "source_error": 1,
-      "due_now": 4,
+      "due_now": 1,
       "due_soon": 2,
+      "new_release": 4,
       "access_limited": 1,
       "event_driven": 1
     },
-    "attention_count": 10,
+    "attention_count": 6,
     "rows": [
       {
         "key": "institutional_aggregates",
@@ -20997,7 +20936,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026-01-01",
-        "last_checked_at": "2026-09-10T20:14:27Z",
+        "last_checked_at": "2026-09-10T21:01:47Z",
         "expected_next_observation": "2026-04-30",
         "expected_publication_date": "2026-07-13",
         "days_to_expected": -59,
@@ -21014,7 +20953,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026-01-01",
-        "last_checked_at": "2026-09-10T20:14:34Z",
+        "last_checked_at": "2026-09-10T21:01:53Z",
         "expected_next_observation": "2026-04-30",
         "expected_publication_date": "2026-07-13",
         "days_to_expected": -59,
@@ -21025,30 +20964,13 @@
         "is_estimate": true
       },
       {
-        "key": "primary_dealers",
-        "name": "New York Fed Primary Dealer Statistics",
-        "schedule_kind": "weekly_thursday",
-        "frequency": "Weekly; updated Thursdays with the previous week's data",
-        "source_status": "ok",
-        "last_observation": "2026-08-26",
-        "last_checked_at": "2026-09-10T20:14:28Z",
-        "expected_next_observation": "2026-09-02",
-        "expected_publication_date": "2026-09-03",
-        "days_to_expected": -7,
-        "grace_days": 1,
-        "overdue_days": 6,
-        "calendar_status": "overdue",
-        "method": "Weekly series; next observation is estimated one week after the current observation with a one-day publication lag.",
-        "is_estimate": true
-      },
-      {
         "key": "money_market_funds",
         "name": "SEC Form N-MFP",
         "schedule_kind": "nmfp_monthly",
         "frequency": null,
         "source_status": "error",
         "last_observation": null,
-        "last_checked_at": "2026-09-10T20:14:26Z",
+        "last_checked_at": "2026-09-10T21:01:44Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -21065,7 +20987,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026:Q1",
-        "last_checked_at": "2026-09-10T20:14:25Z",
+        "last_checked_at": "2026-09-10T21:01:43Z",
         "expected_next_observation": "2026-06-30",
         "expected_publication_date": "2026-09-10",
         "days_to_expected": 0,
@@ -21076,64 +20998,13 @@
         "is_estimate": true
       },
       {
-        "key": "fed",
-        "name": "Federal Reserve H.4.1",
-        "schedule_kind": "weekly_thursday",
-        "frequency": "Weekly (Wednesday level; published Thursday)",
-        "source_status": "ok",
-        "last_observation": "2026-09-02",
-        "last_checked_at": "2026-09-10T20:14:12Z",
-        "expected_next_observation": "2026-09-09",
-        "expected_publication_date": "2026-09-10",
-        "days_to_expected": 0,
-        "grace_days": 1,
-        "overdue_days": 0,
-        "calendar_status": "due_now",
-        "method": "Next Wednesday observation, normally published Thursday.",
-        "is_estimate": true
-      },
-      {
-        "key": "soma",
-        "name": "New York Fed SOMA",
-        "schedule_kind": "weekly_thursday",
-        "frequency": "Weekly (Wednesday holdings; published Thursday)",
-        "source_status": "ok",
-        "last_observation": "2026-09-02",
-        "last_checked_at": "2026-09-10T20:14:26Z",
-        "expected_next_observation": "2026-09-09",
-        "expected_publication_date": "2026-09-10",
-        "days_to_expected": 0,
-        "grace_days": 1,
-        "overdue_days": 0,
-        "calendar_status": "due_now",
-        "method": "Next Wednesday SOMA observation, normally published Thursday.",
-        "is_estimate": true
-      },
-      {
-        "key": "overview",
-        "name": "Treasury Fiscal Data — Debt to the Penny",
-        "schedule_kind": "business_daily",
-        "frequency": "Business daily",
-        "source_status": "ok",
-        "last_observation": "2026-09-08",
-        "last_checked_at": "2026-09-10T20:14:12Z",
-        "expected_next_observation": "2026-09-09",
-        "expected_publication_date": "2026-09-10",
-        "days_to_expected": 0,
-        "grace_days": 1,
-        "overdue_days": 0,
-        "calendar_status": "due_now",
-        "method": "Next weekday after the latest debt observation; publication expectation allows one extra calendar day.",
-        "is_estimate": true
-      },
-      {
         "key": "government_accounts",
         "name": "Treasury Monthly Treasury Statement — Government Accounts",
         "schedule_kind": "mts_monthly",
         "frequency": "Monthly",
         "source_status": "ok",
         "last_observation": "2026-07-31",
-        "last_checked_at": "2026-09-10T20:14:36Z",
+        "last_checked_at": "2026-09-10T21:01:54Z",
         "expected_next_observation": "2026-08-31",
         "expected_publication_date": "2026-09-14",
         "days_to_expected": 4,
@@ -21150,7 +21021,7 @@
         "frequency": "Monthly",
         "source_status": "ok",
         "last_observation": "2026-06",
-        "last_checked_at": "2026-09-10T20:14:46Z",
+        "last_checked_at": "2026-09-10T21:02:03Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-09-16",
         "days_to_expected": 6,
@@ -21161,13 +21032,81 @@
         "is_estimate": true
       },
       {
+        "key": "primary_dealers",
+        "name": "New York Fed Primary Dealer Statistics",
+        "schedule_kind": "weekly_thursday",
+        "frequency": "Weekly; updated Thursdays with the previous week's data",
+        "source_status": "ok",
+        "last_observation": "2026-09-02",
+        "last_checked_at": "2026-09-10T21:01:51Z",
+        "expected_next_observation": "2026-09-09",
+        "expected_publication_date": "2026-09-10",
+        "days_to_expected": 0,
+        "grace_days": 1,
+        "overdue_days": 0,
+        "calendar_status": "new_release",
+        "method": "Weekly series; next observation is estimated one week after the current observation with a one-day publication lag.",
+        "is_estimate": true
+      },
+      {
+        "key": "overview",
+        "name": "Treasury Fiscal Data — Debt to the Penny",
+        "schedule_kind": "business_daily",
+        "frequency": "Business daily",
+        "source_status": "ok",
+        "last_observation": "2026-09-09",
+        "last_checked_at": "2026-09-10T21:01:31Z",
+        "expected_next_observation": "2026-09-10",
+        "expected_publication_date": "2026-09-11",
+        "days_to_expected": 1,
+        "grace_days": 1,
+        "overdue_days": 0,
+        "calendar_status": "new_release",
+        "method": "Next weekday after the latest debt observation; publication expectation allows one extra calendar day.",
+        "is_estimate": true
+      },
+      {
+        "key": "fed",
+        "name": "Federal Reserve H.4.1",
+        "schedule_kind": "weekly_thursday",
+        "frequency": "Weekly (Wednesday level; published Thursday)",
+        "source_status": "ok",
+        "last_observation": "2026-09-09",
+        "last_checked_at": "2026-09-10T21:01:31Z",
+        "expected_next_observation": "2026-09-16",
+        "expected_publication_date": "2026-09-17",
+        "days_to_expected": 7,
+        "grace_days": 1,
+        "overdue_days": 0,
+        "calendar_status": "new_release",
+        "method": "Next Wednesday observation, normally published Thursday.",
+        "is_estimate": true
+      },
+      {
+        "key": "soma",
+        "name": "New York Fed SOMA",
+        "schedule_kind": "weekly_thursday",
+        "frequency": "Weekly (Wednesday holdings; published Thursday)",
+        "source_status": "ok",
+        "last_observation": "2026-09-09",
+        "last_checked_at": "2026-09-10T21:01:44Z",
+        "expected_next_observation": "2026-09-16",
+        "expected_publication_date": "2026-09-17",
+        "days_to_expected": 7,
+        "grace_days": 1,
+        "overdue_days": 0,
+        "calendar_status": "new_release",
+        "method": "Next Wednesday SOMA observation, normally published Thursday.",
+        "is_estimate": true
+      },
+      {
         "key": "nport",
         "name": "SEC Form N-PORT quarterly cache",
         "schedule_kind": "access_limited",
         "frequency": null,
         "source_status": "pending",
         "last_observation": null,
-        "last_checked_at": "2026-09-10T20:14:34Z",
+        "last_checked_at": "2026-09-10T21:01:53Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -21184,7 +21123,7 @@
         "frequency": "Released as auctions occur",
         "source_status": "ok",
         "last_observation": "2026-09-17",
-        "last_checked_at": "2026-09-10T20:14:26Z",
+        "last_checked_at": "2026-09-10T21:01:46Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -21203,7 +21142,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026-01-01",
-        "last_checked_at": "2026-09-10T20:14:27Z",
+        "last_checked_at": "2026-09-10T21:01:47Z",
         "expected_next_observation": "2026-04-30",
         "expected_publication_date": "2026-07-13",
         "days_to_expected": -59,
@@ -21220,7 +21159,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026-01-01",
-        "last_checked_at": "2026-09-10T20:14:34Z",
+        "last_checked_at": "2026-09-10T21:01:53Z",
         "expected_next_observation": "2026-04-30",
         "expected_publication_date": "2026-07-13",
         "days_to_expected": -59,
@@ -21231,30 +21170,13 @@
         "is_estimate": true
       },
       {
-        "key": "primary_dealers",
-        "name": "New York Fed Primary Dealer Statistics",
-        "schedule_kind": "weekly_thursday",
-        "frequency": "Weekly; updated Thursdays with the previous week's data",
-        "source_status": "ok",
-        "last_observation": "2026-08-26",
-        "last_checked_at": "2026-09-10T20:14:28Z",
-        "expected_next_observation": "2026-09-02",
-        "expected_publication_date": "2026-09-03",
-        "days_to_expected": -7,
-        "grace_days": 1,
-        "overdue_days": 6,
-        "calendar_status": "overdue",
-        "method": "Weekly series; next observation is estimated one week after the current observation with a one-day publication lag.",
-        "is_estimate": true
-      },
-      {
         "key": "money_market_funds",
         "name": "SEC Form N-MFP",
         "schedule_kind": "nmfp_monthly",
         "frequency": null,
         "source_status": "error",
         "last_observation": null,
-        "last_checked_at": "2026-09-10T20:14:26Z",
+        "last_checked_at": "2026-09-10T21:01:44Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -21271,7 +21193,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026:Q1",
-        "last_checked_at": "2026-09-10T20:14:25Z",
+        "last_checked_at": "2026-09-10T21:01:43Z",
         "expected_next_observation": "2026-06-30",
         "expected_publication_date": "2026-09-10",
         "days_to_expected": 0,
@@ -21282,64 +21204,13 @@
         "is_estimate": true
       },
       {
-        "key": "fed",
-        "name": "Federal Reserve H.4.1",
-        "schedule_kind": "weekly_thursday",
-        "frequency": "Weekly (Wednesday level; published Thursday)",
-        "source_status": "ok",
-        "last_observation": "2026-09-02",
-        "last_checked_at": "2026-09-10T20:14:12Z",
-        "expected_next_observation": "2026-09-09",
-        "expected_publication_date": "2026-09-10",
-        "days_to_expected": 0,
-        "grace_days": 1,
-        "overdue_days": 0,
-        "calendar_status": "due_now",
-        "method": "Next Wednesday observation, normally published Thursday.",
-        "is_estimate": true
-      },
-      {
-        "key": "soma",
-        "name": "New York Fed SOMA",
-        "schedule_kind": "weekly_thursday",
-        "frequency": "Weekly (Wednesday holdings; published Thursday)",
-        "source_status": "ok",
-        "last_observation": "2026-09-02",
-        "last_checked_at": "2026-09-10T20:14:26Z",
-        "expected_next_observation": "2026-09-09",
-        "expected_publication_date": "2026-09-10",
-        "days_to_expected": 0,
-        "grace_days": 1,
-        "overdue_days": 0,
-        "calendar_status": "due_now",
-        "method": "Next Wednesday SOMA observation, normally published Thursday.",
-        "is_estimate": true
-      },
-      {
-        "key": "overview",
-        "name": "Treasury Fiscal Data — Debt to the Penny",
-        "schedule_kind": "business_daily",
-        "frequency": "Business daily",
-        "source_status": "ok",
-        "last_observation": "2026-09-08",
-        "last_checked_at": "2026-09-10T20:14:12Z",
-        "expected_next_observation": "2026-09-09",
-        "expected_publication_date": "2026-09-10",
-        "days_to_expected": 0,
-        "grace_days": 1,
-        "overdue_days": 0,
-        "calendar_status": "due_now",
-        "method": "Next weekday after the latest debt observation; publication expectation allows one extra calendar day.",
-        "is_estimate": true
-      },
-      {
         "key": "government_accounts",
         "name": "Treasury Monthly Treasury Statement — Government Accounts",
         "schedule_kind": "mts_monthly",
         "frequency": "Monthly",
         "source_status": "ok",
         "last_observation": "2026-07-31",
-        "last_checked_at": "2026-09-10T20:14:36Z",
+        "last_checked_at": "2026-09-10T21:01:54Z",
         "expected_next_observation": "2026-08-31",
         "expected_publication_date": "2026-09-14",
         "days_to_expected": 4,
@@ -21356,7 +21227,7 @@
         "frequency": "Monthly",
         "source_status": "ok",
         "last_observation": "2026-06",
-        "last_checked_at": "2026-09-10T20:14:46Z",
+        "last_checked_at": "2026-09-10T21:02:03Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-09-16",
         "days_to_expected": 6,
@@ -21370,11 +21241,11 @@
     "note": "Release dates in this panel are tracker estimates derived from each source's normal cadence and latest observation. They are operational freshness diagnostics, not publisher commitments. Weekday adjustment does not model U.S. federal holidays. Event-driven auction data and SEC bulk feeds with access limitations are not labeled overdue from cadence alone."
   },
   "flow_regime_history": {
-    "generated_at": "2026-09-10T20:14:51Z",
+    "generated_at": "2026-09-10T21:02:12Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:57:05Z",
-    "event_count": 3,
-    "new_event_count": 0,
+    "event_count": 4,
+    "new_event_count": 1,
     "events": [
       {
         "event_id": "3375bcdc58e6321ac5",
@@ -21451,6 +21322,31 @@
         "breadth_change_pp": null,
         "regime_changed": false,
         "regime_duration_observations": 1
+      },
+      {
+        "event_id": "067736747b850cfcbd",
+        "signature": "417a897415565aee0765",
+        "scope": "Primary dealer",
+        "concept": "market_positioning",
+        "observation_dates": [
+          "2026-09-02"
+        ],
+        "frequencies": [
+          "Weekly; updated Thursdays with the previous week's data"
+        ],
+        "detected_at": "2026-09-10T21:02:12Z",
+        "regime": "reduction tilt",
+        "accumulation_breadth_pct": 33.33333333333333,
+        "momentum_score": -16.66666666666667,
+        "accumulating_count": 1,
+        "reducing_count": 2,
+        "flat_count": 0,
+        "median_change_pct": -1.2583313530456766,
+        "reported_total_change_billions": null,
+        "previous_regime": "reduction tilt",
+        "breadth_change_pp": 0.0,
+        "regime_changed": false,
+        "regime_duration_observations": 2
       }
     ],
     "current": [
@@ -21506,29 +21402,29 @@
         "regime_duration_observations": 1
       },
       {
-        "event_id": "d169f34fdc2786a5da",
-        "signature": "6252271983e3810b6832",
+        "event_id": "067736747b850cfcbd",
+        "signature": "417a897415565aee0765",
         "scope": "Primary dealer",
         "concept": "market_positioning",
         "observation_dates": [
-          "2026-08-26"
+          "2026-09-02"
         ],
         "frequencies": [
           "Weekly; updated Thursdays with the previous week's data"
         ],
-        "detected_at": "2026-09-10T19:57:05Z",
+        "detected_at": "2026-09-10T21:02:12Z",
         "regime": "reduction tilt",
         "accumulation_breadth_pct": 33.33333333333333,
         "momentum_score": -16.66666666666667,
         "accumulating_count": 1,
         "reducing_count": 2,
         "flat_count": 0,
-        "median_change_pct": -8.900572135456935,
+        "median_change_pct": -1.2583313530456766,
         "reported_total_change_billions": null,
-        "previous_regime": null,
-        "breadth_change_pp": null,
+        "previous_regime": "reduction tilt",
+        "breadth_change_pp": 0.0,
         "regime_changed": false,
-        "regime_duration_observations": 1
+        "regime_duration_observations": 2
       }
     ],
     "cross_scope_event_count": 1,
@@ -21575,7 +21471,7 @@
     "note": "A regime point is added only when a scope advances to a new source observation signature. Daily updater runs do not create duplicate regime history. Breadth is calculated within each source cadence; the cross-scope regime compares direction only and never adds monthly TIC flows to quarterly Financial Accounts changes."
   },
   "research_brief": {
-    "generated_at": "2026-09-10T20:14:51Z",
+    "generated_at": "2026-09-10T21:02:12Z",
     "item_count": 5,
     "items": [
       {
@@ -21610,21 +21506,21 @@
         "category": "Data freshness",
         "severity": "negative",
         "title": "Source calendar needs attention",
-        "text": "3 estimated overdue, 1 source-error and 6 due/due-soon dataset checks are currently flagged.",
+        "text": "2 estimated overdue, 1 source-error and 3 due/due-soon dataset checks are currently flagged.",
         "caveat": "Expected release dates are cadence-based tracker estimates and are not official publisher commitments."
       }
     ],
     "note": "Rule-based research brief generated only from the official-data blocks already present in the tracker. It is descriptive, not investment advice or a forecast."
   },
   "navigation_index": {
-    "generated_at": "2026-09-10T20:14:51Z",
-    "entry_count": 188,
+    "generated_at": "2026-09-10T21:02:12Z",
+    "entry_count": 186,
     "type_counts": {
       "section": 29,
       "holder": 42,
       "security": 100,
       "source": 12,
-      "alert": 5
+      "alert": 3
     },
     "entries": [
       {
@@ -22309,16 +22205,6 @@
         "keywords": "united kingdom foreign country monthly treasury international capital "
       },
       {
-        "id": "security:912797RS8",
-        "type": "security",
-        "title": "912797RS8",
-        "subtitle": "Bills · 52-Week · matures 2026-09-03",
-        "target_panel": "securityDrillPanel",
-        "target_key": "912797RS8",
-        "keywords": "912797rs8 bills 2026-09-03 52-week treasury soma cusip",
-        "soma_par_billions": 18.5679375
-      },
-      {
         "id": "security:912797SA6",
         "type": "security",
         "title": "912797SA6",
@@ -22399,14 +22285,14 @@
         "soma_par_billions": 20.4897929
       },
       {
-        "id": "security:912797VB0",
+        "id": "security:912797UK1",
         "type": "security",
-        "title": "912797VB0",
-        "subtitle": "Bills · 17-Week · matures 2026-09-08",
+        "title": "912797UK1",
+        "subtitle": "Bills · 26-Week · matures 2026-10-15",
         "target_panel": "securityDrillPanel",
-        "target_key": "912797VB0",
-        "keywords": "912797vb0 bills 2026-09-08 17-week treasury soma cusip",
-        "soma_par_billions": 14.7774138
+        "target_key": "912797UK1",
+        "keywords": "912797uk1 bills 2026-10-15 26-week treasury soma cusip",
+        "soma_par_billions": 15.4729221
       },
       {
         "id": "security:912797VC8",
@@ -23309,6 +23195,16 @@
         "soma_par_billions": 16.4345283
       },
       {
+        "id": "security:91282CRG8",
+        "type": "security",
+        "title": "91282CRG8",
+        "subtitle": "Notes & Bonds · 3-Year · matures 2029-08-15",
+        "target_panel": "securityDrillPanel",
+        "target_key": "91282CRG8",
+        "keywords": "91282crg8 notes & bonds 2029-08-15 3-year treasury soma cusip",
+        "soma_par_billions": 14.6705632
+      },
+      {
         "id": "source:institutional_aggregates",
         "type": "source",
         "title": "Federal Reserve Banks & Dealers",
@@ -23330,10 +23226,10 @@
         "id": "source:fed",
         "type": "source",
         "title": "Federal Reserve H.4.1",
-        "subtitle": "Weekly (Wednesday level; published Thursday) · as of 2026-09-02 · due now",
+        "subtitle": "Weekly (Wednesday level; published Thursday) · as of 2026-09-09 · new release",
         "target_panel": "releaseCalendarPanel",
         "target_key": "fed",
-        "keywords": "federal reserve h.4.1 fed weekly (wednesday level; published thursday) due_now 2026-09-02 source provenance release calendar"
+        "keywords": "federal reserve h.4.1 fed weekly (wednesday level; published thursday) new_release 2026-09-09 source provenance release calendar"
       },
       {
         "id": "source:extended_holders",
@@ -23348,19 +23244,19 @@
         "id": "source:primary_dealers",
         "type": "source",
         "title": "New York Fed Primary Dealer Statistics",
-        "subtitle": "Weekly; updated Thursdays with the previous week's data · as of 2026-08-26 · overdue",
+        "subtitle": "Weekly; updated Thursdays with the previous week's data · as of 2026-09-02 · new release",
         "target_panel": "releaseCalendarPanel",
         "target_key": "primary_dealers",
-        "keywords": "new york fed primary dealer statistics primary_dealers weekly; updated thursdays with the previous week's data overdue 2026-08-26 source provenance release calendar"
+        "keywords": "new york fed primary dealer statistics primary_dealers weekly; updated thursdays with the previous week's data new_release 2026-09-02 source provenance release calendar"
       },
       {
         "id": "source:soma",
         "type": "source",
         "title": "New York Fed SOMA",
-        "subtitle": "Weekly (Wednesday holdings; published Thursday) · as of 2026-09-02 · due now",
+        "subtitle": "Weekly (Wednesday holdings; published Thursday) · as of 2026-09-09 · new release",
         "target_panel": "releaseCalendarPanel",
         "target_key": "soma",
-        "keywords": "new york fed soma soma weekly (wednesday holdings; published thursday) due_now 2026-09-02 source provenance release calendar"
+        "keywords": "new york fed soma soma weekly (wednesday holdings; published thursday) new_release 2026-09-09 source provenance release calendar"
       },
       {
         "id": "source:money_market_funds",
@@ -23384,10 +23280,10 @@
         "id": "source:overview",
         "type": "source",
         "title": "Treasury Fiscal Data — Debt to the Penny",
-        "subtitle": "Business daily · as of 2026-09-08 · due now",
+        "subtitle": "Business daily · as of 2026-09-09 · new release",
         "target_panel": "releaseCalendarPanel",
         "target_key": "overview",
-        "keywords": "treasury fiscal data — debt to the penny overview business daily due_now 2026-09-08 source provenance release calendar"
+        "keywords": "treasury fiscal data — debt to the penny overview business daily new_release 2026-09-09 source provenance release calendar"
       },
       {
         "id": "source:foreign_holders",
@@ -23448,34 +23344,12 @@
         "profile_id": "6744531245f5a13bff",
         "scope": "U.S. sector",
         "keywords": "security brokers and dealers u.s. sector medium elevated alert anomaly unusual change"
-      },
-      {
-        "id": "alert:a626c548ce0c32534d5e",
-        "type": "alert",
-        "title": "Treasury dealer net position ex-TIPS",
-        "subtitle": "Primary dealer · medium · elevated · 2026-08-26",
-        "target_panel": "alertIntelPanel",
-        "target_key": "a626c548ce0c32534d5e",
-        "profile_id": "0e2ff544ed14b70820",
-        "scope": "Primary dealer",
-        "keywords": "treasury dealer net position ex-tips primary dealer medium elevated alert anomaly unusual change"
-      },
-      {
-        "id": "alert:a53c34f1e0828ff7a307",
-        "type": "alert",
-        "title": "Treasury fails to deliver ex-TIPS",
-        "subtitle": "Primary dealer · medium · notable · 2026-08-26",
-        "target_panel": "alertIntelPanel",
-        "target_key": "a53c34f1e0828ff7a307",
-        "profile_id": "f21942ed292b92fa6a",
-        "scope": "Primary dealer",
-        "keywords": "treasury fails to deliver ex-tips primary dealer medium notable alert anomaly unusual change"
       }
     ],
     "note": "Client-side command-palette index built from dashboard sections, holder profiles, Treasury CUSIPs, official sources and active alert diagnostics."
   },
   "holder_comovement": {
-    "generated_at": "2026-09-10T20:14:51Z",
+    "generated_at": "2026-09-10T21:02:12Z",
     "pair_count": 221,
     "scope_count": 3,
     "scopes": [
@@ -23725,12 +23599,12 @@
             "profile_a_name": "Treasury fails to receive ex-TIPS",
             "profile_b_id": "f21942ed292b92fa6a",
             "profile_b_name": "Treasury fails to deliver ex-TIPS",
-            "correlation": 0.9400078060057584,
+            "correlation": 0.9391195186615564,
             "overlapping_change_points": 103,
-            "same_direction_pct": 90.29126213592234,
-            "median_abs_change_spread_pct_points": 6.770129885841367,
-            "first_overlap": "2024-09-11",
-            "last_overlap": "2026-08-26"
+            "same_direction_pct": 89.32038834951457,
+            "median_abs_change_spread_pct_points": 6.8880744956005575,
+            "first_overlap": "2024-09-18",
+            "last_overlap": "2026-09-02"
           },
           {
             "pair_id": "a28999947f846eea26",
@@ -23739,12 +23613,12 @@
             "profile_a_name": "Treasury dealer net position ex-TIPS",
             "profile_b_id": "2e97b56e1725fe973a",
             "profile_b_name": "Treasury fails to receive ex-TIPS",
-            "correlation": -0.0840063551509605,
+            "correlation": -0.0831515621048561,
             "overlapping_change_points": 103,
-            "same_direction_pct": 40.77669902912621,
+            "same_direction_pct": 41.74757281553398,
             "median_abs_change_spread_pct_points": 21.003157610507145,
-            "first_overlap": "2024-09-11",
-            "last_overlap": "2026-08-26"
+            "first_overlap": "2024-09-18",
+            "last_overlap": "2026-09-02"
           },
           {
             "pair_id": "ea9f4464d2d712696d",
@@ -23753,12 +23627,12 @@
             "profile_a_name": "Treasury dealer net position ex-TIPS",
             "profile_b_id": "f21942ed292b92fa6a",
             "profile_b_name": "Treasury fails to deliver ex-TIPS",
-            "correlation": -0.08524659166935535,
+            "correlation": -0.08714228883919971,
             "overlapping_change_points": 103,
             "same_direction_pct": 46.601941747572816,
             "median_abs_change_spread_pct_points": 21.016647899372884,
-            "first_overlap": "2024-09-11",
-            "last_overlap": "2026-08-26"
+            "first_overlap": "2024-09-18",
+            "last_overlap": "2026-09-02"
           }
         ],
         "lowest_correlation": [
@@ -23769,12 +23643,12 @@
             "profile_a_name": "Treasury dealer net position ex-TIPS",
             "profile_b_id": "f21942ed292b92fa6a",
             "profile_b_name": "Treasury fails to deliver ex-TIPS",
-            "correlation": -0.08524659166935535,
+            "correlation": -0.08714228883919971,
             "overlapping_change_points": 103,
             "same_direction_pct": 46.601941747572816,
             "median_abs_change_spread_pct_points": 21.016647899372884,
-            "first_overlap": "2024-09-11",
-            "last_overlap": "2026-08-26"
+            "first_overlap": "2024-09-18",
+            "last_overlap": "2026-09-02"
           },
           {
             "pair_id": "a28999947f846eea26",
@@ -23783,12 +23657,12 @@
             "profile_a_name": "Treasury dealer net position ex-TIPS",
             "profile_b_id": "2e97b56e1725fe973a",
             "profile_b_name": "Treasury fails to receive ex-TIPS",
-            "correlation": -0.0840063551509605,
+            "correlation": -0.0831515621048561,
             "overlapping_change_points": 103,
-            "same_direction_pct": 40.77669902912621,
+            "same_direction_pct": 41.74757281553398,
             "median_abs_change_spread_pct_points": 21.003157610507145,
-            "first_overlap": "2024-09-11",
-            "last_overlap": "2026-08-26"
+            "first_overlap": "2024-09-18",
+            "last_overlap": "2026-09-02"
           },
           {
             "pair_id": "43c645da58f2d27e22",
@@ -23797,15 +23671,15 @@
             "profile_a_name": "Treasury fails to receive ex-TIPS",
             "profile_b_id": "f21942ed292b92fa6a",
             "profile_b_name": "Treasury fails to deliver ex-TIPS",
-            "correlation": 0.9400078060057584,
+            "correlation": 0.9391195186615564,
             "overlapping_change_points": 103,
-            "same_direction_pct": 90.29126213592234,
-            "median_abs_change_spread_pct_points": 6.770129885841367,
-            "first_overlap": "2024-09-11",
-            "last_overlap": "2026-08-26"
+            "same_direction_pct": 89.32038834951457,
+            "median_abs_change_spread_pct_points": 6.8880744956005575,
+            "first_overlap": "2024-09-18",
+            "last_overlap": "2026-09-02"
           }
         ],
-        "median_correlation": -0.0840063551509605
+        "median_correlation": -0.0831515621048561
       },
       {
         "scope": "U.S. sector",
@@ -26710,12 +26584,12 @@
         "profile_a_name": "Treasury fails to receive ex-TIPS",
         "profile_b_id": "f21942ed292b92fa6a",
         "profile_b_name": "Treasury fails to deliver ex-TIPS",
-        "correlation": 0.9400078060057584,
+        "correlation": 0.9391195186615564,
         "overlapping_change_points": 103,
-        "same_direction_pct": 90.29126213592234,
-        "median_abs_change_spread_pct_points": 6.770129885841367,
-        "first_overlap": "2024-09-11",
-        "last_overlap": "2026-08-26"
+        "same_direction_pct": 89.32038834951457,
+        "median_abs_change_spread_pct_points": 6.8880744956005575,
+        "first_overlap": "2024-09-18",
+        "last_overlap": "2026-09-02"
       },
       {
         "pair_id": "a28999947f846eea26",
@@ -26724,12 +26598,12 @@
         "profile_a_name": "Treasury dealer net position ex-TIPS",
         "profile_b_id": "2e97b56e1725fe973a",
         "profile_b_name": "Treasury fails to receive ex-TIPS",
-        "correlation": -0.0840063551509605,
+        "correlation": -0.0831515621048561,
         "overlapping_change_points": 103,
-        "same_direction_pct": 40.77669902912621,
+        "same_direction_pct": 41.74757281553398,
         "median_abs_change_spread_pct_points": 21.003157610507145,
-        "first_overlap": "2024-09-11",
-        "last_overlap": "2026-08-26"
+        "first_overlap": "2024-09-18",
+        "last_overlap": "2026-09-02"
       },
       {
         "pair_id": "ea9f4464d2d712696d",
@@ -26738,12 +26612,12 @@
         "profile_a_name": "Treasury dealer net position ex-TIPS",
         "profile_b_id": "f21942ed292b92fa6a",
         "profile_b_name": "Treasury fails to deliver ex-TIPS",
-        "correlation": -0.08524659166935535,
+        "correlation": -0.08714228883919971,
         "overlapping_change_points": 103,
         "same_direction_pct": 46.601941747572816,
         "median_abs_change_spread_pct_points": 21.016647899372884,
-        "first_overlap": "2024-09-11",
-        "last_overlap": "2026-08-26"
+        "first_overlap": "2024-09-18",
+        "last_overlap": "2026-09-02"
       },
       {
         "pair_id": "7a603e10720d4d93ab",
@@ -27142,8 +27016,8 @@
     "note": "Co-movement is descriptive association, not evidence that one holder causes another holder's Treasury activity. Comparisons stay within the same holder scope so monthly, quarterly and weekly series are not mixed."
   },
   "discovery_summary": {
-    "generated_at": "2026-09-10T20:14:51Z",
-    "searchable_items": 188,
+    "generated_at": "2026-09-10T21:02:12Z",
+    "searchable_items": 186,
     "comparable_pairs": 221,
     "scope_summaries": [
       {
@@ -27184,7 +27058,7 @@
         "scope": "Primary dealer",
         "eligible_profiles": 3,
         "pair_count": 3,
-        "median_correlation": -0.0840063551509605,
+        "median_correlation": -0.0831515621048561,
         "strongest_pair": {
           "pair_id": "43c645da58f2d27e22",
           "scope": "Primary dealer",
@@ -27192,12 +27066,12 @@
           "profile_a_name": "Treasury fails to receive ex-TIPS",
           "profile_b_id": "f21942ed292b92fa6a",
           "profile_b_name": "Treasury fails to deliver ex-TIPS",
-          "correlation": 0.9400078060057584,
+          "correlation": 0.9391195186615564,
           "overlapping_change_points": 103,
-          "same_direction_pct": 90.29126213592234,
-          "median_abs_change_spread_pct_points": 6.770129885841367,
-          "first_overlap": "2024-09-11",
-          "last_overlap": "2026-08-26"
+          "same_direction_pct": 89.32038834951457,
+          "median_abs_change_spread_pct_points": 6.8880744956005575,
+          "first_overlap": "2024-09-18",
+          "last_overlap": "2026-09-02"
         },
         "lowest_pair": {
           "pair_id": "ea9f4464d2d712696d",
@@ -27206,12 +27080,12 @@
           "profile_a_name": "Treasury dealer net position ex-TIPS",
           "profile_b_id": "f21942ed292b92fa6a",
           "profile_b_name": "Treasury fails to deliver ex-TIPS",
-          "correlation": -0.08524659166935535,
+          "correlation": -0.08714228883919971,
           "overlapping_change_points": 103,
           "same_direction_pct": 46.601941747572816,
           "median_abs_change_spread_pct_points": 21.016647899372884,
-          "first_overlap": "2024-09-11",
-          "last_overlap": "2026-08-26"
+          "first_overlap": "2024-09-18",
+          "last_overlap": "2026-09-02"
         }
       },
       {
@@ -27982,7 +27856,7 @@
     "note": "This score is a research diagnostic, not an official Treasury metric. Auction takedown describes awards at issuance and does not measure secondary-market ownership."
   },
   "market_structure_map": {
-    "generated_at": "2026-09-10T20:14:51Z",
+    "generated_at": "2026-09-10T21:02:12Z",
     "overall_state": "cautious mix",
     "state_counts": {
       "supportive": 1,
@@ -28019,7 +27893,7 @@
         "display": "33.3%",
         "state": "cautious",
         "reading": "Reduction tilt",
-        "observation": "2026-08-26",
+        "observation": "2026-09-02",
         "detail": "1 accumulating / 2 reducing / 0 flat."
       },
       {
@@ -28039,7 +27913,7 @@
         "display": "70.0%",
         "state": "neutral",
         "reading": "Monitor",
-        "observation": "2026-09-02",
+        "observation": "2026-09-09",
         "detail": "CUSIP 912810QT8 within the stored SOMA security universe."
       },
       {
@@ -28049,27 +27923,27 @@
         "display": "2",
         "state": "cautious",
         "reading": "Unusual moves active",
-        "observation": "2026-09-10T20:14:51Z",
+        "observation": "2026-09-10T21:02:12Z",
         "detail": "Persistent alert lifecycle with robust anomaly diagnostics."
       },
       {
         "key": "freshness",
         "label": "Data freshness",
-        "value": 10,
-        "display": "10 attention",
+        "value": 6,
+        "display": "6 attention",
         "state": "cautious",
-        "reading": "3 overdue estimate · 1 source error",
+        "reading": "2 overdue estimate · 1 source error",
         "observation": "2026-09-10",
         "detail": "Calendar states use source cadence and tracker-estimated publication windows."
       },
       {
         "key": "dealer_position",
         "label": "Primary-dealer net Treasury position",
-        "value": 477.607,
-        "display": "$477.6B",
+        "value": 455.185,
+        "display": "$455.2B",
         "state": "neutral",
-        "reading": "Weekly change +41.2B",
-        "observation": "2026-08-26",
+        "reading": "Weekly change -22.4B",
+        "observation": "2026-09-02",
         "detail": "Aggregate New York Fed primary-dealer positioning; not a beneficial-ownership register."
       }
     ],
