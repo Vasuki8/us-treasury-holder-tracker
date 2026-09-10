@@ -62,6 +62,16 @@ A GitHub Pages dashboard that checks official U.S. Treasury, Federal Reserve, Ne
 - **Security drill-down** — selecting or clicking a CUSIP shows SOMA exposure, term remaining, issue age, auction/reopening history and matched official source blocks.
 - **Security metadata CSV** — export the enriched CUSIP-level research table for external analysis.
 
+### Phase 8
+- **Release detection** — the tracker now records when an official source advances to an observation date it has not seen before. The first Phase 8 run establishes a baseline so existing observations are not falsely labeled as fresh releases.
+- **Alert percentile diagnostics** — each current unusual-change flag receives an absolute-move percentile relative to the historical changes available for that series.
+- **Robust z-score diagnostics** — current changes are compared with the historical median and median absolute deviation, providing an outlier measure that is less sensitive to extreme historical observations than a standard z-score.
+- **Notification readiness** — only newly opened/reopened high-severity alerts, or alerts that escalate to high severity, enter the notification-ready queue. Repeated daily runs of the same alert do not generate another notification event.
+- **CUSIP concentration analytics** — SOMA par value and SOMA's reported percentage outstanding are used to derive an implied outstanding amount for each stored Treasury CUSIP.
+- **Concentration ranking** — stored SOMA CUSIPs are ranked by percent outstanding and grouped into lower, material, high and very-high concentration tiers.
+- **Release & Alert Intelligence panel** — the dashboard shows active alerts, high-severity count, notification-ready count, fresh official observations, percentile diagnostics and robust z-scores.
+- **CUSIP Concentration Analytics panel** — the dashboard shows SOMA share of outstanding, implied outstanding amount, concentration tier and remaining maturity for the most concentrated securities.
+
 The site refreshes daily, but it never fabricates a daily ownership number. Every dataset keeps its real observation date.
 
 ## SEC bulk-data limitation
@@ -76,16 +86,16 @@ There is no single public official database naming every owner of every Treasury
 
 Government-account detail is also not a separate additive category on top of intragovernmental debt; it is a detailed view of federal-account investments. The dashboard therefore compares those account lines with the intragovernmental total instead of adding the two together.
 
-The unusual-change monitor is a statistical research screen, not a forecast. A flag means the latest reported move is large under the stated history-relative rule; it does not identify a cause or imply a future price move.
+The unusual-change monitor and Phase 8 statistical diagnostics are research screens, not forecasts. Percentile rank and robust z-score describe how unusual the latest reported change is relative to the stored history; they do not identify a cause or predict Treasury prices.
 
-Phase 7 alert timestamps describe the tracker lifecycle, not the original market event time. `first_seen_at` means the first updater run that detected a flagged source observation; `cleared_at` means a later healthy refresh confirmed that episode was no longer current.
+Phase 7/8 alert timestamps describe the tracker lifecycle, not the original market-event time. `first_seen_at` means the first updater run that detected a flagged source observation; `cleared_at` means a later healthy refresh confirmed that episode was no longer current.
 
 ## Local setup with uv
 
 ```powershell
 uv venv --python 3.13
 uv pip install --python .venv\Scripts\python.exe -r requirements.txt
-.venv\Scripts\python.exe scripts\update_data_v7.py
+.venv\Scripts\python.exe scripts\update_data_v8.py
 python -m http.server 8000
 ```
 
@@ -96,7 +106,7 @@ Open `http://localhost:8000`.
 1. Repository **Settings → Pages**.
 2. Set **Source** to **Deploy from a branch**.
 3. Select `main` and `/ (root)`.
-4. `.github/workflows/update.yml` checks the normal live sources daily and runs the current Phase 7 updater.
+4. `.github/workflows/update.yml` checks the normal live sources daily and runs the current Phase 8 updater.
 5. `.github/workflows/nport.yml` is reserved for the large SEC N-PORT archive quarterly or on demand.
 
 You can also run either workflow manually from the repository **Actions** tab.
@@ -115,7 +125,7 @@ The ingestion job keeps only the latest public report for each fund series, iden
 
 ## Next expansion
 
-- Add opt-in notifications when a **new** high-severity lifecycle episode opens after an underlying monthly, quarterly or weekly source publishes a fresh observation.
-- Add Treasury outstanding-amount and ownership-concentration context at the CUSIP level where an official security-level outstanding source can be joined reliably.
-- Add richer alert diagnostics such as percentile rank and rolling robust z-score while keeping the current transparent threshold rule visible.
+- Add optional delivery integrations that consume the Phase 8 notification-ready queue without sending duplicate alerts for unchanged source observations.
+- Add long-run publication-lag analytics by source once enough Phase 8 observation transitions have accumulated.
+- Add broader outstanding-security joins where an independent official Treasury security-level outstanding source can be reconciled reliably.
 - Add named-fund drill-down pages whenever SEC N-PORT/N-MFP automated access becomes reliable.
