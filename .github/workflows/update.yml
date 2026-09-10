@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - phase8-alert-intelligence
+      - phase9-holder-flow-intelligence
     paths:
       - scripts/**
       - app.js
@@ -13,6 +14,7 @@ on:
       - phase6.js
       - phase7.js
       - phase8.js
+      - phase9.js
       - index.html
       - styles.css
       - .github/workflows/update.yml
@@ -43,6 +45,7 @@ jobs:
           node --check phase6.js
           node --check phase7.js
           node --check phase8.js
+          node --check phase9.js
 
       - name: Install uv
         uses: astral-sh/setup-uv@v10.0.0
@@ -56,20 +59,43 @@ jobs:
         run: uv venv --python 3.13 && uv pip install --python .venv/bin/python -r requirements.txt
 
       - name: Refresh official data
-        run: .venv/bin/python scripts/update_data_v8.py
+        run: .venv/bin/python scripts/update_data_v9.py
 
       - name: Validate Phase 8 output
         run: .venv/bin/python scripts/validate_phase8_state.py
 
-      - name: Commit updated data if changed
+      - name: Validate Phase 9 output
+        run: .venv/bin/python scripts/validate_phase9_state.py
+
+      - name: Commit updated data safely
         run: |
           if git diff --quiet -- data/dashboard.json; then
             echo "No data changes."
             exit 0
           fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # A documentation/code commit can land while the updater is fetching data.
+          # If that happened, discard this stale generated copy, fast-forward to the
+          # latest branch state, and regenerate once before committing.
+          REMOTE_SHA="$(git ls-remote origin "refs/heads/$GITHUB_REF_NAME" | cut -f1)"
+          LOCAL_SHA="$(git rev-parse HEAD)"
+          if [ -n "$REMOTE_SHA" ] && [ "$REMOTE_SHA" != "$LOCAL_SHA" ]; then
+            echo "Branch advanced during refresh; regenerating on latest HEAD."
+            git restore data/dashboard.json
+            git pull --ff-only origin "$GITHUB_REF_NAME"
+            .venv/bin/python scripts/update_data_v9.py
+            .venv/bin/python scripts/validate_phase8_state.py
+            .venv/bin/python scripts/validate_phase9_state.py
+          fi
+
+          if git diff --quiet -- data/dashboard.json; then
+            echo "No data changes after resync."
+            exit 0
+          fi
+
           git add data/dashboard.json
           git commit -m "data: refresh Treasury holder tracker"
-          git pull --rebase --autostash origin "$GITHUB_REF_NAME"
           git push origin HEAD:"$GITHUB_REF_NAME"

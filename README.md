@@ -50,12 +50,20 @@ The site refreshes daily, but it never fabricates a daily ownership number. Ever
 - **Security drill-down** — issue/original-issue dates, term, maturity cross-check, auction history, bid-to-cover and rate/yield context.
 
 ### Phase 8
-- **Robust alert diagnostics** — every current unusual-change alert now receives an absolute-change percentile and a robust z-score based on the median and median absolute deviation (MAD). The current event is excluded from its own historical baseline.
-- **Diagnostic labels** — moves are classified as notable, elevated or extreme for research prioritization while preserving the original transparent Phase 6 threshold rule.
-- **Notification-ready high-severity queue** — only future high-severity open, reopen or escalation transitions occurring after the Phase 8 watermark are emitted as new notification candidates. Existing high alerts are watched but never retroactively called new.
-- **Official source publication-change ledger** — records when the daily updater first detects that an official source has advanced to a new reporting period, while keeping detection time separate from the publisher's exact release time.
-- **SOMA CUSIP concentration monitor** — ranks stored SOMA securities by percent outstanding, assigns concentration percentiles/bands and derives an implied outstanding amount from SOMA par divided by official SOMA percent outstanding where both inputs exist.
-- **Phase 8 exports** — alert-intelligence CSV, source-publication-change CSV and SOMA concentration CSV.
+- **Robust alert diagnostics** — every current unusual-change alert receives an absolute-change percentile and a robust z-score based on the median and median absolute deviation (MAD). The current event is excluded from its own historical baseline.
+- **Diagnostic labels** — moves are classified as notable, elevated or extreme while preserving the original transparent Phase 6 rule.
+- **Notification-ready high-severity queue** — only future high-severity open, reopen or escalation transitions occurring after the Phase 8 watermark are emitted as new notification candidates.
+- **Official source publication-change ledger** — records when the updater first detects that an official source advanced to a new reporting period.
+- **SOMA CUSIP concentration monitor** — ranks stored SOMA securities by percent outstanding and derives an implied outstanding amount where the required official inputs exist.
+
+### Phase 9
+- **Holder Profile Explorer** — creates stable drill-down profiles for foreign countries, U.S. holder sectors and primary-dealer series, with source cadence, current value, previous value, latest change, rank, historical chart data and current alert diagnostics.
+- **Clickable holder drill-downs** — foreign-holder, bank/dealer-sector, extended-sector and primary-dealer tables can jump into the corresponding Phase 9 profile.
+- **Cross-holder flow breadth** — counts which tracked holders are accumulating, reducing or approximately flat within each source cadence.
+- **Cadence-safe flow comparison** — monthly TIC, quarterly Financial Accounts and weekly dealer series are never added together into a fabricated synchronized dollar flow. Cross-scope comparisons use directional breadth instead.
+- **Directional divergence signals** — highlights strong divergence between foreign-country breadth and U.S.-sector breadth, or broad accumulation/reduction when both scopes point the same way.
+- **Foreign-holder concentration** — calculates Top-5 and Top-10 shares of reported foreign Treasury holdings.
+- **Phase 9 exports** — downloadable holder-profile and flow-intelligence CSVs.
 
 ## Important interpretation limits
 
@@ -64,6 +72,8 @@ There is no single public official database naming every owner of every Treasury
 Government-account detail is a detailed view of intragovernmental investments and must not be added again on top of the intragovernmental total.
 
 Alert diagnostics are research screens, not forecasts. A high percentile or robust z-score means a move is unusual relative to the available history; it does not identify a cause or imply a future market move.
+
+Phase 9 flow breadth is also a research summary, not a synchronized capital-flow estimate. Foreign-country data are monthly, U.S. sector data are quarterly, and primary-dealer data are weekly positioning series. The tracker keeps those concepts and dates separate.
 
 The Phase 8 source-change timestamp means “first observed by this tracker,” not necessarily the exact public release timestamp.
 
@@ -80,7 +90,7 @@ Form N-PORT is handled separately by `.github/workflows/nport.yml`. The cache ca
 ```powershell
 uv venv --python 3.13
 uv pip install --python .venv\Scripts\python.exe -r requirements.txt
-.venv\Scripts\python.exe scripts\update_data_v8.py
+.venv\Scripts\python.exe scripts\update_data_v9.py
 python -m http.server 8000
 ```
 
@@ -91,7 +101,7 @@ Open `http://localhost:8000`.
 1. Repository **Settings → Pages**.
 2. Set **Source** to **Deploy from a branch**.
 3. Select `main` and `/ (root)`.
-4. `.github/workflows/update.yml` checks the normal live sources daily and runs the current Phase 8 updater.
+4. `.github/workflows/update.yml` checks the normal live sources daily and runs the current Phase 9 updater.
 5. `.github/workflows/nport.yml` remains the separate quarterly/on-demand N-PORT ingestion path.
 
 You can also run either workflow manually from the repository **Actions** tab.
@@ -106,7 +116,8 @@ You can also run either workflow manually from the repository **Actions** tab.
 
 ## Next expansion
 
-- Connect the Phase 8 notification-ready queue to an opt-in delivery channel without changing the data-generation semantics.
-- Add release-calendar expectations and lateness diagnostics so a source can be labeled on-time, delayed or overdue relative to its normal cadence.
-- Expand security-level outstanding context beyond the stored SOMA universe when an official machine-readable Treasury outstanding-security feed can be joined reliably.
-- Add named-fund drill-down pages whenever SEC N-PORT/N-MFP automated access becomes reliable.
+- Add expected release calendars and lateness diagnostics for TIC, H.4.1, SOMA, primary dealers and Financial Accounts.
+- Add persistent flow-regime history so accumulation/reduction breadth can be charted across successive official reporting periods.
+- Add more ownership-concentration views while avoiding sector double counting.
+- Connect notification-ready events to an opt-in delivery channel without changing the data-generation semantics.
+- Add named-fund drill-downs when SEC N-PORT/N-MFP automated access becomes reliable.
