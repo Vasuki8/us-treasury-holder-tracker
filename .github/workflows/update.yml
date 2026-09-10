@@ -12,6 +12,7 @@ on:
       - ui-refresh-research-terminal
       - ux-v2-interactive-workspace
       - ux-v3-interactive-inspector
+      - ux-v5-core-only
     paths:
       - scripts/**
       - app.js
@@ -35,6 +36,7 @@ on:
       - ux-v3.css
       - ux-v4.js
       - ux-v4.css
+      - ux-v5.css
       - index.html
       - styles.css
       - .github/workflows/update.yml
