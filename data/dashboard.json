@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T18:07:27Z",
+  "generated_at": "2026-09-10T18:09:14Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -228,38 +228,38 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:07:13Z"
+      "checked_at": "2026-09-10T18:08:58Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:07:14Z"
+      "checked_at": "2026-09-10T18:08:59Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:07:22Z"
+      "checked_at": "2026-09-10T18:09:08Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:07:26Z"
+      "checked_at": "2026-09-10T18:09:13Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:07:26Z"
+      "checked_at": "2026-09-10T18:09:13Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T18:07:26Z",
+      "checked_at": "2026-09-10T18:09:14Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:07:27Z"
+      "checked_at": "2026-09-10T18:09:14Z"
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T18:07:26Z",
+      "checked_at": "2026-09-10T18:09:14Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
