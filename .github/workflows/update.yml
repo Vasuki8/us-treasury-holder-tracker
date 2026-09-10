@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - phase7-alert-lifecycle-security
+      - phase8-alert-intelligence
     paths:
       - scripts/**
       - app.js
@@ -12,6 +12,7 @@ on:
       - phase5.js
       - phase6.js
       - phase7.js
+      - phase8.js
       - index.html
       - styles.css
       - .github/workflows/update.yml
@@ -41,6 +42,7 @@ jobs:
           node --check phase5.js
           node --check phase6.js
           node --check phase7.js
+          node --check phase8.js
 
       - name: Install uv
         uses: astral-sh/setup-uv@v10.0.0
@@ -54,7 +56,10 @@ jobs:
         run: uv venv --python 3.13 && uv pip install --python .venv/bin/python -r requirements.txt
 
       - name: Refresh official data
-        run: .venv/bin/python scripts/update_data_v7.py
+        run: .venv/bin/python scripts/update_data_v8.py
+
+      - name: Validate Phase 8 output
+        run: .venv/bin/python scripts/validate_phase8_state.py
 
       - name: Commit updated data if changed
         run: |
