@@ -20,13 +20,15 @@ button:hover{border-color:var(--accent)}
 .card .meta{color:var(--muted);font-size:12px}
 .panel{padding:20px;margin:18px 0}
 .panel-head{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:18px}
-.panel input{background:#081321;border:1px solid var(--line);border-radius:10px;color:var(--text);padding:10px 12px;min-width:220px}
+.panel input,.panel select{background:#081321;border:1px solid var(--line);border-radius:10px;color:var(--text);padding:10px 12px;min-width:220px;font:inherit}
+.panel select{cursor:pointer}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .chart-wrap{position:relative;min-height:360px}
 .chart-wrap.tall{min-height:430px}
 .chart-wrap.compact{min-height:300px}
 .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}
 .table-tall{max-height:430px}
+.security-table table{min-width:1250px}
 table{width:100%;border-collapse:collapse}
 th,td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
 th{position:sticky;top:0;background:#111d30;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.05em;z-index:1}
@@ -41,7 +43,7 @@ td:first-child,th:first-child{text-align:left}
 .pill{display:inline-block;margin-top:8px;padding:3px 8px;border-radius:999px;font-size:11px;border:1px solid var(--line)}
 .pill.ok{color:var(--good)}
 .pill.error{color:var(--bad)}
-.pill.seed{color:var(--warn)}
+.pill.seed,.pill.pending{color:var(--warn)}
 .note{padding:16px;color:var(--muted)}
 .inline-note{margin:14px 0;border-radius:12px;padding:12px 14px;font-size:13px}
 .metric-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
@@ -55,4 +57,4 @@ td:first-child,th:first-child{text-align:left}
 .footer{padding:24px 0 50px;color:var(--muted);font-size:12px}
 @media(max-width:1100px){.cards{grid-template-columns:repeat(2,1fr)}.grid-2{grid-template-columns:1fr}.source-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.hero{align-items:start;flex-direction:column}.hero-side{align-items:flex-start}.download-row{justify-content:flex-start}.metric-strip{grid-template-columns:1fr}}
-@media(max-width:560px){.cards,.source-grid{grid-template-columns:1fr}.panel-head{align-items:stretch;flex-direction:column}.panel input{min-width:0;width:100%}}
+@media(max-width:560px){.cards,.source-grid{grid-template-columns:1fr}.panel-head{align-items:stretch;flex-direction:column}.panel input,.panel select{min-width:0;width:100%}}
