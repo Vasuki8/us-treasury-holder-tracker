@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T18:16:40Z",
+  "generated_at": "2026-09-10T18:27:00Z",
   "overview": {
     "as_of": "2026-09-08",
     "total_public_debt": 40084090785446.35,
@@ -228,46 +228,55 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:16:22Z"
+      "checked_at": "2026-09-10T18:26:37Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:16:22Z"
+      "checked_at": "2026-09-10T18:26:38Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:16:31Z"
+      "checked_at": "2026-09-10T18:26:47Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:16:35Z"
+      "checked_at": "2026-09-10T18:26:52Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:16:35Z"
+      "checked_at": "2026-09-10T18:26:52Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-10T18:16:35Z",
+      "checked_at": "2026-09-10T18:26:52Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:16:35Z"
+      "checked_at": "2026-09-10T18:26:53Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:16:37Z"
+      "checked_at": "2026-09-10T18:26:54Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-10T18:16:40Z"
+      "checked_at": "2026-09-10T18:26:58Z"
+    },
+    "extended_holders": {
+      "status": "ok",
+      "checked_at": "2026-09-10T18:27:00Z"
+    },
+    "nport": {
+      "status": "pending",
+      "checked_at": "2026-09-10T18:27:00Z",
+      "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-10T18:16:35Z",
+      "checked_at": "2026-09-10T18:26:52Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -3391,14 +3400,2480 @@
   "history": [
     {
       "snapshot_date": "2026-09-10",
-      "generated_at": "2026-09-10T18:16:40Z",
+      "generated_at": "2026-09-10T18:26:58Z",
       "total_public_debt_trillions": 40.08409078544635,
       "debt_held_by_public_trillions": 32.38792109474681,
       "fed_treasuries_billions": 4552.347,
       "foreign_holdings_billions": 9299.0,
       "soma_treasuries_billions": 4446.2865402,
       "us_banks_treasuries_billions": 1817.612,
-      "primary_dealer_net_billions": 477.607
+      "primary_dealer_net_billions": 477.607,
+      "insurance_treasuries_billions": 597.931,
+      "pension_treasuries_billions": 1203.049,
+      "etf_treasuries_billions": 779.052,
+      "hedge_fund_treasuries_billions": 315.298
     }
-  ]
+  ],
+  "extended_holders": {
+    "as_of": "2026-01-01",
+    "holders": [
+      {
+        "name": "Insurance companies",
+        "series": "BOGZ1LM523061105Q",
+        "as_of": "2026-01-01",
+        "holdings_billions": 597.931,
+        "frequency": "Quarterly",
+        "history": [
+          {
+            "date": "2015-04-01",
+            "value_billions": 313.14
+          },
+          {
+            "date": "2015-07-01",
+            "value_billions": 315.527
+          },
+          {
+            "date": "2015-10-01",
+            "value_billions": 315.704
+          },
+          {
+            "date": "2016-01-01",
+            "value_billions": 324.727
+          },
+          {
+            "date": "2016-04-01",
+            "value_billions": 339.471
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 351.105
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 340.322
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 348.75
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 359.153
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 370.749
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 384.406
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 373.453
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 366.711
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 367.776
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 366.2
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 366.828
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 369.337
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 372.676
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 374.759
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 402.747
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 408.664
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 419.635
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 404.743
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 398.712
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 424.614
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 426.467
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 422.421
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 376.341
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 367.208
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 368.434
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 392.757
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 405.739
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 408.441
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 428.035
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 445.606
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 471.923
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 551.416
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 619.053
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 549.75
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 560.68
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 529.785
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 589.24
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 571.753
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 597.931
+          }
+        ],
+        "qoq_change_billions": 26.177999999999997,
+        "qoq_change_pct": 4.578550527937762,
+        "yoy_change_billions": 37.25100000000009,
+        "yoy_change_pct": 6.643896696868105
+      },
+      {
+        "name": "Pension funds",
+        "series": "BOGZ1FL593061105Q",
+        "as_of": "2026-01-01",
+        "holdings_billions": 1203.049,
+        "frequency": "Quarterly",
+        "history": [
+          {
+            "date": "2015-04-01",
+            "value_billions": 503.195
+          },
+          {
+            "date": "2015-07-01",
+            "value_billions": 488.6
+          },
+          {
+            "date": "2015-10-01",
+            "value_billions": 487.306
+          },
+          {
+            "date": "2016-01-01",
+            "value_billions": 496.795
+          },
+          {
+            "date": "2016-04-01",
+            "value_billions": 519.824
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 541.556
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 547.44
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 580.191
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 615.832
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 630.868
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 664.256
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 674.693
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 685.724
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 681.924
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 762.092
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 771.419
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 822.164
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 799.51
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 796.707
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 830.668
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 786.013
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 810.816
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 839.87
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 822.43
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 894.803
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 903.756
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 944.067
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 878.418
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 840.174
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 781.809
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 767.446
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 823.153
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 822.266
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 833.962
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 907.398
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 928.762
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 971.525
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 1046.903
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 1014.327
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 1056.247
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 1071.955
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 1124.379
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 1144.003
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 1203.049
+          }
+        ],
+        "qoq_change_billions": 59.04600000000005,
+        "qoq_change_pct": 5.161350101354634,
+        "yoy_change_billions": 146.8019999999999,
+        "yoy_change_pct": 13.898453676081438
+      },
+      {
+        "name": "Private pension funds",
+        "series": "BOGZ1FL573061105Q",
+        "as_of": "2026-01-01",
+        "holdings_billions": 606.993,
+        "frequency": "Quarterly",
+        "history": [
+          {
+            "date": "2015-04-01",
+            "value_billions": 294.125
+          },
+          {
+            "date": "2015-07-01",
+            "value_billions": 294.529
+          },
+          {
+            "date": "2015-10-01",
+            "value_billions": 286.719
+          },
+          {
+            "date": "2016-01-01",
+            "value_billions": 300.117
+          },
+          {
+            "date": "2016-04-01",
+            "value_billions": 310.075
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 312.739
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 304.124
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 316.008
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 329.745
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 340.841
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 350.889
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 351.012
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 355.964
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 358.044
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 371.912
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 390.904
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 413.608
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 434.03
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 440.034
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 476.895
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 473.282
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 469.582
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 461.231
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 453.311
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 476.849
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 491.405
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 507.815
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 475.223
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 453.189
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 428.09
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 427.656
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 451.173
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 454.705
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 448.957
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 484.822
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 488.304
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 496.849
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 531.977
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 523.763
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 549.275
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 566.434
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 588.738
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 602.172
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 606.993
+          }
+        ],
+        "qoq_change_billions": 4.821000000000026,
+        "qoq_change_pct": 0.8006018214065128,
+        "yoy_change_billions": 57.718000000000075,
+        "yoy_change_pct": 10.508033316644683
+      },
+      {
+        "name": "Exchange-traded funds",
+        "series": "BOGZ1LM563061103Q",
+        "as_of": "2026-01-01",
+        "holdings_billions": 779.052,
+        "frequency": "Quarterly",
+        "history": [
+          {
+            "date": "2015-04-01",
+            "value_billions": 70.774
+          },
+          {
+            "date": "2015-07-01",
+            "value_billions": 85.189
+          },
+          {
+            "date": "2015-10-01",
+            "value_billions": 80.254
+          },
+          {
+            "date": "2016-01-01",
+            "value_billions": 92.311
+          },
+          {
+            "date": "2016-04-01",
+            "value_billions": 92.18
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 92.529
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 92.939
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 102.33
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 107.952
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 116.995
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 119.572
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 128.72
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 145.298
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 150.5
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 176.141
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 190.324
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 211.366
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 222.946
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 227.645
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 258.336
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 265.135
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 269.829
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 270.617
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 274.577
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 293.253
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 305.776
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 332.052
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 336.12
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 362.468
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 381.432
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 400.514
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 451.476
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 460.559
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 469.123
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 502.261
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 504.33
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 523.134
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 568.796
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 555.795
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 604.948
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 635.749
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 674.948
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 706.0
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 779.052
+          }
+        ],
+        "qoq_change_billions": 73.05200000000002,
+        "qoq_change_pct": 10.34730878186969,
+        "yoy_change_billions": 174.10400000000004,
+        "yoy_change_pct": 28.77999431356084
+      },
+      {
+        "name": "Hedge funds",
+        "series": "BOGZ1FL623061103Q",
+        "as_of": "2025-10-01",
+        "holdings_billions": 315.298,
+        "frequency": "Quarterly",
+        "history": [
+          {
+            "date": "2015-01-01",
+            "value_billions": 200.407
+          },
+          {
+            "date": "2015-04-01",
+            "value_billions": 188.008
+          },
+          {
+            "date": "2015-07-01",
+            "value_billions": 182.911
+          },
+          {
+            "date": "2015-10-01",
+            "value_billions": 173.468
+          },
+          {
+            "date": "2016-01-01",
+            "value_billions": 182.233
+          },
+          {
+            "date": "2016-04-01",
+            "value_billions": 205.971
+          },
+          {
+            "date": "2016-07-01",
+            "value_billions": 201.808
+          },
+          {
+            "date": "2016-10-01",
+            "value_billions": 204.283
+          },
+          {
+            "date": "2017-01-01",
+            "value_billions": 196.807
+          },
+          {
+            "date": "2017-04-01",
+            "value_billions": 174.927
+          },
+          {
+            "date": "2017-07-01",
+            "value_billions": 176.311
+          },
+          {
+            "date": "2017-10-01",
+            "value_billions": 197.947
+          },
+          {
+            "date": "2018-01-01",
+            "value_billions": 196.028
+          },
+          {
+            "date": "2018-04-01",
+            "value_billions": 210.691
+          },
+          {
+            "date": "2018-07-01",
+            "value_billions": 211.38
+          },
+          {
+            "date": "2018-10-01",
+            "value_billions": 212.009
+          },
+          {
+            "date": "2019-01-01",
+            "value_billions": 218.631
+          },
+          {
+            "date": "2019-04-01",
+            "value_billions": 241.605
+          },
+          {
+            "date": "2019-07-01",
+            "value_billions": 256.538
+          },
+          {
+            "date": "2019-10-01",
+            "value_billions": 232.854
+          },
+          {
+            "date": "2020-01-01",
+            "value_billions": 211.29
+          },
+          {
+            "date": "2020-04-01",
+            "value_billions": 189.007
+          },
+          {
+            "date": "2020-07-01",
+            "value_billions": 195.972
+          },
+          {
+            "date": "2020-10-01",
+            "value_billions": 149.614
+          },
+          {
+            "date": "2021-01-01",
+            "value_billions": 137.202
+          },
+          {
+            "date": "2021-04-01",
+            "value_billions": 144.076
+          },
+          {
+            "date": "2021-07-01",
+            "value_billions": 148.461
+          },
+          {
+            "date": "2021-10-01",
+            "value_billions": 161.2
+          },
+          {
+            "date": "2022-01-01",
+            "value_billions": 186.675
+          },
+          {
+            "date": "2022-04-01",
+            "value_billions": 193.242
+          },
+          {
+            "date": "2022-07-01",
+            "value_billions": 192.487
+          },
+          {
+            "date": "2022-10-01",
+            "value_billions": 172.626
+          },
+          {
+            "date": "2023-01-01",
+            "value_billions": 189.445
+          },
+          {
+            "date": "2023-04-01",
+            "value_billions": 196.853
+          },
+          {
+            "date": "2023-07-01",
+            "value_billions": 223.746
+          },
+          {
+            "date": "2023-10-01",
+            "value_billions": 209.446
+          },
+          {
+            "date": "2024-01-01",
+            "value_billions": 236.671
+          },
+          {
+            "date": "2024-04-01",
+            "value_billions": 248.292
+          },
+          {
+            "date": "2024-07-01",
+            "value_billions": 275.632
+          },
+          {
+            "date": "2024-10-01",
+            "value_billions": 277.74
+          },
+          {
+            "date": "2025-01-01",
+            "value_billions": 270.426
+          },
+          {
+            "date": "2025-04-01",
+            "value_billions": 287.058
+          },
+          {
+            "date": "2025-07-01",
+            "value_billions": 294.907
+          },
+          {
+            "date": "2025-10-01",
+            "value_billions": 315.298
+          }
+        ],
+        "qoq_change_billions": 20.39100000000002,
+        "qoq_change_pct": 6.914383178425748,
+        "yoy_change_billions": 37.55799999999999,
+        "yoy_change_pct": 13.522719089796208
+      }
+    ],
+    "frequency": "Quarterly",
+    "source_url": "https://fred.stlouisfed.org/",
+    "note": "These are Federal Reserve Financial Accounts sector aggregates, not named-firm holdings."
+  },
+  "nport": {
+    "cache_status": "not_ingested",
+    "latest_available_quarter": "2026 Q2",
+    "latest_archive_url": "https://www.sec.gov/files/dera/data/form-n-port-data-sets/2026q2_nport.zip",
+    "dataset_page": "https://www.sec.gov/data-research/sec-markets-data/form-n-port-data-sets",
+    "fund_count": 0,
+    "direct_treasury_total_billions": null,
+    "funds": [],
+    "by_cusip": [],
+    "note": "SEC Form N-PORT bulk files are hundreds of MB and are ingested by a separate quarterly workflow rather than the daily updater."
+  },
+  "security_intelligence": {
+    "as_of": "2026-09-02",
+    "rows": [
+      {
+        "cusip": "912828YS3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-11-15",
+        "soma_par_billions": 54.4976408,
+        "soma_pct_outstanding": 61.542741728265824,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912828YB0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-08-15",
+        "soma_par_billions": 47.1369167,
+        "soma_pct_outstanding": 50.89353658393064,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CCB5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2031-05-15",
+        "soma_par_billions": 44.2117842,
+        "soma_pct_outstanding": 29.938020215211196,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CDY4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2032-02-15",
+        "soma_par_billions": 36.2077642,
+        "soma_pct_outstanding": 25.768320504705727,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "9128286T2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-05-15",
+        "soma_par_billions": 35.2550869,
+        "soma_pct_outstanding": 41.88405097869147,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CBL4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2031-02-15",
+        "soma_par_billions": 34.8616178,
+        "soma_pct_outstanding": 24.89002356172635,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CDJ7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2031-11-15",
+        "soma_par_billions": 33.650325,
+        "soma_pct_outstanding": 23.27578008336521,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QU5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2042-02-15",
+        "soma_par_billions": 33.0529988,
+        "soma_pct_outstanding": 69.99929659736738,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QE1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-02-15",
+        "soma_par_billions": 31.4312244,
+        "soma_pct_outstanding": 69.99884458524119,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CEP2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2032-05-15",
+        "soma_par_billions": 31.3405802,
+        "soma_pct_outstanding": 23.60967767903121,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QT8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-11-15",
+        "soma_par_billions": 31.2356696,
+        "soma_pct_outstanding": 69.99990782665313,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QD3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2039-11-15",
+        "soma_par_billions": 31.1939753,
+        "soma_pct_outstanding": 69.99775813568012,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810ST6",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-11-15",
+        "soma_par_billions": 30.8149561,
+        "soma_pct_outstanding": 37.01230828859665,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QW1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2042-05-15",
+        "soma_par_billions": 30.7428278,
+        "soma_pct_outstanding": 69.99942593910416,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QH4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-05-15",
+        "soma_par_billions": 30.430176,
+        "soma_pct_outstanding": 69.99780305241286,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QK7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-08-15",
+        "soma_par_billions": 30.2490101,
+        "soma_pct_outstanding": 69.99927878713535,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797SA6",
+        "security_type": "Bills",
+        "maturity_date": "2026-10-01",
+        "soma_par_billions": 30.2317343,
+        "soma_pct_outstanding": 9.04774879882881,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QL5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-11-15",
+        "soma_par_billions": 30.032015,
+        "soma_pct_outstanding": 69.99949400031424,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912828ZQ6",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2030-05-15",
+        "soma_par_billions": 29.9556587,
+        "soma_pct_outstanding": 27.326888164006153,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QS0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-08-15",
+        "soma_par_billions": 29.7419284,
+        "soma_pct_outstanding": 69.999393299474,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912828Z94",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2030-02-15",
+        "soma_par_billions": 29.4950704,
+        "soma_pct_outstanding": 33.74660401080069,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QQ4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-05-15",
+        "soma_par_billions": 29.396,
+        "soma_pct_outstanding": 69.99796380599979,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QN1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-02-15",
+        "soma_par_billions": 29.3590452,
+        "soma_pct_outstanding": 68.26899820876646,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810RP5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2045-11-15",
+        "soma_par_billions": 29.2235215,
+        "soma_pct_outstanding": 69.92666650980925,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810SY5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-05-15",
+        "soma_par_billions": 29.0350163,
+        "soma_pct_outstanding": 38.47489250510655,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QC5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2039-08-15",
+        "soma_par_billions": 29.0009553,
+        "soma_pct_outstanding": 69.9989827793258,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CAE1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2030-08-15",
+        "soma_par_billions": 28.2625411,
+        "soma_pct_outstanding": 21.35428909239414,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810RU4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2046-11-15",
+        "soma_par_billions": 28.0447443,
+        "soma_pct_outstanding": 69.9985077914266,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CCS8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2031-08-15",
+        "soma_par_billions": 27.9983538,
+        "soma_pct_outstanding": 19.80859692317669,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810SQ2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-08-15",
+        "soma_par_billions": 27.2778125,
+        "soma_pct_outstanding": 36.13493761230597,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QB7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2039-05-15",
+        "soma_par_billions": 27.1447422,
+        "soma_pct_outstanding": 69.99897134445176,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QX9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2042-08-15",
+        "soma_par_billions": 26.598,
+        "soma_pct_outstanding": 63.63853305568035,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810RM2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2045-05-15",
+        "soma_par_billions": 26.3718791,
+        "soma_pct_outstanding": 63.876523285369025,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "9128282R0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-08-15",
+        "soma_par_billions": 26.3234032,
+        "soma_pct_outstanding": 37.905200647500706,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CAV3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2030-11-15",
+        "soma_par_billions": 24.9287915,
+        "soma_pct_outstanding": 18.647994057385382,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810SW9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2041-02-15",
+        "soma_par_billions": 23.3680846,
+        "soma_pct_outstanding": 28.32526422189119,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912828ZB9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-02-28",
+        "soma_par_billions": 23.1573208,
+        "soma_pct_outstanding": 63.034860304563445,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QZ4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2043-02-15",
+        "soma_par_billions": 22.878,
+        "soma_pct_outstanding": 54.47174178394383,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797SK4",
+        "security_type": "Bills",
+        "maturity_date": "2026-10-29",
+        "soma_par_billions": 22.3095663,
+        "soma_pct_outstanding": 9.55005849961176,
+        "latest_auction_date": "2026-09-15",
+        "auction_security_term": "6-Week",
+        "auction_offering_billions": 75.0,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CFF3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2032-08-15",
+        "soma_par_billions": 22.1759283,
+        "soma_pct_outstanding": 18.5690401993823,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912828Z78",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-01-31",
+        "soma_par_billions": 22.0807474,
+        "soma_pct_outstanding": 23.121966403567072,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810TD0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2052-02-15",
+        "soma_par_billions": 22.0384024,
+        "soma_pct_outstanding": 25.92162164811797,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797UG0",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-17",
+        "soma_par_billions": 21.9630492,
+        "soma_pct_outstanding": 7.78391929000429,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810SP4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2050-08-15",
+        "soma_par_billions": 21.7035012,
+        "soma_pct_outstanding": 24.38088602942214,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "9128283F5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-11-15",
+        "soma_par_billions": 21.5800875,
+        "soma_pct_outstanding": 32.91247422340701,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810RX8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2047-05-15",
+        "soma_par_billions": 21.5375541,
+        "soma_pct_outstanding": 52.93718378330748,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "9128286B1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-02-15",
+        "soma_par_billions": 21.4805294,
+        "soma_pct_outstanding": 26.61628044789338,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810TB4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2051-11-15",
+        "soma_par_billions": 21.2532858,
+        "soma_pct_outstanding": 23.55318160477966,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797VD6",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-22",
+        "soma_par_billions": 20.9874509,
+        "soma_pct_outstanding": 7.121458151425809,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "9128285M8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2028-11-15",
+        "soma_par_billions": 20.7541308,
+        "soma_pct_outstanding": 25.78573977142004,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810SX7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2051-05-15",
+        "soma_par_billions": 20.609948,
+        "soma_pct_outstanding": 22.22609953546709,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810RN0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2045-08-15",
+        "soma_par_billions": 20.5586402,
+        "soma_pct_outstanding": 51.01274717689167,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797UJ4",
+        "security_type": "Bills",
+        "maturity_date": "2026-10-08",
+        "soma_par_billions": 20.4897929,
+        "soma_pct_outstanding": 7.3499290645759805,
+        "latest_auction_date": "2026-08-25",
+        "auction_security_term": "6-Week",
+        "auction_offering_billions": 95.0,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CND9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2028-05-15",
+        "soma_par_billions": 20.4735924,
+        "soma_pct_outstanding": 26.156499483327938,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797VE4",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-29",
+        "soma_par_billions": 20.4161103,
+        "soma_pct_outstanding": 7.146080474668159,
+        "latest_auction_date": "2026-08-27",
+        "auction_security_term": "4-Week",
+        "auction_offering_billions": 100.0,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810RC4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2043-08-15",
+        "soma_par_billions": 20.248,
+        "soma_pct_outstanding": 48.32000589232976,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810RG5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2044-05-15",
+        "soma_par_billions": 20.145,
+        "soma_pct_outstanding": 47.97786287831524,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CNC1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2035-05-15",
+        "soma_par_billions": 20.1416889,
+        "soma_pct_outstanding": 14.37358640022267,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810SR0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2040-05-15",
+        "soma_par_billions": 20.0506417,
+        "soma_pct_outstanding": 36.19795699456022,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912828V98",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-02-15",
+        "soma_par_billions": 19.9479791,
+        "soma_pct_outstanding": 32.70006742830473,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810RD2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2043-11-15",
+        "soma_par_billions": 19.868,
+        "soma_pct_outstanding": 47.31063416826149,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810SJ8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2049-08-15",
+        "soma_par_billions": 19.8254968,
+        "soma_pct_outstanding": 31.351421560705724,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CNU1",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2028-08-15",
+        "soma_par_billions": 19.6836884,
+        "soma_pct_outstanding": 25.425099500139332,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QY7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2042-11-15",
+        "soma_par_billions": 19.669,
+        "soma_pct_outstanding": 46.893466619558474,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810SK5",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2049-11-15",
+        "soma_par_billions": 19.6456023,
+        "soma_pct_outstanding": 33.77230430288015,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797VC8",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-15",
+        "soma_par_billions": 19.3742087,
+        "soma_pct_outstanding": 6.5472011089248205,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810SS8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2050-11-15",
+        "soma_par_billions": 19.1933014,
+        "soma_pct_outstanding": 22.45927087239712,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CLW9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2034-11-15",
+        "soma_par_billions": 19.056256,
+        "soma_pct_outstanding": 13.704023857619859,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797SU2",
+        "security_type": "Bills",
+        "maturity_date": "2026-11-27",
+        "soma_par_billions": 19.0326038,
+        "soma_pct_outstanding": 8.332906102288069,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810TG3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2052-05-15",
+        "soma_par_billions": 18.9492771,
+        "soma_pct_outstanding": 24.20050325787215,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797UF2",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-10",
+        "soma_par_billions": 18.8983008,
+        "soma_pct_outstanding": 6.8032973687339595,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CPZ8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2036-02-15",
+        "soma_par_billions": 18.8267423,
+        "soma_pct_outstanding": 13.56143473596293,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CMM0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2035-02-15",
+        "soma_par_billions": 18.7064926,
+        "soma_pct_outstanding": 13.507051536795231,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797RS8",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-03",
+        "soma_par_billions": 18.5679375,
+        "soma_pct_outstanding": 5.69573876446716,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810RE0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2044-02-15",
+        "soma_par_billions": 18.446,
+        "soma_pct_outstanding": 44.08185734687972,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QA9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2039-02-15",
+        "soma_par_billions": 18.0715271,
+        "soma_pct_outstanding": 69.75115796918976,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810FT0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2036-02-15",
+        "soma_par_billions": 18.030823,
+        "soma_pct_outstanding": 68.30599765959406,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CPJ4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2035-11-15",
+        "soma_par_billions": 17.8934989,
+        "soma_pct_outstanding": 12.98112426020491,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810PX0",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2038-05-15",
+        "soma_par_billions": 17.8492566,
+        "soma_pct_outstanding": 69.99674762350556,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912828U24",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2026-11-15",
+        "soma_par_billions": 17.8483981,
+        "soma_pct_outstanding": 27.763371270052374,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797VL8",
+        "security_type": "Bills",
+        "maturity_date": "2026-10-13",
+        "soma_par_billions": 17.5865667,
+        "soma_pct_outstanding": 9.71364743249225,
+        "latest_auction_date": "2026-09-10",
+        "auction_security_term": "4-Week",
+        "auction_offering_billions": 90.0,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912828YG9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2026-09-30",
+        "soma_par_billions": 17.4722193,
+        "soma_pct_outstanding": 49.46244828164652,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810RJ9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2044-11-15",
+        "soma_par_billions": 17.3993516,
+        "soma_pct_outstanding": 41.951530120337985,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810SZ2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2051-08-15",
+        "soma_par_billions": 17.3052221,
+        "soma_pct_outstanding": 19.22019497421931,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CBS9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2028-03-31",
+        "soma_par_billions": 16.9114095,
+        "soma_pct_outstanding": 23.34156283734443,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CPT2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-01-15",
+        "soma_par_billions": 16.8823591,
+        "soma_pct_outstanding": 22.545295693258648,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797UH8",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-24",
+        "soma_par_billions": 16.6162972,
+        "soma_pct_outstanding": 6.00563595287814,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CQA2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2029-02-15",
+        "soma_par_billions": 16.4345283,
+        "soma_pct_outstanding": 22.07921862488518,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810RS9",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2046-05-15",
+        "soma_par_billions": 16.3798409,
+        "soma_pct_outstanding": 40.46649832159862,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CMN8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2028-02-15",
+        "soma_par_billions": 15.9333661,
+        "soma_pct_outstanding": 21.787401327905382,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810PW2",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2038-02-15",
+        "soma_par_billions": 15.7670002,
+        "soma_pct_outstanding": 69.99731904100594,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912828X88",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2027-05-15",
+        "soma_par_billions": 15.7521707,
+        "soma_pct_outstanding": 23.55879743549176,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CGM7",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2033-02-15",
+        "soma_par_billions": 15.7235741,
+        "soma_pct_outstanding": 13.73047875642756,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810SU3",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2051-02-15",
+        "soma_par_billions": 15.6448298,
+        "soma_pct_outstanding": 17.73961365758108,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CGQ8",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2030-02-28",
+        "soma_par_billions": 15.0374679,
+        "soma_pct_outstanding": 12.572629760262998,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810QP6",
+        "security_type": "TIPS",
+        "maturity_date": "2041-02-15",
+        "soma_par_billions": 15.0009021,
+        "soma_pct_outstanding": 62.595938833608436,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912810PU6",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2037-05-15",
+        "soma_par_billions": 14.989046,
+        "soma_pct_outstanding": 69.99960071068827,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "91282CNT4",
+        "security_type": "Notes & Bonds",
+        "maturity_date": "2035-08-15",
+        "soma_par_billions": 14.9776742,
+        "soma_pct_outstanding": 11.09993709441814,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797VB0",
+        "security_type": "Bills",
+        "maturity_date": "2026-09-08",
+        "soma_par_billions": 14.7774138,
+        "soma_pct_outstanding": 5.17374453483875,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      },
+      {
+        "cusip": "912797TC1",
+        "security_type": "Bills",
+        "maturity_date": "2026-12-24",
+        "soma_par_billions": 14.7450983,
+        "soma_pct_outstanding": 10.95697506432474,
+        "latest_auction_date": null,
+        "auction_security_term": null,
+        "auction_offering_billions": null,
+        "nport_fund_value_billions": null,
+        "nport_fund_count": null
+      }
+    ],
+    "row_count": 100,
+    "auction_matches": 4,
+    "nport_matches": 0,
+    "note": "CUSIP matching combines SOMA positions with recent Treasury auctions and, when the quarterly N-PORT cache is available, fund holdings. A missing match does not mean no other holder owns the security."
+  },
+  "change_leaderboard": {
+    "largest_absolute_moves": [
+      {
+        "scope": "U.S. sector",
+        "name": "Private depository institutions",
+        "period": "QoQ",
+        "current_billions": 2049.575,
+        "change_billions": 87.83399999999983
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "Security brokers and dealers",
+        "period": "QoQ",
+        "current_billions": 620.413,
+        "change_billions": 77.95500000000004
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "Exchange-traded funds",
+        "period": "QoQ",
+        "current_billions": 779.052,
+        "change_billions": 73.05200000000002
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "U.S.-chartered depository institutions",
+        "period": "QoQ",
+        "current_billions": 1817.612,
+        "change_billions": 72.76700000000005
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "Pension funds",
+        "period": "QoQ",
+        "current_billions": 1203.049,
+        "change_billions": 59.04600000000005
+      },
+      {
+        "scope": "Primary dealer",
+        "name": "Treasury dealer net position ex-TIPS",
+        "period": "WoW",
+        "current_billions": 477.607,
+        "change_billions": 41.20100000000002
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Japan",
+        "period": "MoM",
+        "current_billions": 1116.7,
+        "change_billions": -26.399999999999864
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "Insurance companies",
+        "period": "QoQ",
+        "current_billions": 597.931,
+        "change_billions": 26.177999999999997
+      },
+      {
+        "scope": "Foreign country",
+        "name": "China, Mainland",
+        "period": "MoM",
+        "current_billions": 633.4,
+        "change_billions": -25.899999999999977
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Canada",
+        "period": "MoM",
+        "current_billions": 459.6,
+        "change_billions": 23.80000000000001
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "Hedge funds",
+        "period": "QoQ",
+        "current_billions": 315.298,
+        "change_billions": 20.39100000000002
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Cayman Islands",
+        "period": "MoM",
+        "current_billions": 453.1,
+        "change_billions": -18.19999999999999
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Hong Kong",
+        "period": "MoM",
+        "current_billions": 255.8,
+        "change_billions": -16.099999999999966
+      },
+      {
+        "scope": "Primary dealer",
+        "name": "Treasury fails to deliver ex-TIPS",
+        "period": "WoW",
+        "current_billions": 76.655,
+        "change_billions": -11.260000000000005
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Belgium",
+        "period": "MoM",
+        "current_billions": 482.5,
+        "change_billions": 10.5
+      },
+      {
+        "scope": "Foreign country",
+        "name": "United Kingdom",
+        "period": "MoM",
+        "current_billions": 939.9,
+        "change_billions": -8.700000000000045
+      },
+      {
+        "scope": "Primary dealer",
+        "name": "Treasury fails to receive ex-TIPS",
+        "period": "WoW",
+        "current_billions": 88.371,
+        "change_billions": -8.634
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Israel",
+        "period": "MoM",
+        "current_billions": 110.9,
+        "change_billions": -6.699999999999989
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Singapore",
+        "period": "MoM",
+        "current_billions": 284.4,
+        "change_billions": 6.399999999999977
+      },
+      {
+        "scope": "Foreign country",
+        "name": "India",
+        "period": "MoM",
+        "current_billions": 186.4,
+        "change_billions": 5.099999999999994
+      }
+    ],
+    "largest_increases": [
+      {
+        "scope": "U.S. sector",
+        "name": "Private depository institutions",
+        "period": "QoQ",
+        "current_billions": 2049.575,
+        "change_billions": 87.83399999999983
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "Security brokers and dealers",
+        "period": "QoQ",
+        "current_billions": 620.413,
+        "change_billions": 77.95500000000004
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "Exchange-traded funds",
+        "period": "QoQ",
+        "current_billions": 779.052,
+        "change_billions": 73.05200000000002
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "U.S.-chartered depository institutions",
+        "period": "QoQ",
+        "current_billions": 1817.612,
+        "change_billions": 72.76700000000005
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "Pension funds",
+        "period": "QoQ",
+        "current_billions": 1203.049,
+        "change_billions": 59.04600000000005
+      },
+      {
+        "scope": "Primary dealer",
+        "name": "Treasury dealer net position ex-TIPS",
+        "period": "WoW",
+        "current_billions": 477.607,
+        "change_billions": 41.20100000000002
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "Insurance companies",
+        "period": "QoQ",
+        "current_billions": 597.931,
+        "change_billions": 26.177999999999997
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Canada",
+        "period": "MoM",
+        "current_billions": 459.6,
+        "change_billions": 23.80000000000001
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "Hedge funds",
+        "period": "QoQ",
+        "current_billions": 315.298,
+        "change_billions": 20.39100000000002
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Belgium",
+        "period": "MoM",
+        "current_billions": 482.5,
+        "change_billions": 10.5
+      }
+    ],
+    "largest_decreases": [
+      {
+        "scope": "Foreign country",
+        "name": "Japan",
+        "period": "MoM",
+        "current_billions": 1116.7,
+        "change_billions": -26.399999999999864
+      },
+      {
+        "scope": "Foreign country",
+        "name": "China, Mainland",
+        "period": "MoM",
+        "current_billions": 633.4,
+        "change_billions": -25.899999999999977
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Cayman Islands",
+        "period": "MoM",
+        "current_billions": 453.1,
+        "change_billions": -18.19999999999999
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Hong Kong",
+        "period": "MoM",
+        "current_billions": 255.8,
+        "change_billions": -16.099999999999966
+      },
+      {
+        "scope": "Primary dealer",
+        "name": "Treasury fails to deliver ex-TIPS",
+        "period": "WoW",
+        "current_billions": 76.655,
+        "change_billions": -11.260000000000005
+      },
+      {
+        "scope": "Foreign country",
+        "name": "United Kingdom",
+        "period": "MoM",
+        "current_billions": 939.9,
+        "change_billions": -8.700000000000045
+      },
+      {
+        "scope": "Primary dealer",
+        "name": "Treasury fails to receive ex-TIPS",
+        "period": "WoW",
+        "current_billions": 88.371,
+        "change_billions": -8.634
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Israel",
+        "period": "MoM",
+        "current_billions": 110.9,
+        "change_billions": -6.699999999999989
+      },
+      {
+        "scope": "Foreign country",
+        "name": "Norway",
+        "period": "MoM",
+        "current_billions": 203.2,
+        "change_billions": -4.100000000000023
+      },
+      {
+        "scope": "Foreign country",
+        "name": "United Arab Emirates",
+        "period": "MoM",
+        "current_billions": 114.8,
+        "change_billions": -3.799999999999997
+      }
+    ],
+    "note": "Periods differ by source: countries are monthly, sectors quarterly, and primary-dealer series weekly."
+  }
 }

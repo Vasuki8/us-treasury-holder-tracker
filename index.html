@@ -11,9 +11,9 @@
 <body>
   <header class="shell hero">
     <div>
-      <div class="eyebrow">OFFICIAL-DATA DASHBOARD · PHASE 3</div>
+      <div class="eyebrow">OFFICIAL-DATA DASHBOARD · PHASE 4</div>
       <h1>US Treasury Ownership Tracker</h1>
-      <p class="lede">Who holds U.S. Treasury securities — countries, sectors, the Federal Reserve, banks, dealers, money-market funds and auction participants — with source-specific observation dates.</p>
+      <p class="lede">Who holds U.S. Treasury securities — countries, the Fed, banks, dealers, insurers, pensions, ETFs, hedge funds and fund filings — with source-specific dates and CUSIP-level matching.</p>
     </div>
     <div class="hero-side">
       <div class="status" id="updateStatus">Loading data…</div>
@@ -70,6 +70,17 @@
     </section>
 
     <section class="panel">
+      <div class="panel-head"><div><h2>Insurance, Pensions, ETFs & Hedge Funds</h2><p id="extendedMeta"></p></div></div>
+      <div class="grid-2">
+        <div class="chart-wrap"><canvas id="extendedChart"></canvas></div>
+        <div class="table-wrap table-tall">
+          <table><thead><tr><th>Holder sector</th><th>Holdings</th><th>QoQ</th><th>YoY</th><th>As of</th></tr></thead><tbody id="extendedTable"></tbody></table>
+        </div>
+      </div>
+      <div class="note inline-note">Sector-level holdings come from Federal Reserve Financial Accounts via FRED. ETF and hedge-fund figures are aggregates; individual-fund detail comes from Form N-PORT when the quarterly cache is available.</div>
+    </section>
+
+    <section class="panel">
       <div class="panel-head"><div><h2>Primary Dealer Treasury Market Positioning</h2><p id="dealerMeta"></p></div></div>
       <div class="metric-strip" id="dealerMetrics"></div>
       <div class="chart-wrap"><canvas id="dealerChart"></canvas></div>
@@ -77,6 +88,37 @@
         <table><thead><tr><th>Series</th><th>Latest</th><th>WoW</th><th>As of</th></tr></thead><tbody id="dealerTable"></tbody></table>
       </div>
       <div class="note inline-note">Primary-dealer positions are aggregate net positions reported to the New York Fed. They are market-positioning data, not a named-dealer ownership register.</div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><h2>Largest Holder Changes</h2><p id="moverMeta"></p></div>
+        <select id="moverScope">
+          <option value="all">All scopes</option>
+          <option value="Foreign country">Foreign countries</option>
+          <option value="U.S. sector">U.S. sectors</option>
+          <option value="Primary dealer">Primary dealer series</option>
+        </select>
+      </div>
+      <div class="table-wrap table-tall">
+        <table><thead><tr><th>Scope</th><th>Holder / series</th><th>Period</th><th>Current</th><th>Change</th></tr></thead><tbody id="moverTable"></tbody></table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><h2>CUSIP Security Intelligence</h2><p id="securityMeta"></p></div>
+        <input id="cusipSearch" type="search" placeholder="Search CUSIP, type, maturity…" />
+      </div>
+      <div class="metric-strip" id="securityMetrics"></div>
+      <div id="nportStatus" class="note inline-note"></div>
+      <div class="table-wrap table-tall security-table">
+        <table>
+          <thead><tr><th>CUSIP</th><th>Type</th><th>Maturity</th><th>SOMA par</th><th>SOMA % outstanding</th><th>Recent auction</th><th>Auction size</th><th>N-PORT fund value</th><th>Funds</th></tr></thead>
+          <tbody id="securityTable"></tbody>
+        </table>
+      </div>
+      <div class="note inline-note">This cross-source table starts with SOMA securities and matches them to recent Treasury auction records and the cached SEC N-PORT fund dataset when available. It is not a complete beneficial-owner registry.</div>
     </section>
 
     <section class="panel">
@@ -128,7 +170,7 @@
     </section>
 
     <section class="panel">
-      <div class="panel-head"><div><h2>Source Health</h2><p>Every source is checked daily. If one feed fails, the tracker keeps the last valid observation and flags the source.</p></div></div>
+      <div class="panel-head"><div><h2>Source Health</h2><p>Every daily source is checked automatically. N-PORT is handled by a separate quarterly ingestion workflow because the SEC bulk archive is hundreds of MB.</p></div></div>
       <div id="sourceHealth" class="source-grid"></div>
     </section>
 
@@ -137,7 +179,8 @@
     </section>
   </main>
 
-  <footer class="shell footer">Sources: U.S. Treasury Fiscal Data, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, New York Fed SOMA and Primary Dealer Statistics, and SEC Form N-MFP.</footer>
+  <footer class="shell footer">Sources: U.S. Treasury Fiscal Data, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, New York Fed SOMA and Primary Dealer Statistics, SEC Form N-MFP, and SEC Form N-PORT.</footer>
   <script src="app.js"></script>
+  <script src="phase4.js"></script>
 </body>
 </html>
