@@ -57,13 +57,12 @@ The site refreshes daily, but it never fabricates a daily ownership number. Ever
 - **SOMA CUSIP concentration monitor** — ranks stored SOMA securities by percent outstanding and derives an implied outstanding amount where the required official inputs exist.
 
 ### Phase 9
-- **Holder Profile Explorer** — creates stable drill-down profiles for foreign countries, U.S. holder sectors and primary-dealer series, with source cadence, current value, previous value, latest change, rank, historical chart data and current alert diagnostics.
+- **Holder Profile Explorer** — stable drill-down profiles for foreign countries, U.S. holder sectors and primary-dealer series, with source cadence, current value, previous value, latest change, rank, historical chart data and current alert diagnostics.
 - **Clickable holder drill-downs** — foreign-holder, bank/dealer-sector, extended-sector and primary-dealer tables can jump into the corresponding holder profile.
 - **Cross-holder flow breadth** — counts which tracked holders are accumulating, reducing or approximately flat within each source cadence.
 - **Cadence-safe flow comparison** — monthly TIC, quarterly Financial Accounts and weekly dealer series are never added together into a fabricated synchronized dollar flow. Cross-scope comparisons use directional breadth instead.
 - **Directional divergence signals** — highlights strong divergence between foreign-country breadth and U.S.-sector breadth, or broad accumulation/reduction when both scopes point the same way.
 - **Foreign-holder concentration** — calculates Top-5 and Top-10 shares of reported foreign Treasury holdings.
-- **Phase 9 exports** — downloadable holder-profile and flow-intelligence CSVs.
 
 ### Phase 10
 - **Release Calendar & Freshness Monitor** — converts each source's real cadence and latest observation into an estimated next-observation / next-publication window, with scheduled, due-soon, due-now, grace-window, overdue, source-error, access-limited and event-driven states.
@@ -71,9 +70,17 @@ The site refreshes daily, but it never fabricates a daily ownership number. Ever
 - **Persistent flow-regime history** — accumulation breadth is stored only when the underlying source observation signature advances. Daily updater runs with unchanged data do not create duplicate history points.
 - **Flow-regime classification** — each scope is classified as broad accumulation, accumulation tilt, mixed, reduction tilt or broad reduction from directional breadth.
 - **Cross-scope regime history** — foreign-country breadth and U.S.-sector breadth are compared directionally, preserving monthly-vs-quarterly cadence separation and tracking regime transitions over time.
-- **Research Brief** — a rule-based summary surfaces the strongest currently available signals from flow divergence, TIC foreign-demand changes, anomaly diagnostics, SOMA concentration and source freshness. It uses only tracker data and is explicitly descriptive rather than predictive.
-- **Phase 10 exports** — release-calendar CSV and persistent flow-regime-history CSV.
-- **Operational validation** — CI validates release-calendar uniqueness/statuses, regime-history integrity, breadth bounds and research-brief structure before committing refreshed dashboard data.
+- **Research Brief** — a rule-based summary surfaces the strongest currently available signals from flow divergence, TIC foreign-demand changes, anomaly diagnostics, SOMA concentration and source freshness.
+
+### Phase 11
+- **Global command palette** — press **Ctrl/Cmd + K** to search dashboard sections, holder profiles, Treasury CUSIPs, official sources and active alert diagnostics from one place.
+- **Context-aware navigation** — selecting a holder opens the matching holder profile; selecting a CUSIP opens the Treasury security drill-down; selecting a source filters the release/freshness panel.
+- **Holder Comparison Workspace** — compare any two holders within the same semantic scope using side-by-side metrics and a normalized history chart with each series rebased to 100.
+- **Same-scope guardrail** — monthly foreign holders, quarterly U.S. sectors and weekly primary-dealer series cannot be mixed in the comparison chart.
+- **Holder Co-Movement Lens** — computes Pearson correlation of period-to-period percentage changes only on common observation dates, requiring at least six overlapping changes.
+- **Strongest / lowest co-movement pairs** — surfaces the most similar and most divergent historical change patterns for each holder scope and lets the user jump directly into a comparison.
+- **Search index validation** — CI verifies unique navigation entries and coverage of holder/CUSIP search targets.
+- **Co-movement validation** — CI verifies correlation bounds, overlap requirements and pair uniqueness before refreshed data can be committed.
 
 ## Important interpretation limits
 
@@ -84,6 +91,8 @@ Government-account detail is a detailed view of intragovernmental investments an
 Alert diagnostics and the Research Brief are research screens, not forecasts. A high percentile, robust z-score or unusual-change flag means a move is unusual relative to the stored history; it does not identify a cause or imply a future market move.
 
 Phase 9/10 flow breadth and regimes are not synchronized capital-flow estimates. Foreign-country data are monthly, U.S. sector data are quarterly, and primary-dealer data are weekly positioning series. The tracker keeps those concepts and dates separate.
+
+Phase 11 co-movement is descriptive association, not evidence that one holder causes another holder's behavior. Correlations are computed only within the same holder scope and can change substantially as more observations arrive.
 
 Phase 10 release dates are tracker estimates built from normal source cadence and the latest observed reporting period. They are operational freshness diagnostics, not official publisher commitments, and the simple weekday adjustment does not model every U.S. federal holiday.
 
@@ -102,7 +111,7 @@ Form N-PORT is handled separately by `.github/workflows/nport.yml`. The cache ca
 ```powershell
 uv venv --python 3.13
 uv pip install --python .venv\Scripts\python.exe -r requirements.txt
-.venv\Scripts\python.exe scripts\update_data_v10.py
+.venv\Scripts\python.exe scripts\update_data_v11.py
 python -m http.server 8000
 ```
 
@@ -113,7 +122,7 @@ Open `http://localhost:8000`.
 1. Repository **Settings → Pages**.
 2. Set **Source** to **Deploy from a branch**.
 3. Select `main` and `/ (root)`.
-4. `.github/workflows/update.yml` checks the normal live sources daily and runs the current Phase 10 updater.
+4. `.github/workflows/update.yml` checks the normal live sources daily and runs the current Phase 11 updater.
 5. `.github/workflows/nport.yml` remains the separate quarterly/on-demand N-PORT ingestion path.
 
 You can also run either workflow manually from the repository **Actions** tab.
@@ -128,8 +137,8 @@ You can also run either workflow manually from the repository **Actions** tab.
 
 ## Next expansion
 
-- Add a dashboard-wide search/command palette so countries, sectors, CUSIPs, alerts and sources can be reached from one place.
-- Add side-by-side holder comparison with normalized history and difference/breadth views.
-- Add regime-duration and transition statistics after more official observation changes accumulate.
-- Improve the release calendar with publisher-specific release dates where durable official machine-readable schedules are available.
+- Add a compact market-structure overview that links holder regimes, auction demand, dealer positioning and SOMA concentration without pretending they share one reporting date.
+- Add saved dashboard views in browser storage so recurring research configurations can be restored instantly.
+- Add richer country/sector comparison metrics such as rolling change rank and concentration contribution.
+- Improve publisher-specific release expectations when durable machine-readable official calendars are available.
 - Add named-fund drill-downs when SEC N-PORT/N-MFP automated access becomes reliable.
