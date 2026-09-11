@@ -7,6 +7,7 @@
   function series(){ return block().series || []; }
   function selected(){ return series().find(row => row.key === state.key) || series()[0]; }
   function nominalGdp(){ return series().find(row => row.key === 'nominal_gdp'); }
+  function totalDebt(){ return series().find(row => row.key === 'total_public_debt'); }
 
   function cutoffDate(range){
     if(range === 'ALL') return null;
@@ -25,7 +26,7 @@
     const cutoff = cutoffDate(state.range);
     if(!cutoff) return rows;
     return rows.filter(item => {
-      const d = new Date(`${String(item.date).slice(0,7)}-01T00:00:00Z`);
+      const d = new Date(`${String(item.date).slice(0,10)}T00:00:00Z`);
       return !Number.isNaN(d.getTime()) && d >= cutoff;
     });
   }
@@ -69,96 +70,90 @@
     ].map(([label,value]) => `<div class="all-time-stat"><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('');
   }
 
-  function dateMap(row){
-    return new Map(visibleObservations(row).map(item => [String(item.date), Number(item.value_billions)/1000]));
+  function dateTime(value){
+    const time = new Date(`${String(value).slice(0,10)}T00:00:00Z`).getTime();
+    return Number.isFinite(time) ? time : null;
   }
 
-  function interpolatedValues(labels, valueMap){
-    const points = [...valueMap.entries()]
-      .map(([date,value]) => ({date, value:Number(value), time:new Date(`${String(date).slice(0,10)}T00:00:00Z`).getTime()}))
-      .filter(point => Number.isFinite(point.value) && Number.isFinite(point.time))
+  function timelineDates(...rows){
+    const dates = new Set();
+    for(const row of rows){
+      for(const item of visibleObservations(row)){
+        if(item?.date) dates.add(String(item.date));
+      }
+    }
+    return [...dates].sort();
+  }
+
+  function alignLatestObservation(row, labels){
+    const points = (row?.observations || [])
+      .map(item => ({
+        date:String(item.date),
+        time:dateTime(item.date),
+        value:Number(item.value_billions)/1000,
+      }))
+      .filter(item => item.time != null && Number.isFinite(item.value))
       .sort((a,b) => a.time - b.time);
-    if(!points.length) return labels.map(() => null);
 
     const values = [];
-    let leftIndex = 0;
+    const observationDates = [];
+    let index = -1;
+
     for(const label of labels){
-      if(valueMap.has(label)){
-        values.push(valueMap.get(label));
-        continue;
-      }
-      const time = new Date(`${String(label).slice(0,10)}T00:00:00Z`).getTime();
-      if(!Number.isFinite(time) || time < points[0].time || time > points[points.length-1].time){
+      const time = dateTime(label);
+      while(index + 1 < points.length && time != null && points[index + 1].time <= time) index += 1;
+      if(index < 0){
         values.push(null);
-        continue;
+        observationDates.push(null);
+      }else{
+        values.push(points[index].value);
+        observationDates.push(points[index].date);
       }
-      while(leftIndex + 1 < points.length && points[leftIndex + 1].time < time) leftIndex += 1;
-      const left = points[leftIndex];
-      const right = points[leftIndex + 1];
-      if(!right || right.time === left.time){
-        values.push(left.value);
-        continue;
-      }
-      const weight = (time - left.time) / (right.time - left.time);
-      values.push(left.value + (right.value - left.value) * weight);
     }
-    return values;
+
+    return {values, observationDates};
   }
 
   function draw(){
     const row = selected();
     const gdp = nominalGdp();
+    const treasuryRow = row?.key === 'nominal_gdp' ? totalDebt() : row;
     const meta = document.getElementById('allTimeMeta');
-    if(meta) meta.textContent = row ? `${row.frequency || 'Official cadence'} · ${row.history_start || '—'} to ${row.as_of || '—'} · ${Number(row.observation_count || 0).toLocaleString()} official observations · chart values in $ trillions${row.key !== 'nominal_gdp' && gdp ? ' · nominal GDP shown for comparison' : ''}` : (block().note || '');
+    if(meta) meta.textContent = row ? `${row.frequency || 'Official cadence'} · ${row.history_start || '—'} to ${row.as_of || '—'} · ${Number(row.observation_count || 0).toLocaleString()} official observations · chart values in $ trillions${gdp && treasuryRow ? ' · hover any line to see both Treasury and nominal GDP values' : ''}` : (block().note || '');
     renderStats(row);
 
     const canvas = document.getElementById('allTimeChart');
-    if(!canvas || !row || !window.Chart) return;
+    if(!canvas || !row || !window.Chart || !treasuryRow) return;
     if(state.chart) state.chart.destroy();
     const existing = Chart.getChart(canvas);
     if(existing) existing.destroy();
 
-    const primaryMap = dateMap(row);
-    const gdpMap = gdp ? dateMap(gdp) : new Map();
-    const labels = [...new Set([...primaryMap.keys(), ...gdpMap.keys()])].sort();
+    const labels = timelineDates(treasuryRow, gdp);
+    const treasuryAligned = alignLatestObservation(treasuryRow, labels);
+    const gdpAligned = gdp ? alignLatestObservation(gdp, labels) : {values:[], observationDates:[]};
+
     const datasets = [{
-      label:`${row.label} ($T)`,
-      data:labels.map(date => primaryMap.has(date) ? primaryMap.get(date) : null),
+      label:`${treasuryRow.label} ($T)`,
+      data:treasuryAligned.values,
       borderWidth:2,
       pointRadius:0,
       pointHoverRadius:4,
-      pointHitRadius:8,
       tension:.12,
       spanGaps:true,
-      _isGdpDisplay: row.key === 'nominal_gdp',
+      _observationDates:treasuryAligned.observationDates,
     }];
 
-    if(row.key !== 'nominal_gdp' && gdpMap.size){
+    if(gdp && gdpAligned.values.some(value => value != null)){
       datasets.push({
         label:'Nominal GDP (SAAR, $T)',
-        data:labels.map(date => gdpMap.has(date) ? gdpMap.get(date) : null),
+        data:gdpAligned.values,
         borderWidth:2,
-        pointRadius:2,
-        pointHoverRadius:5,
-        pointHitRadius:10,
-        tension:.12,
+        pointRadius:0,
+        pointHoverRadius:4,
+        stepped:'after',
         spanGaps:true,
         borderDash:[7,5],
-        _isGdpDisplay:true,
-      });
-    }
-
-    if(gdpMap.size){
-      datasets.push({
-        label:'Nominal GDP hover helper',
-        data:interpolatedValues(labels, gdpMap),
-        borderWidth:0,
-        pointRadius:0,
-        pointHoverRadius:0,
-        pointHitRadius:6,
-        tension:0,
-        spanGaps:false,
-        _gdpHoverHelper:true,
+        _observationDates:gdpAligned.observationDates,
       });
     }
 
@@ -168,21 +163,20 @@
       options:{
         responsive:true,
         maintainAspectRatio:false,
-        interaction:{mode:'nearest',intersect:false},
+        interaction:{mode:'index',intersect:false},
         plugins:{
-          legend:{labels:{color:'#dbe6f4',filter:item=>datasets[item.datasetIndex]?._gdpHoverHelper !== true}},
+          legend:{labels:{color:'#dbe6f4'}},
           tooltip:{
-            mode:'nearest',
+            mode:'index',
             intersect:false,
-            filter:item=>item.dataset._isGdpDisplay !== true,
             callbacks:{
+              title:items=>items?.length ? `Timeline: ${items[0].label}` : '',
               label:ctx=>{
                 const value = Number(ctx.parsed.y);
-                if(ctx.dataset._gdpHoverHelper){
-                  const exact = gdpMap.has(String(ctx.label));
-                  return ` Nominal GDP (SAAR): $${value.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T${exact ? '' : ' (visual interpolation between quarterly observations)'}`;
-                }
-                return ` ${ctx.dataset.label}: $${value.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T`;
+                if(!Number.isFinite(value)) return '';
+                const observationDate = ctx.dataset._observationDates?.[ctx.dataIndex];
+                const dateSuffix = observationDate && observationDate !== String(ctx.label) ? ` · obs ${observationDate}` : '';
+                return ` ${ctx.dataset.label}: $${value.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T${dateSuffix}`;
               }
             }
           }
