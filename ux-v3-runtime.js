@@ -49,6 +49,13 @@
       script.dataset.countryHistory='1';
       document.body.appendChild(script);
     }
+    if(!document.querySelector('script[data-source-health]')){
+      const script=document.createElement('script');
+      script.src='source-health.js';
+      script.defer=true;
+      script.dataset.sourceHealth='1';
+      document.body.appendChild(script);
+    }
   }
 
   let queued = false;
