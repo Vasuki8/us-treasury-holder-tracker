@@ -4,6 +4,7 @@
     /research brief/i,
     /market structure map/i,
     /foreign treasury holders/i,
+    /foreign holder history/i,
     /ownership share snapshot/i,
     /auction demand monitor/i,
     /largest holder changes/i,
