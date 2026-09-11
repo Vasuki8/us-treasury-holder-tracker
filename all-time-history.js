@@ -90,10 +90,7 @@
     const first = Number(rows[0].value_billions);
     const latest = Number(rows[rows.length - 1].value_billions);
     if(!Number.isFinite(first) || !Number.isFinite(latest)) return null;
-    return {
-      absoluteBillions: latest - first,
-      percent: first === 0 ? null : ((latest / first) - 1) * 100,
-    };
+    return latest - first;
   }
 
   function renderStats(row, treasuryRow, gdp){
@@ -102,17 +99,21 @@
     const rows = visibleObservations(row);
     const first = rows[0];
     const latest = rows[rows.length - 1];
-    const debtChange = changeFor(totalDebt());
-    const debtChangeValue = debtChange
-      ? `${fmtChangeT(debtChange.absoluteBillions)} (${fmtPct(debtChange.percent)})`
-      : '—';
-    host.innerHTML = [
-      ['Observation range', first?.date && latest?.date ? `${first.date} → ${latest.date}` : '—'],
-      ['Latest value', fmtT(latest?.value_billions)],
-      ['Total debt change', debtChangeValue],
-      ['Debt CAGR', fmtPct(cagrFor(treasuryRow))],
-      ['Nominal GDP CAGR', fmtPct(cagrFor(gdp))],
-    ].map(([label,value]) => `<div class="all-time-stat"><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('');
+    const debtChange = row?.key === 'total_public_debt' ? changeFor(row) : null;
+    const stats = [
+      {
+        label:'Observation range',
+        value:first?.date && latest?.date ? `${first.date} → ${latest.date}` : '—',
+      },
+      {
+        label:'Latest value',
+        value:fmtT(latest?.value_billions),
+        meta:debtChange == null ? null : `Selected-period change: ${fmtChangeT(debtChange)}`,
+      },
+      {label:'Debt CAGR', value:fmtPct(cagrFor(treasuryRow))},
+      {label:'Nominal GDP CAGR', value:fmtPct(cagrFor(gdp))},
+    ];
+    host.innerHTML = stats.map(({label,value,meta}) => `<div class="all-time-stat"><span>${esc(label)}</span><strong>${esc(value)}</strong>${meta ? `<small>${esc(meta)}</small>` : ''}</div>`).join('');
   }
 
   function timelineDates(...rows){
