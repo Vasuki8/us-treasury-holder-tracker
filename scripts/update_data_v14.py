@@ -25,7 +25,7 @@ def _billions(value) -> float | None:
 
 
 def _period(value: str) -> str | None:
-    value = (value or "").strip()
+    value = (value or "").strip().strip('"').replace("\ufeff", "")
     try:
         return datetime.strptime(value, "%b-%y").strftime("%Y-%m")
     except ValueError:
@@ -81,13 +81,28 @@ def _parse_annual_surveys() -> dict:
     coverage were identical.
     """
     text = base.get_text(ANNUAL_SURVEY_URL)
-    lines = text.splitlines()
+    lines = [line.rstrip("\r") for line in text.splitlines()]
     if len(lines) < 8:
         raise RuntimeError("Annual Treasury survey history file is unexpectedly short")
 
-    date_row = lines[5].split("\t")
-    category_row = lines[6].split("\t")
-    field_row = lines[7].split("\t")
+    field_idx = next(
+        (i for i, line in enumerate(lines[:30]) if line.lstrip("\ufeff").lower().startswith("country code\t")),
+        None,
+    )
+    if field_idx is None or field_idx < 2:
+        raise RuntimeError("Could not locate annual Treasury survey field header")
+
+    date_idx = next(
+        (i for i in range(field_idx - 1, -1, -1) if any(_period(cell) for cell in lines[i].split("\t"))),
+        None,
+    )
+    if date_idx is None:
+        raise RuntimeError("Could not locate annual Treasury survey date header")
+
+    category_idx = field_idx - 1
+    date_row = lines[date_idx].split("\t")
+    category_row = lines[category_idx].split("\t")
+    field_row = lines[field_idx].split("\t")
     width = max(len(date_row), len(category_row), len(field_row))
     date_row += [""] * (width - len(date_row))
     category_row += [""] * (width - len(category_row))
@@ -95,30 +110,30 @@ def _parse_annual_surveys() -> dict:
 
     by_code: dict[str, dict] = {}
     periods: set[str] = set()
-    for line in lines[8:]:
+    for line in lines[field_idx + 1 :]:
         cols = line.split("\t")
         if len(cols) < 3:
             continue
-        code = (cols[0] or "").strip()
+        code = (cols[0] or "").replace("\ufeff", "").strip()
         name = (cols[1] or "").strip()
         if not code.isdigit() or not name:
             continue
-        cols += [""] * (width - len(cols))
+        cols += [""] * max(0, width - len(cols))
         date_values: dict[str, dict[str, float | None]] = defaultdict(
             lambda: {"long": None, "short": None}
         )
-        for i in range(2, width):
+        for i in range(2, min(width, len(cols))):
             period = _period(date_row[i])
             if not period:
                 continue
             category = category_row[i].strip().lower()
             field = field_row[i].strip().lower()
-            if "treasury debt" not in field:
+            if not ("treasury" in field and "debt" in field):
                 continue
             value = _billions(cols[i])
             if value is None:
                 continue
-            if "short-term" in category:
+            if "short" in category:
                 date_values[period]["short"] = value
             else:
                 # The historical benchmark columns are long-term securities.
