@@ -119,7 +119,7 @@
     const gdp = nominalGdp();
     const treasuryRow = row?.key === 'nominal_gdp' ? totalDebt() : row;
     const meta = document.getElementById('allTimeMeta');
-    if(meta) meta.textContent = row ? `${row.frequency || 'Official cadence'} · ${row.history_start || '—'} to ${row.as_of || '—'} · ${Number(row.observation_count || 0).toLocaleString()} official observations · chart values in $ trillions${gdp && treasuryRow ? ' · hover any line to see both Treasury and nominal GDP values' : ''}` : (block().note || '');
+    if(meta) meta.textContent = row ? `${row.frequency || 'Official cadence'} · ${row.history_start || '—'} to ${row.as_of || '—'} · ${Number(row.observation_count || 0).toLocaleString()} official observations · chart values in $ trillions${gdp && treasuryRow ? ' · move left/right across the chart to see Treasury and nominal GDP together at the same timeline position' : ''}` : (block().note || '');
     renderStats(row);
 
     const canvas = document.getElementById('allTimeChart');
@@ -138,6 +138,7 @@
       borderWidth:2,
       pointRadius:0,
       pointHoverRadius:4,
+      pointHitRadius:12,
       tension:.12,
       spanGaps:true,
       _observationDates:treasuryAligned.observationDates,
@@ -150,6 +151,7 @@
         borderWidth:2,
         pointRadius:0,
         pointHoverRadius:4,
+        pointHitRadius:12,
         stepped:'after',
         spanGaps:true,
         borderDash:[7,5],
@@ -163,12 +165,12 @@
       options:{
         responsive:true,
         maintainAspectRatio:false,
-        interaction:{mode:'index',intersect:false},
+        interaction:{mode:'index',axis:'x',intersect:false},
+        hover:{mode:'index',axis:'x',intersect:false},
         plugins:{
           legend:{labels:{color:'#dbe6f4'}},
           tooltip:{
-            mode:'index',
-            intersect:false,
+            position:'nearest',
             callbacks:{
               title:items=>items?.length ? `Timeline: ${items[0].label}` : '',
               label:ctx=>{
