@@ -1,6 +1,7 @@
 /* Research-surface trim requested by the tracker owner.
    Data ingestion and validation remain intact; these views are intentionally removed from the UI. */
 
+.research-removed,
 main.shell > section.panel:has(#govMeta),
 main.shell > section.panel:has(#somaMeta),
 main.shell > section.panel:has(#somaConcentrationMeta),
@@ -28,7 +29,9 @@ main.shell > section.panel:has(#sectorMeta),
 #downloadSecurityCsv,
 #downloadConcentrationCsv,
 #uxCompareTray,
-.ux-mode-button[data-mode="compare"] {
+.ux-mode-button[data-mode="compare"],
+[data-inspector-action="profile"],
+[data-inspector-action="compare"] {
   display: none !important;
 }
 
