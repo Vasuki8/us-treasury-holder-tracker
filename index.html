@@ -5,19 +5,21 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#07101d" />
   <title>US Treasury Ownership Tracker</title>
-  <meta name="description" content="Focused U.S. Treasury ownership dashboard using official Treasury and Federal Reserve data, with foreign-holder history and source-specific observation dates." />
+  <meta name="description" content="Focused U.S. Treasury ownership dashboard using official Treasury and Federal Reserve data, with all-time headline history, foreign-holder history and source-specific observation dates." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="country-history.css" />
+  <link rel="stylesheet" href="all-time-history.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script defer src="app.js"></script>
   <script defer src="country-history.js"></script>
+  <script defer src="all-time-history.js"></script>
 </head>
 <body class="core-dashboard ux5-core">
   <header class="shell hero">
     <div>
       <div class="eyebrow">U.S. TREASURY OWNERSHIP</div>
       <h1>Who Owns U.S. Treasuries?</h1>
-      <p class="lede">Track the headline ownership picture, major foreign holders and long-run country history using official data while preserving each source's real reporting date.</p>
+      <p class="lede">Track the headline ownership picture, all available official history, major foreign holders and long-run country history while preserving each source's real reporting date.</p>
     </div>
     <div class="hero-side">
       <div class="status" id="updateStatus">Loading official data…</div>
@@ -48,6 +50,22 @@
       <div class="note inline-note">Each dimension keeps its own official observation date. The labels summarize the current evidence and do not combine monthly, quarterly or weekly values into a synthetic total.</div>
     </section>
 
+    <section class="panel all-time-panel" id="allTimeHistoryPanel">
+      <div class="panel-head">
+        <div><h2>All-Time Treasury History</h2><p id="allTimeMeta">Loading full official history…</p></div>
+        <div class="panel-actions">
+          <select id="allTimeSeries" aria-label="Select all-time Treasury series"></select>
+          <button id="downloadAllTimeCsv" type="button">Download all-time CSV</button>
+        </div>
+      </div>
+      <div class="all-time-body">
+        <div class="all-time-stats" id="allTimeStats"></div>
+        <div class="all-time-toolbar"><div class="all-time-range" id="allTimeRanges"></div></div>
+        <div class="chart-wrap all-time-chart"><canvas id="allTimeChart"></canvas></div>
+        <div class="note inline-note">“All” means every observation available from the selected official source. Series begin on different dates and retain their original daily, weekly or monthly cadence; missing periods are not fabricated or forward-filled.</div>
+      </div>
+    </section>
+
     <section class="panel" id="foreignHoldersPanel">
       <div class="panel-head">
         <div><h2>Foreign Treasury Holders</h2><p id="foreignMeta"></p></div>
@@ -70,7 +88,7 @@
         <select id="trendCountry" aria-label="Select foreign holder"></select>
       </div>
       <div class="chart-wrap"><canvas id="foreignTrendChart"></canvas></div>
-      <div class="note inline-note">TIC country attribution can reflect custodian location rather than the ultimate beneficial owner.</div>
+      <div class="note inline-note">The All range shows the complete stored monthly TIC history for the selected country; Treasury-specific annual survey history remains available in the country detail drawer. TIC country attribution can reflect custodian location rather than the ultimate beneficial owner.</div>
     </section>
 
     <section class="panel" id="ownershipSharePanel">
