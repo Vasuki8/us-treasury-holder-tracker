@@ -75,10 +75,11 @@ def _parse_monthly_archive() -> dict[tuple[str, str], list[dict]]:
 def _parse_annual_surveys() -> dict:
     """Parse Treasury/Federal Reserve historical SHL/SHLA survey history.
 
-    Modern surveys contain both long- and short-term Treasury debt. Earlier
-    benchmark surveys predate collection of short-term securities, so those
-    observations are explicitly marked long-term-only rather than blended as if
-    coverage were identical.
+    The consolidated source file contains benchmark survey columns back to 1974,
+    but its oldest country-level columns identify only broad debt categories.
+    Treasury-specific country debt is separately identified beginning in December
+    1994, so the tracker intentionally starts its Treasury-specific annual series
+    there instead of relabeling broader historical debt as Treasuries.
     """
     text = base.get_text(ANNUAL_SURVEY_URL)
     lines = [line.rstrip("\r") for line in text.splitlines()]
@@ -108,8 +109,10 @@ def _parse_annual_surveys() -> dict:
     category_row += [""] * (width - len(category_row))
     field_row += [""] * (width - len(field_row))
 
+    all_archive_periods = sorted({p for p in (_period(cell) for cell in date_row) if p}, reverse=True)
+
     by_code: dict[str, dict] = {}
-    periods: set[str] = set()
+    treasury_periods: set[str] = set()
     for line in lines[field_idx + 1 :]:
         cols = line.split("\t")
         if len(cols) < 3:
@@ -128,6 +131,8 @@ def _parse_annual_surveys() -> dict:
                 continue
             category = category_row[i].strip().lower()
             field = field_row[i].strip().lower()
+            # Be deliberately strict: older benchmark columns that say only
+            # "Debt" are broader than Treasuries and must not enter this series.
             if not ("treasury" in field and "debt" in field):
                 continue
             value = _billions(cols[i])
@@ -136,7 +141,6 @@ def _parse_annual_surveys() -> dict:
             if "short" in category:
                 date_values[period]["short"] = value
             else:
-                # The historical benchmark columns are long-term securities.
                 date_values[period]["long"] = value
 
         history = []
@@ -146,22 +150,22 @@ def _parse_annual_surveys() -> dict:
             if long_term is None and short_term is None:
                 continue
             total = (long_term or 0.0) + (short_term or 0.0)
-            scope = "long_and_short_term" if short_term is not None else "long_term_only"
+            coverage = "long_and_short_term" if short_term is not None else "long_term_only"
             history.append(
                 {
                     "period": period,
                     "treasury_billions": total,
                     "long_term_treasury_billions": long_term,
                     "short_term_treasury_billions": short_term,
-                    "coverage": scope,
+                    "coverage": coverage,
                 }
             )
-            periods.add(period)
+            treasury_periods.add(period)
         history.sort(key=lambda row: row["period"], reverse=True)
         if history:
             by_code[code] = {"name": name, "country_code": code, "history": history}
 
-    ordered_periods = sorted(periods, reverse=True)
+    ordered_periods = sorted(treasury_periods, reverse=True)
     return {
         "by_code": by_code,
         "periods": ordered_periods,
@@ -169,6 +173,8 @@ def _parse_annual_surveys() -> dict:
         "history_start": ordered_periods[-1] if ordered_periods else None,
         "observation_count": len(ordered_periods),
         "country_count": len(by_code),
+        "archive_history_start": all_archive_periods[-1] if all_archive_periods else None,
+        "archive_as_of": all_archive_periods[0] if all_archive_periods else None,
     }
 
 
@@ -256,12 +262,14 @@ def fetch_tic_history_2011() -> dict:
         "history_start": annual.get("history_start"),
         "observation_count": annual.get("observation_count"),
         "country_count": annual.get("country_count"),
+        "archive_history_start": annual.get("archive_history_start"),
+        "archive_as_of": annual.get("archive_as_of"),
         "source_url": ANNUAL_SURVEY_URL,
         "source_page": ANNUAL_SURVEY_PAGE,
         "frequency": "Annual / historical benchmark surveys",
         "note": (
-            "Treasury/Federal Reserve SHL and predecessor surveys provide a long-run historical view back to 1974. "
-            "Annual surveys are available from 2002 onward; earlier points are benchmark surveys. Short-term Treasury securities were not collected in the earliest surveys, so older observations are marked long-term-only."
+            "The consolidated Treasury/Federal Reserve survey archive contains benchmark country data back to 1974, but the oldest columns report broad debt rather than Treasury debt separately. "
+            "This tracker therefore shows Treasury-specific country survey history from December 1994 onward. Modern observations include long- and short-term Treasury debt; older Treasury-specific observations can be long-term-only and are labeled accordingly."
         ),
     }
     return current
@@ -288,12 +296,14 @@ def main() -> None:
         foreign.get("as_of"),
     )
     print(
-        "Annual survey history:",
+        "Treasury-specific annual survey history:",
         survey.get("observation_count"),
         "survey dates from",
         survey.get("history_start"),
         "to",
         survey.get("as_of"),
+        "; archive itself reaches",
+        survey.get("archive_history_start"),
     )
 
 
