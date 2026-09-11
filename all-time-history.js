@@ -108,12 +108,13 @@
       {
         label:'Latest value',
         value:fmtT(latest?.value_billions),
-        meta:debtChange == null ? null : `Selected-period change: ${fmtChangeT(debtChange)}`,
+        meta:debtChange == null ? null : fmtChangeT(debtChange),
+        featured:true,
       },
       {label:'Debt CAGR', value:fmtPct(cagrFor(treasuryRow))},
       {label:'Nominal GDP CAGR', value:fmtPct(cagrFor(gdp))},
     ];
-    host.innerHTML = stats.map(({label,value,meta}) => `<div class="all-time-stat"><span>${esc(label)}</span><strong>${esc(value)}</strong>${meta ? `<small>${esc(meta)}</small>` : ''}</div>`).join('');
+    host.innerHTML = stats.map(({label,value,meta,featured}) => `<div class="all-time-stat${featured ? ' all-time-stat-featured' : ''}"><span>${esc(label)}</span><strong>${esc(value)}</strong>${meta ? `<small>${esc(meta)}</small>` : ''}</div>`).join('');
   }
 
   function timelineDates(...rows){
