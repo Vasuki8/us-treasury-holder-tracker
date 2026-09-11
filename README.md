@@ -1,154 +1,75 @@
 # US Treasury Ownership Tracker
 
-A GitHub Pages dashboard that checks official U.S. Treasury, Federal Reserve, New York Fed, and SEC sources on their real publication schedules.
+A focused GitHub Pages dashboard for understanding who owns U.S. Treasuries using official data sources and source-specific observation dates.
 
-The site refreshes daily, but it never fabricates a daily ownership number. Every dataset keeps its real observation date and source cadence.
+## Current dashboard
 
-## Coverage
+The public site now has a single Core experience. The former Research workspace, research-only navigation, comparison tools, drill-down panels, and legacy multi-phase UI layers have been removed from the frontend.
 
-### Core ownership
-- **Total U.S. public debt** — Treasury Fiscal Data, business daily.
-- **Debt held by the public / intragovernmental holdings** — Treasury Fiscal Data, business daily.
-- **Federal Reserve Treasury holdings** — H.4.1 weekly series, retrieved through FRED to avoid Federal Reserve website bot-blocking on GitHub Actions.
-- **Foreign country holdings** — Treasury International Capital (TIC), monthly.
-- **Domestic and sector ownership** — Federal Reserve Financial Accounts, quarterly series retrieved through FRED.
+The retained dashboard contains:
 
-### Phase 2
-- **NY Fed SOMA Treasury holdings** — weekly, including CUSIP-level positions, maturity dates, type, par value and percent outstanding where published.
-- **SEC Form N-MFP** — monthly individual money-market-fund Treasury exposure, with direct Treasuries separated from Treasury-collateralized repo.
-- **Treasury auction takedown** — competitive awards split among primary dealers, indirect bidders and direct bidders.
+- Four headline ownership metrics: total public debt, debt held by the public, Federal Reserve Treasury holdings, and total foreign Treasury holdings.
+- Ownership Brief: a rule-based summary generated from the official-data state already produced by the updater.
+- Market Structure Map: a compact summary of the existing market-structure dimensions without links into removed research panels.
+- Foreign Treasury Holders: searchable TIC country holdings with 1-month, 3-month, and 1-year changes.
+- Foreign Holder History: monthly country history plus the existing long-run Treasury survey history and country detail drawer.
+- Ownership Share Snapshot: holder-group shares using their relevant denominators.
+- JSON and CSV downloads for the retained Core data.
 
-### Phase 3
-- **Bank Treasury holdings** — U.S.-chartered and private depository-institution Treasury aggregates from Federal Reserve Financial Accounts.
-- **Broker-dealer holdings** — quarterly broker/dealer Treasury assets.
-- **Primary-dealer positioning** — weekly NY Fed Treasury net positions and settlement fails.
-- **Historical snapshots and exports** — one compact tracker snapshot per day plus JSON/CSV exports.
+There is no Core/Research toggle anymore.
 
-### Phase 4
-- **Insurance, pensions, ETFs and hedge funds** — quarterly Federal Reserve sector aggregates.
-- **Holder-change monitor** — ranks large changes while preserving each source's true cadence.
-- **CUSIP security intelligence** — matches SOMA positions to Treasury auctions and cached SEC N-PORT data where available.
-- **Quarterly N-PORT ingestion** — separate large-file workflow and compact cache.
+## Data discipline
 
-### Phase 5
-- **Federal government and trust-fund holders** — Treasury Monthly Treasury Statement government-account detail.
-- **Intragovernmental reconciliation** — compares detailed government-account leaf lines with the Treasury intragovernmental total.
-- **13-month TIC history** — country-level monthly history and 1M/3M/6M/12M changes.
-- **Ownership-share and SOMA concentration views** — source-aligned denominator comparisons and maturity concentration.
+The site checks official sources on its scheduled updater, but it never treats the website check time as the observation date. Each dataset keeps its actual reporting cadence and observation date.
 
-### Phase 6
-- **Audit trail and source provenance** — observation date, publication cadence, latest health check and official source links.
-- **Historical/source exports** — analysis-ready history, source registry and alert CSVs.
-- **Unusual-change monitor** — transparent history-relative rule using source-specific dollar floors.
-- **CUSIP audit metadata** — time-to-maturity and contributing source blocks.
+Examples of source cadence include:
 
-### Phase 7
-- **Persistent alert lifecycle** — stable alert IDs, first/last seen timestamps, run counts and cleared timestamps.
-- **Failure-aware clearing** — source failures do not falsely clear an active signal.
-- **Lifecycle transitions** — opened, cleared, reopened and severity-changed events.
-- **Deep Treasury auction metadata** — full CUSIP auction/reopening history rather than only a recent auction window.
-- **Security drill-down** — issue/original-issue dates, term, maturity cross-check, auction history, bid-to-cover and rate/yield context.
+- Treasury Fiscal Data: business daily
+- Federal Reserve H.4.1: weekly
+- Treasury International Capital (TIC): monthly
+- Federal Reserve Financial Accounts: quarterly
+- New York Fed SOMA and Primary Dealer Statistics: weekly
+- Treasury auctions: event driven
+- SEC N-MFP: monthly
+- SEC N-PORT: quarterly/cache workflow
 
-### Phase 8
-- **Robust alert diagnostics** — every current unusual-change alert receives an absolute-change percentile and a robust z-score based on the median and median absolute deviation (MAD). The current event is excluded from its own historical baseline.
-- **Diagnostic labels** — moves are classified as notable, elevated or extreme while preserving the original transparent Phase 6 rule.
-- **Notification-ready high-severity queue** — only future high-severity open, reopen or escalation transitions occurring after the Phase 8 watermark are emitted as new notification candidates.
-- **Official source publication-change ledger** — records when the updater first detects that an official source advanced to a new reporting period.
-- **SOMA CUSIP concentration monitor** — ranks stored SOMA securities by percent outstanding and derives an implied outstanding amount where the required official inputs exist.
+The updater preserves the last verified observation when a source fails instead of fabricating a newer value. SEC public bulk files can return HTTP 403 to GitHub-hosted runners; that limitation remains handled in the data pipeline.
 
-### Phase 9
-- **Holder Profile Explorer** — stable drill-down profiles for foreign countries, U.S. holder sectors and primary-dealer series, with source cadence, current value, previous value, latest change, rank, historical chart data and current alert diagnostics.
-- **Clickable holder drill-downs** — foreign-holder, bank/dealer-sector, extended-sector and primary-dealer tables can jump into the corresponding holder profile.
-- **Cross-holder flow breadth** — counts which tracked holders are accumulating, reducing or approximately flat within each source cadence.
-- **Cadence-safe flow comparison** — monthly TIC, quarterly Financial Accounts and weekly dealer series are never added together into a fabricated synchronized dollar flow. Cross-scope comparisons use directional breadth instead.
-- **Directional divergence signals** — highlights strong divergence between foreign-country breadth and U.S.-sector breadth, or broad accumulation/reduction when both scopes point the same way.
-- **Foreign-holder concentration** — calculates Top-5 and Top-10 shares of reported foreign Treasury holdings.
+## Foreign-holder history
 
-### Phase 10
-- **Release Calendar & Freshness Monitor** — converts each source's real cadence and latest observation into an estimated next-observation / next-publication window, with scheduled, due-soon, due-now, grace-window, overdue, source-error, access-limited and event-driven states.
-- **Fresh-release recognition** — sources that advance to a newly observed reporting period are highlighted separately from routine successful daily checks.
-- **Persistent flow-regime history** — accumulation breadth is stored only when the underlying source observation signature advances. Daily updater runs with unchanged data do not create duplicate history points.
-- **Flow-regime classification** — each scope is classified as broad accumulation, accumulation tilt, mixed, reduction tilt or broad reduction from directional breadth.
-- **Cross-scope regime history** — foreign-country breadth and U.S.-sector breadth are compared directionally, preserving monthly-vs-quarterly cadence separation and tracking regime transitions over time.
-- **Research Brief** — a rule-based summary surfaces the strongest currently available signals from flow divergence, TIC foreign-demand changes, anomaly diagnostics, SOMA concentration and source freshness.
+The tracker retains monthly TIC country history beginning with the earliest SLT observations in 2011 and Treasury-specific annual survey history beginning in 1994. Older consolidated survey columns are not relabeled as Treasury-specific holdings when the source does not separately identify Treasuries.
 
-### Phase 11
-- **Global command palette** — press **Ctrl/Cmd + K** to search dashboard sections, holder profiles, Treasury CUSIPs, official sources and active alert diagnostics from one place.
-- **Context-aware navigation** — selecting a holder opens the matching holder profile; selecting a CUSIP opens the Treasury security drill-down; selecting a source filters the release/freshness panel.
-- **Holder Comparison Workspace** — compare any two holders within the same semantic scope using side-by-side metrics and a normalized history chart with each series rebased to 100.
-- **Same-scope guardrail** — monthly foreign holders, quarterly U.S. sectors and weekly primary-dealer series cannot be mixed in the comparison chart.
-- **Holder Co-Movement Lens** — computes Pearson correlation of period-to-period percentage changes only on common observation dates, requiring at least six overlapping changes.
-- **Strongest / lowest co-movement pairs** — surfaces the most similar and most divergent historical change patterns for each holder scope and lets the user jump directly into a comparison.
+## Automation
 
-### Phase 12
-- **Market Structure Map** — links foreign-holder breadth, U.S.-sector breadth, primary-dealer breadth, latest auction demand, SOMA concentration, active alerts, data freshness and dealer positioning in one compact interactive view while preserving every component's own observation date.
-- **No synthetic composite score** — the map uses categorical supportive / neutral / cautious states instead of adding incompatible monthly, quarterly and weekly inputs into a fake market number.
-- **Auction Demand Monitor** — scores recent Treasury auctions with a transparent heuristic: 45% bid-to-cover percentile, 35% indirect-bidder-share percentile and 20% inverse primary-dealer-share percentile.
-- **Term-aware auction baselines** — when at least three observations exist for a Treasury term, each auction is evaluated against its own recent term history; otherwise the recent multi-term sample is used.
-- **Auction term explorer** — filter recent auctions by security term and inspect score, bidder mix, bid-to-cover, comparison percentiles and recent term medians.
-- **Saved Research Views** — holder comparisons can be saved and reopened from browser-local storage without creating an account or sending research preferences to a server.
-- **Interactive structure navigation** — clicking a market-structure card jumps directly to the underlying detailed dashboard section.
-- **Phase 12 validation** — CI checks auction-score bounds, percentile integrity, market-structure dimension uniqueness and categorical state consistency before refreshed data is committed.
+The main workflow is `.github/workflows/update.yml`.
 
-## Important interpretation limits
+It:
 
-There is no single public official database naming every owner of every Treasury security each day. This tracker combines official datasets with different reporting scopes and lags. Auction awards are not current holdings, TIC country attribution can reflect custodial location, primary-dealer net positions are not an ownership register, repo exposure is not direct Treasury ownership, and N-PORT reports market value rather than Treasury par value.
+1. validates the retained frontend JavaScript,
+2. installs Python with `uv`,
+3. refreshes `data/dashboard.json` through `scripts/update_data_v14.py`,
+4. runs the existing Phase 8–12 and long-country-history data validators,
+5. commits refreshed data only on non-PR runs and only when the generated data changed.
 
-Government-account detail is a detailed view of intragovernmental investments and must not be added again on top of the intragovernmental total.
+The separate `.github/workflows/nport.yml` workflow remains for the SEC N-PORT cache.
 
-Alert diagnostics, the Research Brief, the Market Structure Map and the auction-demand score are research screens, not forecasts or trading recommendations. They organize reported data and historical context; they do not identify causation or predict Treasury prices.
+The Phase-named Python updater/validator files are intentionally retained because the current `update_data_v14.py` pipeline imports the preceding updater chain. They are data-pipeline dependencies even though the old Phase-named frontend files have been removed.
 
-Phase 9/10 flow breadth and regimes are not synchronized capital-flow estimates. Foreign-country data are monthly, U.S. sector data are quarterly, and primary-dealer data are weekly positioning series. The tracker keeps those concepts and dates separate.
+## Local use
 
-Phase 11 co-movement is descriptive association, not evidence that one holder causes another holder's behavior. Correlations are computed only within the same holder scope and can change substantially as more observations arrive.
+Serve the repository root with any static HTTP server and open `index.html`. The frontend reads `data/dashboard.json` and uses Chart.js from the jsDelivr CDN.
 
-Phase 12 auction-demand labels are derived tracker metrics, not official Treasury classifications. Auction awards describe issuance demand, not current secondary-market ownership.
-
-Phase 10 release dates are tracker estimates built from normal source cadence and the latest observed reporting period. They are operational freshness diagnostics, not official publisher commitments, and the simple weekday adjustment does not model every U.S. federal holiday.
-
-The Phase 8 source-change timestamp means “first observed by this tracker,” not necessarily the exact public release timestamp.
-
-The Phase 8 implied outstanding figure is a derived metric from official New York Fed SOMA par and percent-outstanding inputs. It is not a separately reported Treasury balance.
-
-## SEC bulk-data limitation
-
-SEC Form N-MFP is wired into the tracker, but SEC can return HTTP 403 to GitHub-hosted runners for public bulk files. The dashboard exposes source failures rather than substituting stale data as current.
-
-Form N-PORT is handled separately by `.github/workflows/nport.yml`. The cache can still be generated from a network environment that SEC permits.
-
-## Local setup with uv
+To refresh data locally with the same package-manager approach as CI:
 
 ```powershell
+uv python install 3.13
 uv venv --python 3.13
 uv pip install --python .venv\Scripts\python.exe -r requirements.txt
-.venv\Scripts\python.exe scripts\update_data_v12.py
-python -m http.server 8000
+.venv\Scripts\python.exe scripts\update_data_v14.py
 ```
 
-Open `http://localhost:8000`.
+On macOS/Linux, use `.venv/bin/python` instead of `.venv\Scripts\python.exe`.
 
-## GitHub Pages
+## Deployment
 
-1. Repository **Settings → Pages**.
-2. Set **Source** to **Deploy from a branch**.
-3. Select `main` and `/ (root)`.
-4. `.github/workflows/update.yml` checks the normal live sources daily and runs the current Phase 12 updater.
-5. `.github/workflows/nport.yml` remains the separate quarterly/on-demand N-PORT ingestion path.
-
-You can also run either workflow manually from the repository **Actions** tab.
-
-## N-PORT manual ingestion
-
-```powershell
-.venv\Scripts\python.exe scripts\ingest_nport.py \
-  --quarter "2026 Q2" \
-  --url "https://www.sec.gov/files/dera/data/form-n-port-data-sets/2026q2_nport.zip"
-```
-
-## Next expansion
-
-- Add richer rolling holder analytics such as rolling rank, acceleration and concentration contribution.
-- Add a compact sticky navigation rail / overview architecture as the research terminal grows.
-- Add auction-demand history persistence so score regimes can be studied beyond the current rolling 90-day sample.
-- Improve publisher-specific release expectations when durable machine-readable official calendars are available.
-- Add named-fund drill-downs when SEC N-PORT/N-MFP automated access becomes reliable.
+GitHub Pages serves the repository from `main`. A merge or updater-generated data commit triggers the normal Pages deployment.
