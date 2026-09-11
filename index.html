@@ -12,7 +12,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script defer src="app.js"></script>
   <script defer src="country-history.js"></script>
-  <script defer src="all-time-history.js?v=20260911-shared-hover"></script>
+  <script defer src="all-time-history.js?v=20260911-shared-x"></script>
 </head>
 <body class="core-dashboard ux5-core">
   <header class="shell hero">
@@ -62,7 +62,7 @@
         <div class="all-time-stats" id="allTimeStats"></div>
         <div class="all-time-toolbar"><div class="all-time-range" id="allTimeRanges"></div></div>
         <div class="chart-wrap all-time-chart"><canvas id="allTimeChart"></canvas></div>
-        <div class="note inline-note">“All” means every observation available from the selected official source. Hovering either line uses one shared timeline and shows both values together. Nominal GDP remains an official quarterly series; between releases the comparison uses the latest available quarterly observation and shows its observation date in the tooltip.</div>
+        <div class="note inline-note">“All” means every observation available from the selected official source. Series begin on different dates and retain their original daily, weekly, monthly or quarterly cadence; missing periods are not fabricated or forward-filled.</div>
       </div>
     </section>
 
