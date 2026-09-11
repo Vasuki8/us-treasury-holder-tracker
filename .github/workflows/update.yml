@@ -4,15 +4,7 @@ on:
   push:
     branches:
       - main
-      - phase8-alert-intelligence
-      - phase9-holder-flow-intelligence
-      - phase10-release-calendar-regimes
-      - phase11-discovery-comparison
-      - phase12-market-structure-workspace
-      - ui-refresh-research-terminal
-      - ux-v2-interactive-workspace
-      - ux-v3-interactive-inspector
-      - country-history-header-refresh
+      - phase14-long-history
     paths:
       - scripts/**
       - app.js
@@ -92,7 +84,7 @@ jobs:
         run: uv venv --python 3.13 && uv pip install --python .venv/bin/python -r requirements.txt
 
       - name: Refresh official data
-        run: .venv/bin/python scripts/update_data_v13.py
+        run: .venv/bin/python scripts/update_data_v14.py
 
       - name: Validate Phase 8 output
         run: .venv/bin/python scripts/validate_phase8_state.py
@@ -109,7 +101,7 @@ jobs:
       - name: Validate Phase 12 output
         run: .venv/bin/python scripts/validate_phase12_state.py
 
-      - name: Validate expanded country history
+      - name: Validate long country history
         run: .venv/bin/python scripts/validate_country_history.py
 
       - name: Commit updated data safely
@@ -128,7 +120,7 @@ jobs:
             echo "Branch advanced during refresh; regenerating on latest HEAD."
             git restore data/dashboard.json
             git pull --ff-only origin "$GITHUB_REF_NAME"
-            .venv/bin/python scripts/update_data_v13.py
+            .venv/bin/python scripts/update_data_v14.py
             .venv/bin/python scripts/validate_phase8_state.py
             .venv/bin/python scripts/validate_phase9_state.py
             .venv/bin/python scripts/validate_phase10_state.py
