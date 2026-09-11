@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-11T20:20:16Z",
+  "generated_at": "2026-09-11T20:27:52Z",
   "overview": {
-    "as_of": "2026-09-09",
-    "total_public_debt": 40074284925786.5,
-    "debt_held_by_public": 32388611390871.8,
-    "intragovernmental_holdings": 7685673534914.7,
-    "daily_change": -9805859659.851562,
+    "as_of": "2026-09-10",
+    "total_public_debt": 40047726949770.15,
+    "debt_held_by_public": 32363418108364.11,
+    "intragovernmental_holdings": 7684308841406.04,
+    "daily_change": -26557976016.351562,
     "frequency": "Business daily",
     "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny"
   },
@@ -128216,74 +128216,74 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:18:59Z"
+      "checked_at": "2026-09-11T20:27:06Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:18:59Z"
+      "checked_at": "2026-09-11T20:27:06Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:19:44Z"
+      "checked_at": "2026-09-11T20:27:42Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:19:11Z"
+      "checked_at": "2026-09-11T20:27:15Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:19:11Z"
+      "checked_at": "2026-09-11T20:27:15Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-11T20:19:11Z",
+      "checked_at": "2026-09-11T20:27:15Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:19:11Z"
+      "checked_at": "2026-09-11T20:27:16Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:19:12Z"
+      "checked_at": "2026-09-11T20:27:16Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:19:12Z"
+      "checked_at": "2026-09-11T20:27:16Z"
     },
     "extended_holders": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:19:13Z"
+      "checked_at": "2026-09-11T20:27:16Z"
     },
     "nport": {
       "status": "pending",
-      "checked_at": "2026-09-11T20:19:13Z",
+      "checked_at": "2026-09-11T20:27:16Z",
       "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
     },
     "government_accounts": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:19:15Z"
+      "checked_at": "2026-09-11T20:27:17Z"
     },
     "all_time_history": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:20:13Z",
+      "checked_at": "2026-09-11T20:27:50Z",
       "message": null
     },
     "treasury_maturities": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:20:16Z",
+      "checked_at": "2026-09-11T20:27:52Z",
       "message": null
     },
     "treasury_interest": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:20:16Z",
+      "checked_at": "2026-09-11T20:27:52Z",
       "message": null
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-11T20:19:11Z",
+      "checked_at": "2026-09-11T20:27:15Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -131422,9 +131422,9 @@
     },
     {
       "snapshot_date": "2026-09-11",
-      "generated_at": "2026-09-11T20:19:12Z",
-      "total_public_debt_trillions": 40.0742849257865,
-      "debt_held_by_public_trillions": 32.3886113908718,
+      "generated_at": "2026-09-11T20:27:16Z",
+      "total_public_debt_trillions": 40.04772694977015,
+      "debt_held_by_public_trillions": 32.36341810836411,
       "fed_treasuries_billions": 4552.337,
       "foreign_holdings_billions": 9299.0,
       "soma_treasuries_billions": 4446.2865402,
@@ -140295,7 +140295,7 @@
     "metadata_api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
     "metadata_status": {
       "status": "ok",
-      "checked_at": "2026-09-11T20:20:01Z",
+      "checked_at": "2026-09-11T20:27:44Z",
       "matched_cusips": 100,
       "requested_cusips": 100,
       "coverage_pct": 100.0,
@@ -141078,8 +141078,8 @@
         "reason": "5.8× the median absolute change in the available history; +5.5% versus the previous observation",
         "alert_id": "3c514daafff9351abd70",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-11T20:20:01Z",
-        "seen_count": 19
+        "last_seen_at": "2026-09-11T20:27:44Z",
+        "seen_count": 20
       },
       {
         "severity": "medium",
@@ -141096,8 +141096,8 @@
         "reason": "3.6× the median absolute change in the available history; -5.9% versus the previous observation",
         "alert_id": "a2abd62e8705288e4594",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-11T20:20:01Z",
-        "seen_count": 19
+        "last_seen_at": "2026-09-11T20:27:44Z",
+        "seen_count": 20
       },
       {
         "severity": "medium",
@@ -141114,8 +141114,8 @@
         "reason": "3.4× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "3ec1a5b57d11679e67b4",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-11T20:20:01Z",
-        "seen_count": 19
+        "last_seen_at": "2026-09-11T20:27:44Z",
+        "seen_count": 20
       },
       {
         "severity": "medium",
@@ -141132,8 +141132,8 @@
         "reason": "2.8× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-11T20:20:01Z",
-        "seen_count": 49
+        "last_seen_at": "2026-09-11T20:27:44Z",
+        "seen_count": 50
       }
     ],
     "alert_count": 4,
@@ -141141,17 +141141,17 @@
     "method": "A change is flagged when it clears a source-specific absolute dollar floor and is either at least 2.5× the median absolute change in the available history or at least 10% versus the previous observation. High severity begins at 4× the historical median or 20%. This is a statistical screening rule, not a prediction."
   },
   "provenance": {
-    "generated_at": "2026-09-11T20:20:01Z",
+    "generated_at": "2026-09-11T20:27:44Z",
     "source_count": 12,
     "series_count": 22,
     "sources": [
       {
         "key": "overview",
         "name": "Treasury Fiscal Data — Debt to the Penny",
-        "as_of": "2026-09-09",
+        "as_of": "2026-09-10",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-11T20:18:59Z",
+        "checked_at": "2026-09-11T20:27:06Z",
         "message": null,
         "urls": [
           {
@@ -141166,7 +141166,7 @@
         "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-11T20:18:59Z",
+        "checked_at": "2026-09-11T20:27:06Z",
         "message": null,
         "urls": [
           {
@@ -141185,7 +141185,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:44Z",
+        "checked_at": "2026-09-11T20:27:42Z",
         "message": null,
         "urls": [
           {
@@ -141200,7 +141200,7 @@
         "as_of": "2026:Q2",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:11Z",
+        "checked_at": "2026-09-11T20:27:15Z",
         "message": null,
         "urls": [
           {
@@ -141219,7 +141219,7 @@
         "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:11Z",
+        "checked_at": "2026-09-11T20:27:15Z",
         "message": null,
         "urls": [
           {
@@ -141238,7 +141238,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-11T20:19:11Z",
+        "checked_at": "2026-09-11T20:27:15Z",
         "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip",
         "urls": []
       },
@@ -141248,7 +141248,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:11Z",
+        "checked_at": "2026-09-11T20:27:16Z",
         "message": null,
         "urls": [
           {
@@ -141267,7 +141267,7 @@
         "as_of": "2026-04-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:12Z",
+        "checked_at": "2026-09-11T20:27:16Z",
         "message": null,
         "urls": [
           {
@@ -141282,7 +141282,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:12Z",
+        "checked_at": "2026-09-11T20:27:16Z",
         "message": null,
         "urls": [
           {
@@ -141301,7 +141301,7 @@
         "as_of": "2026-04-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:13Z",
+        "checked_at": "2026-09-11T20:27:16Z",
         "message": null,
         "urls": [
           {
@@ -141316,7 +141316,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-11T20:19:13Z",
+        "checked_at": "2026-09-11T20:27:16Z",
         "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data.",
         "urls": [
           {
@@ -141335,7 +141335,7 @@
         "as_of": "2026-08-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:15Z",
+        "checked_at": "2026-09-11T20:27:17Z",
         "message": null,
         "urls": [
           {
@@ -141508,7 +141508,7 @@
     "note": "Provenance records the official source, observation date, retrieval path and latest health check separately so stale-but-valid observations are distinguishable from failed fetches."
   },
   "alert_history": {
-    "generated_at": "2026-09-11T20:20:01Z",
+    "generated_at": "2026-09-11T20:27:44Z",
     "active_count": 4,
     "cleared_count": 4,
     "episode_count": 8,
@@ -141517,7 +141517,7 @@
       {
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 49,
+        "seen_count": 50,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -141533,12 +141533,12 @@
         "multiple_of_baseline": 2.8190030474532106,
         "reason": "2.8× the median absolute change in the available history; -3.9% versus the previous observation",
         "series_key": "Foreign country|China, Mainland|MoM",
-        "last_seen_at": "2026-09-11T20:20:01Z"
+        "last_seen_at": "2026-09-11T20:27:44Z"
       },
       {
         "alert_id": "3c514daafff9351abd70",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "seen_count": 19,
+        "seen_count": 20,
         "cleared_at": null,
         "state": "active",
         "severity": "high",
@@ -141554,12 +141554,12 @@
         "multiple_of_baseline": 5.769035225759579,
         "reason": "5.8× the median absolute change in the available history; +5.5% versus the previous observation",
         "series_key": "Foreign country|Canada|MoM",
-        "last_seen_at": "2026-09-11T20:20:01Z"
+        "last_seen_at": "2026-09-11T20:27:44Z"
       },
       {
         "alert_id": "a2abd62e8705288e4594",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "seen_count": 19,
+        "seen_count": 20,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -141575,12 +141575,12 @@
         "multiple_of_baseline": 3.560577665086534,
         "reason": "3.6× the median absolute change in the available history; -5.9% versus the previous observation",
         "series_key": "Foreign country|Hong Kong|MoM",
-        "last_seen_at": "2026-09-11T20:20:01Z"
+        "last_seen_at": "2026-09-11T20:27:44Z"
       },
       {
         "alert_id": "3ec1a5b57d11679e67b4",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "seen_count": 19,
+        "seen_count": 20,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -141596,7 +141596,7 @@
         "multiple_of_baseline": 3.4464539342864966,
         "reason": "3.4× the median absolute change in the available history; -3.9% versus the previous observation",
         "series_key": "Foreign country|Cayman Islands|MoM",
-        "last_seen_at": "2026-09-11T20:20:01Z"
+        "last_seen_at": "2026-09-11T20:27:44Z"
       },
       {
         "alert_id": "10f3e7909be0493614fc",
@@ -141827,7 +141827,7 @@
     "note": "An alert episode is keyed by scope, series name, cadence and source observation date. The first-seen timestamp records when the tracker first detected it; it is cleared only after a healthy source refresh confirms that the episode is no longer current."
   },
   "alert_intelligence": {
-    "generated_at": "2026-09-11T20:20:11Z",
+    "generated_at": "2026-09-11T20:27:47Z",
     "row_count": 4,
     "extreme_count": 1,
     "elevated_count": 3,
@@ -141847,8 +141847,8 @@
         "reason": "5.8× the median absolute change in the available history; +5.5% versus the previous observation",
         "alert_id": "3c514daafff9351abd70",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-11T20:20:01Z",
-        "seen_count": 19,
+        "last_seen_at": "2026-09-11T20:27:44Z",
+        "seen_count": 20,
         "history_change_count": 174,
         "abs_change_percentile": 87.35632183908046,
         "robust_z": 3.82803614519123,
@@ -141872,8 +141872,8 @@
         "reason": "3.6× the median absolute change in the available history; -5.9% versus the previous observation",
         "alert_id": "a2abd62e8705288e4594",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-11T20:20:01Z",
-        "seen_count": 19,
+        "last_seen_at": "2026-09-11T20:27:44Z",
+        "seen_count": 20,
         "history_change_count": 174,
         "abs_change_percentile": 94.82758620689656,
         "robust_z": -3.0061174871794787,
@@ -141897,8 +141897,8 @@
         "reason": "3.4× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "3ec1a5b57d11679e67b4",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-11T20:20:01Z",
-        "seen_count": 19,
+        "last_seen_at": "2026-09-11T20:27:44Z",
+        "seen_count": 20,
         "history_change_count": 174,
         "abs_change_percentile": 95.40229885057471,
         "robust_z": -2.7735222409875395,
@@ -141922,8 +141922,8 @@
         "reason": "2.8× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-11T20:20:01Z",
-        "seen_count": 49,
+        "last_seen_at": "2026-09-11T20:27:44Z",
+        "seen_count": 50,
         "history_change_count": 174,
         "abs_change_percentile": 89.65517241379311,
         "robust_z": -1.6167623107414908,
@@ -141936,7 +141936,7 @@
     "method": "Phase 8 keeps the transparent Phase 6 threshold rule and adds two diagnostics: the percentile rank of the latest absolute change versus prior historical absolute changes, and a robust z-score based on the median and median absolute deviation (MAD). These diagnostics rank unusual moves; they do not forecast prices or infer causes."
   },
   "phase8_notifications": {
-    "generated_at": "2026-09-11T20:20:11Z",
+    "generated_at": "2026-09-11T20:27:47Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:25:05Z",
     "last_processed_transition_at": "2026-09-11T18:40:38Z",
@@ -141956,20 +141956,20 @@
     "note": "The queue contains only high-severity lifecycle transitions that occurred after Phase 8 established its watermark. Existing high alerts are watched but are not retroactively labeled new. This block is notification-ready output; delivery is intentionally separate from the data updater."
   },
   "publication_history": {
-    "generated_at": "2026-09-11T20:20:11Z",
+    "generated_at": "2026-09-11T20:27:47Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:25:05Z",
     "source_count": 12,
-    "event_count": 8,
-    "new_event_count": 0,
+    "event_count": 9,
+    "new_event_count": 1,
     "latest": [
       {
         "key": "overview",
         "name": "Treasury Fiscal Data — Debt to the Penny",
-        "as_of": "2026-09-09",
+        "as_of": "2026-09-10",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-11T20:18:59Z"
+        "checked_at": "2026-09-11T20:27:06Z"
       },
       {
         "key": "fed",
@@ -141977,7 +141977,7 @@
         "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-11T20:18:59Z"
+        "checked_at": "2026-09-11T20:27:06Z"
       },
       {
         "key": "foreign_holders",
@@ -141985,7 +141985,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:44Z"
+        "checked_at": "2026-09-11T20:27:42Z"
       },
       {
         "key": "domestic_sectors",
@@ -141993,7 +141993,7 @@
         "as_of": "2026:Q2",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:11Z"
+        "checked_at": "2026-09-11T20:27:15Z"
       },
       {
         "key": "soma",
@@ -142001,7 +142001,7 @@
         "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:11Z"
+        "checked_at": "2026-09-11T20:27:15Z"
       },
       {
         "key": "money_market_funds",
@@ -142009,7 +142009,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-11T20:19:11Z"
+        "checked_at": "2026-09-11T20:27:15Z"
       },
       {
         "key": "auctions",
@@ -142017,7 +142017,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:11Z"
+        "checked_at": "2026-09-11T20:27:16Z"
       },
       {
         "key": "institutional_aggregates",
@@ -142025,7 +142025,7 @@
         "as_of": "2026-04-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:12Z"
+        "checked_at": "2026-09-11T20:27:16Z"
       },
       {
         "key": "primary_dealers",
@@ -142033,7 +142033,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:12Z"
+        "checked_at": "2026-09-11T20:27:16Z"
       },
       {
         "key": "extended_holders",
@@ -142041,7 +142041,7 @@
         "as_of": "2026-04-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:13Z"
+        "checked_at": "2026-09-11T20:27:16Z"
       },
       {
         "key": "nport",
@@ -142049,7 +142049,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-11T20:19:13Z"
+        "checked_at": "2026-09-11T20:27:16Z"
       },
       {
         "key": "government_accounts",
@@ -142057,10 +142057,20 @@
         "as_of": "2026-08-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-11T20:19:15Z"
+        "checked_at": "2026-09-11T20:27:17Z"
       }
     ],
     "events": [
+      {
+        "event": "new_observation",
+        "at": "2026-09-11T20:27:47Z",
+        "key": "overview",
+        "name": "Treasury Fiscal Data — Debt to the Penny",
+        "previous_as_of": "2026-09-09",
+        "as_of": "2026-09-10",
+        "frequency": "Business daily",
+        "status": "ok"
+      },
       {
         "event": "new_observation",
         "at": "2026-09-11T18:40:40Z",
@@ -142808,7 +142818,7 @@
     "note": "SOMA percent-outstanding comes from the New York Fed holding data already used by the tracker. Implied outstanding amount is derived as SOMA par divided by SOMA percent outstanding and is shown only where both inputs are available. Percentile ranks compare the stored SOMA CUSIP universe, not every outstanding Treasury security."
   },
   "holder_profiles": {
-    "generated_at": "2026-09-11T20:20:11Z",
+    "generated_at": "2026-09-11T20:27:48Z",
     "profile_count": 82,
     "scope_counts": {
       "Foreign country": 60,
@@ -176578,7 +176588,7 @@
     "note": "Holder profiles preserve each source's own cadence. Foreign-country profiles are monthly current holdings, U.S. sectors are quarterly aggregate holdings, and primary-dealer profiles are weekly market-positioning series rather than ownership balances."
   },
   "flow_intelligence": {
-    "generated_at": "2026-09-11T20:20:11Z",
+    "generated_at": "2026-09-11T20:27:48Z",
     "scope_summaries": [
       {
         "scope": "Foreign country",
@@ -176805,19 +176815,18 @@
     "note": "Phase 9 compares accumulation/reduction breadth within each source cadence instead of summing monthly, quarterly and weekly changes into a false synchronized flow number. Primary-dealer series remain classified as market positioning, not ownership."
   },
   "release_calendar": {
-    "generated_at": "2026-09-11T20:20:11Z",
+    "generated_at": "2026-09-11T20:27:48Z",
     "today": "2026-09-11",
     "source_count": 12,
     "status_counts": {
       "source_error": 1,
-      "due_now": 1,
       "grace_window": 1,
       "due_soon": 3,
-      "new_release": 4,
+      "new_release": 5,
       "access_limited": 1,
       "event_driven": 1
     },
-    "attention_count": 6,
+    "attention_count": 5,
     "rows": [
       {
         "key": "money_market_funds",
@@ -176826,7 +176835,7 @@
         "frequency": null,
         "source_status": "error",
         "last_observation": null,
-        "last_checked_at": "2026-09-11T20:19:11Z",
+        "last_checked_at": "2026-09-11T20:27:15Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -176837,30 +176846,13 @@
         "is_estimate": true
       },
       {
-        "key": "overview",
-        "name": "Treasury Fiscal Data — Debt to the Penny",
-        "schedule_kind": "business_daily",
-        "frequency": "Business daily",
-        "source_status": "ok",
-        "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-11T20:18:59Z",
-        "expected_next_observation": "2026-09-10",
-        "expected_publication_date": "2026-09-11",
-        "days_to_expected": 0,
-        "grace_days": 1,
-        "overdue_days": 0,
-        "calendar_status": "due_now",
-        "method": "Next weekday after the latest debt observation; publication expectation allows one extra calendar day.",
-        "is_estimate": true
-      },
-      {
         "key": "primary_dealers",
         "name": "New York Fed Primary Dealer Statistics",
         "schedule_kind": "weekly_thursday",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "source_status": "ok",
         "last_observation": "2026-09-02",
-        "last_checked_at": "2026-09-11T20:19:12Z",
+        "last_checked_at": "2026-09-11T20:27:16Z",
         "expected_next_observation": "2026-09-09",
         "expected_publication_date": "2026-09-10",
         "days_to_expected": -1,
@@ -176877,7 +176869,7 @@
         "frequency": "Monthly",
         "source_status": "ok",
         "last_observation": "2026-06",
-        "last_checked_at": "2026-09-11T20:19:44Z",
+        "last_checked_at": "2026-09-11T20:27:42Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-09-16",
         "days_to_expected": 5,
@@ -176894,7 +176886,7 @@
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-11T20:18:59Z",
+        "last_checked_at": "2026-09-11T20:27:06Z",
         "expected_next_observation": "2026-09-16",
         "expected_publication_date": "2026-09-17",
         "days_to_expected": 6,
@@ -176911,7 +176903,7 @@
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-11T20:19:11Z",
+        "last_checked_at": "2026-09-11T20:27:15Z",
         "expected_next_observation": "2026-09-16",
         "expected_publication_date": "2026-09-17",
         "days_to_expected": 6,
@@ -176922,13 +176914,30 @@
         "is_estimate": true
       },
       {
+        "key": "overview",
+        "name": "Treasury Fiscal Data — Debt to the Penny",
+        "schedule_kind": "business_daily",
+        "frequency": "Business daily",
+        "source_status": "ok",
+        "last_observation": "2026-09-10",
+        "last_checked_at": "2026-09-11T20:27:06Z",
+        "expected_next_observation": "2026-09-11",
+        "expected_publication_date": "2026-09-14",
+        "days_to_expected": 3,
+        "grace_days": 1,
+        "overdue_days": 0,
+        "calendar_status": "new_release",
+        "method": "Next weekday after the latest debt observation; publication expectation allows one extra calendar day.",
+        "is_estimate": true
+      },
+      {
         "key": "institutional_aggregates",
         "name": "Federal Reserve Banks & Dealers",
         "schedule_kind": "financial_accounts_quarterly",
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026-04-01",
-        "last_checked_at": "2026-09-11T20:19:12Z",
+        "last_checked_at": "2026-09-11T20:27:16Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-10-12",
         "days_to_expected": 31,
@@ -176945,7 +176954,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026-04-01",
-        "last_checked_at": "2026-09-11T20:19:13Z",
+        "last_checked_at": "2026-09-11T20:27:16Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-10-12",
         "days_to_expected": 31,
@@ -176962,7 +176971,7 @@
         "frequency": "Monthly",
         "source_status": "ok",
         "last_observation": "2026-08-31",
-        "last_checked_at": "2026-09-11T20:19:15Z",
+        "last_checked_at": "2026-09-11T20:27:17Z",
         "expected_next_observation": "2026-09-30",
         "expected_publication_date": "2026-10-12",
         "days_to_expected": 31,
@@ -176979,7 +176988,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026:Q2",
-        "last_checked_at": "2026-09-11T20:19:11Z",
+        "last_checked_at": "2026-09-11T20:27:15Z",
         "expected_next_observation": "2026-09-30",
         "expected_publication_date": "2026-12-11",
         "days_to_expected": 91,
@@ -176996,7 +177005,7 @@
         "frequency": null,
         "source_status": "pending",
         "last_observation": null,
-        "last_checked_at": "2026-09-11T20:19:13Z",
+        "last_checked_at": "2026-09-11T20:27:16Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -177013,7 +177022,7 @@
         "frequency": "Released as auctions occur",
         "source_status": "ok",
         "last_observation": "2026-09-17",
-        "last_checked_at": "2026-09-11T20:19:11Z",
+        "last_checked_at": "2026-09-11T20:27:16Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -177032,7 +177041,7 @@
         "frequency": null,
         "source_status": "error",
         "last_observation": null,
-        "last_checked_at": "2026-09-11T20:19:11Z",
+        "last_checked_at": "2026-09-11T20:27:15Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -177043,30 +177052,13 @@
         "is_estimate": true
       },
       {
-        "key": "overview",
-        "name": "Treasury Fiscal Data — Debt to the Penny",
-        "schedule_kind": "business_daily",
-        "frequency": "Business daily",
-        "source_status": "ok",
-        "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-11T20:18:59Z",
-        "expected_next_observation": "2026-09-10",
-        "expected_publication_date": "2026-09-11",
-        "days_to_expected": 0,
-        "grace_days": 1,
-        "overdue_days": 0,
-        "calendar_status": "due_now",
-        "method": "Next weekday after the latest debt observation; publication expectation allows one extra calendar day.",
-        "is_estimate": true
-      },
-      {
         "key": "primary_dealers",
         "name": "New York Fed Primary Dealer Statistics",
         "schedule_kind": "weekly_thursday",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "source_status": "ok",
         "last_observation": "2026-09-02",
-        "last_checked_at": "2026-09-11T20:19:12Z",
+        "last_checked_at": "2026-09-11T20:27:16Z",
         "expected_next_observation": "2026-09-09",
         "expected_publication_date": "2026-09-10",
         "days_to_expected": -1,
@@ -177083,7 +177075,7 @@
         "frequency": "Monthly",
         "source_status": "ok",
         "last_observation": "2026-06",
-        "last_checked_at": "2026-09-11T20:19:44Z",
+        "last_checked_at": "2026-09-11T20:27:42Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-09-16",
         "days_to_expected": 5,
@@ -177100,7 +177092,7 @@
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-11T20:18:59Z",
+        "last_checked_at": "2026-09-11T20:27:06Z",
         "expected_next_observation": "2026-09-16",
         "expected_publication_date": "2026-09-17",
         "days_to_expected": 6,
@@ -177117,7 +177109,7 @@
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-11T20:19:11Z",
+        "last_checked_at": "2026-09-11T20:27:15Z",
         "expected_next_observation": "2026-09-16",
         "expected_publication_date": "2026-09-17",
         "days_to_expected": 6,
@@ -177131,7 +177123,7 @@
     "note": "Release dates in this panel are tracker estimates derived from each source's normal cadence and latest observation. They are operational freshness diagnostics, not publisher commitments. Weekday adjustment does not model U.S. federal holidays. Event-driven auction data and SEC bulk feeds with access limitations are not labeled overdue from cadence alone."
   },
   "flow_regime_history": {
-    "generated_at": "2026-09-11T20:20:11Z",
+    "generated_at": "2026-09-11T20:27:48Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:57:05Z",
     "event_count": 7,
@@ -177491,7 +177483,7 @@
     "note": "A regime point is added only when a scope advances to a new source observation signature. Daily updater runs do not create duplicate regime history. Breadth is calculated within each source cadence; the cross-scope regime compares direction only and never adds monthly TIC flows to quarterly Financial Accounts changes."
   },
   "research_brief": {
-    "generated_at": "2026-09-11T20:20:11Z",
+    "generated_at": "2026-09-11T20:27:48Z",
     "item_count": 4,
     "items": [
       {
@@ -177519,14 +177511,14 @@
         "category": "Data freshness",
         "severity": "negative",
         "title": "Source calendar needs attention",
-        "text": "0 estimated overdue, 1 source-error and 5 due/due-soon dataset checks are currently flagged.",
+        "text": "0 estimated overdue, 1 source-error and 4 due/due-soon dataset checks are currently flagged.",
         "caveat": "Expected release dates are cadence-based tracker estimates and are not official publisher commitments."
       }
     ],
     "note": "Rule-based research brief generated only from the official-data blocks already present in the tracker. It is descriptive, not investment advice or a forecast."
   },
   "navigation_index": {
-    "generated_at": "2026-09-11T20:20:11Z",
+    "generated_at": "2026-09-11T20:27:48Z",
     "entry_count": 227,
     "type_counts": {
       "section": 29,
@@ -179693,10 +179685,10 @@
         "id": "source:overview",
         "type": "source",
         "title": "Treasury Fiscal Data — Debt to the Penny",
-        "subtitle": "Business daily · as of 2026-09-09 · due now",
+        "subtitle": "Business daily · as of 2026-09-10 · new release",
         "target_panel": "releaseCalendarPanel",
         "target_key": "overview",
-        "keywords": "treasury fiscal data — debt to the penny overview business daily due_now 2026-09-09 source provenance release calendar"
+        "keywords": "treasury fiscal data — debt to the penny overview business daily new_release 2026-09-10 source provenance release calendar"
       },
       {
         "id": "source:foreign_holders",
@@ -179773,7 +179765,7 @@
     "note": "Client-side command-palette index built from dashboard sections, holder profiles, Treasury CUSIPs, official sources and active alert diagnostics."
   },
   "holder_comovement": {
-    "generated_at": "2026-09-11T20:20:11Z",
+    "generated_at": "2026-09-11T20:27:48Z",
     "pair_count": 811,
     "scope_count": 3,
     "scopes": [
@@ -191700,7 +191692,7 @@
     "note": "Co-movement is descriptive association, not evidence that one holder causes another holder's Treasury activity. Comparisons stay within the same holder scope so monthly, quarterly and weekly series are not mixed."
   },
   "discovery_summary": {
-    "generated_at": "2026-09-11T20:20:11Z",
+    "generated_at": "2026-09-11T20:27:48Z",
     "searchable_items": 227,
     "comparable_pairs": 811,
     "scope_summaries": [
@@ -192540,7 +192532,7 @@
     "note": "This score is a research diagnostic, not an official Treasury metric. Auction takedown describes awards at issuance and does not measure secondary-market ownership."
   },
   "market_structure_map": {
-    "generated_at": "2026-09-11T20:20:11Z",
+    "generated_at": "2026-09-11T20:27:48Z",
     "overall_state": "cautious mix",
     "state_counts": {
       "supportive": 0,
@@ -192607,14 +192599,14 @@
         "display": "1",
         "state": "cautious",
         "reading": "Unusual moves active",
-        "observation": "2026-09-11T20:20:11Z",
+        "observation": "2026-09-11T20:27:48Z",
         "detail": "Persistent alert lifecycle with robust anomaly diagnostics."
       },
       {
         "key": "freshness",
         "label": "Data freshness",
-        "value": 6,
-        "display": "6 attention",
+        "value": 5,
+        "display": "5 attention",
         "state": "cautious",
         "reading": "0 overdue estimate · 1 source error",
         "observation": "2026-09-11",
@@ -192642,8 +192634,8 @@
         "frequency": "Business daily",
         "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
         "history_start": "1993-04-01",
-        "as_of": "2026-09-09",
-        "observation_count": 8389,
+        "as_of": "2026-09-10",
+        "observation_count": 8390,
         "observations": [
           {
             "date": "1993-04-01",
@@ -226200,6 +226192,10 @@
           {
             "date": "2026-09-09",
             "value_billions": 40074.2849257865
+          },
+          {
+            "date": "2026-09-10",
+            "value_billions": 40047.72694977015
           }
         ]
       },
@@ -226210,8 +226206,8 @@
         "frequency": "Business daily",
         "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
         "history_start": "1997-09-30",
-        "as_of": "2026-09-09",
-        "observation_count": 5431,
+        "as_of": "2026-09-10",
+        "observation_count": 5432,
         "observations": [
           {
             "date": "1997-09-30",
@@ -247936,6 +247932,10 @@
           {
             "date": "2026-09-09",
             "value_billions": 32388.6113908718
+          },
+          {
+            "date": "2026-09-10",
+            "value_billions": 32363.41810836411
           }
         ]
       },
@@ -247946,8 +247946,8 @@
         "frequency": "Business daily",
         "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
         "history_start": "1997-09-30",
-        "as_of": "2026-09-09",
-        "observation_count": 5431,
+        "as_of": "2026-09-10",
+        "observation_count": 5432,
         "observations": [
           {
             "date": "1997-09-30",
@@ -269672,6 +269672,10 @@
           {
             "date": "2026-09-09",
             "value_billions": 7685.6735349147
+          },
+          {
+            "date": "2026-09-10",
+            "value_billions": 7684.30884140604
           }
         ]
       },
