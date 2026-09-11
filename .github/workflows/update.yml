@@ -9,6 +9,8 @@ on:
       - scripts/**
       - app.js
       - source-health.js
+      - research-trim.js
+      - research-trim.css
       - phase4.js
       - phase5.js
       - phase6.js
@@ -42,6 +44,8 @@ on:
       - scripts/**
       - app.js
       - source-health.js
+      - research-trim.js
+      - research-trim.css
       - phase4.js
       - phase5.js
       - phase6.js
@@ -91,6 +95,7 @@ jobs:
         run: |
           node --check app.js
           node --check source-health.js
+          node --check research-trim.js
           node --check phase4.js
           node --check phase5.js
           node --check phase6.js

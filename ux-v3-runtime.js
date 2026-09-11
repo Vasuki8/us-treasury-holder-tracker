@@ -35,6 +35,13 @@
       link.dataset.countryHistory='1';
       document.head.appendChild(link);
     }
+    if(!document.querySelector('link[data-research-trim]')){
+      const link=document.createElement('link');
+      link.rel='stylesheet';
+      link.href='research-trim.css';
+      link.dataset.researchTrim='1';
+      document.head.appendChild(link);
+    }
     if(!document.querySelector('script[data-ux4]')){
       const script=document.createElement('script');
       script.src='ux-v4.js';
@@ -54,6 +61,13 @@
       script.src='source-health.js';
       script.defer=true;
       script.dataset.sourceHealth='1';
+      document.body.appendChild(script);
+    }
+    if(!document.querySelector('script[data-research-trim]')){
+      const script=document.createElement('script');
+      script.src='research-trim.js';
+      script.defer=true;
+      script.dataset.researchTrim='1';
       document.body.appendChild(script);
     }
   }
