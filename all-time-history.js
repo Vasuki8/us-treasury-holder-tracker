@@ -36,7 +36,7 @@
     const ranges = ['1Y','5Y','10Y','20Y','30Y','ALL'];
     host.innerHTML = ranges.map(range => `<button type="button" data-alltime-range="${range}" class="${range===state.range?'active':''}">${range==='ALL'?'All':range}</button>`).join('');
     host.querySelectorAll('[data-alltime-range]').forEach(button => button.addEventListener('click', () => {
-      state.range = button.dataset.alltimeRange;
+      state.range = button.dataset.allTimeRange;
       rangeButtons();
       draw();
     }));
@@ -73,6 +73,38 @@
     return new Map(visibleObservations(row).map(item => [String(item.date), Number(item.value_billions)/1000]));
   }
 
+  function interpolatedValues(labels, valueMap){
+    const points = [...valueMap.entries()]
+      .map(([date,value]) => ({date, value:Number(value), time:new Date(`${String(date).slice(0,10)}T00:00:00Z`).getTime()}))
+      .filter(point => Number.isFinite(point.value) && Number.isFinite(point.time))
+      .sort((a,b) => a.time - b.time);
+    if(!points.length) return labels.map(() => null);
+
+    const values = [];
+    let leftIndex = 0;
+    for(const label of labels){
+      if(valueMap.has(label)){
+        values.push(valueMap.get(label));
+        continue;
+      }
+      const time = new Date(`${String(label).slice(0,10)}T00:00:00Z`).getTime();
+      if(!Number.isFinite(time) || time < points[0].time || time > points[points.length-1].time){
+        values.push(null);
+        continue;
+      }
+      while(leftIndex + 1 < points.length && points[leftIndex + 1].time < time) leftIndex += 1;
+      const left = points[leftIndex];
+      const right = points[leftIndex + 1];
+      if(!right || right.time === left.time){
+        values.push(left.value);
+        continue;
+      }
+      const weight = (time - left.time) / (right.time - left.time);
+      values.push(left.value + (right.value - left.value) * weight);
+    }
+    return values;
+  }
+
   function draw(){
     const row = selected();
     const gdp = nominalGdp();
@@ -87,7 +119,7 @@
     if(existing) existing.destroy();
 
     const primaryMap = dateMap(row);
-    const gdpMap = row.key !== 'nominal_gdp' && gdp ? dateMap(gdp) : new Map();
+    const gdpMap = gdp ? dateMap(gdp) : new Map();
     const labels = [...new Set([...primaryMap.keys(), ...gdpMap.keys()])].sort();
     const datasets = [{
       label:`${row.label} ($T)`,
@@ -95,27 +127,71 @@
       borderWidth:2,
       pointRadius:0,
       pointHoverRadius:4,
+      pointHitRadius:8,
       tension:.12,
       spanGaps:true,
+      _isGdpDisplay: row.key === 'nominal_gdp',
     }];
 
-    if(gdpMap.size){
+    if(row.key !== 'nominal_gdp' && gdpMap.size){
       datasets.push({
         label:'Nominal GDP (SAAR, $T)',
         data:labels.map(date => gdpMap.has(date) ? gdpMap.get(date) : null),
         borderWidth:2,
-        pointRadius:0,
-        pointHoverRadius:4,
+        pointRadius:2,
+        pointHoverRadius:5,
+        pointHitRadius:10,
         tension:.12,
         spanGaps:true,
         borderDash:[7,5],
+        _isGdpDisplay:true,
+      });
+    }
+
+    if(gdpMap.size){
+      datasets.push({
+        label:'Nominal GDP hover helper',
+        data:interpolatedValues(labels, gdpMap),
+        borderWidth:0,
+        pointRadius:0,
+        pointHoverRadius:0,
+        pointHitRadius:6,
+        tension:0,
+        spanGaps:false,
+        _gdpHoverHelper:true,
       });
     }
 
     state.chart = new Chart(canvas, {
       type:'line',
       data:{labels,datasets},
-      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#dbe6f4'}},tooltip:{callbacks:{label:ctx=>` ${ctx.dataset.label}: $${Number(ctx.parsed.y).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T`}}},scales:{x:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',maxTicksLimit:12}},y:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',callback:value=>`$${Number(value).toLocaleString(undefined,{maximumFractionDigits:1})}T`},title:{display:true,text:'USD trillions',color:'#96a6ba'}}}}
+      options:{
+        responsive:true,
+        maintainAspectRatio:false,
+        interaction:{mode:'nearest',intersect:false},
+        plugins:{
+          legend:{labels:{color:'#dbe6f4',filter:item=>datasets[item.datasetIndex]?._gdpHoverHelper !== true}},
+          tooltip:{
+            mode:'nearest',
+            intersect:false,
+            filter:item=>item.dataset._isGdpDisplay !== true,
+            callbacks:{
+              label:ctx=>{
+                const value = Number(ctx.parsed.y);
+                if(ctx.dataset._gdpHoverHelper){
+                  const exact = gdpMap.has(String(ctx.label));
+                  return ` Nominal GDP (SAAR): $${value.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T${exact ? '' : ' (visual interpolation between quarterly observations)'}`;
+                }
+                return ` ${ctx.dataset.label}: $${value.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T`;
+              }
+            }
+          }
+        },
+        scales:{
+          x:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',maxTicksLimit:12}},
+          y:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',callback:value=>`$${Number(value).toLocaleString(undefined,{maximumFractionDigits:1})}T`},title:{display:true,text:'USD trillions',color:'#96a6ba'}}
+        }
+      }
     });
   }
 
