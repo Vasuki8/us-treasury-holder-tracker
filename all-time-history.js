@@ -3,6 +3,12 @@
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmtT = valueBillions => valueBillions == null || !Number.isFinite(Number(valueBillions)) ? '—' : `$${(Number(valueBillions)/1000).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T`;
   const fmtPct = value => value == null || !Number.isFinite(Number(value)) ? '—' : `${Number(value) >= 0 ? '+' : ''}${Number(value).toFixed(2)}%`;
+  const fmtChangeT = valueBillions => {
+    const n = Number(valueBillions);
+    if(!Number.isFinite(n)) return '—';
+    const sign = n > 0 ? '+' : n < 0 ? '−' : '';
+    return `${sign}$${Math.abs(n/1000).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T`;
+  };
 
   function block(){ return state.data?.all_time_history || {}; }
   function series(){ return block().series || []; }
@@ -78,16 +84,32 @@
     return (Math.pow(end / start, 1 / years) - 1) * 100;
   }
 
+  function changeFor(row){
+    const rows = visibleObservations(row).filter(item => Number.isFinite(Number(item.value_billions)));
+    if(rows.length < 2) return null;
+    const first = Number(rows[0].value_billions);
+    const latest = Number(rows[rows.length - 1].value_billions);
+    if(!Number.isFinite(first) || !Number.isFinite(latest)) return null;
+    return {
+      absoluteBillions: latest - first,
+      percent: first === 0 ? null : ((latest / first) - 1) * 100,
+    };
+  }
+
   function renderStats(row, treasuryRow, gdp){
     const host = document.getElementById('allTimeStats');
     if(!host) return;
     const rows = visibleObservations(row);
     const first = rows[0];
     const latest = rows[rows.length - 1];
+    const debtChange = changeFor(totalDebt());
+    const debtChangeValue = debtChange
+      ? `${fmtChangeT(debtChange.absoluteBillions)} (${fmtPct(debtChange.percent)})`
+      : '—';
     host.innerHTML = [
-      ['First observation', first?.date || '—'],
-      ['Latest observation', latest?.date || '—'],
+      ['Observation range', first?.date && latest?.date ? `${first.date} → ${latest.date}` : '—'],
       ['Latest value', fmtT(latest?.value_billions)],
+      ['Total debt change', debtChangeValue],
       ['Debt CAGR', fmtPct(cagrFor(treasuryRow))],
       ['Nominal GDP CAGR', fmtPct(cagrFor(gdp))],
     ].map(([label,value]) => `<div class="all-time-stat"><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('');
