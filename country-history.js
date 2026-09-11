@@ -60,9 +60,10 @@
     const host = document.getElementById('countrySeriesToggle');
     if(!host || !state.selected) return;
     const hasAnnual = annualHistoryFor(state.selected).length > 0;
+    const surveyStart = foreign().annual_survey?.history_start || '1994-12';
     host.innerHTML = `
       <button type="button" data-country-series="monthly" class="${state.series==='monthly'?'active':''}">Monthly · 2011→now</button>
-      <button type="button" data-country-series="annual" class="${state.series==='annual'?'active':''}" ${hasAnnual?'':'disabled'}>Annual survey · 1974→</button>`;
+      <button type="button" data-country-series="annual" class="${state.series==='annual'?'active':''}" ${hasAnnual?'':'disabled'}>Annual survey · ${esc(surveyStart.slice(0,4))}→</button>`;
     host.querySelectorAll('[data-country-series]').forEach(btn => btn.addEventListener('click', () => {
       if(btn.disabled) return;
       state.series = btn.dataset.countrySeries;
@@ -83,14 +84,14 @@
     if(!row) return;
 
     if(state.series === 'annual'){
-      if(chartLabel) chartLabel.textContent = 'Long-run survey history';
+      if(chartLabel) chartLabel.textContent = 'Treasury-specific survey history';
       if(rangeHost) rangeHost.innerHTML = '';
       const annual = annualHistoryFor(row);
       if(flowHost) flowHost.innerHTML = [
         ['Survey observations', annual.length, ''],
-        ['Earliest survey', annual[0]?.period || '—', ''],
+        ['Earliest Treasury-specific survey', annual[0]?.period || '—', ''],
       ].map(([k,v,c]) => `<div class="country-history-metric ${c}"><span>${esc(k)}</span><strong>${esc(v)}</strong></div>`).join('');
-      if(note) note.textContent = `Annual SHL/SHLA and predecessor surveys provide a separate long-run series. Earlier benchmark surveys can be long-term-only because short-term Treasury securities were not collected in the earliest surveys. Do not treat the annual survey line as a continuation of the monthly SLT series.`;
+      if(note) note.textContent = `The consolidated Treasury/Federal Reserve survey archive extends to 1974, but pre-1994 country columns report broader debt rather than Treasury debt separately. The chart therefore begins with the earliest Treasury-specific country observation in 1994. Older Treasury-specific observations can be long-term-only; modern observations include long- and short-term Treasury debt.`;
       return;
     }
 
@@ -165,7 +166,7 @@
   function decorateForeignPanel(){
     const f = foreign();
     const meta = document.getElementById('foreignMeta');
-    if(meta && f.country_count) meta.textContent = `Treasury TIC · ${f.as_of || '—'} · ${f.country_count} countries · monthly history since ${f.history_start || '—'} · surveys to ${f.annual_survey?.history_start || '1974'}`;
+    if(meta && f.country_count) meta.textContent = `Treasury TIC · ${f.as_of || '—'} · ${f.country_count} countries · monthly history since ${f.history_start || '—'} · Treasury-specific surveys since ${f.annual_survey?.history_start || '1994-12'}`;
     const table = document.getElementById('foreignTable');
     if(!table) return;
     table.querySelectorAll('tr').forEach(row => {
