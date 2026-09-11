@@ -2,6 +2,7 @@
   const state = {data:null, key:'total_public_debt', range:'ALL', chart:null};
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmtT = valueBillions => valueBillions == null || !Number.isFinite(Number(valueBillions)) ? '—' : `$${(Number(valueBillions)/1000).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T`;
+  const fmtPct = value => value == null || !Number.isFinite(Number(value)) ? '—' : `${Number(value) >= 0 ? '+' : ''}${Number(value).toFixed(2)}%`;
 
   function block(){ return state.data?.all_time_history || {}; }
   function series(){ return block().series || []; }
@@ -9,13 +10,18 @@
   function nominalGdp(){ return series().find(row => row.key === 'nominal_gdp'); }
   function totalDebt(){ return series().find(row => row.key === 'total_public_debt'); }
 
+  function dateTime(value){
+    const time = new Date(`${String(value).slice(0,10)}T00:00:00Z`).getTime();
+    return Number.isFinite(time) ? time : null;
+  }
+
   function cutoffDate(range){
     if(range === 'ALL') return null;
     const years = Number(String(range).replace('Y',''));
     if(!Number.isFinite(years)) return null;
     const row = selected();
     if(!row?.as_of) return null;
-    const latest = new Date(`${String(row.as_of).slice(0,7)}-01T00:00:00Z`);
+    const latest = new Date(`${String(row.as_of).slice(0,10)}T00:00:00Z`);
     if(Number.isNaN(latest.getTime())) return null;
     latest.setUTCFullYear(latest.getUTCFullYear() - years);
     return latest;
@@ -26,8 +32,8 @@
     const cutoff = cutoffDate(state.range);
     if(!cutoff) return rows;
     return rows.filter(item => {
-      const d = new Date(`${String(item.date).slice(0,10)}T00:00:00Z`);
-      return !Number.isNaN(d.getTime()) && d >= cutoff;
+      const time = dateTime(item.date);
+      return time != null && time >= cutoff.getTime();
     });
   }
 
@@ -57,22 +63,34 @@
     };
   }
 
-  function renderStats(row){
-    const host = document.getElementById('allTimeStats');
-    if(!host) return;
-    const rows = row?.observations || [];
+  function cagrFor(row){
+    const rows = visibleObservations(row).filter(item => Number.isFinite(Number(item.value_billions)));
+    if(rows.length < 2) return null;
+    const first = rows[0];
     const latest = rows[rows.length - 1];
-    host.innerHTML = [
-      ['First observation', row?.history_start || '—'],
-      ['Latest observation', row?.as_of || '—'],
-      ['Observations', Number(row?.observation_count || 0).toLocaleString()],
-      ['Latest value', fmtT(latest?.value_billions)],
-    ].map(([label,value]) => `<div class="all-time-stat"><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('');
+    const start = Number(first.value_billions);
+    const end = Number(latest.value_billions);
+    const startTime = dateTime(first.date);
+    const endTime = dateTime(latest.date);
+    if(start <= 0 || end <= 0 || startTime == null || endTime == null || endTime <= startTime) return null;
+    const years = (endTime - startTime) / (365.2425 * 24 * 60 * 60 * 1000);
+    if(years <= 0) return null;
+    return (Math.pow(end / start, 1 / years) - 1) * 100;
   }
 
-  function dateTime(value){
-    const time = new Date(`${String(value).slice(0,10)}T00:00:00Z`).getTime();
-    return Number.isFinite(time) ? time : null;
+  function renderStats(row, treasuryRow, gdp){
+    const host = document.getElementById('allTimeStats');
+    if(!host) return;
+    const rows = visibleObservations(row);
+    const first = rows[0];
+    const latest = rows[rows.length - 1];
+    host.innerHTML = [
+      ['First observation', first?.date || '—'],
+      ['Latest observation', latest?.date || '—'],
+      ['Latest value', fmtT(latest?.value_billions)],
+      ['Debt CAGR', fmtPct(cagrFor(treasuryRow))],
+      ['Nominal GDP CAGR', fmtPct(cagrFor(gdp))],
+    ].map(([label,value]) => `<div class="all-time-stat"><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('');
   }
 
   function timelineDates(...rows){
@@ -96,22 +114,13 @@
       .sort((a,b) => a.time - b.time);
 
     const values = [];
-    const observationDates = [];
     let index = -1;
-
     for(const label of labels){
       const time = dateTime(label);
       while(index + 1 < points.length && time != null && points[index + 1].time <= time) index += 1;
-      if(index < 0){
-        values.push(null);
-        observationDates.push(null);
-      }else{
-        values.push(points[index].value);
-        observationDates.push(points[index].date);
-      }
+      values.push(index < 0 ? null : points[index].value);
     }
-
-    return {values, observationDates};
+    return values;
   }
 
   function draw(){
@@ -119,8 +128,8 @@
     const gdp = nominalGdp();
     const treasuryRow = row?.key === 'nominal_gdp' ? totalDebt() : row;
     const meta = document.getElementById('allTimeMeta');
-    if(meta) meta.textContent = row ? `${row.frequency || 'Official cadence'} · ${row.history_start || '—'} to ${row.as_of || '—'} · ${Number(row.observation_count || 0).toLocaleString()} official observations · chart values in $ trillions${gdp && treasuryRow ? ' · move left/right across the chart to see Treasury and nominal GDP together at the same timeline position' : ''}` : (block().note || '');
-    renderStats(row);
+    if(meta) meta.textContent = row ? `${row.frequency || 'Official cadence'} · selected range ${state.range === 'ALL' ? 'All' : state.range} · chart values in $ trillions${gdp && treasuryRow ? ' · hover across the timeline to compare Treasury debt and nominal GDP together' : ''}` : (block().note || '');
+    renderStats(row, treasuryRow, gdp);
 
     const canvas = document.getElementById('allTimeChart');
     if(!canvas || !row || !window.Chart || !treasuryRow) return;
@@ -129,33 +138,31 @@
     if(existing) existing.destroy();
 
     const labels = timelineDates(treasuryRow, gdp);
-    const treasuryAligned = alignLatestObservation(treasuryRow, labels);
-    const gdpAligned = gdp ? alignLatestObservation(gdp, labels) : {values:[], observationDates:[]};
+    const treasuryValues = alignLatestObservation(treasuryRow, labels);
+    const gdpValues = gdp ? alignLatestObservation(gdp, labels) : [];
 
     const datasets = [{
       label:`${treasuryRow.label} ($T)`,
-      data:treasuryAligned.values,
+      data:treasuryValues,
       borderWidth:2,
       pointRadius:0,
       pointHoverRadius:4,
       pointHitRadius:12,
       tension:.12,
       spanGaps:true,
-      _observationDates:treasuryAligned.observationDates,
+      borderDash:[3,5],
     }];
 
-    if(gdp && gdpAligned.values.some(value => value != null)){
+    if(gdp && gdpValues.some(value => value != null)){
       datasets.push({
         label:'Nominal GDP (SAAR, $T)',
-        data:gdpAligned.values,
+        data:gdpValues,
         borderWidth:2,
         pointRadius:0,
         pointHoverRadius:4,
         pointHitRadius:12,
         stepped:'after',
         spanGaps:true,
-        borderDash:[7,5],
-        _observationDates:gdpAligned.observationDates,
       });
     }
 
@@ -176,9 +183,7 @@
               label:ctx=>{
                 const value = Number(ctx.parsed.y);
                 if(!Number.isFinite(value)) return '';
-                const observationDate = ctx.dataset._observationDates?.[ctx.dataIndex];
-                const dateSuffix = observationDate && observationDate !== String(ctx.label) ? ` · obs ${observationDate}` : '';
-                return ` ${ctx.dataset.label}: $${value.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T${dateSuffix}`;
+                return ` ${ctx.dataset.label}: $${value.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T`;
               }
             }
           }
