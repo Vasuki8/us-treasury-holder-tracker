@@ -1,11 +1,12 @@
 (() => {
   const state = {data:null, key:'total_public_debt', range:'ALL', chart:null};
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const fmtB = value => value == null || !Number.isFinite(Number(value)) ? '—' : `$${Number(value).toLocaleString(undefined,{maximumFractionDigits:1})}B`;
+  const fmtT = valueBillions => valueBillions == null || !Number.isFinite(Number(valueBillions)) ? '—' : `$${(Number(valueBillions)/1000).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T`;
 
   function block(){ return state.data?.all_time_history || {}; }
   function series(){ return block().series || []; }
   function selected(){ return series().find(row => row.key === state.key) || series()[0]; }
+  function nominalGdp(){ return series().find(row => row.key === 'nominal_gdp'); }
 
   function cutoffDate(range){
     if(range === 'ALL') return null;
@@ -19,12 +20,12 @@
     return latest;
   }
 
-  function visibleObservations(){
-    const rows = selected()?.observations || [];
+  function visibleObservations(row=selected()){
+    const rows = row?.observations || [];
     const cutoff = cutoffDate(state.range);
     if(!cutoff) return rows;
-    return rows.filter(row => {
-      const d = new Date(`${String(row.date).slice(0,7)}-01T00:00:00Z`);
+    return rows.filter(item => {
+      const d = new Date(`${String(item.date).slice(0,7)}-01T00:00:00Z`);
       return !Number.isNaN(d.getTime()) && d >= cutoff;
     });
   }
@@ -64,26 +65,57 @@
       ['First observation', row?.history_start || '—'],
       ['Latest observation', row?.as_of || '—'],
       ['Observations', Number(row?.observation_count || 0).toLocaleString()],
-      ['Latest value', fmtB(latest?.value_billions)],
+      ['Latest value', fmtT(latest?.value_billions)],
     ].map(([label,value]) => `<div class="all-time-stat"><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('');
+  }
+
+  function dateMap(row){
+    return new Map(visibleObservations(row).map(item => [String(item.date), Number(item.value_billions)/1000]));
   }
 
   function draw(){
     const row = selected();
+    const gdp = nominalGdp();
     const meta = document.getElementById('allTimeMeta');
-    if(meta) meta.textContent = row ? `${row.frequency || 'Official cadence'} · ${row.history_start || '—'} to ${row.as_of || '—'} · ${Number(row.observation_count || 0).toLocaleString()} official observations` : (block().note || '');
+    if(meta) meta.textContent = row ? `${row.frequency || 'Official cadence'} · ${row.history_start || '—'} to ${row.as_of || '—'} · ${Number(row.observation_count || 0).toLocaleString()} official observations · chart values in $ trillions${row.key !== 'nominal_gdp' && gdp ? ' · nominal GDP shown for comparison' : ''}` : (block().note || '');
     renderStats(row);
 
-    const observations = visibleObservations();
     const canvas = document.getElementById('allTimeChart');
     if(!canvas || !row || !window.Chart) return;
     if(state.chart) state.chart.destroy();
     const existing = Chart.getChart(canvas);
     if(existing) existing.destroy();
+
+    const primaryMap = dateMap(row);
+    const gdpMap = row.key !== 'nominal_gdp' && gdp ? dateMap(gdp) : new Map();
+    const labels = [...new Set([...primaryMap.keys(), ...gdpMap.keys()])].sort();
+    const datasets = [{
+      label:`${row.label} ($T)`,
+      data:labels.map(date => primaryMap.has(date) ? primaryMap.get(date) : null),
+      borderWidth:2,
+      pointRadius:0,
+      pointHoverRadius:4,
+      tension:.12,
+      spanGaps:true,
+    }];
+
+    if(gdpMap.size){
+      datasets.push({
+        label:'Nominal GDP (SAAR, $T)',
+        data:labels.map(date => gdpMap.has(date) ? gdpMap.get(date) : null),
+        borderWidth:2,
+        pointRadius:0,
+        pointHoverRadius:4,
+        tension:.12,
+        spanGaps:true,
+        borderDash:[7,5],
+      });
+    }
+
     state.chart = new Chart(canvas, {
       type:'line',
-      data:{labels:observations.map(item=>item.date),datasets:[{label:`${row.label} ($B)`,data:observations.map(item=>item.value_billions),borderWidth:2,pointRadius:0,pointHoverRadius:4,tension:.12}]},
-      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#dbe6f4'}},tooltip:{callbacks:{label:ctx=>` ${fmtB(ctx.parsed.y)}`}}},scales:{x:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',maxTicksLimit:12}},y:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',callback:value=>`$${Number(value).toLocaleString()}B`}}}}
+      data:{labels,datasets},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#dbe6f4'}},tooltip:{callbacks:{label:ctx=>` ${ctx.dataset.label}: $${Number(ctx.parsed.y).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T`}}},scales:{x:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',maxTicksLimit:12}},y:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',callback:value=>`$${Number(value).toLocaleString(undefined,{maximumFractionDigits:1})}T`},title:{display:true,text:'USD trillions',color:'#96a6ba'}}}}
     });
   }
 
