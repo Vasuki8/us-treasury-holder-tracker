@@ -33,21 +33,11 @@
           <div class="country-history-chart"><canvas id="countryHistoryChart"></canvas></div>
           <div class="country-history-flow" id="countryHistoryFlow"></div>
           <p class="country-history-note" id="countryHistoryNote"></p>
-          <button class="country-history-open-link" id="countryHistoryResearch" type="button">Open full country research →</button>
         </div>
       </aside>`);
     document.getElementById('countryHistoryClose')?.addEventListener('click', closeDrawer);
     document.getElementById('countryHistoryBackdrop')?.addEventListener('click', closeDrawer);
     document.addEventListener('keydown', e => { if(e.key === 'Escape' && document.body.classList.contains('country-history-open')) closeDrawer(); });
-    document.getElementById('countryHistoryResearch')?.addEventListener('click', () => {
-      closeDrawer();
-      document.querySelector('[data-ux4-view="full"]')?.click();
-      setTimeout(() => {
-        const select = document.getElementById('trendCountry');
-        if(select && state.selected){ select.value = state.selected.name; select.dispatchEvent(new Event('change')); }
-        document.getElementById('foreignTrendChart')?.closest('.panel')?.scrollIntoView({behavior:'smooth',block:'start'});
-      }, 120);
-    });
   }
 
   function rangeButtons(host, active, onSelect, ranges=['1Y','3Y','5Y','10Y','ALL']){
