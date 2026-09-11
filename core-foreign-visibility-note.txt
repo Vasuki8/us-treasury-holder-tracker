@@ -1,0 +1,1 @@
+Foreign Treasury Holders and Foreign Holder History are pinned to the Core view by stable DOM targets in ux-v4.js so their visibility does not depend on dynamic title timing.
