@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#07101d" />
   <title>US Treasury Ownership Tracker</title>
-  <meta name="description" content="Focused U.S. Treasury ownership dashboard using official Treasury and Federal Reserve data, with all-time headline history, future Treasury maturities, foreign-holder history and source-specific observation dates." />
+  <meta name="description" content="Focused U.S. Treasury ownership dashboard using official Treasury and Federal Reserve data, with all-time headline history, future Treasury maturities and interest cash flows, foreign-holder history and source-specific observation dates." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="country-history.css" />
   <link rel="stylesheet" href="all-time-history.css" />
@@ -14,14 +14,14 @@
   <script defer src="app.js?v=20260911-sections-removed"></script>
   <script defer src="country-history.js"></script>
   <script defer src="all-time-history.js?v=20260911-cagr-range"></script>
-  <script defer src="maturity-wall.js?v=20260911-maturity-wall"></script>
+  <script defer src="maturity-wall.js?v=20260911-interest-cashflow"></script>
 </head>
 <body class="core-dashboard ux5-core">
   <header class="shell hero">
     <div>
       <div class="eyebrow">U.S. TREASURY OWNERSHIP</div>
       <h1>Who Owns U.S. Treasuries?</h1>
-      <p class="lede">Track the headline ownership picture, all available official history, upcoming Treasury maturities, major foreign holders and long-run country history while preserving each source's real reporting date.</p>
+      <p class="lede">Track the headline ownership picture, all available official history, upcoming Treasury maturities and interest cash flows, major foreign holders and long-run country history while preserving each source's real reporting date.</p>
     </div>
     <div class="hero-side">
       <div class="status" id="updateStatus">Loading official data…</div>
@@ -53,8 +53,11 @@
 
     <section class="panel maturity-panel" id="maturityWallPanel">
       <div class="panel-head">
-        <div><h2>Treasury Maturity Wall</h2><p id="maturityMeta">Loading latest MSPD maturity schedule…</p></div>
-        <div class="panel-actions"><button id="downloadMaturityCsv" type="button">Download maturity CSV</button></div>
+        <div><h2>Treasury Maturity Wall</h2><p id="maturityMeta">Loading latest MSPD maturity and interest schedule…</p></div>
+        <div class="panel-actions">
+          <button id="downloadMaturityCsv" type="button">Download maturity CSV</button>
+          <button id="downloadInterestCsv" type="button">Download interest CSV</button>
+        </div>
       </div>
       <div class="maturity-body">
         <div class="maturity-cards" id="maturityCards"></div>
@@ -69,11 +72,11 @@
         </div>
         <div class="table-wrap maturity-table-wrap">
           <table>
-            <thead><tr><th>Date</th><th>Total</th><th>Bills</th><th>Notes</th><th>Bonds</th><th>TIPS</th><th>FRNs</th><th>CUSIPs</th></tr></thead>
+            <thead><tr><th>Date</th><th>Principal</th><th>Interest due</th><th>Bills</th><th>Notes</th><th>Bonds</th><th>TIPS</th><th>FRNs</th><th>CUSIPs</th></tr></thead>
             <tbody id="maturityTable"></tbody>
           </table>
         </div>
-        <div class="note inline-note">This is gross principal scheduled to mature from securities outstanding in the latest Monthly Statement of the Public Debt. It is not a forecast of net borrowing: Treasury can refinance maturing debt with new issuance, and future auction sizes can change.</div>
+        <div class="note inline-note">All cards, type totals, the chart and the table update with the selected 30D / 90D / 1Y / 2Y / 5Y / 10Y / All horizon. Principal is gross scheduled maturity from the latest MSPD snapshot. Notes and Bonds use scheduled fixed coupons from current outstanding principal. TIPS and FRN interest is marked estimated because future inflation-adjusted principal and floating rates can change. Treasury bills have no periodic coupon and are excluded from interest due.</div>
       </div>
     </section>
 
@@ -102,7 +105,7 @@
       <div class="note inline-note">The All range shows the complete stored monthly TIC history for the selected country; Treasury-specific annual survey history remains available in the country detail drawer. TIC country attribution can reflect custodian location rather than the ultimate beneficial owner.</div>
     </section>
 
-    <section class="note data-discipline"><strong>Data discipline:</strong> the site checks official sources daily, but ownership and maturity datasets publish on different schedules. Every displayed value keeps its real observation date rather than being relabeled as today's holdings.</section>
+    <section class="note data-discipline"><strong>Data discipline:</strong> the site checks official sources daily, but ownership and maturity datasets publish on different schedules. Every displayed value keeps its real observation date, and variable/inflation-linked future interest is labeled as estimated rather than presented as fixed.</section>
   </main>
 
   <footer class="shell footer">Official sources used by the retained dashboard include U.S. Treasury Fiscal Data (Debt to the Penny and MSPD), Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, with historical Treasury survey data used for country history.</footer>
