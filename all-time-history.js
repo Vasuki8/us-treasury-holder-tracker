@@ -1,6 +1,6 @@
 (() => {
   const state = {data:null, key:'total_public_debt', range:'ALL', chart:null};
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmtT = valueBillions => valueBillions == null || !Number.isFinite(Number(valueBillions)) ? '—' : `$${(Number(valueBillions)/1000).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:3})}T`;
   const fmtPct = value => value == null || !Number.isFinite(Number(value)) ? '—' : `${Number(value) >= 0 ? '+' : ''}${Number(value).toFixed(2)}%`;
   const fmtChangeT = valueBillions => {
