@@ -8,30 +8,6 @@ on:
     paths:
       - scripts/**
       - app.js
-      - source-health.js
-      - research-trim.js
-      - research-trim.css
-      - phase4.js
-      - phase5.js
-      - phase6.js
-      - phase7.js
-      - phase8.js
-      - phase9.js
-      - phase10.js
-      - phase11.js
-      - phase11.css
-      - phase12.js
-      - phase12.css
-      - ui-refresh.js
-      - ui-refresh.css
-      - ux-v2.js
-      - ux-v2.css
-      - ux-v3.js
-      - ux-v3-runtime.js
-      - ux-v3.css
-      - ux-v4.js
-      - ux-v4.css
-      - ux-v5.css
       - country-history.js
       - country-history.css
       - index.html
@@ -43,37 +19,13 @@ on:
     paths:
       - scripts/**
       - app.js
-      - source-health.js
-      - research-trim.js
-      - research-trim.css
-      - phase4.js
-      - phase5.js
-      - phase6.js
-      - phase7.js
-      - phase8.js
-      - phase9.js
-      - phase10.js
-      - phase11.js
-      - phase11.css
-      - phase12.js
-      - phase12.css
-      - ui-refresh.js
-      - ui-refresh.css
-      - ux-v2.js
-      - ux-v2.css
-      - ux-v3.js
-      - ux-v3-runtime.js
-      - ux-v3.css
-      - ux-v4.js
-      - ux-v4.css
-      - ux-v5.css
       - country-history.js
       - country-history.css
       - index.html
       - styles.css
       - .github/workflows/update.yml
   schedule:
-    - cron: "17 5 * * *"   # daily, 05:17 UTC
+    - cron: "17 5 * * *"
   workflow_dispatch:
 
 permissions:
@@ -94,22 +46,6 @@ jobs:
       - name: Validate dashboard JavaScript
         run: |
           node --check app.js
-          node --check source-health.js
-          node --check research-trim.js
-          node --check phase4.js
-          node --check phase5.js
-          node --check phase6.js
-          node --check phase7.js
-          node --check phase8.js
-          node --check phase9.js
-          node --check phase10.js
-          node --check phase11.js
-          node --check phase12.js
-          node --check ui-refresh.js
-          node --check ux-v2.js
-          node --check ux-v3.js
-          node --check ux-v3-runtime.js
-          node --check ux-v4.js
           node --check country-history.js
 
       - name: Install uv
