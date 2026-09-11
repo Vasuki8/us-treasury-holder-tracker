@@ -72,7 +72,7 @@ def fetch_debt_all_time() -> dict[str, list[dict]]:
     return {"total": total, "public": public, "intragov": intragov}
 
 
-def fetch_fred_all_time(series_id: str) -> list[dict]:
+def fetch_fred_all_time(series_id: str, source_units: str = "millions") -> list[dict]:
     text = base.get_text(base.FRED_CSV, params={"id": series_id})
     df = pd.read_csv(base.StringIO(text))
     if df.empty:
@@ -86,11 +86,18 @@ def fetch_fred_all_time(series_id: str) -> list[dict]:
     if value_col is None:
         raise RuntimeError(f"No value column returned for FRED series {series_id}")
 
+    if source_units == "millions":
+        divisor_to_billions = 1000.0
+    elif source_units == "billions":
+        divisor_to_billions = 1.0
+    else:
+        raise ValueError(f"Unsupported FRED source units for {series_id}: {source_units}")
+
     values = pd.to_numeric(df[value_col], errors="coerce")
     valid = df.loc[values.notna()].copy()
     valid["_value"] = pd.to_numeric(valid[value_col], errors="coerce")
     return [
-        {"date": str(row[date_col]), "value_billions": float(row["_value"]) / 1000.0}
+        {"date": str(row[date_col]), "value_billions": float(row["_value"]) / divisor_to_billions}
         for _, row in valid.iterrows()
     ]
 
@@ -105,7 +112,8 @@ def _foreign_history(rows: list[dict]) -> list[dict]:
 
 def build_all_time_history(data: dict) -> dict:
     debt = fetch_debt_all_time()
-    fed = fetch_fred_all_time("TREAST")
+    fed = fetch_fred_all_time("TREAST", source_units="millions")
+    nominal_gdp = fetch_fred_all_time("GDP", source_units="billions")
     foreign = data.get("foreign_holders", {})
 
     series = [
@@ -129,6 +137,13 @@ def build_all_time_history(data: dict) -> dict:
             "Business daily",
             base.DEBT_URL,
             debt["intragov"],
+        ),
+        _series(
+            "nominal_gdp",
+            "Nominal GDP (SAAR)",
+            "Quarterly",
+            "https://fred.stlouisfed.org/series/GDP",
+            nominal_gdp,
         ),
         _series(
             "federal_reserve_treasuries",
@@ -165,7 +180,8 @@ def build_all_time_history(data: dict) -> dict:
         "series_count": len(series),
         "note": (
             "All-time means the full history available from each selected official source, not a common synthetic start date. "
-            "Business-daily, weekly and monthly observations remain on their original reporting schedules and are never forward-filled to look daily."
+            "Business-daily, weekly, monthly and quarterly observations remain on their original reporting schedules and are never forward-filled to look daily. "
+            "Nominal GDP is the BEA current-dollar GDP series distributed by FRED and is reported quarterly at a seasonally adjusted annual rate (SAAR)."
         ),
     }
 
