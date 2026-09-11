@@ -29,9 +29,10 @@ def main() -> None:
     require(bool(foreign.get("monthly_archive_url")), "monthly historical source URL missing")
 
     require(bool(survey), "annual survey metadata missing")
-    require(str(survey.get("history_start")) <= "1974-12", "annual survey history does not reach 1974")
+    require(str(survey.get("history_start")) <= "1994-12", "Treasury-specific annual survey history does not reach 1994")
+    require(str(survey.get("archive_history_start")) <= "1974-12", "underlying survey archive does not reach 1974")
     require(str(survey.get("as_of")) >= "2025-06", "annual survey latest observation looks stale")
-    require((survey.get("observation_count") or 0) >= 25, "too few annual/benchmark survey observations")
+    require((survey.get("observation_count") or 0) >= 25, "too few Treasury-specific annual/benchmark survey observations")
     require((survey.get("country_count") or 0) >= 100, "too few annual survey country rows")
     require(bool(survey.get("source_url")), "annual survey source URL missing")
 
@@ -63,10 +64,12 @@ def main() -> None:
         foreign.get("history_start"),
         "to",
         foreign.get("as_of"),
-        "; annual surveys",
+        "; Treasury-specific annual surveys",
         survey.get("history_start"),
         "to",
         survey.get("as_of"),
+        "; underlying archive to",
+        survey.get("archive_history_start"),
     )
 
 
