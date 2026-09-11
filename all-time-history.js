@@ -36,7 +36,7 @@
     const ranges = ['1Y','5Y','10Y','20Y','30Y','ALL'];
     host.innerHTML = ranges.map(range => `<button type="button" data-alltime-range="${range}" class="${range===state.range?'active':''}">${range==='ALL'?'All':range}</button>`).join('');
     host.querySelectorAll('[data-alltime-range]').forEach(button => button.addEventListener('click', () => {
-      state.range = button.dataset.allTimeRange;
+      state.range = button.dataset.alltimeRange;
       rangeButtons();
       draw();
     }));
