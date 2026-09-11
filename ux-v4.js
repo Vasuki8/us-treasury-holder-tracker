@@ -136,7 +136,7 @@
     const lede = document.querySelector('.hero .lede');
     if (eyebrow) eyebrow.textContent = 'U.S. TREASURY OWNERSHIP';
     if (heading) heading.textContent = 'Who Owns U.S. Treasuries?';
-    if (lede) lede.textContent = 'Track the largest holders, country flows and auction demand — with official data and monthly country history back to 2020.';
+    if (lede) lede.textContent = 'Track the largest holders, country flows and auction demand — with official data and country history back to 2011.';
   }
 
   function simplifyAdvancedNavigation() {

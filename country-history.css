@@ -80,6 +80,33 @@ body.country-history-open .country-history-drawer { transform: translateX(0); }
 .country-history-metric strong { display: block; margin-top: 4px; color: #ecf5fb; font-size: 1rem; overflow-wrap: anywhere; }
 .country-history-metric.good strong { color: #66ddb0; }
 .country-history-metric.bad strong { color: #ff8797; }
+.country-series-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: -2px 0 17px;
+  padding: 4px;
+  border: 1px solid rgba(148,184,221,.10);
+  border-radius: 12px;
+  background: rgba(255,255,255,.018);
+}
+.country-series-toggle button {
+  min-height: 34px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #8299ac;
+  font: inherit;
+  font-size: .7rem;
+  font-weight: 760;
+  cursor: pointer;
+}
+.country-series-toggle button.active {
+  color: #e4f9ff;
+  background: linear-gradient(180deg, rgba(53,153,202,.20), rgba(36,105,146,.15));
+  box-shadow: inset 0 0 0 1px rgba(98,210,255,.16);
+}
+.country-series-toggle button:disabled { opacity: .38; cursor: default; }
 .country-history-chart-head {
   display: flex;
   justify-content: space-between;
@@ -96,6 +123,7 @@ body.country-history-open .country-history-drawer { transform: translateX(0); }
   border-radius: 10px;
   background: rgba(255,255,255,.025);
 }
+.country-range:empty { display: none; }
 .country-range button {
   border: 0;
   border-radius: 7px;
@@ -133,7 +161,7 @@ body.country-history-open .country-history-drawer { transform: translateX(0); }
 }
 
 #foreignTrendMeta + .country-trend-range { margin-top: 9px; }
-.country-trend-range { display: inline-flex; gap: 6px; }
+.country-trend-range { display: inline-flex; gap: 6px; flex-wrap: wrap; }
 .country-trend-range button {
   border: 1px solid rgba(148,184,221,.12);
   background: rgba(255,255,255,.025);
@@ -162,4 +190,5 @@ body.country-history-open .country-history-drawer { transform: translateX(0); }
   .country-history-body { padding: 15px 17px 22px; }
   .country-history-metrics { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .country-history-chart { height: 220px; }
+  .country-range button { padding: 5px 6px; }
 }
