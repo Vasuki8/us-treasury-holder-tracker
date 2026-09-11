@@ -37,6 +37,13 @@
     window.dispatchEvent(new Event('resize'));
   }
 
+  function isPinnedCorePanel(section) {
+    return Boolean(
+      section?.querySelector?.('#foreignTable') ||
+      section?.querySelector?.('#foreignTrendChart')
+    );
+  }
+
   function classifyPanels() {
     document.querySelectorAll('main.shell > section').forEach(section => {
       const title = titleOf(section);
@@ -46,7 +53,7 @@
         return;
       }
       if (!title) return;
-      const core = CORE_TITLES.some(rx => rx.test(title));
+      const core = isPinnedCorePanel(section) || CORE_TITLES.some(rx => rx.test(title));
       section.classList.toggle('ux4-secondary', !core);
       section.classList.toggle('ux4-essential-panel', core);
     });
