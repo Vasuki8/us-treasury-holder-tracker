@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T18:47:20Z",
+  "generated_at": "2026-09-11T18:53:57Z",
   "overview": {
     "as_of": "2026-09-09",
     "total_public_debt": 40074284925786.5,
@@ -128216,64 +128216,64 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-11T18:46:33Z"
+      "checked_at": "2026-09-11T18:53:07Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-11T18:46:33Z"
+      "checked_at": "2026-09-11T18:53:07Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-11T18:47:13Z"
+      "checked_at": "2026-09-11T18:53:50Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-11T18:46:42Z"
+      "checked_at": "2026-09-11T18:53:17Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-11T18:46:42Z"
+      "checked_at": "2026-09-11T18:53:17Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-11T18:46:43Z",
+      "checked_at": "2026-09-11T18:53:18Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-11T18:46:43Z"
+      "checked_at": "2026-09-11T18:53:18Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-11T18:46:43Z"
+      "checked_at": "2026-09-11T18:53:18Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-11T18:46:43Z"
+      "checked_at": "2026-09-11T18:53:19Z"
     },
     "extended_holders": {
       "status": "ok",
-      "checked_at": "2026-09-11T18:46:44Z"
+      "checked_at": "2026-09-11T18:53:19Z"
     },
     "nport": {
       "status": "pending",
-      "checked_at": "2026-09-11T18:46:44Z",
+      "checked_at": "2026-09-11T18:53:19Z",
       "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
     },
     "government_accounts": {
       "status": "ok",
-      "checked_at": "2026-09-11T18:46:45Z"
+      "checked_at": "2026-09-11T18:53:20Z"
     },
     "all_time_history": {
       "status": "ok",
-      "checked_at": "2026-09-11T18:47:20Z",
+      "checked_at": "2026-09-11T18:53:57Z",
       "message": null
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-11T18:46:43Z",
+      "checked_at": "2026-09-11T18:53:18Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -131412,7 +131412,7 @@
     },
     {
       "snapshot_date": "2026-09-11",
-      "generated_at": "2026-09-11T18:46:43Z",
+      "generated_at": "2026-09-11T18:53:19Z",
       "total_public_debt_trillions": 40.0742849257865,
       "debt_held_by_public_trillions": 32.3886113908718,
       "fed_treasuries_billions": 4552.337,
@@ -131423,7 +131423,7 @@
       "insurance_treasuries_billions": 609.42,
       "pension_treasuries_billions": 1175.143,
       "etf_treasuries_billions": 807.612,
-      "hedge_fund_treasuries_billions": 315.298
+      "hedge_fund_treasuries_billions": 123.515
     }
   ],
   "extended_holders": {
@@ -132188,191 +132188,191 @@
       {
         "name": "Hedge funds",
         "series": "BOGZ1FL623061103Q",
-        "as_of": "2025-10-01",
-        "holdings_billions": 315.298,
+        "as_of": "2026-04-01",
+        "holdings_billions": 123.515,
         "frequency": "Quarterly",
         "history": [
           {
-            "date": "2015-01-01",
-            "value_billions": 200.407
-          },
-          {
-            "date": "2015-04-01",
-            "value_billions": 188.008
-          },
-          {
             "date": "2015-07-01",
-            "value_billions": 182.911
+            "value_billions": 95.33
           },
           {
             "date": "2015-10-01",
-            "value_billions": 173.468
+            "value_billions": 98.578
           },
           {
             "date": "2016-01-01",
-            "value_billions": 182.233
+            "value_billions": 102.785
           },
           {
             "date": "2016-04-01",
-            "value_billions": 205.971
+            "value_billions": 101.242
           },
           {
             "date": "2016-07-01",
-            "value_billions": 201.808
+            "value_billions": 118.345
           },
           {
             "date": "2016-10-01",
-            "value_billions": 204.283
+            "value_billions": 118.87
           },
           {
             "date": "2017-01-01",
-            "value_billions": 196.807
+            "value_billions": 108.879
           },
           {
             "date": "2017-04-01",
-            "value_billions": 174.927
+            "value_billions": 101.925
           },
           {
             "date": "2017-07-01",
-            "value_billions": 176.311
+            "value_billions": 100.754
           },
           {
             "date": "2017-10-01",
-            "value_billions": 197.947
+            "value_billions": 105.262
           },
           {
             "date": "2018-01-01",
-            "value_billions": 196.028
+            "value_billions": 109.531
           },
           {
             "date": "2018-04-01",
-            "value_billions": 210.691
+            "value_billions": 113.188
           },
           {
             "date": "2018-07-01",
-            "value_billions": 211.38
+            "value_billions": 95.887
           },
           {
             "date": "2018-10-01",
-            "value_billions": 212.009
+            "value_billions": 108.64
           },
           {
             "date": "2019-01-01",
-            "value_billions": 218.631
+            "value_billions": 97.248
           },
           {
             "date": "2019-04-01",
-            "value_billions": 241.605
+            "value_billions": 107.38
           },
           {
             "date": "2019-07-01",
-            "value_billions": 256.538
+            "value_billions": 120.638
           },
           {
             "date": "2019-10-01",
-            "value_billions": 232.854
+            "value_billions": 107.149
           },
           {
             "date": "2020-01-01",
-            "value_billions": 211.29
+            "value_billions": 113.73
           },
           {
             "date": "2020-04-01",
-            "value_billions": 189.007
+            "value_billions": 111.298
           },
           {
             "date": "2020-07-01",
-            "value_billions": 195.972
+            "value_billions": 108.667
           },
           {
             "date": "2020-10-01",
-            "value_billions": 149.614
+            "value_billions": 89.012
           },
           {
             "date": "2021-01-01",
-            "value_billions": 137.202
+            "value_billions": 87.159
           },
           {
             "date": "2021-04-01",
-            "value_billions": 144.076
+            "value_billions": 96.623
           },
           {
             "date": "2021-07-01",
-            "value_billions": 148.461
+            "value_billions": 84.471
           },
           {
             "date": "2021-10-01",
-            "value_billions": 161.2
+            "value_billions": 91.353
           },
           {
             "date": "2022-01-01",
-            "value_billions": 186.675
+            "value_billions": 104.263
           },
           {
             "date": "2022-04-01",
-            "value_billions": 193.242
+            "value_billions": 111.735
           },
           {
             "date": "2022-07-01",
-            "value_billions": 192.487
+            "value_billions": 103.786
           },
           {
             "date": "2022-10-01",
-            "value_billions": 172.626
+            "value_billions": 97.994
           },
           {
             "date": "2023-01-01",
-            "value_billions": 189.445
+            "value_billions": 129.075
           },
           {
             "date": "2023-04-01",
-            "value_billions": 196.853
+            "value_billions": 105.058
           },
           {
             "date": "2023-07-01",
-            "value_billions": 223.746
+            "value_billions": 110.239
           },
           {
             "date": "2023-10-01",
-            "value_billions": 209.446
+            "value_billions": 100.793
           },
           {
             "date": "2024-01-01",
-            "value_billions": 236.671
+            "value_billions": 105.006
           },
           {
             "date": "2024-04-01",
-            "value_billions": 248.292
+            "value_billions": 115.323
           },
           {
             "date": "2024-07-01",
-            "value_billions": 275.632
+            "value_billions": 115.419
           },
           {
             "date": "2024-10-01",
-            "value_billions": 277.74
+            "value_billions": 102.233
           },
           {
             "date": "2025-01-01",
-            "value_billions": 270.426
+            "value_billions": 111.127
           },
           {
             "date": "2025-04-01",
-            "value_billions": 287.058
+            "value_billions": 106.18
           },
           {
             "date": "2025-07-01",
-            "value_billions": 294.907
+            "value_billions": 98.143
           },
           {
             "date": "2025-10-01",
-            "value_billions": 315.298
+            "value_billions": 102.791
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 108.789
+          },
+          {
+            "date": "2026-04-01",
+            "value_billions": 123.515
           }
         ],
-        "qoq_change_billions": 20.39100000000002,
-        "qoq_change_pct": 6.914383178425748,
-        "yoy_change_billions": 37.55799999999999,
-        "yoy_change_pct": 13.522719089796208
+        "qoq_change_billions": 14.725999999999999,
+        "qoq_change_pct": 13.536295029828382,
+        "yoy_change_billions": 17.334999999999994,
+        "yoy_change_pct": 16.32605010359766
       }
     ],
     "frequency": "Quarterly",
@@ -140285,7 +140285,7 @@
     "metadata_api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
     "metadata_status": {
       "status": "ok",
-      "checked_at": "2026-09-11T18:47:15Z",
+      "checked_at": "2026-09-11T18:53:52Z",
       "matched_cusips": 100,
       "requested_cusips": 100,
       "coverage_pct": 100.0,
@@ -140341,13 +140341,6 @@
       },
       {
         "scope": "U.S. sector",
-        "name": "Hedge funds",
-        "period": "QoQ",
-        "current_billions": 315.298,
-        "change_billions": 20.39100000000002
-      },
-      {
-        "scope": "U.S. sector",
         "name": "U.S.-chartered depository institutions",
         "period": "QoQ",
         "current_billions": 1799.113,
@@ -140373,6 +140366,13 @@
         "period": "MoM",
         "current_billions": 255.8,
         "change_billions": -16.099999999999966
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "Hedge funds",
+        "period": "QoQ",
+        "current_billions": 123.515,
+        "change_billions": 14.725999999999999
       },
       {
         "scope": "U.S. sector",
@@ -140455,17 +140455,17 @@
       },
       {
         "scope": "U.S. sector",
-        "name": "Hedge funds",
-        "period": "QoQ",
-        "current_billions": 315.298,
-        "change_billions": 20.39100000000002
-      },
-      {
-        "scope": "U.S. sector",
         "name": "Private pension funds",
         "period": "QoQ",
         "current_billions": 590.243,
         "change_billions": 17.290000000000077
+      },
+      {
+        "scope": "U.S. sector",
+        "name": "Hedge funds",
+        "period": "QoQ",
+        "current_billions": 123.515,
+        "change_billions": 14.725999999999999
       },
       {
         "scope": "Foreign country",
@@ -141068,8 +141068,8 @@
         "reason": "5.8× the median absolute change in the available history; +5.5% versus the previous observation",
         "alert_id": "3c514daafff9351abd70",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-11T18:47:15Z",
-        "seen_count": 12
+        "last_seen_at": "2026-09-11T18:53:52Z",
+        "seen_count": 13
       },
       {
         "severity": "medium",
@@ -141086,8 +141086,8 @@
         "reason": "3.6× the median absolute change in the available history; -5.9% versus the previous observation",
         "alert_id": "a2abd62e8705288e4594",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-11T18:47:15Z",
-        "seen_count": 12
+        "last_seen_at": "2026-09-11T18:53:52Z",
+        "seen_count": 13
       },
       {
         "severity": "medium",
@@ -141104,8 +141104,8 @@
         "reason": "3.4× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "3ec1a5b57d11679e67b4",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-11T18:47:15Z",
-        "seen_count": 12
+        "last_seen_at": "2026-09-11T18:53:52Z",
+        "seen_count": 13
       },
       {
         "severity": "medium",
@@ -141122,8 +141122,8 @@
         "reason": "2.8× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-11T18:47:15Z",
-        "seen_count": 42
+        "last_seen_at": "2026-09-11T18:53:52Z",
+        "seen_count": 43
       }
     ],
     "alert_count": 4,
@@ -141131,7 +141131,7 @@
     "method": "A change is flagged when it clears a source-specific absolute dollar floor and is either at least 2.5× the median absolute change in the available history or at least 10% versus the previous observation. High severity begins at 4× the historical median or 20%. This is a statistical screening rule, not a prediction."
   },
   "provenance": {
-    "generated_at": "2026-09-11T18:47:15Z",
+    "generated_at": "2026-09-11T18:53:52Z",
     "source_count": 12,
     "series_count": 22,
     "sources": [
@@ -141141,7 +141141,7 @@
         "as_of": "2026-09-09",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:33Z",
+        "checked_at": "2026-09-11T18:53:07Z",
         "message": null,
         "urls": [
           {
@@ -141156,7 +141156,7 @@
         "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:33Z",
+        "checked_at": "2026-09-11T18:53:07Z",
         "message": null,
         "urls": [
           {
@@ -141175,7 +141175,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-11T18:47:13Z",
+        "checked_at": "2026-09-11T18:53:50Z",
         "message": null,
         "urls": [
           {
@@ -141190,7 +141190,7 @@
         "as_of": "2026:Q2",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:42Z",
+        "checked_at": "2026-09-11T18:53:17Z",
         "message": null,
         "urls": [
           {
@@ -141209,7 +141209,7 @@
         "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:42Z",
+        "checked_at": "2026-09-11T18:53:17Z",
         "message": null,
         "urls": [
           {
@@ -141228,7 +141228,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-11T18:46:43Z",
+        "checked_at": "2026-09-11T18:53:18Z",
         "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip",
         "urls": []
       },
@@ -141238,7 +141238,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:43Z",
+        "checked_at": "2026-09-11T18:53:18Z",
         "message": null,
         "urls": [
           {
@@ -141257,7 +141257,7 @@
         "as_of": "2026-04-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:43Z",
+        "checked_at": "2026-09-11T18:53:18Z",
         "message": null,
         "urls": [
           {
@@ -141272,7 +141272,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:43Z",
+        "checked_at": "2026-09-11T18:53:19Z",
         "message": null,
         "urls": [
           {
@@ -141291,7 +141291,7 @@
         "as_of": "2026-04-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:44Z",
+        "checked_at": "2026-09-11T18:53:19Z",
         "message": null,
         "urls": [
           {
@@ -141306,7 +141306,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-11T18:46:44Z",
+        "checked_at": "2026-09-11T18:53:19Z",
         "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data.",
         "urls": [
           {
@@ -141325,7 +141325,7 @@
         "as_of": "2026-08-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:45Z",
+        "checked_at": "2026-09-11T18:53:20Z",
         "message": null,
         "urls": [
           {
@@ -141470,7 +141470,7 @@
         "section": "extended_holders",
         "name": "Hedge funds",
         "series": "BOGZ1FL623061103Q",
-        "as_of": "2025-10-01",
+        "as_of": "2026-04-01",
         "source_url": "https://fred.stlouisfed.org/series/BOGZ1FL623061103Q"
       },
       {
@@ -141498,7 +141498,7 @@
     "note": "Provenance records the official source, observation date, retrieval path and latest health check separately so stale-but-valid observations are distinguishable from failed fetches."
   },
   "alert_history": {
-    "generated_at": "2026-09-11T18:47:15Z",
+    "generated_at": "2026-09-11T18:53:52Z",
     "active_count": 4,
     "cleared_count": 4,
     "episode_count": 8,
@@ -141507,7 +141507,7 @@
       {
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 42,
+        "seen_count": 43,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -141523,12 +141523,12 @@
         "multiple_of_baseline": 2.8190030474532106,
         "reason": "2.8× the median absolute change in the available history; -3.9% versus the previous observation",
         "series_key": "Foreign country|China, Mainland|MoM",
-        "last_seen_at": "2026-09-11T18:47:15Z"
+        "last_seen_at": "2026-09-11T18:53:52Z"
       },
       {
         "alert_id": "3c514daafff9351abd70",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "seen_count": 12,
+        "seen_count": 13,
         "cleared_at": null,
         "state": "active",
         "severity": "high",
@@ -141544,12 +141544,12 @@
         "multiple_of_baseline": 5.769035225759579,
         "reason": "5.8× the median absolute change in the available history; +5.5% versus the previous observation",
         "series_key": "Foreign country|Canada|MoM",
-        "last_seen_at": "2026-09-11T18:47:15Z"
+        "last_seen_at": "2026-09-11T18:53:52Z"
       },
       {
         "alert_id": "a2abd62e8705288e4594",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "seen_count": 12,
+        "seen_count": 13,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -141565,12 +141565,12 @@
         "multiple_of_baseline": 3.560577665086534,
         "reason": "3.6× the median absolute change in the available history; -5.9% versus the previous observation",
         "series_key": "Foreign country|Hong Kong|MoM",
-        "last_seen_at": "2026-09-11T18:47:15Z"
+        "last_seen_at": "2026-09-11T18:53:52Z"
       },
       {
         "alert_id": "3ec1a5b57d11679e67b4",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "seen_count": 12,
+        "seen_count": 13,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -141586,7 +141586,7 @@
         "multiple_of_baseline": 3.4464539342864966,
         "reason": "3.4× the median absolute change in the available history; -3.9% versus the previous observation",
         "series_key": "Foreign country|Cayman Islands|MoM",
-        "last_seen_at": "2026-09-11T18:47:15Z"
+        "last_seen_at": "2026-09-11T18:53:52Z"
       },
       {
         "alert_id": "10f3e7909be0493614fc",
@@ -141817,7 +141817,7 @@
     "note": "An alert episode is keyed by scope, series name, cadence and source observation date. The first-seen timestamp records when the tracker first detected it; it is cleared only after a healthy source refresh confirms that the episode is no longer current."
   },
   "alert_intelligence": {
-    "generated_at": "2026-09-11T18:47:18Z",
+    "generated_at": "2026-09-11T18:53:55Z",
     "row_count": 4,
     "extreme_count": 1,
     "elevated_count": 3,
@@ -141837,8 +141837,8 @@
         "reason": "5.8× the median absolute change in the available history; +5.5% versus the previous observation",
         "alert_id": "3c514daafff9351abd70",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-11T18:47:15Z",
-        "seen_count": 12,
+        "last_seen_at": "2026-09-11T18:53:52Z",
+        "seen_count": 13,
         "history_change_count": 174,
         "abs_change_percentile": 87.35632183908046,
         "robust_z": 3.82803614519123,
@@ -141862,8 +141862,8 @@
         "reason": "3.6× the median absolute change in the available history; -5.9% versus the previous observation",
         "alert_id": "a2abd62e8705288e4594",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-11T18:47:15Z",
-        "seen_count": 12,
+        "last_seen_at": "2026-09-11T18:53:52Z",
+        "seen_count": 13,
         "history_change_count": 174,
         "abs_change_percentile": 94.82758620689656,
         "robust_z": -3.0061174871794787,
@@ -141887,8 +141887,8 @@
         "reason": "3.4× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "3ec1a5b57d11679e67b4",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-11T18:47:15Z",
-        "seen_count": 12,
+        "last_seen_at": "2026-09-11T18:53:52Z",
+        "seen_count": 13,
         "history_change_count": 174,
         "abs_change_percentile": 95.40229885057471,
         "robust_z": -2.7735222409875395,
@@ -141912,8 +141912,8 @@
         "reason": "2.8× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-11T18:47:15Z",
-        "seen_count": 42,
+        "last_seen_at": "2026-09-11T18:53:52Z",
+        "seen_count": 43,
         "history_change_count": 174,
         "abs_change_percentile": 89.65517241379311,
         "robust_z": -1.6167623107414908,
@@ -141926,7 +141926,7 @@
     "method": "Phase 8 keeps the transparent Phase 6 threshold rule and adds two diagnostics: the percentile rank of the latest absolute change versus prior historical absolute changes, and a robust z-score based on the median and median absolute deviation (MAD). These diagnostics rank unusual moves; they do not forecast prices or infer causes."
   },
   "phase8_notifications": {
-    "generated_at": "2026-09-11T18:47:18Z",
+    "generated_at": "2026-09-11T18:53:55Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:25:05Z",
     "last_processed_transition_at": "2026-09-11T18:40:38Z",
@@ -141946,7 +141946,7 @@
     "note": "The queue contains only high-severity lifecycle transitions that occurred after Phase 8 established its watermark. Existing high alerts are watched but are not retroactively labeled new. This block is notification-ready output; delivery is intentionally separate from the data updater."
   },
   "publication_history": {
-    "generated_at": "2026-09-11T18:47:18Z",
+    "generated_at": "2026-09-11T18:53:55Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:25:05Z",
     "source_count": 12,
@@ -141959,7 +141959,7 @@
         "as_of": "2026-09-09",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:33Z"
+        "checked_at": "2026-09-11T18:53:07Z"
       },
       {
         "key": "fed",
@@ -141967,7 +141967,7 @@
         "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:33Z"
+        "checked_at": "2026-09-11T18:53:07Z"
       },
       {
         "key": "foreign_holders",
@@ -141975,7 +141975,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-11T18:47:13Z"
+        "checked_at": "2026-09-11T18:53:50Z"
       },
       {
         "key": "domestic_sectors",
@@ -141983,7 +141983,7 @@
         "as_of": "2026:Q2",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:42Z"
+        "checked_at": "2026-09-11T18:53:17Z"
       },
       {
         "key": "soma",
@@ -141991,7 +141991,7 @@
         "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:42Z"
+        "checked_at": "2026-09-11T18:53:17Z"
       },
       {
         "key": "money_market_funds",
@@ -141999,7 +141999,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-11T18:46:43Z"
+        "checked_at": "2026-09-11T18:53:18Z"
       },
       {
         "key": "auctions",
@@ -142007,7 +142007,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:43Z"
+        "checked_at": "2026-09-11T18:53:18Z"
       },
       {
         "key": "institutional_aggregates",
@@ -142015,7 +142015,7 @@
         "as_of": "2026-04-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:43Z"
+        "checked_at": "2026-09-11T18:53:18Z"
       },
       {
         "key": "primary_dealers",
@@ -142023,7 +142023,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:43Z"
+        "checked_at": "2026-09-11T18:53:19Z"
       },
       {
         "key": "extended_holders",
@@ -142031,7 +142031,7 @@
         "as_of": "2026-04-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:44Z"
+        "checked_at": "2026-09-11T18:53:19Z"
       },
       {
         "key": "nport",
@@ -142039,7 +142039,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-11T18:46:44Z"
+        "checked_at": "2026-09-11T18:53:19Z"
       },
       {
         "key": "government_accounts",
@@ -142047,7 +142047,7 @@
         "as_of": "2026-08-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-11T18:46:45Z"
+        "checked_at": "2026-09-11T18:53:20Z"
       }
     ],
     "events": [
@@ -142798,7 +142798,7 @@
     "note": "SOMA percent-outstanding comes from the New York Fed holding data already used by the tracker. Implied outstanding amount is derived as SOMA par divided by SOMA percent outstanding and is shown only where both inputs are available. Percentile ranks compare the stored SOMA CUSIP universe, not every outstanding Treasury security."
   },
   "holder_profiles": {
-    "generated_at": "2026-09-11T18:47:18Z",
+    "generated_at": "2026-09-11T18:53:55Z",
     "profile_count": 82,
     "scope_counts": {
       "Foreign country": 60,
@@ -174747,7 +174747,7 @@
         "change_pct": null,
         "history": [],
         "rank_within_scope": 1,
-        "share_of_tracked_scope_pct": 29.194563810844254,
+        "share_of_tracked_scope_pct": 29.37198365221253,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -174771,7 +174771,7 @@
         "change_pct": null,
         "history": [],
         "rank_within_scope": 2,
-        "share_of_tracked_scope_pct": 12.858966264842802,
+        "share_of_tracked_scope_pct": 12.937112174802282,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -174795,7 +174795,7 @@
         "change_pct": null,
         "history": [],
         "rank_within_scope": 3,
-        "share_of_tracked_scope_pct": 10.335682270904572,
+        "share_of_tracked_scope_pct": 10.398493797078348,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -174819,7 +174819,7 @@
         "change_pct": null,
         "history": [],
         "rank_within_scope": 4,
-        "share_of_tracked_scope_pct": 8.91701888656674,
+        "share_of_tracked_scope_pct": 8.971208977796842,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -175004,7 +175004,7 @@
           }
         ],
         "rank_within_scope": 5,
-        "share_of_tracked_scope_pct": 6.428198085563648,
+        "share_of_tracked_scope_pct": 6.467263231116567,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -175190,7 +175190,7 @@
           }
         ],
         "rank_within_scope": 6,
-        "share_of_tracked_scope_pct": 5.666530655375473,
+        "share_of_tracked_scope_pct": 5.700967031150739,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -175215,7 +175215,7 @@
         "change_pct": null,
         "history": [],
         "rank_within_scope": 7,
-        "share_of_tracked_scope_pct": 5.48424297905358,
+        "share_of_tracked_scope_pct": 5.517571564665377,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -175239,7 +175239,7 @@
         "change_pct": null,
         "history": [],
         "rank_within_scope": 8,
-        "share_of_tracked_scope_pct": 5.189258583081507,
+        "share_of_tracked_scope_pct": 5.22079450328208,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -175440,7 +175440,7 @@
           }
         ],
         "rank_within_scope": 9,
-        "share_of_tracked_scope_pct": 3.701259361668722,
+        "share_of_tracked_scope_pct": 3.7237524824108172,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -175642,7 +175642,7 @@
           }
         ],
         "rank_within_scope": 10,
-        "share_of_tracked_scope_pct": 2.543674663931113,
+        "share_of_tracked_scope_pct": 2.5591329649453423,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -175844,7 +175844,7 @@
           }
         ],
         "rank_within_scope": 11,
-        "share_of_tracked_scope_pct": 1.9194442550295172,
+        "share_of_tracked_scope_pct": 1.9311090121209078,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -176046,7 +176046,7 @@
           }
         ],
         "rank_within_scope": 12,
-        "share_of_tracked_scope_pct": 1.859043903090459,
+        "share_of_tracked_scope_pct": 1.8703415979805078,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -176232,7 +176232,7 @@
           }
         ],
         "rank_within_scope": 13,
-        "share_of_tracked_scope_pct": 1.7849363846686985,
+        "share_of_tracked_scope_pct": 1.7957837168046478,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -176257,7 +176257,31 @@
         "change_pct": null,
         "history": [],
         "rank_within_scope": 14,
-        "share_of_tracked_scope_pct": 1.768860700448176,
+        "share_of_tracked_scope_pct": 1.779610338185854,
+        "alert_severity": null,
+        "diagnostic_label": null,
+        "abs_change_percentile": null,
+        "robust_z": null,
+        "alert_first_seen_at": null,
+        "source_name": "Federal Reserve Financial Accounts",
+        "source_url": null
+      },
+      {
+        "profile_id": "e69a955b3778356542",
+        "scope": "U.S. sector",
+        "name": "Nonfinancial corporate business",
+        "concept": "current_holdings",
+        "source_key": "domestic_sectors",
+        "frequency": "Quarterly",
+        "series": "LM103061103",
+        "as_of": "2026:Q2",
+        "current_billions": 218.579,
+        "previous_billions": null,
+        "change_billions": null,
+        "change_pct": null,
+        "history": [],
+        "rank_within_scope": 15,
+        "share_of_tracked_scope_pct": 0.6926255731029108,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -176274,191 +176298,191 @@
         "source_key": "extended_holders",
         "frequency": "Quarterly",
         "series": "BOGZ1FL623061103Q",
-        "as_of": "2025-10-01",
-        "current_billions": 315.298,
-        "previous_billions": 294.907,
-        "change_billions": 20.39100000000002,
-        "change_pct": 6.914383178425748,
+        "as_of": "2026-04-01",
+        "current_billions": 123.515,
+        "previous_billions": 108.789,
+        "change_billions": 14.725999999999999,
+        "change_pct": 13.536295029828382,
         "history": [
           {
-            "date": "2015-01-01",
-            "value_billions": 200.407
-          },
-          {
-            "date": "2015-04-01",
-            "value_billions": 188.008
-          },
-          {
             "date": "2015-07-01",
-            "value_billions": 182.911
+            "value_billions": 95.33
           },
           {
             "date": "2015-10-01",
-            "value_billions": 173.468
+            "value_billions": 98.578
           },
           {
             "date": "2016-01-01",
-            "value_billions": 182.233
+            "value_billions": 102.785
           },
           {
             "date": "2016-04-01",
-            "value_billions": 205.971
+            "value_billions": 101.242
           },
           {
             "date": "2016-07-01",
-            "value_billions": 201.808
+            "value_billions": 118.345
           },
           {
             "date": "2016-10-01",
-            "value_billions": 204.283
+            "value_billions": 118.87
           },
           {
             "date": "2017-01-01",
-            "value_billions": 196.807
+            "value_billions": 108.879
           },
           {
             "date": "2017-04-01",
-            "value_billions": 174.927
+            "value_billions": 101.925
           },
           {
             "date": "2017-07-01",
-            "value_billions": 176.311
+            "value_billions": 100.754
           },
           {
             "date": "2017-10-01",
-            "value_billions": 197.947
+            "value_billions": 105.262
           },
           {
             "date": "2018-01-01",
-            "value_billions": 196.028
+            "value_billions": 109.531
           },
           {
             "date": "2018-04-01",
-            "value_billions": 210.691
+            "value_billions": 113.188
           },
           {
             "date": "2018-07-01",
-            "value_billions": 211.38
+            "value_billions": 95.887
           },
           {
             "date": "2018-10-01",
-            "value_billions": 212.009
+            "value_billions": 108.64
           },
           {
             "date": "2019-01-01",
-            "value_billions": 218.631
+            "value_billions": 97.248
           },
           {
             "date": "2019-04-01",
-            "value_billions": 241.605
+            "value_billions": 107.38
           },
           {
             "date": "2019-07-01",
-            "value_billions": 256.538
+            "value_billions": 120.638
           },
           {
             "date": "2019-10-01",
-            "value_billions": 232.854
+            "value_billions": 107.149
           },
           {
             "date": "2020-01-01",
-            "value_billions": 211.29
+            "value_billions": 113.73
           },
           {
             "date": "2020-04-01",
-            "value_billions": 189.007
+            "value_billions": 111.298
           },
           {
             "date": "2020-07-01",
-            "value_billions": 195.972
+            "value_billions": 108.667
           },
           {
             "date": "2020-10-01",
-            "value_billions": 149.614
+            "value_billions": 89.012
           },
           {
             "date": "2021-01-01",
-            "value_billions": 137.202
+            "value_billions": 87.159
           },
           {
             "date": "2021-04-01",
-            "value_billions": 144.076
+            "value_billions": 96.623
           },
           {
             "date": "2021-07-01",
-            "value_billions": 148.461
+            "value_billions": 84.471
           },
           {
             "date": "2021-10-01",
-            "value_billions": 161.2
+            "value_billions": 91.353
           },
           {
             "date": "2022-01-01",
-            "value_billions": 186.675
+            "value_billions": 104.263
           },
           {
             "date": "2022-04-01",
-            "value_billions": 193.242
+            "value_billions": 111.735
           },
           {
             "date": "2022-07-01",
-            "value_billions": 192.487
+            "value_billions": 103.786
           },
           {
             "date": "2022-10-01",
-            "value_billions": 172.626
+            "value_billions": 97.994
           },
           {
             "date": "2023-01-01",
-            "value_billions": 189.445
+            "value_billions": 129.075
           },
           {
             "date": "2023-04-01",
-            "value_billions": 196.853
+            "value_billions": 105.058
           },
           {
             "date": "2023-07-01",
-            "value_billions": 223.746
+            "value_billions": 110.239
           },
           {
             "date": "2023-10-01",
-            "value_billions": 209.446
+            "value_billions": 100.793
           },
           {
             "date": "2024-01-01",
-            "value_billions": 236.671
+            "value_billions": 105.006
           },
           {
             "date": "2024-04-01",
-            "value_billions": 248.292
+            "value_billions": 115.323
           },
           {
             "date": "2024-07-01",
-            "value_billions": 275.632
+            "value_billions": 115.419
           },
           {
             "date": "2024-10-01",
-            "value_billions": 277.74
+            "value_billions": 102.233
           },
           {
             "date": "2025-01-01",
-            "value_billions": 270.426
+            "value_billions": 111.127
           },
           {
             "date": "2025-04-01",
-            "value_billions": 287.058
+            "value_billions": 106.18
           },
           {
             "date": "2025-07-01",
-            "value_billions": 294.907
+            "value_billions": 98.143
           },
           {
             "date": "2025-10-01",
-            "value_billions": 315.298
+            "value_billions": 102.791
+          },
+          {
+            "date": "2026-01-01",
+            "value_billions": 108.789
+          },
+          {
+            "date": "2026-04-01",
+            "value_billions": 123.515
           }
         ],
-        "rank_within_scope": 15,
-        "share_of_tracked_scope_pct": 0.9930703533233186,
+        "rank_within_scope": 16,
+        "share_of_tracked_scope_pct": 0.39139005879707583,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -176467,30 +176491,6 @@
         "source_name": "Federal Reserve Insurance / Pensions / ETFs / Hedge Funds",
         "source_url": null,
         "latest_direction": "accumulating"
-      },
-      {
-        "profile_id": "e69a955b3778356542",
-        "scope": "U.S. sector",
-        "name": "Nonfinancial corporate business",
-        "concept": "current_holdings",
-        "source_key": "domestic_sectors",
-        "frequency": "Quarterly",
-        "series": "LM103061103",
-        "as_of": "2026:Q2",
-        "current_billions": 218.579,
-        "previous_billions": null,
-        "change_billions": null,
-        "change_pct": null,
-        "history": [],
-        "rank_within_scope": 16,
-        "share_of_tracked_scope_pct": 0.6884418066687948,
-        "alert_severity": null,
-        "diagnostic_label": null,
-        "abs_change_percentile": null,
-        "robust_z": null,
-        "alert_first_seen_at": null,
-        "source_name": "Federal Reserve Financial Accounts",
-        "source_url": null
       },
       {
         "profile_id": "e49679bf515903cec5",
@@ -176507,7 +176507,7 @@
         "change_pct": null,
         "history": [],
         "rank_within_scope": 17,
-        "share_of_tracked_scope_pct": 0.3129120594875907,
+        "share_of_tracked_scope_pct": 0.31481367405926963,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -176531,7 +176531,7 @@
         "change_pct": null,
         "history": [],
         "rank_within_scope": 18,
-        "share_of_tracked_scope_pct": 0.2985308733294981,
+        "share_of_tracked_scope_pct": 0.3003450912274884,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -176555,7 +176555,7 @@
         "change_pct": null,
         "history": [],
         "rank_within_scope": 19,
-        "share_of_tracked_scope_pct": 0.05536410212153992,
+        "share_of_tracked_scope_pct": 0.0557005582604137,
         "alert_severity": null,
         "diagnostic_label": null,
         "abs_change_percentile": null,
@@ -176568,7 +176568,7 @@
     "note": "Holder profiles preserve each source's own cadence. Foreign-country profiles are monthly current holdings, U.S. sectors are quarterly aggregate holdings, and primary-dealer profiles are weekly market-positioning series rather than ownership balances."
   },
   "flow_intelligence": {
-    "generated_at": "2026-09-11T18:47:18Z",
+    "generated_at": "2026-09-11T18:53:55Z",
     "scope_summaries": [
       {
         "scope": "Foreign country",
@@ -176673,7 +176673,6 @@
         "accumulation_breadth_pct": 50.0,
         "median_change_pct": 0.19519900957152866,
         "observation_dates": [
-          "2025-10-01",
           "2026-04-01"
         ],
         "frequencies": [
@@ -176689,17 +176688,17 @@
             "as_of": "2026-04-01"
           },
           {
-            "profile_id": "5bf347c2484464fbe1",
-            "name": "Hedge funds",
-            "change_billions": 20.39100000000002,
-            "change_pct": 6.914383178425748,
-            "as_of": "2025-10-01"
-          },
-          {
             "profile_id": "4ebdff78dbf2a43f82",
             "name": "Private pension funds",
             "change_billions": 17.290000000000077,
             "change_pct": 3.017699532073325,
+            "as_of": "2026-04-01"
+          },
+          {
+            "profile_id": "5bf347c2484464fbe1",
+            "name": "Hedge funds",
+            "change_billions": 14.725999999999999,
+            "change_pct": 13.536295029828382,
             "as_of": "2026-04-01"
           },
           {
@@ -176796,7 +176795,7 @@
     "note": "Phase 9 compares accumulation/reduction breadth within each source cadence instead of summing monthly, quarterly and weekly changes into a false synchronized flow number. Primary-dealer series remain classified as market positioning, not ownership."
   },
   "release_calendar": {
-    "generated_at": "2026-09-11T18:47:18Z",
+    "generated_at": "2026-09-11T18:53:55Z",
     "today": "2026-09-11",
     "source_count": 12,
     "status_counts": {
@@ -176817,7 +176816,7 @@
         "frequency": null,
         "source_status": "error",
         "last_observation": null,
-        "last_checked_at": "2026-09-11T18:46:43Z",
+        "last_checked_at": "2026-09-11T18:53:18Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -176834,7 +176833,7 @@
         "frequency": "Business daily",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-11T18:46:33Z",
+        "last_checked_at": "2026-09-11T18:53:07Z",
         "expected_next_observation": "2026-09-10",
         "expected_publication_date": "2026-09-11",
         "days_to_expected": 0,
@@ -176851,7 +176850,7 @@
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "source_status": "ok",
         "last_observation": "2026-09-02",
-        "last_checked_at": "2026-09-11T18:46:43Z",
+        "last_checked_at": "2026-09-11T18:53:19Z",
         "expected_next_observation": "2026-09-09",
         "expected_publication_date": "2026-09-10",
         "days_to_expected": -1,
@@ -176868,7 +176867,7 @@
         "frequency": "Monthly",
         "source_status": "ok",
         "last_observation": "2026-06",
-        "last_checked_at": "2026-09-11T18:47:13Z",
+        "last_checked_at": "2026-09-11T18:53:50Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-09-16",
         "days_to_expected": 5,
@@ -176885,7 +176884,7 @@
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-11T18:46:33Z",
+        "last_checked_at": "2026-09-11T18:53:07Z",
         "expected_next_observation": "2026-09-16",
         "expected_publication_date": "2026-09-17",
         "days_to_expected": 6,
@@ -176902,7 +176901,7 @@
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-11T18:46:42Z",
+        "last_checked_at": "2026-09-11T18:53:17Z",
         "expected_next_observation": "2026-09-16",
         "expected_publication_date": "2026-09-17",
         "days_to_expected": 6,
@@ -176919,7 +176918,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026-04-01",
-        "last_checked_at": "2026-09-11T18:46:43Z",
+        "last_checked_at": "2026-09-11T18:53:18Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-10-12",
         "days_to_expected": 31,
@@ -176936,7 +176935,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026-04-01",
-        "last_checked_at": "2026-09-11T18:46:44Z",
+        "last_checked_at": "2026-09-11T18:53:19Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-10-12",
         "days_to_expected": 31,
@@ -176953,7 +176952,7 @@
         "frequency": "Monthly",
         "source_status": "ok",
         "last_observation": "2026-08-31",
-        "last_checked_at": "2026-09-11T18:46:45Z",
+        "last_checked_at": "2026-09-11T18:53:20Z",
         "expected_next_observation": "2026-09-30",
         "expected_publication_date": "2026-10-12",
         "days_to_expected": 31,
@@ -176970,7 +176969,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026:Q2",
-        "last_checked_at": "2026-09-11T18:46:42Z",
+        "last_checked_at": "2026-09-11T18:53:17Z",
         "expected_next_observation": "2026-09-30",
         "expected_publication_date": "2026-12-11",
         "days_to_expected": 91,
@@ -176987,7 +176986,7 @@
         "frequency": null,
         "source_status": "pending",
         "last_observation": null,
-        "last_checked_at": "2026-09-11T18:46:44Z",
+        "last_checked_at": "2026-09-11T18:53:19Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -177004,7 +177003,7 @@
         "frequency": "Released as auctions occur",
         "source_status": "ok",
         "last_observation": "2026-09-17",
-        "last_checked_at": "2026-09-11T18:46:43Z",
+        "last_checked_at": "2026-09-11T18:53:18Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -177023,7 +177022,7 @@
         "frequency": null,
         "source_status": "error",
         "last_observation": null,
-        "last_checked_at": "2026-09-11T18:46:43Z",
+        "last_checked_at": "2026-09-11T18:53:18Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -177040,7 +177039,7 @@
         "frequency": "Business daily",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-11T18:46:33Z",
+        "last_checked_at": "2026-09-11T18:53:07Z",
         "expected_next_observation": "2026-09-10",
         "expected_publication_date": "2026-09-11",
         "days_to_expected": 0,
@@ -177057,7 +177056,7 @@
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "source_status": "ok",
         "last_observation": "2026-09-02",
-        "last_checked_at": "2026-09-11T18:46:43Z",
+        "last_checked_at": "2026-09-11T18:53:19Z",
         "expected_next_observation": "2026-09-09",
         "expected_publication_date": "2026-09-10",
         "days_to_expected": -1,
@@ -177074,7 +177073,7 @@
         "frequency": "Monthly",
         "source_status": "ok",
         "last_observation": "2026-06",
-        "last_checked_at": "2026-09-11T18:47:13Z",
+        "last_checked_at": "2026-09-11T18:53:50Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-09-16",
         "days_to_expected": 5,
@@ -177091,7 +177090,7 @@
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-11T18:46:33Z",
+        "last_checked_at": "2026-09-11T18:53:07Z",
         "expected_next_observation": "2026-09-16",
         "expected_publication_date": "2026-09-17",
         "days_to_expected": 6,
@@ -177108,7 +177107,7 @@
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-11T18:46:42Z",
+        "last_checked_at": "2026-09-11T18:53:17Z",
         "expected_next_observation": "2026-09-16",
         "expected_publication_date": "2026-09-17",
         "days_to_expected": 6,
@@ -177122,11 +177121,11 @@
     "note": "Release dates in this panel are tracker estimates derived from each source's normal cadence and latest observation. They are operational freshness diagnostics, not publisher commitments. Weekday adjustment does not model U.S. federal holidays. Event-driven auction data and SEC bulk feeds with access limitations are not labeled overdue from cadence alone."
   },
   "flow_regime_history": {
-    "generated_at": "2026-09-11T18:47:18Z",
+    "generated_at": "2026-09-11T18:53:55Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:57:05Z",
-    "event_count": 6,
-    "new_event_count": 0,
+    "event_count": 7,
+    "new_event_count": 1,
     "events": [
       {
         "event_id": "3375bcdc58e6321ac5",
@@ -177279,6 +177278,31 @@
         "breadth_change_pp": -50.0,
         "regime_changed": true,
         "regime_duration_observations": 1
+      },
+      {
+        "event_id": "1ef75195b44e1c23fb",
+        "signature": "51b4e6db2d29911f19c8",
+        "scope": "U.S. sector",
+        "concept": "current_holdings",
+        "observation_dates": [
+          "2026-04-01"
+        ],
+        "frequencies": [
+          "Quarterly"
+        ],
+        "detected_at": "2026-09-11T18:53:55Z",
+        "regime": "mixed",
+        "accumulation_breadth_pct": 50.0,
+        "momentum_score": 0.0,
+        "accumulating_count": 4,
+        "reducing_count": 4,
+        "flat_count": 0,
+        "median_change_pct": 0.19519900957152866,
+        "reported_total_change_billions": null,
+        "previous_regime": "mixed",
+        "breadth_change_pp": 0.0,
+        "regime_changed": false,
+        "regime_duration_observations": 2
       }
     ],
     "current": [
@@ -177308,18 +177332,17 @@
         "regime_duration_observations": 2
       },
       {
-        "event_id": "c61090a6edace6d6f7",
-        "signature": "3a259da4b526e99ca7fd",
+        "event_id": "1ef75195b44e1c23fb",
+        "signature": "51b4e6db2d29911f19c8",
         "scope": "U.S. sector",
         "concept": "current_holdings",
         "observation_dates": [
-          "2025-10-01",
           "2026-04-01"
         ],
         "frequencies": [
           "Quarterly"
         ],
-        "detected_at": "2026-09-11T18:40:40Z",
+        "detected_at": "2026-09-11T18:53:55Z",
         "regime": "mixed",
         "accumulation_breadth_pct": 50.0,
         "momentum_score": 0.0,
@@ -177328,10 +177351,10 @@
         "flat_count": 0,
         "median_change_pct": 0.19519900957152866,
         "reported_total_change_billions": null,
-        "previous_regime": "broad accumulation",
-        "breadth_change_pp": -50.0,
-        "regime_changed": true,
-        "regime_duration_observations": 1
+        "previous_regime": "mixed",
+        "breadth_change_pp": 0.0,
+        "regime_changed": false,
+        "regime_duration_observations": 2
       },
       {
         "event_id": "067736747b850cfcbd",
@@ -177359,7 +177382,7 @@
         "regime_duration_observations": 2
       }
     ],
-    "cross_scope_event_count": 3,
+    "cross_scope_event_count": 4,
     "cross_scope_events": [
       {
         "event_id": "fc23753a324b4da1c4",
@@ -177417,12 +177440,30 @@
         ],
         "previous_regime": "domestic accumulation stronger",
         "regime_changed": true
+      },
+      {
+        "event_id": "aac2c6e20bf736e00f",
+        "signature": "4ffc267509e390a1ed4f",
+        "detected_at": "2026-09-11T18:53:55Z",
+        "regime": "mixed cross-scope",
+        "strength_pct_points": 5.769230769230774,
+        "foreign_breadth_pct": 44.230769230769226,
+        "us_sector_breadth_pct": 50.0,
+        "divergence_pct_points": 5.769230769230774,
+        "foreign_observation_dates": [
+          "2026-06"
+        ],
+        "us_sector_observation_dates": [
+          "2026-04-01"
+        ],
+        "previous_regime": "mixed cross-scope",
+        "regime_changed": false
       }
     ],
     "current_cross_scope": {
-      "event_id": "6caaf9884192f82f34",
-      "signature": "7bb8dd6490d0267b74ee",
-      "detected_at": "2026-09-11T18:40:40Z",
+      "event_id": "aac2c6e20bf736e00f",
+      "signature": "4ffc267509e390a1ed4f",
+      "detected_at": "2026-09-11T18:53:55Z",
       "regime": "mixed cross-scope",
       "strength_pct_points": 5.769230769230774,
       "foreign_breadth_pct": 44.230769230769226,
@@ -177432,16 +177473,15 @@
         "2026-06"
       ],
       "us_sector_observation_dates": [
-        "2025-10-01",
         "2026-04-01"
       ],
-      "previous_regime": "domestic accumulation stronger",
-      "regime_changed": true
+      "previous_regime": "mixed cross-scope",
+      "regime_changed": false
     },
     "note": "A regime point is added only when a scope advances to a new source observation signature. Daily updater runs do not create duplicate regime history. Breadth is calculated within each source cadence; the cross-scope regime compares direction only and never adds monthly TIC flows to quarterly Financial Accounts changes."
   },
   "research_brief": {
-    "generated_at": "2026-09-11T18:47:18Z",
+    "generated_at": "2026-09-11T18:53:55Z",
     "item_count": 4,
     "items": [
       {
@@ -177476,7 +177516,7 @@
     "note": "Rule-based research brief generated only from the official-data blocks already present in the tracker. It is descriptive, not investment advice or a forecast."
   },
   "navigation_index": {
-    "generated_at": "2026-09-11T18:47:18Z",
+    "generated_at": "2026-09-11T18:53:55Z",
     "entry_count": 227,
     "type_counts": {
       "section": 29,
@@ -179723,7 +179763,7 @@
     "note": "Client-side command-palette index built from dashboard sections, holder profiles, Treasury CUSIPs, official sources and active alert diagnostics."
   },
   "holder_comovement": {
-    "generated_at": "2026-09-11T18:47:19Z",
+    "generated_at": "2026-09-11T18:53:55Z",
     "pair_count": 811,
     "scope_count": 3,
     "scopes": [
@@ -180159,35 +180199,21 @@
             "last_overlap": "2026-04-01"
           },
           {
-            "pair_id": "8c20c606f7d52653dd",
+            "pair_id": "f0e014b4ead99fb520",
             "scope": "U.S. sector",
-            "profile_a_id": "d9dbe5f2e9e215d97b",
-            "profile_a_name": "Pension funds",
-            "profile_b_id": "6744531245f5a13bff",
-            "profile_b_name": "Security brokers and dealers",
-            "correlation": 0.4034602798705735,
+            "profile_a_id": "6744531245f5a13bff",
+            "profile_a_name": "Security brokers and dealers",
+            "profile_b_id": "5bf347c2484464fbe1",
+            "profile_b_name": "Hedge funds",
+            "correlation": 0.4391532512721472,
             "overlapping_change_points": 39,
-            "same_direction_pct": 58.97435897435898,
-            "median_abs_change_spread_pct_points": 10.734056364038864,
+            "same_direction_pct": 64.1025641025641,
+            "median_abs_change_spread_pct_points": 11.46514804397312,
             "first_overlap": "2016-10-01",
             "last_overlap": "2026-04-01"
           }
         ],
         "lowest_correlation": [
-          {
-            "pair_id": "87d977dcd71b5f9138",
-            "scope": "U.S. sector",
-            "profile_a_id": "e2689f5ea65834db2a",
-            "profile_a_name": "U.S.-chartered depository institutions",
-            "profile_b_id": "5bf347c2484464fbe1",
-            "profile_b_name": "Hedge funds",
-            "correlation": -0.04822041997760644,
-            "overlapping_change_points": 37,
-            "same_direction_pct": 67.56756756756756,
-            "median_abs_change_spread_pct_points": 5.856592012458282,
-            "first_overlap": "2016-10-01",
-            "last_overlap": "2025-10-01"
-          },
           {
             "pair_id": "256d40daf819a6afd6",
             "scope": "U.S. sector",
@@ -180285,9 +180311,23 @@
             "median_abs_change_spread_pct_points": 5.482988026930627,
             "first_overlap": "2016-10-01",
             "last_overlap": "2026-04-01"
+          },
+          {
+            "pair_id": "87d977dcd71b5f9138",
+            "scope": "U.S. sector",
+            "profile_a_id": "e2689f5ea65834db2a",
+            "profile_a_name": "U.S.-chartered depository institutions",
+            "profile_b_id": "5bf347c2484464fbe1",
+            "profile_b_name": "Hedge funds",
+            "correlation": 0.0404647538167892,
+            "overlapping_change_points": 39,
+            "same_direction_pct": 56.41025641025641,
+            "median_abs_change_spread_pct_points": 6.230827883056941,
+            "first_overlap": "2016-10-01",
+            "last_overlap": "2026-04-01"
           }
         ],
-        "median_correlation": 0.08468163468491867
+        "median_correlation": 0.20974220986564845
       }
     ],
     "pairs": [
@@ -191352,6 +191392,20 @@
         "last_overlap": "2026-04-01"
       },
       {
+        "pair_id": "f0e014b4ead99fb520",
+        "scope": "U.S. sector",
+        "profile_a_id": "6744531245f5a13bff",
+        "profile_a_name": "Security brokers and dealers",
+        "profile_b_id": "5bf347c2484464fbe1",
+        "profile_b_name": "Hedge funds",
+        "correlation": 0.4391532512721472,
+        "overlapping_change_points": 39,
+        "same_direction_pct": 64.1025641025641,
+        "median_abs_change_spread_pct_points": 11.46514804397312,
+        "first_overlap": "2016-10-01",
+        "last_overlap": "2026-04-01"
+      },
+      {
         "pair_id": "8c20c606f7d52653dd",
         "scope": "U.S. sector",
         "profile_a_id": "d9dbe5f2e9e215d97b",
@@ -191363,6 +191417,20 @@
         "same_direction_pct": 58.97435897435898,
         "median_abs_change_spread_pct_points": 10.734056364038864,
         "first_overlap": "2016-10-01",
+        "last_overlap": "2026-04-01"
+      },
+      {
+        "pair_id": "2e5f689c45a145c013",
+        "scope": "U.S. sector",
+        "profile_a_id": "e6cf8cd3c979461286",
+        "profile_a_name": "Exchange-traded funds",
+        "profile_b_id": "5bf347c2484464fbe1",
+        "profile_b_name": "Hedge funds",
+        "correlation": 0.32133636601768345,
+        "overlapping_change_points": 43,
+        "same_direction_pct": 58.139534883720934,
+        "median_abs_change_spread_pct_points": 9.138756932878536,
+        "first_overlap": "2015-10-01",
         "last_overlap": "2026-04-01"
       },
       {
@@ -191408,18 +191476,18 @@
         "last_overlap": "2026-04-01"
       },
       {
-        "pair_id": "f0e014b4ead99fb520",
+        "pair_id": "4aca58d1164a19d5a2",
         "scope": "U.S. sector",
-        "profile_a_id": "6744531245f5a13bff",
-        "profile_a_name": "Security brokers and dealers",
+        "profile_a_id": "d9dbe5f2e9e215d97b",
+        "profile_a_name": "Pension funds",
         "profile_b_id": "5bf347c2484464fbe1",
         "profile_b_name": "Hedge funds",
-        "correlation": 0.19154682032937412,
-        "overlapping_change_points": 37,
-        "same_direction_pct": 48.64864864864865,
-        "median_abs_change_spread_pct_points": 12.847104803981617,
-        "first_overlap": "2016-10-01",
-        "last_overlap": "2025-10-01"
+        "correlation": 0.22805175832995797,
+        "overlapping_change_points": 43,
+        "same_direction_pct": 62.7906976744186,
+        "median_abs_change_spread_pct_points": 5.264651139617564,
+        "first_overlap": "2015-10-01",
+        "last_overlap": "2026-04-01"
       },
       {
         "pair_id": "c4f5355f0243d49bf5",
@@ -191436,18 +191504,32 @@
         "last_overlap": "2026-04-01"
       },
       {
-        "pair_id": "2e5f689c45a145c013",
+        "pair_id": "f62819b4baa69f1139",
         "scope": "U.S. sector",
-        "profile_a_id": "e6cf8cd3c979461286",
-        "profile_a_name": "Exchange-traded funds",
+        "profile_a_id": "4ebdff78dbf2a43f82",
+        "profile_a_name": "Private pension funds",
         "profile_b_id": "5bf347c2484464fbe1",
         "profile_b_name": "Hedge funds",
-        "correlation": 0.09451543052433202,
-        "overlapping_change_points": 41,
-        "same_direction_pct": 63.41463414634146,
-        "median_abs_change_spread_pct_points": 5.399063594408188,
+        "correlation": 0.14410012520342927,
+        "overlapping_change_points": 43,
+        "same_direction_pct": 58.139534883720934,
+        "median_abs_change_spread_pct_points": 6.058803481273609,
         "first_overlap": "2015-10-01",
-        "last_overlap": "2025-10-01"
+        "last_overlap": "2026-04-01"
+      },
+      {
+        "pair_id": "5cbed05474bb677b7b",
+        "scope": "U.S. sector",
+        "profile_a_id": "27db7d1b80a38bca90",
+        "profile_a_name": "Insurance companies",
+        "profile_b_id": "5bf347c2484464fbe1",
+        "profile_b_name": "Hedge funds",
+        "correlation": 0.11036702069551957,
+        "overlapping_change_points": 43,
+        "same_direction_pct": 44.18604651162791,
+        "median_abs_change_spread_pct_points": 7.737982289862838,
+        "first_overlap": "2015-10-01",
+        "last_overlap": "2026-04-01"
       },
       {
         "pair_id": "59cd89118a2df409e7",
@@ -191464,18 +191546,18 @@
         "last_overlap": "2026-04-01"
       },
       {
-        "pair_id": "4aca58d1164a19d5a2",
+        "pair_id": "e2350a11f8ad7959c0",
         "scope": "U.S. sector",
-        "profile_a_id": "d9dbe5f2e9e215d97b",
-        "profile_a_name": "Pension funds",
+        "profile_a_id": "2a43969994f0ac62ac",
+        "profile_a_name": "Private depository institutions",
         "profile_b_id": "5bf347c2484464fbe1",
         "profile_b_name": "Hedge funds",
-        "correlation": 0.06762737275465792,
-        "overlapping_change_points": 41,
-        "same_direction_pct": 68.29268292682927,
-        "median_abs_change_spread_pct_points": 5.337308471844438,
-        "first_overlap": "2015-10-01",
-        "last_overlap": "2025-10-01"
+        "correlation": 0.06449512217637539,
+        "overlapping_change_points": 39,
+        "same_direction_pct": 58.97435897435898,
+        "median_abs_change_spread_pct_points": 5.882517090810671,
+        "first_overlap": "2016-10-01",
+        "last_overlap": "2026-04-01"
       },
       {
         "pair_id": "0d7c296bda1a0bac4b",
@@ -191492,46 +191574,18 @@
         "last_overlap": "2026-04-01"
       },
       {
-        "pair_id": "5cbed05474bb677b7b",
+        "pair_id": "87d977dcd71b5f9138",
         "scope": "U.S. sector",
-        "profile_a_id": "27db7d1b80a38bca90",
-        "profile_a_name": "Insurance companies",
+        "profile_a_id": "e2689f5ea65834db2a",
+        "profile_a_name": "U.S.-chartered depository institutions",
         "profile_b_id": "5bf347c2484464fbe1",
         "profile_b_name": "Hedge funds",
-        "correlation": 0.04788383877898748,
-        "overlapping_change_points": 41,
-        "same_direction_pct": 51.21951219512195,
-        "median_abs_change_spread_pct_points": 6.805933718532198,
-        "first_overlap": "2015-10-01",
-        "last_overlap": "2025-10-01"
-      },
-      {
-        "pair_id": "f62819b4baa69f1139",
-        "scope": "U.S. sector",
-        "profile_a_id": "4ebdff78dbf2a43f82",
-        "profile_a_name": "Private pension funds",
-        "profile_b_id": "5bf347c2484464fbe1",
-        "profile_b_name": "Hedge funds",
-        "correlation": 0.046270454037594264,
-        "overlapping_change_points": 41,
-        "same_direction_pct": 63.41463414634146,
-        "median_abs_change_spread_pct_points": 5.147605602688426,
-        "first_overlap": "2015-10-01",
-        "last_overlap": "2025-10-01"
-      },
-      {
-        "pair_id": "e2350a11f8ad7959c0",
-        "scope": "U.S. sector",
-        "profile_a_id": "2a43969994f0ac62ac",
-        "profile_a_name": "Private depository institutions",
-        "profile_b_id": "5bf347c2484464fbe1",
-        "profile_b_name": "Hedge funds",
-        "correlation": 0.01665588398470638,
-        "overlapping_change_points": 37,
-        "same_direction_pct": 64.86486486486487,
-        "median_abs_change_spread_pct_points": 5.09223255985461,
+        "correlation": 0.0404647538167892,
+        "overlapping_change_points": 39,
+        "same_direction_pct": 56.41025641025641,
+        "median_abs_change_spread_pct_points": 6.230827883056941,
         "first_overlap": "2016-10-01",
-        "last_overlap": "2025-10-01"
+        "last_overlap": "2026-04-01"
       },
       {
         "pair_id": "d9d87f2152baf8a236",
@@ -191630,27 +191684,13 @@
         "median_abs_change_spread_pct_points": 4.93245090848097,
         "first_overlap": "2016-10-01",
         "last_overlap": "2026-04-01"
-      },
-      {
-        "pair_id": "87d977dcd71b5f9138",
-        "scope": "U.S. sector",
-        "profile_a_id": "e2689f5ea65834db2a",
-        "profile_a_name": "U.S.-chartered depository institutions",
-        "profile_b_id": "5bf347c2484464fbe1",
-        "profile_b_name": "Hedge funds",
-        "correlation": -0.04822041997760644,
-        "overlapping_change_points": 37,
-        "same_direction_pct": 67.56756756756756,
-        "median_abs_change_spread_pct_points": 5.856592012458282,
-        "first_overlap": "2016-10-01",
-        "last_overlap": "2025-10-01"
       }
     ],
     "method": "Pearson correlation of period-to-period percentage changes, matched only on common observation dates within the same source-semantic scope. At least six overlapping change observations are required.",
     "note": "Co-movement is descriptive association, not evidence that one holder causes another holder's Treasury activity. Comparisons stay within the same holder scope so monthly, quarterly and weekly series are not mixed."
   },
   "discovery_summary": {
-    "generated_at": "2026-09-11T18:47:19Z",
+    "generated_at": "2026-09-11T18:53:55Z",
     "searchable_items": 227,
     "comparable_pairs": 811,
     "scope_summaries": [
@@ -191726,7 +191766,7 @@
         "scope": "U.S. sector",
         "eligible_profiles": 8,
         "pair_count": 28,
-        "median_correlation": 0.08468163468491867,
+        "median_correlation": 0.20974220986564845,
         "strongest_pair": {
           "pair_id": "7a603e10720d4d93ab",
           "scope": "U.S. sector",
@@ -191742,18 +191782,18 @@
           "last_overlap": "2026-04-01"
         },
         "lowest_pair": {
-          "pair_id": "87d977dcd71b5f9138",
+          "pair_id": "256d40daf819a6afd6",
           "scope": "U.S. sector",
-          "profile_a_id": "e2689f5ea65834db2a",
-          "profile_a_name": "U.S.-chartered depository institutions",
-          "profile_b_id": "5bf347c2484464fbe1",
-          "profile_b_name": "Hedge funds",
-          "correlation": -0.04822041997760644,
-          "overlapping_change_points": 37,
-          "same_direction_pct": 67.56756756756756,
-          "median_abs_change_spread_pct_points": 5.856592012458282,
+          "profile_a_id": "2a43969994f0ac62ac",
+          "profile_a_name": "Private depository institutions",
+          "profile_b_id": "27db7d1b80a38bca90",
+          "profile_b_name": "Insurance companies",
+          "correlation": -0.04430707779044292,
+          "overlapping_change_points": 39,
+          "same_direction_pct": 46.15384615384615,
+          "median_abs_change_spread_pct_points": 4.93245090848097,
           "first_overlap": "2016-10-01",
-          "last_overlap": "2025-10-01"
+          "last_overlap": "2026-04-01"
         }
       }
     ],
@@ -192490,7 +192530,7 @@
     "note": "This score is a research diagnostic, not an official Treasury metric. Auction takedown describes awards at issuance and does not measure secondary-market ownership."
   },
   "market_structure_map": {
-    "generated_at": "2026-09-11T18:47:19Z",
+    "generated_at": "2026-09-11T18:53:55Z",
     "overall_state": "cautious mix",
     "state_counts": {
       "supportive": 0,
@@ -192517,7 +192557,7 @@
         "display": "50.0%",
         "state": "neutral",
         "reading": "Mixed",
-        "observation": "2025-10-01, 2026-04-01",
+        "observation": "2026-04-01",
         "detail": "4 accumulating / 4 reducing / 0 flat."
       },
       {
@@ -192557,7 +192597,7 @@
         "display": "1",
         "state": "cautious",
         "reading": "Unusual moves active",
-        "observation": "2026-09-11T18:47:19Z",
+        "observation": "2026-09-11T18:53:55Z",
         "detail": "Persistent alert lifecycle with robust anomaly diagnostics."
       },
       {
