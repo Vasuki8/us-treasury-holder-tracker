@@ -8,6 +8,40 @@ on:
     paths:
       - scripts/**
       - app.js
+      - source-health.js
+      - phase4.js
+      - phase5.js
+      - phase6.js
+      - phase7.js
+      - phase8.js
+      - phase9.js
+      - phase10.js
+      - phase11.js
+      - phase11.css
+      - phase12.js
+      - phase12.css
+      - ui-refresh.js
+      - ui-refresh.css
+      - ux-v2.js
+      - ux-v2.css
+      - ux-v3.js
+      - ux-v3-runtime.js
+      - ux-v3.css
+      - ux-v4.js
+      - ux-v4.css
+      - ux-v5.css
+      - country-history.js
+      - country-history.css
+      - index.html
+      - styles.css
+      - .github/workflows/update.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - scripts/**
+      - app.js
+      - source-health.js
       - phase4.js
       - phase5.js
       - phase6.js
@@ -56,6 +90,7 @@ jobs:
       - name: Validate dashboard JavaScript
         run: |
           node --check app.js
+          node --check source-health.js
           node --check phase4.js
           node --check phase5.js
           node --check phase6.js
@@ -105,6 +140,7 @@ jobs:
         run: .venv/bin/python scripts/validate_country_history.py
 
       - name: Commit updated data safely
+        if: github.event_name != 'pull_request'
         run: |
           if git diff --quiet -- data/dashboard.json; then
             echo "No data changes."
