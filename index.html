@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="country-history.css" />
   <link rel="stylesheet" href="all-time-history.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-  <script defer src="app.js"></script>
+  <script defer src="app.js?v=20260911-sections-removed"></script>
   <script defer src="country-history.js"></script>
   <script defer src="all-time-history.js?v=20260911-cagr-range"></script>
 </head>
@@ -32,23 +32,6 @@
 
   <main class="shell">
     <section class="cards" id="overviewCards" aria-label="Headline Treasury ownership metrics"></section>
-
-    <section class="panel ownership-brief-panel" id="ownershipBriefPanel">
-      <div class="panel-head">
-        <div><h2>Ownership Brief</h2><p id="ownershipBriefMeta"></p></div>
-        <span class="phase-chip">RULE-BASED · OFFICIAL DATA</span>
-      </div>
-      <div id="ownershipBriefCards" class="insight-grid"></div>
-    </section>
-
-    <section class="panel market-structure-panel" id="marketStructurePanel">
-      <div class="panel-head">
-        <div><h2>Market Structure Map</h2><p id="marketStructureMeta"></p></div>
-        <span class="structure-state" id="marketStructureState"></span>
-      </div>
-      <div id="marketStructureGrid" class="structure-grid"></div>
-      <div class="note inline-note">Each dimension keeps its own official observation date. The labels summarize the current evidence and do not combine monthly, quarterly or weekly values into a synthetic total.</div>
-    </section>
 
     <section class="panel all-time-panel" id="allTimeHistoryPanel">
       <div class="panel-head">
