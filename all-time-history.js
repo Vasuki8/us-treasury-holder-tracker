@@ -112,6 +112,15 @@
     URL.revokeObjectURL(url);
   }
 
+  function defaultForeignHistoryToAll(attempt=0){
+    const button = document.querySelector('#foreignHistoryPanel .country-trend-range [data-country-range="ALL"]');
+    if(button){
+      if(!button.classList.contains('active')) button.click();
+      return;
+    }
+    if(attempt < 12) setTimeout(() => defaultForeignHistoryToAll(attempt + 1), 150);
+  }
+
   function init(data){
     state.data = data;
     const panel = document.getElementById('allTimeHistoryPanel');
@@ -124,6 +133,7 @@
     rangeButtons();
     draw();
     document.getElementById('downloadAllTimeCsv')?.addEventListener('click', downloadCsv);
+    defaultForeignHistoryToAll();
   }
 
   if(window.treasuryData) init(window.treasuryData);
