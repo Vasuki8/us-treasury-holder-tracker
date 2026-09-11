@@ -10,6 +10,7 @@
 .all-time-stat{background:#091524;border:1px solid var(--line);border-radius:12px;padding:11px 12px;min-width:0}
 .all-time-stat span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.05em}
 .all-time-stat strong{display:block;margin-top:4px;font-size:15px;overflow-wrap:anywhere}
+.all-time-stat small{display:block;margin-top:4px;color:var(--muted);font-size:10px;line-height:1.35}
 .all-time-chart{min-height:360px}
 @media(max-width:900px){.all-time-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.all-time-panel .panel-actions{justify-content:flex-start}.all-time-panel .panel-actions select{min-width:0;width:100%}}
 @media(max-width:560px){.all-time-stats{grid-template-columns:1fr}.all-time-toolbar{align-items:stretch;flex-direction:column}.all-time-range{width:100%}.all-time-range button{flex:1}}
