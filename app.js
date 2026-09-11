@@ -2,7 +2,7 @@ const fmtB = v => v == null || !Number.isFinite(Number(v)) ? '—' : `$${Number(
 const fmtUSD = v => v == null || !Number.isFinite(Number(v)) ? '—' : (Number(v) >= 1e12 ? `$${(Number(v)/1e12).toLocaleString(undefined,{maximumFractionDigits:3})}T` : `$${(Number(v)/1e9).toLocaleString(undefined,{maximumFractionDigits:1})}B`);
 const fmtPct = v => v == null || !Number.isFinite(Number(v)) ? '—' : `${Number(v).toFixed(1)}%`;
 const signedB = v => v == null || !Number.isFinite(Number(v)) ? '—' : `${Number(v) >= 0 ? '+' : ''}${Number(v).toFixed(1)}B`;
-const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
 const slug = s => String(s || 'neutral').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 
 let data;
@@ -169,7 +169,6 @@ async function load(){
     renderOwnershipBrief();
     renderMarketStructure();
     renderForeign();
-    renderOwnershipShares();
     wireDownloads();
     window.dispatchEvent(new CustomEvent('treasury:data-ready', {detail:data}));
   }catch(error){
