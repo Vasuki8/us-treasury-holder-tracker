@@ -1,0 +1,7 @@
+.yield-curve-panel .insight-cards{grid-template-columns:repeat(4,minmax(0,1fr))}
+.yield-curve-panel .insight-grid{margin-top:2px}
+.yield-curve-panel .insight-subpanel{overflow:hidden}
+.yield-curve-panel .insight-chart{height:320px}
+.yield-curve-panel .yield-refi-note{margin-top:14px}
+@media(max-width:1050px){.yield-curve-panel .insight-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.yield-curve-panel .insight-cards{grid-template-columns:1fr}.yield-curve-panel .insight-chart{height:285px}}
