@@ -2,7 +2,7 @@
   const state = {data:null, range:'1Y', curveChart:null, historyChart:null, spreadChart:null, breakevenChart:null};
   const RANGE_VALUES = ['1M','3M','6M','1Y','3Y','5Y','10Y','ALL'];
   const KEY_TENORS = ['3m','6m','1y','2y','3y','5y','7y','10y','20y','30y'];
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const finite = value => Number.isFinite(Number(value));
   const num = value => Number(value);
   const fmtPct = (value,digits=2) => finite(value) ? `${num(value).toFixed(digits)}%` : '—';
