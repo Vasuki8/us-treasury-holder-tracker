@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#07101d" />
   <title>US Treasury Ownership Tracker</title>
-  <meta name="description" content="Focused U.S. Treasury ownership dashboard using official Treasury and Federal Reserve data, with all-time history, maturities, interest cash flows, funding pressure, buybacks, auction demand, primary-dealer positioning, debt cost, ownership shares, institutional and foreign-holder history." />
+  <meta name="description" content="Focused U.S. Treasury ownership dashboard using official Treasury and Federal Reserve data, with all-time history, maturities, funding pressure, yield curves, auction demand, dealer positioning, debt cost, ownership shares and holder history." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="country-history.css" />
   <link rel="stylesheet" href="all-time-history.css" />
@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="funding-pressure.css" />
   <link rel="stylesheet" href="primary-dealer.css" />
   <link rel="stylesheet" href="market-insights.css" />
+  <link rel="stylesheet" href="yield-curve.css" />
   <link rel="stylesheet" href="institution-history.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script defer src="app.js?v=20260911-sections-removed"></script>
@@ -25,13 +26,14 @@
   <script defer src="market-insights.js?v=20260911-market-insights"></script>
   <script defer src="institution-history.js?v=20260911-institution-history"></script>
   <script defer src="range-sync.js?v=20260911-dynamic-ranges"></script>
+  <script defer src="yield-curve.js?v=20260912-yield-curve"></script>
 </head>
 <body class="core-dashboard ux5-core">
   <header class="shell hero">
     <div>
       <div class="eyebrow">U.S. TREASURY OWNERSHIP</div>
       <h1>Who Owns U.S. Treasuries?</h1>
-      <p class="lede">Track ownership, long-run history, maturities and interest cash flows, funding pressure, announced issuance and buybacks, auction demand, primary-dealer positioning, debt cost, holder market share, institutional holders and major foreign holders while preserving each source's real reporting date.</p>
+      <p class="lede">Track ownership, long-run history, maturities and interest cash flows, funding pressure, the Treasury yield curve, announced issuance and buybacks, auction demand, primary-dealer positioning, debt cost, holder market share, institutional holders and major foreign holders while preserving each source's real reporting date.</p>
     </div>
     <div class="hero-side">
       <div class="status" id="updateStatus">Loading official data…</div>
@@ -115,6 +117,37 @@
       </div>
     </section>
 
+    <section class="panel yield-curve-panel" id="yieldCurvePanel">
+      <div class="panel-head">
+        <div><h2>Treasury Yield Curve</h2><p id="yieldCurveMeta">Loading official nominal and real Treasury yield curves…</p></div>
+        <div class="panel-actions"><button id="downloadYieldCurveCsv" type="button">Download yield CSV</button></div>
+      </div>
+      <div class="insight-body">
+        <div class="insight-cards" id="yieldCurveCards"></div>
+        <div class="insight-toolbar"><div class="insight-range" id="yieldCurveRanges"></div></div>
+        <div class="insight-grid">
+          <div class="insight-subpanel">
+            <div class="insight-subhead"><div><h3>Current curve vs selected-period start</h3><p>Nominal par yields across maturities, plus the latest real TIPS curve.</p></div></div>
+            <div class="chart-wrap insight-chart"><canvas id="yieldCurveSnapshotChart"></canvas></div>
+          </div>
+          <div class="insight-subpanel">
+            <div class="insight-subhead"><div><h3>Key yield history</h3><p>3M, 2Y, 10Y and 30Y market yields over the selected period.</p></div></div>
+            <div class="chart-wrap insight-chart"><canvas id="yieldHistoryChart"></canvas></div>
+          </div>
+          <div class="insight-subpanel">
+            <div class="insight-subhead"><div><h3>Curve spreads</h3><p>10Y−2Y, 10Y−3M and 30Y−10Y in basis points.</p></div></div>
+            <div class="chart-wrap insight-chart"><canvas id="yieldSpreadChart"></canvas></div>
+          </div>
+          <div class="insight-subpanel">
+            <div class="insight-subhead"><div><h3>Inflation breakevens</h3><p>Nominal Treasury par yield minus real TIPS par yield at matched maturities.</p></div></div>
+            <div class="chart-wrap insight-chart"><canvas id="breakevenChart"></canvas></div>
+          </div>
+        </div>
+        <div class="note inline-note insight-note yield-refi-note">The selected range drives every chart and basis-point change above. Use this together with the Maturity Wall: maturities tell you how much needs refinancing, while the yield curve shows the market rates Treasury is facing across maturities. These par yields are reference market rates, not the exact rate Treasury will pay at a future auction.</div>
+        <div class="note inline-note insight-note" id="yieldCurveNote"></div>
+      </div>
+    </section>
+
     <section class="panel auction-demand-panel" id="auctionDemandPanel">
       <div class="panel-head">
         <div><h2>Auction Demand</h2><p id="auctionDemandMeta">Loading recent Treasury auction demand…</p></div>
@@ -195,9 +228,9 @@
       <div class="note inline-note">The All range combines Treasury-specific annual survey observations before the monthly TIC series begins with the complete monthly history from 2011 onward. Pre-1994 survey columns are not used because they report broader debt rather than Treasury debt separately. TIC country attribution can reflect custodian location rather than the ultimate beneficial owner.</div>
     </section>
 
-    <section class="note data-discipline"><strong>Data discipline:</strong> the site checks official sources daily, but ownership, maturity, TGA, auction, buyback, dealer, average-rate and interest-expense datasets publish on different schedules. Every displayed value keeps its real observation date; ownership shares preserve source valuation caveats; tentative buyback caps are distinguished from actual purchases; and forward variable/inflation-linked interest remains labeled as estimated.</section>
+    <section class="note data-discipline"><strong>Data discipline:</strong> the site checks official sources daily, but ownership, maturity, TGA, auction, buyback, dealer, yield-curve, average-rate and interest-expense datasets publish on different schedules. Every displayed value keeps its real observation date; Treasury par yields remain distinct from auction yields and coupons; ownership shares preserve source valuation caveats; tentative buyback caps are distinguished from actual purchases; and forward variable/inflation-linked interest remains labeled as estimated.</section>
   </main>
 
-  <footer class="shell footer">Official sources include U.S. Treasury Fiscal Data (Debt to the Penny, MSPD, Daily Treasury Statement, Treasury Securities Auctions, Average Interest Rates and Interest Expense), TreasuryDirect buyback schedules, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, and New York Fed primary-dealer statistics.</footer>
+  <footer class="shell footer">Official sources include U.S. Treasury Fiscal Data (Debt to the Penny, MSPD, Daily Treasury Statement, Treasury Securities Auctions, Average Interest Rates and Interest Expense), U.S. Treasury Daily Par Yield and Real Yield Curves, TreasuryDirect buyback schedules, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, and New York Fed primary-dealer statistics.</footer>
 </body>
 </html>
