@@ -2,7 +2,7 @@
   const state = {data:null, range:'1Y', curveChart:null, historyChart:null, spreadChart:null, breakevenChart:null};
   const RANGE_VALUES = ['1M','3M','6M','1Y','3Y','5Y','10Y','ALL'];
   const KEY_TENORS = ['3m','6m','1y','2y','3y','5y','7y','10y','20y','30y'];
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
   const finite = value => Number.isFinite(Number(value));
   const num = value => Number(value);
   const fmtPct = (value,digits=2) => finite(value) ? `${num(value).toFixed(digits)}%` : '—';
@@ -134,7 +134,7 @@
     const rows=sampleRows(filterRange(nominal()));
     destroy(canvas);
     const defs=[['3m','3M'],['2y','2Y'],['10y','10Y'],['30y','30Y']];
-    state.historyChart=new Chart(canvas,{type:'line',data:{labels:rows.map(r=>r.date),datasets:defs.map(([key,label])=>({label,data:rows.map(r=>r[key]),borderWidth:1.8,pointRadius:0,pointHoverRadius:4,tension:.08,spanGaps:true}))},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#dbe6f4'}},tooltip:{callbacks:{title:items=>prettyDate(items?.[0]?.label),label:ctx=>` ${ctx.dataset.label}: ${fmtPct(ctx.parsed.y)}`}}},scales:{x:{grid:{display:false},ticks:{color:'#96a6ba',maxTicksLimit:10}},y:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',callback:v=>`${Number(v).toFixed(1)}%`},title:{display:true,text:'Yield',color:'#96a6ba'}}}}});
+    state.historyChart=new Chart(canvas,{type:'line',data:{labels:rows.map(r=>r.date),datasets:defs.map(([key,label])=>({label,data:rows.map(r=>r[key]),borderWidth:1.8,pointRadius:0,pointHoverRadius:4,tension:.08,spanGaps:false}))},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#dbe6f4'}},tooltip:{callbacks:{title:items=>prettyDate(items?.[0]?.label),label:ctx=>` ${ctx.dataset.label}: ${fmtPct(ctx.parsed.y)}`}}},scales:{x:{grid:{display:false},ticks:{color:'#96a6ba',maxTicksLimit:10}},y:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',callback:v=>`${Number(v).toFixed(1)}%`},title:{display:true,text:'Yield',color:'#96a6ba'}}}}});
   }
 
   function drawSpreads(){
@@ -143,7 +143,7 @@
     const rows=sampleRows(filterRange(spreads()));
     destroy(canvas);
     const defs=[['10y_2y_bps','10Y − 2Y'],['10y_3m_bps','10Y − 3M'],['30y_10y_bps','30Y − 10Y']];
-    state.spreadChart=new Chart(canvas,{type:'line',data:{labels:rows.map(r=>r.date),datasets:defs.map(([key,label])=>({label,data:rows.map(r=>r[key]),borderWidth:1.8,pointRadius:0,pointHoverRadius:4,tension:.08,spanGaps:true}))},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#dbe6f4'}},tooltip:{callbacks:{title:items=>prettyDate(items?.[0]?.label),label:ctx=>` ${ctx.dataset.label}: ${fmtBps(ctx.parsed.y)}`}}},scales:{x:{grid:{display:false},ticks:{color:'#96a6ba',maxTicksLimit:10}},y:{grid:{color:ctx=>Number(ctx.tick?.value)===0?'rgba(219,230,244,.30)':'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',callback:v=>`${v} bps`},title:{display:true,text:'Curve spread',color:'#96a6ba'}}}}});
+    state.spreadChart=new Chart(canvas,{type:'line',data:{labels:rows.map(r=>r.date),datasets:defs.map(([key,label])=>({label,data:rows.map(r=>r[key]),borderWidth:1.8,pointRadius:0,pointHoverRadius:4,tension:.08,spanGaps:false}))},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#dbe6f4'}},tooltip:{callbacks:{title:items=>prettyDate(items?.[0]?.label),label:ctx=>` ${ctx.dataset.label}: ${fmtBps(ctx.parsed.y)}`}}},scales:{x:{grid:{display:false},ticks:{color:'#96a6ba',maxTicksLimit:10}},y:{grid:{color:ctx=>Number(ctx.tick?.value)===0?'rgba(219,230,244,.30)':'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',callback:v=>`${v} bps`},title:{display:true,text:'Curve spread',color:'#96a6ba'}}}}});
   }
 
   function drawBreakeven(){
@@ -152,7 +152,7 @@
     const rows=sampleRows(filterRange(breakeven()));
     destroy(canvas);
     const defs=[['5y','5Y'],['10y','10Y'],['30y','30Y']];
-    state.breakevenChart=new Chart(canvas,{type:'line',data:{labels:rows.map(r=>r.date),datasets:defs.map(([key,label])=>({label:`${label} breakeven`,data:rows.map(r=>r[key]),borderWidth:1.8,pointRadius:0,pointHoverRadius:4,tension:.08,spanGaps:true}))},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#dbe6f4'}},tooltip:{callbacks:{title:items=>prettyDate(items?.[0]?.label),label:ctx=>` ${ctx.dataset.label}: ${fmtPct(ctx.parsed.y)}`}}},scales:{x:{grid:{display:false},ticks:{color:'#96a6ba',maxTicksLimit:10}},y:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',callback:v=>`${Number(v).toFixed(1)}%`},title:{display:true,text:'Nominal − real yield',color:'#96a6ba'}}}}});
+    state.breakevenChart=new Chart(canvas,{type:'line',data:{labels:rows.map(r=>r.date),datasets:defs.map(([key,label])=>({label:`${label} breakeven`,data:rows.map(r=>r[key]),borderWidth:1.8,pointRadius:0,pointHoverRadius:4,tension:.08,spanGaps:false}))},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#dbe6f4'}},tooltip:{callbacks:{title:items=>prettyDate(items?.[0]?.label),label:ctx=>` ${ctx.dataset.label}: ${fmtPct(ctx.parsed.y)}`}}},scales:{x:{grid:{display:false},ticks:{color:'#96a6ba',maxTicksLimit:10}},y:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',callback:v=>`${Number(v).toFixed(1)}%`},title:{display:true,text:'Nominal − real yield',color:'#96a6ba'}}}}});
   }
 
   function csvCell(value){
