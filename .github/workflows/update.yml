@@ -101,7 +101,10 @@ jobs:
         run: uv venv --python 3.13 && uv pip install --python .venv/bin/python -r requirements.txt
 
       - name: Refresh official data
-        run: .venv/bin/python scripts/update_data_v24.py
+        run: .venv/bin/python scripts/update_data_v25.py
+
+      - name: Validate browser-safe JSON
+        run: .venv/bin/python scripts/validate_browser_json.py
 
       - name: Validate Phase 8 output
         run: .venv/bin/python scripts/validate_phase8_state.py
@@ -168,7 +171,8 @@ jobs:
             echo "Branch advanced during refresh; regenerating on latest HEAD."
             git restore data/dashboard.json
             git pull --ff-only origin "$GITHUB_REF_NAME"
-            .venv/bin/python scripts/update_data_v24.py
+            .venv/bin/python scripts/update_data_v25.py
+            .venv/bin/python scripts/validate_browser_json.py
             .venv/bin/python scripts/validate_phase8_state.py
             .venv/bin/python scripts/validate_phase9_state.py
             .venv/bin/python scripts/validate_phase10_state.py
