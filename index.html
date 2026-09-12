@@ -5,23 +5,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#07101d" />
   <title>US Treasury Ownership Tracker</title>
-  <meta name="description" content="Focused U.S. Treasury ownership dashboard using official Treasury and Federal Reserve data, with all-time headline history, future Treasury maturities and interest cash flows, foreign-holder history and source-specific observation dates." />
+  <meta name="description" content="Focused U.S. Treasury ownership dashboard using official Treasury and Federal Reserve data, with all-time headline history, future Treasury maturities and interest cash flows, institutional and foreign-holder history and source-specific observation dates." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="country-history.css" />
   <link rel="stylesheet" href="all-time-history.css" />
   <link rel="stylesheet" href="maturity-wall.css" />
+  <link rel="stylesheet" href="institution-history.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script defer src="app.js?v=20260911-sections-removed"></script>
   <script defer src="country-history.js"></script>
   <script defer src="all-time-history.js?v=20260911-current-debt-inline"></script>
   <script defer src="maturity-wall.js?v=20260911-interest-cashflow"></script>
+  <script defer src="institution-history.js?v=20260911-institution-history"></script>
 </head>
 <body class="core-dashboard ux5-core">
   <header class="shell hero">
     <div>
       <div class="eyebrow">U.S. TREASURY OWNERSHIP</div>
       <h1>Who Owns U.S. Treasuries?</h1>
-      <p class="lede">Track the headline ownership picture, all available official history, upcoming Treasury maturities and interest cash flows, major foreign holders and long-run country history while preserving each source's real reporting date.</p>
+      <p class="lede">Track the headline ownership picture, all available official history, upcoming Treasury maturities and interest cash flows, private institutional holders, major foreign holders and long-run country history while preserving each source's real reporting date.</p>
     </div>
     <div class="hero-side">
       <div class="status" id="updateStatus">Loading official data…</div>
@@ -80,6 +82,21 @@
       </div>
     </section>
 
+    <section class="panel institution-panel" id="institutionHistoryPanel">
+      <div class="panel-head">
+        <div><h2>Institution Holder History</h2><p class="institution-meta" id="institutionMeta">Loading institutional Treasury holdings…</p></div>
+        <div class="panel-actions">
+          <select id="institutionSeries" aria-label="Select institutional Treasury holder"></select>
+          <button id="downloadInstitutionCsv" type="button">Download institution CSV</button>
+        </div>
+      </div>
+      <div class="institution-body">
+        <div class="institution-toolbar"><div class="institution-range" id="institutionRanges"></div></div>
+        <div class="chart-wrap institution-chart"><canvas id="institutionHistoryChart"></canvas></div>
+        <div class="note inline-note institution-note" id="institutionNote">Treasury-specific quarterly holdings from the Federal Reserve Financial Accounts.</div>
+      </div>
+    </section>
+
     <section class="panel" id="foreignHoldersPanel">
       <div class="panel-head">
         <div><h2>Foreign Treasury Holders</h2><p id="foreignMeta"></p></div>
@@ -108,6 +125,6 @@
     <section class="note data-discipline"><strong>Data discipline:</strong> the site checks official sources daily, but ownership and maturity datasets publish on different schedules. Every displayed value keeps its real observation date, and variable/inflation-linked future interest is labeled as estimated rather than presented as fixed.</section>
   </main>
 
-  <footer class="shell footer">Official sources used by the retained dashboard include U.S. Treasury Fiscal Data (Debt to the Penny and MSPD), Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, with historical Treasury survey data used for country history.</footer>
+  <footer class="shell footer">Official sources used by the retained dashboard include U.S. Treasury Fiscal Data (Debt to the Penny and MSPD), Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, with Financial Accounts institution history and historical Treasury survey data used for holder history.</footer>
 </body>
 </html>
