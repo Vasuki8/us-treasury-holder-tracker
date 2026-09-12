@@ -102,6 +102,8 @@
         const plotted = history
           .map(item => ({x:periodX(item.period), y:item.value}))
           .filter(item => Number.isFinite(item.x) && Number.isFinite(item.y));
+        const xMin = plotted[0]?.x;
+        const xMax = plotted[plotted.length - 1]?.x;
 
         window.countryArchiveTrendChart = new Chart(canvas, {
           type:'line',
@@ -135,7 +137,7 @@
               }},
             },
             scales:{
-              x:{type:'linear',grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',maxTicksLimit:12,callback:value=>String(Math.round(Number(value)))}},
+              x:{type:'linear',min:xMin,max:xMax,bounds:'data',offset:false,grace:0,grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',maxTicksLimit:12,callback:value=>String(Math.round(Number(value)))}},
               y:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',callback:value=>`$${value}B`}},
             },
           },
