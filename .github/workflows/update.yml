@@ -101,7 +101,7 @@ jobs:
         run: uv venv --python 3.13 && uv pip install --python .venv/bin/python -r requirements.txt
 
       - name: Refresh official data
-        run: .venv/bin/python scripts/update_data_v23.py
+        run: .venv/bin/python scripts/update_data_v24.py
 
       - name: Validate Phase 8 output
         run: .venv/bin/python scripts/validate_phase8_state.py
@@ -148,6 +148,9 @@ jobs:
       - name: Validate Treasury yield curve
         run: .venv/bin/python scripts/validate_treasury_yield_curve.py
 
+      - name: Validate yield refinancing and auction history
+        run: .venv/bin/python scripts/validate_yield_refinancing_auction.py
+
       - name: Commit updated data safely
         if: github.event_name != 'pull_request'
         run: |
@@ -165,7 +168,7 @@ jobs:
             echo "Branch advanced during refresh; regenerating on latest HEAD."
             git restore data/dashboard.json
             git pull --ff-only origin "$GITHUB_REF_NAME"
-            .venv/bin/python scripts/update_data_v23.py
+            .venv/bin/python scripts/update_data_v24.py
             .venv/bin/python scripts/validate_phase8_state.py
             .venv/bin/python scripts/validate_phase9_state.py
             .venv/bin/python scripts/validate_phase10_state.py
@@ -181,6 +184,7 @@ jobs:
             .venv/bin/python scripts/validate_market_insights.py
             .venv/bin/python scripts/validate_dynamic_chart_ranges.py
             .venv/bin/python scripts/validate_treasury_yield_curve.py
+            .venv/bin/python scripts/validate_yield_refinancing_auction.py
           fi
 
           if git diff --quiet -- data/dashboard.json; then
