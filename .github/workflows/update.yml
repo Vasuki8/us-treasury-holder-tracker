@@ -9,6 +9,7 @@ on:
       - scripts/**
       - app.js
       - country-history.js
+      - country-history-archive.js
       - country-history.css
       - all-time-history.js
       - all-time-history.css
@@ -26,6 +27,7 @@ on:
       - scripts/**
       - app.js
       - country-history.js
+      - country-history-archive.js
       - country-history.css
       - all-time-history.js
       - all-time-history.css
@@ -59,6 +61,7 @@ jobs:
         run: |
           node --check app.js
           node --check country-history.js
+          node --check country-history-archive.js
           node --check all-time-history.js
           node --check maturity-wall.js
           node --check institution-history.js
