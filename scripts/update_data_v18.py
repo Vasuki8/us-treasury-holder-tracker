@@ -21,7 +21,8 @@ SERIES = [
         "key": "money_market_funds",
         "label": "Money market funds",
         "series_id": "BOGZ1FL633061105Q",
-        "note": "Treasury securities held by money market funds, quarterly end-of-period level.",
+        "drop_leading_zeros": True,
+        "note": "Treasury securities held by money market funds, quarterly end-of-period level. Leading pre-industry zero placeholders are removed.",
     },
     {
         "key": "mutual_funds",
@@ -145,6 +146,7 @@ def build_institution_history() -> dict:
         "note": (
             "Institution histories use Treasury-specific quarterly holdings series from the Federal Reserve Financial Accounts, distributed through FRED. "
             "Hedge-fund holdings begin in 2012:Q4 because that is when the Form PF-based estimate begins; pre-2012 placeholder zeros are excluded. "
+            "Leading zero placeholders are also removed where they predate an institution type's meaningful reported history. "
             "Broker-dealer holdings are a net position series and can be negative. Financial Accounts data can be revised in later releases."
         ),
     }
