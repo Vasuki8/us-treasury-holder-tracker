@@ -23,6 +23,7 @@ on:
       - market-insights.css
       - institution-history.js
       - institution-history.css
+      - range-sync.js
       - index.html
       - styles.css
       - .github/workflows/update.yml
@@ -47,6 +48,7 @@ on:
       - market-insights.css
       - institution-history.js
       - institution-history.css
+      - range-sync.js
       - index.html
       - styles.css
       - .github/workflows/update.yml
@@ -80,6 +82,7 @@ jobs:
           node --check primary-dealer.js
           node --check market-insights.js
           node --check institution-history.js
+          node --check range-sync.js
 
       - name: Install uv
         uses: astral-sh/setup-uv@v10.0.0
@@ -93,7 +96,7 @@ jobs:
         run: uv venv --python 3.13 && uv pip install --python .venv/bin/python -r requirements.txt
 
       - name: Refresh official data
-        run: .venv/bin/python scripts/update_data_v21.py
+        run: .venv/bin/python scripts/update_data_v22.py
 
       - name: Validate Phase 8 output
         run: .venv/bin/python scripts/validate_phase8_state.py
@@ -134,6 +137,9 @@ jobs:
       - name: Validate auction ownership and debt cost
         run: .venv/bin/python scripts/validate_market_insights.py
 
+      - name: Validate dynamic chart ranges
+        run: .venv/bin/python scripts/validate_dynamic_chart_ranges.py
+
       - name: Commit updated data safely
         if: github.event_name != 'pull_request'
         run: |
@@ -151,7 +157,7 @@ jobs:
             echo "Branch advanced during refresh; regenerating on latest HEAD."
             git restore data/dashboard.json
             git pull --ff-only origin "$GITHUB_REF_NAME"
-            .venv/bin/python scripts/update_data_v21.py
+            .venv/bin/python scripts/update_data_v22.py
             .venv/bin/python scripts/validate_phase8_state.py
             .venv/bin/python scripts/validate_phase9_state.py
             .venv/bin/python scripts/validate_phase10_state.py
@@ -165,6 +171,7 @@ jobs:
             .venv/bin/python scripts/validate_treasury_funding_pressure.py
             .venv/bin/python scripts/validate_buybacks_primary_dealers.py
             .venv/bin/python scripts/validate_market_insights.py
+            .venv/bin/python scripts/validate_dynamic_chart_ranges.py
           fi
 
           if git diff --quiet -- data/dashboard.json; then
