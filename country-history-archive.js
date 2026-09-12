@@ -1,6 +1,6 @@
 (() => {
   const RANGE_COUNTS = {'1Y':13,'3Y':37,'5Y':61,'10Y':121};
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmtB = value => value == null || !Number.isFinite(Number(value)) ? '—' : `$${Number(value).toLocaleString(undefined,{maximumFractionDigits:1})}B`;
   const signedB = value => value == null || !Number.isFinite(Number(value)) ? '—' : `${Number(value)>=0?'+':''}${Number(value).toFixed(1)}B`;
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -99,7 +99,10 @@
         const existing = Chart.getChart(canvas);
         if(existing) existing.destroy();
 
-        const plotted = history.map(item => ({x:periodX(item.period), y:item.value}));
+        const plotted = history
+          .map(item => ({x:periodX(item.period), y:item.value}))
+          .filter(item => Number.isFinite(item.x) && Number.isFinite(item.y));
+
         window.countryArchiveTrendChart = new Chart(canvas, {
           type:'line',
           data:{datasets:[{
@@ -132,7 +135,7 @@
               }},
             },
             scales:{
-              x:{type:'linear',grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',maxTicksLimit:12,callback:value=>String(Math.round(Number(value))) }},
+              x:{type:'linear',grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',maxTicksLimit:12,callback:value=>String(Math.round(Number(value)))}},
               y:{grid:{color:'rgba(148,184,221,.08)'},ticks:{color:'#96a6ba',callback:value=>`$${value}B`}},
             },
           },
