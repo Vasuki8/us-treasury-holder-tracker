@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#07101d" />
   <title>US Treasury Ownership Tracker</title>
-  <meta name="description" content="Focused U.S. Treasury ownership dashboard using official Treasury and Federal Reserve data, with all-time headline history, future Treasury maturities and interest cash flows, funding pressure, Treasury buybacks, primary-dealer positioning, institutional and foreign-holder history and source-specific observation dates." />
+  <meta name="description" content="Focused U.S. Treasury ownership dashboard using official Treasury and Federal Reserve data, with all-time history, maturities, interest cash flows, funding pressure, buybacks, auction demand, primary-dealer positioning, debt cost, ownership shares, institutional and foreign-holder history." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="country-history.css" />
   <link rel="stylesheet" href="all-time-history.css" />
   <link rel="stylesheet" href="maturity-wall.css" />
   <link rel="stylesheet" href="funding-pressure.css" />
   <link rel="stylesheet" href="primary-dealer.css" />
+  <link rel="stylesheet" href="market-insights.css" />
   <link rel="stylesheet" href="institution-history.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script defer src="app.js?v=20260911-sections-removed"></script>
@@ -21,6 +22,7 @@
   <script defer src="maturity-wall.js?v=20260911-interest-cashflow"></script>
   <script defer src="funding-pressure.js?v=20260911-buybacks"></script>
   <script defer src="primary-dealer.js?v=20260911-primary-dealers"></script>
+  <script defer src="market-insights.js?v=20260911-market-insights"></script>
   <script defer src="institution-history.js?v=20260911-institution-history"></script>
 </head>
 <body class="core-dashboard ux5-core">
@@ -28,7 +30,7 @@
     <div>
       <div class="eyebrow">U.S. TREASURY OWNERSHIP</div>
       <h1>Who Owns U.S. Treasuries?</h1>
-      <p class="lede">Track the headline ownership picture, all available official history, upcoming Treasury maturities and interest cash flows, funding pressure, announced issuance and buybacks, primary-dealer positioning, private institutional holders, major foreign holders and long-run country history while preserving each source's real reporting date.</p>
+      <p class="lede">Track ownership, long-run history, maturities and interest cash flows, funding pressure, announced issuance and buybacks, auction demand, primary-dealer positioning, debt cost, holder market share, institutional holders and major foreign holders while preserving each source's real reporting date.</p>
     </div>
     <div class="hero-side">
       <div class="status" id="updateStatus">Loading official data…</div>
@@ -69,81 +71,68 @@
       <div class="maturity-body">
         <div class="maturity-cards" id="maturityCards"></div>
         <div class="maturity-type-strip" id="maturityTypeStrip"></div>
-        <div class="maturity-toolbar">
-          <div class="maturity-range" id="maturityRanges"></div>
-        </div>
+        <div class="maturity-toolbar"><div class="maturity-range" id="maturityRanges"></div></div>
         <div class="chart-wrap maturity-chart"><canvas id="maturityChart"></canvas></div>
-        <div class="maturity-table-head">
-          <h3>Upcoming maturity dates</h3>
-          <p id="maturityTableMeta"></p>
-        </div>
+        <div class="maturity-table-head"><h3>Upcoming maturity dates</h3><p id="maturityTableMeta"></p></div>
         <div class="table-wrap maturity-table-wrap">
           <table>
             <thead><tr><th>Date</th><th>Principal</th><th>Interest due</th><th>Bills</th><th>Notes</th><th>Bonds</th><th>TIPS</th><th>FRNs</th><th>CUSIPs</th></tr></thead>
             <tbody id="maturityTable"></tbody>
           </table>
         </div>
-        <div class="note inline-note">All cards, type totals, the chart and the table update with the selected 30D / 90D / 1Y / 2Y / 5Y / 10Y / All horizon. Principal is gross scheduled maturity from the latest MSPD snapshot. Notes and Bonds use scheduled fixed coupons from current outstanding principal. TIPS and FRN interest is marked estimated because future inflation-adjusted principal and floating rates can change. Treasury bills have no periodic coupon and are excluded from interest due.</div>
+        <div class="note inline-note">All cards, type totals, the chart and the table update with the selected horizon. Principal is gross scheduled maturity from the latest MSPD snapshot. Notes and Bonds use scheduled fixed coupons from current outstanding principal. TIPS and FRN interest is marked estimated because future inflation-adjusted principal and floating rates can change. Treasury bills have no periodic coupon and are excluded from interest due.</div>
       </div>
     </section>
 
     <section class="panel funding-panel" id="treasuryFundingPressurePanel">
       <div class="panel-head">
         <div><h2>Treasury Funding Pressure</h2><p id="fundingMeta">Loading TGA cash, announced issuance and Treasury buybacks…</p></div>
-        <div class="panel-actions">
-          <button id="downloadFundingCsv" type="button">Download funding CSV</button>
-        </div>
+        <div class="panel-actions"><button id="downloadFundingCsv" type="button">Download funding CSV</button></div>
       </div>
       <div class="funding-body">
         <div class="funding-cards" id="fundingCards"></div>
         <div class="funding-toolbar"><div class="funding-range" id="fundingRanges"></div></div>
         <div class="funding-grid">
           <div class="funding-subpanel">
-            <div class="funding-subhead">
-              <div><h3>Scheduled cash vs announced issuance</h3><p>Principal and coupon cash compared with auction settlements and tentative buyback maximums.</p></div>
-            </div>
+            <div class="funding-subhead"><div><h3>Scheduled cash vs announced issuance</h3><p>Principal and coupon cash compared with auction settlements and tentative buyback maximums.</p></div></div>
             <div class="chart-wrap funding-chart"><canvas id="fundingPressureChart"></canvas></div>
           </div>
           <div class="funding-subpanel">
-            <div class="funding-subhead">
-              <div><h3>Treasury General Account</h3><p>Recent business-daily TGA closing balance.</p></div>
-            </div>
+            <div class="funding-subhead"><div><h3>Treasury General Account</h3><p>Recent business-daily TGA closing balance.</p></div></div>
             <div class="chart-wrap funding-tga-chart"><canvas id="fundingTgaChart"></canvas></div>
           </div>
         </div>
         <div class="funding-auctions">
-          <div class="funding-subhead">
-            <div><h3>Upcoming announced auction settlements</h3><p id="fundingAuctionMeta"></p></div>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Settlement</th><th>Auction</th><th>Type</th><th>Term</th><th>Offering</th></tr></thead>
-              <tbody id="fundingAuctionTable"></tbody>
-            </table>
-          </div>
+          <div class="funding-subhead"><div><h3>Upcoming announced auction settlements</h3><p id="fundingAuctionMeta"></p></div></div>
+          <div class="table-wrap"><table><thead><tr><th>Settlement</th><th>Auction</th><th>Type</th><th>Term</th><th>Offering</th></tr></thead><tbody id="fundingAuctionTable"></tbody></table></div>
         </div>
         <div class="funding-buybacks">
-          <div class="funding-subhead">
-            <div><h3>Upcoming Treasury buybacks</h3><p id="fundingBuybackMeta"></p></div>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Operation</th><th>Settlement</th><th>Type</th><th>Bucket</th><th>Maximum</th></tr></thead>
-              <tbody id="fundingBuybackTable"></tbody>
-            </table>
-          </div>
+          <div class="funding-subhead"><div><h3>Upcoming Treasury buybacks</h3><p id="fundingBuybackMeta"></p></div></div>
+          <div class="table-wrap"><table><thead><tr><th>Operation</th><th>Settlement</th><th>Type</th><th>Bucket</th><th>Maximum</th></tr></thead><tbody id="fundingBuybackTable"></tbody></table></div>
         </div>
-        <div class="note inline-note funding-note">This section compares gross scheduled marketable principal and modeled coupon interest with announced Treasury auction offering amounts, tentative buyback maximums and the latest TGA cash balance. Buyback maximums are caps rather than guaranteed purchases. Announced issuance is partial beyond Treasury's current announcement window and is not an exact net-funding requirement: taxes, other receipts/outlays, SOMA activity and future auction or buyback announcements also affect financing.</div>
+        <div class="note inline-note funding-note">This section compares gross scheduled marketable principal and modeled coupon interest with announced Treasury auction offering amounts, tentative buyback maximums and the latest TGA cash balance. Buyback maximums are caps rather than guaranteed purchases. Announced issuance is partial beyond Treasury's current announcement window and is not an exact net-funding requirement.</div>
+      </div>
+    </section>
+
+    <section class="panel auction-demand-panel" id="auctionDemandPanel">
+      <div class="panel-head">
+        <div><h2>Auction Demand</h2><p id="auctionDemandMeta">Loading recent Treasury auction demand…</p></div>
+      </div>
+      <div class="insight-body">
+        <div class="insight-cards" id="auctionDemandCards"></div>
+        <div class="chart-wrap insight-chart"><canvas id="auctionDemandChart"></canvas></div>
+        <div class="insight-table">
+          <div class="insight-subhead"><div><h3>Recent auction results</h3><p>Demand score combines bid-to-cover, indirect-bidder participation and inverse primary-dealer takedown.</p></div></div>
+          <div class="table-wrap"><table><thead><tr><th>Auction</th><th>Term</th><th>Bid/cover</th><th>Indirect</th><th>Dealers</th><th>Demand</th></tr></thead><tbody id="auctionDemandTable"></tbody></table></div>
+        </div>
+        <div class="note inline-note insight-note">The 0–100 demand score is a tracker research diagnostic, not an official Treasury metric. It compares each auction with recent auctions of the same term when enough comparable observations exist.</div>
       </div>
     </section>
 
     <section class="panel dealer-panel" id="primaryDealerPanel">
       <div class="panel-head">
         <div><h2>Primary Dealer Positioning</h2><p id="dealerMeta">Loading New York Fed weekly Treasury positions…</p></div>
-        <div class="panel-actions">
-          <select id="dealerSeries" aria-label="Select primary dealer Treasury position series"></select>
-          <button id="downloadDealerCsv" type="button">Download dealer CSV</button>
-        </div>
+        <div class="panel-actions"><select id="dealerSeries" aria-label="Select primary dealer Treasury position series"></select><button id="downloadDealerCsv" type="button">Download dealer CSV</button></div>
       </div>
       <div class="dealer-body">
         <div class="dealer-stats" id="dealerStats"></div>
@@ -153,13 +142,39 @@
       </div>
     </section>
 
+    <section class="panel debt-cost-panel" id="debtCostPanel">
+      <div class="panel-head">
+        <div><h2>Treasury Debt Cost</h2><p id="debtCostMeta">Loading official average rates and interest expense…</p></div>
+        <div class="panel-actions"><select id="debtCostRateSeries" aria-label="Select Treasury average interest-rate series"></select></div>
+      </div>
+      <div class="insight-body">
+        <div class="insight-cards" id="debtCostCards"></div>
+        <div class="insight-toolbar"><div class="insight-range" id="debtCostRanges"></div></div>
+        <div class="insight-grid">
+          <div class="insight-subpanel"><div class="insight-subhead"><div><h3>Average interest rate</h3><p>Official monthly average rate on outstanding Treasury securities.</p></div></div><div class="chart-wrap insight-chart"><canvas id="debtRateChart"></canvas></div></div>
+          <div class="insight-subpanel"><div class="insight-subhead"><div><h3>Interest expense</h3><p>Official monthly net interest expense on debt outstanding.</p></div></div><div class="chart-wrap insight-chart"><canvas id="debtExpenseChart"></canvas></div></div>
+        </div>
+        <div class="note inline-note insight-note" id="debtCostNote"></div>
+      </div>
+    </section>
+
+    <section class="panel ownership-share-panel" id="ownershipSharePanel">
+      <div class="panel-head">
+        <div><h2>Ownership Share History</h2><p id="ownershipShareMeta">Loading holder share of debt held by the public…</p></div>
+        <div class="panel-actions"><select id="ownershipShareSeries" aria-label="Select Treasury holder share series"></select><button id="downloadOwnershipShareCsv" type="button">Download share CSV</button></div>
+      </div>
+      <div class="insight-body">
+        <div class="insight-cards" id="ownershipShareCards"></div>
+        <div class="insight-toolbar"><div class="insight-range" id="ownershipShareRanges"></div></div>
+        <div class="chart-wrap insight-chart"><canvas id="ownershipShareChart"></canvas></div>
+        <div class="note inline-note insight-note" id="ownershipShareNote"></div>
+      </div>
+    </section>
+
     <section class="panel institution-panel" id="institutionHistoryPanel">
       <div class="panel-head">
         <div><h2>Institution Holder History</h2><p class="institution-meta" id="institutionMeta">Loading institutional Treasury holdings…</p></div>
-        <div class="panel-actions">
-          <select id="institutionSeries" aria-label="Select institutional Treasury holder"></select>
-          <button id="downloadInstitutionCsv" type="button">Download institution CSV</button>
-        </div>
+        <div class="panel-actions"><select id="institutionSeries" aria-label="Select institutional Treasury holder"></select><button id="downloadInstitutionCsv" type="button">Download institution CSV</button></div>
       </div>
       <div class="institution-body">
         <div class="institution-toolbar"><div class="institution-range" id="institutionRanges"></div></div>
@@ -169,33 +184,19 @@
     </section>
 
     <section class="panel" id="foreignHoldersPanel">
-      <div class="panel-head">
-        <div><h2>Foreign Treasury Holders</h2><p id="foreignMeta"></p></div>
-        <input id="countrySearch" type="search" placeholder="Search country…" />
-      </div>
-      <div class="grid-2">
-        <div class="chart-wrap"><canvas id="foreignChart"></canvas></div>
-        <div class="table-wrap table-tall">
-          <table>
-            <thead><tr><th>Holder</th><th>Holdings</th><th>1M</th><th>3M</th><th>1Y</th></tr></thead>
-            <tbody id="foreignTable"></tbody>
-          </table>
-        </div>
-      </div>
+      <div class="panel-head"><div><h2>Foreign Treasury Holders</h2><p id="foreignMeta"></p></div><input id="countrySearch" type="search" placeholder="Search country…" /></div>
+      <div class="grid-2"><div class="chart-wrap"><canvas id="foreignChart"></canvas></div><div class="table-wrap table-tall"><table><thead><tr><th>Holder</th><th>Holdings</th><th>1M</th><th>3M</th><th>1Y</th></tr></thead><tbody id="foreignTable"></tbody></table></div></div>
     </section>
 
     <section class="panel" id="foreignHistoryPanel">
-      <div class="panel-head">
-        <div><h2>Foreign Holder History</h2><p id="foreignTrendMeta"></p></div>
-        <select id="trendCountry" aria-label="Select foreign holder"></select>
-      </div>
+      <div class="panel-head"><div><h2>Foreign Holder History</h2><p id="foreignTrendMeta"></p></div><select id="trendCountry" aria-label="Select foreign holder"></select></div>
       <div class="chart-wrap"><canvas id="foreignTrendChart"></canvas></div>
       <div class="note inline-note">The All range combines Treasury-specific annual survey observations before the monthly TIC series begins with the complete monthly history from 2011 onward. Pre-1994 survey columns are not used because they report broader debt rather than Treasury debt separately. TIC country attribution can reflect custodian location rather than the ultimate beneficial owner.</div>
     </section>
 
-    <section class="note data-discipline"><strong>Data discipline:</strong> the site checks official sources daily, but ownership, maturity, TGA, auction, buyback and dealer datasets publish on different schedules. Every displayed value keeps its real observation date, tentative buyback caps are distinguished from actual purchases, and variable/inflation-linked future interest is labeled as estimated rather than presented as fixed.</section>
+    <section class="note data-discipline"><strong>Data discipline:</strong> the site checks official sources daily, but ownership, maturity, TGA, auction, buyback, dealer, average-rate and interest-expense datasets publish on different schedules. Every displayed value keeps its real observation date; ownership shares preserve source valuation caveats; tentative buyback caps are distinguished from actual purchases; and forward variable/inflation-linked interest remains labeled as estimated.</section>
   </main>
 
-  <footer class="shell footer">Official sources used by the retained dashboard include U.S. Treasury Fiscal Data (Debt to the Penny, MSPD, Daily Treasury Statement and Treasury Securities Auctions), TreasuryDirect buyback schedules, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, and New York Fed primary-dealer statistics.</footer>
+  <footer class="shell footer">Official sources include U.S. Treasury Fiscal Data (Debt to the Penny, MSPD, Daily Treasury Statement, Treasury Securities Auctions, Average Interest Rates and Interest Expense), TreasuryDirect buyback schedules, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, and New York Fed primary-dealer statistics.</footer>
 </body>
 </html>
