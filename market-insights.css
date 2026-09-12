@@ -1,0 +1,32 @@
+.insight-body{padding:0 20px 20px}
+.insight-cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:4px 0 14px}
+.insight-card{min-width:0;padding:14px 15px;border:1px solid rgba(148,184,221,.12);border-radius:14px;background:rgba(9,20,35,.58)}
+.insight-card span{display:block;color:#7890a4;font-size:11px;font-weight:700;letter-spacing:.055em;text-transform:uppercase}
+.insight-card strong{display:block;margin-top:6px;color:#f0f7ff;font-size:18px;letter-spacing:-.015em}
+.insight-card small{display:block;margin-top:5px;color:#91a5ba;font-size:11px;line-height:1.4}
+.insight-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 10px}
+.insight-range{display:flex;gap:6px;flex-wrap:wrap}
+.insight-range button{border:1px solid rgba(148,184,221,.15);border-radius:999px;background:rgba(7,16,29,.74);color:#8ea4b9;padding:6px 10px;font-size:11px;font-weight:700;cursor:pointer}
+.insight-range button:hover,.insight-range button.active{color:#eaf6ff;border-color:rgba(79,209,255,.34);background:rgba(79,209,255,.10)}
+.insight-chart{height:330px}
+.insight-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.insight-subpanel{min-width:0;padding:14px;border:1px solid rgba(148,184,221,.10);border-radius:14px;background:rgba(6,15,27,.42)}
+.insight-subhead{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px}
+.insight-subhead h3{margin:0;color:#dbe6f4;font-size:13px}
+.insight-subhead p{margin:2px 0 0;color:#7890a4;font-size:11px;line-height:1.4}
+.insight-table{margin-top:16px}
+.insight-table .table-wrap{max-height:380px}
+.insight-table th,.insight-table td{white-space:nowrap}
+.insight-note{margin-top:14px}
+.auction-demand-panel .insight-cards{grid-template-columns:repeat(4,minmax(0,1fr))}
+.ownership-share-panel .insight-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+.debt-cost-panel .insight-cards{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:1050px){
+  .insight-cards,.debt-cost-panel .insight-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .insight-grid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .insight-body{padding:0 12px 14px}
+  .insight-cards,.auction-demand-panel .insight-cards,.ownership-share-panel .insight-cards,.debt-cost-panel .insight-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .insight-chart{height:290px}
+}
