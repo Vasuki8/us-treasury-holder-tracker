@@ -250,11 +250,12 @@ def fetch_average_interest_rates() -> dict:
 
 
 def fetch_interest_expense() -> dict:
-    # Requesting only date + net amount lets Fiscal Data aggregate the component rows by date.
+    # Request only date + Treasury's current-month expense field so Fiscal Data
+    # aggregates the component rows to one total for each reporting month.
     payload = base.get_json(
         INTEREST_EXPENSE_URL,
         params={
-            "fields": "record_date,expense_net_amt",
+            "fields": "record_date,month_expense_amt",
             "sort": "record_date",
             "page[number]": 1,
             "page[size]": 10000,
@@ -264,7 +265,7 @@ def fetch_interest_expense() -> dict:
     rows = []
     for row in payload.get("data", []):
         obs_date = str(row.get("record_date") or "")[:10]
-        amount = base.to_float(row.get("expense_net_amt"))
+        amount = base.to_float(row.get("month_expense_amt"))
         if obs_date and amount is not None:
             rows.append({"date": obs_date, "expense_billions": amount / 1e9})
     rows.sort(key=lambda row: row["date"])
@@ -310,7 +311,7 @@ def fetch_interest_expense() -> dict:
             {"fiscal_year": fy, "expense_billions": annual[fy], "month_count": counts[fy]}
             for fy in sorted(annual)
         ],
-        "note": "Official Treasury net interest expense on debt outstanding, aggregated to one monthly total from the Fiscal Data component rows.",
+        "note": "Official Treasury current-month interest expense on debt outstanding, aggregated to one monthly total from the Fiscal Data component rows.",
     }
 
 
