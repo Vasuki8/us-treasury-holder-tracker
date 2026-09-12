@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T01:30:11Z",
+  "generated_at": "2026-09-12T02:21:50Z",
   "overview": {
     "as_of": "2026-09-10",
     "total_public_debt": 40047726949770.15,
@@ -128216,79 +128216,89 @@
   "sources": {
     "overview": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:29:17Z"
+      "checked_at": "2026-09-12T02:20:51Z"
     },
     "fed": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:29:17Z"
+      "checked_at": "2026-09-12T02:20:51Z"
     },
     "foreign_holders": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:30:00Z"
+      "checked_at": "2026-09-12T02:21:37Z"
     },
     "domestic_sectors": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:29:29Z"
+      "checked_at": "2026-09-12T02:21:04Z"
     },
     "soma": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:29:29Z"
+      "checked_at": "2026-09-12T02:21:04Z"
     },
     "money_market_funds": {
       "status": "error",
-      "checked_at": "2026-09-12T01:29:29Z",
+      "checked_at": "2026-09-12T02:21:04Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     },
     "auctions": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:29:29Z"
+      "checked_at": "2026-09-12T02:21:05Z"
     },
     "institutional_aggregates": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:29:30Z"
+      "checked_at": "2026-09-12T02:21:06Z"
     },
     "primary_dealers": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:29:30Z"
+      "checked_at": "2026-09-12T02:21:06Z"
     },
     "extended_holders": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:29:32Z"
+      "checked_at": "2026-09-12T02:21:07Z"
     },
     "nport": {
       "status": "pending",
-      "checked_at": "2026-09-12T01:29:32Z",
+      "checked_at": "2026-09-12T02:21:07Z",
       "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data."
     },
     "government_accounts": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:29:33Z"
+      "checked_at": "2026-09-12T02:21:08Z"
     },
     "all_time_history": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:30:07Z",
+      "checked_at": "2026-09-12T02:21:44Z",
       "message": null
     },
     "treasury_maturities": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:30:08Z",
+      "checked_at": "2026-09-12T02:21:46Z",
       "message": null
     },
     "treasury_interest": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:30:09Z",
+      "checked_at": "2026-09-12T02:21:46Z",
       "message": null
     },
     "institution_holder_history": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:30:11Z",
+      "checked_at": "2026-09-12T02:21:49Z",
+      "message": null
+    },
+    "treasury_funding_tga": {
+      "status": "ok",
+      "checked_at": "2026-09-12T02:21:49Z",
+      "message": null
+    },
+    "treasury_funding_auctions": {
+      "status": "ok",
+      "checked_at": "2026-09-12T02:21:50Z",
       "message": null
     }
   },
   "errors": [
     {
       "source": "money_market_funds",
-      "checked_at": "2026-09-12T01:29:29Z",
+      "checked_at": "2026-09-12T02:21:04Z",
       "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip"
     }
   ],
@@ -131442,7 +131452,7 @@
     },
     {
       "snapshot_date": "2026-09-12",
-      "generated_at": "2026-09-12T01:29:30Z",
+      "generated_at": "2026-09-12T02:21:06Z",
       "total_public_debt_trillions": 40.04772694977015,
       "debt_held_by_public_trillions": 32.36341810836411,
       "fed_treasuries_billions": 4552.337,
@@ -140315,7 +140325,7 @@
     "metadata_api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
     "metadata_status": {
       "status": "ok",
-      "checked_at": "2026-09-12T01:30:02Z",
+      "checked_at": "2026-09-12T02:21:39Z",
       "matched_cusips": 100,
       "requested_cusips": 100,
       "coverage_pct": 100.0,
@@ -141098,8 +141108,8 @@
         "reason": "5.8× the median absolute change in the available history; +5.5% versus the previous observation",
         "alert_id": "3c514daafff9351abd70",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-12T01:30:02Z",
-        "seen_count": 25
+        "last_seen_at": "2026-09-12T02:21:39Z",
+        "seen_count": 26
       },
       {
         "severity": "medium",
@@ -141116,8 +141126,8 @@
         "reason": "3.6× the median absolute change in the available history; -5.9% versus the previous observation",
         "alert_id": "a2abd62e8705288e4594",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-12T01:30:02Z",
-        "seen_count": 25
+        "last_seen_at": "2026-09-12T02:21:39Z",
+        "seen_count": 26
       },
       {
         "severity": "medium",
@@ -141134,8 +141144,8 @@
         "reason": "3.4× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "3ec1a5b57d11679e67b4",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-12T01:30:02Z",
-        "seen_count": 25
+        "last_seen_at": "2026-09-12T02:21:39Z",
+        "seen_count": 26
       },
       {
         "severity": "medium",
@@ -141152,8 +141162,8 @@
         "reason": "2.8× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-12T01:30:02Z",
-        "seen_count": 55
+        "last_seen_at": "2026-09-12T02:21:39Z",
+        "seen_count": 56
       }
     ],
     "alert_count": 4,
@@ -141161,7 +141171,7 @@
     "method": "A change is flagged when it clears a source-specific absolute dollar floor and is either at least 2.5× the median absolute change in the available history or at least 10% versus the previous observation. High severity begins at 4× the historical median or 20%. This is a statistical screening rule, not a prediction."
   },
   "provenance": {
-    "generated_at": "2026-09-12T01:30:02Z",
+    "generated_at": "2026-09-12T02:21:39Z",
     "source_count": 12,
     "series_count": 22,
     "sources": [
@@ -141171,7 +141181,7 @@
         "as_of": "2026-09-10",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:17Z",
+        "checked_at": "2026-09-12T02:20:51Z",
         "message": null,
         "urls": [
           {
@@ -141186,7 +141196,7 @@
         "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:17Z",
+        "checked_at": "2026-09-12T02:20:51Z",
         "message": null,
         "urls": [
           {
@@ -141205,7 +141215,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-12T01:30:00Z",
+        "checked_at": "2026-09-12T02:21:37Z",
         "message": null,
         "urls": [
           {
@@ -141220,7 +141230,7 @@
         "as_of": "2026:Q2",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:29Z",
+        "checked_at": "2026-09-12T02:21:04Z",
         "message": null,
         "urls": [
           {
@@ -141239,7 +141249,7 @@
         "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:29Z",
+        "checked_at": "2026-09-12T02:21:04Z",
         "message": null,
         "urls": [
           {
@@ -141258,7 +141268,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-12T01:29:29Z",
+        "checked_at": "2026-09-12T02:21:04Z",
         "message": "HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/dera/data/form-n-mfp-data-sets/20260810-20260908_nmfp.zip",
         "urls": []
       },
@@ -141268,7 +141278,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:29Z",
+        "checked_at": "2026-09-12T02:21:05Z",
         "message": null,
         "urls": [
           {
@@ -141287,7 +141297,7 @@
         "as_of": "2026-04-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:30Z",
+        "checked_at": "2026-09-12T02:21:06Z",
         "message": null,
         "urls": [
           {
@@ -141302,7 +141312,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:30Z",
+        "checked_at": "2026-09-12T02:21:06Z",
         "message": null,
         "urls": [
           {
@@ -141321,7 +141331,7 @@
         "as_of": "2026-04-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:32Z",
+        "checked_at": "2026-09-12T02:21:07Z",
         "message": null,
         "urls": [
           {
@@ -141336,7 +141346,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-12T01:29:32Z",
+        "checked_at": "2026-09-12T02:21:07Z",
         "message": "Quarterly N-PORT cache has not been ingested yet; aggregate ETF holdings remain available from Federal Reserve data.",
         "urls": [
           {
@@ -141355,7 +141365,7 @@
         "as_of": "2026-08-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:33Z",
+        "checked_at": "2026-09-12T02:21:08Z",
         "message": null,
         "urls": [
           {
@@ -141528,7 +141538,7 @@
     "note": "Provenance records the official source, observation date, retrieval path and latest health check separately so stale-but-valid observations are distinguishable from failed fetches."
   },
   "alert_history": {
-    "generated_at": "2026-09-12T01:30:02Z",
+    "generated_at": "2026-09-12T02:21:39Z",
     "active_count": 4,
     "cleared_count": 4,
     "episode_count": 8,
@@ -141537,7 +141547,7 @@
       {
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "seen_count": 55,
+        "seen_count": 56,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -141553,12 +141563,12 @@
         "multiple_of_baseline": 2.8190030474532106,
         "reason": "2.8× the median absolute change in the available history; -3.9% versus the previous observation",
         "series_key": "Foreign country|China, Mainland|MoM",
-        "last_seen_at": "2026-09-12T01:30:02Z"
+        "last_seen_at": "2026-09-12T02:21:39Z"
       },
       {
         "alert_id": "3c514daafff9351abd70",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "seen_count": 25,
+        "seen_count": 26,
         "cleared_at": null,
         "state": "active",
         "severity": "high",
@@ -141574,12 +141584,12 @@
         "multiple_of_baseline": 5.769035225759579,
         "reason": "5.8× the median absolute change in the available history; +5.5% versus the previous observation",
         "series_key": "Foreign country|Canada|MoM",
-        "last_seen_at": "2026-09-12T01:30:02Z"
+        "last_seen_at": "2026-09-12T02:21:39Z"
       },
       {
         "alert_id": "a2abd62e8705288e4594",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "seen_count": 25,
+        "seen_count": 26,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -141595,12 +141605,12 @@
         "multiple_of_baseline": 3.560577665086534,
         "reason": "3.6× the median absolute change in the available history; -5.9% versus the previous observation",
         "series_key": "Foreign country|Hong Kong|MoM",
-        "last_seen_at": "2026-09-12T01:30:02Z"
+        "last_seen_at": "2026-09-12T02:21:39Z"
       },
       {
         "alert_id": "3ec1a5b57d11679e67b4",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "seen_count": 25,
+        "seen_count": 26,
         "cleared_at": null,
         "state": "active",
         "severity": "medium",
@@ -141616,7 +141626,7 @@
         "multiple_of_baseline": 3.4464539342864966,
         "reason": "3.4× the median absolute change in the available history; -3.9% versus the previous observation",
         "series_key": "Foreign country|Cayman Islands|MoM",
-        "last_seen_at": "2026-09-12T01:30:02Z"
+        "last_seen_at": "2026-09-12T02:21:39Z"
       },
       {
         "alert_id": "10f3e7909be0493614fc",
@@ -141847,7 +141857,7 @@
     "note": "An alert episode is keyed by scope, series name, cadence and source observation date. The first-seen timestamp records when the tracker first detected it; it is cleared only after a healthy source refresh confirms that the episode is no longer current."
   },
   "alert_intelligence": {
-    "generated_at": "2026-09-12T01:30:04Z",
+    "generated_at": "2026-09-12T02:21:42Z",
     "row_count": 4,
     "extreme_count": 1,
     "elevated_count": 3,
@@ -141867,8 +141877,8 @@
         "reason": "5.8× the median absolute change in the available history; +5.5% versus the previous observation",
         "alert_id": "3c514daafff9351abd70",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-12T01:30:02Z",
-        "seen_count": 25,
+        "last_seen_at": "2026-09-12T02:21:39Z",
+        "seen_count": 26,
         "history_change_count": 174,
         "abs_change_percentile": 87.35632183908046,
         "robust_z": 3.82803614519123,
@@ -141892,8 +141902,8 @@
         "reason": "3.6× the median absolute change in the available history; -5.9% versus the previous observation",
         "alert_id": "a2abd62e8705288e4594",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-12T01:30:02Z",
-        "seen_count": 25,
+        "last_seen_at": "2026-09-12T02:21:39Z",
+        "seen_count": 26,
         "history_change_count": 174,
         "abs_change_percentile": 94.82758620689656,
         "robust_z": -3.0061174871794787,
@@ -141917,8 +141927,8 @@
         "reason": "3.4× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "3ec1a5b57d11679e67b4",
         "first_seen_at": "2026-09-11T00:11:49Z",
-        "last_seen_at": "2026-09-12T01:30:02Z",
-        "seen_count": 25,
+        "last_seen_at": "2026-09-12T02:21:39Z",
+        "seen_count": 26,
         "history_change_count": 174,
         "abs_change_percentile": 95.40229885057471,
         "robust_z": -2.7735222409875395,
@@ -141942,8 +141952,8 @@
         "reason": "2.8× the median absolute change in the available history; -3.9% versus the previous observation",
         "alert_id": "70599bd6721a756b9772",
         "first_seen_at": "2026-09-10T19:09:22Z",
-        "last_seen_at": "2026-09-12T01:30:02Z",
-        "seen_count": 55,
+        "last_seen_at": "2026-09-12T02:21:39Z",
+        "seen_count": 56,
         "history_change_count": 174,
         "abs_change_percentile": 89.65517241379311,
         "robust_z": -1.6167623107414908,
@@ -141956,7 +141966,7 @@
     "method": "Phase 8 keeps the transparent Phase 6 threshold rule and adds two diagnostics: the percentile rank of the latest absolute change versus prior historical absolute changes, and a robust z-score based on the median and median absolute deviation (MAD). These diagnostics rank unusual moves; they do not forecast prices or infer causes."
   },
   "phase8_notifications": {
-    "generated_at": "2026-09-12T01:30:04Z",
+    "generated_at": "2026-09-12T02:21:42Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:25:05Z",
     "last_processed_transition_at": "2026-09-11T18:40:38Z",
@@ -141976,7 +141986,7 @@
     "note": "The queue contains only high-severity lifecycle transitions that occurred after Phase 8 established its watermark. Existing high alerts are watched but are not retroactively labeled new. This block is notification-ready output; delivery is intentionally separate from the data updater."
   },
   "publication_history": {
-    "generated_at": "2026-09-12T01:30:04Z",
+    "generated_at": "2026-09-12T02:21:42Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:25:05Z",
     "source_count": 12,
@@ -141989,7 +141999,7 @@
         "as_of": "2026-09-10",
         "frequency": "Business daily",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:17Z"
+        "checked_at": "2026-09-12T02:20:51Z"
       },
       {
         "key": "fed",
@@ -141997,7 +142007,7 @@
         "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:17Z"
+        "checked_at": "2026-09-12T02:20:51Z"
       },
       {
         "key": "foreign_holders",
@@ -142005,7 +142015,7 @@
         "as_of": "2026-06",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-12T01:30:00Z"
+        "checked_at": "2026-09-12T02:21:37Z"
       },
       {
         "key": "domestic_sectors",
@@ -142013,7 +142023,7 @@
         "as_of": "2026:Q2",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:29Z"
+        "checked_at": "2026-09-12T02:21:04Z"
       },
       {
         "key": "soma",
@@ -142021,7 +142031,7 @@
         "as_of": "2026-09-09",
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:29Z"
+        "checked_at": "2026-09-12T02:21:04Z"
       },
       {
         "key": "money_market_funds",
@@ -142029,7 +142039,7 @@
         "as_of": null,
         "frequency": null,
         "status": "error",
-        "checked_at": "2026-09-12T01:29:29Z"
+        "checked_at": "2026-09-12T02:21:04Z"
       },
       {
         "key": "auctions",
@@ -142037,7 +142047,7 @@
         "as_of": "2026-09-17",
         "frequency": "Released as auctions occur",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:29Z"
+        "checked_at": "2026-09-12T02:21:05Z"
       },
       {
         "key": "institutional_aggregates",
@@ -142045,7 +142055,7 @@
         "as_of": "2026-04-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:30Z"
+        "checked_at": "2026-09-12T02:21:06Z"
       },
       {
         "key": "primary_dealers",
@@ -142053,7 +142063,7 @@
         "as_of": "2026-09-02",
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:30Z"
+        "checked_at": "2026-09-12T02:21:06Z"
       },
       {
         "key": "extended_holders",
@@ -142061,7 +142071,7 @@
         "as_of": "2026-04-01",
         "frequency": "Quarterly",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:32Z"
+        "checked_at": "2026-09-12T02:21:07Z"
       },
       {
         "key": "nport",
@@ -142069,7 +142079,7 @@
         "as_of": null,
         "frequency": null,
         "status": "pending",
-        "checked_at": "2026-09-12T01:29:32Z"
+        "checked_at": "2026-09-12T02:21:07Z"
       },
       {
         "key": "government_accounts",
@@ -142077,7 +142087,7 @@
         "as_of": "2026-08-31",
         "frequency": "Monthly",
         "status": "ok",
-        "checked_at": "2026-09-12T01:29:33Z"
+        "checked_at": "2026-09-12T02:21:08Z"
       }
     ],
     "events": [
@@ -142838,7 +142848,7 @@
     "note": "SOMA percent-outstanding comes from the New York Fed holding data already used by the tracker. Implied outstanding amount is derived as SOMA par divided by SOMA percent outstanding and is shown only where both inputs are available. Percentile ranks compare the stored SOMA CUSIP universe, not every outstanding Treasury security."
   },
   "holder_profiles": {
-    "generated_at": "2026-09-12T01:30:05Z",
+    "generated_at": "2026-09-12T02:21:42Z",
     "profile_count": 82,
     "scope_counts": {
       "Foreign country": 60,
@@ -176608,7 +176618,7 @@
     "note": "Holder profiles preserve each source's own cadence. Foreign-country profiles are monthly current holdings, U.S. sectors are quarterly aggregate holdings, and primary-dealer profiles are weekly market-positioning series rather than ownership balances."
   },
   "flow_intelligence": {
-    "generated_at": "2026-09-12T01:30:05Z",
+    "generated_at": "2026-09-12T02:21:42Z",
     "scope_summaries": [
       {
         "scope": "Foreign country",
@@ -176835,7 +176845,7 @@
     "note": "Phase 9 compares accumulation/reduction breadth within each source cadence instead of summing monthly, quarterly and weekly changes into a false synchronized flow number. Primary-dealer series remain classified as market positioning, not ownership."
   },
   "release_calendar": {
-    "generated_at": "2026-09-12T01:30:05Z",
+    "generated_at": "2026-09-12T02:21:42Z",
     "today": "2026-09-12",
     "source_count": 12,
     "status_counts": {
@@ -176855,7 +176865,7 @@
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "source_status": "ok",
         "last_observation": "2026-09-02",
-        "last_checked_at": "2026-09-12T01:29:30Z",
+        "last_checked_at": "2026-09-12T02:21:06Z",
         "expected_next_observation": "2026-09-09",
         "expected_publication_date": "2026-09-10",
         "days_to_expected": -2,
@@ -176872,7 +176882,7 @@
         "frequency": null,
         "source_status": "error",
         "last_observation": null,
-        "last_checked_at": "2026-09-12T01:29:29Z",
+        "last_checked_at": "2026-09-12T02:21:04Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -176889,7 +176899,7 @@
         "frequency": "Business daily",
         "source_status": "ok",
         "last_observation": "2026-09-10",
-        "last_checked_at": "2026-09-12T01:29:17Z",
+        "last_checked_at": "2026-09-12T02:20:51Z",
         "expected_next_observation": "2026-09-11",
         "expected_publication_date": "2026-09-14",
         "days_to_expected": 2,
@@ -176906,7 +176916,7 @@
         "frequency": "Monthly",
         "source_status": "ok",
         "last_observation": "2026-06",
-        "last_checked_at": "2026-09-12T01:30:00Z",
+        "last_checked_at": "2026-09-12T02:21:37Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-09-16",
         "days_to_expected": 4,
@@ -176923,7 +176933,7 @@
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-12T01:29:17Z",
+        "last_checked_at": "2026-09-12T02:20:51Z",
         "expected_next_observation": "2026-09-16",
         "expected_publication_date": "2026-09-17",
         "days_to_expected": 5,
@@ -176940,7 +176950,7 @@
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-12T01:29:29Z",
+        "last_checked_at": "2026-09-12T02:21:04Z",
         "expected_next_observation": "2026-09-16",
         "expected_publication_date": "2026-09-17",
         "days_to_expected": 5,
@@ -176957,7 +176967,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026-04-01",
-        "last_checked_at": "2026-09-12T01:29:30Z",
+        "last_checked_at": "2026-09-12T02:21:06Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-10-12",
         "days_to_expected": 30,
@@ -176974,7 +176984,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026-04-01",
-        "last_checked_at": "2026-09-12T01:29:32Z",
+        "last_checked_at": "2026-09-12T02:21:07Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-10-12",
         "days_to_expected": 30,
@@ -176991,7 +177001,7 @@
         "frequency": "Monthly",
         "source_status": "ok",
         "last_observation": "2026-08-31",
-        "last_checked_at": "2026-09-12T01:29:33Z",
+        "last_checked_at": "2026-09-12T02:21:08Z",
         "expected_next_observation": "2026-09-30",
         "expected_publication_date": "2026-10-12",
         "days_to_expected": 30,
@@ -177008,7 +177018,7 @@
         "frequency": "Quarterly",
         "source_status": "ok",
         "last_observation": "2026:Q2",
-        "last_checked_at": "2026-09-12T01:29:29Z",
+        "last_checked_at": "2026-09-12T02:21:04Z",
         "expected_next_observation": "2026-09-30",
         "expected_publication_date": "2026-12-11",
         "days_to_expected": 90,
@@ -177025,7 +177035,7 @@
         "frequency": null,
         "source_status": "pending",
         "last_observation": null,
-        "last_checked_at": "2026-09-12T01:29:32Z",
+        "last_checked_at": "2026-09-12T02:21:07Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -177042,7 +177052,7 @@
         "frequency": "Released as auctions occur",
         "source_status": "ok",
         "last_observation": "2026-09-17",
-        "last_checked_at": "2026-09-12T01:29:29Z",
+        "last_checked_at": "2026-09-12T02:21:05Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -177061,7 +177071,7 @@
         "frequency": "Weekly; updated Thursdays with the previous week's data",
         "source_status": "ok",
         "last_observation": "2026-09-02",
-        "last_checked_at": "2026-09-12T01:29:30Z",
+        "last_checked_at": "2026-09-12T02:21:06Z",
         "expected_next_observation": "2026-09-09",
         "expected_publication_date": "2026-09-10",
         "days_to_expected": -2,
@@ -177078,7 +177088,7 @@
         "frequency": null,
         "source_status": "error",
         "last_observation": null,
-        "last_checked_at": "2026-09-12T01:29:29Z",
+        "last_checked_at": "2026-09-12T02:21:04Z",
         "expected_next_observation": null,
         "expected_publication_date": null,
         "days_to_expected": null,
@@ -177095,7 +177105,7 @@
         "frequency": "Business daily",
         "source_status": "ok",
         "last_observation": "2026-09-10",
-        "last_checked_at": "2026-09-12T01:29:17Z",
+        "last_checked_at": "2026-09-12T02:20:51Z",
         "expected_next_observation": "2026-09-11",
         "expected_publication_date": "2026-09-14",
         "days_to_expected": 2,
@@ -177112,7 +177122,7 @@
         "frequency": "Monthly",
         "source_status": "ok",
         "last_observation": "2026-06",
-        "last_checked_at": "2026-09-12T01:30:00Z",
+        "last_checked_at": "2026-09-12T02:21:37Z",
         "expected_next_observation": "2026-07-31",
         "expected_publication_date": "2026-09-16",
         "days_to_expected": 4,
@@ -177129,7 +177139,7 @@
         "frequency": "Weekly (Wednesday level; published Thursday)",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-12T01:29:17Z",
+        "last_checked_at": "2026-09-12T02:20:51Z",
         "expected_next_observation": "2026-09-16",
         "expected_publication_date": "2026-09-17",
         "days_to_expected": 5,
@@ -177146,7 +177156,7 @@
         "frequency": "Weekly (Wednesday holdings; published Thursday)",
         "source_status": "ok",
         "last_observation": "2026-09-09",
-        "last_checked_at": "2026-09-12T01:29:29Z",
+        "last_checked_at": "2026-09-12T02:21:04Z",
         "expected_next_observation": "2026-09-16",
         "expected_publication_date": "2026-09-17",
         "days_to_expected": 5,
@@ -177160,7 +177170,7 @@
     "note": "Release dates in this panel are tracker estimates derived from each source's normal cadence and latest observation. They are operational freshness diagnostics, not publisher commitments. Weekday adjustment does not model U.S. federal holidays. Event-driven auction data and SEC bulk feeds with access limitations are not labeled overdue from cadence alone."
   },
   "flow_regime_history": {
-    "generated_at": "2026-09-12T01:30:05Z",
+    "generated_at": "2026-09-12T02:21:42Z",
     "initialized": true,
     "baseline_initialized_at": "2026-09-10T19:57:05Z",
     "event_count": 7,
@@ -177520,7 +177530,7 @@
     "note": "A regime point is added only when a scope advances to a new source observation signature. Daily updater runs do not create duplicate regime history. Breadth is calculated within each source cadence; the cross-scope regime compares direction only and never adds monthly TIC flows to quarterly Financial Accounts changes."
   },
   "research_brief": {
-    "generated_at": "2026-09-12T01:30:05Z",
+    "generated_at": "2026-09-12T02:21:42Z",
     "item_count": 4,
     "items": [
       {
@@ -177555,7 +177565,7 @@
     "note": "Rule-based research brief generated only from the official-data blocks already present in the tracker. It is descriptive, not investment advice or a forecast."
   },
   "navigation_index": {
-    "generated_at": "2026-09-12T01:30:05Z",
+    "generated_at": "2026-09-12T02:21:42Z",
     "entry_count": 227,
     "type_counts": {
       "section": 29,
@@ -179802,7 +179812,7 @@
     "note": "Client-side command-palette index built from dashboard sections, holder profiles, Treasury CUSIPs, official sources and active alert diagnostics."
   },
   "holder_comovement": {
-    "generated_at": "2026-09-12T01:30:05Z",
+    "generated_at": "2026-09-12T02:21:42Z",
     "pair_count": 811,
     "scope_count": 3,
     "scopes": [
@@ -191729,7 +191739,7 @@
     "note": "Co-movement is descriptive association, not evidence that one holder causes another holder's Treasury activity. Comparisons stay within the same holder scope so monthly, quarterly and weekly series are not mixed."
   },
   "discovery_summary": {
-    "generated_at": "2026-09-12T01:30:05Z",
+    "generated_at": "2026-09-12T02:21:42Z",
     "searchable_items": 227,
     "comparable_pairs": 811,
     "scope_summaries": [
@@ -192569,7 +192579,7 @@
     "note": "This score is a research diagnostic, not an official Treasury metric. Auction takedown describes awards at issuance and does not measure secondary-market ownership."
   },
   "market_structure_map": {
-    "generated_at": "2026-09-12T01:30:05Z",
+    "generated_at": "2026-09-12T02:21:43Z",
     "overall_state": "cautious mix",
     "state_counts": {
       "supportive": 0,
@@ -192636,7 +192646,7 @@
         "display": "1",
         "state": "cautious",
         "reading": "Unusual moves active",
-        "observation": "2026-09-12T01:30:05Z",
+        "observation": "2026-09-12T02:21:42Z",
         "detail": "Persistent alert lifecycle with robust anomaly diagnostics."
       },
       {
@@ -301391,5 +301401,1723 @@
       }
     ],
     "note": "Institution histories use Treasury-specific quarterly holdings series from the Federal Reserve Financial Accounts, distributed through FRED. Hedge-fund holdings begin in 2012:Q4 because that is when the Form PF-based estimate begins; pre-2012 placeholder zeros are excluded. Leading zero placeholders are also removed where they predate an institution type's meaningful reported history. Broker-dealer holdings are a net position series and can be negative. Financial Accounts data can be revised in later releases."
+  },
+  "treasury_funding_pressure": {
+    "as_of": "2026-09-12",
+    "unit": "$B",
+    "maturity_as_of": "2026-08-31",
+    "interest_as_of": "2026-08-31",
+    "tga": {
+      "as_of": "2026-09-10",
+      "current_billions": 818.11,
+      "change_30d_billions": -179.22000000000003,
+      "history_start": "2025-08-08",
+      "observation_count": 274,
+      "history": [
+        {
+          "date": "2025-08-08",
+          "balance_billions": 491.063
+        },
+        {
+          "date": "2025-08-11",
+          "balance_billions": 504.28
+        },
+        {
+          "date": "2025-08-12",
+          "balance_billions": 545.499
+        },
+        {
+          "date": "2025-08-13",
+          "balance_billions": 515.469
+        },
+        {
+          "date": "2025-08-14",
+          "balance_billions": 549.08
+        },
+        {
+          "date": "2025-08-15",
+          "balance_billions": 493.107
+        },
+        {
+          "date": "2025-08-18",
+          "balance_billions": 519.49
+        },
+        {
+          "date": "2025-08-19",
+          "balance_billions": 562.784
+        },
+        {
+          "date": "2025-08-20",
+          "balance_billions": 526.063
+        },
+        {
+          "date": "2025-08-21",
+          "balance_billions": 561.249
+        },
+        {
+          "date": "2025-08-22",
+          "balance_billions": 581.509
+        },
+        {
+          "date": "2025-08-25",
+          "balance_billions": 595.519
+        },
+        {
+          "date": "2025-08-26",
+          "balance_billions": 632.894
+        },
+        {
+          "date": "2025-08-27",
+          "balance_billions": 595.798
+        },
+        {
+          "date": "2025-08-28",
+          "balance_billions": 609.66
+        },
+        {
+          "date": "2025-08-29",
+          "balance_billions": 555.224
+        },
+        {
+          "date": "2025-09-02",
+          "balance_billions": 690.094
+        },
+        {
+          "date": "2025-09-03",
+          "balance_billions": 661.939
+        },
+        {
+          "date": "2025-09-04",
+          "balance_billions": 669.272
+        },
+        {
+          "date": "2025-09-05",
+          "balance_billions": 666.137
+        },
+        {
+          "date": "2025-09-08",
+          "balance_billions": 680.369
+        },
+        {
+          "date": "2025-09-09",
+          "balance_billions": 690.281
+        },
+        {
+          "date": "2025-09-10",
+          "balance_billions": 667.585
+        },
+        {
+          "date": "2025-09-11",
+          "balance_billions": 682.732
+        },
+        {
+          "date": "2025-09-12",
+          "balance_billions": 707.77
+        },
+        {
+          "date": "2025-09-15",
+          "balance_billions": 857.709
+        },
+        {
+          "date": "2025-09-16",
+          "balance_billions": 823.741
+        },
+        {
+          "date": "2025-09-17",
+          "balance_billions": 807.142
+        },
+        {
+          "date": "2025-09-18",
+          "balance_billions": 816.451
+        },
+        {
+          "date": "2025-09-19",
+          "balance_billions": 818.53
+        },
+        {
+          "date": "2025-09-22",
+          "balance_billions": 822.471
+        },
+        {
+          "date": "2025-09-23",
+          "balance_billions": 781.512
+        },
+        {
+          "date": "2025-09-24",
+          "balance_billions": 757.97
+        },
+        {
+          "date": "2025-09-25",
+          "balance_billions": 761.087
+        },
+        {
+          "date": "2025-09-26",
+          "balance_billions": 786.337
+        },
+        {
+          "date": "2025-09-29",
+          "balance_billions": 805.674
+        },
+        {
+          "date": "2025-09-30",
+          "balance_billions": 890.825
+        },
+        {
+          "date": "2025-10-01",
+          "balance_billions": 819.378
+        },
+        {
+          "date": "2025-10-02",
+          "balance_billions": 823.845
+        },
+        {
+          "date": "2025-10-03",
+          "balance_billions": 798.367
+        },
+        {
+          "date": "2025-10-06",
+          "balance_billions": 815.262
+        },
+        {
+          "date": "2025-10-07",
+          "balance_billions": 823.736
+        },
+        {
+          "date": "2025-10-08",
+          "balance_billions": 794.054
+        },
+        {
+          "date": "2025-10-09",
+          "balance_billions": 796.023
+        },
+        {
+          "date": "2025-10-10",
+          "balance_billions": 794.452
+        },
+        {
+          "date": "2025-10-14",
+          "balance_billions": 841.366
+        },
+        {
+          "date": "2025-10-15",
+          "balance_billions": 851.952
+        },
+        {
+          "date": "2025-10-16",
+          "balance_billions": 899.682
+        },
+        {
+          "date": "2025-10-17",
+          "balance_billions": 905.393
+        },
+        {
+          "date": "2025-10-20",
+          "balance_billions": 905.754
+        },
+        {
+          "date": "2025-10-21",
+          "balance_billions": 929.315
+        },
+        {
+          "date": "2025-10-22",
+          "balance_billions": 905.074
+        },
+        {
+          "date": "2025-10-23",
+          "balance_billions": 944.965
+        },
+        {
+          "date": "2025-10-24",
+          "balance_billions": 942.495
+        },
+        {
+          "date": "2025-10-27",
+          "balance_billions": 964.762
+        },
+        {
+          "date": "2025-10-28",
+          "balance_billions": 984.857
+        },
+        {
+          "date": "2025-10-29",
+          "balance_billions": 983.859
+        },
+        {
+          "date": "2025-10-30",
+          "balance_billions": 1000.632
+        },
+        {
+          "date": "2025-10-31",
+          "balance_billions": 926.328
+        },
+        {
+          "date": "2025-11-03",
+          "balance_billions": 924.957
+        },
+        {
+          "date": "2025-11-04",
+          "balance_billions": 939.584
+        },
+        {
+          "date": "2025-11-05",
+          "balance_billions": 942.7
+        },
+        {
+          "date": "2025-11-06",
+          "balance_billions": 953.555
+        },
+        {
+          "date": "2025-11-07",
+          "balance_billions": 949.804
+        },
+        {
+          "date": "2025-11-10",
+          "balance_billions": 965.301
+        },
+        {
+          "date": "2025-11-12",
+          "balance_billions": 943.145
+        },
+        {
+          "date": "2025-11-13",
+          "balance_billions": 961.929
+        },
+        {
+          "date": "2025-11-14",
+          "balance_billions": 959.113
+        },
+        {
+          "date": "2025-11-17",
+          "balance_billions": 924.961
+        },
+        {
+          "date": "2025-11-18",
+          "balance_billions": 928.422
+        },
+        {
+          "date": "2025-11-19",
+          "balance_billions": 900.832
+        },
+        {
+          "date": "2025-11-20",
+          "balance_billions": 909.575
+        },
+        {
+          "date": "2025-11-21",
+          "balance_billions": 892.074
+        },
+        {
+          "date": "2025-11-24",
+          "balance_billions": 906.547
+        },
+        {
+          "date": "2025-11-25",
+          "balance_billions": 931.736
+        },
+        {
+          "date": "2025-11-26",
+          "balance_billions": 899.678
+        },
+        {
+          "date": "2025-11-28",
+          "balance_billions": 956.014
+        },
+        {
+          "date": "2025-12-01",
+          "balance_billions": 948.079
+        },
+        {
+          "date": "2025-12-02",
+          "balance_billions": 935.847
+        },
+        {
+          "date": "2025-12-03",
+          "balance_billions": 908.523
+        },
+        {
+          "date": "2025-12-04",
+          "balance_billions": 878.666
+        },
+        {
+          "date": "2025-12-05",
+          "balance_billions": 870.232
+        },
+        {
+          "date": "2025-12-08",
+          "balance_billions": 880.125
+        },
+        {
+          "date": "2025-12-09",
+          "balance_billions": 837.306
+        },
+        {
+          "date": "2025-12-10",
+          "balance_billions": 805.827
+        },
+        {
+          "date": "2025-12-11",
+          "balance_billions": 792.667
+        },
+        {
+          "date": "2025-12-12",
+          "balance_billions": 792.465
+        },
+        {
+          "date": "2025-12-15",
+          "balance_billions": 912.994
+        },
+        {
+          "date": "2025-12-16",
+          "balance_billions": 887.18
+        },
+        {
+          "date": "2025-12-17",
+          "balance_billions": 861.417
+        },
+        {
+          "date": "2025-12-18",
+          "balance_billions": 842.422
+        },
+        {
+          "date": "2025-12-19",
+          "balance_billions": 839.799
+        },
+        {
+          "date": "2025-12-22",
+          "balance_billions": 872.048
+        },
+        {
+          "date": "2025-12-23",
+          "balance_billions": 824.439
+        },
+        {
+          "date": "2025-12-24",
+          "balance_billions": 801.537
+        },
+        {
+          "date": "2025-12-26",
+          "balance_billions": 833.784
+        },
+        {
+          "date": "2025-12-29",
+          "balance_billions": 858.993
+        },
+        {
+          "date": "2025-12-30",
+          "balance_billions": 826.406
+        },
+        {
+          "date": "2025-12-31",
+          "balance_billions": 872.853
+        },
+        {
+          "date": "2026-01-02",
+          "balance_billions": 781.204
+        },
+        {
+          "date": "2026-01-05",
+          "balance_billions": 801.062
+        },
+        {
+          "date": "2026-01-06",
+          "balance_billions": 771.936
+        },
+        {
+          "date": "2026-01-07",
+          "balance_billions": 783.571
+        },
+        {
+          "date": "2026-01-08",
+          "balance_billions": 773.709
+        },
+        {
+          "date": "2026-01-09",
+          "balance_billions": 775.114
+        },
+        {
+          "date": "2026-01-12",
+          "balance_billions": 797.322
+        },
+        {
+          "date": "2026-01-13",
+          "balance_billions": 780.79
+        },
+        {
+          "date": "2026-01-14",
+          "balance_billions": 777.061
+        },
+        {
+          "date": "2026-01-15",
+          "balance_billions": 840.883
+        },
+        {
+          "date": "2026-01-16",
+          "balance_billions": 868.226
+        },
+        {
+          "date": "2026-01-20",
+          "balance_billions": 899.869
+        },
+        {
+          "date": "2026-01-21",
+          "balance_billions": 871.169
+        },
+        {
+          "date": "2026-01-22",
+          "balance_billions": 888.45
+        },
+        {
+          "date": "2026-01-23",
+          "balance_billions": 900.542
+        },
+        {
+          "date": "2026-01-26",
+          "balance_billions": 943.665
+        },
+        {
+          "date": "2026-01-27",
+          "balance_billions": 974.848
+        },
+        {
+          "date": "2026-01-28",
+          "balance_billions": 952.705
+        },
+        {
+          "date": "2026-01-29",
+          "balance_billions": 968.066
+        },
+        {
+          "date": "2026-01-30",
+          "balance_billions": 893.245
+        },
+        {
+          "date": "2026-02-02",
+          "balance_billions": 897.983
+        },
+        {
+          "date": "2026-02-03",
+          "balance_billions": 907.892
+        },
+        {
+          "date": "2026-02-04",
+          "balance_billions": 907.737
+        },
+        {
+          "date": "2026-02-05",
+          "balance_billions": 914.563
+        },
+        {
+          "date": "2026-02-06",
+          "balance_billions": 905.282
+        },
+        {
+          "date": "2026-02-09",
+          "balance_billions": 917.568
+        },
+        {
+          "date": "2026-02-10",
+          "balance_billions": 948.634
+        },
+        {
+          "date": "2026-02-11",
+          "balance_billions": 910.533
+        },
+        {
+          "date": "2026-02-12",
+          "balance_billions": 920.999
+        },
+        {
+          "date": "2026-02-13",
+          "balance_billions": 913.645
+        },
+        {
+          "date": "2026-02-17",
+          "balance_billions": 924.659
+        },
+        {
+          "date": "2026-02-18",
+          "balance_billions": 888.854
+        },
+        {
+          "date": "2026-02-19",
+          "balance_billions": 904.858
+        },
+        {
+          "date": "2026-02-20",
+          "balance_billions": 893.37
+        },
+        {
+          "date": "2026-02-23",
+          "balance_billions": 888.165
+        },
+        {
+          "date": "2026-02-24",
+          "balance_billions": 901.173
+        },
+        {
+          "date": "2026-02-25",
+          "balance_billions": 838.975
+        },
+        {
+          "date": "2026-02-26",
+          "balance_billions": 849.449
+        },
+        {
+          "date": "2026-02-27",
+          "balance_billions": 798.943
+        },
+        {
+          "date": "2026-03-02",
+          "balance_billions": 871.377
+        },
+        {
+          "date": "2026-03-03",
+          "balance_billions": 859.738
+        },
+        {
+          "date": "2026-03-04",
+          "balance_billions": 846.979
+        },
+        {
+          "date": "2026-03-05",
+          "balance_billions": 840.85
+        },
+        {
+          "date": "2026-03-06",
+          "balance_billions": 833.086
+        },
+        {
+          "date": "2026-03-09",
+          "balance_billions": 858.548
+        },
+        {
+          "date": "2026-03-10",
+          "balance_billions": 862.841
+        },
+        {
+          "date": "2026-03-11",
+          "balance_billions": 805.806
+        },
+        {
+          "date": "2026-03-12",
+          "balance_billions": 809.284
+        },
+        {
+          "date": "2026-03-13",
+          "balance_billions": 806.335
+        },
+        {
+          "date": "2026-03-16",
+          "balance_billions": 937.577
+        },
+        {
+          "date": "2026-03-17",
+          "balance_billions": 929.668
+        },
+        {
+          "date": "2026-03-18",
+          "balance_billions": 875.833
+        },
+        {
+          "date": "2026-03-19",
+          "balance_billions": 882.822
+        },
+        {
+          "date": "2026-03-20",
+          "balance_billions": 870.864
+        },
+        {
+          "date": "2026-03-23",
+          "balance_billions": 909.509
+        },
+        {
+          "date": "2026-03-24",
+          "balance_billions": 876.206
+        },
+        {
+          "date": "2026-03-25",
+          "balance_billions": 837.412
+        },
+        {
+          "date": "2026-03-26",
+          "balance_billions": 823.031
+        },
+        {
+          "date": "2026-03-27",
+          "balance_billions": 848.655
+        },
+        {
+          "date": "2026-03-30",
+          "balance_billions": 868.478
+        },
+        {
+          "date": "2026-03-31",
+          "balance_billions": 893.0
+        },
+        {
+          "date": "2026-04-01",
+          "balance_billions": 803.553
+        },
+        {
+          "date": "2026-04-02",
+          "balance_billions": 776.076
+        },
+        {
+          "date": "2026-04-03",
+          "balance_billions": 753.938
+        },
+        {
+          "date": "2026-04-06",
+          "balance_billions": 775.433
+        },
+        {
+          "date": "2026-04-07",
+          "balance_billions": 728.227
+        },
+        {
+          "date": "2026-04-08",
+          "balance_billions": 697.079
+        },
+        {
+          "date": "2026-04-09",
+          "balance_billions": 686.969
+        },
+        {
+          "date": "2026-04-10",
+          "balance_billions": 703.218
+        },
+        {
+          "date": "2026-04-13",
+          "balance_billions": 758.91
+        },
+        {
+          "date": "2026-04-14",
+          "balance_billions": 779.506
+        },
+        {
+          "date": "2026-04-15",
+          "balance_billions": 924.435
+        },
+        {
+          "date": "2026-04-16",
+          "balance_billions": 971.155
+        },
+        {
+          "date": "2026-04-17",
+          "balance_billions": 998.636
+        },
+        {
+          "date": "2026-04-20",
+          "balance_billions": 1038.035
+        },
+        {
+          "date": "2026-04-21",
+          "balance_billions": 1029.51
+        },
+        {
+          "date": "2026-04-22",
+          "balance_billions": 1007.172
+        },
+        {
+          "date": "2026-04-23",
+          "balance_billions": 969.844
+        },
+        {
+          "date": "2026-04-24",
+          "balance_billions": 974.251
+        },
+        {
+          "date": "2026-04-27",
+          "balance_billions": 1002.382
+        },
+        {
+          "date": "2026-04-28",
+          "balance_billions": 990.422
+        },
+        {
+          "date": "2026-04-29",
+          "balance_billions": 988.102
+        },
+        {
+          "date": "2026-04-30",
+          "balance_billions": 969.383
+        },
+        {
+          "date": "2026-05-01",
+          "balance_billions": 857.311
+        },
+        {
+          "date": "2026-05-04",
+          "balance_billions": 879.968
+        },
+        {
+          "date": "2026-05-05",
+          "balance_billions": 860.287
+        },
+        {
+          "date": "2026-05-06",
+          "balance_billions": 862.757
+        },
+        {
+          "date": "2026-05-07",
+          "balance_billions": 846.562
+        },
+        {
+          "date": "2026-05-08",
+          "balance_billions": 839.161
+        },
+        {
+          "date": "2026-05-11",
+          "balance_billions": 854.589
+        },
+        {
+          "date": "2026-05-12",
+          "balance_billions": 844.036
+        },
+        {
+          "date": "2026-05-13",
+          "balance_billions": 807.42
+        },
+        {
+          "date": "2026-05-14",
+          "balance_billions": 802.412
+        },
+        {
+          "date": "2026-05-15",
+          "balance_billions": 758.819
+        },
+        {
+          "date": "2026-05-18",
+          "balance_billions": 785.925
+        },
+        {
+          "date": "2026-05-19",
+          "balance_billions": 822.275
+        },
+        {
+          "date": "2026-05-20",
+          "balance_billions": 781.979
+        },
+        {
+          "date": "2026-05-21",
+          "balance_billions": 785.882
+        },
+        {
+          "date": "2026-05-22",
+          "balance_billions": 825.55
+        },
+        {
+          "date": "2026-05-26",
+          "balance_billions": 881.329
+        },
+        {
+          "date": "2026-05-27",
+          "balance_billions": 842.66
+        },
+        {
+          "date": "2026-05-28",
+          "balance_billions": 849.71
+        },
+        {
+          "date": "2026-05-29",
+          "balance_billions": 903.881
+        },
+        {
+          "date": "2026-06-01",
+          "balance_billions": 856.842
+        },
+        {
+          "date": "2026-06-02",
+          "balance_billions": 866.075
+        },
+        {
+          "date": "2026-06-03",
+          "balance_billions": 845.722
+        },
+        {
+          "date": "2026-06-04",
+          "balance_billions": 844.521
+        },
+        {
+          "date": "2026-06-05",
+          "balance_billions": 825.54
+        },
+        {
+          "date": "2026-06-08",
+          "balance_billions": 844.229
+        },
+        {
+          "date": "2026-06-09",
+          "balance_billions": 830.399
+        },
+        {
+          "date": "2026-06-10",
+          "balance_billions": 801.084
+        },
+        {
+          "date": "2026-06-11",
+          "balance_billions": 799.517
+        },
+        {
+          "date": "2026-06-12",
+          "balance_billions": 816.023
+        },
+        {
+          "date": "2026-06-15",
+          "balance_billions": 979.791
+        },
+        {
+          "date": "2026-06-16",
+          "balance_billions": 981.113
+        },
+        {
+          "date": "2026-06-17",
+          "balance_billions": 956.502
+        },
+        {
+          "date": "2026-06-18",
+          "balance_billions": 915.085
+        },
+        {
+          "date": "2026-06-22",
+          "balance_billions": 942.815
+        },
+        {
+          "date": "2026-06-23",
+          "balance_billions": 925.876
+        },
+        {
+          "date": "2026-06-24",
+          "balance_billions": 901.845
+        },
+        {
+          "date": "2026-06-25",
+          "balance_billions": 871.469
+        },
+        {
+          "date": "2026-06-26",
+          "balance_billions": 895.576
+        },
+        {
+          "date": "2026-06-29",
+          "balance_billions": 876.961
+        },
+        {
+          "date": "2026-06-30",
+          "balance_billions": 919.145
+        },
+        {
+          "date": "2026-07-01",
+          "balance_billions": 807.359
+        },
+        {
+          "date": "2026-07-02",
+          "balance_billions": 770.587
+        },
+        {
+          "date": "2026-07-03",
+          "balance_billions": 776.843
+        },
+        {
+          "date": "2026-07-06",
+          "balance_billions": 783.107
+        },
+        {
+          "date": "2026-07-07",
+          "balance_billions": 784.964
+        },
+        {
+          "date": "2026-07-08",
+          "balance_billions": 749.244
+        },
+        {
+          "date": "2026-07-09",
+          "balance_billions": 744.637
+        },
+        {
+          "date": "2026-07-10",
+          "balance_billions": 738.273
+        },
+        {
+          "date": "2026-07-13",
+          "balance_billions": 750.282
+        },
+        {
+          "date": "2026-07-14",
+          "balance_billions": 787.814
+        },
+        {
+          "date": "2026-07-15",
+          "balance_billions": 795.976
+        },
+        {
+          "date": "2026-07-16",
+          "balance_billions": 822.51
+        },
+        {
+          "date": "2026-07-17",
+          "balance_billions": 815.418
+        },
+        {
+          "date": "2026-07-20",
+          "balance_billions": 828.197
+        },
+        {
+          "date": "2026-07-21",
+          "balance_billions": 874.98
+        },
+        {
+          "date": "2026-07-22",
+          "balance_billions": 835.417
+        },
+        {
+          "date": "2026-07-23",
+          "balance_billions": 877.201
+        },
+        {
+          "date": "2026-07-24",
+          "balance_billions": 886.3
+        },
+        {
+          "date": "2026-07-27",
+          "balance_billions": 902.751
+        },
+        {
+          "date": "2026-07-28",
+          "balance_billions": 966.136
+        },
+        {
+          "date": "2026-07-29",
+          "balance_billions": 970.442
+        },
+        {
+          "date": "2026-07-30",
+          "balance_billions": 997.946
+        },
+        {
+          "date": "2026-07-31",
+          "balance_billions": 876.566
+        },
+        {
+          "date": "2026-08-03",
+          "balance_billions": 870.083
+        },
+        {
+          "date": "2026-08-04",
+          "balance_billions": 924.219
+        },
+        {
+          "date": "2026-08-05",
+          "balance_billions": 929.325
+        },
+        {
+          "date": "2026-08-06",
+          "balance_billions": 961.726
+        },
+        {
+          "date": "2026-08-07",
+          "balance_billions": 954.113
+        },
+        {
+          "date": "2026-08-10",
+          "balance_billions": 966.851
+        },
+        {
+          "date": "2026-08-11",
+          "balance_billions": 997.33
+        },
+        {
+          "date": "2026-08-12",
+          "balance_billions": 959.405
+        },
+        {
+          "date": "2026-08-13",
+          "balance_billions": 966.587
+        },
+        {
+          "date": "2026-08-14",
+          "balance_billions": 959.184
+        },
+        {
+          "date": "2026-08-17",
+          "balance_billions": 932.785
+        },
+        {
+          "date": "2026-08-18",
+          "balance_billions": 961.952
+        },
+        {
+          "date": "2026-08-19",
+          "balance_billions": 936.406
+        },
+        {
+          "date": "2026-08-20",
+          "balance_billions": 935.077
+        },
+        {
+          "date": "2026-08-21",
+          "balance_billions": 933.218
+        },
+        {
+          "date": "2026-08-24",
+          "balance_billions": 966.849
+        },
+        {
+          "date": "2026-08-25",
+          "balance_billions": 994.137
+        },
+        {
+          "date": "2026-08-26",
+          "balance_billions": 959.435
+        },
+        {
+          "date": "2026-08-27",
+          "balance_billions": 950.804
+        },
+        {
+          "date": "2026-08-28",
+          "balance_billions": 971.343
+        },
+        {
+          "date": "2026-08-31",
+          "balance_billions": 1023.554
+        },
+        {
+          "date": "2026-09-01",
+          "balance_billions": 942.793
+        },
+        {
+          "date": "2026-09-02",
+          "balance_billions": 944.364
+        },
+        {
+          "date": "2026-09-03",
+          "balance_billions": 903.928
+        },
+        {
+          "date": "2026-09-04",
+          "balance_billions": 888.923
+        },
+        {
+          "date": "2026-09-08",
+          "balance_billions": 880.019
+        },
+        {
+          "date": "2026-09-09",
+          "balance_billions": 843.705
+        },
+        {
+          "date": "2026-09-10",
+          "balance_billions": 818.11
+        }
+      ],
+      "source_url": "https://fiscaldata.treasury.gov/datasets/daily-treasury-statement/operating-cash-balance",
+      "api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/dts/operating_cash_balance",
+      "frequency": "Business daily",
+      "unit": "$B",
+      "note": "Treasury General Account closing balance from the Daily Treasury Statement. Figures are reported in millions and converted to billions."
+    },
+    "auctions": {
+      "as_of": "2026-09-04",
+      "announced_through": "2026-09-30",
+      "auction_count": 5,
+      "total_announced_billions": 278.0,
+      "rows": [
+        {
+          "cusip": "912797VH7",
+          "record_date": "2026-09-04",
+          "announcement_date": "2026-09-10",
+          "auction_date": "2026-09-14",
+          "issue_date": "2026-09-17",
+          "maturity_date": null,
+          "security_type": "Bill",
+          "security_term": "13-Week",
+          "reopening": "Yes",
+          "offering_billions": 92.0
+        },
+        {
+          "cusip": "912797UD7",
+          "record_date": "2026-09-04",
+          "announcement_date": "2026-09-10",
+          "auction_date": "2026-09-14",
+          "issue_date": "2026-09-17",
+          "maturity_date": null,
+          "security_type": "Bill",
+          "security_term": "26-Week",
+          "reopening": "Yes",
+          "offering_billions": 79.0
+        },
+        {
+          "cusip": "912797SK4",
+          "record_date": "2026-09-04",
+          "announcement_date": "2026-09-10",
+          "auction_date": "2026-09-15",
+          "issue_date": "2026-09-17",
+          "maturity_date": null,
+          "security_type": "Bill",
+          "security_term": "6-Week",
+          "reopening": "Yes",
+          "offering_billions": 75.0
+        },
+        {
+          "cusip": "912810UX4",
+          "record_date": "2026-09-04",
+          "announcement_date": "2026-09-10",
+          "auction_date": "2026-09-15",
+          "issue_date": "2026-09-18",
+          "maturity_date": null,
+          "security_type": "Bond",
+          "security_term": "19-Year 11-Month",
+          "reopening": "Yes",
+          "offering_billions": 13.0
+        },
+        {
+          "cusip": "91282CRE3",
+          "record_date": "2026-09-04",
+          "announcement_date": "2026-09-10",
+          "auction_date": "2026-09-17",
+          "issue_date": "2026-09-30",
+          "maturity_date": null,
+          "security_type": "Note",
+          "security_term": "9-Year 10-Month",
+          "reopening": "Yes",
+          "offering_billions": 19.0
+        }
+      ],
+      "source_url": "https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/",
+      "api_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/upcoming_auctions",
+      "frequency": "As announced",
+      "unit": "$B",
+      "note": "Announced Treasury auction offering amounts. Funding-pressure comparisons use issue/settlement dates because that is when auction cash is raised."
+    },
+    "horizons": {
+      "30D": {
+        "end_date": "2026-10-12",
+        "principal_billions": 2333.9755523,
+        "interest_billions": 31.160177104375006,
+        "gross_scheduled_cash_billions": 2365.135729404375,
+        "announced_issuance_billions": 278.0,
+        "announced_coverage_pct": 11.754082294042814,
+        "unmatched_scheduled_cash_billions": 2087.135729404375
+      },
+      "90D": {
+        "end_date": "2026-12-11",
+        "principal_billions": 5371.35897349581,
+        "interest_billions": 183.8305969606193,
+        "gross_scheduled_cash_billions": 5555.189570456429,
+        "announced_issuance_billions": 278.0,
+        "announced_coverage_pct": 5.0043296718163806,
+        "unmatched_scheduled_cash_billions": 5277.189570456429
+      },
+      "1Y": {
+        "end_date": "2027-09-12",
+        "principal_billions": 9604.099138387073,
+        "interest_billions": 724.0012314324352,
+        "gross_scheduled_cash_billions": 10328.100369819509,
+        "announced_issuance_billions": 278.0,
+        "announced_coverage_pct": 2.691685692873047,
+        "unmatched_scheduled_cash_billions": 10050.100369819509
+      }
+    },
+    "timeline": [
+      {
+        "date": "2026-09-15",
+        "principal_billions": 338.9965929,
+        "interest_billions": 6.289094407250001,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 345.28568730725
+      },
+      {
+        "date": "2026-09-17",
+        "principal_billions": 282.1592617,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 246.0,
+        "gross_scheduled_cash_billions": 282.1592617
+      },
+      {
+        "date": "2026-09-18",
+        "principal_billions": 0.0,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 13.0,
+        "gross_scheduled_cash_billions": 0.0
+      },
+      {
+        "date": "2026-09-22",
+        "principal_billions": 294.70721380000003,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 294.70721380000003
+      },
+      {
+        "date": "2026-09-24",
+        "principal_billions": 276.6783956,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 276.6783956
+      },
+      {
+        "date": "2026-09-29",
+        "principal_billions": 177.1685593,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 177.1685593
+      },
+      {
+        "date": "2026-09-30",
+        "principal_billions": 173.9905942,
+        "interest_billions": 24.871082697125004,
+        "announced_issuance_billions": 19.0,
+        "gross_scheduled_cash_billions": 198.861676897125
+      },
+      {
+        "date": "2026-10-01",
+        "principal_billions": 334.1354294,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 334.1354294
+      },
+      {
+        "date": "2026-10-06",
+        "principal_billions": 177.36412239999999,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 177.36412239999999
+      },
+      {
+        "date": "2026-10-08",
+        "principal_billions": 278.775383,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 278.775383
+      },
+      {
+        "date": "2026-10-13",
+        "principal_billions": 181.0500826,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 181.0500826
+      },
+      {
+        "date": "2026-10-15",
+        "principal_billions": 264.97029629581,
+        "interest_billions": 11.847797277181773,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 276.81809357299176
+      },
+      {
+        "date": "2026-10-20",
+        "principal_billions": 179.657019,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 179.657019
+      },
+      {
+        "date": "2026-10-22",
+        "principal_billions": 180.13002110000002,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 180.13002110000002
+      },
+      {
+        "date": "2026-10-27",
+        "principal_billions": 74.4104452,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 74.4104452
+      },
+      {
+        "date": "2026-10-29",
+        "principal_billions": 233.6065931,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 233.6065931
+      },
+      {
+        "date": "2026-10-30",
+        "principal_billions": 0.0,
+        "interest_billions": 24.06745086625,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 24.06745086625
+      },
+      {
+        "date": "2026-10-31",
+        "principal_billions": 254.0718029,
+        "interest_billions": 2.0231663531875,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 256.0949692531875
+      },
+      {
+        "date": "2026-11-03",
+        "principal_billions": 74.70283620000001,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 74.70283620000001
+      },
+      {
+        "date": "2026-11-05",
+        "principal_billions": 181.1718231,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 181.1718231
+      },
+      {
+        "date": "2026-11-10",
+        "principal_billions": 76.4555521,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 76.4555521
+      },
+      {
+        "date": "2026-11-12",
+        "principal_billions": 179.38842300000002,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 179.38842300000002
+      },
+      {
+        "date": "2026-11-15",
+        "principal_billions": 122.385152,
+        "interest_billions": 87.71164443112502,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 210.09679643112503
+      },
+      {
+        "date": "2026-11-17",
+        "principal_billions": 76.22301639999999,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 76.22301639999999
+      },
+      {
+        "date": "2026-11-19",
+        "principal_billions": 180.36676319999998,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 180.36676319999998
+      },
+      {
+        "date": "2026-11-24",
+        "principal_billions": 76.3143735,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 76.3143735
+      },
+      {
+        "date": "2026-11-27",
+        "principal_billions": 228.4029553,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 228.4029553
+      },
+      {
+        "date": "2026-11-30",
+        "principal_billions": 158.96432119999997,
+        "interest_billions": 27.020360928500008,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 185.98468212849997
+      },
+      {
+        "date": "2026-12-01",
+        "principal_billions": 75.9325769,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 75.9325769
+      },
+      {
+        "date": "2026-12-03",
+        "principal_billions": 81.8748975,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 81.8748975
+      },
+      {
+        "date": "2026-12-08",
+        "principal_billions": 75.3539501,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 75.3539501
+      },
+      {
+        "date": "2026-12-10",
+        "principal_billions": 81.9505205,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 81.9505205
+      },
+      {
+        "date": "2026-12-15",
+        "principal_billions": 127.34655910000001,
+        "interest_billions": 6.968967273625001,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 134.315526373625
+      },
+      {
+        "date": "2026-12-17",
+        "principal_billions": 83.4454293,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 83.4454293
+      },
+      {
+        "date": "2026-12-22",
+        "principal_billions": 76.5918135,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 76.5918135
+      },
+      {
+        "date": "2026-12-24",
+        "principal_billions": 134.5727102,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 134.5727102
+      },
+      {
+        "date": "2026-12-30",
+        "principal_billions": 0.0,
+        "interest_billions": 24.457487533375005,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 24.457487533375005
+      },
+      {
+        "date": "2026-12-31",
+        "principal_billions": 252.29453869999998,
+        "interest_billions": 2.1836326201250005,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 254.47817132012497
+      },
+      {
+        "date": "2027-01-07",
+        "principal_billions": 83.18085099999999,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 83.18085099999999
+      },
+      {
+        "date": "2027-01-14",
+        "principal_billions": 82.2012707,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 82.2012707
+      },
+      {
+        "date": "2027-01-15",
+        "principal_billions": 130.53587370361,
+        "interest_billions": 13.527637031382264,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 144.06351073499226
+      },
+      {
+        "date": "2027-01-21",
+        "principal_billions": 135.9648415,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 135.9648415
+      },
+      {
+        "date": "2027-01-28",
+        "principal_billions": 84.5465229,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 84.5465229
+      },
+      {
+        "date": "2027-01-31",
+        "principal_billions": 251.43349740000002,
+        "interest_billions": 26.215506764437507,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 277.64900416443754
+      },
+      {
+        "date": "2027-02-04",
+        "principal_billions": 85.2601675,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 85.2601675
+      },
+      {
+        "date": "2027-02-11",
+        "principal_billions": 83.78409020000001,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 83.78409020000001
+      },
+      {
+        "date": "2027-02-15",
+        "principal_billions": 121.81928039999998,
+        "interest_billions": 87.52502113884658,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 209.34430153884657
+      },
+      {
+        "date": "2027-02-18",
+        "principal_billions": 137.05505960000002,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 137.05505960000002
+      },
+      {
+        "date": "2027-02-25",
+        "principal_billions": 82.5571034,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 82.5571034
+      },
+      {
+        "date": "2027-02-28",
+        "principal_billions": 167.2894656,
+        "interest_billions": 27.83127096831249,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 195.12073656831248
+      },
+      {
+        "date": "2027-03-15",
+        "principal_billions": 55.2018667,
+        "interest_billions": 5.2928532475,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 60.494719947499995
+      },
+      {
+        "date": "2027-03-18",
+        "principal_billions": 54.006557099999995,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 54.006557099999995
+      },
+      {
+        "date": "2027-03-30",
+        "principal_billions": 0.0,
+        "interest_billions": 20.81918119675,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 20.81918119675
+      },
+      {
+        "date": "2027-03-31",
+        "principal_billions": 166.6984128,
+        "interest_billions": 2.2339649064375005,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 168.9323777064375
+      },
+      {
+        "date": "2027-04-15",
+        "principal_billions": 157.49300631839,
+        "interest_billions": 10.83692272649689,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 168.32992904488688
+      },
+      {
+        "date": "2027-04-30",
+        "principal_billions": 253.11389620000003,
+        "interest_billions": 24.06745086625,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 277.18134706625005
+      },
+      {
+        "date": "2027-05-13",
+        "principal_billions": 53.1344717,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 53.1344717
+      },
+      {
+        "date": "2027-05-15",
+        "principal_billions": 125.1652641,
+        "interest_billions": 85.62344805231251,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 210.7887121523125
+      },
+      {
+        "date": "2027-05-30",
+        "principal_billions": 0.0,
+        "interest_billions": 22.80938906975,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 22.80938906975
+      },
+      {
+        "date": "2027-05-31",
+        "principal_billions": 163.89474239999998,
+        "interest_billions": 2.1876820755625,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 166.08242447556248
+      },
+      {
+        "date": "2027-06-10",
+        "principal_billions": 53.211180500000005,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 53.211180500000005
+      },
+      {
+        "date": "2027-06-15",
+        "principal_billions": 58.5006033,
+        "interest_billions": 5.8752468814375,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 64.3758501814375
+      },
+      {
+        "date": "2027-06-30",
+        "principal_billions": 171.72773439999997,
+        "interest_billions": 24.457487533375005,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 196.18522193337498
+      },
+      {
+        "date": "2027-07-08",
+        "principal_billions": 54.760404900000005,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 54.760404900000005
+      },
+      {
+        "date": "2027-07-15",
+        "principal_billions": 113.02949506926001,
+        "interest_billions": 12.085166315681294,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 125.1146613849413
+      },
+      {
+        "date": "2027-07-31",
+        "principal_billions": 258.4069841,
+        "interest_billions": 24.149358108,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 282.556342208
+      },
+      {
+        "date": "2027-08-05",
+        "principal_billions": 56.120905,
+        "interest_billions": 0.0,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 56.120905
+      },
+      {
+        "date": "2027-08-15",
+        "principal_billions": 144.47439559999998,
+        "interest_billions": 85.46537573434657,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 229.93977133434655
+      },
+      {
+        "date": "2027-08-28",
+        "principal_billions": 0.0,
+        "interest_billions": 17.449763790250003,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 17.449763790250003
+      },
+      {
+        "date": "2027-08-29",
+        "principal_billions": 0.0,
+        "interest_billions": 5.8712209971250005,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 5.8712209971250005
+      },
+      {
+        "date": "2027-08-31",
+        "principal_billions": 173.92117,
+        "interest_billions": 2.2365996404375,
+        "announced_issuance_billions": 0.0,
+        "gross_scheduled_cash_billions": 176.1577696404375
+      }
+    ],
+    "note": "Treasury Funding Pressure compares scheduled marketable principal maturities and modeled coupon interest with announced auction offering amounts and the latest Treasury General Account balance. Auction supply is shown on issue/settlement dates. Announced issuance is not the same as net borrowing and should not be subtracted from maturities to infer an exact financing need: tax receipts, other federal cash flows, SOMA add-ons/redemptions, buybacks, and future auction announcements also matter."
   }
 }
