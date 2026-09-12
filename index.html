@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#07101d" />
   <title>US Treasury Ownership Tracker</title>
-  <meta name="description" content="Focused U.S. Treasury ownership dashboard using official Treasury and Federal Reserve data, with all-time headline history, future Treasury maturities and interest cash flows, funding pressure, institutional and foreign-holder history and source-specific observation dates." />
+  <meta name="description" content="Focused U.S. Treasury ownership dashboard using official Treasury and Federal Reserve data, with all-time headline history, future Treasury maturities and interest cash flows, funding pressure, Treasury buybacks, primary-dealer positioning, institutional and foreign-holder history and source-specific observation dates." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="country-history.css" />
   <link rel="stylesheet" href="all-time-history.css" />
   <link rel="stylesheet" href="maturity-wall.css" />
   <link rel="stylesheet" href="funding-pressure.css" />
+  <link rel="stylesheet" href="primary-dealer.css" />
   <link rel="stylesheet" href="institution-history.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script defer src="app.js?v=20260911-sections-removed"></script>
@@ -18,7 +19,8 @@
   <script defer src="country-history-archive.js?v=20260911-axis-tight"></script>
   <script defer src="all-time-history.js?v=20260911-current-debt-inline"></script>
   <script defer src="maturity-wall.js?v=20260911-interest-cashflow"></script>
-  <script defer src="funding-pressure.js?v=20260911-funding-pressure"></script>
+  <script defer src="funding-pressure.js?v=20260911-buybacks"></script>
+  <script defer src="primary-dealer.js?v=20260911-primary-dealers"></script>
   <script defer src="institution-history.js?v=20260911-institution-history"></script>
 </head>
 <body class="core-dashboard ux5-core">
@@ -26,7 +28,7 @@
     <div>
       <div class="eyebrow">U.S. TREASURY OWNERSHIP</div>
       <h1>Who Owns U.S. Treasuries?</h1>
-      <p class="lede">Track the headline ownership picture, all available official history, upcoming Treasury maturities and interest cash flows, funding pressure and announced auction supply, private institutional holders, major foreign holders and long-run country history while preserving each source's real reporting date.</p>
+      <p class="lede">Track the headline ownership picture, all available official history, upcoming Treasury maturities and interest cash flows, funding pressure, announced issuance and buybacks, primary-dealer positioning, private institutional holders, major foreign holders and long-run country history while preserving each source's real reporting date.</p>
     </div>
     <div class="hero-side">
       <div class="status" id="updateStatus">Loading official data…</div>
@@ -87,7 +89,7 @@
 
     <section class="panel funding-panel" id="treasuryFundingPressurePanel">
       <div class="panel-head">
-        <div><h2>Treasury Funding Pressure</h2><p id="fundingMeta">Loading TGA cash and announced Treasury issuance…</p></div>
+        <div><h2>Treasury Funding Pressure</h2><p id="fundingMeta">Loading TGA cash, announced issuance and Treasury buybacks…</p></div>
         <div class="panel-actions">
           <button id="downloadFundingCsv" type="button">Download funding CSV</button>
         </div>
@@ -98,7 +100,7 @@
         <div class="funding-grid">
           <div class="funding-subpanel">
             <div class="funding-subhead">
-              <div><h3>Scheduled cash vs announced issuance</h3><p>Principal and coupon cash compared with announced auction settlement amounts.</p></div>
+              <div><h3>Scheduled cash vs announced issuance</h3><p>Principal and coupon cash compared with auction settlements and tentative buyback maximums.</p></div>
             </div>
             <div class="chart-wrap funding-chart"><canvas id="fundingPressureChart"></canvas></div>
           </div>
@@ -120,7 +122,34 @@
             </table>
           </div>
         </div>
-        <div class="note inline-note funding-note">This section compares gross scheduled marketable principal and modeled coupon interest with announced Treasury auction offering amounts and the latest TGA cash balance. Announced issuance is partial beyond Treasury's current announcement window and is not an exact net-funding requirement: taxes, other receipts/outlays, SOMA activity, buybacks and future auction announcements also affect financing.</div>
+        <div class="funding-buybacks">
+          <div class="funding-subhead">
+            <div><h3>Upcoming Treasury buybacks</h3><p id="fundingBuybackMeta"></p></div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Operation</th><th>Settlement</th><th>Type</th><th>Bucket</th><th>Maximum</th></tr></thead>
+              <tbody id="fundingBuybackTable"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="note inline-note funding-note">This section compares gross scheduled marketable principal and modeled coupon interest with announced Treasury auction offering amounts, tentative buyback maximums and the latest TGA cash balance. Buyback maximums are caps rather than guaranteed purchases. Announced issuance is partial beyond Treasury's current announcement window and is not an exact net-funding requirement: taxes, other receipts/outlays, SOMA activity and future auction or buyback announcements also affect financing.</div>
+      </div>
+    </section>
+
+    <section class="panel dealer-panel" id="primaryDealerPanel">
+      <div class="panel-head">
+        <div><h2>Primary Dealer Positioning</h2><p id="dealerMeta">Loading New York Fed weekly Treasury positions…</p></div>
+        <div class="panel-actions">
+          <select id="dealerSeries" aria-label="Select primary dealer Treasury position series"></select>
+          <button id="downloadDealerCsv" type="button">Download dealer CSV</button>
+        </div>
+      </div>
+      <div class="dealer-body">
+        <div class="dealer-stats" id="dealerStats"></div>
+        <div class="dealer-toolbar"><div class="dealer-range" id="dealerRanges"></div></div>
+        <div class="chart-wrap dealer-chart"><canvas id="primaryDealerChart"></canvas></div>
+        <div class="note inline-note dealer-note" id="dealerNote">Aggregate weekly primary-dealer net outright positions from the New York Fed FR 2004 release.</div>
       </div>
     </section>
 
@@ -164,9 +193,9 @@
       <div class="note inline-note">The All range combines Treasury-specific annual survey observations before the monthly TIC series begins with the complete monthly history from 2011 onward. Pre-1994 survey columns are not used because they report broader debt rather than Treasury debt separately. TIC country attribution can reflect custodian location rather than the ultimate beneficial owner.</div>
     </section>
 
-    <section class="note data-discipline"><strong>Data discipline:</strong> the site checks official sources daily, but ownership, maturity, TGA and auction datasets publish on different schedules. Every displayed value keeps its real observation date, and variable/inflation-linked future interest is labeled as estimated rather than presented as fixed.</section>
+    <section class="note data-discipline"><strong>Data discipline:</strong> the site checks official sources daily, but ownership, maturity, TGA, auction, buyback and dealer datasets publish on different schedules. Every displayed value keeps its real observation date, tentative buyback caps are distinguished from actual purchases, and variable/inflation-linked future interest is labeled as estimated rather than presented as fixed.</section>
   </main>
 
-  <footer class="shell footer">Official sources used by the retained dashboard include U.S. Treasury Fiscal Data (Debt to the Penny, MSPD, Daily Treasury Statement and Treasury Securities Auctions), Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, with Financial Accounts institution history and historical Treasury survey data used for holder history.</footer>
+  <footer class="shell footer">Official sources used by the retained dashboard include U.S. Treasury Fiscal Data (Debt to the Penny, MSPD, Daily Treasury Statement and Treasury Securities Auctions), TreasuryDirect buyback schedules, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, and New York Fed primary-dealer statistics.</footer>
 </body>
 </html>
