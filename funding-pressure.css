@@ -1,0 +1,34 @@
+.funding-panel{overflow:hidden}
+.funding-body{padding:0 20px 20px}
+.funding-cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:4px 0 14px}
+.funding-card{min-width:0;padding:14px 15px;border:1px solid rgba(148,184,221,.12);border-radius:14px;background:rgba(9,20,35,.58)}
+.funding-card span{display:block;color:#7890a4;font-size:11px;font-weight:700;letter-spacing:.055em;text-transform:uppercase}
+.funding-card strong{display:block;margin-top:6px;color:#f0f7ff;font-size:18px;letter-spacing:-.015em}
+.funding-card small{display:block;margin-top:5px;color:#91a5ba;font-size:11px;line-height:1.4}
+.funding-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 10px}
+.funding-range{display:flex;gap:6px;flex-wrap:wrap}
+.funding-range button{border:1px solid rgba(148,184,221,.15);border-radius:999px;background:rgba(7,16,29,.74);color:#8ea4b9;padding:6px 10px;font-size:11px;font-weight:700;cursor:pointer}
+.funding-range button:hover,.funding-range button.active{color:#eaf6ff;border-color:rgba(79,209,255,.34);background:rgba(79,209,255,.10)}
+.funding-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.85fr);gap:16px}
+.funding-chart,.funding-tga-chart{height:330px}
+.funding-subpanel{min-width:0;padding:14px;border:1px solid rgba(148,184,221,.10);border-radius:14px;background:rgba(6,15,27,.42)}
+.funding-subhead{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px}
+.funding-subhead h3{margin:0;color:#dbe6f4;font-size:13px}
+.funding-subhead p{margin:2px 0 0;color:#7890a4;font-size:11px;line-height:1.4}
+.funding-auctions{margin-top:16px}
+.funding-auctions .table-wrap{max-height:360px}
+.funding-auctions table{width:100%}
+.funding-auctions th,.funding-auctions td{white-space:nowrap}
+.funding-note{margin-top:14px}
+@media(max-width:1050px){
+  .funding-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .funding-grid{grid-template-columns:1fr}
+  .funding-tga-chart{height:260px}
+}
+@media(max-width:700px){
+  .funding-body{padding:0 12px 14px}
+  .funding-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .funding-card:last-child{grid-column:1/-1}
+  .funding-chart{height:300px}
+  .funding-tga-chart{height:230px}
+}
