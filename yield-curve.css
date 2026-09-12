@@ -3,5 +3,19 @@
 .yield-curve-panel .insight-subpanel{overflow:hidden}
 .yield-curve-panel .insight-chart{height:320px}
 .yield-curve-panel .yield-refi-note{margin-top:14px}
-@media(max-width:1050px){.yield-curve-panel .insight-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:700px){.yield-curve-panel .insight-cards{grid-template-columns:1fr}.yield-curve-panel .insight-chart{height:285px}}
+.yield-curve-panel .yield-refi-wide{grid-column:1/-1}
+.yield-curve-panel .yield-refi-chart{height:350px}
+.auction-yield-panel .insight-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+.auction-yield-panel .insight-chart{height:320px}
+.auction-yield-panel .auction-yield-table{margin-top:16px}
+.auction-yield-panel .auction-yield-table .table-wrap{max-height:390px}
+.auction-yield-panel .auction-yield-table th,.auction-yield-panel .auction-yield-table td{white-space:nowrap}
+@media(max-width:1050px){
+  .yield-curve-panel .insight-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .auction-yield-panel .insight-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  .yield-curve-panel .insight-cards,.auction-yield-panel .insight-cards{grid-template-columns:1fr}
+  .yield-curve-panel .insight-chart,.auction-yield-panel .insight-chart{height:285px}
+  .yield-curve-panel .yield-refi-chart{height:310px}
+}
