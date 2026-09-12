@@ -17,6 +17,8 @@ on:
       - maturity-wall.css
       - funding-pressure.js
       - funding-pressure.css
+      - primary-dealer.js
+      - primary-dealer.css
       - institution-history.js
       - institution-history.css
       - index.html
@@ -37,6 +39,8 @@ on:
       - maturity-wall.css
       - funding-pressure.js
       - funding-pressure.css
+      - primary-dealer.js
+      - primary-dealer.css
       - institution-history.js
       - institution-history.css
       - index.html
@@ -69,6 +73,7 @@ jobs:
           node --check all-time-history.js
           node --check maturity-wall.js
           node --check funding-pressure.js
+          node --check primary-dealer.js
           node --check institution-history.js
 
       - name: Install uv
@@ -83,7 +88,7 @@ jobs:
         run: uv venv --python 3.13 && uv pip install --python .venv/bin/python -r requirements.txt
 
       - name: Refresh official data
-        run: .venv/bin/python scripts/update_data_v19.py
+        run: .venv/bin/python scripts/update_data_v20.py
 
       - name: Validate Phase 8 output
         run: .venv/bin/python scripts/validate_phase8_state.py
@@ -118,6 +123,9 @@ jobs:
       - name: Validate Treasury funding pressure
         run: .venv/bin/python scripts/validate_treasury_funding_pressure.py
 
+      - name: Validate buybacks and primary dealers
+        run: .venv/bin/python scripts/validate_buybacks_primary_dealers.py
+
       - name: Commit updated data safely
         if: github.event_name != 'pull_request'
         run: |
@@ -135,7 +143,7 @@ jobs:
             echo "Branch advanced during refresh; regenerating on latest HEAD."
             git restore data/dashboard.json
             git pull --ff-only origin "$GITHUB_REF_NAME"
-            .venv/bin/python scripts/update_data_v19.py
+            .venv/bin/python scripts/update_data_v20.py
             .venv/bin/python scripts/validate_phase8_state.py
             .venv/bin/python scripts/validate_phase9_state.py
             .venv/bin/python scripts/validate_phase10_state.py
@@ -147,6 +155,7 @@ jobs:
             .venv/bin/python scripts/validate_treasury_interest.py
             .venv/bin/python scripts/validate_institution_history.py
             .venv/bin/python scripts/validate_treasury_funding_pressure.py
+            .venv/bin/python scripts/validate_buybacks_primary_dealers.py
           fi
 
           if git diff --quiet -- data/dashboard.json; then
