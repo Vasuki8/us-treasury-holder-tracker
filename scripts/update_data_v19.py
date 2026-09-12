@@ -114,10 +114,6 @@ def fetch_upcoming_auctions(anchor: date) -> dict:
     payload = base.get_json(
         UPCOMING_AUCTIONS_API,
         params={
-            "fields": (
-                "record_date,cusip,announcemt_date,auction_date,issue_date,maturity_date,"
-                "security_type,security_term,offering_amt,reopening"
-            ),
             "sort": "auction_date",
             "page[number]": 1,
             "page[size]": 5000,
@@ -144,7 +140,7 @@ def fetch_upcoming_auctions(anchor: date) -> dict:
             {
                 "cusip": str(row.get("cusip") or "").strip() or None,
                 "record_date": str(row.get("record_date") or "")[:10] or None,
-                "announcement_date": str(row.get("announcemt_date") or "")[:10] or None,
+                "announcement_date": str(row.get("announcemt_date") or row.get("announcement_date") or "")[:10] or None,
                 "auction_date": auction_date.isoformat(),
                 "issue_date": issue_date.isoformat(),
                 "maturity_date": str(row.get("maturity_date") or "")[:10] or None,
