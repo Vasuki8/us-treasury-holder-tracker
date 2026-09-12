@@ -189,8 +189,10 @@ def build_yield_curve(data: dict) -> dict:
         "real_archive_url": REAL_ARCHIVE,
         "note": (
             "Nominal and real par yield curves are official U.S. Treasury constant-maturity estimates derived from market prices; "
-            "they are reference market yields, not auction stop-out yields or security coupon rates. Breakeven inflation is nominal "
-            "par yield minus real par yield at the same maturity and includes inflation risk/liquidity premia, so it is not a pure inflation forecast."
+            "they are reference market yields, not auction stop-out yields or security coupon rates. Treasury changed its curve-fitting "
+            "methodology on December 6, 2021, while preserving earlier observations as official. The 30-year nominal series has an official "
+            "publication gap from February 18, 2002 through February 8, 2006. Breakeven inflation is nominal par yield minus real par yield "
+            "at the same maturity and includes inflation risk/liquidity premia, so it is not a pure inflation forecast."
         ),
     }
 
