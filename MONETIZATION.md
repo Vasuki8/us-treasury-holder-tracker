@@ -57,7 +57,7 @@ The authentication/database and serverless pieces can be added without moving th
 
 ## Rollout
 
-### Phase M1 — conversion foundation
+### Phase M1 — conversion foundation — complete
 
 - Product navigation and Treasury Pro positioning
 - Live signal preview
@@ -66,10 +66,22 @@ The authentication/database and serverless pieces can be added without moving th
 - Checkout URL hooks
 - Clear distinction between free public data and paid automation
 
-### Phase M2 — payments and entitlements
+### Phase M1.5 — commercial launch readiness — complete
+
+- Interactive alert-builder preview driven by the live official-data payload
+- Public billing configuration isolated from the product UI
+- Checkout success and cancellation return pages
+- Terms of Service, Privacy Policy and Refund Policy
+- robots.txt and sitemap.xml
+- CI checks for pricing, product IDs, legal pages, checkout pages and accidental secret exposure
+- Product-event hooks ready for conversion analytics
+
+The public `billing-config.js` may contain prices and Stripe Payment Link URLs, but **never** Stripe secret keys, webhook secrets or entitlement logic.
+
+### Phase M2 — payments and entitlements — next
 
 - Create Stripe products/prices
-- Add monthly and annual Checkout links
+- Add monthly and annual Checkout or Payment Links to `billing-config.js`
 - Add customer billing portal
 - Deploy authenticated backend
 - Process Stripe webhooks
@@ -88,6 +100,8 @@ Initial alert rules:
 - 30D/90D principal due exceeds a threshold
 - foreign holdings change exceeds a threshold
 - primary-dealer position changes exceed a threshold
+
+The public alert builder is only a preview. Real monitoring, notification delivery and persisted rules must run behind the authenticated backend.
 
 ### Phase M4 — scheduled brief
 
@@ -108,6 +122,20 @@ Sync selected series, ranges, preferred panels and alert rules across devices.
 ### Phase M6 — authenticated API
 
 Start with normalized read-only endpoints. Add rate limits, usage metering and API-key rotation before selling production access.
+
+## Payment activation checklist
+
+Before turning on real checkout:
+
+1. Connect Stripe.
+2. Create Treasury Pro monthly ($15) and annual ($150) recurring products/prices.
+3. Create Data API pilot ($99/month) only when the authenticated API is actually available.
+4. Configure checkout success/cancel redirects to the existing return pages.
+5. Put only the public Payment Link URLs in `billing-config.js`.
+6. Deploy a private webhook endpoint and keep the signing secret outside the repository.
+7. Do not unlock paid access from a success-page redirect alone; verify entitlement server-side from Stripe state.
+8. Add a customer billing portal and a private support contact before accepting real payments.
+9. Test successful payment, failed payment, cancellation, renewal and refund flows in Stripe test mode before going live.
 
 ## Metrics to measure
 

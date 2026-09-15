@@ -28,6 +28,14 @@ on:
       - yield-curve.css
       - monetization.js
       - monetization.css
+      - billing-config.js
+      - terms.html
+      - privacy.html
+      - refunds.html
+      - checkout-success.html
+      - checkout-cancelled.html
+      - robots.txt
+      - sitemap.xml
       - index.html
       - styles.css
       - .github/workflows/update.yml
@@ -57,6 +65,14 @@ on:
       - yield-curve.css
       - monetization.js
       - monetization.css
+      - billing-config.js
+      - terms.html
+      - privacy.html
+      - refunds.html
+      - checkout-success.html
+      - checkout-cancelled.html
+      - robots.txt
+      - sitemap.xml
       - index.html
       - styles.css
       - .github/workflows/update.yml
@@ -124,6 +140,7 @@ jobs:
           node --check institution-history.js
           node --check range-sync.js
           node --check yield-curve.js
+          node --check billing-config.js
           node --check monetization.js
 
       - name: Validate monetization surface
