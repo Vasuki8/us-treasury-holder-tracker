@@ -126,6 +126,9 @@ jobs:
           node --check yield-curve.js
           node --check monetization.js
 
+      - name: Validate monetization surface
+        run: python3 scripts/validate_monetization_surface.py
+
       - name: Install uv
         uses: astral-sh/setup-uv@v10.0.0
         with:
