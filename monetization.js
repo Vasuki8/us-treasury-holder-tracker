@@ -1,18 +1,11 @@
 (() => {
-  const publicConfig = window.treasuryBillingConfig || {};
-  const plans = publicConfig.plans || {};
-  const CONFIG = Object.freeze({
-    currency:publicConfig.currency || 'USD',
-    proMonthly:Number(plans.proMonthly?.price ?? 15),
-    proAnnual:Number(plans.proAnnual?.price ?? 150),
-    apiMonthly:Number(plans.apiMonthly?.price ?? 99),
-    checkout:Object.freeze({
-      proMonthly:publicConfig.checkout?.proMonthly || '',
-      proAnnual:publicConfig.checkout?.proAnnual || '',
-      api:publicConfig.checkout?.api || '',
-    }),
+  const FALLBACK = Object.freeze({
+    currency:'USD',
+    plans:{proMonthly:{price:15},proAnnual:{price:150},apiMonthly:{price:99}},
+    checkout:{proMonthly:'',proAnnual:'',api:''},
   });
-  window.treasuryProductConfig = CONFIG;
+  let CONFIG = null;
+  let initialized = false;
 
   const savedBilling = localStorage.getItem('treasuryBilling') === 'annual' ? 'annual' : 'monthly';
   const savedAlert = (() => {
@@ -45,6 +38,78 @@
   const latest = rows => Array.isArray(rows)&&rows.length ? rows[rows.length-1] : null;
   const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const emitProductEvent = (name,detail={}) => window.dispatchEvent(new CustomEvent('treasury:product-event',{detail:{name,...detail}}));
+
+  function normalizeConfig(raw){
+    const source=raw||FALLBACK;
+    const plans=source.plans||FALLBACK.plans;
+    return Object.freeze({
+      currency:source.currency||'USD',
+      proMonthly:Number(plans.proMonthly?.price ?? 15),
+      proAnnual:Number(plans.proAnnual?.price ?? 150),
+      apiMonthly:Number(plans.apiMonthly?.price ?? 99),
+      checkout:Object.freeze({
+        proMonthly:source.checkout?.proMonthly||'',
+        proAnnual:source.checkout?.proAnnual||'',
+        api:source.checkout?.api||'',
+      }),
+    });
+  }
+
+  function loadBillingConfig(done){
+    if(window.treasuryBillingConfig){
+      CONFIG=normalizeConfig(window.treasuryBillingConfig);
+      window.treasuryProductConfig=CONFIG;
+      done();
+      return;
+    }
+    const script=document.createElement('script');
+    script.src='billing-config.js?v=20260915-launch';
+    script.async=true;
+    script.onload=()=>{
+      CONFIG=normalizeConfig(window.treasuryBillingConfig);
+      window.treasuryProductConfig=CONFIG;
+      done();
+    };
+    script.onerror=()=>{
+      CONFIG=normalizeConfig(FALLBACK);
+      window.treasuryProductConfig=CONFIG;
+      done();
+    };
+    document.head.appendChild(script);
+  }
+
+  function ensureLaunchSurfaces(){
+    const examples=document.querySelector('.alert-examples');
+    if(examples&&!document.getElementById('alertBuilder')){
+      const builder=document.createElement('section');
+      builder.className='alert-builder';
+      builder.id='alertBuilder';
+      builder.innerHTML=`
+        <div class="alert-builder-head">
+          <div><span class="pro-label">Try the workflow</span><h3>Build a Treasury alert preview</h3><p>Choose a live metric and threshold. The public demo evaluates the rule against the latest official observation; Treasury Pro will monitor it automatically and deliver notifications.</p></div>
+          <span class="alert-preview-badge">Preview only</span>
+        </div>
+        <div class="alert-builder-grid">
+          <label><span>Metric</span><select id="alertMetric" aria-label="Alert metric"></select></label>
+          <label><span>Condition</span><select id="alertCondition" aria-label="Alert condition"><option value="above">Moves above</option><option value="below">Moves below</option></select></label>
+          <label><span>Threshold</span><input id="alertThreshold" type="number" inputmode="decimal" aria-label="Alert threshold" /></label>
+          <div class="alert-current"><span>Current value</span><strong id="alertCurrentValue">—</strong></div>
+        </div>
+        <div class="alert-preview-result">
+          <div><strong id="alertPreviewState">Waiting for data</strong><p id="alertPreviewMeta">The rule will evaluate when the official-data payload loads.</p></div>
+          <button class="pro-cta primary" id="saveAlertPreview" type="button">Save this alert with Pro</button>
+        </div>`;
+      examples.insertAdjacentElement('afterend',builder);
+    }
+
+    const footer=document.querySelector('footer.footer');
+    if(footer&&!footer.querySelector('.legal-links')){
+      const links=document.createElement('span');
+      links.className='legal-links';
+      links.innerHTML=' <span aria-hidden="true">·</span> <a href="terms.html">Terms</a> <span aria-hidden="true">·</span> <a href="privacy.html">Privacy</a> <span aria-hidden="true">·</span> <a href="refunds.html">Refunds</a>';
+      footer.appendChild(links);
+    }
+  }
 
   function modal(){ return document.getElementById('productModalBackdrop'); }
   function openModal(kind='pro'){
@@ -257,6 +322,9 @@
   }
 
   function init(){
+    if(initialized) return;
+    initialized=true;
+    ensureLaunchSurfaces();
     wireModal();
     wirePricing();
     wireAlertBuilder();
@@ -264,5 +332,6 @@
     else window.addEventListener('treasury:data-ready',event=>renderLiveSnapshot(event.detail),{once:true});
   }
 
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+  function boot(){ loadBillingConfig(init); }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot); else boot();
 })();
