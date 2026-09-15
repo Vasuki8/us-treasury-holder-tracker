@@ -1,0 +1,39 @@
+{
+  "rules": [
+    {
+      "id": "curve-resteepens",
+      "name": "10Y-2Y turns positive",
+      "metric": "yield.spread_10y_2y_bps",
+      "operator": "crosses_above",
+      "threshold": 0,
+      "enabled": true
+    },
+    {
+      "id": "ten-year-above-five",
+      "name": "10Y yield above 5%",
+      "metric": "yield.10y_pct",
+      "operator": "above",
+      "threshold": 5,
+      "enabled": true,
+      "notify_on_initial": false
+    },
+    {
+      "id": "auction-demand-soft",
+      "name": "Auction demand falls below 35",
+      "metric": "auction.demand_score",
+      "operator": "below",
+      "threshold": 35,
+      "enabled": true,
+      "notify_on_initial": true
+    },
+    {
+      "id": "heavy-30d-refinancing",
+      "name": "30D principal due exceeds $2T",
+      "metric": "funding.principal_30d_billions",
+      "operator": "above",
+      "threshold": 2000,
+      "enabled": true,
+      "notify_on_initial": true
+    }
+  ]
+}
