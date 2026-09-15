@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /checkout-success.html
+Disallow: /checkout-cancelled.html
+
+Sitemap: https://vasuki8.github.io/us-treasury-holder-tracker/sitemap.xml
