@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vasuki8.github.io/us-treasury-holder-tracker/alerts/rule.schema.json",
+  "title": "Treasury Pro Alert Rule",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "metric", "operator", "threshold"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$"
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 140
+    },
+    "metric": {
+      "type": "string",
+      "enum": [
+        "yield.10y_pct",
+        "yield.spread_10y_2y_bps",
+        "yield.spread_10y_3m_bps",
+        "auction.demand_score",
+        "funding.principal_30d_billions",
+        "funding.gross_cash_90d_billions",
+        "funding.tga_billions"
+      ]
+    },
+    "operator": {
+      "type": "string",
+      "enum": ["above", "below", "crosses_above", "crosses_below"]
+    },
+    "threshold": {
+      "type": "number"
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "notify_on_initial": {
+      "type": "boolean",
+      "default": false,
+      "description": "For level rules, send immediately when the rule is first evaluated and is already matched. Crossing rules ignore this field."
+    }
+  }
+}
