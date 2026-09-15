@@ -1,0 +1,211 @@
+/* Treasury Paper: light institutional theme shared across the full dashboard. */
+:root{
+  color-scheme:light;
+  --bg:#f4f1e8;
+  --panel:#fffdf8;
+  --panel2:#faf7f0;
+  --surface:#ffffff;
+  --surface-muted:#f7f4ec;
+  --surface-strong:#edf3f2;
+  --line:#d8d2c5;
+  --line-strong:#c7c0b2;
+  --text:#1b2938;
+  --muted:#657283;
+  --accent:#176b7e;
+  --accent-strong:#0f5263;
+  --accent-soft:#e3f0f1;
+  --good:#2f7657;
+  --bad:#aa4652;
+  --warn:#9a6a20;
+  --grid:rgba(55,74,89,.11);
+  --shadow:0 10px 30px rgba(35,47,58,.065);
+}
+
+html{background:var(--bg)}
+body{
+  background:
+    radial-gradient(circle at 78% -8%,rgba(45,123,137,.11) 0,rgba(45,123,137,0) 34%),
+    linear-gradient(180deg,#fbf9f3 0%,#f2f4ef 52%,#f6f2e9 100%);
+  color:var(--text);
+}
+::selection{background:#cfe5e7;color:#153947}
+
+h1,h2,h3,h4,strong{color:var(--text)}
+.eyebrow{color:var(--accent-strong)}
+.lede,.panel-head p,.footer,.note,.empty-state{color:var(--muted)}
+
+.status{
+  background:rgba(255,255,255,.82);
+  border-color:var(--line);
+  color:var(--muted);
+  box-shadow:0 3px 12px rgba(35,47,58,.04);
+}
+
+button,
+.panel input,
+.panel select{
+  background:#fffefa;
+  border-color:var(--line);
+  color:var(--text);
+  box-shadow:0 1px 2px rgba(35,47,58,.025);
+}
+button:hover,
+button:focus-visible,
+.panel input:focus-visible,
+.panel select:focus-visible{
+  border-color:var(--accent);
+  background:var(--accent-soft);
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible{
+  outline:3px solid rgba(23,107,126,.16);
+  outline-offset:2px;
+}
+
+.card,.panel,.note{
+  background:linear-gradient(180deg,var(--panel),var(--panel2));
+  border-color:var(--line);
+  box-shadow:var(--shadow);
+}
+.card .kicker,.card .meta{color:var(--muted)}
+.card .value{color:#173349}
+.panel{box-shadow:0 8px 28px rgba(35,47,58,.055)}
+.inline-note{background:#faf8f2}
+.phase-chip{color:var(--accent-strong);background:#f4faf9;border-color:#c8dcdd}
+
+.table-wrap{background:rgba(255,255,255,.72);border-color:var(--line)}
+th{background:#f1eee5;color:#596879;border-color:var(--line)}
+td{color:var(--text);border-color:#e5dfd3}
+tbody tr:hover td{background:#f3f8f7}
+.up{color:var(--good)}
+.down{color:var(--bad)}
+
+/* Shared cards and sub-panels. */
+.all-time-stat,
+.maturity-card,
+.maturity-type,
+.funding-card,
+.dealer-stat,
+.insight-card,
+.insight-subpanel,
+.funding-subpanel,
+.structure-card{
+  background:var(--surface);
+  border-color:var(--line);
+  color:var(--text);
+  box-shadow:0 2px 10px rgba(35,47,58,.035);
+}
+.all-time-stat-featured{
+  background:linear-gradient(145deg,#eaf4f3 0%,#fffdf8 68%);
+  border-color:#bdd8d9;
+}
+.all-time-stat-featured .all-time-value-row small,
+.institution-meta span{
+  background:#e9f4f3;
+  border-color:#bfd9da;
+  color:var(--accent-strong);
+}
+.maturity-card span,.maturity-type span,
+.funding-card span,.dealer-stat span,.insight-card span{color:#687687}
+.funding-card strong,.dealer-stat strong,.insight-card strong,.institution-meta strong{color:var(--text)}
+.funding-card small,.dealer-stat small,.insight-card small{color:var(--muted)}
+.funding-subhead h3,.insight-subhead h3{color:#283a4b}
+.funding-subhead p,.insight-subhead p{color:var(--muted)}
+
+/* Range selectors: one visual language across every panel. */
+.all-time-range button,
+.maturity-range button,
+.funding-range button,
+.dealer-range button,
+.insight-range button,
+.institution-range button,
+.country-range button,
+.country-trend-range button,
+.country-series-toggle button{
+  background:#fffefa;
+  border-color:var(--line);
+  color:#607081;
+}
+.all-time-range button:hover,
+.maturity-range button:hover,
+.funding-range button:hover,
+.dealer-range button:hover,
+.insight-range button:hover,
+.institution-range button:hover,
+.country-range button:hover,
+.country-trend-range button:hover,
+.country-series-toggle button:hover{
+  background:#eef6f5;
+  border-color:#a8c9cc;
+  color:var(--accent-strong);
+}
+.all-time-range button.active,
+.maturity-range button.active,
+.funding-range button.active,
+.dealer-range button.active,
+.insight-range button.active,
+.institution-range button.active,
+.country-range button.active,
+.country-trend-range button.active,
+.country-series-toggle button.active{
+  background:#deeeee;
+  border-color:#8fbcc0;
+  color:#0e5363;
+  box-shadow:inset 0 0 0 1px rgba(23,107,126,.05);
+}
+
+/* Legacy research-card classes still appear in shared styles; keep them coherent if reused. */
+.insight-card p,.structure-card p{color:var(--text)}
+.insight-card small,.structure-card small,.structure-card-top{color:var(--muted)}
+.insight-top>span:first-child,.structure-card>em{color:var(--accent-strong)}
+.structure-dot{background:#80909e}
+.structure-card.supportive .structure-dot{background:var(--good)}
+.structure-card.cautious .structure-dot{background:var(--bad)}
+.structure-card.neutral .structure-dot{background:var(--warn)}
+
+/* Country-history drawer: light surface rather than a dark modal inside a light site. */
+body.ux5-core #foreignTable tr:hover td:first-child{color:var(--accent-strong)}
+.country-history-backdrop{background:rgba(28,39,48,.28);backdrop-filter:blur(4px)}
+.country-history-drawer{
+  background:linear-gradient(180deg,#fffefb,#f7f4ec);
+  border-color:var(--line-strong);
+  box-shadow:0 28px 80px rgba(34,46,57,.20);
+  color:var(--text);
+}
+.country-history-head{border-bottom-color:#e5dfd4}
+.country-history-head span{color:var(--accent-strong)}
+.country-history-head h3{color:var(--text)}
+.country-history-head small{color:var(--muted)}
+.country-history-close{
+  border-color:var(--line);
+  background:#fff;
+  color:#5b6b7a;
+}
+.country-history-close:hover{background:var(--accent-soft);color:var(--accent-strong)}
+.country-history-metric{
+  border-color:var(--line);
+  background:#fffefa;
+}
+.country-history-metric span{color:#6c7987}
+.country-history-metric strong{color:var(--text)}
+.country-history-metric.good strong{color:var(--good)}
+.country-history-metric.bad strong{color:var(--bad)}
+.country-series-toggle,.country-range{
+  border-color:var(--line);
+  background:#f4f1e9;
+}
+.country-history-chart-head strong{color:var(--text)}
+.country-history-note{color:var(--muted)}
+
+/* Improve subtle panel separation without turning the page dark again. */
+.all-time-panel,.institution-panel,.ownership-share-panel,.yield-curve-panel{border-color:#c6d9d9}
+.maturity-panel{border-color:#ddcfad}
+.funding-panel,.dealer-panel,.auction-demand-panel,.auction-yield-panel,.debt-cost-panel{border-color:#d6d8d2}
+
+/* Scrollbars follow the paper palette. */
+*{scrollbar-color:#b7c1c3 #eeeae1}
+*::-webkit-scrollbar{width:10px;height:10px}
+*::-webkit-scrollbar-track{background:#eeeae1}
+*::-webkit-scrollbar-thumb{background:#b7c1c3;border:2px solid #eeeae1;border-radius:999px}
+*::-webkit-scrollbar-thumb:hover{background:#99aaad}
