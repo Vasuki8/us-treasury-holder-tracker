@@ -1,0 +1,68 @@
+{
+  "version": "2026-09-15",
+  "metrics": [
+    {
+      "key": "yield.10y_pct",
+      "label": "10Y Treasury yield",
+      "unit": "%",
+      "source_block": "treasury_yield_curve.nominal.history",
+      "history": true,
+      "operators": ["above", "below", "crosses_above", "crosses_below"],
+      "default_threshold": 5.0
+    },
+    {
+      "key": "yield.spread_10y_2y_bps",
+      "label": "10Y - 2Y spread",
+      "unit": "bps",
+      "source_block": "treasury_yield_curve.spreads.history",
+      "history": true,
+      "operators": ["above", "below", "crosses_above", "crosses_below"],
+      "default_threshold": 0.0
+    },
+    {
+      "key": "yield.spread_10y_3m_bps",
+      "label": "10Y - 3M spread",
+      "unit": "bps",
+      "source_block": "treasury_yield_curve.spreads.history",
+      "history": true,
+      "operators": ["above", "below", "crosses_above", "crosses_below"],
+      "default_threshold": 0.0
+    },
+    {
+      "key": "auction.demand_score",
+      "label": "Auction demand score",
+      "unit": "score",
+      "source_block": "auction_demand_monitor.dynamic_history.observations",
+      "history": true,
+      "operators": ["above", "below", "crosses_above", "crosses_below"],
+      "default_threshold": 35.0
+    },
+    {
+      "key": "funding.principal_30d_billions",
+      "label": "30D principal due",
+      "unit": "$B",
+      "source_block": "treasury_funding_pressure.horizons.30D",
+      "history": false,
+      "operators": ["above", "below"],
+      "default_threshold": 2000.0
+    },
+    {
+      "key": "funding.gross_cash_90d_billions",
+      "label": "90D scheduled cash",
+      "unit": "$B",
+      "source_block": "treasury_funding_pressure.horizons.90D",
+      "history": false,
+      "operators": ["above", "below"],
+      "default_threshold": 5000.0
+    },
+    {
+      "key": "funding.tga_billions",
+      "label": "Treasury General Account",
+      "unit": "$B",
+      "source_block": "treasury_funding_pressure.tga",
+      "history": false,
+      "operators": ["above", "below"],
+      "default_threshold": 800.0
+    }
+  ]
+}
