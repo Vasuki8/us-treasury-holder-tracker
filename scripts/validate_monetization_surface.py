@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -7,6 +8,11 @@ ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "index.html"
 JS = ROOT / "monetization.js"
 CSS = ROOT / "monetization.css"
+BILLING = ROOT / "billing-config.js"
+LEGAL_PAGES = [ROOT / "terms.html", ROOT / "privacy.html", ROOT / "refunds.html"]
+CHECKOUT_PAGES = [ROOT / "checkout-success.html", ROOT / "checkout-cancelled.html"]
+ROBOTS = ROOT / "robots.txt"
+SITEMAP = ROOT / "sitemap.xml"
 
 
 class IdParser(HTMLParser):
@@ -25,17 +31,23 @@ class IdParser(HTMLParser):
             self.refs.append(("link", str(values["href"])))
 
 
+def parse_html(path: Path) -> IdParser:
+    parser = IdParser()
+    parser.feed(path.read_text(encoding="utf-8"))
+    duplicates = sorted({value for value in parser.ids if parser.ids.count(value) > 1})
+    assert not duplicates, f"duplicate HTML ids in {path.name}: {duplicates}"
+    return parser
+
+
 def main() -> None:
-    assert INDEX.exists(), "index.html missing"
-    assert JS.exists(), "monetization.js missing"
-    assert CSS.exists(), "monetization.css missing"
+    required_files = [INDEX, JS, CSS, BILLING, *LEGAL_PAGES, *CHECKOUT_PAGES, ROBOTS, SITEMAP]
+    missing_files = [path.name for path in required_files if not path.exists()]
+    assert not missing_files, f"monetization files missing: {missing_files}"
 
     html = INDEX.read_text(encoding="utf-8")
-    parser = IdParser()
-    parser.feed(html)
-
-    duplicates = sorted({value for value in parser.ids if parser.ids.count(value) > 1})
-    assert not duplicates, f"duplicate HTML ids: {duplicates}"
+    parser = parse_html(INDEX)
+    for page in [*LEGAL_PAGES, *CHECKOUT_PAGES]:
+        parse_html(page)
 
     required_ids = {
         "dashboard",
@@ -69,12 +81,57 @@ def main() -> None:
         assert phrase.lower() in html.lower(), f"missing monetization copy: {phrase}"
 
     js = JS.read_text(encoding="utf-8")
-    for token in ["proMonthly:15", "proAnnual:150", "apiMonthly:99", "data-pro-checkout"]:
+    for token in [
+        "billing-config.js",
+        "alertBuilder",
+        "alertMetric",
+        "alertPreviewState",
+        "data-pro-checkout",
+        "treasury:product-event",
+    ]:
         assert token in js, f"missing monetization JS contract: {token}"
+
+    css = CSS.read_text(encoding="utf-8")
+    for token in [".alert-builder", ".legal-shell", ".checkout-state-card"]:
+        assert token in css, f"missing monetization CSS contract: {token}"
+
+    billing = BILLING.read_text(encoding="utf-8")
+    for token in [
+        "treasury-pro-monthly",
+        "treasury-pro-annual",
+        "treasury-api-monthly",
+        "price:15",
+        "price:150",
+        "price:99",
+        "checkout-success.html",
+        "checkout-cancelled.html",
+    ]:
+        assert token in billing, f"missing billing config contract: {token}"
+
+    forbidden_secret_patterns = [r"sk_(?:live|test)_", r"rk_(?:live|test)_", r"whsec_", r"STRIPE_SECRET"]
+    for pattern in forbidden_secret_patterns:
+        assert not re.search(pattern, billing, flags=re.I), f"secret-like token found in public billing config: {pattern}"
+
+    legal_requirements = {
+        "terms.html": ["informational and research purposes only", "Paid plans and renewals"],
+        "privacy.html": ["do not sell user data", "Payments"],
+        "refunds.html": ["Cancel anytime", "generally non-refundable"],
+    }
+    for filename, phrases in legal_requirements.items():
+        text = (ROOT / filename).read_text(encoding="utf-8")
+        for phrase in phrases:
+            assert phrase.lower() in text.lower(), f"{filename} missing policy copy: {phrase}"
+
+    robots = ROBOTS.read_text(encoding="utf-8")
+    sitemap = SITEMAP.read_text(encoding="utf-8")
+    assert "sitemap.xml" in robots.lower(), "robots.txt missing sitemap reference"
+    assert "checkout-success.html" not in sitemap, "checkout success page must not be indexed"
+    assert "us-treasury-holder-tracker/" in sitemap, "sitemap missing canonical dashboard URL"
 
     print(
         "Monetization surface validation passed: "
-        f"{len(parser.ids)} unique ids; Free/Pro/API pricing and checkout hooks present."
+        f"{len(parser.ids)} unique dashboard ids; Free/Pro/API pricing, alert preview, "
+        "billing config, legal pages and checkout return pages are present."
     )
 
 
