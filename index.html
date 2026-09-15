@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="market-insights.css" />
   <link rel="stylesheet" href="yield-curve.css" />
   <link rel="stylesheet" href="institution-history.css" />
+  <link rel="stylesheet" href="monetization.css?v=20260915-product" />
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script defer src="app.js?v=20260911-sections-removed"></script>
   <script defer src="country-history.js"></script>
@@ -27,13 +28,28 @@
   <script defer src="institution-history.js?v=20260911-institution-history"></script>
   <script defer src="range-sync.js?v=20260911-dynamic-ranges"></script>
   <script defer src="yield-curve.js?v=20260912-yield-curve"></script>
+  <script defer src="monetization.js?v=20260915-product"></script>
 </head>
-<body class="core-dashboard ux5-core">
+<body id="top" class="core-dashboard ux5-core">
+  <nav class="product-nav shell" aria-label="Primary navigation">
+    <a class="product-brand" href="#top"><span class="product-mark">UST</span><span>US Treasury Tracker</span></a>
+    <div class="product-links">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#treasuryPro">Treasury Pro</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+    <a class="pro-nav-cta" href="#pricing">Get Pro</a>
+  </nav>
+
   <header class="shell hero">
     <div>
       <div class="eyebrow">U.S. TREASURY OWNERSHIP</div>
       <h1>Who Owns U.S. Treasuries?</h1>
       <p class="lede">Track ownership, long-run history, maturities and interest cash flows, funding pressure, the Treasury yield curve, announced issuance and buybacks, auction demand, primary-dealer positioning, debt cost, holder market share, institutional holders and major foreign holders while preserving each source's real reporting date.</p>
+      <div class="hero-actions">
+        <a class="hero-cta-primary" href="#treasuryPro">Explore Treasury Pro</a>
+        <a class="hero-cta-secondary" href="#allTimeHistoryPanel">Open dashboard</a>
+      </div>
     </div>
     <div class="hero-side">
       <div class="status" id="updateStatus">Loading official data…</div>
@@ -44,8 +60,48 @@
     </div>
   </header>
 
-  <main class="shell">
+  <main id="dashboard" class="shell">
     <section class="cards" id="overviewCards" aria-label="Headline Treasury ownership metrics"></section>
+
+    <section class="pro-panel" id="treasuryPro" aria-labelledby="treasuryProTitle">
+      <div class="pro-top">
+        <div class="pro-copy">
+          <div class="pro-label">Treasury Pro · early access</div>
+          <h2 id="treasuryProTitle">Turn the public dashboard into a daily Treasury decision workflow.</h2>
+          <p>Keep the core official-data dashboard free. Treasury Pro adds the automation around it: condition-based alerts, scheduled market briefs, saved workspaces and authenticated data delivery for people who need to monitor the market instead of repeatedly checking it.</p>
+          <div class="pro-actions">
+            <a class="pro-cta primary" href="#pricing">See launch pricing</a>
+            <button class="pro-cta secondary" type="button" data-product-modal="pro">How Pro will work</button>
+          </div>
+          <div class="pro-trust" id="proDebtContext">The underlying public Treasury data remains free and source-dated.</div>
+        </div>
+        <aside class="pro-snapshot" aria-label="Live Treasury Pro signal preview">
+          <div class="pro-snapshot-head"><strong>Live signal preview</strong><span id="proSignalMeta">Waiting for official data…</span></div>
+          <div class="pro-signal-grid" id="proSignalGrid">
+            <article class="pro-signal"><span>10Y Treasury</span><strong>—</strong><small>Loading official yield…</small></article>
+            <article class="pro-signal"><span>10Y − 2Y</span><strong>—</strong><small>Loading curve spread…</small></article>
+            <article class="pro-signal"><span>90D scheduled cash</span><strong>—</strong><small>Loading funding window…</small></article>
+            <article class="pro-signal"><span>Auction demand</span><strong>—</strong><small>Loading latest auction…</small></article>
+          </div>
+        </aside>
+      </div>
+      <div class="pro-capabilities">
+        <article class="pro-capability"><div class="pro-capability-icon">AL</div><strong>Custom alerts</strong><p>Trigger notifications from yield spreads, auction demand, maturities, funding pressure and ownership changes.</p><span class="pro-lock">Pro delivery</span></article>
+        <article class="pro-capability"><div class="pro-capability-icon">BR</div><strong>Scheduled briefs</strong><p>Receive a concise daily or weekly Treasury brief instead of manually checking every dashboard panel.</p><span class="pro-lock">Pro delivery</span></article>
+        <article class="pro-capability"><div class="pro-capability-icon">SV</div><strong>Saved workspaces</strong><p>Persist preferred series, time ranges and monitoring views so your Treasury workflow opens exactly where you left it.</p><span class="pro-lock">Pro workspace</span></article>
+        <article class="pro-capability"><div class="pro-capability-icon">API</div><strong>API & scheduled exports</strong><p>Authenticated normalized data endpoints, higher limits and automated CSV/JSON delivery for research and applications.</p><span class="pro-lock">Data plan</span></article>
+      </div>
+      <div class="alert-examples">
+        <div class="alert-examples-head"><strong>Examples of alerts worth paying for</strong><span>Automation is the product; public data is not the paywall.</span></div>
+        <div class="alert-chip-row">
+          <span class="alert-chip">10Y−2Y crosses 0 bps</span>
+          <span class="alert-chip">Auction demand score falls below 35</span>
+          <span class="alert-chip">30D principal due exceeds $2T</span>
+          <span class="alert-chip">Foreign holdings move more than $50B</span>
+          <span class="alert-chip">10Y yield moves 20+ bps in 5 sessions</span>
+        </div>
+      </div>
+    </section>
 
     <section class="panel all-time-panel" id="allTimeHistoryPanel">
       <div class="panel-head">
@@ -228,8 +284,90 @@
       <div class="note inline-note">The All range combines Treasury-specific annual survey observations before the monthly TIC series begins with the complete monthly history from 2011 onward. Pre-1994 survey columns are not used because they report broader debt rather than Treasury debt separately. TIC country attribution can reflect custodian location rather than the ultimate beneficial owner.</div>
     </section>
 
+    <section class="pricing-section" id="pricing" aria-labelledby="pricingTitle">
+      <div class="pricing-head">
+        <div>
+          <div class="pricing-eyebrow">Simple launch pricing</div>
+          <h2 id="pricingTitle">Pay for automation and workflow—not access to public Treasury facts.</h2>
+          <p>The public dashboard stays free. Pro is for monitoring and delivery. The Data plan is for applications, systematic research and teams that need authenticated access.</p>
+        </div>
+        <div class="billing-toggle" aria-label="Choose Pro billing cadence">
+          <button type="button" data-billing="monthly" class="active">Monthly</button>
+          <button type="button" data-billing="annual">Annual · save 17%</button>
+        </div>
+      </div>
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <h3>Free</h3>
+          <p>For investors, students and anyone who wants the official-data dashboard.</p>
+          <div class="price-row"><strong>$0</strong><span>/forever</span></div>
+          <div class="price-sub">No account required</div>
+          <ul class="pricing-features">
+            <li>Live public Treasury dashboard</li>
+            <li>Official source dates and methodology notes</li>
+            <li>Yield curve, maturities, auctions and ownership</li>
+            <li>Manual JSON and CSV downloads</li>
+            <li>Historical range controls</li>
+          </ul>
+          <a class="pricing-cta" href="#dashboard">Use the free dashboard</a>
+          <div class="pricing-status">Available now</div>
+        </article>
+
+        <article class="pricing-card featured">
+          <span class="pricing-badge">Recommended</span>
+          <h3>Treasury Pro</h3>
+          <p>For people who want the tracker to watch the market for them.</p>
+          <div class="price-row"><strong id="proPrice">$15</strong><span id="proCadence">/mo</span></div>
+          <div class="price-sub" id="proPriceSub">Billed monthly · cancel anytime</div>
+          <ul class="pricing-features">
+            <li>Everything in Free</li>
+            <li>Condition-based Treasury alerts</li>
+            <li>Daily and weekly scheduled briefs</li>
+            <li>Saved workspaces and preferred views</li>
+            <li>Scheduled CSV/JSON delivery</li>
+            <li>Priority access to new analytics</li>
+          </ul>
+          <button class="pricing-cta" type="button" data-pro-checkout>Join Pro early access</button>
+          <div class="pricing-status">Launch price: $15/month or $150/year</div>
+        </article>
+
+        <article class="pricing-card">
+          <span class="pricing-badge">Pilot</span>
+          <h3>Data API</h3>
+          <p>For developers, analysts and teams building on normalized Treasury datasets.</p>
+          <div class="price-row"><strong>$99</strong><span>/mo</span></div>
+          <div class="price-sub">API pilot pricing</div>
+          <ul class="pricing-features">
+            <li>Authenticated normalized endpoints</li>
+            <li>Higher request limits</li>
+            <li>Historical Treasury datasets</li>
+            <li>Scheduled bulk exports</li>
+            <li>Source lineage and reporting dates</li>
+            <li>Commercial-use tiering as usage grows</li>
+          </ul>
+          <button class="pricing-cta" type="button" data-api-checkout>Request API early access</button>
+          <div class="pricing-status">Pilot opens after authenticated API backend is deployed</div>
+        </article>
+      </div>
+      <div class="pricing-foot">Pricing is intentionally simple for the first launch and can be changed after we measure conversion, retention and infrastructure cost. Treasury Pro is a data and research product, not personalized investment advice.</div>
+    </section>
+
     <section class="note data-discipline"><strong>Data discipline:</strong> the site checks official sources daily, but ownership, maturity, TGA, auction, buyback, dealer, yield-curve, average-rate and interest-expense datasets publish on different schedules. Every displayed value keeps its real observation date; Treasury par yields remain distinct from auction yields and coupons; ownership shares preserve source valuation caveats; tentative buyback caps are distinguished from actual purchases; and forward variable/inflation-linked interest remains labeled as estimated.</section>
   </main>
+
+  <div class="product-modal-backdrop" id="productModalBackdrop" aria-hidden="true">
+    <section class="product-modal" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+      <div class="product-modal-top">
+        <div><div class="pricing-eyebrow">Product rollout</div><h3 id="productModalTitle">Treasury Pro early access</h3></div>
+        <button class="product-modal-close" type="button" aria-label="Close" data-close-product-modal>Close</button>
+      </div>
+      <p id="productModalCopy">Treasury Pro is being prepared for paid early access.</p>
+      <div class="product-modal-actions">
+        <a class="pro-cta primary" href="#pricing" data-close-product-modal>View pricing</a>
+        <a class="pro-cta secondary" href="#dashboard" data-close-product-modal>Keep using Free</a>
+      </div>
+    </section>
+  </div>
 
   <footer class="shell footer">Official sources include U.S. Treasury Fiscal Data (Debt to the Penny, MSPD, Daily Treasury Statement, Treasury Securities Auctions, Average Interest Rates and Interest Expense), U.S. Treasury Daily Par Yield and Real Yield Curves, TreasuryDirect buyback schedules, Treasury International Capital, Federal Reserve H.4.1 and Financial Accounts, and New York Fed primary-dealer statistics.</footer>
 </body>
