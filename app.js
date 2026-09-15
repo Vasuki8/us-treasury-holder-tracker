@@ -1,3 +1,118 @@
+const TREASURY_THEME = Object.freeze({
+  bg:'#f4f1e8',
+  panel:'#fffdf8',
+  text:'#1b2938',
+  muted:'#657283',
+  line:'#d8d2c5',
+  grid:'rgba(55,74,89,.11)',
+  gridStrong:'rgba(55,74,89,.24)',
+  accent:'#176b7e',
+  teal:'#3c887e',
+  amber:'#a9792d',
+  plum:'#77638d',
+  blue:'#456f9a',
+  green:'#3f7959',
+  red:'#aa4652',
+  slate:'#697b86',
+  tooltip:'#203342',
+  tooltipBorder:'#456171',
+});
+window.treasuryTheme = TREASURY_THEME;
+
+(() => {
+  const styleId = 'treasuryPaperThemeStyles';
+  if(!document.getElementById(styleId)){
+    const link = document.createElement('link');
+    link.id = styleId;
+    link.rel = 'stylesheet';
+    link.href = 'theme.css?v=20260915-treasury-paper';
+    document.head.appendChild(link);
+  }
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', TREASURY_THEME.bg);
+
+  if(!window.Chart) return;
+  const p = TREASURY_THEME;
+  const seriesPalette = [p.accent,p.amber,p.teal,p.plum,p.blue,p.green,p.red,p.slate];
+  const rgba = (hex, alpha) => {
+    const value = String(hex || '').replace('#','');
+    if(!/^[0-9a-f]{6}$/i.test(value)) return hex;
+    const number = Number.parseInt(value,16);
+    return `rgba(${(number>>16)&255},${(number>>8)&255},${number&255},${alpha})`;
+  };
+  const datasetColor = (dataset,index) => {
+    const label = String(dataset?.label || '').toLowerCase();
+    if(label.includes('principal')) return p.accent;
+    if(label.includes('interest')) return p.amber;
+    if(label.includes('issuance')) return p.teal;
+    if(label.includes('buyback')) return p.plum;
+    if(label.includes('gdp')) return p.green;
+    if(label.includes('tga')) return p.teal;
+    if(label.includes('real') || label.includes('tips')) return p.green;
+    return seriesPalette[index % seriesPalette.length];
+  };
+  const applyTheme = chart => {
+    const options = chart.config.options || (chart.config.options = {});
+    options.color = p.text;
+    options.borderColor = p.grid;
+
+    const plugins = options.plugins || (options.plugins = {});
+    if(plugins.legend !== false){
+      const legend = plugins.legend || (plugins.legend = {});
+      const labels = legend.labels || (legend.labels = {});
+      labels.color = p.text;
+    }
+    if(plugins.title) plugins.title.color = p.text;
+    if(plugins.subtitle) plugins.subtitle.color = p.muted;
+    if(plugins.tooltip !== false){
+      const tooltip = plugins.tooltip || (plugins.tooltip = {});
+      tooltip.backgroundColor = p.tooltip;
+      tooltip.titleColor = '#fffdf8';
+      tooltip.bodyColor = '#f2f5f5';
+      tooltip.footerColor = '#d7e2e4';
+      tooltip.borderColor = p.tooltipBorder;
+      tooltip.borderWidth = 1;
+      tooltip.cornerRadius = 8;
+      tooltip.padding = 10;
+    }
+
+    Object.values(options.scales || {}).forEach(scale => {
+      const ticks = scale.ticks || (scale.ticks = {});
+      ticks.color = p.muted;
+      const title = scale.title;
+      if(title) title.color = p.muted;
+      const border = scale.border || (scale.border = {});
+      border.color = p.line;
+      const grid = scale.grid || (scale.grid = {});
+      if(grid.display !== false){
+        const hadDynamicGrid = typeof grid.color === 'function';
+        grid.color = ctx => Number(ctx?.tick?.value) === 0 && hadDynamicGrid ? p.gridStrong : p.grid;
+        grid.tickColor = p.line;
+      }
+    });
+
+    (chart.config.data?.datasets || []).forEach((dataset,index) => {
+      const color = datasetColor(dataset,index);
+      const hasColorArray = Array.isArray(dataset.backgroundColor) || Array.isArray(dataset.borderColor);
+      if(!hasColorArray && dataset.borderColor == null) dataset.borderColor = color;
+      if(!hasColorArray && dataset.backgroundColor == null){
+        const type = dataset.type || chart.config.type;
+        dataset.backgroundColor = rgba(color, type === 'line' ? .13 : .68);
+      }
+      if(dataset.pointBackgroundColor == null) dataset.pointBackgroundColor = color;
+      if(dataset.pointBorderColor == null) dataset.pointBorderColor = p.panel;
+    });
+  };
+
+  Chart.defaults.color = p.text;
+  Chart.defaults.borderColor = p.grid;
+  Chart.defaults.font.family = 'Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif';
+  Chart.register({
+    id:'treasury-paper-theme',
+    beforeInit:applyTheme,
+    beforeUpdate:applyTheme,
+  });
+})();
+
 const fmtB = v => v == null || !Number.isFinite(Number(v)) ? '—' : `$${Number(v).toLocaleString(undefined,{maximumFractionDigits:1})}B`;
 const fmtUSD = v => v == null || !Number.isFinite(Number(v)) ? '—' : (Number(v) >= 1e12 ? `$${(Number(v)/1e12).toLocaleString(undefined,{maximumFractionDigits:3})}T` : `$${(Number(v)/1e9).toLocaleString(undefined,{maximumFractionDigits:1})}B`);
 const fmtPct = v => v == null || !Number.isFinite(Number(v)) ? '—' : `${Number(v).toFixed(1)}%`;
@@ -98,7 +213,7 @@ function renderForeign(){
     charts.foreign = new Chart(canvas, {
       type: 'bar',
       data: {labels: top.map(row => row.name), datasets: [{label:'Holdings ($B)', data:top.map(row => row.holdings_billions)}]},
-      options: {indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{grid:{color:'rgba(148,184,221,.10)'},ticks:{color:'#96a6ba'}},y:{grid:{display:false},ticks:{color:'#dbe6f4'}}}}
+      options: {indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{grid:{color:TREASURY_THEME.grid},ticks:{color:TREASURY_THEME.muted}},y:{grid:{display:false},ticks:{color:TREASURY_THEME.text}}}}
     });
   }
 }
@@ -117,7 +232,7 @@ function renderOwnershipShares(){
     charts.shares = new Chart(canvas, {
       type:'bar',
       data:{labels:rows.map(row => row.name), datasets:[{label:'Share of relevant denominator (%)', data:rows.map(row => row.share_pct)}]},
-      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,grid:{color:'rgba(148,184,221,.10)'},ticks:{color:'#96a6ba',callback:value=>`${value}%`}},x:{grid:{display:false},ticks:{color:'#dbe6f4'}}}}
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,grid:{color:TREASURY_THEME.grid},ticks:{color:TREASURY_THEME.muted,callback:value=>`${value}%`}},x:{grid:{display:false},ticks:{color:TREASURY_THEME.text}}}}
     });
   }
 }
