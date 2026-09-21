@@ -15,6 +15,7 @@
   const state = {
     billing:savedBilling,
     data:null,
+    alertPreview:null,
     alertDraft:{
       metric:savedAlert.metric || 'yield-10y',
       condition:savedAlert.condition === 'below' ? 'below' : 'above',
@@ -98,6 +99,9 @@
         <div class="alert-preview-result">
           <div><strong id="alertPreviewState">Waiting for data</strong><p id="alertPreviewMeta">The rule will evaluate when the official-data payload loads.</p></div>
           <button class="pro-cta primary" id="saveAlertPreview" type="button">Save this alert with Pro</button>
+        </div>
+        <div class="alert-engine-preview" id="alertEnginePreview">
+          <div class="alert-engine-loading">Loading the server-compatible alert engine preview…</div>
         </div>`;
       examples.insertAdjacentElement('afterend',builder);
     }
@@ -292,6 +296,70 @@
     });
   }
 
+  function formatEngineValue(value,unit,digits=0){
+    const n=Number(value);
+    if(!Number.isFinite(n)) return '—';
+    if(unit==='pct') return `${n.toFixed(digits)}%`;
+    if(unit==='bps') return `${n>0?'+':n<0?'−':''}${Math.abs(n).toFixed(digits)} bps`;
+    if(unit==='usd_billions') return fmtMoneyB(n);
+    return n.toFixed(digits);
+  }
+
+  function renderAlertEnginePreview(){
+    const host=document.getElementById('alertEnginePreview');
+    if(!host) return;
+    const preview=state.alertPreview;
+    if(!preview){
+      host.innerHTML='<div class="alert-engine-loading">Loading the server-compatible alert engine preview…</div>';
+      return;
+    }
+    const metrics=Array.isArray(preview.metrics)?preview.metrics:[];
+    const metricMap=new Map(metrics.map(row=>[row.id,row]));
+    const rules=Array.isArray(preview.sample_rules)?preview.sample_rules:[];
+    const stamp=preview.source_generated_at?new Date(preview.source_generated_at).toLocaleString():'latest official refresh';
+    const available=metrics.filter(row=>finite(row.value)).length;
+    host.innerHTML=`
+      <div class="alert-engine-head">
+        <div>
+          <span class="pro-label">Treasury Alerts v1 engine</span>
+          <h4>Real rule evaluation from the validated dashboard payload</h4>
+          <p>${esc(available)} of ${esc(metrics.length)} monitored metrics currently have an official observation · source refresh ${esc(stamp)}.</p>
+        </div>
+        <span class="alert-engine-version">Engine ${esc(preview.engine_version||'1.0')}</span>
+      </div>
+      <div class="alert-engine-rules">
+        ${rules.map(rule=>{
+          const metric=metricMap.get(rule.metric_id)||{};
+          const status=rule.status||'unavailable';
+          const threshold=formatEngineValue(rule.threshold,rule.unit||metric.unit,metric.digits||0);
+          const current=formatEngineValue(rule.current_value,rule.unit||metric.unit,metric.digits||0);
+          return `<article class="alert-engine-rule ${esc(status)}">
+            <div class="alert-engine-rule-top"><strong>${esc(rule.label||rule.id)}</strong><span>${esc(status)}</span></div>
+            <p>Current ${esc(current)} · threshold ${esc(rule.condition||'—')} ${esc(threshold)}</p>
+            <small>${esc(rule.observation_date||'No current observation')} · ${esc(metric.source_path||'validated dashboard source')}</small>
+          </article>`;
+        }).join('')}
+      </div>
+      <p class="alert-engine-note">${esc(preview.note||'This is a public product preview. Persisted paid alerts require authenticated server-side state and notification delivery.')}</p>`;
+  }
+
+  async function loadAlertEnginePreview(){
+    try{
+      const response=await fetch(`data/pro-alert-preview.json?v=${Date.now()}`);
+      if(!response.ok) throw new Error(`pro-alert-preview.json ${response.status}`);
+      state.alertPreview=await response.json();
+      renderAlertEnginePreview();
+      emitProductEvent('alert_engine_preview_loaded',{
+        metrics:Number(state.alertPreview.metric_count||0),
+        rules:Number(state.alertPreview.rule_count||0),
+      });
+    }catch(error){
+      console.warn('Treasury Pro alert preview unavailable',error);
+      const host=document.getElementById('alertEnginePreview');
+      if(host) host.innerHTML='<div class="alert-engine-loading">The alert-engine preview is temporarily unavailable. The free Treasury dashboard is unaffected.</div>';
+    }
+  }
+
   function renderLiveSnapshot(data){
     state.data=data;
     const host=document.getElementById('proSignalGrid');
@@ -328,6 +396,8 @@
     wireModal();
     wirePricing();
     wireAlertBuilder();
+    renderAlertEnginePreview();
+    loadAlertEnginePreview();
     if(window.treasuryData) renderLiveSnapshot(window.treasuryData);
     else window.addEventListener('treasury:data-ready',event=>renderLiveSnapshot(event.detail),{once:true});
   }

@@ -1,0 +1,11 @@
+{
+  "engine_version": "1.0",
+  "generated_at": null,
+  "source_generated_at": null,
+  "metric_count": 0,
+  "rule_count": 0,
+  "metrics": [],
+  "sample_rules": [],
+  "stateful_delivery_required": true,
+  "note": "Awaiting the first generated Treasury Pro alert preview."
+}

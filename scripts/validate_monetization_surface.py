@@ -13,6 +13,7 @@ LEGAL_PAGES = [ROOT / "terms.html", ROOT / "privacy.html", ROOT / "refunds.html"
 CHECKOUT_PAGES = [ROOT / "checkout-success.html", ROOT / "checkout-cancelled.html"]
 ROBOTS = ROOT / "robots.txt"
 SITEMAP = ROOT / "sitemap.xml"
+PRO_ALERT_PREVIEW = ROOT / "data" / "pro-alert-preview.json"
 
 
 class IdParser(HTMLParser):
@@ -40,7 +41,7 @@ def parse_html(path: Path) -> IdParser:
 
 
 def main() -> None:
-    required_files = [INDEX, JS, CSS, BILLING, *LEGAL_PAGES, *CHECKOUT_PAGES, ROBOTS, SITEMAP]
+    required_files = [INDEX, JS, CSS, BILLING, *LEGAL_PAGES, *CHECKOUT_PAGES, ROBOTS, SITEMAP, PRO_ALERT_PREVIEW]
     missing_files = [path.name for path in required_files if not path.exists()]
     assert not missing_files, f"monetization files missing: {missing_files}"
 
@@ -88,11 +89,14 @@ def main() -> None:
         "alertPreviewState",
         "data-pro-checkout",
         "treasury:product-event",
+        "pro-alert-preview.json",
+        "alertEnginePreview",
+        "alert_engine_preview_loaded",
     ]:
         assert token in js, f"missing monetization JS contract: {token}"
 
     css = CSS.read_text(encoding="utf-8")
-    for token in [".alert-builder", ".legal-shell", ".checkout-state-card"]:
+    for token in [".alert-builder", ".alert-engine-preview", ".alert-engine-rule", ".legal-shell", ".checkout-state-card"]:
         assert token in css, f"missing monetization CSS contract: {token}"
 
     billing = BILLING.read_text(encoding="utf-8")
@@ -131,7 +135,7 @@ def main() -> None:
     print(
         "Monetization surface validation passed: "
         f"{len(parser.ids)} unique dashboard ids; Free/Pro/API pricing, alert preview, "
-        "billing config, legal pages and checkout return pages are present."
+        "billing config, alert-engine preview, legal pages and checkout return pages are present."
     )
 
 

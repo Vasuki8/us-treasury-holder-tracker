@@ -78,7 +78,7 @@ The authentication/database and serverless pieces can be added without moving th
 
 The public `billing-config.js` may contain prices and Stripe Payment Link URLs, but **never** Stripe secret keys, webhook secrets or entitlement logic.
 
-### Phase M2 — payments and entitlements — next
+### Phase M2 — payments and entitlements — external activation pending
 
 - Create Stripe products/prices
 - Add monthly and annual Checkout or Payment Links to `billing-config.js`
@@ -87,21 +87,41 @@ The public `billing-config.js` may contain prices and Stripe Payment Link URLs, 
 - Process Stripe webhooks
 - Store subscription entitlement state
 
-### Phase M3 — first paid feature
+M2 requires a connected billing provider plus a private authentication/serverless layer. No secret,
+webhook signing key or entitlement decision should be added to the public GitHub Pages repository.
 
-Launch **Treasury Alerts** first because it creates obvious recurring value.
+### Phase M3 — Treasury Alerts engine — core complete, delivery pending
 
-Initial alert rules:
+Treasury Alerts now has a reusable deterministic rule engine that evaluates the validated
+`dashboard.json` payload and produces `data/pro-alert-preview.json` on every official-data refresh.
 
-- 10Y−2Y crosses a threshold
-- 10Y−3M crosses a threshold
-- 10Y yield moves N basis points over N sessions
-- auction demand score falls below a threshold
-- 30D/90D principal due exceeds a threshold
-- foreign holdings change exceeds a threshold
-- primary-dealer position changes exceed a threshold
+The v1 monitored metrics are:
 
-The public alert builder is only a preview. Real monitoring, notification delivery and persisted rules must run behind the authenticated backend.
+- 10Y Treasury yield
+- 10Y−2Y spread
+- 10Y−3M spread
+- 10Y five-session move
+- latest auction-demand score
+- 30D principal due
+- 90D principal due
+- monthly change in total foreign Treasury holdings
+- weekly change in aggregate primary-dealer Treasury positioning
+- 30D TGA change
+
+The public product surface shows sample rule evaluations from the same engine. This is intentionally
+a preview: persisted rules, crossing detection, cooldowns, user-specific thresholds and notification
+delivery must remain behind the authenticated backend.
+
+The next Treasury Alerts backend work, once authentication infrastructure is approved, is:
+
+- persist user-owned rules
+- store prior evaluation state so "crosses" alerts fire only on transitions
+- add cooldown / duplicate suppression
+- add email delivery first
+- add webhook / Slack / Telegram delivery only after demand is demonstrated
+- log delivery success/failure without exposing private rule data
+
+Sample thresholds shown publicly are workflow examples, not investment recommendations.
 
 ### Phase M4 — scheduled brief
 
