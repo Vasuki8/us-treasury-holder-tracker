@@ -16,6 +16,7 @@
     billing:savedBilling,
     data:null,
     alertPreview:null,
+    briefPreview:null,
     alertDraft:{
       metric:savedAlert.metric || 'yield-10y',
       condition:savedAlert.condition === 'below' ? 'below' : 'above',
@@ -104,6 +105,26 @@
           <div class="alert-engine-loading">Loading the server-compatible alert engine preview…</div>
         </div>`;
       examples.insertAdjacentElement('afterend',builder);
+    }
+
+    const alertBuilder=document.getElementById('alertBuilder');
+    if(alertBuilder&&!document.getElementById('dailyBriefPreview')){
+      const brief=document.createElement('section');
+      brief.className='daily-brief-preview';
+      brief.id='dailyBriefPreview';
+      brief.innerHTML=`
+        <div class="daily-brief-head">
+          <div>
+            <span class="pro-label">Scheduled brief · public preview</span>
+            <h3>Daily Treasury Brief</h3>
+            <p>A deterministic source-dated summary of the same validated dashboard data. Treasury Pro will deliver this on a schedule; the public preview shows the content model without sending anything.</p>
+          </div>
+          <span class="brief-delivery-badge">Pro delivery</span>
+        </div>
+        <div class="daily-brief-body" id="dailyBriefBody">
+          <div class="brief-loading">Loading the latest generated brief…</div>
+        </div>`;
+      alertBuilder.insertAdjacentElement('afterend',brief);
     }
 
     const footer=document.querySelector('footer.footer');
@@ -360,6 +381,69 @@
     }
   }
 
+  function renderDailyBriefPreview(){
+    const host=document.getElementById('dailyBriefBody');
+    if(!host) return;
+    const brief=state.briefPreview;
+    if(!brief){
+      host.innerHTML='<div class="brief-loading">Loading the latest generated brief…</div>';
+      return;
+    }
+    const summary=Array.isArray(brief.summary)?brief.summary:[];
+    const sections=Array.isArray(brief.sections)?brief.sections:[];
+    const sectionMap=new Map(sections.map(section=>[section.id,section]));
+    const monitoring=brief.monitoring_summary||{};
+    const compactSection=id=>{
+      const section=sectionMap.get(id)||{};
+      return (section.items||[]).filter(item=>item.unit!=='date').slice(0,4);
+    };
+    const metricCards=[
+      ...compactSection('curve').slice(0,2),
+      ...compactSection('funding').slice(0,2),
+      ...compactSection('auctions').slice(0,1),
+      ...compactSection('ownership_positioning').slice(0,2),
+    ].slice(0,6);
+    const stamp=brief.source_generated_at?new Date(brief.source_generated_at).toLocaleString():'latest official refresh';
+    host.innerHTML=`
+      <div class="brief-meta-row">
+        <span>Generated from ${esc(stamp)}</span>
+        <span>${esc(sections.length)} sections · ${esc(monitoring.sample_rule_count||0)} sample monitors</span>
+      </div>
+      <div class="brief-summary-list">
+        ${summary.map(line=>`<p>${esc(line)}</p>`).join('')||'<p>Summary is waiting for enough source observations.</p>'}
+      </div>
+      <div class="brief-metric-grid">
+        ${metricCards.map(item=>`<article class="brief-metric">
+          <span>${esc(item.label||item.metric_id)}</span>
+          <strong>${esc(item.display||'—')}</strong>
+          <small>${esc(item.observation_date||'No current observation')}</small>
+        </article>`).join('')}
+      </div>
+      <div class="brief-monitoring">
+        <div><span>Illustrative monitor conditions met</span><strong>${esc(monitoring.triggered||0)}</strong></div>
+        <div><span>Quiet</span><strong>${esc(monitoring.quiet||0)}</strong></div>
+        <div><span>Unavailable</span><strong>${esc(monitoring.unavailable||0)}</strong></div>
+      </div>
+      <p class="brief-note">${esc(brief.note||'This is a public preview. Scheduled delivery requires Treasury Pro authentication and private delivery infrastructure.')}</p>`;
+  }
+
+  async function loadDailyBriefPreview(){
+    try{
+      const response=await fetch(`data/pro-brief-preview.json?v=${Date.now()}`);
+      if(!response.ok) throw new Error(`pro-brief-preview.json ${response.status}`);
+      state.briefPreview=await response.json();
+      renderDailyBriefPreview();
+      emitProductEvent('brief_preview_loaded',{
+        sections:Array.isArray(state.briefPreview.sections)?state.briefPreview.sections.length:0,
+        summary:Array.isArray(state.briefPreview.summary)?state.briefPreview.summary.length:0,
+      });
+    }catch(error){
+      console.warn('Daily Treasury Brief preview unavailable',error);
+      const host=document.getElementById('dailyBriefBody');
+      if(host) host.innerHTML='<div class="brief-loading">The scheduled-brief preview is temporarily unavailable. The free Treasury dashboard is unaffected.</div>';
+    }
+  }
+
   function renderLiveSnapshot(data){
     state.data=data;
     const host=document.getElementById('proSignalGrid');
@@ -398,6 +482,8 @@
     wireAlertBuilder();
     renderAlertEnginePreview();
     loadAlertEnginePreview();
+    renderDailyBriefPreview();
+    loadDailyBriefPreview();
     if(window.treasuryData) renderLiveSnapshot(window.treasuryData);
     else window.addEventListener('treasury:data-ready',event=>renderLiveSnapshot(event.detail),{once:true});
   }
