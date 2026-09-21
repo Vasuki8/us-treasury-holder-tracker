@@ -1,0 +1,17 @@
+{
+  "brief_version": "1.0",
+  "generated_at": null,
+  "source_generated_at": null,
+  "title": "Daily Treasury Brief",
+  "cadence": "daily-preview",
+  "summary": [],
+  "sections": [],
+  "monitoring_summary": {
+    "sample_rule_count": 0,
+    "triggered": 0,
+    "quiet": 0,
+    "unavailable": 0
+  },
+  "delivery_required": true,
+  "note": "Awaiting the first generated Daily Treasury Brief preview."
+}
