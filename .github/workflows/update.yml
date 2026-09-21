@@ -166,6 +166,12 @@ jobs:
       - name: Validate Treasury Pro alert engine
         run: .venv/bin/python scripts/validate_pro_alerts.py
 
+      - name: Build Daily Treasury Brief preview
+        run: .venv/bin/python scripts/build_pro_brief_preview.py
+
+      - name: Validate Daily Treasury Brief
+        run: .venv/bin/python scripts/validate_pro_brief.py
+
       - name: Validate browser-safe JSON
         run: .venv/bin/python scripts/validate_browser_json.py
 
@@ -220,7 +226,7 @@ jobs:
       - name: Commit updated data safely
         if: github.event_name != 'pull_request'
         run: |
-          if git diff --quiet -- data/dashboard.json data/pro-alert-preview.json; then
+          if git diff --quiet -- data/dashboard.json data/pro-alert-preview.json data/pro-brief-preview.json; then
             echo "No data changes."
             exit 0
           fi
@@ -232,11 +238,13 @@ jobs:
           LOCAL_SHA="$(git rev-parse HEAD)"
           if [ -n "$REMOTE_SHA" ] && [ "$REMOTE_SHA" != "$LOCAL_SHA" ]; then
             echo "Branch advanced during refresh; regenerating on latest HEAD."
-            git restore data/dashboard.json data/pro-alert-preview.json
+            git restore data/dashboard.json data/pro-alert-preview.json data/pro-brief-preview.json
             git pull --ff-only origin "$GITHUB_REF_NAME"
             .venv/bin/python scripts/update_data_v25.py
             .venv/bin/python scripts/build_pro_alert_preview.py
             .venv/bin/python scripts/validate_pro_alerts.py
+            .venv/bin/python scripts/build_pro_brief_preview.py
+            .venv/bin/python scripts/validate_pro_brief.py
             .venv/bin/python scripts/validate_browser_json.py
             .venv/bin/python scripts/validate_phase8_state.py
             .venv/bin/python scripts/validate_phase9_state.py
@@ -256,11 +264,11 @@ jobs:
             .venv/bin/python scripts/validate_yield_refinancing_auction.py
           fi
 
-          if git diff --quiet -- data/dashboard.json data/pro-alert-preview.json; then
+          if git diff --quiet -- data/dashboard.json data/pro-alert-preview.json data/pro-brief-preview.json; then
             echo "No data changes after resync."
             exit 0
           fi
 
-          git add data/dashboard.json data/pro-alert-preview.json
+          git add data/dashboard.json data/pro-alert-preview.json data/pro-brief-preview.json
           git commit -m "data: refresh Treasury holder tracker"
           git push origin HEAD:"$GITHUB_REF_NAME"
