@@ -133,7 +133,7 @@ def _summary(metrics: dict[str, dict[str, Any]]) -> list[str]:
             parts.append(
                 f"latest weekly primary-dealer Treasury position change is {_format(dealer, 'usd_billions', 1)}"
             )
-        rows.append("; ".join(parts).capitalize() + ".")
+        sentence = "; ".join(parts)\n        rows.append(sentence[:1].upper() + sentence[1:] + ".")
 
     return rows
 
