@@ -28,6 +28,10 @@ on:
       - yield-curve.css
       - monetization.js
       - monetization.css
+      - source-health.js
+      - source-health.css
+      - source-health.js
+      - source-health.css
       - billing-config.js
       - terms.html
       - privacy.html
@@ -142,6 +146,7 @@ jobs:
           node --check yield-curve.js
           node --check billing-config.js
           node --check monetization.js
+          node --check source-health.js
 
       - name: Validate monetization surface
         run: python3 scripts/validate_monetization_surface.py
@@ -165,6 +170,12 @@ jobs:
 
       - name: Validate Treasury Pro alert engine
         run: .venv/bin/python scripts/validate_pro_alerts.py
+
+      - name: Build cadence-aware source health
+        run: .venv/bin/python scripts/build_source_health.py
+
+      - name: Validate cadence-aware source health
+        run: .venv/bin/python scripts/validate_source_health.py
 
       - name: Validate browser-safe JSON
         run: .venv/bin/python scripts/validate_browser_json.py
@@ -220,7 +231,7 @@ jobs:
       - name: Commit updated data safely
         if: github.event_name != 'pull_request'
         run: |
-          if git diff --quiet -- data/dashboard.json data/pro-alert-preview.json; then
+          if git diff --quiet -- data/dashboard.json data/pro-alert-preview.json data/source-health.json; then
             echo "No data changes."
             exit 0
           fi
@@ -232,11 +243,13 @@ jobs:
           LOCAL_SHA="$(git rev-parse HEAD)"
           if [ -n "$REMOTE_SHA" ] && [ "$REMOTE_SHA" != "$LOCAL_SHA" ]; then
             echo "Branch advanced during refresh; regenerating on latest HEAD."
-            git restore data/dashboard.json data/pro-alert-preview.json
+            git restore data/dashboard.json data/pro-alert-preview.json data/source-health.json
             git pull --ff-only origin "$GITHUB_REF_NAME"
             .venv/bin/python scripts/update_data_v25.py
             .venv/bin/python scripts/build_pro_alert_preview.py
             .venv/bin/python scripts/validate_pro_alerts.py
+            .venv/bin/python scripts/build_source_health.py
+            .venv/bin/python scripts/validate_source_health.py
             .venv/bin/python scripts/validate_browser_json.py
             .venv/bin/python scripts/validate_phase8_state.py
             .venv/bin/python scripts/validate_phase9_state.py
@@ -256,11 +269,11 @@ jobs:
             .venv/bin/python scripts/validate_yield_refinancing_auction.py
           fi
 
-          if git diff --quiet -- data/dashboard.json data/pro-alert-preview.json; then
+          if git diff --quiet -- data/dashboard.json data/pro-alert-preview.json data/source-health.json; then
             echo "No data changes after resync."
             exit 0
           fi
 
-          git add data/dashboard.json data/pro-alert-preview.json
+          git add data/dashboard.json data/pro-alert-preview.json data/source-health.json
           git commit -m "data: refresh Treasury holder tracker"
           git push origin HEAD:"$GITHUB_REF_NAME"
