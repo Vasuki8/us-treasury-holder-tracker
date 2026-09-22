@@ -41,7 +41,7 @@ def _generated_date(data: dict[str, Any]) -> date:
     return parsed or datetime.now(timezone.utc).date()
 
 
-def _latest_date(rows: Any, *keys: str) -> str | None:
+def _latest_date(rows: Any, *keys: str, not_after: date | None = None) -> str | None:
     values: list[date] = []
     if not isinstance(rows, list):
         return None
@@ -50,7 +50,7 @@ def _latest_date(rows: Any, *keys: str) -> str | None:
             continue
         for key in keys:
             parsed = _parse_date(row.get(key))
-            if parsed:
+            if parsed and (not_after is None or parsed <= not_after):
                 values.append(parsed)
                 break
     return max(values).isoformat() if values else None
@@ -134,6 +134,12 @@ def build_source_health(data: dict[str, Any]) -> dict[str, Any]:
         if isinstance(row, dict) and row.get("as_of")
     ]
     institution_as_of = max((_parse_date(value) for value in institution_dates if _parse_date(value)), default=None)
+    dealer_dates = [
+        row.get("as_of")
+        for row in (dealer.get("series") or [])
+        if isinstance(row, dict) and row.get("as_of")
+    ]
+    dealer_as_of = max((_parse_date(value) for value in dealer_dates if _parse_date(value)), default=None)
 
     rows = [
         _row(
@@ -211,7 +217,7 @@ def build_source_health(data: dict[str, Any]) -> dict[str, Any]:
             label="Treasury auction results",
             source_family="U.S. Treasury Fiscal Data",
             cadence="auction",
-            observation=_latest_date(demand_rows, "date", "auction_date"),
+            observation=_latest_date(demand_rows, "date", "auction_date", not_after=evaluated),
             source_url="https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/treasury-securities-auctions-data",
             data_path="auction_demand_monitor.dynamic_history.observations",
             evaluated=evaluated,
@@ -222,7 +228,10 @@ def build_source_health(data: dict[str, Any]) -> dict[str, Any]:
             label="Primary dealer Treasury positioning",
             source_family="Federal Reserve Bank of New York",
             cadence="weekly",
-            observation=_first(dealer.get("as_of"), _latest_date(dealer.get("history"), "date")),
+            observation=_first(
+                dealer.get("as_of"),
+                dealer_as_of.isoformat() if dealer_as_of else None,
+            ),
             source_url="https://www.newyorkfed.org/markets/primarydealers",
             data_path="primary_dealer_positioning.as_of",
             evaluated=evaluated,
@@ -314,6 +323,9 @@ def main() -> None:
         f"{counts['stale']} stale, {counts['unavailable']} unavailable, "
         f"{counts['runner_limited']} runner-limited."
     )
+    attention = [row["id"] for row in health["sources"] if row["status"] in {"stale", "unavailable", "runner_limited"}]
+    if attention:
+        print("Source health attention:", ", ".join(attention))
 
 
 if __name__ == "__main__":
