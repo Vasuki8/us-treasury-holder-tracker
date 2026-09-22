@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="market-insights.css" />
   <link rel="stylesheet" href="yield-curve.css" />
   <link rel="stylesheet" href="institution-history.css" />
+  <link rel="stylesheet" href="source-health.css?v=20260922-source-health" />
   <link rel="stylesheet" href="monetization.css?v=20260915-product" />
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <script defer src="app.js?v=20260911-sections-removed"></script>
@@ -29,12 +30,14 @@
   <script defer src="range-sync.js?v=20260911-dynamic-ranges"></script>
   <script defer src="yield-curve.js?v=20260912-yield-curve"></script>
   <script defer src="monetization.js?v=20260915-product"></script>
+  <script defer src="source-health.js?v=20260922-source-health"></script>
 </head>
 <body id="top" class="core-dashboard ux5-core">
   <nav class="product-nav shell" aria-label="Primary navigation">
     <a class="product-brand" href="#top"><span class="product-mark">UST</span><span>US Treasury Tracker</span></a>
     <div class="product-links">
       <a href="#dashboard">Dashboard</a>
+      <a href="#sourceHealthPanel">Source health</a>
       <a href="#treasuryPro">Treasury Pro</a>
       <a href="#pricing">Pricing</a>
     </div>
@@ -62,6 +65,14 @@
 
   <main id="dashboard" class="shell">
     <section class="cards" id="overviewCards" aria-label="Headline Treasury ownership metrics"></section>
+
+    <section class="panel source-health-panel" id="sourceHealthPanel">
+      <div class="panel-head">
+        <div><h2>Official Source Health</h2><p id="sourceHealthMeta">Loading cadence-aware source status…</p></div>
+      </div>
+      <div class="source-health-grid" id="sourceHealthGrid"></div>
+      <div class="note inline-note" id="sourceHealthNote">Source freshness is evaluated against each dataset’s own publication cadence; a successful website check does not create a newer observation date.</div>
+    </section>
 
     <section class="pro-panel" id="treasuryPro" aria-labelledby="treasuryProTitle">
       <div class="pro-top">
