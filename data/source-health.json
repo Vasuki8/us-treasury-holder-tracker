@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "generated_at": null,
+  "evaluation_date": "2026-09-22",
+  "overall_status": "attention",
+  "counts": {
+    "current": 0,
+    "expected_lag": 0,
+    "stale": 0,
+    "unavailable": 9,
+    "runner_limited": 1
+  },
+  "sources": [
+    {
+      "id": "debt_to_penny",
+      "label": "Debt to the Penny",
+      "cadence": "business_daily",
+      "observation_date": null,
+      "age_days": null,
+      "status": "unavailable",
+      "source_url": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny",
+      "note": "Awaiting cadence-aware generation from the validated dashboard payload."
+    },
+    {
+      "id": "fed_h41",
+      "label": "Federal Reserve H.4.1",
+      "cadence": "weekly",
+      "observation_date": null,
+      "age_days": null,
+      "status": "unavailable",
+      "source_url": "https://www.federalreserve.gov/releases/h41/",
+      "note": "Awaiting cadence-aware generation from the validated dashboard payload."
+    },
+    {
+      "id": "tic_foreign",
+      "label": "Treasury International Capital",
+      "cadence": "monthly",
+      "observation_date": null,
+      "age_days": null,
+      "status": "unavailable",
+      "source_url": "https://home.treasury.gov/data/treasury-international-capital-tic-system",
+      "note": "Awaiting cadence-aware generation from the validated dashboard payload."
+    },
+    {
+      "id": "treasury_yield_curve",
+      "label": "Treasury par yield curve",
+      "cadence": "business_daily",
+      "observation_date": null,
+      "age_days": null,
+      "status": "unavailable",
+      "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates",
+      "note": "Awaiting cadence-aware generation from the validated dashboard payload."
+    },
+    {
+      "id": "mspd_maturities",
+      "label": "Monthly Statement of the Public Debt",
+      "cadence": "monthly",
+      "observation_date": null,
+      "age_days": null,
+      "status": "unavailable",
+      "source_url": "https://fiscaldata.treasury.gov/datasets/monthly-statement-public-debt/",
+      "note": "Awaiting cadence-aware generation from the validated dashboard payload."
+    },
+    {
+      "id": "tga",
+      "label": "Treasury General Account",
+      "cadence": "business_daily",
+      "observation_date": null,
+      "age_days": null,
+      "status": "unavailable",
+      "source_url": "https://fiscaldata.treasury.gov/datasets/daily-treasury-statement/operating-cash-balance",
+      "note": "Awaiting cadence-aware generation from the validated dashboard payload."
+    },
+    {
+      "id": "auction_results",
+      "label": "Treasury auction results",
+      "cadence": "auction",
+      "observation_date": null,
+      "age_days": null,
+      "status": "unavailable",
+      "source_url": "https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/treasury-securities-auctions-data",
+      "note": "Awaiting cadence-aware generation from the validated dashboard payload."
+    },
+    {
+      "id": "primary_dealers",
+      "label": "Primary Dealer Statistics",
+      "cadence": "weekly",
+      "observation_date": null,
+      "age_days": null,
+      "status": "unavailable",
+      "source_url": "https://www.newyorkfed.org/markets/primarydealer_stats",
+      "note": "Awaiting cadence-aware generation from the validated dashboard payload."
+    },
+    {
+      "id": "financial_accounts",
+      "label": "Federal Reserve Financial Accounts",
+      "cadence": "quarterly",
+      "observation_date": null,
+      "age_days": null,
+      "status": "unavailable",
+      "source_url": "https://www.federalreserve.gov/releases/z1/",
+      "note": "Awaiting cadence-aware generation from the validated dashboard payload."
+    },
+    {
+      "id": "sec_nport",
+      "label": "SEC Form N-PORT cache",
+      "cadence": "quarterly",
+      "observation_date": null,
+      "age_days": null,
+      "status": "runner_limited",
+      "source_url": "https://www.sec.gov/data-research/sec-markets-data/form-n-port-data-sets",
+      "note": "SEC bulk files can return HTTP 403 to GitHub-hosted runners; the tracker preserves the last-good verified cache instead of fabricating freshness."
+    }
+  ],
+  "methodology": "Cadence-aware source health. Status is based on each official source's observation date and normal release cadence, not the dashboard collection/check time. Collection success and observation freshness are intentionally separate concepts.",
+  "sec_runner_note": "SEC N-PORT bulk downloads may return HTTP 403 from GitHub-hosted runners. When that happens, the last-good verified cache is retained and the limitation is surfaced rather than represented as fresh data."
+}
