@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import calendar
 import json
+import re
 from datetime import date, datetime
 from pathlib import Path
 
@@ -18,6 +20,9 @@ def parse_date(value: object) -> date | None:
     try:
         if "T" in text:
             return datetime.fromisoformat(text.replace("Z", "+00:00")).date()
+        if re.fullmatch(r"\d{4}-\d{2}", text):
+            year, month = (int(part) for part in text.split("-"))
+            return date(year, month, calendar.monthrange(year, month)[1])
         return date.fromisoformat(text[:10])
     except ValueError:
         return None
