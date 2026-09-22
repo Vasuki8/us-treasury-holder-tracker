@@ -1,11 +1,201 @@
 {
   "engine_version": "1.0",
-  "generated_at": null,
-  "source_generated_at": null,
-  "metric_count": 0,
-  "rule_count": 0,
-  "metrics": [],
-  "sample_rules": [],
+  "generated_at": "2026-09-22T00:09:22Z",
+  "source_generated_at": "2026-09-22T00:09:22Z",
+  "metric_count": 10,
+  "rule_count": 6,
+  "metrics": [
+    {
+      "id": "yield_10y_pct",
+      "label": "10Y Treasury yield",
+      "value": 4.96,
+      "unit": "pct",
+      "digits": 2,
+      "observation_date": "2026-09-21",
+      "source_path": "treasury_yield_curve.nominal.history",
+      "default_condition": "above",
+      "default_threshold": 5.0
+    },
+    {
+      "id": "spread_10y2y_bps",
+      "label": "10Y - 2Y spread",
+      "value": 20.000000000000018,
+      "unit": "bps",
+      "digits": 0,
+      "observation_date": "2026-09-21",
+      "source_path": "treasury_yield_curve.spreads.history",
+      "default_condition": "below",
+      "default_threshold": 0.0
+    },
+    {
+      "id": "spread_10y3m_bps",
+      "label": "10Y - 3M spread",
+      "value": 79.0,
+      "unit": "bps",
+      "digits": 0,
+      "observation_date": "2026-09-21",
+      "source_path": "treasury_yield_curve.spreads.history",
+      "default_condition": "below",
+      "default_threshold": 0.0
+    },
+    {
+      "id": "yield_10y_5session_change_bps",
+      "label": "10Y yield 5-session move",
+      "value": -0.9999999999999787,
+      "unit": "bps",
+      "digits": 0,
+      "observation_date": "2026-09-21",
+      "source_path": "treasury_yield_curve.nominal.history",
+      "default_condition": "above",
+      "default_threshold": 25.0
+    },
+    {
+      "id": "auction_demand_score",
+      "label": "Latest auction demand score",
+      "value": 17.30769230769231,
+      "unit": "score",
+      "digits": 0,
+      "observation_date": "2026-09-21",
+      "source_path": "auction_demand_monitor.dynamic_history",
+      "default_condition": "below",
+      "default_threshold": 35.0
+    },
+    {
+      "id": "principal_30d_billions",
+      "label": "30D principal due",
+      "value": 2518.6271166958095,
+      "unit": "usd_billions",
+      "digits": 0,
+      "observation_date": "2026-08-31",
+      "source_path": "treasury_funding_pressure.horizons.30D",
+      "default_condition": "above",
+      "default_threshold": 2000.0
+    },
+    {
+      "id": "principal_90d_billions",
+      "label": "90D principal due",
+      "value": 4960.995107295808,
+      "unit": "usd_billions",
+      "digits": 0,
+      "observation_date": "2026-08-31",
+      "source_path": "treasury_funding_pressure.horizons.90D",
+      "default_condition": "above",
+      "default_threshold": 4500.0
+    },
+    {
+      "id": "foreign_total_1m_change_billions",
+      "label": "Foreign Treasury holdings 1M change",
+      "value": -50.38299999999981,
+      "unit": "usd_billions",
+      "digits": 1,
+      "observation_date": "2026-07",
+      "source_path": "foreign_holders.grand_total_history",
+      "default_condition": "below",
+      "default_threshold": -100.0
+    },
+    {
+      "id": "dealer_total_1w_change_billions",
+      "label": "Primary dealer Treasury position 1W change",
+      "value": 5.26400000000001,
+      "unit": "usd_billions",
+      "digits": 1,
+      "observation_date": "2026-09-09",
+      "source_path": "primary_dealer_positioning.PDPOSGST-TOT",
+      "default_condition": "below",
+      "default_threshold": -50.0
+    },
+    {
+      "id": "tga_30d_change_billions",
+      "label": "Treasury General Account 30D change",
+      "value": 49.52600000000007,
+      "unit": "usd_billions",
+      "digits": 1,
+      "observation_date": "2026-09-18",
+      "source_path": "treasury_funding_pressure.tga",
+      "default_condition": "below",
+      "default_threshold": -100.0
+    }
+  ],
+  "sample_rules": [
+    {
+      "id": "curve-inversion-10y2y",
+      "label": "10Y - 2Y below zero",
+      "metric_id": "spread_10y2y_bps",
+      "condition": "below",
+      "threshold": 0.0,
+      "status": "quiet",
+      "triggered": false,
+      "current_value": 20.000000000000018,
+      "unit": "bps",
+      "observation_date": "2026-09-21",
+      "reason": "20 < 0 is false."
+    },
+    {
+      "id": "long-end-five-session-jump",
+      "label": "10Y yield rises more than 25 bps in 5 sessions",
+      "metric_id": "yield_10y_5session_change_bps",
+      "condition": "above",
+      "threshold": 25.0,
+      "status": "quiet",
+      "triggered": false,
+      "current_value": -0.9999999999999787,
+      "unit": "bps",
+      "observation_date": "2026-09-21",
+      "reason": "-1 > 25 is false."
+    },
+    {
+      "id": "soft-auction-demand",
+      "label": "Auction demand score below 35",
+      "metric_id": "auction_demand_score",
+      "condition": "below",
+      "threshold": 35.0,
+      "status": "triggered",
+      "triggered": true,
+      "current_value": 17.30769230769231,
+      "unit": "score",
+      "observation_date": "2026-09-21",
+      "reason": "17.3077 < 35 is true."
+    },
+    {
+      "id": "large-90d-principal-wall",
+      "label": "90D principal due above $4.5T",
+      "metric_id": "principal_90d_billions",
+      "condition": "above",
+      "threshold": 4500.0,
+      "status": "triggered",
+      "triggered": true,
+      "current_value": 4960.995107295808,
+      "unit": "usd_billions",
+      "observation_date": "2026-08-31",
+      "reason": "4961 > 4500 is true."
+    },
+    {
+      "id": "foreign-monthly-decline",
+      "label": "Foreign holdings fall more than $100B in a month",
+      "metric_id": "foreign_total_1m_change_billions",
+      "condition": "below",
+      "threshold": -100.0,
+      "status": "quiet",
+      "triggered": false,
+      "current_value": -50.38299999999981,
+      "unit": "usd_billions",
+      "observation_date": "2026-07",
+      "reason": "-50.383 < -100 is false."
+    },
+    {
+      "id": "dealer-weekly-reduction",
+      "label": "Dealer Treasury position falls more than $50B in a week",
+      "metric_id": "dealer_total_1w_change_billions",
+      "condition": "below",
+      "threshold": -50.0,
+      "status": "quiet",
+      "triggered": false,
+      "current_value": 5.26400000000001,
+      "unit": "usd_billions",
+      "observation_date": "2026-09-09",
+      "reason": "5.264 < -50 is false."
+    }
+  ],
   "stateful_delivery_required": true,
-  "note": "Awaiting the first generated Treasury Pro alert preview."
+  "note": "Public preview of the Treasury Pro alert engine. Sample thresholds are illustrative workflow examples, not investment recommendations. Real paid alerts require authenticated rule storage, prior-state tracking, cooldowns and notification delivery."
 }
