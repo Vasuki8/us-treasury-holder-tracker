@@ -1,17 +1,17 @@
 {
   "engine_version": "1.0",
-  "generated_at": "2026-09-24T23:56:43Z",
-  "source_generated_at": "2026-09-24T23:56:43Z",
+  "generated_at": "2026-09-26T00:01:11Z",
+  "source_generated_at": "2026-09-26T00:01:11Z",
   "metric_count": 10,
   "rule_count": 6,
   "metrics": [
     {
       "id": "yield_10y_pct",
       "label": "10Y Treasury yield",
-      "value": 5.18,
+      "value": 5.17,
       "unit": "pct",
       "digits": 2,
-      "observation_date": "2026-09-24",
+      "observation_date": "2026-09-25",
       "source_path": "treasury_yield_curve.nominal.history",
       "default_condition": "above",
       "default_threshold": 5.0
@@ -19,10 +19,10 @@
     {
       "id": "spread_10y2y_bps",
       "label": "10Y - 2Y spread",
-      "value": 30.99999999999996,
+      "value": 36.00000000000003,
       "unit": "bps",
       "digits": 0,
-      "observation_date": "2026-09-24",
+      "observation_date": "2026-09-25",
       "source_path": "treasury_yield_curve.spreads.history",
       "default_condition": "below",
       "default_threshold": 0.0
@@ -30,10 +30,10 @@
     {
       "id": "spread_10y3m_bps",
       "label": "10Y - 3M spread",
-      "value": 93.99999999999994,
+      "value": 92.99999999999997,
       "unit": "bps",
       "digits": 0,
-      "observation_date": "2026-09-24",
+      "observation_date": "2026-09-25",
       "source_path": "treasury_yield_curve.spreads.history",
       "default_condition": "below",
       "default_threshold": 0.0
@@ -41,10 +41,10 @@
     {
       "id": "yield_10y_5session_change_bps",
       "label": "10Y yield 5-session move",
-      "value": 23.999999999999932,
+      "value": 16.000000000000014,
       "unit": "bps",
       "digits": 0,
-      "observation_date": "2026-09-24",
+      "observation_date": "2026-09-25",
       "source_path": "treasury_yield_curve.nominal.history",
       "default_condition": "above",
       "default_threshold": 25.0
@@ -63,7 +63,7 @@
     {
       "id": "principal_30d_billions",
       "label": "30D principal due",
-      "value": 2223.91990289581,
+      "value": 1947.24150729581,
       "unit": "usd_billions",
       "digits": 0,
       "observation_date": "2026-08-31",
@@ -74,7 +74,7 @@
     {
       "id": "principal_90d_billions",
       "label": "90D principal due",
-      "value": 4742.879706995809,
+      "value": 4600.774021595809,
       "unit": "usd_billions",
       "digits": 0,
       "observation_date": "2026-08-31",
@@ -107,10 +107,10 @@
     {
       "id": "tga_30d_change_billions",
       "label": "Treasury General Account 30D change",
-      "value": -19.53200000000004,
+      "value": -69.50999999999999,
       "unit": "usd_billions",
       "digits": 1,
-      "observation_date": "2026-09-23",
+      "observation_date": "2026-09-24",
       "source_path": "treasury_funding_pressure.tga",
       "default_condition": "below",
       "default_threshold": -100.0
@@ -125,10 +125,10 @@
       "threshold": 0.0,
       "status": "quiet",
       "triggered": false,
-      "current_value": 30.99999999999996,
+      "current_value": 36.00000000000003,
       "unit": "bps",
-      "observation_date": "2026-09-24",
-      "reason": "31 < 0 is false."
+      "observation_date": "2026-09-25",
+      "reason": "36 < 0 is false."
     },
     {
       "id": "long-end-five-session-jump",
@@ -138,10 +138,10 @@
       "threshold": 25.0,
       "status": "quiet",
       "triggered": false,
-      "current_value": 23.999999999999932,
+      "current_value": 16.000000000000014,
       "unit": "bps",
-      "observation_date": "2026-09-24",
-      "reason": "24 > 25 is false."
+      "observation_date": "2026-09-25",
+      "reason": "16 > 25 is false."
     },
     {
       "id": "soft-auction-demand",
@@ -164,10 +164,10 @@
       "threshold": 4500.0,
       "status": "triggered",
       "triggered": true,
-      "current_value": 4742.879706995809,
+      "current_value": 4600.774021595809,
       "unit": "usd_billions",
       "observation_date": "2026-08-31",
-      "reason": "4742.88 > 4500 is true."
+      "reason": "4600.77 > 4500 is true."
     },
     {
       "id": "foreign-monthly-decline",
