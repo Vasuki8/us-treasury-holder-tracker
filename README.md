@@ -4,17 +4,20 @@ A focused GitHub Pages dashboard for understanding who owns U.S. Treasuries usin
 
 ## Current dashboard
 
-The public site now has a single Core experience. The former Research workspace, research-only navigation, comparison tools, drill-down panels, and legacy multi-phase UI layers have been removed from the frontend.
+The public site uses a single light-theme dashboard plus the Treasury Pro product surface. The former Research workspace, research-only navigation, legacy comparison/drill-down layers, Ownership Brief, Market Structure Map, and Ownership Share Snapshot panel have been removed from the frontend.
 
-The retained dashboard contains:
+The retained public dashboard contains:
 
 - Four headline ownership metrics: total public debt, debt held by the public, Federal Reserve Treasury holdings, and total foreign Treasury holdings.
-- Ownership Brief: a rule-based summary generated from the official-data state already produced by the updater.
-- Market Structure Map: a compact summary of the existing market-structure dimensions without links into removed research panels.
-- Foreign Treasury Holders: searchable TIC country holdings with 1-month, 3-month, and 1-year changes.
-- Foreign Holder History: monthly country history plus the existing long-run Treasury survey history and country detail drawer.
-- Ownership Share Snapshot: holder-group shares using their relevant denominators.
-- JSON and CSV downloads for the retained Core data.
+- All-Time Treasury History, including nominal GDP comparison where applicable.
+- Treasury Maturity Wall with principal and modeled interest cash flows.
+- Treasury Funding Pressure with TGA history, announced auction settlements, and tentative buyback maximums.
+- Treasury Yield Curve with nominal/real curves, key-rate history, spreads, and inflation breakevens.
+- Auction Demand, Primary Dealer Positioning, and Treasury Debt Cost.
+- Ownership Share History and Institution Holder History.
+- Foreign Treasury Holders plus long-run Foreign Holder History.
+- JSON/CSV downloads for the public data.
+- Treasury Pro early-access and pricing surfaces; the underlying public Treasury data remains free.
 
 There is no Core/Research toggle anymore.
 
@@ -47,13 +50,13 @@ It:
 
 1. validates the retained frontend JavaScript,
 2. installs Python with `uv`,
-3. refreshes `data/dashboard.json` through `scripts/update_data_v14.py`,
-4. runs the existing Phase 8–12 and long-country-history data validators,
+3. refreshes `data/dashboard.json` through `scripts/update_data_v25.py`,
+4. validates browser-safe JSON plus the retained ownership, country-history, all-time-history, maturity, interest, institution, funding, buyback, dealer, market-insight, dynamic-range, yield-curve, and refinancing/auction blocks,
 5. commits refreshed data only on non-PR runs and only when the generated data changed.
 
 The separate `.github/workflows/nport.yml` workflow remains for the SEC N-PORT cache.
 
-The Phase-named Python updater/validator files are intentionally retained because the current `update_data_v14.py` pipeline imports the preceding updater chain. They are data-pipeline dependencies even though the old Phase-named frontend files have been removed.
+The Phase-named Python updater/validator files are intentionally retained because the current `update_data_v25.py` pipeline imports the preceding updater chain. They are data-pipeline dependencies even though the old Phase-named frontend files have been removed.
 
 ## Local use
 
@@ -65,7 +68,7 @@ To refresh data locally with the same package-manager approach as CI:
 uv python install 3.13
 uv venv --python 3.13
 uv pip install --python .venv\Scripts\python.exe -r requirements.txt
-.venv\Scripts\python.exe scripts\update_data_v14.py
+.venv\Scripts\python.exe scripts\update_data_v25.py
 ```
 
 On macOS/Linux, use `.venv/bin/python` instead of `.venv\Scripts\python.exe`.
