@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "evaluated_at": "2026-10-03T00:32:24Z",
+  "evaluated_at": "2026-10-03T23:50:08Z",
   "evaluation_date": "2026-10-03",
-  "dashboard_generated_at": "2026-10-03T00:32:24Z",
+  "dashboard_generated_at": "2026-10-03T23:50:08Z",
   "overall_status": "healthy_with_expected_lag",
   "counts": {
     "current": 7,
