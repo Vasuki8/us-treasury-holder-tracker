@@ -115,10 +115,8 @@ window.treasuryTheme = TREASURY_THEME;
 
 const fmtB = v => v == null || !Number.isFinite(Number(v)) ? '—' : `$${Number(v).toLocaleString(undefined,{maximumFractionDigits:1})}B`;
 const fmtUSD = v => v == null || !Number.isFinite(Number(v)) ? '—' : (Number(v) >= 1e12 ? `$${(Number(v)/1e12).toLocaleString(undefined,{maximumFractionDigits:3})}T` : `$${(Number(v)/1e9).toLocaleString(undefined,{maximumFractionDigits:1})}B`);
-const fmtPct = v => v == null || !Number.isFinite(Number(v)) ? '—' : `${Number(v).toFixed(1)}%`;
 const signedB = v => v == null || !Number.isFinite(Number(v)) ? '—' : `${Number(v) >= 0 ? '+' : ''}${Number(v).toFixed(1)}B`;
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const slug = s => String(s || 'neutral').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 
 let data;
 const charts = {};
@@ -142,44 +140,6 @@ function renderOverview(){
   ];
   const host = document.getElementById('overviewCards');
   if(host) host.innerHTML = cards.map(([label,value,meta]) => `<div class="card"><div class="kicker">${esc(label)}</div><div class="value">${esc(value)}</div><div class="meta">${esc(meta)}</div></div>`).join('');
-}
-
-function renderOwnershipBrief(){
-  const block = data.research_brief || {};
-  const meta = document.getElementById('ownershipBriefMeta');
-  if(meta) meta.textContent = block.note || 'Rule-based summary of the latest official ownership observations.';
-  const host = document.getElementById('ownershipBriefCards');
-  const items = block.items || [];
-  if(!host) return;
-  host.innerHTML = items.length ? items.map(item => `
-    <article class="insight-card ${esc(slug(item.severity || 'neutral'))}">
-      <div class="insight-top"><span>${esc(item.category || 'Ownership')}</span><span class="insight-state">${esc(item.severity || 'neutral')}</span></div>
-      <strong>${esc(item.title || 'Current signal')}</strong>
-      <p>${esc(item.text || '')}</p>
-      <small>${esc(item.caveat || '')}</small>
-    </article>`).join('') : '<div class="empty-state">No ownership brief is available yet.</div>';
-}
-
-function renderMarketStructure(){
-  const block = data.market_structure_map || {};
-  const dims = block.dimensions || [];
-  const meta = document.getElementById('marketStructureMeta');
-  if(meta) meta.textContent = block.note || '';
-  const state = document.getElementById('marketStructureState');
-  if(state){
-    state.textContent = block.overall_state || '—';
-    state.className = `structure-state ${slug(block.overall_state || 'mixed')}`;
-  }
-  const grid = document.getElementById('marketStructureGrid');
-  if(!grid) return;
-  grid.innerHTML = dims.length ? dims.map(row => `
-    <article class="structure-card ${esc(slug(row.state || 'neutral'))}">
-      <div class="structure-card-top"><span>${esc(row.label || row.key || 'Dimension')}</span><span class="structure-dot"></span></div>
-      <strong>${esc(row.display || '—')}</strong>
-      <em>${esc(row.reading || '')}</em>
-      <p>${esc(row.detail || '')}</p>
-      <small>${row.observation ? `Observation ${esc(row.observation)}` : 'Observation —'}</small>
-    </article>`).join('') : '<div class="empty-state">Market-structure summary is not available yet.</div>';
 }
 
 function renderForeign(){
@@ -214,25 +174,6 @@ function renderForeign(){
       type: 'bar',
       data: {labels: top.map(row => row.name), datasets: [{label:'Holdings ($B)', data:top.map(row => row.holdings_billions)}]},
       options: {indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{x:{grid:{color:TREASURY_THEME.grid},ticks:{color:TREASURY_THEME.muted}},y:{grid:{display:false},ticks:{color:TREASURY_THEME.text}}}}
-    });
-  }
-}
-
-function renderOwnershipShares(){
-  const block = data.ownership_shares || {};
-  const rows = block.rows || [];
-  const meta = document.getElementById('shareMeta');
-  if(meta) meta.textContent = block.note || '';
-  const table = document.getElementById('shareTable');
-  if(table) table.innerHTML = rows.map(row => `<tr><td>${esc(row.name)}</td><td>${fmtB(row.holdings_billions)}</td><td>${esc(row.denominator || '—')}</td><td>${fmtPct(row.share_pct)}</td></tr>`).join('');
-
-  destroyChart('shares');
-  const canvas = document.getElementById('shareChart');
-  if(canvas && rows.length && window.Chart){
-    charts.shares = new Chart(canvas, {
-      type:'bar',
-      data:{labels:rows.map(row => row.name), datasets:[{label:'Share of relevant denominator (%)', data:rows.map(row => row.share_pct)}]},
-      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,grid:{color:TREASURY_THEME.grid},ticks:{color:TREASURY_THEME.muted,callback:value=>`${value}%`}},x:{grid:{display:false},ticks:{color:TREASURY_THEME.text}}}}
     });
   }
 }
@@ -281,10 +222,7 @@ async function load(){
     const status = document.getElementById('updateStatus');
     if(status) status.textContent = data.generated_at ? `Checked ${new Date(data.generated_at).toLocaleString()}` : 'Awaiting first refresh';
     renderOverview();
-    renderOwnershipBrief();
-    renderMarketStructure();
     renderForeign();
-    renderOwnershipShares();
     wireDownloads();
     window.dispatchEvent(new CustomEvent('treasury:data-ready', {detail:data}));
   }catch(error){
