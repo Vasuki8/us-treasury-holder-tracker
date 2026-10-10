@@ -1,17 +1,17 @@
 {
   "engine_version": "1.0",
-  "generated_at": "2026-10-09T01:16:46Z",
-  "source_generated_at": "2026-10-09T01:16:46Z",
+  "generated_at": "2026-10-10T00:52:24Z",
+  "source_generated_at": "2026-10-10T00:52:24Z",
   "metric_count": 10,
   "rule_count": 6,
   "metrics": [
     {
       "id": "yield_10y_pct",
       "label": "10Y Treasury yield",
-      "value": 5.22,
+      "value": 5.24,
       "unit": "pct",
       "digits": 2,
-      "observation_date": "2026-10-08",
+      "observation_date": "2026-10-09",
       "source_path": "treasury_yield_curve.nominal.history",
       "default_condition": "above",
       "default_threshold": 5.0
@@ -19,10 +19,10 @@
     {
       "id": "spread_10y2y_bps",
       "label": "10Y - 2Y spread",
-      "value": 46.99999999999997,
+      "value": 44.00000000000004,
       "unit": "bps",
       "digits": 0,
-      "observation_date": "2026-10-08",
+      "observation_date": "2026-10-09",
       "source_path": "treasury_yield_curve.spreads.history",
       "default_condition": "below",
       "default_threshold": 0.0
@@ -30,10 +30,10 @@
     {
       "id": "spread_10y3m_bps",
       "label": "10Y - 3M spread",
-      "value": 98.99999999999993,
+      "value": 99.00000000000003,
       "unit": "bps",
       "digits": 0,
-      "observation_date": "2026-10-08",
+      "observation_date": "2026-10-09",
       "source_path": "treasury_yield_curve.spreads.history",
       "default_condition": "below",
       "default_threshold": 0.0
@@ -41,10 +41,10 @@
     {
       "id": "yield_10y_5session_change_bps",
       "label": "10Y yield 5-session move",
-      "value": -2.000000000000046,
+      "value": -4.0000000000000036,
       "unit": "bps",
       "digits": 0,
-      "observation_date": "2026-10-08",
+      "observation_date": "2026-10-09",
       "source_path": "treasury_yield_curve.nominal.history",
       "default_condition": "above",
       "default_threshold": 25.0
@@ -52,7 +52,7 @@
     {
       "id": "auction_demand_score",
       "label": "Latest auction demand score",
-      "value": 73.65384615384616,
+      "value": 57.4537037037037,
       "unit": "score",
       "digits": 0,
       "observation_date": "2026-10-08",
@@ -107,10 +107,10 @@
     {
       "id": "tga_30d_change_billions",
       "label": "Treasury General Account 30D change",
-      "value": 5.76400000000001,
+      "value": 7.4500000000000455,
       "unit": "usd_billions",
       "digits": 1,
-      "observation_date": "2026-10-07",
+      "observation_date": "2026-10-08",
       "source_path": "treasury_funding_pressure.tga",
       "default_condition": "below",
       "default_threshold": -100.0
@@ -125,10 +125,10 @@
       "threshold": 0.0,
       "status": "quiet",
       "triggered": false,
-      "current_value": 46.99999999999997,
+      "current_value": 44.00000000000004,
       "unit": "bps",
-      "observation_date": "2026-10-08",
-      "reason": "47 < 0 is false."
+      "observation_date": "2026-10-09",
+      "reason": "44 < 0 is false."
     },
     {
       "id": "long-end-five-session-jump",
@@ -138,10 +138,10 @@
       "threshold": 25.0,
       "status": "quiet",
       "triggered": false,
-      "current_value": -2.000000000000046,
+      "current_value": -4.0000000000000036,
       "unit": "bps",
-      "observation_date": "2026-10-08",
-      "reason": "-2 > 25 is false."
+      "observation_date": "2026-10-09",
+      "reason": "-4 > 25 is false."
     },
     {
       "id": "soft-auction-demand",
@@ -151,10 +151,10 @@
       "threshold": 35.0,
       "status": "quiet",
       "triggered": false,
-      "current_value": 73.65384615384616,
+      "current_value": 57.4537037037037,
       "unit": "score",
       "observation_date": "2026-10-08",
-      "reason": "73.6538 < 35 is false."
+      "reason": "57.4537 < 35 is false."
     },
     {
       "id": "large-90d-principal-wall",
